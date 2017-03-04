@@ -280,8 +280,8 @@
 		}
 		"South"
 		{
-			"command"	"vocalize PlayerCoverMe"
-			"text"		"Cover me"
+			"command"	"vocalize PlayerKillThatLight"
+			"text"		"Lights off"
 		}
 		"SouthWest"
 		{
@@ -295,8 +295,8 @@
 		}
 		"NorthWest"
 		{
-			"command"	"vocalize ResponseSoftDispleasureSwear"
-			"text"		"Displeasure"
+			"command"	"vocalize PlayerCoverMe"
+			"text"		"Cover me"
 		}
 	}
 
@@ -580,8 +580,8 @@
 		}
 		"South"
 		{
-			"command"	"vocalize AynRandResponse"
-			"text"		"Hate Ayn Rand"
+			"command"	"vocalize C7M1_saferoom21a"
+			"text"		"Hate boats"
 		}
 		"SouthWest"
 		{
