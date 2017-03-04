@@ -485,8 +485,8 @@
 		}
 		"SouthWest"
 		{
-			"command"	"vocalize C6M1Intro_22g"
-			"text"		"Good luck"
+			"command"	"vocalize C7M1_saferoom19a"
+			"text"		"Understand"
 		}
 		"West"
 		{
