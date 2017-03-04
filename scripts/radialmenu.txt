@@ -260,8 +260,8 @@
 		}
 		"North"
 		{
-			"command"	"vocalize PlayerLostCall"
-			"text"		"Alone"
+			"command"	"vocalize ResponseSoftDispleasureSwear"
+			"text"		"Displeasure"
 		}
 		"NorthEast"
 		{
@@ -297,6 +297,56 @@
 		{
 			"command"	"vocalize PlayerCoverMe"
 			"text"		"Cover me"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Misc2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ReviveFriendDown"
+			"text"		"Hurt"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerLostCall"
+			"text"		"Alone"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C1M1_ElevatorHello"
+			"text"		"Name"
+		}
+		"East"
+		{
+			"command"	"vocalize _C4_BigStormHits01"
+			"text"		"Storm"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerHealingOther"
+			"text"		"Healing"
+		}
+		"South"
+		{
+			"command"	"vocalize UseAdrenaline"
+			"text"		"Adrenaline"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerIncapacitated"
+			"text"		"I'm down"
+		}
+		"West"
+		{
+			"command"	"vocalize C5M3FirstInAlarmField"
+			"text"		"Alarm"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize c2m3SeeChopper"
+			"text"		"Chopper"
 		}
 	}
 
@@ -1875,8 +1925,8 @@
 		}
 		"SouthEast"
 		{
-			"command"	"vocalize _C1M1_ElevatorHello03a"
-			"text"		"Name"
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo21b"
+			"text"		"Movies"
 		}
 		"South"
 		{

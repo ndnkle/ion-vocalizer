@@ -3,10 +3,10 @@
 	addonSteamAppID		550
 	addonTitle		"ion's Vocalizer"
 	addonTagline		"Vocalizer and character switcher"
-	addonVersion		"5.4"
+	addonVersion		"6.0"
 	addonAuthor		"ion"
 	addonURL0		"http://steamcommunity.com/sharedfiles/filedetails/?id=698857882"
 	
-	addonDescription	"Easy-to-use vocalizer featuring 6 radial menus for common character lines, 4 radial menus for character-specific lines and a radial menu for character selection/switching and going idle."
+	addonDescription	"Easy-to-use vocalizer featuring 7 radial menus for common character lines, 4 radial menus for character-specific lines and a radial menu for character selection/switching and going idle."
 	addonContent_Script	1
 }
