@@ -1,0 +1,2052 @@
+"RadialMenu"
+{
+	//--------------------------------------------------------------
+	"Orders,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize SmartLook"
+			"text"		"Look"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerMoveOn"
+			"text"		"Let's go"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerLeadOn"
+			"text"		"Lead"
+		}	
+		"East"
+		{
+			"command"	"vocalize PlayerHurryUp"
+			"text"		"Hurry"
+		}	
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerYellRun"
+			"text"		"Run"
+		}	
+		"South"
+		{
+			"command"	"vocalize PlayerWaitHere"
+			"text"		"Wait"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerFollowMe"
+			"text"		"Follow"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerAlertGiveItem"
+			"text"		"Take"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerStayTogether"
+			"text"		"Together"
+		}	
+	}
+
+	//--------------------------------------------------------------
+	"QA,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerAskReady"
+			"text"		"Ready?"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerLaugh"
+			"text"		"Laugh"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerTaunt"
+			"text"		"Taunt"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerNegative"
+			"text"		"Argh"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerNo"
+			"text"		"No"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerSorry"
+			"text"		"Sorry"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerYes"
+			"text"		"Yes"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerHurrah"
+			"text"		"Hurrah"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerThanks"
+			"text"		"Thank you"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Reactions,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerLookOut"
+			"text"		"Look out"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerAnswerLostCall"
+			"text"		"Swear"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerFriendlyFire"
+			"text"		"Stop it"
+		}
+		"East"
+		{
+			"command"	"vocalize RelaxedSigh"
+			"text"		"Sigh"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerNiceJob"
+			"text"		"Nice job"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerYouAreWelcome"
+			"text"		"You're welcome"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerToTheRescue"
+			"text"		"Coming"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerWarnCareful"
+			"text"		"Careful"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerImWithYou"
+			"text"		"With you"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"Enemies,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerHelp"
+			"text"		"Help"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerAlsoWarnTank"
+			"text"		"Tank"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize PlayerAlsoWarnBoomer"
+			"text"		"Boomer"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerAlsoWarnHunter"
+			"text"		"Hunter"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerAlsoWarnSmoker"
+			"text"		"Smoker"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerAlsoWarnWitch"
+			"text"		"Witch"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerBackUp"
+			"text"		"Back up"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerIncoming"
+			"text"		"Horde"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerWatchOutBehind"
+			"text"		"Behind"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"Events,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerDeath"
+			"text"		"Scream"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerVomitInFace"
+			"text"		"Vomited"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize CallForRescue"
+			"text"		"Trapped"
+		}
+		"East"
+		{
+			"command"	"vocalize PlayerLedgeHangMiddle"
+			"text"		"Hanging"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize PlayerLedgeHangEnd"
+			"text"		"Falling"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerChoke"
+			"text"		"Choked"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ScreamWhilePounced"
+			"text"		"Pounced"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerGrabbedByTongue"
+			"text"		"Pulled"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerGroundPoundedByTank"
+			"text"		"Crushed"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Misc,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize PlayerEmphaticGo"
+			"text"		"Go"
+		}
+		"North"
+		{
+			"command"	"vocalize PlayerLostCall"
+			"text"		"Alone"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ScenarioJoin"
+			"text"		"I'm here"
+		}
+		"East"
+		{
+			"command"	"vocalize AskForHealth2"
+			"text"		"Medkit?"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize RevivedByDefibrillator"
+			"text"		"Gasp"
+		}
+		"South"
+		{
+			"command"	"vocalize PlayerCoverMe"
+			"text"		"Cover me"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerSpotOtherWeapon"
+			"text"		"Weapons"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerAreaClear"
+			"text"		"Clear"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ResponseSoftDispleasureSwear"
+			"text"		"Displeasure"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Z1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock035"
+			"text"		"What?"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock585"
+			"text"		"Hello"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M3_saferoom016c"
+			"text"		"Lotion"
+		}
+		"East"
+		{
+			"command"	"vocalize CrashCourseR12"
+			"text"		"Steam"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize TakeShotgunGroovyZoey"
+			"text"		"Groovy"
+		}
+		"South"
+		{
+			"command"	"vocalize ConceptBlock647"
+			"text"		"Game over"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptBlock037"
+			"text"		"Dick"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashFinaleGenerator2Speak"
+			"text"		"Generator"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock032"
+			"text"		"Open"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Z2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M3_saferoom004b"
+			"text"		"Boo"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashCourseR06"
+			"text"		"Canada"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock654"
+			"text"		"Yeah"
+		}
+		"East"
+		{
+			"command"	"vocalize BounceReaction"
+			"text"		"Bounce"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C6M1Intro_22b"
+			"text"		"Feeling"
+		}
+		"South"
+		{
+			"command"	"vocalize C6M1Intro_15b"
+			"text"		"Boo-hoo"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom005"
+			"text"		"Movies"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashCourseR01"
+			"text"		"Birds"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize CrashCourseR03"
+			"text"		"Zombie"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"Z3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock643"
+			"text"		"Oops"
+		}
+		"North"
+		{
+			"command"	"vocalize IntroCrashR39"
+			"text"		"Optimist"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M1_saferoom23"
+			"text"		"Leave them"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M1_saferoom18"
+			"text"		"Island"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize CrashCourseR11"
+			"text"		"Lasagna"
+		}
+		"South"
+		{
+			"command"	"vocalize c6m3_outroL4D109a"
+			"text"		"Sure"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom006c"
+			"text"		"Human race"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashCourseR10"
+			"text"		"Nice"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize InfoReminfo_powerboat4"
+			"text"		"Sailboat"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Z4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M1_saferoom09b"
+			"text"		"Whatever"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M2_saferoom01b"
+			"text"		"Not ready"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize IntroCrashR01"
+			"text"		"Hate them"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M2_saferoom05b"
+			"text"		"Because"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize c6m3_outroL4D104a"
+			"text"		"Still have"
+		}
+		"South"
+		{
+			"command"	"vocalize c6m3_outroL4D105a"
+			"text"		"Mall"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C6M1Intro_22g"
+			"text"		"Good luck"
+		}
+		"West"
+		{
+			"command"	"vocalize IntroCrashR10"
+			"text"		"Walking"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_15d"
+			"text"		"Shoot you"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"F1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock049"
+			"text"		"What?"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock517"
+			"text"		"Hello"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock629"
+			"text"		"Prof Monster"
+		}
+		"East"
+		{
+			"command"	"vocalize CrashFinaleGenerator2Speak"
+			"text"		"Generator"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize CrashCourseR09"
+			"text"		"Die"
+		}
+		"South"
+		{
+			"command"	"vocalize Smalltown04_path05a"
+			"text"		"Beard"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptBlock527"
+			"text"		"Boat"
+		}
+		"West"
+		{
+			"command"	"vocalize ConceptBlock596"
+			"text"		"Army"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock009"
+			"text"		"Open"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"F2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M3_saferoom004b"
+			"text"		"Nerd"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashCourseR07"
+			"text"		"Hate Canada"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize airport04_vana"
+			"text"		"Hate vans"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M1_saferoom17"
+			"text"		"Hate islands"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M3_saferoom002"
+			"text"		"Hate feelings"
+		}
+		"South"
+		{
+			"command"	"vocalize AynRandResponse"
+			"text"		"Hate Ayn Rand"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom001"
+			"text"		"Solo"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M3_saferoom016c"
+			"text"		"Mental"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize IntroCrashR06"
+			"text"		"Plan"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"F3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock697"
+			"text"		"Whatever"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashCourseR08"
+			"text"		"Doubt it"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock558"
+			"text"		"Old man"
+		}
+		"East"
+		{
+			"command"	"vocalize ConceptBlock044"
+			"text"		"Asshole"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize ConceptBlock637"
+			"text"		"Mouth"
+		}
+		"South"
+		{
+			"command"	"vocalize ConceptBlock721"
+			"text"		"Hell"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptBlock635"
+			"text"		"Handsome"
+		}
+		"West"
+		{
+			"command"	"vocalize InfoRemc7m1_tankcar01"
+			"text"		"Tanks"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize CrashYerKidding"
+			"text"		"Kidding"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"F4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_01b"
+			"text"		"Nope"
+		}
+		"North"
+		{
+			"command"	"vocalize airport04_08a"
+			"text"		"I said"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1Intro_10a"
+			"text"		"Bite me"
+		}
+		"East"
+		{
+			"command"	"vocalize hospital03_path08a2"
+			"text"		"Hey"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize InfoReminfo_powerboat4a"
+			"text"		"Quiet"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom21"
+			"text"		"Captain"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize NeedsHelpResponseLouisB2"
+			"text"		"Approve"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashCourseR10"
+			"text"		"Nice"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize c6m3_outroL4D108a"
+			"text"		"Not heard"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"L1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock050"
+			"text"		"What?"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock521"
+			"text"		"Hello"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize ConceptBlock717"
+			"text"		"Bad"
+		}
+		"East"
+		{
+			"command"	"vocalize InfoRemc7m1_pretank02"
+			"text"		"Me?"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize CrashFinaleGenerator2OnSpk"
+			"text"		"Sweet"
+		}
+		"South"
+		{
+			"command"	"vocalize airport04_08b"
+			"text"		"Joking"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom003a"
+			"text"		"How old"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M1_saferoom12"
+			"text"		"Pissed"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock019"
+			"text"		"Mister"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"L2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock652"
+			"text"		"Whistle"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashCourseR06"
+			"text"		"Canada"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M3_saferoom004"
+			"text"		"Firewall"
+		}
+		"East"
+		{
+			"command"	"vocalize ConceptBlock645"
+			"text"		"Dying"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize ConceptBlock658"
+			"text"		"Unstoppable"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M3_saferoom017g"
+			"text"		"Island"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize IntroCrashR24"
+			"text"		"Parade"
+		}
+		"West"
+		{
+			"command"	"vocalize CrashCourseR04"
+			"text"		"Read"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize VampiresBeata"
+			"text"		"Zombies"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"L3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize TakeShotgunGroovyLouis"
+			"text"		"Giggle"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock619"
+			"text"		"Humanity"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize IntroCrashR09"
+			"text"		"Agreement"
+		}
+		"East"
+		{
+			"command"	"vocalize IntroCrashWalkingB"
+			"text"		"Feeling"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize IntroCrashR22"
+			"text"		"Flying"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M2_saferoom02d"
+			"text"		"Bill-san"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M3_saferoom006b"
+			"text"		"No more"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M2_saferoom02"
+			"text"		"Taki"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize Farm01_path03a"
+			"text"		"Trailer"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"L4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M3_saferoom009a"
+			"text"		"Sound"
+		}
+		"North"
+		{
+			"command"	"vocalize SmallTown02_path01b"
+			"text"		"Story"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize IntroCrashR13"
+			"text"		"Off/On"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M3_saferoom016d"
+			"text"		"Skin"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize hospital04_path02a"
+			"text"		"Stairs"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M3_saferoom016b"
+			"text"		"Good mood"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize hospital04_path04a"
+			"text"		"Elevator"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M1_saferoom05a"
+			"text"		"Mad"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize IntroCrashR31"
+			"text"		"Scenery"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"B1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock051"
+			"text"		"What?"
+		}
+		"North"
+		{
+			"command"	"vocalize ConceptBlock515"
+			"text"		"Hello"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M3_saferoom003c"
+			"text"		"Electricity"
+		}
+		"East"
+		{
+			"command"	"vocalize C7M3_saferoom003"
+			"text"		"Emails"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize CrashFinaleGeneratorSpeakN"
+			"text"		"Too old"
+		}
+		"South"
+		{
+			"command"	"vocalize ConceptBlock663"
+			"text"		"Whoa-ho-ho"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize ConceptBlock611"
+			"text"		"War"
+		}
+		"West"
+		{
+			"command"	"vocalize ConceptBlock639"
+			"text"		"Rant"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock025"
+			"text"		"Open"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"B2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock556"
+			"text"		"Hey"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom06b"
+			"text"		"On fire"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize InfoReminfo_carnotboat"
+			"text"		"Car"
+		}
+		"East"
+		{
+			"command"	"vocalize InfoRemc7m2_seebarge01"
+			"text"		"Pilot"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M3_saferoom010b"
+			"text"		"Pro"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom16a"
+			"text"		"Tired"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom13a"
+			"text"		"Cry"
+		}
+		"West"
+		{
+			"command"	"vocalize ConceptBlock608"
+			"text"		"Tease"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize ConceptBlock696"
+			"text"		"Zombies"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"B3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize ConceptBlock715"
+			"text"		"Chuckle"
+		}
+		"North"
+		{
+			"command"	"vocalize C7M1_saferoom25a"
+			"text"		"Out here"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M1_saferoom21b"
+			"text"		"Plank"
+		}
+		"East"
+		{
+			"command"	"vocalize airport04_08c"
+			"text"		"Christ"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M1_saferoom01a"
+			"text"		"Shut up"
+		}
+		"South"
+		{
+			"command"	"vocalize C7M1_saferoom24a"
+			"text"		"Health nut"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize InfoReminfo_trailerboatruck"
+			"text"		"Horseshit"
+		}
+		"West"
+		{
+			"command"	"vocalize C7M1_saferoom22"
+			"text"		"Good"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize InfoReminfo_trailerboat"
+			"text"		"Trailer"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"B4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C7M3_saferoom012f"
+			"text"		"Noted"
+		}
+		"North"
+		{
+			"command"	"vocalize CrashFinaleGenerator2OnSpk"
+			"text"		"Outstanding"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C7M2_saferoom07"
+			"text"		"Find it"
+		}
+		"East"
+		{
+			"command"	"vocalize hospital04_path01a"
+			"text"		"Smell"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C7M1_saferoom08b"
+			"text"		"Shut up both"
+		}
+		"South"
+		{
+			"command"	"vocalize airport04_08a"
+			"text"		"Stop people"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C7M1_saferoom12b"
+			"text"		"Move out"
+		}
+		"West"
+		{
+			"command"	"vocalize InfoRemc7m1_harborblocked01"
+			"text"		"Ocean"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C7M1_saferoom04b"
+			"text"		"Idiots"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"R1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_22a"
+			"text"		"Woman"
+		}
+		"North"
+		{
+			"command"	"vocalize WorldC6M1_PostWedding02a"
+			"text"		"Your brain"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo20a"
+			"text"		"Great shape"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M3SafeRoom2d"
+			"text"		"Amen"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo08f"
+			"text"		"Better looking"
+		}
+		"South"
+		{
+			"command"	"vocalize _C4M5_FinaleStart01"
+			"text"		"Virgil"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C6M1Intro_10d"
+			"text"		"Being nice"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_18b"
+			"text"		"Asshole"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_14d"
+			"text"		"Con man"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"R2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_06d"
+			"text"		"Date"
+		}
+		"North"
+		{
+			"command"	"vocalize _C2M2_Kiddie02"
+			"text"		"Kiddie Land"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo19a"
+			"text"		"Sexy Coach"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldSignReportSick3"
+			"text"		"Sick"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C6M1Intro_22f"
+			"text"		"Gotta do"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk101a"
+			"text"		"Shithole"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C3M2SafeRoom2d"
+			"text"		"White suit"
+		}
+		"West"
+		{
+			"command"	"vocalize C2M4PenSmell001"
+			"text"		"Smell"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_20d"
+			"text"		"Vampires"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"R3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_17d"
+			"text"		"Shit"
+		}
+		"North"
+		{
+			"command"	"vocalize C2M5_PlanWorkedb"
+			"text"		"Smartest man"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize InfoRemC3M2Bathtub3"
+			"text"		"Fair enough"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M2SafeRoomd2"
+			"text"		"Agree"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize InfoRemC3M3Bodies3"
+			"text"		"Better safe"
+		}
+		"South"
+		{
+			"command"	"vocalize _C2M2_Kiddie05"
+			"text"		"Situation"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WeddingWitchDead01"
+			"text"		"Scary Nick"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M2_InSewer202a"
+			"text"		"Carl"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn03b"
+			"text"		"Shut up"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"R4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldIntroC31a4"
+			"text"		"Where?"
+		}
+		"North"
+		{
+			"command"	"vocalize C1M2SafeRoomd2a"
+			"text"		"Gun store"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1Intro_20g"
+			"text"		"Cleveland"
+		}
+		"East"
+		{
+			"command"	"vocalize _C4M5_Intro04"
+			"text"		"Plan"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo03c"
+			"text"		"Calm down"
+		}
+		"South"
+		{
+			"command"	"vocalize C6M1Intro_05c"
+			"text"		"Stranger"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C1M4SafeRoom2b2"
+			"text"		"Jimmy Gibbs"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo17b"
+			"text"		"Vote"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo06a"
+			"text"		"Memories"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"N1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize InfoRemC3M3Unsanitarya2"
+			"text"		"What?"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M3OnBridge"
+			"text"		"Bridge"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C2M2_Steak01"
+			"text"		"Deep fry"
+		}
+		"East"
+		{
+			"command"	"vocalize RemWorldC6M1_WeddingWarn02"
+			"text"		"Cake"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C1M3SafeRoom2a"
+			"text"		"Men's store"
+		}
+		"South"
+		{
+			"command"	"vocalize _C4M5_BoatComing01"
+			"text"		"Virgil"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo14f"
+			"text"		"Yeah no"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_15a"
+			"text"		"Cupcake"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_16a"
+			"text"		"Big ape"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"N2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M1Intro_09a"
+			"text"		"Hey"
+		}
+		"North"
+		{
+			"command"	"vocalize _C2M2_Kiddie01"
+			"text"		"5 year old"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WeddingWitchDead03"
+			"text"		"Nice Coach"
+		}
+		"East"
+		{
+			"command"	"vocalize C5M2Horse001"
+			"text"		"Nice Ellis"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo07a"
+			"text"		"Better chance"
+		}
+		"South"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo01b"
+			"text"		"Hell"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldC6M2_InSewer201a"
+			"text"		"Don't dare"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk101a"
+			"text"		"Shithole"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC502SmellBath3"
+			"text"		"Messed up"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"N3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C5M3Jets2"
+			"text"		"Cmon"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M3AlarmFieldNags02"
+			"text"		"Mom's car"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1Intro_15e"
+			"text"		"Lighten up"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M4NearFinale02a"
+			"text"		"Screwed"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize C5M3Bodies04"
+			"text"		"Not good"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_InSewer101c"
+			"text"		"Need this"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C1M4SafeRoom2a4"
+			"text"		"Asshole"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn05a"
+			"text"		"Women"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize _c4m2_seestation03"
+			"text"		"Farmer Joe"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"N4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C1M2SafeRoomb3"
+			"text"		"Whatever"
+		}
+		"North"
+		{
+			"command"	"vocalize C1M3SafeRoom2b"
+			"text"		"Hate malls"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C2M1abandoned02"
+			"text"		"Theory"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC502Horse2"
+			"text"		"Horse"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo08a"
+			"text"		"Tease"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_FinalWater01a"
+			"text"		"Hate Ellis"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize WorldIntroC31b1"
+			"text"		"Friendly"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M2_InSewer202a"
+			"text"		"Ugh"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize WorldC6M1_PostWedding02a"
+			"text"		"Marrying"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"C1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C5M3Jets2"
+			"text"		"Motherf-"
+		}
+		"North"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo18e"
+			"text"		"Guard"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C1M3SafeRoom2"
+			"text"		"Pray"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M4SafeRoom2b5"
+			"text"		"Amen"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldSignStayInGroup2"
+			"text"		"Sayin'"
+		}
+		"South"
+		{
+			"command"	"vocalize _C4M5_BoatComing01"
+			"text"		"Virgil"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize c4m1_InBurgerTank01"
+			"text"		"Burger"
+		}
+		"West"
+		{
+			"command"	"vocalize _C4M3_FLOODED01"
+			"text"		"Sugar"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize _C2M2_CottonCandy01"
+			"text"		"Cotton candy"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"C2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldSignsInfectedDetected2"
+			"text"		"No shit"
+		}
+		"North"
+		{
+			"command"	"vocalize WorldC6M2_InSewer101a"
+			"text"		"Deep shit"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C1M4SafeRoom2a5"
+			"text"		"Move Nick"
+		}
+		"East"
+		{
+			"command"	"vocalize _c2m3_coaster05"
+			"text"		"Not cool"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WeddingWitchDead01"
+			"text"		"Got problems"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk101c"
+			"text"		"Shithole"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize _C2M2_Kiddie01"
+			"text"		"Babysitting"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_13b"
+			"text"		"Flirt"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_21d"
+			"text"		"Vampires"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"C3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize WorldC6M2_InSewer202a"
+			"text"		"Jesus"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M1_intro008"
+			"text"		"Other side"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C6M1Intro_21g"
+			"text"		"Savannah"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC6M2_OnTourWalk103a"
+			"text"		"Shut up"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo13d"
+			"text"		"Positive"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M2_InSewer102a"
+			"text"		"Piggy back"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo01a"
+			"text"		"Priority"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn03a"
+			"text"		"Not now"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C1M2SafeRoomb2"
+			"text"		"Attitude"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"C4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C2M1Falling"
+			"text"		"Whoa"
+		}
+		"North"
+		{
+			"command"	"vocalize WeddingWitchDead02"
+			"text"		"Creeps"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WorldC502Smell2"
+			"text"		"Smell"
+		}
+		"East"
+		{
+			"command"	"vocalize C2M5_Button2Yell"
+			"text"		"Song"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M1_PostWedding01a"
+			"text"		"No Ellis"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn04a"
+			"text"		"Tuxedo"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C6M1TakeSubMachineGun01"
+			"text"		"No Nick"
+		}
+		"West"
+		{
+			"command"	"vocalize _c4m2_Witchville05"
+			"text"		"Rain"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo09a"
+			"text"		"Dirt"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"E1,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C6M2_OpenGate1b"
+			"text"		"Hey"
+		}
+		"North"
+		{
+			"command"	"vocalize _c2m3_coaster03"
+			"text"		"Christmas"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize C1M2SafeRooma2"
+			"text"		"Not bad"
+		}
+		"East"
+		{
+			"command"	"vocalize C1M3SafeRoom2d"
+			"text"		"Amen"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize _c2m3_howcool"
+			"text"		"Awesome"
+		}
+		"South"
+		{
+			"command"	"vocalize _C4M5_BoatComing01"
+			"text"		"Virgil"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C1M4SafeRoom2b3"
+			"text"		"My hero"
+		}
+		"West"
+		{
+			"command"	"vocalize C6M1Intro_01c"
+			"text"		"Cmon"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C2M1Intro_402"
+			"text"		"Love you"
+		}
+	}
+	
+	//--------------------------------------------------------------
+	"E2,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C2M1Falling"
+			"text"		"Whoa"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M5_Button2205"
+			"text"		"Machines"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo16f"
+			"text"		"Whatever Coach"
+		}
+		"East"
+		{
+			"command"	"vocalize C5M3SeeGraveyard06"
+			"text"		"Ghost"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize InfoRemC3M2Bathtub2"
+			"text"		"Smell yourself"
+		}
+		"South"
+		{
+			"command"	"vocalize WorldC502Smell2"
+			"text"		"Smells nice"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C2M4PenSmell001"
+			"text"		"Smell dead"
+		}
+		"West"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo03b"
+			"text"		"Rant"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo16d"
+			"text"		"Whatever Ro"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"E3,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C3M2SafeRooma2"
+			"text"		"Mud"
+		}
+		"North"
+		{
+			"command"	"vocalize C5M3Bodies01"
+			"text"		"Creeps"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize WorldSignC5AlarmWillSound3d"
+			"text"		"Get it"
+		}
+		"East"
+		{
+			"command"	"vocalize C2M5_Button2Yell"
+			"text"		"Song"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize WorldC6M1_WeddingWarn03a"
+			"text"		"Shut up"
+		}
+		"South"
+		{
+			"command"	"vocalize _C2M2_Peanut01"
+			"text"		"Lil Peanut"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize C2M1Intro009"
+			"text"		"Not cool"
+		}
+		"West"
+		{
+			"command"	"vocalize _c4m2_Witchville05"
+			"text"		"Cryin'"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize _C2M2_ThisTall02"
+			"text"		"Comedian"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"E4,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize C2M1Intro_408"
+			"text"		"Good"
+		}
+		"North"
+		{
+			"command"	"vocalize DLC1_C6M3_SafeRoomConvo01c"
+			"text"		"Crush"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize _C4M4_FLOODED01"
+			"text"		"Atlantis"
+		}
+		"East"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingJ3"
+			"text"		"Buff"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize _C1M1_ElevatorHello03a"
+			"text"		"Name"
+		}
+		"South"
+		{
+			"command"	"vocalize C3M2SafeRoomb3"
+			"text"		"Point"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo19e"
+			"text"		"Jogging"
+		}
+		"West"
+		{
+			"command"	"vocalize WorldC3M1FerryCrossingk3"
+			"text"		"Gross"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize C6M1Intro_23b"
+			"text"		"Password"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Characters,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"go_away_from_keyboard; radialmenu none"
+			"text"		"IDLE"
+		}
+		"North"
+		{
+			"command"	"alias +char1 +mouse_menu Z1; alias +char2 +mouse_menu Z2; alias +char3 +mouse_menu Z3; alias +char4 +mouse_menu Z4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Zoey"
+		}
+		"NorthEast"
+		{
+			"command"	"alias +char1 +mouse_menu E1; alias +char2 +mouse_menu E2; alias +char3 +mouse_menu E3; alias +char4 +mouse_menu E4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Ellis"
+		}
+		"East"
+		{
+			"command"	"alias +char1 +mouse_menu C1; alias +char2 +mouse_menu C2; alias +char3 +mouse_menu C3; alias +char4 +mouse_menu C4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Coach"
+		}
+		"SouthEast"
+		{
+			"command"	"alias +char1 +mouse_menu N1; alias +char2 +mouse_menu N2; alias +char3 +mouse_menu N3; alias +char4 +mouse_menu N4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Nick"
+		}
+		"South"
+		{
+			"command"	"alias +char1 +mouse_menu R1; alias +char2 +mouse_menu R2; alias +char3 +mouse_menu R3; alias +char4 +mouse_menu R4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Rochelle"
+		}
+		"SouthWest"
+		{
+			"command"	"alias +char1 +mouse_menu B1; alias +char2 +mouse_menu B2; alias +char3 +mouse_menu B3; alias +char4 +mouse_menu B4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Bill"
+		}
+		"West"
+		{
+			"command"	"alias +char1 +mouse_menu L1; alias +char2 +mouse_menu L2; alias +char3 +mouse_menu L3; alias +char4 +mouse_menu L4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Louis"
+		}
+		"NorthWest"
+		{
+			"command"	"alias +char1 +mouse_menu F1; alias +char2 +mouse_menu F2; alias +char3 +mouse_menu F3; alias +char4 +mouse_menu F4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Francis"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Characters,Survivor,Dead"
+	{
+		"Center"
+		{
+			"command"	"-mouse_menu"
+			"text"		""
+		}
+		"North"
+		{
+			"command"	"alias +char1 +mouse_menu Z1; alias +char2 +mouse_menu Z2; alias +char3 +mouse_menu Z3; alias +char4 +mouse_menu Z4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Zoey"
+		}
+		"NorthEast"
+		{
+			"command"	"alias +char1 +mouse_menu E1; alias +char2 +mouse_menu E2; alias +char3 +mouse_menu E3; alias +char4 +mouse_menu E4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Ellis"
+		}
+		"East"
+		{
+			"command"	"alias +char1 +mouse_menu C1; alias +char2 +mouse_menu C2; alias +char3 +mouse_menu C3; alias +char4 +mouse_menu C4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Coach"
+		}
+		"SouthEast"
+		{
+			"command"	"alias +char1 +mouse_menu N1; alias +char2 +mouse_menu N2; alias +char3 +mouse_menu N3; alias +char4 +mouse_menu N4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Nick"
+		}
+		"South"
+		{
+			"command"	"alias +char1 +mouse_menu R1; alias +char2 +mouse_menu R2; alias +char3 +mouse_menu R3; alias +char4 +mouse_menu R4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Rochelle"
+		}
+		"SouthWest"
+		{
+			"command"	"alias +char1 +mouse_menu B1; alias +char2 +mouse_menu B2; alias +char3 +mouse_menu B3; alias +char4 +mouse_menu B4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Bill"
+		}
+		"West"
+		{
+			"command"	"alias +char1 +mouse_menu L1; alias +char2 +mouse_menu L2; alias +char3 +mouse_menu L3; alias +char4 +mouse_menu L4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Louis"
+		}
+		"NorthWest"
+		{
+			"command"	"alias +char1 +mouse_menu F1; alias +char2 +mouse_menu F2; alias +char3 +mouse_menu F3; alias +char4 +mouse_menu F4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu"
+			"text"		"Francis"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Characters,Spectator"
+	{
+		"Center"
+		{
+			"command"	"-mouse_menu"
+			"text"		""
+		}
+		"North"
+		{
+			"command"	"alias +char1 +mouse_menu Z1; alias +char2 +mouse_menu Z2; alias +char3 +mouse_menu Z3; alias +char4 +mouse_menu Z4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu; jointeam 2 zoey; radialmenu none"
+			"text"		"Zoey"
+		}
+		"NorthEast"
+		{
+			"command"	"alias +char1 +mouse_menu E1; alias +char2 +mouse_menu E2; alias +char3 +mouse_menu E3; alias +char4 +mouse_menu E4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu; jointeam 2 ellis; radialmenu none"
+			"text"		"Ellis"
+		}
+		"East"
+		{
+			"command"	"alias +char1 +mouse_menu C1; alias +char2 +mouse_menu C2; alias +char3 +mouse_menu C3; alias +char4 +mouse_menu C4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu; jointeam 2 coach; radialmenu none"
+			"text"		"Coach"
+		}
+		"SouthEast"
+		{
+			"command"	"alias +char1 +mouse_menu N1; alias +char2 +mouse_menu N2; alias +char3 +mouse_menu N3; alias +char4 +mouse_menu N4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu; jointeam 2 nick; radialmenu none"
+			"text"		"Nick"
+		}
+		"South"
+		{
+			"command"	"alias +char1 +mouse_menu R1; alias +char2 +mouse_menu R2; alias +char3 +mouse_menu R3; alias +char4 +mouse_menu R4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu; jointeam 2 rochelle; radialmenu none"
+			"text"		"Rochelle"
+		}
+		"SouthWest"
+		{
+			"command"	"alias +char1 +mouse_menu B1; alias +char2 +mouse_menu B2; alias +char3 +mouse_menu B3; alias +char4 +mouse_menu B4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu; jointeam 2 bill; radialmenu none"
+			"text"		"Bill"
+		}
+		"West"
+		{
+			"command"	"alias +char1 +mouse_menu L1; alias +char2 +mouse_menu L2; alias +char3 +mouse_menu L3; alias +char4 +mouse_menu L4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu; jointeam 2 louis; radialmenu none"
+			"text"		"Louis"
+		}
+		"NorthWest"
+		{
+			"command"	"alias +char1 +mouse_menu F1; alias +char2 +mouse_menu F2; alias +char3 +mouse_menu F3; alias +char4 +mouse_menu F4; alias -char1 -mouse_menu; alias -char2 -mouse_menu; alias -char3 -mouse_menu; alias -char4 -mouse_menu; jointeam 2 francis; radialmenu none"
+			"text"		"Francis"
+		}
+	}
+}
