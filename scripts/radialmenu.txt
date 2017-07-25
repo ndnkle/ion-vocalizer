@@ -1510,8 +1510,8 @@
 		}
 		"North"
 		{
-			"command"	"vocalize C1M3SafeRoom2b"
-			"text"		"Hate malls"
+			"command"	"vocalize C1M1_ElevatorHello01_03CM6"
+			"text"		"Was it Ellis?"
 		}
 		"NorthEast"
 		{
