@@ -590,8 +590,8 @@
 		}
 		"West"
 		{
-			"command"	"vocalize CrashCourseI01"
-			"text"		"Exit"
+			"command"	"vocalize C7M1_saferoom02"
+			"text"		"Leave"
 		}
 		"NorthWest"
 		{
