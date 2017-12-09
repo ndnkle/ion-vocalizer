@@ -3,7 +3,7 @@
 	addonSteamAppID		550
 	addonTitle		"ion's Vocalizer"
 	addonTagline		"Vocalizer and character switcher"
-	addonVersion		"8.0"
+	addonVersion		"8.1"
 	addonAuthor		"ion"
 	addonURL0		"http://steamcommunity.com/sharedfiles/filedetails/?id=698857882"
 	

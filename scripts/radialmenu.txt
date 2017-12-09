@@ -1045,7 +1045,7 @@
 		}
 		"NorthWest"
 		{
-			"command"	"vocalize VampiresBeata"
+			"command"	"vocalize ConceptBlock628"
 			"text"		"Zombies"
 		}
 	}
@@ -2625,7 +2625,7 @@
 		}
 		"SouthEast"
 		{
-			"command"	"vocalize _c2m3_howcool"
+			"command"	"vocalize _c2m3_coollight01"
 			"text"		"Awesome"
 		}
 		"South"
