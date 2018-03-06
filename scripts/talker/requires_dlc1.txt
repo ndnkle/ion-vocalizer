@@ -1,0 +1,13 @@
+//--------------------------------------------------------------------------------------------------------------
+// Character-Specific Includes
+//--------------------------------------------------------------------------------------------------------------
+
+#include "talker/imt_criteria.txt"
+#include "talker/imt_biker.txt"
+#include "talker/imt_manager.txt"
+#include "talker/imt_namvet.txt"
+#include "talker/imt_teengirl.txt"
+#include "talker/imt_gambler.txt"
+#include "talker/imt_coach.txt"
+#include "talker/imt_mechanic.txt"
+#include "talker/imt_producer.txt"

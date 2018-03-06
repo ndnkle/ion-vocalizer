@@ -1,0 +1,598 @@
+//--------------------------------------------------------------------------------------------------------------
+// Mechanic Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_SingingMechanic
+{
+	scene "scenes/Mechanic/MeleeWeapons13.vcd" odds 20  //[humming] Gonna beat me a zombie to death... with a nightstick...
+	scene "scenes/Mechanic/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn...
+	scene "scenes/Mechanic/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around...
+}
+Rule iMT_SingingMechanic
+{
+	criteria iMT_Singing IsMechanic
+	Response iMT_SingingMechanic
+}
+
+Response iMT_TeamFortress2Mechanic
+{
+	scene "scenes/Mechanic/DLC1_CommunityE20.vcd"  //Dude, this is just like Team Fortress 2!
+}
+Rule iMT_TeamFortress2Mechanic
+{
+	criteria iMT_TeamFortress2 IsMechanic
+	Response iMT_TeamFortress2Mechanic
+}
+
+Response iMT_AllAboardMechanic
+{
+	scene "scenes/Mechanic/DLC1_CommunityE15.vcd"  //All aboard! Toot! Toot!
+	scene "scenes/Mechanic/DLC1_CommunityE16.vcd"  //All aboard! Toot! Toot!
+	scene "scenes/Mechanic/DLC1_CommunityE18.vcd"  //All aboard!
+	scene "scenes/Mechanic/WorldC2M325.vcd"  //Click-click-click-click
+}
+Rule iMT_AllAboardMechanic
+{
+	criteria iMT_AllAboard IsMechanic
+	Response iMT_AllAboardMechanic
+}
+
+Response iMT_SayingZoeyMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing06.vcd"  //Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing07.vcd"  //Zoey! Zoey! Zoey! Man I just love sayin' it.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing08.vcd"  //Zoey! Zoey! Zoey! I could say that all day long.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing09.vcd"  //Zoey! Zoey! Zoey! I just love sayin' it, really.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing10.vcd"  //Zoey! Zoey! Zoey! I just love sayin' it!
+}
+Rule iMT_SayingZoeyMechanic
+{
+	criteria iMT_SayingZoey IsMechanic
+	Response iMT_SayingZoeyMechanic
+}
+
+Response iMT_MarriageMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingPostWitch01.vcd" then Coach WorldC6M1_PostWedding01a foo:0 -2.761  //Hey Coach. Can coaches marry people?
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingPostWitch02.vcd" then Gambler WorldC6M1_PostWedding02a foo:0 -3.481  //You know what? This got me thinking... I should totally marry that girl.
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchAttacking01.vcd"  //Oh man I changed my mind! I do not wanna get married!
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo29.vcd"  //Ro, it's the zombie apocalypse. First dating days are over. Nick, by the way, I'm gonna have to borrow your suit, because we're skippin' right to the marriage, brother. Then we're goin' cross country, just her, me and the Jimmy Gibbs Jr.
+}
+Rule iMT_MarriageMechanic
+{
+	criteria iMT_Marriage IsMechanic
+	Response iMT_MarriageMechanic
+}
+
+Response iMT_TattoosMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo01.vcd" then Gambler iMT_Tattoos foo:0 -3.2  //Hey Nick, you and me ought to get tattoos that say "bros".
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo04.vcd"  //TATTOOS! TATTOOS!
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo06.vcd"  //I love tattoos. I only have one, but I was gonna get my truck tattooed on my other arm.
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo07.vcd"  //Man, I love tattoos. I only have one, I was gonna get my truck tattooed on the other arm, but maybe now I get Jimmy Gibbs Jr car. Damn zombies.
+}
+Rule iMT_TattoosMechanic
+{
+	criteria iMT_Tattoos IsMechanic
+	Response iMT_TattoosMechanic
+}
+
+Response iMT_CaCawMechanic
+{
+	scene "scenes/Mechanic/WorldMisc34.vcd"  //Ca Caw Ca Caw Ca Caw!
+	scene "scenes/Mechanic/WorldMisc35.vcd"  //Ca Caw Ca Caw Ca Caw Ca Caw!
+	scene "scenes/Mechanic/WorldMisc36.vcd"  //Ca Caw Ca Caw!
+}
+Rule iMT_CaCawMechanic
+{
+	criteria iMT_CaCaw IsMechanic
+	Response iMT_CaCawMechanic
+}
+
+Response iMT_SoMadMechanic
+{
+	scene "scenes/Mechanic/FriendlyFire16.vcd" //I'm gettin' so mad I could shit a squealin' worm.
+	scene "scenes/Mechanic/FriendlyFire22.vcd" //I'm gettin' so mad I could shit a squealin' worm, man.
+}
+Rule iMT_SoMadMechanic
+{
+	criteria iMT_SoMad IsMechanic
+	Response iMT_SoMadMechanic
+}
+
+Response iMT_CoachBreathingReacMechanic
+{
+	scene "scenes/Mechanic/WorldC2M123.vcd" odds 10  //Coach, you're breathin' a little hard, you alright?
+}
+Rule iMT_CoachBreathingReacMechanic
+{
+	criteria iMT_CoachBreathingReac IsMechanic
+	Response iMT_CoachBreathingReacMechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Stories
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_EllisStoriesMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_SafeRoomConvo20.vcd" then any iMT_EllisStoryInterrupt foo:0 -13  //Oh, dude! That reminds me of that time my buddy Keith, he went on a diet on account of what the doctor sayin' he had to go on a diet or he'd die, so they told him he could drink nothin but them little diet shakes, but those are like five bucks a can man, and Keith is like "Well I aint' gonna..."
+	scene "scenes/Mechanic/DLC1_CommunityE08.vcd" then any iMT_EllisStoryInterrupt foo:0 -21.73  //I ever tell you about the time my buddy Keith wanted to see what it felt like to be in snow storm? He ain't ever seen real snow, only snow we got is from that big machine that cleans the ice at the local rink. So he figured to make do and when that machine went to dump its load, he would just lay under it. Took us 2 hours to dig him out. He lost two fingers and a thumb to frostbite.
+	scene "scenes/Mechanic/DLC1_CommunityE23.vcd" then any iMT_EllisStoryInterrupt foo:0 -4.44 //I ever tell you about the time my buddy Keith told me that he was picked up by some little green men and they...
+	scene "scenes/Mechanic/DLC1_KeithStories01.vcd" then any iMT_EllisStoryInterrupt foo:0 -15.42  //This one time my buddy Keith, on a DARE, got a tattoo: "I'm a moron" right across his forehead. Course, Keith made two hundred bucks off that, so... you ask yourself: who's the REAL moron, huh?
+	scene "scenes/Mechanic/DLC1_KeithStories02a.vcd" then self iMT_DLC1_KeithStories02b foo:0 -9.23  //This one time my buddy Keith started up a historic tour, on account of his mom took him to Colonial Williamsburg, and it is like a license to print money at them places.
+	scene "scenes/Mechanic/DLC1_KeithStories03a.vcd" then self iMT_DLC1_KeithStories03b foo:0 -14.21  //Ya know, my buddy Keith had his car drop in a lake off a bridge like this one here. See he was drivin' over it late at night, and there in the middle of the bridge was what looked, in Keith's estimation, like a dead bear. So Keith gets out of his car to ick to poke it with, right?
+	scene "scenes/Mechanic/DLC1_KeithStories04.vcd" then any iMT_EllisStoryInterrupt foo:0 -41.19  //I ever tell you about the time Keith made sushi? Yeah, his mom took him to a sushi place for his birthday and he didn't want to go, and it turned out he LOVED it, man. But it's like 10 bucks a su-sho in one of them places, so Keith figures hey, how hard can it be to roll up some raw food in seaweed, right? As it turns out, it's hard. Now, they say that experience is the best teacher, and experience taught Keith that if you ever eat three pounds of raw chicken, it kills you. Now luckily, Keith's brain went into self-defense mode and started shutting organs down to head the chicken off at the pass, and the doctors were able to get 'em out before his heart stopped. But to this day, Keith has no sensation in his right foot, and he don't recognize his own brother Paul no more.
+	scene "scenes/Mechanic/DLC1_KeithStories05.vcd" then any iMT_EllisStoryInterrupt foo:0 -20.0  //Hey ya'll, yeah, I like this bridge you got. You know, this reminds me the my buddy Keith and I were once on a bridge just like this, man. Well, I mean kinda, I mean I was on the bridge and Keith thought he could jump the river without the bridge, so I raised the bridge, and well... Did you know cars can float? I mean, for a little while at least...
+	scene "scenes/Mechanic/DLC1_KeithStories06_v2.vcd" then any iMT_EllisStoryInterrupt foo:0 -13.04  //I ever tell you about the time my buddy Keith got married? 'Course not... that's a trick question. Cause he never did get married. You know you always hear about them runaway brides? Well Keith, he was a runaway groom and on his wedding day... Yep, it all started when he...
+	scene "scenes/Mechanic/DLC1_KeithStories07.vcd" then any iMT_EllisStoryInterrupt foo:0 -18.59  //I ever tell you about the time my buddy Keith snuck into a wedding? He thought he was being smart getting all dressed up and like...but it seems the preacher wasn't there and they thought he was the preacher and well, he married them the best he could. I think that counts for them being married but, I dunno, maybe not. I think they named one of their...
+	scene "scenes/Mechanic/EllisStoriesA01.vcd" then any iMT_EllisStoryInterrupt foo:0 -7.93  //Man I love malls.  I do.  Once I was in this mall, up in Atlanta, and these guys were dancing for like money and stuff and my friend Dave and I was all...
+	scene "scenes/Mechanic/EllisStoriesB01.vcd" then any iMT_EllisStoryInterruptGoat foo:0 -12.29  //Jimmy Gibbs, Jr. is the man. I mean I don't know anybody like that, man.  But there was this guy I knew, he raced dirt tracks, not stock cars but open wheeled cars you know, and he was racing once and a goat...
+	scene "scenes/Mechanic/EllisStoriesC01.vcd" then any iMT_EllisStoryInterrupt foo:0 -13.43  //I knew this guy who was trying to set the world record on staying on a Ferris wheel.  He had been up there like two days or somethin' and he wanted some beer, but they weren't givin' him any so he got this rope.  Now don't ask me where he got the rope from---
+	scene "scenes/Mechanic/EllisStoriesD01.vcd" then any iMT_EllisStoryInterrupt foo:0 -23.98  //Man, all this mud reminds me of my friend Keith.  Yeah, he was goin' to build a shack once, to live in and all, and I know most people here, they build houses and they become shacks, but Keith, he was about jumpin' right to the shack stage.  But he had no wood. So he got some mud and was makin' what we were all thinkin' was gonna be these adobe bricks, you know, like when them people out west made bricks and shit?  Well, he had mud and...
+	scene "scenes/Mechanic/EllisStoriesE01.vcd" then any iMT_EllisStoryInterrupt foo:0 -9.99  //I ain't never been in a sugar cane field before. I mean, I seen 'em and all, but no real reason to go into one, but now you go into a peach grove, you find all kinds of cool shit.  This one time I was in...
+	scene "scenes/Mechanic/EllisStoriesF01.vcd" then any iMT_EllisStoryInterrupt foo:0 -8.54  //Do you know what suck the heads means?  Cause I came down here with Keith once and he didn't know and… I mean, it ain't nothin' bad.  It's about eatin'.
+	scene "scenes/Mechanic/EllisStoriesG01.vcd" then any iMT_EllisStoryInterrupt foo:0 -14.33  //I ever tell you about the time Keith and I made fireworks? Now, I didn't know shit about chemistry, but Keith figured,  "Gasoline burns, doesn't it?" Third degree burns on ninety-five percent of his body. Man, people in the next city over were calling to complain about the smell of burning skin.
+	scene "scenes/Mechanic/EllisStoriesH01.vcd" then any iMT_EllisStoryInterrupt foo:0 -13.34  //I ever tell you about the time Keith tried to deep fry a turkey? Third degree burns over ninety percent of his body. His doctor called up, like, other doctors to look at him cause they'd never seen burns on top of existing burns--
+	scene "scenes/Mechanic/EllisStoriesI01.vcd" then any iMT_EllisStoryInterrupt foo:0 -16.69  //I ever tell you about the time my buddy Keith drove his car off a cliff, broke both his legs? It's not a funny ha-ha story so much as a make-you-think story.  For instance: windshields look pretty durable, right? Not the case, according to Keith. Son of a bitch flew right through that sucker--
+	scene "scenes/Mechanic/EllisStoriesJ01.vcd" then any iMT_EllisStoryInterrupt foo:0 -17.96  //My buddy Keith lived in a grave yard once, for a whole year. It wasn't a dare or nothing, he just got kicked out of his house. He said he never saw a single ghost, except this one time when a ghost stabbed him from behind and took all his money, and he might have just been a homeless guy cause he had a robe on with two eyes cut outta his face--
+	scene "scenes/Mechanic/EllisStoriesK01.vcd" then any iMT_EllisStoryInterrupt foo:0 -19.75  //My buddy Keith tried camping out on top of a building once. He was shooting crows but the police were too busy tear gassing him to ask what he was doing up there. He screamed for an entire YEAR every single time he opened his eyes. Oh, man.  At first it was funny, then it just got sad, but then it got funny again. Oh, man.
+	scene "scenes/Mechanic/EllisStoriesL01.vcd" then any iMT_EllisStoryInterrupt foo:0 -15.53  //I ever tell you guys about the time my buddy Keith got rolled by a gator in a swamp? Man, he didn't agonize it or nothing, we were just trying to grab two so we could piss 'em off and get 'em into a fight. Anyway, the third time Keith went under, I realized something was wrong, so I--
+	scene "scenes/Mechanic/EllisStoriesM01.vcd" then any iMT_EllisStoryInterrupt foo:0 -15.02  //I ever tell you about the time my buddy Keith drowned in the Tunnel of Love? You wouldn't think it could happen cause the water's so shallow, but that's how it gets you, man: Over confidence. Keith was with his lady at the time and he was yelling for her to save him but she didn't wanna get wet--
+	scene "scenes/Mechanic/EllisStoriesP01.vcd" then any iMT_EllisStoryInterrupt foo:0 -10.17  //I ever tell you about the time me and Keith snuck paintball guns on a roller coaster? I never heard of anybody else doing it, so I thought we might have invented a sport. So Keith called the patent office but--
+	scene "scenes/Mechanic/EllisStoriesQ01.vcd" then any iMT_EllisStoryInterrupt foo:0 -12.00  //I ever tell you about the time me and Keith made a homemade bumper car ride with riding mowers in his back yard? Mower blade wounds over ninety percent of his body. I didn't run him over, either.  He somehow managed to fall under his own.
+	scene "scenes/Mechanic/EllisStoriesR01.vcd" then any iMT_EllisStoryInterrupt foo:0 -3.46  //I ever tell you about the time me and Keith filled up water balloons with our own--
+	scene "scenes/Mechanic/EllisStoriesS01.vcd" then any iMT_EllisStoryInterrupt foo:0 -18.21  //One the time the army bombed my buddy Keith. He went camping and didn't bother to read the signs, and I guess they were just testing bombs that day.  All sorts of stuff too, not just regular bombs. Like biological nerve gas bombs, shrapnel bombs, these bombs that break up in the air into like a hundred smaller bombs--
+	scene "scenes/Mechanic/EllisStoriesT01.vcd" then any iMT_EllisStoryInterrupt foo:0 -11.59  //I ever tell you about the time my buddy Keith fell down an open manhole? He was unconscious down there for like a week.  During that time, unbeknownst to Keith, they paved over him. Keith had to--
+	scene "scenes/Mechanic/EllisStoriesU01.vcd" then any iMT_EllisStoryInterrupt foo:0 -15.21  //I ever tell you about the time my buddy Keith and I were on the top of a burning building and we had to fight our way down like five floors of zombies? Wait a second.  I guess that was you guys. Aw shit, man, I can't wait to tell Keith about that one.
+	scene "scenes/Mechanic/EllisStoriesV01.vcd" then any iMT_EllisStoryInterrupt foo:0 -16.01  //I ever tell you about the time my buddy Keith fell out the roller coaster? Yeah, he didn't drop far, mind you, just onto the tracks, but the carnival people wouldn't stop the ride cause all the other people paid good money and Keith snuck on for free, so he had to dodge for like twenty minutes or so.
+	scene "scenes/Mechanic/World142.vcd" then any iMT_EllisStoryInterrupt foo:0 -4.3  //Did I ever tell you the time me and my grandpa took the bus the Memphis to go visit Graceland and...
+}
+Rule iMT_EllisStoriesMechanic
+{
+	criteria iMT_EllisStories IsMechanic IsNotCoughing IsNotSpeaking
+	Response iMT_EllisStoriesMechanic
+}
+
+Response iMT_DLC1_KeithStories02bMechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories02b.vcd" then any iMT_EllisStoryInterrupt foo:0 -26.93  //Now, you might ask yourself how an honest attempt to recreate the majesty of colonial times turned into raccoon fights at five bucks a pop in Keith's backyard? And the answer to that particular question is Keith sharin' a place with his two brothers, and them bein' assholes who wouldn't let him do it anywhere but in the back yard. Add to that Keith didn't technically have anyˇK you know, history to show, but did have this whole family of feral raccoons livin' in the chassis of an old car, and you'd begin to understand?
+}
+Rule iMT_DLC1_KeithStories02bMechanic
+{
+	criteria iMT_DLC1_KeithStories02b IsMechanic
+	Response iMT_DLC1_KeithStories02bMechanic
+}
+
+Response iMT_DLC1_KeithStories03bMechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories03b.vcd" then self iMT_DLC1_KeithStories03c foo:0 -24.62  ///Well, it turns out it's just some lady's fur coat that musta fell out out of her car, so... free coat, right? Now, owls won't normally attack a man, but in this case they were hungry, and that made them reckless. Keith reckons they must've been there for hours, watchin' what they thought was a bear carcass, cause as soon as he picked it up, those owls had claws in him an inch deep.
+}
+Rule iMT_DLC1_KeithStories03bMechanic
+{
+	criteria iMT_DLC1_KeithStories03b IsMechanic
+	Response iMT_DLC1_KeithStories03bMechanic
+}
+
+Response iMT_DLC1_KeithStories03cMechanic
+{
+	scene "scenes/Mechanic/DLC1_KeithStories03c.vcd" then any iMT_EllisStoryInterrupt foo:0 -17.73  //Well, Keith figures his best bet'll be to jump in the lake, cause owls can't swim. Well, them owls could. He fought them for twenty minutes, treading water, and during that time, a boat came, the bridge went up, and down went Keith's car. Sometimes nature's just tryin' to teach us, if only we'd listen.
+}
+Rule iMT_DLC1_KeithStories03cMechanic
+{
+	criteria iMT_DLC1_KeithStories03c IsMechanic
+	Response iMT_DLC1_KeithStories03cMechanic
+}
+
+Response iMT_EllisStoryReac01Mechanic
+{
+	scene "scenes/Mechanic/EllisStoriesInterrupt05.vcd"  //Okay.
+	scene "scenes/Mechanic/EllisStoriesInterrupt14.vcd"  //Okay.
+}
+Rule iMT_EllisStoryReac01Mechanic
+{
+	criteria iMT_EllisStoryReac01 IsMechanic
+	Response iMT_EllisStoryReac01Mechanic
+}
+
+Response iMT_EllisStoryReac01GoatMechanic
+{
+	scene "scenes/Mechanic/EllisStoriesB02.vcd"  //Okay. But there was a goat.
+}
+Rule iMT_EllisStoryReac01GoatMechanic
+{
+	criteria iMT_EllisStoryReac01Goat IsMechanic
+	Response iMT_EllisStoryReac01GoatMechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAlsoWarnChargerMechanic
+{
+	scene "scenes/Mechanic/WarnCharger01.vcd"  //CHARGER!
+	scene "scenes/Mechanic/WarnCharger02.vcd"  //CHARGER!
+	scene "scenes/Mechanic/WarnCharger03.vcd"  //CHARGER!
+	scene "scenes/Mechanic/WarnCharger04.vcd"  //CHARGER!
+}
+Rule iMT_PlayerAlsoWarnChargerMechanic
+{
+	criteria iMT_PlayerAlsoWarnCharger IsMechanic
+	Response iMT_PlayerAlsoWarnChargerMechanic
+}
+
+Response iMT_PlayerAlsoWarnJockeyMechanic
+{
+	scene "scenes/Mechanic/WarnJockey01.vcd"  //JOCKEY!
+	scene "scenes/Mechanic/WarnJockey02.vcd"  //JOCKEY! JOCKEY!
+	scene "scenes/Mechanic/WarnJockey03.vcd"  //JOCKEY!
+	scene "scenes/Mechanic/WarnJockey04.vcd"  //JOCKEY!
+}
+Rule iMT_PlayerAlsoWarnJockeyMechanic
+{
+	criteria iMT_PlayerAlsoWarnJockey IsMechanic
+	Response iMT_PlayerAlsoWarnJockeyMechanic
+}
+
+Response iMT_PlayerAlsoWarnSpitterMechanic
+{
+	scene "scenes/Mechanic/WarnSpitter01.vcd"  //YO, SPITTER!
+	scene "scenes/Mechanic/WarnSpitter02.vcd"  //IT'S A SPITTER DUDE!
+	scene "scenes/Mechanic/WarnSpitter03.vcd"  //HEY IT'S A SPITTER!
+	scene "scenes/Mechanic/WarnSpitter04.vcd"  //SPITTER!
+}
+Rule iMT_PlayerAlsoWarnSpitterMechanic
+{
+	criteria iMT_PlayerAlsoWarnSpitter IsMechanic
+	Response iMT_PlayerAlsoWarnSpitterMechanic
+}
+
+Response iMT_PlayerCoughingMechanic
+{
+	scene "scenes/Mechanic/Cough01.vcd"  //[Coughing from smoke]
+	scene "scenes/Mechanic/Cough02.vcd"  //[Coughing from smoke]
+	scene "scenes/Mechanic/Cough03.vcd"  //[Coughing from smoke]
+	scene "scenes/Mechanic/Cough04.vcd"  //[Coughing from smoke]
+}
+Rule iMT_PlayerCoughingMechanic
+{
+	criteria iMT_PlayerCoughing IsMechanic
+	Response iMT_PlayerCoughingMechanic
+}
+
+Response iMT_PlayerSuggestHealthMechanic
+{
+	scene "scenes/Mechanic/SuggestHealth01.vcd"  //Heal up!
+	scene "scenes/Mechanic/SuggestHealth02.vcd"  //Hey, y'all should heal now.
+	scene "scenes/Mechanic/SuggestHealth03.vcd"  //It's a good time to heal up everybody.
+	scene "scenes/Mechanic/SuggestHealth04.vcd"  //Everybody take a minute and get yourself healed.
+	scene "scenes/Mechanic/SuggestHealthC101.vcd"  //Don't forget your health kits.
+	scene "scenes/Mechanic/SuggestHealthC102.vcd"  //Anybody want to heal now?
+	scene "scenes/Mechanic/SuggestHealthC103.vcd"  //Good time to heal.
+}
+Rule iMT_PlayerSuggestHealthMechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic
+	Response iMT_PlayerSuggestHealthMechanic
+}
+
+Response iMT_PlayerSuggestHealthGamblerMechanic
+{
+	scene "scenes/Mechanic/SuggestHealthNick01.vcd"  //Excuse me Nick, but you might wanna heal.
+	scene "scenes/Mechanic/SuggestHealthNick02.vcd"  //Nick.  Um.. Nick!  Don't forget about that health pack.
+	scene "scenes/Mechanic/SuggestHealthNick03.vcd"  //Nick, don't forget none about that health pack.
+}
+Rule iMT_PlayerSuggestHealthGamblerMechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic IssuerClose SubjectIsGambler
+	Response iMT_PlayerSuggestHealthGamblerMechanic
+}
+
+Response iMT_PlayerSuggestHealthCoachMechanic
+{
+	scene "scenes/Mechanic/SuggestHealthCoach01.vcd"  //Coach, don't forget about that health pack!
+	scene "scenes/Mechanic/SuggestHealthCoach02.vcd"  //Coach, don't forget about that heal pack, now!
+	scene "scenes/Mechanic/SuggestHealthCoach03.vcd"  //Coach, now don't forget none about healin'.
+	scene "scenes/Mechanic/SuggestHealthCoach04.vcd"  //Coach, don't mean to speak out of turn but you should probably heal.
+	scene "scenes/Mechanic/SuggestHealthCoach05.vcd"  //Coach, don't mean to speak out of turn but you should probably well heal when you get a minute. You know.
+	scene "scenes/Mechanic/SuggestHealthCoach06.vcd"  //Coach, now don't forget none about healin'.
+	scene "scenes/Mechanic/SuggestHealthCoach07.vcd"  //Coach, don't forget about that health pack.
+}
+Rule iMT_PlayerSuggestHealthCoachMechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic IssuerClose SubjectIsCoach
+	Response iMT_PlayerSuggestHealthCoachMechanic
+}
+
+Response iMT_PlayerSuggestHealthProducerMechanic
+{
+	scene "scenes/Mechanic/SuggestHealthRochelle01.vcd"  //Hey Ro girl, heal up now.
+	scene "scenes/Mechanic/SuggestHealthRochelle02.vcd"  //Ro, you think about healin?
+	scene "scenes/Mechanic/SuggestHealthRochelle03.vcd"  //Rochelle, you ought to heal now.
+	scene "scenes/Mechanic/SuggestHealthRochelle04.vcd"  //I'll help ya if you need me to.
+}
+Rule iMT_PlayerSuggestHealthProducerMechanic
+{
+	criteria iMT_PlayerSuggestHealth IsMechanic IssuerClose SubjectIsProducer
+	Response iMT_PlayerSuggestHealthProducerMechanic
+}
+
+Response iMT_PlayerNiceShotMechanic
+{
+	scene "scenes/Mechanic/NiceShot01.vcd"  //Well, Nice.
+	scene "scenes/Mechanic/NiceShot02.vcd"  //Nice shot.
+	scene "scenes/Mechanic/NiceShot03.vcd"  //Cool.
+	scene "scenes/Mechanic/NiceShot04.vcd"  //Yeah, nice!
+	scene "scenes/Mechanic/NiceShot05.vcd"  //Good shootin', Tex!
+	scene "scenes/Mechanic/NiceShot06.vcd"  //Nice.
+	scene "scenes/Mechanic/NiceShot07.vcd"  //Goddamn your good.
+	scene "scenes/Mechanic/NiceShot08.vcd"  //Goddamn your good.
+	scene "scenes/Mechanic/NiceShot09.vcd"  //Hey good shootin'!
+	scene "scenes/Mechanic/NiceShot10.vcd"  //Yeah, nice!
+	scene "scenes/Mechanic/NiceShot11.vcd"  //Nice shot.
+}
+Rule iMT_PlayerNiceShotMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic
+	Response iMT_PlayerNiceShotMechanic
+}
+
+Response iMT_PlayerNiceShotCoachMechanic
+{
+	scene "scenes/Mechanic/NiceShotCoach01.vcd"  //You nailed it coach!
+	scene "scenes/Mechanic/NiceShotCoach02.vcd"  //Nice shot, coach! Nailed it.
+}
+Rule iMT_PlayerNiceShotCoachMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IssuerClose SubjectIsCoach
+	Response iMT_PlayerNiceShotCoachMechanic
+}
+
+Response iMT_PlayerNiceShotGamblerMechanic
+{
+	scene "scenes/Mechanic/NiceShotGambler01.vcd"  //Whoa, Nick! Well... why doesn't it surpise me you're good with a gun?
+}
+Rule iMT_PlayerNiceShotGamblerMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IssuerClose SubjectIsGambler
+	Response iMT_PlayerNiceShotGamblerMechanic
+}
+
+Response iMT_PlayerNiceShotProducerMechanic
+{
+	scene "scenes/Mechanic/NiceShotRochelle01.vcd"  //Well, goddamn Annie Oakley.
+}
+Rule iMT_PlayerNiceShotProducerMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IssuerClose SubjectIsProducer
+	Response iMT_PlayerNiceShotProducerMechanic
+}
+
+Response iMT_PlayerGoingToDieMechanic
+{
+	scene "scenes/Mechanic/GoingToDie01.vcd"  //This was not in my plan.
+	scene "scenes/Mechanic/GoingToDie02.vcd"  //I'm hurtin' real bad.
+	scene "scenes/Mechanic/GoingToDie03.vcd"  //I hurt aplenty.
+	scene "scenes/Mechanic/GoingToDie04.vcd"  //I'm all torn up.
+	scene "scenes/Mechanic/GoingToDie05.vcd"  //This ain't right.
+	scene "scenes/Mechanic/GoingToDie06.vcd"  //They knocked the piss out of me.
+	scene "scenes/Mechanic/GoingToDie07.vcd"  //Ohh.....
+	scene "scenes/Mechanic/GoingToDie08.vcd"  //I've got a misery in my bones.
+	scene "scenes/Mechanic/GoingToDie09.vcd"  //I ain't lyin', this hurts!
+	scene "scenes/Mechanic/GoingToDie10.vcd"  //I don't feel right.
+	scene "scenes/Mechanic/GoingToDie11.vcd"  //I think I really hurt something.
+	scene "scenes/Mechanic/GoingToDie12.vcd"  //Oh man, oh man, oh man.
+	scene "scenes/Mechanic/GoingToDie13.vcd"  //Best be findin' me a health kit.
+	scene "scenes/Mechanic/GoingToDie14.vcd"  //I ain't just goin' on, I'm really hurt.
+	scene "scenes/Mechanic/GoingToDie15.vcd"  //Y'all , y'all I'm hurt!
+	scene "scenes/Mechanic/GoingToDie16.vcd"  //Ah hell no, ah hell no.
+	scene "scenes/Mechanic/GoingToDie17.vcd"  //These here zombies are tryin' to kill me.
+	scene "scenes/Mechanic/GoingToDie18.vcd"  //Ahh shit this hurts.
+	scene "scenes/Mechanic/GoingToDie19.vcd"  //Man, I ain't doin' too good.
+	scene "scenes/Mechanic/GoingToDie20.vcd"  //Oh, man, I'm hurtin'.
+	scene "scenes/Mechanic/GoingToDie21.vcd"  //Com come on. I gotta keep up, gotta keep up.
+	scene "scenes/Mechanic/GoingToDie25.vcd"  //I am all tuckered out.
+	scene "scenes/Mechanic/GoingToDie26.vcd"  //Goddamn I hurt!
+	scene "scenes/Mechanic/GoingToDie27.vcd"  //I could go for a nap, right now.
+	scene "scenes/Mechanic/GoingToDie301.vcd"  //Well screw me.  I'm not gonna make it.
+	scene "scenes/Mechanic/GoingToDie302.vcd"  //I reckon if this keeps up, I'm gonna die.
+	scene "scenes/Mechanic/GoingToDie303.vcd"  //I don't mean to be cursing myself, but I think I'm gonna die.
+	scene "scenes/Mechanic/GoingToDie304.vcd"  //I hurt so bad, I don't see right.
+}
+Rule iMT_PlayerGoingToDieMechanic
+{
+	criteria iMT_PlayerGoingToDie IsMechanic
+	Response iMT_PlayerGoingToDieMechanic
+}
+
+Response iMT_OtherPlayerWasPouncedGamblerMechanic
+{
+	scene "scenes/Mechanic/HunterNickPounced01.vcd"  //Hunter's got Nick!
+	scene "scenes/Mechanic/HunterNickPounced02.vcd"  //Hey hunter's on Nick!
+}
+Rule iMT_OtherPlayerWasPouncedGamblerMechanic
+{
+	criteria iMT_OtherPlayerWasPounced IsMechanic IssuerClose SubjectIsGambler
+	Response iMT_OtherPlayerWasPouncedGamblerMechanic
+}
+
+Response iMT_OtherPlayerWasPouncedCoachMechanic
+{
+	scene "scenes/Mechanic/HunterCoachPounced01.vcd"  //Hunter's got Coach!
+	scene "scenes/Mechanic/HunterCoachPounced02.vcd"  //Hey, hunter on Coach!
+}
+Rule iMT_OtherPlayerWasPouncedCoachMechanic
+{
+	criteria iMT_OtherPlayerWasPounced IsMechanic IssuerClose SubjectIsCoach
+	Response iMT_OtherPlayerWasPouncedCoachMechanic
+}
+
+Response iMT_OtherPlayerWasPouncedProducerMechanic
+{
+	scene "scenes/Mechanic/HunterRochellePounced01.vcd"  //Hunter's got Rochelle!
+	scene "scenes/Mechanic/HunterRochellePounced02.vcd"  //Hunter on Rochelle!
+}
+Rule iMT_OtherPlayerWasPouncedProducerMechanic
+{
+	criteria iMT_OtherPlayerWasPounced IsMechanic IssuerClose SubjectIsProducer
+	Response iMT_OtherPlayerWasPouncedProducerMechanic
+}
+
+Response iMT_BattleCryMechanic
+{
+	scene "scenes/Mechanic/BattleCry01.vcd"  //YEAH!!
+	scene "scenes/Mechanic/BattleCry02.vcd"  //DIE!!
+	scene "scenes/Mechanic/BattleCry03.vcd"  //WOO! GET SOME, BABY GET SOME!
+	scene "scenes/Mechanic/BattleCry04.vcd"  //DIE, DIE MY DARLINS! DIE, DIE, DIE!!
+}
+Rule iMT_BattleCryMechanic
+{
+	criteria iMT_BattleCry IsMechanic
+	Response iMT_BattleCryMechanic
+}
+
+Response iMT_PlayerEquippedItemMechanic
+{
+	scene "scenes/Mechanic/KillConfirmation03.vcd"  //I got it.
+	scene "scenes/Mechanic/WorldC1M4B43.vcd"  //I got this one!
+}
+Rule iMT_PlayerEquippedItemMechanic
+{
+	criteria iMT_PlayerEquippedItem IsMechanic
+	Response iMT_PlayerEquippedItemMechanic
+}
+
+Response iMT_PlayerBreathingMechanic
+{
+	scene "scenes/Mechanic/Defibrillator13.vcd"  //[gasp for breath]
+	scene "scenes/Mechanic/Defibrillator14.vcd"  //[gasp for breath]
+}
+Rule iMT_PlayerBreathingMechanic
+{
+	criteria iMT_PlayerBreathing IsMechanic
+	Response iMT_PlayerBreathingMechanic
+}
+
+Response iMT_PlayerReloadingMechanic
+{
+	scene "scenes/Mechanic/Reloading01.vcd"  //Reloading!
+	scene "scenes/Mechanic/Reloading02.vcd"  //Reloading!
+	scene "scenes/Mechanic/Reloading03.vcd"  //Hey, I'm reloading!
+	scene "scenes/Mechanic/Reloading04.vcd"  //Reloading!
+	scene "scenes/Mechanic/Reloading05.vcd"  //Reloading!
+	scene "scenes/Mechanic/Reloading06.vcd"  //I'm a reload!
+}
+Rule iMT_PlayerReloadingMechanic
+{
+	criteria iMT_PlayerReloading IsMechanic
+	Response iMT_PlayerReloadingMechanic
+}
+
+Response iMT_PlayerReloadingIntenseMechanic
+{
+	scene "scenes/Mechanic/ReloadIntense01.vcd"  //Reloading!
+	scene "scenes/Mechanic/ReloadIntense02.vcd"  //Reloading here!
+	scene "scenes/Mechanic/ReloadIntense03.vcd"  //Gotta reload!
+	scene "scenes/Mechanic/ReloadIntense04.vcd"  //Reloading!
+	scene "scenes/Mechanic/ReloadIntense05.vcd"  //Reloading!
+}
+Rule iMT_PlayerReloadingIntenseMechanic
+{
+	criteria iMT_PlayerReloading IsMechanic InCombat
+	Response iMT_PlayerReloadingIntenseMechanic
+}
+
+Response iMT_PlayerWitchChasingMechanic
+{
+	scene "scenes/Mechanic/WitchChasing01.vcd"  //Out of my way, man, witch coming!!
+	scene "scenes/Mechanic/WitchChasing02.vcd"  //COMING THROUGH! WITCH ON MY ASS!!
+	scene "scenes/Mechanic/WitchChasing03.vcd"  //Run I pissed her off!
+	scene "scenes/Mechanic/WitchChasing04.vcd"  //SHOOT HER! SHOOT HER!
+	scene "scenes/Mechanic/WitchChasing05.vcd"  //WITCH WITCH WITCH!
+}
+Rule iMT_PlayerWitchChasingMechanic
+{
+	criteria iMT_PlayerWitchChasing IsMechanic
+	Response iMT_PlayerWitchChasingMechanic
+}
+
+Response iMT_PlayerWeddingWitchChasingMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchChasing01.vcd"  //Runaway bride, runaway bride!
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchChasing02.vcd"  //Help, here! Here comes the bride!
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchChasing03.vcd"  //Here comes the bride!
+}
+Rule iMT_PlayerWeddingWitchChasingMechanic
+{
+	criteria iMT_PlayerWitchChasing IsMechanic Isc6m1_riverbank
+	Response iMT_PlayerWeddingWitchChasingMechanic
+}
+
+Response iMT_PlayerBackUpQuietMechanic
+{
+	scene "scenes/Mechanic/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Mechanic/BackUpQuiet02.vcd"  //Move back.
+	scene "scenes/Mechanic/BackUpQuiet03.vcd"  //Get back.
+	scene "scenes/Mechanic/BackUpQuiet04.vcd"  //Get back.
+	scene "scenes/Mechanic/BackUpQuiet05.vcd"  //Hey, move back.
+	scene "scenes/Mechanic/BackUpQuiet06.vcd"  //Back up.
+}
+Rule iMT_PlayerBackUpQuietMechanic
+{
+	criteria iMT_PlayerBackUpQuiet IsMechanic
+	Response iMT_PlayerBackUpQuietMechanic
+}
+
+Response iMT_PlayerTransitionMechanic
+{
+	scene "scenes/Mechanic/TransitionClose01.vcd"  //YEAH!
+	scene "scenes/Mechanic/TransitionClose02.vcd"  //I can't hardly believe we made that!
+	scene "scenes/Mechanic/TransitionClose03.vcd"  //That was closer than a... well shit man that was just straight up close!
+	scene "scenes/Mechanic/TransitionClose04.vcd"  //Who here didn't think we were gonna make that?
+	scene "scenes/Mechanic/TransitionClose05.vcd"  //That there was some crazy shit, man!
+	scene "scenes/Mechanic/TransitionClose06.vcd"  //Oh shit yeah! Oh shit yeah!
+	scene "scenes/Mechanic/TransitionClose07.vcd"  //Elvis has left the building!
+	scene "scenes/Mechanic/TransitionClose08.vcd"  //Oh man! Alright. You might want to clean your drawers after that one! I know I do.
+	scene "scenes/Mechanic/TransitionClose09.vcd"  //We gonna need to do better than THAT.
+	scene "scenes/Mechanic/TransitionClose10.vcd"  //Dude, we just got our asses handed to us.
+	scene "scenes/Mechanic/TransitionClose11.vcd"  //[whistles] That was BRUTAL!
+	scene "scenes/Mechanic/TransitionClose12.vcd"  //THAT... was a pretty poor display.
+	scene "scenes/Mechanic/TransitionClose13.vcd"  //We'll call that one a tie.
+	scene "scenes/Mechanic/TransitionClose14.vcd"  //You know what? We'll call that one a tie.
+	scene "scenes/Mechanic/TransitionClose15.vcd"  //We're still standin'!
+	scene "scenes/Mechanic/TransitionClose16.vcd"  //Woooow!
+	scene "scenes/Mechanic/TransitionClose17.vcd"  //Wow, man!
+}
+Rule iMT_PlayerTransitionMechanic
+{
+	criteria iMT_PlayerTransition IsMechanic
+	Response iMT_PlayerTransitionMechanic
+}
+
+Response iMT_WitchGettingAngryMechanic
+{
+	scene "scenes/Mechanic/WitchGettingAngry01.vcd"  //That witch is having a hissy fit.
+	scene "scenes/Mechanic/WitchGettingAngry02.vcd"  //Oh shit man, that witch is a spaz!
+	scene "scenes/Mechanic/WitchGettingAngry03.vcd"  //Tell ya man, y'all playin' with fire when you messin' with that damn witch.
+	scene "scenes/Mechanic/WitchGettingAngry04.vcd"  //Back away from that witch.
+	scene "scenes/Mechanic/WitchGettingAngry05.vcd"  //Don't mess with the damn witch.
+}
+Rule iMT_WitchGettingAngryMechanic
+{
+	criteria iMT_WitchGettingAngry IsMechanic
+	Response iMT_WitchGettingAngryMechanic
+}
+
+Response iMT_PlayerEmphaticGoQuietMechanic
+{
+	scene "scenes/Mechanic/EmphaticGoQuiet01.vcd"  //Let's go.
+	scene "scenes/Mechanic/EmphaticGoQuiet02.vcd"  //Move out.
+	scene "scenes/Mechanic/EmphaticGoQuiet03.vcd"  //Keep going.
+	scene "scenes/Mechanic/EmphaticGoQuiet04.vcd"  //Just run, dammit.
+}
+Rule iMT_PlayerEmphaticGoQuietMechanic
+{
+	criteria iMT_PlayerEmphaticGoQuiet IsMechanic
+	Response iMT_PlayerEmphaticGoQuietMechanic
+}

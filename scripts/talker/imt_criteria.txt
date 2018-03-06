@@ -1,0 +1,162 @@
+//--------------------------------------------------------------------------------------------------------------
+// Criteria
+//--------------------------------------------------------------------------------------------------------------
+
+// Shared
+
+Criterion	"iMT_BattleCry"			"Concept"	"iMT_BattleCry"			required
+Criterion	"iMT_EllisStoryInterrupt"	"Concept"	"iMT_EllisStoryInterrupt"	required
+Criterion	"iMT_EllisStoryInterruptGoat"	"Concept"	"iMT_EllisStoryInterruptGoat"	required
+Criterion	"iMT_GodIsDead"			"Concept"	"iMT_GodIsDead"			required
+Criterion	"iMT_Hero"			"Concept"	"iMT_Hero"			required
+Criterion	"iMT_OtherPlayerWasPounced"	"Concept"	"iMT_OtherPlayerWasPounced"	required
+Criterion	"iMT_PlayerAlsoWarnCharger"	"Concept"	"iMT_PlayerAlsoWarnCharger"	required
+Criterion	"iMT_PlayerAlsoWarnJockey"	"Concept"	"iMT_PlayerAlsoWarnJockey"	required
+Criterion	"iMT_PlayerAlsoWarnSpitter"	"Concept"	"iMT_PlayerAlsoWarnSpitter"	required
+Criterion	"iMT_PlayerAnswerReady"		"Concept"	"iMT_PlayerAnswerReady"		required
+Criterion	"iMT_PlayerBackUpQuiet"		"Concept"	"iMT_PlayerBackUpQuiet"		required
+Criterion	"iMT_PlayerBreathing"		"Concept"	"iMT_PlayerBreathing"		required
+Criterion	"iMT_PlayerCoughing"		"Concept"	"iMT_PlayerCoughing"		required
+Criterion	"iMT_PlayerEmphaticGoQuiet"	"Concept"	"iMT_PlayerEmphaticGoQuiet"	required
+Criterion	"iMT_PlayerEquippedItem"	"Concept"	"iMT_PlayerEquippedItem"	required
+Criterion	"iMT_PlayerGoingToDie"		"Concept"	"iMT_PlayerGoingToDie"		required
+Criterion	"iMT_PlayerNiceShot"		"Concept"	"iMT_PlayerNiceShot"		required
+Criterion	"iMT_PlayerReloading"		"Concept"	"iMT_PlayerReloading"		required
+Criterion	"iMT_PlayerSuggestHealth"	"Concept"	"iMT_PlayerSuggestHealth"	required
+Criterion	"iMT_PlayerTransition"		"Concept"	"iMT_PlayerTransition"		required
+Criterion	"iMT_PlayerWitchChasing"	"Concept"	"iMT_PlayerWitchChasing"	required
+Criterion	"iMT_Recycle"			"Concept"	"iMT_Recycle"			required
+Criterion	"iMT_Singing"			"Concept"	"iMT_Singing"			required
+Criterion	"iMT_WitchGettingAngry"		"Concept"	"iMT_WitchGettingAngry"		required
+
+// Nick
+
+Criterion	"iMT_Angel"			"Concept"	"iMT_Angel"			required
+Criterion	"iMT_ChangeOfPlans"		"Concept"	"iMT_ChangeOfPlans"		required
+Criterion	"iMT_Fantasy"			"Concept"	"iMT_Fantasy"			required
+Criterion	"iMT_Feeling"			"Concept"	"iMT_Feeling"			required
+Criterion	"iMT_Fish"			"Concept"	"iMT_Fish"			required
+Criterion	"iMT_FourRiders"		"Concept"	"iMT_FourRiders"		required
+Criterion	"iMT_Honeymoon"			"Concept"	"iMT_Honeymoon"			required
+Criterion	"iMT_ShitAir"			"Concept"	"iMT_ShitAir"			required
+Criterion	"iMT_Trust"			"Concept"	"iMT_Trust"			required
+
+// Coach
+
+Criterion	"iMT_Apocalypse"		"Concept"	"iMT_Apocalypse"		required
+Criterion	"iMT_CrazyMan"			"Concept"	"iMT_CrazyMan"			required
+Criterion	"iMT_Dreaming"			"Concept"	"iMT_Dreaming"			required
+Criterion	"iMT_Hungry"			"Concept"	"iMT_Hungry"			required
+Criterion	"iMT_Neighborhood"		"Concept"	"iMT_Neighborhood"		required
+Criterion	"iMT_Ride"			"Concept"	"iMT_Ride"			required
+Criterion	"iMT_Teaching"			"Concept"	"iMT_Teaching"			required
+Criterion	"iMT_What"			"Concept"	"iMT_What"			required
+
+// Ellis
+
+Criterion	"iMT_AllAboard"			"Concept"	"iMT_AllAboard"			required
+Criterion	"iMT_CaCaw"			"Concept"	"iMT_CaCaw"			required
+Criterion	"iMT_CoachBreathingReac"	"Concept"	"iMT_CoachBreathingReac"	required
+Criterion	"iMT_EllisStories"		"Concept"	"iMT_EllisStories"		required
+Criterion	"iMT_EllisStoryReac01"		"Concept"	"iMT_EllisStoryReac01"		required
+Criterion	"iMT_EllisStoryReac01Goat"	"Concept"	"iMT_EllisStoryReac01Goat"	required
+Criterion	"iMT_DLC1_KeithStories02b"	"Concept"	"iMT_DLC1_KeithStories02b"	required
+Criterion	"iMT_DLC1_KeithStories03b"	"Concept"	"iMT_DLC1_KeithStories03b"	required
+Criterion	"iMT_DLC1_KeithStories03c"	"Concept"	"iMT_DLC1_KeithStories03c"	required
+Criterion	"iMT_Marriage"			"Concept"	"iMT_Marriage"			required
+Criterion	"iMT_SayingZoey"		"Concept"	"iMT_SayingZoey"		required
+Criterion	"iMT_SoMad"			"Concept"	"iMT_SoMad"			required
+Criterion	"iMT_Tattoos"			"Concept"	"iMT_Tattoos"			required
+Criterion	"iMT_TeamFortress2"		"Concept"	"iMT_TeamFortress2"		required
+
+// Rochelle
+
+Criterion	"iMT_Aliens"			"Concept"	"iMT_Aliens"			required
+Criterion	"iMT_Charming"			"Concept"	"iMT_Charming"			required
+Criterion	"iMT_GunStore"			"Concept"	"iMT_GunStore"			required
+Criterion	"iMT_Kitchen"			"Concept"	"iMT_Kitchen"			required
+Criterion	"iMT_Monster"			"Concept"	"iMT_Monster"			required
+Criterion	"iMT_NoNoNo"			"Concept"	"iMT_NoNoNo"			required
+Criterion	"iMT_Popcorn"			"Concept"	"iMT_Popcorn"			required
+Criterion	"iMT_Tits"			"Concept"	"iMT_Tits"			required
+Criterion	"iMT_Wedding"			"Concept"	"iMT_Wedding"			required
+
+// Francis
+
+Criterion	"iMT_Brave"			"Concept"	"iMT_Brave"			required
+Criterion	"iMT_Camping"			"Concept"	"iMT_Camping"			required
+Criterion	"iMT_Deer"			"Concept"	"iMT_Deer"			required
+Criterion	"iMT_Dog"			"Concept"	"iMT_Dog"			required
+Criterion	"iMT_FrozenBeard"		"Concept"	"iMT_FrozenBeard"		required
+Criterion	"iMT_Groovy"			"Concept"	"iMT_Groovy"			required
+Criterion	"iMT_Hate"			"Concept"	"iMT_Hate"			required
+Criterion	"iMT_Hersch"			"Concept"	"iMT_Hersch"			required
+Criterion	"iMT_NoCop"			"Concept"	"iMT_NoCop"			required
+Criterion	"iMT_NotDriving"		"Concept"	"iMT_NotDriving"		required
+Criterion	"iMT_NotManyLeft"		"Concept"	"iMT_NotManyLeft"		required
+Criterion	"iMT_Predict"			"Concept"	"iMT_Predict"			required
+Criterion	"iMT_Sailboat"			"Concept"	"iMT_Sailboat"			required
+Criterion	"iMT_Shit"			"Concept"	"iMT_Shit"			required
+Criterion	"iMT_Waterworks"		"Concept"	"iMT_Waterworks"		required
+
+// Louis
+
+Criterion	"iMT_Alley"			"Concept"	"iMT_Alley"			required
+Criterion	"iMT_BackToNormal"		"Concept"	"iMT_BackToNormal"		required
+Criterion	"iMT_Belch"			"Concept"	"iMT_Belch"			required
+Criterion	"iMT_CounterStrike"		"Concept"	"iMT_CounterStrike"		required
+Criterion	"iMT_CubScouts"			"Concept"	"iMT_CubScouts"			required
+Criterion	"iMT_Farting"			"Concept"	"iMT_Farting"			required
+Criterion	"iMT_GordonFreeman"		"Concept"	"iMT_GordonFreeman"		required
+Criterion	"iMT_Gross"			"Concept"	"iMT_Gross"			required
+Criterion	"iMT_IdiotToo"			"Concept"	"iMT_IdiotToo"			required
+Criterion	"iMT_IT"			"Concept"	"iMT_IT"			required
+Criterion	"iMT_Prison"			"Concept"	"iMT_Prison"			required
+Criterion	"iMT_RifleRange"		"Concept"	"iMT_RifleRange"		required
+Criterion	"iMT_TankFactory"		"Concept"	"iMT_TankFactory"		required
+Criterion	"iMT_TankFactory2"		"Concept"	"iMT_TankFactory2"		required
+Criterion	"iMT_TeamBuilding"		"Concept"	"iMT_TeamBuilding"		required
+Criterion	"iMT_WallStreet"		"Concept"	"iMT_WallStreet"		required
+Criterion	"iMT_WarmUp"			"Concept"	"iMT_WarmUp"			required
+Criterion	"iMT_WarmUp2"			"Concept"	"iMT_WarmUp2"			required
+
+// Bill
+
+Criterion	"iMT_10Miles"			"Concept"	"iMT_10Miles"			required
+Criterion	"iMT_BigMouth"			"Concept"	"iMT_BigMouth"			required
+Criterion	"iMT_Cold"			"Concept"	"iMT_Cold"			required
+Criterion	"iMT_Family"			"Concept"	"iMT_Family"			required
+Criterion	"iMT_GoodEnough"		"Concept"	"iMT_GoodEnough"		required
+Criterion	"iMT_Hallelujah"		"Concept"	"iMT_Hallelujah"		required
+Criterion	"iMT_Home"			"Concept"	"iMT_Home"			required
+Criterion	"iMT_Idiot"			"Concept"	"iMT_Idiot"			required
+Criterion	"iMT_KnowingLouis"		"Concept"	"iMT_KnowingLouis"		required
+Criterion	"iMT_LastFight"			"Concept"	"iMT_LastFight"			required
+Criterion	"iMT_Lonely"			"Concept"	"iMT_Lonely"			required
+Criterion	"iMT_MaryJosef"			"Concept"	"iMT_MaryJosef"			required
+Criterion	"iMT_NoLove"			"Concept"	"iMT_NoLove"			required
+Criterion	"iMT_Phone"			"Concept"	"iMT_Phone"			required
+Criterion	"iMT_PrettyGood"		"Concept"	"iMT_PrettyGood"		required
+Criterion	"iMT_Stink"			"Concept"	"iMT_Stink"			required
+Criterion	"iMT_Wheel"			"Concept"	"iMT_Wheel"			required
+Criterion	"iMT_Woods"			"Concept"	"iMT_Woods"			required
+
+// Zoey
+
+Criterion	"iMT_5000Lawyers"		"Concept"	"iMT_5000Lawyers"		required
+Criterion	"iMT_Chickenshits"		"Concept"	"iMT_Chickenshits"		required
+Criterion	"iMT_CopyPaper"			"Concept"	"iMT_CopyPaper"			required
+Criterion	"iMT_GodDamnYou"		"Concept"	"iMT_GodDamnYou"		required
+Criterion	"iMT_LatestIssue"		"Concept"	"iMT_LatestIssue"		required
+Criterion	"iMT_Mama"			"Concept"	"iMT_Mama"			required
+Criterion	"iMT_MetalSupply"		"Concept"	"iMT_MetalSupply"		required
+Criterion	"iMT_MyBuddyEllis"		"Concept"	"iMT_MyBuddyEllis"		required
+Criterion	"iMT_NervousHumming"		"Concept"	"iMT_NervousHumming"		required
+Criterion	"iMT_Parking"			"Concept"	"iMT_Parking"			required
+Criterion	"iMT_PassingGas"		"Concept"	"iMT_PassingGas"		required
+Criterion	"iMT_PilotLicense"		"Concept"	"iMT_PilotLicense"		required
+Criterion	"iMT_ProclaimLiberty"		"Concept"	"iMT_ProclaimLiberty"		required
+Criterion	"iMT_SexyBrunette"		"Concept"	"iMT_SexyBrunette"		required
+Criterion	"iMT_Shoes"			"Concept"	"iMT_Shoes"			required
+Criterion	"iMT_SoylentGreen"		"Concept"	"iMT_SoylentGreen"		required
+Criterion	"iMT_Yoink"			"Concept"	"iMT_Yoink"			required

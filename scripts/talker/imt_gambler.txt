@@ -1,0 +1,516 @@
+//--------------------------------------------------------------------------------------------------------------
+// Gambler Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_AngelGambler
+{
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitch09.vcd"  //Ellis look, it's another angel.
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitch10.vcd"  //Hey, Ellis look, it's another angel.
+}
+Rule iMT_AngelGambler
+{
+	criteria iMT_Angel IsGambler
+	Response iMT_AngelGambler
+}
+
+Response iMT_FantasyGambler
+{
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead01.vcd"  //That has been a fantasy of mine for a long time.
+}
+Rule iMT_FantasyGambler
+{
+	criteria iMT_Fantasy IsGambler
+	Response iMT_FantasyGambler
+}
+
+Response iMT_HoneymoonGambler
+{
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead11.vcd"  //Honeymoon's over. Bitch.
+}
+Rule iMT_HoneymoonGambler
+{
+	criteria iMT_Honeymoon IsGambler
+	Response iMT_HoneymoonGambler
+}
+
+Response iMT_FourRidersGambler
+{
+	scene "scenes/Gambler/Hurrah10.vcd"  //We're the four riders of the goddamn apocalypse!
+}
+Rule iMT_FourRidersGambler
+{
+	criteria iMT_FourRiders IsGambler
+	Response iMT_FourRidersGambler
+}
+
+Response iMT_TrustGambler
+{
+	scene "scenes/Gambler/WorldC1M1B122.vcd"  //I trust you. You look like a man who knows his donuts.
+}
+Rule iMT_TrustGambler
+{
+	criteria iMT_Trust IsGambler
+	Response iMT_TrustGambler
+}
+
+Response iMT_ShitAirGambler
+{
+	scene "scenes/Gambler/DLC1_C6M2_Phase2InWater04.vcd"  //I am breathing shit air into my lungs, it is being absorbed into my bloodstream. I am literally full of shit.
+}
+Rule iMT_ShitAirGambler
+{
+	criteria iMT_ShitAir IsGambler
+	Response iMT_ShitAirGambler
+}
+
+Response iMT_FishGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_FinaleCinematic03.vcd"  //Don't worry, Ellis. Plenty of fish in the sea.
+	scene "scenes/Gambler/DLC1_C6M3_FinaleCinematic05.vcd"  //Don't worry, Ellis. Plenty of fish in the sea.
+}
+Rule iMT_FishGambler
+{
+	criteria iMT_Fish IsGambler
+	Response iMT_FishGambler
+}
+
+Response iMT_FeelingGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_Loss11.vcd"  //I'm starting to get that feeling myself.
+	scene "scenes/Gambler/DLC1_C6M3_Loss14.vcd"  //Yeah, I'm starting to get that feeling myself.
+	scene "scenes/Gambler/DLC1_C6M3_Loss15.vcd"  //Yeah, I'm starting to get that feeling myself.
+}
+Rule iMT_FeelingGambler
+{
+	criteria iMT_Feeling IsGambler
+	Response iMT_FeelingGambler
+}
+
+Response iMT_ChangeOfPlansGambler
+{
+	scene "scenes/Gambler/TeaserIntroMovie07.vcd"  //Looks like there's been a change of plans.
+}
+Rule iMT_ChangeOfPlansGambler
+{
+	criteria iMT_ChangeOfPlans IsGambler
+	Response iMT_ChangeOfPlansGambler
+}
+
+Response iMT_EllisStoryInterruptGambler
+{
+	scene "scenes/Gambler/EllisInterrupt08.vcd" then Mechanic iMT_EllisStoryReac01 foo:0 0  //Ellis. Is now the best time?
+}
+Rule iMT_EllisStoryInterruptGambler
+{
+	criteria iMT_EllisStoryInterrupt IsGambler
+	Response iMT_EllisStoryInterruptGambler
+}
+
+Response iMT_EllisStoryInterruptGoatGambler
+{
+	scene "scenes/Gambler/EllisInterrupt08.vcd" then Mechanic iMT_EllisStoryReac01Goat foo:0 0  //Ellis. Is now the best time?
+}
+Rule iMT_EllisStoryInterruptGoatGambler
+{
+	criteria iMT_EllisStoryInterruptGoat IsGambler
+	Response iMT_EllisStoryInterruptGoatGambler
+}
+
+Response iMT_TattoosGambler
+{
+	scene "scenes/Gambler/DLC1_C6M2_Tattoo11.vcd"  //That is never going to happen, Ellis.
+	scene "scenes/Gambler/DLC1_C6M2_Tattoo12.vcd"  //I'm gonna get a tattoo that says "no".
+}
+Rule iMT_TattoosGambler
+{
+	criteria iMT_Tattoos IsGambler
+	Response iMT_TattoosGambler
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAlsoWarnChargerGambler
+{
+	scene "scenes/Gambler/WarnCharger01.vcd"  //CHARGER!
+	scene "scenes/Gambler/WarnCharger02.vcd"  //WE GOT A CHARGER!
+	scene "scenes/Gambler/WarnCharger03.vcd"  //CHARGER!
+	scene "scenes/Gambler/WarnCharger04.vcd"  //CHARGER!
+}
+Rule iMT_PlayerAlsoWarnChargerGambler
+{
+	criteria iMT_PlayerAlsoWarnCharger IsGambler
+	Response iMT_PlayerAlsoWarnChargerGambler
+}
+
+Response iMT_PlayerAlsoWarnJockeyGambler
+{
+	scene "scenes/Gambler/WarnJockey01.vcd"  //Jockey!
+	scene "scenes/Gambler/WarnJockey02.vcd"  //Jockey!
+	scene "scenes/Gambler/WarnJockey03.vcd"  //Jockey!
+}
+Rule iMT_PlayerAlsoWarnJockeyGambler
+{
+	criteria iMT_PlayerAlsoWarnJockey IsGambler
+	Response iMT_PlayerAlsoWarnJockeyGambler
+}
+
+Response iMT_PlayerAlsoWarnSpitterGambler
+{
+	scene "scenes/Gambler/WarnSpitter01.vcd"  //Spitter
+	scene "scenes/Gambler/WarnSpitter02.vcd"  //Spitter
+	scene "scenes/Gambler/WarnSpitter03.vcd"  //We got a spitter
+}
+Rule iMT_PlayerAlsoWarnSpitterGambler
+{
+	criteria iMT_PlayerAlsoWarnSpitter IsGambler
+	Response iMT_PlayerAlsoWarnSpitterGambler
+}
+
+Response iMT_PlayerCoughingGambler
+{
+	scene "scenes/Gambler/Cough01.vcd"  //[Coughing from smoke]
+	scene "scenes/Gambler/Cough02.vcd"  //[Coughing from smoke]
+	scene "scenes/Gambler/Cough03.vcd"  //[Coughing from smoke]
+	scene "scenes/Gambler/Cough04.vcd"  //[Coughing from smoke]
+}
+Rule iMT_PlayerCoughingGambler
+{
+	criteria iMT_PlayerCoughing IsGambler
+	Response iMT_PlayerCoughingGambler
+}
+
+Response iMT_PlayerSuggestHealthGambler
+{
+	scene "scenes/Gambler/SuggestHealthC101.vcd"  //This might be a good time to heal.
+	scene "scenes/Gambler/SuggestHealthC102.vcd"  //Time for people to heal.
+	scene "scenes/Gambler/SuggestHealthC103.vcd"  //Don't forget you can heal yourself.
+	scene "scenes/Gambler/SuggestHealthC104.vcd"  //This is a good time to heal.
+	scene "scenes/Gambler/SuggestHealthC105.vcd"  //Time for people to heal.
+}
+Rule iMT_PlayerSuggestHealthGambler
+{
+	criteria iMT_PlayerSuggestHealth IsGambler
+	Response iMT_PlayerSuggestHealthGambler
+}
+
+Response iMT_PlayerSuggestHealthCoachGambler
+{
+	scene "scenes/Gambler/SuggestHealthCoach01.vcd"  //Coach, you should heal.
+	scene "scenes/Gambler/SuggestHealthCoach02.vcd"  //Coach, don't forget about that health kit.
+	scene "scenes/Gambler/SuggestHealthCoach03.vcd"  //Hey Coach, heal.
+	scene "scenes/Gambler/SuggestHealthCoach04.vcd"  //Hey Coach, heal.
+	scene "scenes/Gambler/SuggestHealthCoach05.vcd"  //Coach, you should maybe heal.
+	scene "scenes/Gambler/SuggestHealthCoach06.vcd"  //Coach, you should heal.
+}
+Rule iMT_PlayerSuggestHealthCoachGambler
+{
+	criteria iMT_PlayerSuggestHealth IsGambler IssuerClose SubjectIsCoach
+	Response iMT_PlayerSuggestHealthCoachGambler
+}
+
+Response iMT_PlayerSuggestHealthMechanicGambler
+{
+	scene "scenes/Gambler/SuggestHealthEllis01.vcd"  //Ellis, heal up.
+	scene "scenes/Gambler/SuggestHealthEllis02.vcd"  //Time to heal Ellis.
+	scene "scenes/Gambler/SuggestHealthEllis03.vcd"  //Come on Ellis, don't be a hero. Use your health kit.
+	scene "scenes/Gambler/SuggestHealthEllis04.vcd"  //Come on Ellis, don't be a hero. Use your health kit.
+}
+Rule iMT_PlayerSuggestHealthMechanicGambler
+{
+	criteria iMT_PlayerSuggestHealth IsGambler IssuerClose SubjectIsMechanic
+	Response iMT_PlayerSuggestHealthMechanicGambler
+}
+
+Response iMT_PlayerSuggestHealthProducerGambler
+{
+	scene "scenes/Gambler/SuggestHealthRochell01.vcd"  //Rochelle, you don't look so good.
+	scene "scenes/Gambler/SuggestHealthRochell02.vcd"  //Rochelle, we need you, heal up.
+	scene "scenes/Gambler/SuggestHealthRochell03.vcd"  //Hey Ro, don't forget that health kit.
+	scene "scenes/Gambler/SuggestHealthRochell04.vcd"  //Hey Ro, don't forget that health kit.
+	scene "scenes/Gambler/SuggestHealthRochell05.vcd"  //Rochelle, you don't look so good.
+	scene "scenes/Gambler/SuggestHealthRochell06.vcd"  //Rochelle, we need you, heal up.
+}
+Rule iMT_PlayerSuggestHealthProducerGambler
+{
+	criteria iMT_PlayerSuggestHealth IsGambler IssuerClose SubjectIsProducer
+	Response iMT_PlayerSuggestHealthProducerGambler
+}
+
+Response iMT_PlayerNiceShotGambler
+{
+	scene "scenes/Gambler/NiceShot01.vcd"  //Nice shot.
+	scene "scenes/Gambler/NiceShot02.vcd"  //Nice shot.
+	scene "scenes/Gambler/NiceShot03.vcd"  //How'dja do that?
+	scene "scenes/Gambler/NiceShot04.vcd"  //Nice shot.
+	scene "scenes/Gambler/NiceShot05.vcd"  //Good shooting.
+	scene "scenes/Gambler/NiceShot06.vcd"  //Nice shooting.
+	scene "scenes/Gambler/NiceShot07.vcd"  //Nice shot!
+	scene "scenes/Gambler/NiceShot08.vcd"  //Nice shot Ace.
+	scene "scenes/Gambler/NiceShot09.vcd"  //Impressive.
+}
+Rule iMT_PlayerNiceShotGambler
+{
+	criteria iMT_PlayerNiceShot IsGambler
+	Response iMT_PlayerNiceShotGambler
+}
+
+Response iMT_PlayerNiceShotCoachGambler
+{
+	scene "scenes/Gambler/NiceShotCoach01.vcd"  //All right Coach.
+	scene "scenes/Gambler/NiceShotCoach02.vcd"  //All right Coach.
+}
+Rule iMT_PlayerNiceShotCoachGambler
+{
+	criteria iMT_PlayerNiceShot IsGambler IssuerClose SubjectIsCoach
+	Response iMT_PlayerNiceShotCoachGambler
+}
+
+Response iMT_PlayerNiceShotMechanicGambler
+{
+	scene "scenes/Gambler/NiceShotMechanic01.vcd"  //You're getting the hang of this Ellis.
+	scene "scenes/Gambler/NiceShotMechanic02.vcd"  //You're getting the hang of this Ellis.
+}
+Rule iMT_PlayerNiceShotMechanicGambler
+{
+	criteria iMT_PlayerNiceShot IsGambler IssuerClose SubjectIsMechanic
+	Response iMT_PlayerNiceShotMechanicGambler
+}
+
+Response iMT_PlayerNiceShotProducerGambler
+{
+	scene "scenes/Gambler/NiceShotProducer01.vcd"  //Damn, Rochelle...
+	scene "scenes/Gambler/NiceShotProducer02.vcd"  //Rochelle... damn!
+	scene "scenes/Gambler/NiceShotProducer03.vcd"  //Damn, Rochelle. Nice.
+}
+Rule iMT_PlayerNiceShotProducerGambler
+{
+	criteria iMT_PlayerNiceShot IsGambler IssuerClose SubjectIsProducer
+	Response iMT_PlayerNiceShotProducerGambler
+}
+
+Response iMT_PlayerGoingToDieGambler
+{
+	scene "scenes/Gambler/GoingToDie01.vcd"  //I really screwed the pooch back there.
+	scene "scenes/Gambler/GoingToDie02.vcd"  //I gotta take better care of myself.
+	scene "scenes/Gambler/GoingToDie03.vcd"  //Not dead yet, but not exactly healthy.
+	scene "scenes/Gambler/GoingToDie04.vcd"  //God damn it! God damn it.  God damn it.
+	scene "scenes/Gambler/GoingToDie05.vcd"  //If I go, you guys gonna miss me.
+	scene "scenes/Gambler/GoingToDie06.vcd"  //I have seriously felt better.
+	scene "scenes/Gambler/GoingToDie07.vcd"  //Pull yourself together man, you're falling apart.
+	scene "scenes/Gambler/GoingToDie08.vcd"  //Don't worry about me, I'll be okay.
+	scene "scenes/Gambler/GoingToDie09.vcd"  //This is not how it's going to end.
+	scene "scenes/Gambler/GoingToDie10.vcd"  //I'm not dead yet!
+	scene "scenes/Gambler/GoingToDie11.vcd"  //You're going to have to do better than that to kill me!
+	scene "scenes/Gambler/GoingToDie12.vcd"  //Quit being a baby, you've felt worse after a night of drinking.
+	scene "scenes/Gambler/GoingToDie13.vcd"  //Ain't this a bitch.
+	scene "scenes/Gambler/GoingToDie14.vcd"  //God damn it I can't believe this.
+	scene "scenes/Gambler/GoingToDie15.vcd"  //Well at least I didn't catch the flu.
+	scene "scenes/Gambler/GoingToDie16.vcd"  //This is some crap
+	scene "scenes/Gambler/GoingToDie17.vcd"  //Don't worry.  I'm not done yet.
+	scene "scenes/Gambler/GoingToDie18.vcd"  //I am sick and tired of being sick and tired.
+	scene "scenes/Gambler/GoingToDie23.vcd"  //What was I thinking coming down here?
+	scene "scenes/Gambler/GoingToDie24.vcd"  //Okay, all right, I can do this. I can do this.
+	scene "scenes/Gambler/GoingToDie25.vcd"  //I'm not going to die down here.
+	scene "scenes/Gambler/GoingToDie26.vcd"  //I am not dying in the middle of nowhere.
+	scene "scenes/Gambler/GoingToDie301.vcd"  //I am not going to make it much longer my friends, I am seriously screwed up.
+	scene "scenes/Gambler/GoingToDie302.vcd"  //All right, I gotta call uncle here.   I need some help.
+	scene "scenes/Gambler/GoingToDie303.vcd"  //Well boys, this looks like its for me.
+	scene "scenes/Gambler/GoingToDie304.vcd"  //Doesn't this beat all.  I am about to die.
+	scene "scenes/Gambler/GoingToDie305.vcd"  //Man, man... It has been a long time since I have felt this bad.
+}
+Rule iMT_PlayerGoingToDieGambler
+{
+	criteria iMT_PlayerGoingToDie IsGambler
+	Response iMT_PlayerGoingToDieGambler
+}
+
+Response iMT_OtherPlayerWasPouncedCoachGambler
+{
+	scene "scenes/Gambler/HunterCoachPounced01.vcd"  //Hunter's got Coach!
+	scene "scenes/Gambler/HunterCoachPounced02.vcd"  //Hunter on Coach!
+}
+Rule iMT_OtherPlayerWasPouncedCoachGambler
+{
+	criteria iMT_OtherPlayerWasPounced IsGambler IssuerClose SubjectIsCoach
+	Response iMT_OtherPlayerWasPouncedCoachGambler
+}
+
+Response iMT_OtherPlayerWasPouncedMechanicGambler
+{
+	scene "scenes/Gambler/HunterEllisPounced01.vcd"  //Hunter's got Ellis!
+	scene "scenes/Gambler/HunterEllisPounced02.vcd"  //Hunter on Ellis!
+	scene "scenes/Gambler/HunterEllisPounced03.vcd"  //Hunter on Ellis!
+	scene "scenes/Gambler/HunterEllisPounced04.vcd"  //Hunter's got Ellis!
+}
+Rule iMT_OtherPlayerWasPouncedMechanicGambler
+{
+	criteria iMT_OtherPlayerWasPounced IsGambler IssuerClose SubjectIsMechanic
+	Response iMT_OtherPlayerWasPouncedMechanicGambler
+}
+
+Response iMT_OtherPlayerWasPouncedProducerGambler
+{
+	scene "scenes/Gambler/HunterRochellePounced01.vcd"  //Hunter's got Rochelle!
+	scene "scenes/Gambler/HunterRochellePounced02.vcd"  //Hunter on Rochelle!
+}
+Rule iMT_OtherPlayerWasPouncedProducerGambler
+{
+	criteria iMT_OtherPlayerWasPounced IsGambler IssuerClose SubjectIsProducer
+	Response iMT_OtherPlayerWasPouncedProducerGambler
+}
+
+Response iMT_BattleCryGambler
+{
+	scene "scenes/Gambler/BattleCry01.vcd"  //YEEEAAAAH!
+	scene "scenes/Gambler/BattleCry02.vcd"  //DIE! DIE!
+	scene "scenes/Gambler/BattleCry03.vcd"  //SUCK ON THIS!
+	scene "scenes/Gambler/BattleCry04.vcd"  //YEAH! DIE!
+}
+Rule iMT_BattleCryGambler
+{
+	criteria iMT_BattleCry IsGambler
+	Response iMT_BattleCryGambler
+}
+
+Response iMT_PlayerEquippedItemGambler
+{
+	scene "scenes/Gambler/KillConfirmation01.vcd"  //Got it!
+	scene "scenes/Gambler/KillConfirmation03.vcd"  //Got it!
+	scene "scenes/Gambler/KillConfirmation13.vcd"  //Got it!
+	scene "scenes/Gambler/World131.vcd"  //I got it!
+}
+Rule iMT_PlayerEquippedItemGambler
+{
+	criteria iMT_PlayerEquippedItem IsGambler
+	Response iMT_PlayerEquippedItemGambler
+}
+
+Response iMT_PlayerBreathingGambler
+{
+	scene "scenes/Gambler/Defibrillator10.vcd"  //[gasp for breath]
+	scene "scenes/Gambler/Defibrillator11.vcd"  //[gasp for breath]
+	scene "scenes/Gambler/Defibrillator14.vcd"  //[gasp for breath]
+}
+Rule iMT_PlayerBreathingGambler
+{
+	criteria iMT_PlayerBreathing IsGambler
+	Response iMT_PlayerBreathingGambler
+}
+
+Response iMT_PlayerReloadingGambler
+{
+	scene "scenes/Gambler/Reloading01.vcd"  //Reloading!
+	scene "scenes/Gambler/Reloading02.vcd"  //Reloading!
+	scene "scenes/Gambler/Reloading03.vcd"  //Reloading!
+	scene "scenes/Gambler/Reloading04.vcd"  //Reloading!
+	scene "scenes/Gambler/Reloading05.vcd"  //Reloading!
+	scene "scenes/Gambler/Reloading06.vcd"  //Reloading!
+	scene "scenes/Gambler/Reloading07.vcd"  //Reloading!
+}
+Rule iMT_PlayerReloadingGambler
+{
+	criteria iMT_PlayerReloading IsGambler
+	Response iMT_PlayerReloadingGambler
+}
+
+Response iMT_PlayerReloadingIntenseGambler
+{
+	scene "scenes/Gambler/ReloadIntense01.vcd"  //Reloading!
+	scene "scenes/Gambler/ReloadIntense02.vcd"  //Reloading here!
+	scene "scenes/Gambler/ReloadIntense03.vcd"  //Gotta reload!
+	scene "scenes/Gambler/ReloadIntense04.vcd"  //Reloading!
+	scene "scenes/Gambler/ReloadIntense05.vcd"  //Reloading!
+}
+Rule iMT_PlayerReloadingIntenseGambler
+{
+	criteria iMT_PlayerReloading IsGambler InCombat
+	Response iMT_PlayerReloadingIntenseGambler
+}
+
+Response iMT_PlayerWitchChasingGambler
+{
+	scene "scenes/Gambler/WitchChasing01.vcd"  //AhhhI pissed the witch off!
+	scene "scenes/Gambler/WitchChasing02.vcd"  //This bitch is chasing me!
+	scene "scenes/Gambler/WitchChasing03.vcd"  //Witch coming! Witch coming!
+	scene "scenes/Gambler/WitchChasing04.vcd"  //Shoot the witch! Shoot the witch! Shoot the witch!
+	scene "scenes/Gambler/WitchChasing05.vcd"  //Shoot the witch! Shoot the witch! Shoot the witch! What are you doing? Shoot her!
+	scene "scenes/Gambler/WitchChasing06.vcd"  //AhhhI pissed the witch off!
+}
+Rule iMT_PlayerWitchChasingGambler
+{
+	criteria iMT_PlayerWitchChasing IsGambler
+	Response iMT_PlayerWitchChasingGambler
+}
+
+Response iMT_PlayerWeddingWitchChasingGambler
+{
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchChasing01.vcd"  //Here comes the bride!
+}
+Rule iMT_PlayerWeddingWitchChasingGambler
+{
+	criteria iMT_PlayerWitchChasing IsGambler Isc6m1_riverbank
+	Response iMT_PlayerWeddingWitchChasingGambler
+}
+
+Response iMT_PlayerBackUpQuietGambler
+{
+	scene "scenes/Gambler/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Gambler/BackUpQuiet02.vcd"  //Everyone back.
+	scene "scenes/Gambler/BackUpQuiet03.vcd"  //Let's get back.
+	scene "scenes/Gambler/BackUpQuiet04.vcd"  //Back up, back up.
+}
+Rule iMT_PlayerBackUpQuietGambler
+{
+	criteria iMT_PlayerBackUpQuiet IsGambler
+	Response iMT_PlayerBackUpQuietGambler
+}
+
+Response iMT_PlayerTransitionGambler
+{
+	scene "scenes/Gambler/TransitionClose01.vcd"  //That was WAY too close!
+	scene "scenes/Gambler/TransitionClose02.vcd"  //That was way, WAY too close!
+	scene "scenes/Gambler/TransitionClose03.vcd"  //Man, we got lucky!
+	scene "scenes/Gambler/TransitionClose04.vcd"  //That my friends, is how you do it!
+	scene "scenes/Gambler/TransitionClose05.vcd"  //Happy New Year!
+	scene "scenes/Gambler/TransitionClose06.vcd"  //We got lucky!
+	scene "scenes/Gambler/TransitionClose07.vcd"  //God DAMN, that was close!
+	scene "scenes/Gambler/TransitionClose08.vcd"  //That was a close one.
+	scene "scenes/Gambler/TransitionClose09.vcd"  //At least I made it.
+	scene "scenes/Gambler/TransitionClose10.vcd"  //Well, that was unpleasant.
+	scene "scenes/Gambler/TransitionClose11.vcd"  //We made that by the skin of our teeth.
+	scene "scenes/Gambler/TransitionClose12.vcd"  //That was a little too close.
+}
+Rule iMT_PlayerTransitionGambler
+{
+	criteria iMT_PlayerTransition IsGambler
+	Response iMT_PlayerTransitionGambler
+}
+
+Response iMT_WitchGettingAngryGambler
+{
+	scene "scenes/Gambler/WitchGettingAngry01.vcd"  //Leave the witch alone.
+	scene "scenes/Gambler/WitchGettingAngry02.vcd"  //Can we leave that witch alone?
+	scene "scenes/Gambler/WitchGettingAngry03.vcd"  //Watch out, that witch is getting angry.
+	scene "scenes/Gambler/WitchGettingAngry04.vcd"  //Stay away from the witch.
+}
+Rule iMT_WitchGettingAngryGambler
+{
+	criteria iMT_WitchGettingAngry IsGambler
+	Response iMT_WitchGettingAngryGambler
+}
+
+Response iMT_PlayerEmphaticGoQuietGambler
+{
+	scene "scenes/Gambler/EmphaticGoQuiet01.vcd"  //Everybody keep moving.
+	scene "scenes/Gambler/EmphaticGoQuiet02.vcd"  //Just go.
+	scene "scenes/Gambler/EmphaticGoQuiet03.vcd"  //Just go. Go.
+	scene "scenes/Gambler/EmphaticGoQuiet04.vcd"  //Don't stop, don't stop.
+	scene "scenes/Gambler/EmphaticGoQuiet05.vcd"  //Keep moving.
+}
+Rule iMT_PlayerEmphaticGoQuietGambler
+{
+	criteria iMT_PlayerEmphaticGoQuiet IsGambler
+	Response iMT_PlayerEmphaticGoQuietGambler
+}

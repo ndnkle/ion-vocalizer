@@ -1,0 +1,486 @@
+//--------------------------------------------------------------------------------------------------------------
+// Producer Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_CharmingProducer
+{
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting17.vcd"  //Oh, Nick, charming is not a word I would use to describe you.
+}
+Rule iMT_CharmingProducer
+{
+	criteria iMT_Charming IsProducer
+	Response iMT_CharmingProducer
+}
+
+Response iMT_NoNoNoProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_FinaleChat17.vcd"  //NO no no no no no.
+	scene "scenes/Producer/DLC1_C6M3_FinaleChat18.vcd"  //NO no no no no no.
+	scene "scenes/Producer/DLC1_C6M3_FinaleChat20.vcd"  //NO no no no no no.
+}
+Rule iMT_NoNoNoProducer
+{
+	criteria iMT_NoNoNo IsProducer
+	Response iMT_NoNoNoProducer
+}
+
+Response iMT_PopcornProducer
+{
+	scene "scenes/Producer/DLC1_CommunityR15.vcd"  //Ooh, popcorn! Popcorn! I love popcorn! You coach?
+	scene "scenes/Producer/DLC1_CommunityR16.vcd"  //Popcorn, I love popcorn! You coach?
+}
+Rule iMT_PopcornProducer
+{
+	criteria iMT_Popcorn IsProducer
+	Response iMT_PopcornProducer
+}
+
+Response iMT_TitsProducer
+{
+	scene "scenes/Producer/World04.vcd"  //We're here. Crescent City. I'll tell you now, I'm not showing anyone my tits.
+}
+Rule iMT_TitsProducer
+{
+	criteria iMT_Tits IsProducer
+	Response iMT_TitsProducer
+}
+
+Response iMT_GunStoreProducer
+{
+	scene "scenes/Producer/WorldC1M2B02.vcd"  //A whole store full of guns? You're talking MY language, Coach.
+	scene "scenes/Producer/WorldC1M2B03.vcd"  //A whole store? Full of guns? You are talking MY language, Ellis.
+	scene "scenes/Producer/DLC1_C6M1_IntoStore03.vcd"  //Wow, even the convenient stores in the south are gun stores.
+}
+Rule iMT_GunStoreProducer
+{
+	criteria iMT_GunStore IsProducer
+	Response iMT_GunStoreProducer
+}
+
+Response iMT_WeddingProducer
+{
+	scene "scenes/Producer/DLC1_C6M1_WeddingWitch03.vcd"  //(whispered) Hey Ellis, It's a nice day for a white wedding.
+	scene "scenes/Producer/DLC1_C6M1_WeddingWitch04.vcd"  //(whispered) Hey Ellis, It's a nice day for a white wedding.
+}
+Rule iMT_WeddingProducer
+{
+	criteria iMT_Wedding IsProducer
+	Response iMT_WeddingProducer
+}
+
+Response iMT_MonsterProducer
+{
+	scene "scenes/Producer/World03.vcd"  //With our luck that is actually just a bridge monster.
+}
+Rule iMT_MonsterProducer
+{
+	criteria iMT_Monster IsProducer
+	Response iMT_MonsterProducer
+}
+
+Response iMT_KitchenProducer
+{
+	scene "scenes/Producer/TakeFryingPan01.vcd"  //No one better make a crack about me in the kitchen.
+}
+Rule iMT_KitchenProducer
+{
+	criteria iMT_Kitchen IsProducer
+	Response iMT_KitchenProducer
+}
+
+Response iMT_AliensProducer
+{
+	scene "scenes/Producer/DLC1_CommunityR01.vcd"  //Sweetie, there's no such thing as aliens.
+}
+Rule iMT_AliensProducer
+{
+	criteria iMT_Aliens IsProducer
+	Response iMT_AliensProducer
+}
+
+Response iMT_EllisStoryInterruptProducer
+{
+	scene "scenes/Producer/EllisInterrupt06.vcd" then mechanic iMT_EllisStoryReac01 foo:0 0  //Ellis, sweetie, can this wait?
+}
+Rule iMT_EllisStoryInterruptProducer
+{
+	criteria iMT_EllisStoryInterrupt IsProducer
+	Response iMT_EllisStoryInterruptProducer
+}
+
+Response iMT_EllisStoryInterruptGoatProducer
+{
+	scene "scenes/Producer/EllisInterrupt06.vcd" then mechanic iMT_EllisStoryReac01Goat foo:0 0  //Ellis, sweetie, can this wait?
+}
+Rule iMT_EllisStoryInterruptGoatProducer
+{
+	criteria iMT_EllisStoryInterruptGoat IsProducer
+	Response iMT_EllisStoryInterruptGoatProducer
+}
+
+Response iMT_AngelProducer
+{
+	scene "scenes/Producer/DLC1_C6M1_WeddingWitch10.vcd"  //Hey Ellis look, it's another angel.
+	scene "scenes/Producer/DLC1_C6M1_WeddingWitch11.vcd"  //Ellis look, it's another angel.
+}
+Rule iMT_AngelProducer
+{
+	criteria iMT_Angel IsProducer
+	Response iMT_AngelProducer
+}
+
+Response iMT_AllAboardProducer
+{
+	scene "scenes/Producer/DLC1_CommunityR13.vcd"  //All aboard! Toot toot!
+}
+Rule iMT_AllAboardProducer
+{
+	criteria iMT_AllAboard IsProducer
+	Response iMT_AllAboardProducer
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAlsoWarnChargerProducer
+{
+	scene "scenes/Producer/WarnCharger01.vcd"  //CHARGER!
+	scene "scenes/Producer/WarnCharger02.vcd"  //CHARGER!
+	scene "scenes/Producer/WarnCharger03.vcd"  //CHARGER!
+}
+Rule iMT_PlayerAlsoWarnChargerProducer
+{
+	criteria iMT_PlayerAlsoWarnCharger IsProducer
+	Response iMT_PlayerAlsoWarnChargerProducer
+}
+
+Response iMT_PlayerAlsoWarnJockeyProducer
+{
+	scene "scenes/Producer/WarnJockey01.vcd"  //JOCKEY!
+	scene "scenes/Producer/WarnJockey03.vcd"  //JOCKEY!
+}
+Rule iMT_PlayerAlsoWarnJockeyProducer
+{
+	criteria iMT_PlayerAlsoWarnJockey IsProducer
+	Response iMT_PlayerAlsoWarnJockeyProducer
+}
+
+Response iMT_PlayerAlsoWarnSpitterProducer
+{
+	scene "scenes/Producer/WarnSpitter01.vcd"  //SPITTER!
+	scene "scenes/Producer/WarnSpitter02.vcd"  //SPITTER!
+	scene "scenes/Producer/WarnSpitter03.vcd"  //SPITTER!
+}
+Rule iMT_PlayerAlsoWarnSpitterProducer
+{
+	criteria iMT_PlayerAlsoWarnSpitter IsProducer
+	Response iMT_PlayerAlsoWarnSpitterProducer
+}
+
+Response iMT_PlayerCoughingProducer
+{
+	scene "scenes/Producer/Cough01.vcd"  //[Coughing from smoke]
+	scene "scenes/Producer/Cough02.vcd"  //[Coughing from smoke]
+	scene "scenes/Producer/Cough03.vcd"  //[Coughing from smoke]
+	scene "scenes/Producer/Cough04.vcd"  //[Coughing from smoke]
+	scene "scenes/Producer/Cough05.vcd"  //[Coughing from smoke]
+	scene "scenes/Producer/Cough06.vcd"  //[Coughing from smoke]
+	scene "scenes/Producer/Cough07.vcd"  //[Coughing from smoke]
+}
+Rule iMT_PlayerCoughingProducer
+{
+	criteria iMT_PlayerCoughing IsProducer
+	Response iMT_PlayerCoughingProducer
+}
+
+Response iMT_PlayerSuggestHealthProducer
+{
+	scene "scenes/Producer/SuggestHealth02.vcd"  //You should heal up.
+	scene "scenes/Producer/SuggestHealth04.vcd"  //Heal up!
+	scene "scenes/Producer/SuggestHealth06.vcd"  //Heal if you need to.
+	scene "scenes/Producer/SuggestHealth07.vcd"  //Heal up!
+}
+Rule iMT_PlayerSuggestHealthProducer
+{
+	criteria iMT_PlayerSuggestHealth IsProducer
+	Response iMT_PlayerSuggestHealthProducer
+}
+
+Response iMT_PlayerSuggestHealthGamblerProducer
+{
+	scene "scenes/Producer/SuggestHealthNick01.vcd"  //Nick, you might want to heal now.
+	scene "scenes/Producer/SuggestHealthNick02.vcd"  //Smoke 'em if you got 'em Nick.
+	scene "scenes/Producer/SuggestHealthNick03.vcd"  //Nick, you might want to heal now.
+	scene "scenes/Producer/SuggestHealthNick04.vcd"  //Nick. Healing time.
+}
+Rule iMT_PlayerSuggestHealthGamblerProducer
+{
+	criteria iMT_PlayerSuggestHealth IsProducer IssuerClose SubjectIsGambler
+	Response iMT_PlayerSuggestHealthGamblerProducer
+}
+
+Response iMT_PlayerSuggestHealthMechanicProducer
+{
+	scene "scenes/Producer/SuggestHealthEllis01.vcd"  //Ellis baby, time to heal up.
+	scene "scenes/Producer/SuggestHealthEllis02.vcd"  //Ellis honey, you should use your first aid.
+	scene "scenes/Producer/SuggestHealthEllis03.vcd"  //Ellis, come on heal up already.
+}
+Rule iMT_PlayerSuggestHealthMechanicProducer
+{
+	criteria iMT_PlayerSuggestHealth IsProducer IssuerClose SubjectIsMechanic
+	Response iMT_PlayerSuggestHealthMechanicProducer
+}
+
+Response iMT_PlayerSuggestHealthCoachProducer
+{
+	scene "scenes/Producer/SuggestHealthCoach01.vcd"  //Hey old man, heal up.
+	scene "scenes/Producer/SuggestHealthCoach02.vcd"  //Hey coach, you should use that health kit.
+	scene "scenes/Producer/SuggestHealthCoach03.vcd"  //Time to heal up coach.
+}
+Rule iMT_PlayerSuggestHealthCoachProducer
+{
+	criteria iMT_PlayerSuggestHealth IsProducer IssuerClose SubjectIsCoach
+	Response iMT_PlayerSuggestHealthCoachProducer
+}
+
+Response iMT_PlayerNiceShotProducer
+{
+	scene "scenes/Producer/NiceShot01.vcd"  //Nice shot.
+	scene "scenes/Producer/NiceShot02.vcd"  //Cool.
+	scene "scenes/Producer/NiceShot03.vcd"  //Great shot!
+	scene "scenes/Producer/NiceShot04.vcd"  //Nice shot!
+	scene "scenes/Producer/NiceShot05.vcd"  //Good one!
+}
+Rule iMT_PlayerNiceShotProducer
+{
+	criteria iMT_PlayerNiceShot IsProducer
+	Response iMT_PlayerNiceShotProducer
+}
+
+Response iMT_PlayerNiceShotCoachProducer
+{
+	scene "scenes/Producer/NiceShotCoach01.vcd"  //Nice shot coach.
+}
+Rule iMT_PlayerNiceShotCoachProducer
+{
+	criteria iMT_PlayerNiceShot IsProducer IssuerClose SubjectIsCoach
+	Response iMT_PlayerNiceShotCoachProducer
+}
+
+Response iMT_PlayerGoingToDieProducer
+{
+	scene "scenes/Producer/GoingToDie01.vcd"  //Okay this was a mistake.
+	scene "scenes/Producer/GoingToDie02.vcd"  //Okay, this seriously hurts.
+	scene "scenes/Producer/GoingToDie03.vcd"  //Okay, okay  that one hurt.
+	scene "scenes/Producer/GoingToDie04.vcd"  //Girl, you should have stayed with Jacob. (to self)
+	scene "scenes/Producer/GoingToDie05.vcd"  //By the beard of Zeus this hurts!
+	scene "scenes/Producer/GoingToDie06.vcd"  //Son of a bee-sting. this hurts.
+	scene "scenes/Producer/GoingToDie08.vcd"  //This is not happening, This is not happening. This is not happening. (to self)
+	scene "scenes/Producer/GoingToDie09.vcd"  //Did this ever seem like a good idea?
+	scene "scenes/Producer/GoingToDie10.vcd"  //Knights of Columbus this hurts.
+	scene "scenes/Producer/GoingToDie11.vcd"  //I am too young to feel this old.
+	scene "scenes/Producer/GoingToDie13.vcd"  //This is not going well.
+	scene "scenes/Producer/GoingToDie14.vcd"  //One of you fellas want to carry the cute girl?
+	scene "scenes/Producer/GoingToDie15.vcd"  //I think I really hurt something.
+	scene "scenes/Producer/GoingToDie16.vcd"  //Anyone else feel like crap right now?
+	scene "scenes/Producer/GoingToDie17.vcd"  //This is some grim shit we got ourselves into.
+	scene "scenes/Producer/GoingToDie18.vcd"  //This is some grim shit we got ourselves into.
+	scene "scenes/Producer/GoingToDie20.vcd"  //Something's got to break our way.
+	scene "scenes/Producer/GoingToDie21.vcd"  //So this is how it's going to be.
+	scene "scenes/Producer/GoingToDie25.vcd"  //Girl, you should have stayed at home. (to self)
+	scene "scenes/Producer/GoingToDie26.vcd"  //You have got to be kidding me.
+	scene "scenes/Producer/GoingToDie27.vcd"  //I got a plan, let's kill all the zombies. Sound good?
+	scene "scenes/Producer/GoingToDie301.vcd"  //Tonight's top story, Rochelle isn't going to make it.
+	scene "scenes/Producer/GoingToDie302.vcd"  //In case anyone is wondering, I am about to die!
+	scene "scenes/Producer/GoingToDie304.vcd"  //I am too young and too beautiful to die.
+	scene "scenes/Producer/GoingToDie305.vcd"  //I need to find some health.
+	scene "scenes/Producer/GoingToDie306.vcd"  //In case anyone is wondering, I am about to die!
+}
+Rule iMT_PlayerGoingToDieProducer
+{
+	criteria iMT_PlayerGoingToDie IsProducer
+	Response iMT_PlayerGoingToDieProducer
+}
+
+Response iMT_OtherPlayerWasPouncedGamblerProducer
+{
+	scene "scenes/Producer/HunterNickPounced01.vcd"  //Hunter's got Nick!
+	scene "scenes/Producer/HunterNickPounced02.vcd"  //Hunter's on Nick!
+}
+Rule iMT_OtherPlayerWasPouncedGamblerProducer
+{
+	criteria iMT_OtherPlayerWasPounced IsProducer IssuerClose SubjectIsGambler
+	Response iMT_OtherPlayerWasPouncedGamblerProducer
+}
+
+Response iMT_OtherPlayerWasPouncedMechanicProducer
+{
+	scene "scenes/Producer/HunterEllisPounced01.vcd"  //Hunter's got Ellis!
+	scene "scenes/Producer/HunterEllisPounced02.vcd"  //Hunter on Ellis!
+}
+Rule iMT_OtherPlayerWasPouncedMechanicProducer
+{
+	criteria iMT_OtherPlayerWasPounced IsProducer IssuerClose SubjectIsMechanic
+	Response iMT_OtherPlayerWasPouncedMechanicProducer
+}
+
+Response iMT_OtherPlayerWasPouncedCoachProducer
+{
+	scene "scenes/Producer/HunterCoachPounced01.vcd"  //Hunter's got Coach!
+	scene "scenes/Producer/HunterCoachPounced02.vcd"  //Hunter on Coach!
+}
+Rule iMT_OtherPlayerWasPouncedCoachProducer
+{
+	criteria iMT_OtherPlayerWasPounced IsProducer IssuerClose SubjectIsCoach
+	Response iMT_OtherPlayerWasPouncedCoachProducer
+}
+
+Response iMT_BattleCryProducer
+{
+	scene "scenes/Producer/BattleCry01.vcd"  //[Yell while firing a gun for an extended period of time]
+	scene "scenes/Producer/BattleCry02.vcd"  //[Yell while firing a gun for an extended period of time]
+}
+Rule iMT_BattleCryProducer
+{
+	criteria iMT_BattleCry IsProducer
+	Response iMT_BattleCryProducer
+}
+
+Response iMT_PlayerEquippedItemProducer
+{
+	scene "scenes/Producer/KillConfirmation01.vcd"  //Got it!
+	scene "scenes/Producer/WorldC1M3B23.vcd"  //Got it!
+	scene "scenes/Producer/WorldC5M2B12.vcd"  //Got it!
+}
+Rule iMT_PlayerEquippedItemProducer
+{
+	criteria iMT_PlayerEquippedItem IsProducer
+	Response iMT_PlayerEquippedItemProducer
+}
+
+Response iMT_PlayerBreathingProducer
+{
+	scene "scenes/Producer/Defibrillator18.vcd"  //[gasp for breath]
+}
+Rule iMT_PlayerBreathingProducer
+{
+	criteria iMT_PlayerBreathing IsProducer
+	Response iMT_PlayerBreathingProducer
+}
+
+Response iMT_PlayerReloadingProducer
+{
+	scene "scenes/Producer/Reloading01.vcd"  //Reloading!
+	scene "scenes/Producer/Reloading02.vcd"  //Reloading!
+	scene "scenes/Producer/Reloading03.vcd"  //I'm reloading!
+	scene "scenes/Producer/Reloading04.vcd"  //Reloading!
+}
+Rule iMT_PlayerReloadingProducer
+{
+	criteria iMT_PlayerReloading IsProducer
+	Response iMT_PlayerReloadingProducer
+}
+
+Response iMT_PlayerReloadingIntenseProducer
+{
+	scene "scenes/Producer/ReloadIntense01.vcd"  //Reloading!
+	scene "scenes/Producer/ReloadIntense02.vcd"  //Reloading!
+	scene "scenes/Producer/ReloadIntense03.vcd"  //Reloading here!
+}
+Rule iMT_PlayerReloadingIntenseProducer
+{
+	criteria iMT_PlayerReloading IsProducer InCombat
+	Response iMT_PlayerReloadingIntenseProducer
+}
+
+Response iMT_PlayerWitchChasingProducer
+{
+	scene "scenes/Producer/WitchChasing01.vcd"  //My bad, my bad, my bad!
+	scene "scenes/Producer/WitchChasing02.vcd"  //Out of my way!
+	scene "scenes/Producer/WitchChasing03.vcd"  //Out of my way!
+	scene "scenes/Producer/WitchChasing04.vcd"  //Kill the damn thing!
+	scene "scenes/Producer/WitchChasing05.vcd"  //Kill the damn thing!
+	scene "scenes/Producer/WitchChasing06.vcd"  //Shoot her! Shoot her!
+	scene "scenes/Producer/WitchChasing07.vcd"  //Shit! She's on my ass!
+	scene "scenes/Producer/WitchChasing08.vcd"  //My bad!
+	scene "scenes/Producer/WitchChasing09.vcd"  //My bad, my bad, my bad!
+}
+Rule iMT_PlayerWitchChasingProducer
+{
+	criteria iMT_PlayerWitchChasing IsProducer
+	Response iMT_PlayerWitchChasingProducer
+}
+
+Response iMT_PlayerWeddingWitchChasingProducer
+{
+	scene "scenes/Producer/DLC1_C6M1_WeddingWitchChasing01.vcd"  //Ahh I pissed off another bride!
+	scene "scenes/Producer/DLC1_C6M1_WeddingWitchChasing02.vcd"  //Kill the bride! Kill the bride!
+	scene "scenes/Producer/DLC1_C6M1_WeddingWitchChasing03.vcd"  //Kill the bride!
+}
+Rule iMT_PlayerWeddingWitchChasingProducer
+{
+	criteria iMT_PlayerWitchChasing IsProducer Isc6m1_riverbank
+	Response iMT_PlayerWeddingWitchChasingProducer
+}
+
+Response iMT_PlayerBackUpQuietProducer
+{
+	scene "scenes/Producer/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Producer/BackUpQuiet02.vcd"  //Move back.
+	scene "scenes/Producer/BackUpQuiet03.vcd"  //Get back.
+	scene "scenes/Producer/BackUpQuiet04.vcd"  //Get back, get back.
+}
+Rule iMT_PlayerBackUpQuietProducer
+{
+	criteria iMT_PlayerBackUpQuiet IsProducer
+	Response iMT_PlayerBackUpQuietProducer
+}
+
+Response iMT_PlayerTransitionProducer
+{
+	scene "scenes/Producer/TransitionClose01.vcd"  //Woah, that was close!
+	scene "scenes/Producer/TransitionClose02.vcd"  //Okay, that was a little too close.
+	scene "scenes/Producer/TransitionClose03.vcd"  //Did we all make it, OH YES WE DID!
+	scene "scenes/Producer/TransitionClose04.vcd"  //Woah, that was close!
+	scene "scenes/Producer/TransitionClose05.vcd"  //That was close.
+	scene "scenes/Producer/TransitionClose06.vcd"  //Live and in the flesh!
+	scene "scenes/Producer/TransitionClose07.vcd"  //All bark, no bite!
+	scene "scenes/Producer/TransitionClose08.vcd"  //We made it uh huh. We made it oh yeah (sung)
+	scene "scenes/Producer/TransitionClose10.vcd"  //Whoa, that's about as close as I like to cut it…
+	scene "scenes/Producer/TransitionClose11.vcd"  //We're going to have to do better.
+	scene "scenes/Producer/TransitionClose12.vcd"  //We almost didn't make it…
+	scene "scenes/Producer/TransitionClose13.vcd"  //I KNOW we can do better than that.
+	scene "scenes/Producer/TransitionClose15.vcd"  //What happened to us?
+}
+Rule iMT_PlayerTransitionProducer
+{
+	criteria iMT_PlayerTransition IsProducer
+	Response iMT_PlayerTransitionProducer
+}
+
+Response iMT_WitchGettingAngryProducer
+{
+	scene "scenes/Producer/WitchGettingAngry01.vcd"  //Ummm guys, that witch is getting mad.
+	scene "scenes/Producer/WitchGettingAngry02.vcd"  //Who's pissing off the witch?
+	scene "scenes/Producer/WitchGettingAngry03.vcd"  //Leave that witch alone!
+	scene "scenes/Producer/WitchGettingAngry04.vcd"  //Get away from the witch.
+	scene "scenes/Producer/WitchGettingAngry05.vcd"  //Leave that witch alone!
+}
+Rule iMT_WitchGettingAngryProducer
+{
+	criteria iMT_WitchGettingAngry IsProducer
+	Response iMT_WitchGettingAngryProducer
+}
+
+Response iMT_PlayerEmphaticGoQuietProducer
+{
+	scene "scenes/Producer/EmphaticGoQuiet01.vcd"  //No time to stop, go.
+	scene "scenes/Producer/EmphaticGoQuiet02.vcd"  //Keep moving.
+	scene "scenes/Producer/EmphaticGoQuiet03.vcd"  //Keep going.
+}
+Rule iMT_PlayerEmphaticGoQuietProducer
+{
+	criteria iMT_PlayerEmphaticGoQuiet IsProducer
+	Response iMT_PlayerEmphaticGoQuietProducer
+}

@@ -1,0 +1,538 @@
+//--------------------------------------------------------------------------------------------------------------
+// Coach Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_SingingCoach
+{
+	scene "scenes/Coach/DLC1_C6M2_SuitcasePistols01.vcd" odds 20  //[singing] "...a suitcase full of pistols and MON-NAY!"
+	scene "scenes/Coach/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn... dunh-nuh-NAH-nuh-NAH-nha!
+	scene "scenes/Coach/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around... dunh-nuh-NAH-nuh-NAH-nha!
+}
+Rule iMT_SingingCoach
+{
+	criteria iMT_Singing IsCoach
+	Response iMT_SingingCoach
+}
+
+Response iMT_WhatCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat01.vcd"  //WHAT??
+}
+Rule iMT_WhatCoach
+{
+	criteria iMT_What IsCoach
+	Response iMT_WhatCoach
+}
+
+Response iMT_NeighborhoodCoach
+{
+	scene "scenes/Coach/TeaserIntroMovie03.vcd" //This used to be a NICE NEIGHBORHOOD!
+	scene "scenes/Coach/TeaserIntroMovie04.vcd" //This used to be a NICE NEIGHBORHOOD!
+}
+Rule iMT_NeighborhoodCoach
+{
+	criteria iMT_Neighborhood IsCoach
+	Response iMT_NeighborhoodCoach
+}
+
+Response iMT_ApocalypseCoach
+{
+	scene "scenes/Coach/WorldC2M2B23.vcd"  //I find a Burger Tank in this place? I'm-a be a one-man cheeseburger apocalypse.
+}
+Rule iMT_ApocalypseCoach
+{
+	criteria iMT_Apocalypse IsCoach
+	Response iMT_ApocalypseCoach
+}
+
+Response iMT_DreamingCoach
+{
+	scene "scenes/Coach/DLC1_C6M2_MidnightRiders01.vcd"  //Man, I think I just saw... nah.
+	scene "scenes/Coach/DLC1_C6M2_MidnightRiders02.vcd"  //I must be dreaming.
+	scene "scenes/Coach/DLC1_C6M2_MidnightRiders03.vcd"  //I think I just saw... nah.
+}
+Rule iMT_DreamingCoach
+{
+	criteria iMT_Dreaming IsCoach
+	Response iMT_DreamingCoach
+}
+
+Response iMT_HungryCoach
+{
+	scene "scenes/Coach/DLC1_C6M2_SafeRoomConvo17.vcd"  //Man, I just realized with all this runnin', climbin' and fightin', I ain't even had time to eat.
+	scene "scenes/Coach/WorldC1M3B13.vcd"  //I could roll up a whole pizza right now, eat it sub-style.
+	scene "scenes/Coach/WorldC2M2B22.vcd"  //Oh, baby, I could destroy some kettle corn right now.
+	scene "scenes/Coach/WorldC2M2B37.vcd"  //Damn it. They can't keep a candy machine filled up around here?
+}
+Rule iMT_HungryCoach
+{
+	criteria iMT_Hungry IsCoach
+	Response iMT_HungryCoach
+}
+
+Response iMT_RideCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleCinematic03.vcd"  //Coach is going for a ride!
+}
+Rule iMT_RideCoach
+{
+	criteria iMT_Ride IsCoach
+	Response iMT_RideCoach
+}
+
+Response iMT_CrazyManCoach
+{
+	scene "scenes/Coach/WorldC2M134.vcd"  //You a crazy man Ellis.
+}
+Rule iMT_CrazyManCoach
+{
+	criteria iMT_CrazyMan IsCoach
+	Response iMT_CrazyManCoach
+}
+
+Response iMT_TeachingCoach
+{
+	scene "scenes/Coach/DLC1_Community13.vcd"  //Man, this shit's worse than teachin' Health class!
+}
+Rule iMT_TeachingCoach
+{
+	criteria iMT_Teaching IsCoach
+	Response iMT_TeachingCoach
+}
+
+Response iMT_EllisStoryInterruptCoach
+{
+	scene "scenes/Coach/EllisInterrupt02.vcd" then Mechanic iMT_EllisStoryReac01 foo:0 0  //We ain't got time for this, Ellis.
+}
+Rule iMT_EllisStoryInterruptCoach
+{
+	criteria iMT_EllisStoryInterrupt IsCoach
+	Response iMT_EllisStoryInterruptCoach
+}
+
+Response iMT_EllisStoryInterruptGoatCoach
+{
+	scene "scenes/Coach/EllisInterrupt02.vcd" then Mechanic iMT_EllisStoryReac01Goat foo:0 0  //We ain't got time for this, Ellis.
+}
+Rule iMT_EllisStoryInterruptGoatCoach
+{
+	criteria iMT_EllisStoryInterruptGoat IsCoach
+	Response iMT_EllisStoryInterruptGoatCoach
+}
+
+Response iMT_AllAboardCoach
+{
+	scene "scenes/Coach/DLC1_Community15.vcd"  //Shit, all aboard!
+	scene "scenes/Coach/DLC1_Community16.vcd"  //Shit, all aboard!
+}
+Rule iMT_AllAboardCoach
+{
+	criteria iMT_AllAboard IsCoach
+	Response iMT_AllAboardCoach
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Shared
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAlsoWarnChargerCoach
+{
+	scene "scenes/Coach/WarnCharger01.vcd"  //CHARGER!
+	scene "scenes/Coach/WarnCharger02.vcd"  //CHARGER!
+	scene "scenes/Coach/WarnCharger03.vcd"  //CHARGER!
+}
+Rule iMT_PlayerAlsoWarnChargerCoach
+{
+	criteria iMT_PlayerAlsoWarnCharger IsCoach
+	Response iMT_PlayerAlsoWarnChargerCoach
+}
+
+Response iMT_PlayerAlsoWarnJockeyCoach
+{
+	scene "scenes/Coach/WarnJockey01.vcd"  //JOCKEY!
+	scene "scenes/Coach/WarnJockey02.vcd"  //JOCKEY!
+	scene "scenes/Coach/WarnJockey03.vcd"  //JOCKEY!
+}
+Rule iMT_PlayerAlsoWarnJockeyCoach
+{
+	criteria iMT_PlayerAlsoWarnJockey IsCoach
+	Response iMT_PlayerAlsoWarnJockeyCoach
+}
+
+Response iMT_PlayerAlsoWarnSpitterCoach
+{
+	scene "scenes/Coach/WarnSpitter01.vcd"  //SPITTER!
+	scene "scenes/Coach/WarnSpitter02.vcd"  //SPITTER!
+	scene "scenes/Coach/WarnSpitter03.vcd"  //SPITTER!
+}
+Rule iMT_PlayerAlsoWarnSpitterCoach
+{
+	criteria iMT_PlayerAlsoWarnSpitter IsCoach
+	Response iMT_PlayerAlsoWarnSpitterCoach
+}
+
+Response iMT_PlayerCoughingCoach
+{
+	scene "scenes/Coach/Cough01.vcd"  //[Coughing from smoke]
+	scene "scenes/Coach/Cough02.vcd"  //[Coughing from smoke]
+	scene "scenes/Coach/Cough03.vcd"  //[Coughing from smoke]
+	scene "scenes/Coach/Cough04.vcd"  //[Coughing from smoke]
+	scene "scenes/Coach/Cough05.vcd"  //[Coughing from smoke]
+	scene "scenes/Coach/Cough06.vcd"  //[Coughing from smoke]
+	scene "scenes/Coach/Cough07.vcd"  //[Coughing from smoke]
+	scene "scenes/Coach/Cough08.vcd"  //[Coughing from smoke]
+}
+Rule iMT_PlayerCoughingCoach
+{
+	criteria iMT_PlayerCoughing IsCoach
+	Response iMT_PlayerCoughingCoach
+}
+
+Response iMT_PlayerSuggestHealthCoach
+{
+	scene "scenes/Coach/SuggestHealthC101.vcd"  //This would be the time to heal up.
+	scene "scenes/Coach/SuggestHealthC102.vcd"  //Now's a good time to heal if you can.
+	scene "scenes/Coach/SuggestHealthC103.vcd"  //If you got a health kit you should use it.
+}
+Rule iMT_PlayerSuggestHealthCoach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach
+	Response iMT_PlayerSuggestHealthCoach
+}
+
+Response iMT_PlayerSuggestHealthGamblerCoach
+{
+	scene "scenes/Coach/SuggestHealthGambler01.vcd"  //Nick, don't be stupid, heal up.
+	scene "scenes/Coach/SuggestHealthNick01.vcd"  //Nicolas I think it is time for you to heal.
+	scene "scenes/Coach/SuggestHealthNick02.vcd"  //Nick, you should use that kit on your self.
+	scene "scenes/Coach/SuggestHealthNick03.vcd"  //Nick, its all right, we all gotta heal sometime.
+}
+Rule iMT_PlayerSuggestHealthGamblerCoach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach IssuerClose SubjectIsGambler
+	Response iMT_PlayerSuggestHealthGamblerCoach
+}
+
+Response iMT_PlayerSuggestHealthMechanicCoach
+{
+	scene "scenes/Coach/SuggestHealthEllis01.vcd"  //Ellis, time for you to heal boy.
+	scene "scenes/Coach/SuggestHealthEllis02.vcd"  //Allright Ellis, come on now, get yourself right.
+	scene "scenes/Coach/SuggestHealthEllis03.vcd"  //Hey Ellis, that health kit ain't gonna use itself.
+}
+Rule iMT_PlayerSuggestHealthMechanicCoach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach IssuerClose SubjectIsMechanic
+	Response iMT_PlayerSuggestHealthMechanicCoach
+}
+
+Response iMT_PlayerSuggestHealthProducerCoach
+{
+	scene "scenes/Coach/SuggestHealthRochell01.vcd"  //Ro, time to heal.
+	scene "scenes/Coach/SuggestHealthRochell02.vcd"  //Ro, heal up, hear me girl?
+	scene "scenes/Coach/SuggestHealthRochell03.vcd"  //Girl, time for you to heal up.
+	scene "scenes/Coach/SuggestHealthRochell04.vcd"  //Hey girl, why don't you heal up?
+}
+Rule iMT_PlayerSuggestHealthProducerCoach
+{
+	criteria iMT_PlayerSuggestHealth IsCoach IssuerClose SubjectIsProducer
+	Response iMT_PlayerSuggestHealthProducerCoach
+}
+
+Response iMT_PlayerNiceShotCoach
+{
+	scene "scenes/Coach/NiceShot01.vcd"  //Nice shot.
+	scene "scenes/Coach/NiceShot02.vcd"  //Damn. Good one.
+	scene "scenes/Coach/NiceShot03.vcd"  //Good one!
+	scene "scenes/Coach/NiceShot04.vcd"  //You on it.
+	scene "scenes/Coach/NiceShot05.vcd"  //You got it.
+	scene "scenes/Coach/NiceShot06.vcd"  //ohh hoo hoo, allright!
+	scene "scenes/Coach/NiceShot07.vcd"  //Damn. I'm impressed.
+	scene "scenes/Coach/NiceShot08.vcd"  //You nailed it.
+	scene "scenes/Coach/NiceShot09.vcd"  //You beat 'em.
+	scene "scenes/Coach/NiceShot10.vcd"  //Well alright now, you're in charge.
+}
+Rule iMT_PlayerNiceShotCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach
+	Response iMT_PlayerNiceShotCoach
+}
+
+Response iMT_PlayerNiceShotGamblerCoach
+{
+	scene "scenes/Coach/NiceShotGambler01.vcd"  //Nice kill, Nick.
+}
+Rule iMT_PlayerNiceShotGamblerCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach IssuerClose SubjectIsGambler
+	Response iMT_PlayerNiceShotGamblerCoach
+}
+
+Response iMT_PlayerNiceShotMechanicCoach
+{
+	scene "scenes/Coach/NiceShot11.vcd"  //Alright now, yeah!  You got it, boy!
+	scene "scenes/Coach/NiceShotEllis01.vcd"  //Nice shot, youngin'.
+	scene "scenes/Coach/NiceShotMechanic01.vcd"  //Ellis, nice shot.
+}
+Rule iMT_PlayerNiceShotMechanicCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach IssuerClose SubjectIsMechanic
+	Response iMT_PlayerNiceShotMechanicCoach
+}
+
+Response iMT_PlayerNiceShotProducerCoach
+{
+	scene "scenes/Coach/NiceShotFemale01.vcd"  //All right, girl.
+	scene "scenes/Coach/NiceShotProducer01.vcd"  //Ro that was a nice shot.
+}
+Rule iMT_PlayerNiceShotProducerCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach IssuerClose SubjectIsProducer
+	Response iMT_PlayerNiceShotProducerCoach
+}
+
+Response iMT_PlayerGoingToDieCoach
+{
+	scene "scenes/Coach/GoingToDie01.vcd"  //This here is some serious bullshit.
+	scene "scenes/Coach/GoingToDie02.vcd"  //This ain't how i thought this would go.
+	scene "scenes/Coach/GoingToDie03.vcd"  //I can walk this shit off.
+	scene "scenes/Coach/GoingToDie04.vcd"  //Ahhhhhhh.
+	scene "scenes/Coach/GoingToDie05.vcd"  //Damn, they messed me up.
+	scene "scenes/Coach/GoingToDie07.vcd"  //Man, this shit hurts.
+	scene "scenes/Coach/GoingToDie08.vcd"  //Man said there was nothing to worry about, well buullshit.
+	scene "scenes/Coach/GoingToDie09.vcd"  //Ya'll crazy if you don't think this hurts.
+	scene "scenes/Coach/GoingToDie10.vcd"  //Shit, I'm messed up.
+	scene "scenes/Coach/GoingToDie11.vcd"  //It hurts, but ain't nothin.
+	scene "scenes/Coach/GoingToDie12.vcd"  //This shit ain't pretty.
+	scene "scenes/Coach/GoingToDie13.vcd"  //Ahh damnit. (frustrated)
+	scene "scenes/Coach/GoingToDie14.vcd"  //Man, this right here hurts somethin' fierce.
+	scene "scenes/Coach/GoingToDie15.vcd"  //This is some outrageous shit.
+	scene "scenes/Coach/GoingToDie16.vcd"  //Crazy sons of a bitches messed me up.
+	scene "scenes/Coach/GoingToDie17.vcd"  //Damn. They beat me good.
+	scene "scenes/Coach/GoingToDie18.vcd"  //They beat my ass fair and square.
+	scene "scenes/Coach/GoingToDie19.vcd"  //I shoulda learned to drive a tank or some shit.
+	scene "scenes/Coach/GoingToDie20.vcd"  //Ahh damnit now.
+	scene "scenes/Coach/GoingToDie21.vcd"  //No pain, no gain. I must be about to gain some serious shit.
+	scene "scenes/Coach/GoingToDie22.vcd"  //I ain't ready to lay down yet.
+	scene "scenes/Coach/GoingToDie23.vcd"  //Hey. Now this here is some bullshit.
+	scene "scenes/Coach/GoingToDie24.vcd"  //I can walk this off.
+	scene "scenes/Coach/GoingToDie25.vcd"  //Tryin' to walk this off.
+	scene "scenes/Coach/GoingToDie27.vcd"  //I'm gotta get right.
+	scene "scenes/Coach/GoingToDie28.vcd"  //I ain't dead yet.
+	scene "scenes/Coach/GoingToDie32.vcd"  //Man, those zombies beat my ass.
+	scene "scenes/Coach/GoingToDie301.vcd"  //I'm just gonna admit it, I need some help.
+	scene "scenes/Coach/GoingToDie302.vcd"  //I need to get right.
+	scene "scenes/Coach/GoingToDie303.vcd"  //Sheeeeeet, I ain't gonna make it.
+	scene "scenes/Coach/GoingToDie304.vcd"  //Come on, pull it together man. You can make it through this shit. [to self]
+}
+Rule iMT_PlayerGoingToDieCoach
+{
+	criteria iMT_PlayerGoingToDie IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotCoughing
+	Response iMT_PlayerGoingToDieCoach
+}
+
+Response iMT_OtherPlayerWasPouncedGamblerCoach
+{
+	scene "scenes/Coach/HunterNickPounced01.vcd"  //Hunter's got Nick!
+	scene "scenes/Coach/HunterNickPounced02.vcd"  //Hunter's on Nick!
+}
+Rule iMT_OtherPlayerWasPouncedGamblerCoach
+{
+	criteria iMT_OtherPlayerWasPounced IsCoach IssuerClose SubjectIsGambler
+	Response iMT_OtherPlayerWasPouncedGamblerCoach
+}
+
+Response iMT_OtherPlayerWasPouncedMechanicCoach
+{
+	scene "scenes/Coach/HunterEllisPounced01.vcd"  //Hunter's got Ellis!
+	scene "scenes/Coach/HunterEllisPounced02.vcd"  //Hunter on Ellis!
+}
+Rule iMT_OtherPlayerWasPouncedMechanicCoach
+{
+	criteria iMT_OtherPlayerWasPounced IsCoach IssuerClose SubjectIsMechanic
+	Response iMT_OtherPlayerWasPouncedMechanicCoach
+}
+
+Response iMT_OtherPlayerWasPouncedProducerCoach
+{
+	scene "scenes/Coach/HunterRochellePounced01.vcd"  //Hunter's got Ro!
+	scene "scenes/Coach/HunterRochellePounced02.vcd"  //Hunter on  Rochelle!
+}
+Rule iMT_OtherPlayerWasPouncedProducerCoach
+{
+	criteria iMT_OtherPlayerWasPounced IsCoach IssuerClose SubjectIsProducer
+	Response iMT_OtherPlayerWasPouncedProducerCoach
+}
+
+Response iMT_BattleCryCoach
+{
+	scene "scenes/Coach/BattleCry01.vcd"  //EAT THAT SHIT!
+	scene "scenes/Coach/BattleCry02.vcd"  //How you like that?
+	scene "scenes/Coach/BattleCry03.vcd"  //HOW THAT FEEL?
+	scene "scenes/Coach/BattleCry04.vcd"  //YEAH!
+	scene "scenes/Coach/BattleCry05.vcd"  //CHEW ON THAT!
+	scene "scenes/Coach/BattleCry06.vcd"  //ALLRIGHT!
+	scene "scenes/Coach/BattleCry07.vcd"  //GYEAHHHHHH!
+	scene "scenes/Coach/BattleCry08.vcd"  //GRRRR YEAH!
+	scene "scenes/Coach/BattleCry09.vcd"  //WHOOO! YEAH BABY!
+}
+Rule iMT_BattleCryCoach
+{
+	criteria iMT_BattleCry IsCoach
+	Response iMT_BattleCryCoach
+}
+
+Response iMT_PlayerEquippedItemCoach
+{
+	scene "scenes/Coach/KillConfirmation01.vcd"  //Got it!
+	scene "scenes/Coach/KillConfirmation07.vcd"  //Got it! [calmer]
+	scene "scenes/Coach/KillConfirmation08.vcd"  //I got it. [calmer]
+}
+Rule iMT_PlayerEquippedItemCoach
+{
+	criteria iMT_PlayerEquippedItem IsCoach
+	Response iMT_PlayerEquippedItemCoach
+}
+
+Response iMT_PlayerBreathingCoach
+{
+	scene "scenes/Coach/HeavyBreathing01.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing02.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing03.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing04.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, medium]
+	scene "scenes/Coach/HeavyBreathing05.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, medium]
+	scene "scenes/Coach/HeavyBreathing06.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing07.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing08.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, gasping]
+	scene "scenes/Coach/HeavyBreathing09.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing10.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, gasping]
+}
+Rule iMT_PlayerBreathingCoach
+{
+	criteria iMT_PlayerBreathing IsCoach
+	Response iMT_PlayerBreathingCoach
+}
+
+Response iMT_PlayerReloadingCoach
+{
+	scene "scenes/Coach/Reloading01.vcd"  //Reloading!
+	scene "scenes/Coach/Reloading02.vcd"  //Reloading!
+	scene "scenes/Coach/Reloading03.vcd"  //Reloading!
+	scene "scenes/Coach/Reloading04.vcd"  //Reloading!
+	scene "scenes/Coach/Reloading05.vcd"  //Reloading!
+	scene "scenes/Coach/Reloading06.vcd"  //Reloading!
+	scene "scenes/Coach/Reloading07.vcd"  //Reloading!
+}
+Rule iMT_PlayerReloadingCoach
+{
+	criteria iMT_PlayerReloading IsCoach
+	Response iMT_PlayerReloadingCoach
+}
+
+Response iMT_PlayerReloadingIntenseCoach
+{
+	scene "scenes/Coach/ReloadIntense01.vcd"  //Reloading!
+	scene "scenes/Coach/ReloadIntense02.vcd"  //Re-god-damn-loading!
+	scene "scenes/Coach/ReloadIntense03.vcd"  //Gotta reload!
+	scene "scenes/Coach/ReloadIntense04.vcd"  //Reloading!
+	scene "scenes/Coach/ReloadIntense05.vcd"  //Reloading!
+	scene "scenes/Coach/ReloadIntense06.vcd"  //Reloading!
+	scene "scenes/Coach/ReloadIntense07.vcd"  //Reloading!
+	scene "scenes/Coach/ReloadIntense08.vcd"  //Reloading!
+}
+Rule iMT_PlayerReloadingIntenseCoach
+{
+	criteria iMT_PlayerReloading IsCoach InCombat
+	Response iMT_PlayerReloadingIntenseCoach
+}
+
+Response iMT_PlayerWitchChasingCoach
+{
+	scene "scenes/Coach/WitchChasing01.vcd"  //The bitch is chasing me!
+	scene "scenes/Coach/WitchChasing02.vcd"  //Bitch on my ass!
+	scene "scenes/Coach/WitchChasing03.vcd"  //Run, run, witch coming through!
+	scene "scenes/Coach/WitchChasing04.vcd"  //Shoot the witch! Shoot the witch!
+	scene "scenes/Coach/WitchChasing05.vcd"  //Coming through! Witch on my ass!
+	scene "scenes/Coach/WitchChasing06.vcd"  //Get out of the way! Witch!!!!
+	scene "scenes/Coach/WitchChasing07.vcd"  //Aw shit. Witch! Witch! Witch!
+}
+Rule iMT_PlayerWitchChasingCoach
+{
+	criteria iMT_PlayerWitchChasing IsCoach
+	Response iMT_PlayerWitchChasingCoach
+}
+
+Response iMT_PlayerWeddingWitchChasingCoach
+{
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing01.vcd"  //Bride's chasing me!
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing02.vcd"  //Ugly brides chasing me! Brides chasing me!
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing03.vcd"  //Kill the bride! Kill the bride!
+}
+Rule iMT_PlayerWeddingWitchChasingCoach
+{
+	criteria iMT_PlayerWitchChasing IsCoach Isc6m1_riverbank
+	Response iMT_PlayerWeddingWitchChasingCoach
+}
+
+Response iMT_PlayerBackUpQuietCoach
+{
+	scene "scenes/Coach/BackUpQuiet01.vcd"  //Back up.
+	scene "scenes/Coach/BackUpQuiet02.vcd"  //Back up, back up.
+	scene "scenes/Coach/BackUpQuiet03.vcd"  //Back up.
+}
+Rule iMT_PlayerBackUpQuietCoach
+{
+	criteria iMT_PlayerBackUpQuiet IsCoach
+	Response iMT_PlayerBackUpQuietCoach
+}
+
+Response iMT_PlayerTransitionCoach
+{
+	scene "scenes/Coach/TransitionClose01.vcd"  //That shit was crazy.
+	scene "scenes/Coach/TransitionClose02.vcd"  //That shit was crazy.
+	scene "scenes/Coach/TransitionClose03.vcd"  //That was some close ass shit.
+	scene "scenes/Coach/TransitionClose04.vcd"  //We just made that.
+	scene "scenes/Coach/TransitionClose05.vcd"  //I was bettin on the other guys (laughing).
+	scene "scenes/Coach/TransitionClose06.vcd"  //Man said, any fight you walk away from is a win.
+	scene "scenes/Coach/TransitionClose07.vcd"  //Let's put it behind us, we good, we good.
+	scene "scenes/Coach/TransitionClose08.vcd"  //Touchdown!
+	scene "scenes/Coach/TransitionClose09.vcd"  //They played us tough.
+	scene "scenes/Coach/TransitionClose10.vcd"  //That was some epic shit. Right there.
+	scene "scenes/Coach/TransitionClose11.vcd"  //Allright. We allright y'all. We made it.
+	scene "scenes/Coach/TransitionClose12.vcd"  //That shit was too goddamn close...
+	scene "scenes/Coach/TransitionClose13.vcd"  //We almost didn't make it...
+	scene "scenes/Coach/TransitionClose14.vcd"  //That was a little TOO close...
+	scene "scenes/Coach/TransitionClose15.vcd"  //Damn. I can't be all that's left...
+	scene "scenes/Coach/TransitionClose16.vcd"  //We got sloppy out there.
+	scene "scenes/Coach/TransitionClose17.vcd"  //I know we can do better than THAT.
+	scene "scenes/Coach/TransitionClose18.vcd"  //Man. That got BAD.
+}
+Rule iMT_PlayerTransitionCoach
+{
+	criteria iMT_PlayerTransition IsCoach
+	Response iMT_PlayerTransitionCoach
+}
+
+Response iMT_WitchGettingAngryCoach
+{
+	scene "scenes/Coach/WitchGettingAngry01.vcd"  //Oh shit, that bitch's pissed.
+	scene "scenes/Coach/WitchGettingAngry02.vcd"  //Quit trifling with that bitch, she gonna explode.
+	scene "scenes/Coach/WitchGettingAngry03.vcd"  //Watch out ya'all, someone pissed off that bitch.
+	scene "scenes/Coach/WitchGettingAngry04.vcd"  //Ohh shit, that bitch's gettin' angry!
+}
+Rule iMT_WitchGettingAngryCoach
+{
+	criteria iMT_WitchGettingAngry IsCoach
+	Response iMT_WitchGettingAngryCoach
+}
+
+Response iMT_PlayerEmphaticGoQuietCoach
+{
+	scene "scenes/Coach/EmphaticGoQuiet01.vcd"  //Just keep going.
+	scene "scenes/Coach/EmphaticGoQuiet02.vcd"  //Go, go, go!
+	scene "scenes/Coach/EmphaticGoQuiet03.vcd"  //Let's keep moving!
+}
+Rule iMT_PlayerEmphaticGoQuietCoach
+{
+	criteria iMT_PlayerEmphaticGoQuiet IsCoach
+	Response iMT_PlayerEmphaticGoQuietCoach
+}
