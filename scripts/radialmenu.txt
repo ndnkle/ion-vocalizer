@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 9.0
+// ion's Vocalizer 9.1
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -244,7 +244,7 @@
 		}
 		"West"
 		{
-			"command"	"vocalize PlayerGrabbedByTongue"
+			"command"	"vocalize PlayerTonguePullStart"
 			"text"		"Pulled"
 		}
 		"NorthWest"

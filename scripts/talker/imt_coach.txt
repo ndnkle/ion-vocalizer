@@ -326,7 +326,7 @@ Response iMT_PlayerGoingToDieCoach
 }
 Rule iMT_PlayerGoingToDieCoach
 {
-	criteria iMT_PlayerGoingToDie IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotCoughing
+	criteria iMT_PlayerGoingToDie IsCoach
 	Response iMT_PlayerGoingToDieCoach
 }
 
