@@ -412,37 +412,17 @@ Rule iMT_PlayerBreathingCoach
 	Response iMT_PlayerBreathingCoach
 }
 
-Response iMT_PlayerReloadingCoach
+Response iMT_PlayerDeathScreamCoach
 {
-	scene "scenes/Coach/Reloading01.vcd"  //Reloading!
-	scene "scenes/Coach/Reloading02.vcd"  //Reloading!
-	scene "scenes/Coach/Reloading03.vcd"  //Reloading!
-	scene "scenes/Coach/Reloading04.vcd"  //Reloading!
-	scene "scenes/Coach/Reloading05.vcd"  //Reloading!
-	scene "scenes/Coach/Reloading06.vcd"  //Reloading!
-	scene "scenes/Coach/Reloading07.vcd"  //Reloading!
+	scene "scenes/Coach/DeathScream01.vcd"  //[Loud painful death scream]
+	scene "scenes/Coach/DeathScream03.vcd"  //[Loud painful death scream]
+	scene "scenes/Coach/DeathScream05.vcd"  //[Short quick death scream]
+	scene "scenes/Coach/DeathScream06.vcd"  //[Short quick death scream]
 }
-Rule iMT_PlayerReloadingCoach
+Rule iMT_PlayerDeathScreamCoach
 {
-	criteria iMT_PlayerReloading IsCoach
-	Response iMT_PlayerReloadingCoach
-}
-
-Response iMT_PlayerReloadingIntenseCoach
-{
-	scene "scenes/Coach/ReloadIntense01.vcd"  //Reloading!
-	scene "scenes/Coach/ReloadIntense02.vcd"  //Re-god-damn-loading!
-	scene "scenes/Coach/ReloadIntense03.vcd"  //Gotta reload!
-	scene "scenes/Coach/ReloadIntense04.vcd"  //Reloading!
-	scene "scenes/Coach/ReloadIntense05.vcd"  //Reloading!
-	scene "scenes/Coach/ReloadIntense06.vcd"  //Reloading!
-	scene "scenes/Coach/ReloadIntense07.vcd"  //Reloading!
-	scene "scenes/Coach/ReloadIntense08.vcd"  //Reloading!
-}
-Rule iMT_PlayerReloadingIntenseCoach
-{
-	criteria iMT_PlayerReloading IsCoach InCombat
-	Response iMT_PlayerReloadingIntenseCoach
+	criteria iMT_PlayerDeathScream IsCoach
+	Response iMT_PlayerDeathScreamCoach
 }
 
 Response iMT_PlayerWitchChasingCoach

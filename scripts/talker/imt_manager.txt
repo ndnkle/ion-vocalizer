@@ -447,15 +447,16 @@ Rule iMT_PlayerAnswerReadyManager
 	Response iMT_PlayerAnswerReadyManager
 }
 
-Response iMT_PlayerReloadingManager
+Response iMT_PlayerDeathScreamManager
 {
-	scene "scenes/Manager/Reloading02.vcd"  //Reloading!
-	scene "scenes/Manager/Reloading03.vcd"  //Reloading!
+	scene "scenes/Manager/Fall01.vcd"  //[Falling-to-Death scream]
+	scene "scenes/Manager/Fall02.vcd"  //[Falling-to-Death scream]
+	scene "scenes/Manager/Fall03.vcd"  //[Falling-to-Death scream]
 }
-Rule iMT_PlayerReloadingManager
+Rule iMT_PlayerDeathScreamManager
 {
-	criteria iMT_PlayerReloading IsManager
-	Response iMT_PlayerReloadingManager
+	criteria iMT_PlayerDeathScream IsManager
+	Response iMT_PlayerDeathScreamManager
 }
 
 Response iMT_PlayerBackUpQuietManager

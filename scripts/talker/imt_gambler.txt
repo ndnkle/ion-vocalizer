@@ -399,44 +399,26 @@ Rule iMT_PlayerBreathingGambler
 	Response iMT_PlayerBreathingGambler
 }
 
-Response iMT_PlayerReloadingGambler
+Response iMT_PlayerDeathScreamGambler
 {
-	scene "scenes/Gambler/Reloading01.vcd"  //Reloading!
-	scene "scenes/Gambler/Reloading02.vcd"  //Reloading!
-	scene "scenes/Gambler/Reloading03.vcd"  //Reloading!
-	scene "scenes/Gambler/Reloading04.vcd"  //Reloading!
-	scene "scenes/Gambler/Reloading05.vcd"  //Reloading!
-	scene "scenes/Gambler/Reloading06.vcd"  //Reloading!
-	scene "scenes/Gambler/Reloading07.vcd"  //Reloading!
+	scene "scenes/Gambler/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
+	scene "scenes/Gambler/LedgeHangFall02.vcd"  //NOOOOOOOOOOOOOOOO!!!!
+	scene "scenes/Gambler/LedgeHangFall03.vcd"  //WOOOOOAAAAAHHHHHH!!!!
 }
-Rule iMT_PlayerReloadingGambler
+Rule iMT_PlayerDeathScreamGambler
 {
-	criteria iMT_PlayerReloading IsGambler
-	Response iMT_PlayerReloadingGambler
-}
-
-Response iMT_PlayerReloadingIntenseGambler
-{
-	scene "scenes/Gambler/ReloadIntense01.vcd"  //Reloading!
-	scene "scenes/Gambler/ReloadIntense02.vcd"  //Reloading here!
-	scene "scenes/Gambler/ReloadIntense03.vcd"  //Gotta reload!
-	scene "scenes/Gambler/ReloadIntense04.vcd"  //Reloading!
-	scene "scenes/Gambler/ReloadIntense05.vcd"  //Reloading!
-}
-Rule iMT_PlayerReloadingIntenseGambler
-{
-	criteria iMT_PlayerReloading IsGambler InCombat
-	Response iMT_PlayerReloadingIntenseGambler
+	criteria iMT_PlayerDeathScream IsGambler
+	Response iMT_PlayerDeathScreamGambler
 }
 
 Response iMT_PlayerWitchChasingGambler
 {
-	scene "scenes/Gambler/WitchChasing01.vcd"  //AhhhI pissed the witch off!
+	scene "scenes/Gambler/WitchChasing01.vcd"  //Ahhh, I pissed the witch off!
 	scene "scenes/Gambler/WitchChasing02.vcd"  //This bitch is chasing me!
 	scene "scenes/Gambler/WitchChasing03.vcd"  //Witch coming! Witch coming!
 	scene "scenes/Gambler/WitchChasing04.vcd"  //Shoot the witch! Shoot the witch! Shoot the witch!
 	scene "scenes/Gambler/WitchChasing05.vcd"  //Shoot the witch! Shoot the witch! Shoot the witch! What are you doing? Shoot her!
-	scene "scenes/Gambler/WitchChasing06.vcd"  //AhhhI pissed the witch off!
+	scene "scenes/Gambler/WitchChasing06.vcd"  //Ahhh, I pissed the witch off!
 }
 Rule iMT_PlayerWitchChasingGambler
 {

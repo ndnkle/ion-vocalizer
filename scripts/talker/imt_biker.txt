@@ -83,14 +83,14 @@ Rule iMT_HeroBiker
 	Response iMT_HeroBiker
 }
 
-Response iMT_NoCopBiker
+Response iMT_LasagnaBiker
 {
-	scene "scenes/Biker/WorldAirport0323.vcd"  //Never a cop when you need one.
+	scene "scenes/Biker/DLC2BulletinBoard02.vcd"  //Unless it's Lasagna Mondays. I love lasagna.
 }
-Rule iMT_NoCopBiker
+Rule iMT_LasagnaBiker
 {
-	criteria iMT_NoCop IsBiker
-	Response iMT_NoCopBiker
+	criteria iMT_Lasagna IsBiker
+	Response iMT_LasagnaBiker
 }
 
 Response iMT_GodIsDeadBiker
@@ -463,16 +463,16 @@ Rule iMT_PlayerAnswerReadyBiker
 	Response iMT_PlayerAnswerReadyBiker
 }
 
-Response iMT_PlayerReloadingBiker
+Response iMT_PlayerDeathScreamBiker
 {
-	scene "scenes/Biker/Reloading01.vcd"  //Reloading!
-	scene "scenes/Biker/Reloading02.vcd"  //Reloading!
-	scene "scenes/Biker/Reloading03.vcd"  //Reloading!
+	scene "scenes/Biker/Fall01.vcd"  //[Death scream as you fall]
+	scene "scenes/Biker/Fall02.vcd"  //[Death scream as you fall]
+	scene "scenes/Biker/Fall03.vcd"  //[Death scream as you fall]
 }
-Rule iMT_PlayerReloadingBiker
+Rule iMT_PlayerDeathScreamBiker
 {
-	criteria iMT_PlayerReloading IsBiker
-	Response iMT_PlayerReloadingBiker
+	criteria iMT_PlayerDeathScream IsBiker
+	Response iMT_PlayerDeathScreamBiker
 }
 
 Response iMT_PlayerBackUpQuietBiker

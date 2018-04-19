@@ -369,29 +369,15 @@ Rule iMT_PlayerBreathingProducer
 	Response iMT_PlayerBreathingProducer
 }
 
-Response iMT_PlayerReloadingProducer
+Response iMT_PlayerDeathScreamProducer
 {
-	scene "scenes/Producer/Reloading01.vcd"  //Reloading!
-	scene "scenes/Producer/Reloading02.vcd"  //Reloading!
-	scene "scenes/Producer/Reloading03.vcd"  //I'm reloading!
-	scene "scenes/Producer/Reloading04.vcd"  //Reloading!
+	scene "scenes/Producer/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
+	scene "scenes/Producer/LedgeHangFall02.vcd"  //NOOOOOOOOOOOOOOOO!!!!
 }
-Rule iMT_PlayerReloadingProducer
+Rule iMT_PlayerDeathScreamProducer
 {
-	criteria iMT_PlayerReloading IsProducer
-	Response iMT_PlayerReloadingProducer
-}
-
-Response iMT_PlayerReloadingIntenseProducer
-{
-	scene "scenes/Producer/ReloadIntense01.vcd"  //Reloading!
-	scene "scenes/Producer/ReloadIntense02.vcd"  //Reloading!
-	scene "scenes/Producer/ReloadIntense03.vcd"  //Reloading here!
-}
-Rule iMT_PlayerReloadingIntenseProducer
-{
-	criteria iMT_PlayerReloading IsProducer InCombat
-	Response iMT_PlayerReloadingIntenseProducer
+	criteria iMT_PlayerDeathScream IsProducer
+	Response iMT_PlayerDeathScreamProducer
 }
 
 Response iMT_PlayerWitchChasingProducer

@@ -427,16 +427,16 @@ Rule iMT_PlayerAnswerReadyNamVet
 	Response iMT_PlayerAnswerReadyNamVet
 }
 
-Response iMT_PlayerReloadingNamVet
+Response iMT_PlayerDeathScreamNamVet
 {
-	scene "scenes/NamVet/Reloading01.vcd"  //Reloading!
-	scene "scenes/NamVet/Reloading02.vcd"  //Reloading!
-	scene "scenes/NamVet/Reloading03.vcd"  //Reloading!
+	scene "scenes/NamVet/Fall01.vcd"  //[Death scream as you fall]
+	scene "scenes/NamVet/Fall02.vcd"  //[Death scream as you fall]
+	scene "scenes/NamVet/Fall03.vcd"  //[Death scream as you fall]
 }
-Rule iMT_PlayerReloadingNamVet
+Rule iMT_PlayerDeathScreamNamVet
 {
-	criteria iMT_PlayerReloading IsNamVet
-	Response iMT_PlayerReloadingNamVet
+	criteria iMT_PlayerDeathScream IsNamVet
+	Response iMT_PlayerDeathScreamNamVet
 }
 
 Response iMT_PlayerBackUpQuietNamVet

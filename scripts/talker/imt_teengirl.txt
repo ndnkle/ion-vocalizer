@@ -430,17 +430,16 @@ Rule iMT_PlayerAnswerReadyTeenGirl
 	Response iMT_PlayerAnswerReadyTeenGirl
 }
 
-Response iMT_PlayerReloadingTeenGirl
+Response iMT_PlayerDeathScreamTeenGirl
 {
-	scene "scenes/TeenGirl/Reloading01.vcd"  //Reloading!
-	scene "scenes/TeenGirl/Reloading02.vcd"  //Reloading!
-	scene "scenes/TeenGirl/Reloading03.vcd"  //Reloading!
-	scene "scenes/TeenGirl/Reloading04.vcd"  //I'm reloading!
+	scene "scenes/TeenGirl/Fall01.vcd"  //[Death scream as you fall]
+	scene "scenes/TeenGirl/Fall02.vcd"  //[Death scream as you fall]
+	scene "scenes/TeenGirl/Fall03.vcd"  //[Death scream as you fall]
 }
-Rule iMT_PlayerReloadingTeenGirl
+Rule iMT_PlayerDeathScreamTeenGirl
 {
-	criteria iMT_PlayerReloading IsTeenGirl
-	Response iMT_PlayerReloadingTeenGirl
+	criteria iMT_PlayerDeathScream IsTeenGirl
+	Response iMT_PlayerDeathScreamTeenGirl
 }
 
 Response iMT_PlayerBackUpQuietTeenGirl

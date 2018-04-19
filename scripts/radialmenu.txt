@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 9.1
+// ion's Vocalizer 9.2
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -449,8 +449,8 @@
 		}
 		"NorthWest"
 		{
-			"command"	"vocalize iMT_PlayerReloading"
-			"text"		"Reloading"
+			"command"	"vocalize iMT_PlayerDeathScream"
+			"text"		"Fall scream"
 		}
 	}
 
@@ -1189,8 +1189,8 @@
 		}
 		"SouthWest"
 		{
-			"command"	"vocalize iMT_NoCop"
-			"text"		"No cop"
+			"command"	"vocalize iMT_Lasagna"
+			"text"		"Lasagna"
 		}
 		"West"
 		{
@@ -2239,8 +2239,8 @@
 		}
 		"SouthWest"
 		{
-			"command"	"vocalize C1M4SafeRoom2b2"
-			"text"		"Jimmy Gibbs"
+			"command"	"vocalize _c1m4startelevator3c"
+			"text"		"On mind"
 		}
 		"West"
 		{
@@ -2334,13 +2334,13 @@
 		}
 		"South"
 		{
-			"command"	"vocalize C6M1Intro_22h"
-			"text"		"Take care"
+			"command"	"vocalize C3M2SafeRoom2c"
+			"text"		"Swamp people"
 		}
 		"SouthWest"
 		{
-			"command"	"vocalize C3M2SafeRoom2c"
-			"text"		"Swamp people"
+			"command"	"vocalize C1M4SafeRoom2b2"
+			"text"		"Jimmy Gibbs"
 		}
 		"West"
 		{
@@ -3134,8 +3134,8 @@
 		}
 		"South"
 		{
-			"command"	"vocalize _C2M2_SeeSafehouse01"
-			"text"		"Tunnel of love"
+			"command"	"vocalize C5M3Bodies03"
+			"text"		"Don't know"
 		}
 		"SouthWest"
 		{
@@ -3200,7 +3200,7 @@
 		"NorthWest"
 		{
 			"command"	"vocalize WorldC3M1FerryCrossingD02"
-			"text"		"Don't know"
+			"text"		"Wisdom"
 		}
 	}
 

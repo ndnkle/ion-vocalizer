@@ -474,33 +474,18 @@ Rule iMT_PlayerBreathingMechanic
 	Response iMT_PlayerBreathingMechanic
 }
 
-Response iMT_PlayerReloadingMechanic
+Response iMT_PlayerDeathScreamMechanic
 {
-	scene "scenes/Mechanic/Reloading01.vcd"  //Reloading!
-	scene "scenes/Mechanic/Reloading02.vcd"  //Reloading!
-	scene "scenes/Mechanic/Reloading03.vcd"  //Hey, I'm reloading!
-	scene "scenes/Mechanic/Reloading04.vcd"  //Reloading!
-	scene "scenes/Mechanic/Reloading05.vcd"  //Reloading!
-	scene "scenes/Mechanic/Reloading06.vcd"  //I'm a reload!
+	scene "scenes/Mechanic/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
+	scene "scenes/Mechanic/LedgeHangFall02.vcd"  //NOOOOOOOOOOOOOOOO!!!!
+	scene "scenes/Mechanic/LedgeHangFall03.vcd"  //WOOOOOAAAAAHHHHHH!!!!
+	scene "scenes/Mechanic/LedgeHangFall04.vcd"  //GOOD-BYYYYYYYYYYYE!!
+	scene "scenes/Mechanic/LedgeHangFall05.vcd"  //SORRY Y'AAAAAAAAAALLL!!
 }
-Rule iMT_PlayerReloadingMechanic
+Rule iMT_PlayerDeathScreamMechanic
 {
-	criteria iMT_PlayerReloading IsMechanic
-	Response iMT_PlayerReloadingMechanic
-}
-
-Response iMT_PlayerReloadingIntenseMechanic
-{
-	scene "scenes/Mechanic/ReloadIntense01.vcd"  //Reloading!
-	scene "scenes/Mechanic/ReloadIntense02.vcd"  //Reloading here!
-	scene "scenes/Mechanic/ReloadIntense03.vcd"  //Gotta reload!
-	scene "scenes/Mechanic/ReloadIntense04.vcd"  //Reloading!
-	scene "scenes/Mechanic/ReloadIntense05.vcd"  //Reloading!
-}
-Rule iMT_PlayerReloadingIntenseMechanic
-{
-	criteria iMT_PlayerReloading IsMechanic InCombat
-	Response iMT_PlayerReloadingIntenseMechanic
+	criteria iMT_PlayerDeathScream IsMechanic
+	Response iMT_PlayerDeathScreamMechanic
 }
 
 Response iMT_PlayerWitchChasingMechanic

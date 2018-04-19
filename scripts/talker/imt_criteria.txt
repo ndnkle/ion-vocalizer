@@ -17,11 +17,11 @@ Criterion	"iMT_PlayerAnswerReady"		"Concept"	"iMT_PlayerAnswerReady"		required
 Criterion	"iMT_PlayerBackUpQuiet"		"Concept"	"iMT_PlayerBackUpQuiet"		required
 Criterion	"iMT_PlayerBreathing"		"Concept"	"iMT_PlayerBreathing"		required
 Criterion	"iMT_PlayerCoughing"		"Concept"	"iMT_PlayerCoughing"		required
+Criterion	"iMT_PlayerDeathScream"		"Concept"	"iMT_PlayerDeathScream"		required
 Criterion	"iMT_PlayerEmphaticGoQuiet"	"Concept"	"iMT_PlayerEmphaticGoQuiet"	required
 Criterion	"iMT_PlayerEquippedItem"	"Concept"	"iMT_PlayerEquippedItem"	required
 Criterion	"iMT_PlayerGoingToDie"		"Concept"	"iMT_PlayerGoingToDie"		required
 Criterion	"iMT_PlayerNiceShot"		"Concept"	"iMT_PlayerNiceShot"		required
-Criterion	"iMT_PlayerReloading"		"Concept"	"iMT_PlayerReloading"		required
 Criterion	"iMT_PlayerSuggestHealth"	"Concept"	"iMT_PlayerSuggestHealth"	required
 Criterion	"iMT_PlayerTransition"		"Concept"	"iMT_PlayerTransition"		required
 Criterion	"iMT_PlayerWitchChasing"	"Concept"	"iMT_PlayerWitchChasing"	required
@@ -91,7 +91,7 @@ Criterion	"iMT_FrozenBeard"		"Concept"	"iMT_FrozenBeard"		required
 Criterion	"iMT_Groovy"			"Concept"	"iMT_Groovy"			required
 Criterion	"iMT_Hate"			"Concept"	"iMT_Hate"			required
 Criterion	"iMT_Hersch"			"Concept"	"iMT_Hersch"			required
-Criterion	"iMT_NoCop"			"Concept"	"iMT_NoCop"			required
+Criterion	"iMT_Lasagna"			"Concept"	"iMT_Lasagna"			required
 Criterion	"iMT_NotDriving"		"Concept"	"iMT_NotDriving"		required
 Criterion	"iMT_NotManyLeft"		"Concept"	"iMT_NotManyLeft"		required
 Criterion	"iMT_Predict"			"Concept"	"iMT_Predict"			required
