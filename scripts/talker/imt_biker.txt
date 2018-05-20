@@ -514,3 +514,18 @@ Rule iMT_WitchGettingAngryBiker
 	criteria iMT_WitchGettingAngry IsBiker
 	Response iMT_WitchGettingAngryBiker
 }
+
+Response iMT_PlayerIncapacitatedHurtBiker
+{
+	scene "scenes/Biker/IncapacitatedInjury01.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Biker/IncapacitatedInjury02.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Biker/IncapacitatedInjury03.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Biker/IncapacitatedInjury04.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Biker/IncapacitatedInjury05.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Biker/IncapacitatedInjury06.vcd"  //[Ahhhh - terrified yell]
+}
+Rule iMT_PlayerIncapacitatedHurtBiker
+{
+	criteria iMT_PlayerIncapacitatedHurt IsBiker
+	Response iMT_PlayerIncapacitatedHurtBiker
+}

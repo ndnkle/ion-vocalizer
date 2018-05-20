@@ -498,3 +498,15 @@ Rule iMT_WitchGettingAngryManager
 	criteria iMT_WitchGettingAngry IsManager
 	Response iMT_WitchGettingAngryManager
 }
+
+Response iMT_PlayerIncapacitatedHurtManager
+{
+	scene "scenes/Manager/IncapacitatedInjury01.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Manager/IncapacitatedInjury02.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Manager/IncapacitatedInjury03.vcd"  //[Ahhhh - terrified yell]
+}
+Rule iMT_PlayerIncapacitatedHurtManager
+{
+	criteria iMT_PlayerIncapacitatedHurt IsManager
+	Response iMT_PlayerIncapacitatedHurtManager
+}

@@ -482,3 +482,16 @@ Rule iMT_WitchGettingAngryTeenGirl
 	criteria iMT_WitchGettingAngry IsTeenGirl
 	Response iMT_WitchGettingAngryTeenGirl
 }
+
+Response iMT_PlayerIncapacitatedHurtTeenGirl
+{
+	scene "scenes/TeenGirl/IncapacitatedInjury01.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/TeenGirl/IncapacitatedInjury02.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/TeenGirl/IncapacitatedInjury03.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/TeenGirl/IncapacitatedInjury04.vcd"  //AHHHHH [terrified yell]
+}
+Rule iMT_PlayerIncapacitatedHurtTeenGirl
+{
+	criteria iMT_PlayerIncapacitatedHurt IsTeenGirl
+	Response iMT_PlayerIncapacitatedHurtTeenGirl
+}

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 9.3
+// ion's Vocalizer 9.4
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -419,8 +419,8 @@
 		}
 		"NorthEast"
 		{
-			"command"	"vocalize iMT_PlayerBreathing"
-			"text"		"Breathing"
+			"command"	"vocalize iMT_PlayerIncapacitatedHurt"
+			"text"		"Pain scream"
 		}
 		"East"
 		{
@@ -429,8 +429,8 @@
 		}
 		"SouthEast"
 		{
-			"command"	"vocalize iMT_PlayerEmphaticGoQuiet"
-			"text"		"Go (quiet)"
+			"command"	"vocalize iMT_PlayerBreathing"
+			"text"		"Breathing"
 		}
 		"South"
 		{

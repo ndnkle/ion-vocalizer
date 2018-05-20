@@ -569,15 +569,17 @@ Rule iMT_WitchGettingAngryMechanic
 	Response iMT_WitchGettingAngryMechanic
 }
 
-Response iMT_PlayerEmphaticGoQuietMechanic
+Response iMT_PlayerIncapacitatedHurtMechanic
 {
-	scene "scenes/Mechanic/EmphaticGoQuiet01.vcd"  //Let's go.
-	scene "scenes/Mechanic/EmphaticGoQuiet02.vcd"  //Move out.
-	scene "scenes/Mechanic/EmphaticGoQuiet03.vcd"  //Keep going.
-	scene "scenes/Mechanic/EmphaticGoQuiet04.vcd"  //Just run, dammit.
+	scene "scenes/Mechanic/IncapacitatedInjury01.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Mechanic/IncapacitatedInjury02.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Mechanic/IncapacitatedInjury03.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Mechanic/IncapacitatedInjury04.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Mechanic/IncapacitatedInjury05.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Mechanic/IncapacitatedInjury06.vcd"  //AHHHHH [terrified yell]
 }
-Rule iMT_PlayerEmphaticGoQuietMechanic
+Rule iMT_PlayerIncapacitatedHurtMechanic
 {
-	criteria iMT_PlayerEmphaticGoQuiet IsMechanic
-	Response iMT_PlayerEmphaticGoQuietMechanic
+	criteria iMT_PlayerIncapacitatedHurt IsMechanic
+	Response iMT_PlayerIncapacitatedHurtMechanic
 }

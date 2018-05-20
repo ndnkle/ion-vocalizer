@@ -459,14 +459,15 @@ Rule iMT_WitchGettingAngryProducer
 	Response iMT_WitchGettingAngryProducer
 }
 
-Response iMT_PlayerEmphaticGoQuietProducer
+Response iMT_PlayerIncapacitatedHurtProducer
 {
-	scene "scenes/Producer/EmphaticGoQuiet01.vcd"  //No time to stop, go.
-	scene "scenes/Producer/EmphaticGoQuiet02.vcd"  //Keep moving.
-	scene "scenes/Producer/EmphaticGoQuiet03.vcd"  //Keep going.
+	scene "scenes/Producer/IncapacitatedInjury01.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Producer/IncapacitatedInjury02.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Producer/IncapacitatedInjury03.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Producer/IncapacitatedInjury04.vcd"  //AHHHHH [terrified yell]
 }
-Rule iMT_PlayerEmphaticGoQuietProducer
+Rule iMT_PlayerIncapacitatedHurtProducer
 {
-	criteria iMT_PlayerEmphaticGoQuiet IsProducer
-	Response iMT_PlayerEmphaticGoQuietProducer
+	criteria iMT_PlayerIncapacitatedHurt IsProducer
+	Response iMT_PlayerIncapacitatedHurtProducer
 }

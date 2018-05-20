@@ -505,14 +505,22 @@ Rule iMT_WitchGettingAngryCoach
 	Response iMT_WitchGettingAngryCoach
 }
 
-Response iMT_PlayerEmphaticGoQuietCoach
+Response iMT_PlayerIncapacitatedHurtCoach
 {
-	scene "scenes/Coach/EmphaticGoQuiet01.vcd"  //Just keep going.
-	scene "scenes/Coach/EmphaticGoQuiet02.vcd"  //Go, go, go!
-	scene "scenes/Coach/EmphaticGoQuiet03.vcd"  //Let's keep moving!
+	scene "scenes/Coach/IncapacitatedInjury01.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury02.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury03.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury04.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury05.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury06.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury07.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury08.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury09.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury10.vcd"  //[Ahhhh - terrified yell]
+	scene "scenes/Coach/IncapacitatedInjury11.vcd"  //[Ahhhh - terrified yell]
 }
-Rule iMT_PlayerEmphaticGoQuietCoach
+Rule iMT_PlayerIncapacitatedHurtCoach
 {
-	criteria iMT_PlayerEmphaticGoQuiet IsCoach
-	Response iMT_PlayerEmphaticGoQuietCoach
+	criteria iMT_PlayerIncapacitatedHurt IsCoach
+	Response iMT_PlayerIncapacitatedHurtCoach
 }

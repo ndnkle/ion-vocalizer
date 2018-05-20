@@ -483,16 +483,16 @@ Rule iMT_WitchGettingAngryGambler
 	Response iMT_WitchGettingAngryGambler
 }
 
-Response iMT_PlayerEmphaticGoQuietGambler
+Response iMT_PlayerIncapacitatedHurtGambler
 {
-	scene "scenes/Gambler/EmphaticGoQuiet01.vcd"  //Everybody keep moving.
-	scene "scenes/Gambler/EmphaticGoQuiet02.vcd"  //Just go.
-	scene "scenes/Gambler/EmphaticGoQuiet03.vcd"  //Just go. Go.
-	scene "scenes/Gambler/EmphaticGoQuiet04.vcd"  //Don't stop, don't stop.
-	scene "scenes/Gambler/EmphaticGoQuiet05.vcd"  //Keep moving.
+	scene "scenes/Gambler/IncapacitatedInjury01.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Gambler/IncapacitatedInjury02.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Gambler/IncapacitatedInjury03.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Gambler/IncapacitatedInjury04.vcd"  //AHHHHH [terrified yell]
+	scene "scenes/Gambler/IncapacitatedInjury05.vcd"  //AHHHHH [terrified yell]
 }
-Rule iMT_PlayerEmphaticGoQuietGambler
+Rule iMT_PlayerIncapacitatedHurtGambler
 {
-	criteria iMT_PlayerEmphaticGoQuiet IsGambler
-	Response iMT_PlayerEmphaticGoQuietGambler
+	criteria iMT_PlayerIncapacitatedHurt IsGambler
+	Response iMT_PlayerIncapacitatedHurtGambler
 }

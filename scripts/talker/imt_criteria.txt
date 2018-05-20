@@ -18,9 +18,9 @@ Criterion	"iMT_PlayerBackUpQuiet"		"Concept"	"iMT_PlayerBackUpQuiet"		required
 Criterion	"iMT_PlayerBreathing"		"Concept"	"iMT_PlayerBreathing"		required
 Criterion	"iMT_PlayerCoughing"		"Concept"	"iMT_PlayerCoughing"		required
 Criterion	"iMT_PlayerDeathScream"		"Concept"	"iMT_PlayerDeathScream"		required
-Criterion	"iMT_PlayerEmphaticGoQuiet"	"Concept"	"iMT_PlayerEmphaticGoQuiet"	required
 Criterion	"iMT_PlayerEquippedItem"	"Concept"	"iMT_PlayerEquippedItem"	required
 Criterion	"iMT_PlayerGoingToDie"		"Concept"	"iMT_PlayerGoingToDie"		required
+Criterion	"iMT_PlayerIncapacitatedHurt"	"Concept"	"iMT_PlayerIncapacitatedHurt"	required
 Criterion	"iMT_PlayerNiceShot"		"Concept"	"iMT_PlayerNiceShot"		required
 Criterion	"iMT_PlayerSuggestHealth"	"Concept"	"iMT_PlayerSuggestHealth"	required
 Criterion	"iMT_PlayerTransition"		"Concept"	"iMT_PlayerTransition"		required

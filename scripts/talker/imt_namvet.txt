@@ -479,3 +479,17 @@ Rule iMT_WitchGettingAngryNamVet
 	criteria iMT_WitchGettingAngry IsNamVet
 	Response iMT_WitchGettingAngryNamVet
 }
+
+Response iMT_PlayerIncapacitatedHurtNamVet
+{
+	scene "scenes/NamVet/IncapacitatedInjury01.vcd"  //[AHHHHH - terrified yell]
+	scene "scenes/NamVet/IncapacitatedInjury02.vcd"  //[AHHHHH - terrified yell]
+	scene "scenes/NamVet/IncapacitatedInjury03.vcd"  //[AHHHHH - terrified yell]
+	scene "scenes/NamVet/IncapacitatedInjury04.vcd"  //[AHHHHH - terrified yell]
+	scene "scenes/NamVet/IncapacitatedInjury05.vcd"  //[AHHHHH - terrified yell]
+}
+Rule iMT_PlayerIncapacitatedHurtNamVet
+{
+	criteria iMT_PlayerIncapacitatedHurt IsNamVet
+	Response iMT_PlayerIncapacitatedHurtNamVet
+}
