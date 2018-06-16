@@ -78,14 +78,14 @@ Rule iMT_MonsterProducer
 	Response iMT_MonsterProducer
 }
 
-Response iMT_KitchenProducer
+Response iMT_HeartProducer
 {
-	scene "scenes/Producer/TakeFryingPan01.vcd"  //No one better make a crack about me in the kitchen.
+	scene "scenes/Producer/ThanksNick01.vcd"  //Look at you Nick, you do have a heart, A HEART OF GOLD!
 }
-Rule iMT_KitchenProducer
+Rule iMT_HeartProducer
 {
-	criteria iMT_Kitchen IsProducer
-	Response iMT_KitchenProducer
+	criteria iMT_Heart IsProducer
+	Response iMT_HeartProducer
 }
 
 Response iMT_AliensProducer
@@ -410,17 +410,17 @@ Rule iMT_PlayerWeddingWitchChasingProducer
 	Response iMT_PlayerWeddingWitchChasingProducer
 }
 
-Response iMT_PlayerBackUpQuietProducer
+Response iMT_PlayerTeamKillProducer
 {
-	scene "scenes/Producer/BackUpQuiet01.vcd"  //Back up.
-	scene "scenes/Producer/BackUpQuiet02.vcd"  //Move back.
-	scene "scenes/Producer/BackUpQuiet03.vcd"  //Get back.
-	scene "scenes/Producer/BackUpQuiet04.vcd"  //Get back, get back.
+	scene "scenes/Producer/TeamKillAccident01.vcd"  //Did you seriously think that was a good idea?
+	scene "scenes/Producer/TeamKillAccident02.vcd"  //What is going on inside that head of yours?
+	scene "scenes/Producer/TeamKillAccident03.vcd"  //JESUS! We are on the same team here!
+	scene "scenes/Producer/TeamKillAccident04.vcd"  //What the?
 }
-Rule iMT_PlayerBackUpQuietProducer
+Rule iMT_PlayerTeamKillProducer
 {
-	criteria iMT_PlayerBackUpQuiet IsProducer
-	Response iMT_PlayerBackUpQuietProducer
+	criteria iMT_PlayerTeamKill IsProducer
+	Response iMT_PlayerTeamKillProducer
 }
 
 Response iMT_PlayerTransitionProducer
@@ -433,9 +433,9 @@ Response iMT_PlayerTransitionProducer
 	scene "scenes/Producer/TransitionClose06.vcd"  //Live and in the flesh!
 	scene "scenes/Producer/TransitionClose07.vcd"  //All bark, no bite!
 	scene "scenes/Producer/TransitionClose08.vcd"  //We made it uh huh. We made it oh yeah (sung)
-	scene "scenes/Producer/TransitionClose10.vcd"  //Whoa, that's about as close as I like to cut itâ€¦
+	scene "scenes/Producer/TransitionClose10.vcd"  //Whoa, that's about as close as I like to cut it…
 	scene "scenes/Producer/TransitionClose11.vcd"  //We're going to have to do better.
-	scene "scenes/Producer/TransitionClose12.vcd"  //We almost didn't make itâ€¦
+	scene "scenes/Producer/TransitionClose12.vcd"  //We almost didn't make it…
 	scene "scenes/Producer/TransitionClose13.vcd"  //I KNOW we can do better than that.
 	scene "scenes/Producer/TransitionClose15.vcd"  //What happened to us?
 }

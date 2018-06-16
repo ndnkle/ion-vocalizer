@@ -131,7 +131,7 @@ Response iMT_EllisStoriesMechanic
 	scene "scenes/Mechanic/EllisStoriesC01.vcd" then any iMT_EllisStoryInterrupt foo:0 -13.43  //I knew this guy who was trying to set the world record on staying on a Ferris wheel.  He had been up there like two days or somethin' and he wanted some beer, but they weren't givin' him any so he got this rope.  Now don't ask me where he got the rope from---
 	scene "scenes/Mechanic/EllisStoriesD01.vcd" then any iMT_EllisStoryInterrupt foo:0 -23.98  //Man, all this mud reminds me of my friend Keith.  Yeah, he was goin' to build a shack once, to live in and all, and I know most people here, they build houses and they become shacks, but Keith, he was about jumpin' right to the shack stage.  But he had no wood. So he got some mud and was makin' what we were all thinkin' was gonna be these adobe bricks, you know, like when them people out west made bricks and shit?  Well, he had mud and...
 	scene "scenes/Mechanic/EllisStoriesE01.vcd" then any iMT_EllisStoryInterrupt foo:0 -9.99  //I ain't never been in a sugar cane field before. I mean, I seen 'em and all, but no real reason to go into one, but now you go into a peach grove, you find all kinds of cool shit.  This one time I was in...
-	scene "scenes/Mechanic/EllisStoriesF01.vcd" then any iMT_EllisStoryInterrupt foo:0 -8.54  //Do you know what suck the heads means?  Cause I came down here with Keith once and he didn't know andâ€¦ I mean, it ain't nothin' bad.  It's about eatin'.
+	scene "scenes/Mechanic/EllisStoriesF01.vcd" then any iMT_EllisStoryInterrupt foo:0 -8.54  //Do you know what suck the heads means?  Cause I came down here with Keith once and he didn't know and… I mean, it ain't nothin' bad.  It's about eatin'.
 	scene "scenes/Mechanic/EllisStoriesG01.vcd" then any iMT_EllisStoryInterrupt foo:0 -14.33  //I ever tell you about the time Keith and I made fireworks? Now, I didn't know shit about chemistry, but Keith figured,  "Gasoline burns, doesn't it?" Third degree burns on ninety-five percent of his body. Man, people in the next city over were calling to complain about the smell of burning skin.
 	scene "scenes/Mechanic/EllisStoriesH01.vcd" then any iMT_EllisStoryInterrupt foo:0 -13.34  //I ever tell you about the time Keith tried to deep fry a turkey? Third degree burns over ninety percent of his body. His doctor called up, like, other doctors to look at him cause they'd never seen burns on top of existing burns--
 	scene "scenes/Mechanic/EllisStoriesI01.vcd" then any iMT_EllisStoryInterrupt foo:0 -16.69  //I ever tell you about the time my buddy Keith drove his car off a cliff, broke both his legs? It's not a funny ha-ha story so much as a make-you-think story.  For instance: windshields look pretty durable, right? Not the case, according to Keith. Son of a bitch flew right through that sucker--
@@ -156,7 +156,7 @@ Rule iMT_EllisStoriesMechanic
 
 Response iMT_DLC1_KeithStories02bMechanic
 {
-	scene "scenes/Mechanic/DLC1_KeithStories02b.vcd" then any iMT_EllisStoryInterrupt foo:0 -26.93  //Now, you might ask yourself how an honest attempt to recreate the majesty of colonial times turned into raccoon fights at five bucks a pop in Keith's backyard? And the answer to that particular question is Keith sharin' a place with his two brothers, and them bein' assholes who wouldn't let him do it anywhere but in the back yard. Add to that Keith didn't technically have anyË‡K you know, history to show, but did have this whole family of feral raccoons livin' in the chassis of an old car, and you'd begin to understand?
+	scene "scenes/Mechanic/DLC1_KeithStories02b.vcd" then any iMT_EllisStoryInterrupt foo:0 -26.93  //Now, you might ask yourself how an honest attempt to recreate the majesty of colonial times turned into raccoon fights at five bucks a pop in Keith's backyard? And the answer to that particular question is Keith sharin' a place with his two brothers, and them bein' assholes who wouldn't let him do it anywhere but in the back yard. Add to that Keith didn't technically have any¡K you know, history to show, but did have this whole family of feral raccoons livin' in the chassis of an old car, and you'd begin to understand?
 }
 Rule iMT_DLC1_KeithStories02bMechanic
 {
@@ -514,19 +514,18 @@ Rule iMT_PlayerWeddingWitchChasingMechanic
 	Response iMT_PlayerWeddingWitchChasingMechanic
 }
 
-Response iMT_PlayerBackUpQuietMechanic
+Response iMT_PlayerTeamKillMechanic
 {
-	scene "scenes/Mechanic/BackUpQuiet01.vcd"  //Back up.
-	scene "scenes/Mechanic/BackUpQuiet02.vcd"  //Move back.
-	scene "scenes/Mechanic/BackUpQuiet03.vcd"  //Get back.
-	scene "scenes/Mechanic/BackUpQuiet04.vcd"  //Get back.
-	scene "scenes/Mechanic/BackUpQuiet05.vcd"  //Hey, move back.
-	scene "scenes/Mechanic/BackUpQuiet06.vcd"  //Back up.
+	scene "scenes/Mechanic/TeamKillAccident01.vcd"  //Woah! I didn't do that! Man, that ain't right!
+	scene "scenes/Mechanic/TeamKillAccident02.vcd"  //That's just straight messed up, man.
+	scene "scenes/Mechanic/TeamKillAccident03.vcd"  //Jumpin' Jesus! What are you doin'!?!?!
+	scene "scenes/Mechanic/TeamKillAccident04.vcd"  //Yo we're on the same team aren't we?
+	scene "scenes/Mechanic/TeamKillAccident05.vcd"  //Jesus Christ, man!
 }
-Rule iMT_PlayerBackUpQuietMechanic
+Rule iMT_PlayerTeamKillMechanic
 {
-	criteria iMT_PlayerBackUpQuiet IsMechanic
-	Response iMT_PlayerBackUpQuietMechanic
+	criteria iMT_PlayerTeamKill IsMechanic
+	Response iMT_PlayerTeamKillMechanic
 }
 
 Response iMT_PlayerTransitionMechanic

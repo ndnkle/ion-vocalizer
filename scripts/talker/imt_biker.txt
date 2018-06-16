@@ -54,7 +54,7 @@ Rule iMT_WaterworksBiker
 
 Response iMT_RecycleBiker
 {
-    scene "scenes/Biker/DLC2Recycling01.vcd"  //Thanks for saving the planet, recyclers. Mission accomplished.
+	scene "scenes/Biker/DLC2Recycling01.vcd"  //Thanks for saving the planet, recyclers. Mission accomplished.
 	scene "scenes/Biker/DLC2Recycling02.vcd"  //Copper... aluminum... brass... those guys recycle everything!
 }
 Rule iMT_RecycleBiker
@@ -136,7 +136,7 @@ Rule iMT_CampingBiker
 Response iMT_NotManyLeftBiker
 {
 	scene "scenes/Biker/DLC1_C6M3_Loss01.vcd"  //There's not many of us left brother.
-    scene "scenes/Biker/DLC1_C6M3_Loss02.vcd"  //There's not many of us left brother.
+	scene "scenes/Biker/DLC1_C6M3_Loss02.vcd"  //There's not many of us left brother.
 }
 Rule iMT_NotManyLeftBiker
 {
@@ -475,16 +475,19 @@ Rule iMT_PlayerDeathScreamBiker
 	Response iMT_PlayerDeathScreamBiker
 }
 
-Response iMT_PlayerBackUpQuietBiker
+Response iMT_PlayerTeamKillBiker
 {
-	scene "scenes/Biker/BackUpQuiet01.vcd"  //Back up.
-	scene "scenes/Biker/BackUpQuiet02.vcd"  //Back up, back up.
-	scene "scenes/Biker/BackUpQuiet03.vcd"  //Back up.
+	scene "scenes/Biker/TeamKillAccident01.vcd"  //Be careful!
+	scene "scenes/Biker/TeamKillAccident02.vcd"  //That was not cool.
+	scene "scenes/Biker/TeamKillAccident03.vcd"  //That was not cool.
+	scene "scenes/Biker/TeamKillAccident04.vcd"  //Pull yer head outta yer ass.
+	scene "scenes/Biker/TeamKillAccident05.vcd"  //Careful!
+	scene "scenes/Biker/TeamKillAccident06.vcd"  //Hey! Careful!
 }
-Rule iMT_PlayerBackUpQuietBiker
+Rule iMT_PlayerTeamKillBiker
 {
-	criteria iMT_PlayerBackUpQuiet IsBiker
-	Response iMT_PlayerBackUpQuietBiker
+	criteria iMT_PlayerTeamKill IsBiker
+	Response iMT_PlayerTeamKillBiker
 }
 
 Response iMT_PlayerTransitionBiker

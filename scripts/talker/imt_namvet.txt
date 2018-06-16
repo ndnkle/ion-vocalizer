@@ -439,15 +439,17 @@ Rule iMT_PlayerDeathScreamNamVet
 	Response iMT_PlayerDeathScreamNamVet
 }
 
-Response iMT_PlayerBackUpQuietNamVet
+Response iMT_PlayerTeamKillNamVet
 {
-	scene "scenes/NamVet/BackUpQuiet01.vcd"  //Back up.
-	scene "scenes/NamVet/BackUpQuiet02.vcd"  //Back back back.
+	scene "scenes/NamVet/TeamKillAccident01.vcd"  //Be careful!
+	scene "scenes/NamVet/TeamKillAccident02.vcd"  //Have you lost your mind?
+	scene "scenes/NamVet/TeamKillAccident03.vcd"  //What did you just do?
+	scene "scenes/NamVet/TeamKillAccident04.vcd"  //Watch it, watch it!
 }
-Rule iMT_PlayerBackUpQuietNamVet
+Rule iMT_PlayerTeamKillNamVet
 {
-	criteria iMT_PlayerBackUpQuiet IsNamVet
-	Response iMT_PlayerBackUpQuietNamVet
+	criteria iMT_PlayerTeamKill IsNamVet
+	Response iMT_PlayerTeamKillNamVet
 }
 
 Response iMT_PlayerTransitionNamVet

@@ -436,17 +436,16 @@ Rule iMT_PlayerWeddingWitchChasingGambler
 	Response iMT_PlayerWeddingWitchChasingGambler
 }
 
-Response iMT_PlayerBackUpQuietGambler
+Response iMT_PlayerTeamKillGambler
 {
-	scene "scenes/Gambler/BackUpQuiet01.vcd"  //Back up.
-	scene "scenes/Gambler/BackUpQuiet02.vcd"  //Everyone back.
-	scene "scenes/Gambler/BackUpQuiet03.vcd"  //Let's get back.
-	scene "scenes/Gambler/BackUpQuiet04.vcd"  //Back up, back up.
+	scene "scenes/Gambler/TeamKillAccident01.vcd"  //Don't you think we should be killing the zombies instead?
+	scene "scenes/Gambler/TeamKillAccident02.vcd"  //What in the hell kind of strategy is that?
+	scene "scenes/Gambler/TeamKillAccident03.vcd"  //What?!!?  This is hard enough without you helping the freaks!
 }
-Rule iMT_PlayerBackUpQuietGambler
+Rule iMT_PlayerTeamKillGambler
 {
-	criteria iMT_PlayerBackUpQuiet IsGambler
-	Response iMT_PlayerBackUpQuietGambler
+	criteria iMT_PlayerTeamKill IsGambler
+	Response iMT_PlayerTeamKillGambler
 }
 
 Response iMT_PlayerTransitionGambler

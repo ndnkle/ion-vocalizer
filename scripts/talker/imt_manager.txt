@@ -127,7 +127,7 @@ Rule iMT_GordonFreemanManager
 
 Response iMT_WarmUpManager
 {
-    scene "scenes/Manager/DLC1_CommunityL4D102.vcd" then self iMT_WarmUp2 foo:0 0  //I bet it's gonna warm up real soon!
+	scene "scenes/Manager/DLC1_CommunityL4D102.vcd" then self iMT_WarmUp2 foo:0 0  //I bet it's gonna warm up real soon!
 }
 Rule iMT_WarmUpManager
 {
@@ -459,17 +459,17 @@ Rule iMT_PlayerDeathScreamManager
 	Response iMT_PlayerDeathScreamManager
 }
 
-Response iMT_PlayerBackUpQuietManager
+Response iMT_PlayerTeamKillManager
 {
-	scene "scenes/Manager/BackUpQuiet01.vcd"  //Back up.
-	scene "scenes/Manager/BackUpQuiet02.vcd"  //Back up, back up.
-	scene "scenes/Manager/BackUpQuiet03.vcd"  //Move back.
-	scene "scenes/Manager/BackUpQuiet04.vcd"  //Back up.
+	scene "scenes/Manager/TeamKillAccident01.vcd"  //Woah man, you gotta be careful.
+	scene "scenes/Manager/TeamKillAccident02.vcd"  //Woah man, you gotta be careful.
+	scene "scenes/Manager/TeamKillAccident03.vcd"  //What the hell man?
+	scene "scenes/Manager/TeamKillAccident04.vcd"  //Be careful, what are you doing?
 }
-Rule iMT_PlayerBackUpQuietManager
+Rule iMT_PlayerTeamKillManager
 {
-	criteria iMT_PlayerBackUpQuiet IsManager
-	Response iMT_PlayerBackUpQuietManager
+	criteria iMT_PlayerTeamKill IsManager
+	Response iMT_PlayerTeamKillManager
 }
 
 Response iMT_PlayerTransitionManager

@@ -442,19 +442,17 @@ Rule iMT_PlayerDeathScreamTeenGirl
 	Response iMT_PlayerDeathScreamTeenGirl
 }
 
-Response iMT_PlayerBackUpQuietTeenGirl
+Response iMT_PlayerTeamKillTeenGirl
 {
-	scene "scenes/TeenGirl/BackUpQuiet01.vcd"  //Back up
-	scene "scenes/TeenGirl/BackUpQuiet02.vcd"  //Move back
-	scene "scenes/TeenGirl/BackUpQuiet04.vcd"  //Back up
-	scene "scenes/TeenGirl/BackUpQuiet05.vcd"  //Move back
-	scene "scenes/TeenGirl/BackUpQuiet06.vcd"  //Get back
-	scene "scenes/TeenGirl/BackUpQuiet09.vcd"  //Get back
+	scene "scenes/TeenGirl/TeamKillAccident03.vcd"  //You REALLY have to be more careful!
+	scene "scenes/TeenGirl/TeamKillAccident05.vcd"  //Be careful!
+	scene "scenes/TeenGirl/TeamKillAccident06.vcd"  //Stop Stop!
+	scene "scenes/TeenGirl/TeamKillAccident08.vcd"  //Woah.  Careful!
 }
-Rule iMT_PlayerBackUpQuietTeenGirl
+Rule iMT_PlayerTeamKillTeenGirl
 {
-	criteria iMT_PlayerBackUpQuiet IsTeenGirl
-	Response iMT_PlayerBackUpQuietTeenGirl
+	criteria iMT_PlayerTeamKill IsTeenGirl
+	Response iMT_PlayerTeamKillTeenGirl
 }
 
 Response iMT_PlayerTransitionTeenGirl

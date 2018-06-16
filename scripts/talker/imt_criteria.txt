@@ -14,7 +14,6 @@ Criterion	"iMT_PlayerAlsoWarnCharger"	"Concept"	"iMT_PlayerAlsoWarnCharger"	requ
 Criterion	"iMT_PlayerAlsoWarnJockey"	"Concept"	"iMT_PlayerAlsoWarnJockey"	required
 Criterion	"iMT_PlayerAlsoWarnSpitter"	"Concept"	"iMT_PlayerAlsoWarnSpitter"	required
 Criterion	"iMT_PlayerAnswerReady"		"Concept"	"iMT_PlayerAnswerReady"		required
-Criterion	"iMT_PlayerBackUpQuiet"		"Concept"	"iMT_PlayerBackUpQuiet"		required
 Criterion	"iMT_PlayerBreathing"		"Concept"	"iMT_PlayerBreathing"		required
 Criterion	"iMT_PlayerCoughing"		"Concept"	"iMT_PlayerCoughing"		required
 Criterion	"iMT_PlayerDeathScream"		"Concept"	"iMT_PlayerDeathScream"		required
@@ -23,6 +22,7 @@ Criterion	"iMT_PlayerGoingToDie"		"Concept"	"iMT_PlayerGoingToDie"		required
 Criterion	"iMT_PlayerIncapacitatedHurt"	"Concept"	"iMT_PlayerIncapacitatedHurt"	required
 Criterion	"iMT_PlayerNiceShot"		"Concept"	"iMT_PlayerNiceShot"		required
 Criterion	"iMT_PlayerSuggestHealth"	"Concept"	"iMT_PlayerSuggestHealth"	required
+Criterion	"iMT_PlayerTeamKill"		"Concept"	"iMT_PlayerTeamKill"		required
 Criterion	"iMT_PlayerTransition"		"Concept"	"iMT_PlayerTransition"		required
 Criterion	"iMT_PlayerWitchChasing"	"Concept"	"iMT_PlayerWitchChasing"	required
 Criterion	"iMT_Recycle"			"Concept"	"iMT_Recycle"			required
@@ -74,7 +74,7 @@ Criterion	"iMT_TeamFortress2"		"Concept"	"iMT_TeamFortress2"		required
 Criterion	"iMT_Aliens"			"Concept"	"iMT_Aliens"			required
 Criterion	"iMT_Charming"			"Concept"	"iMT_Charming"			required
 Criterion	"iMT_GunStore"			"Concept"	"iMT_GunStore"			required
-Criterion	"iMT_Kitchen"			"Concept"	"iMT_Kitchen"			required
+Criterion	"iMT_Heart"			"Concept"	"iMT_Heart"			required
 Criterion	"iMT_Monster"			"Concept"	"iMT_Monster"			required
 Criterion	"iMT_NoNoNo"			"Concept"	"iMT_NoNoNo"			required
 Criterion	"iMT_Popcorn"			"Concept"	"iMT_Popcorn"			required

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 9.4
+// ion's Vocalizer 9.5
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -439,8 +439,8 @@
 		}
 		"SouthWest"
 		{
-			"command"	"vocalize iMT_PlayerBackUpQuiet"
-			"text"		"Back (quiet)"
+			"command"	"vocalize iMT_PlayerTeamKill"
+			"text"		"Team killer"
 		}
 		"West"
 		{
@@ -2449,8 +2449,8 @@
 		}
 		"NorthWest"
 		{
-			"command"	"vocalize iMT_Kitchen"
-			"text"		"Kitchen"
+			"command"	"vocalize iMT_Heart"
+			"text"		"Heart"
 		}
 	}
 
