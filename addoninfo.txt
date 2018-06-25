@@ -1,8 +1,8 @@
 "AddonInfo"
 {
 	AddonTitle		"ion's Vocalizer"
-	AddonVersion		"9.5"
-	AddonDescription	"Advanced vocalizer with over 650 vocalization lines featuring 9 radial menus with shared lines, 8 radial menus with character-specific lines and a radial menu for character selection/switching and going idle."
+	AddonVersion		"10.0"
+	AddonDescription	"Advanced vocalizer with over 660 vocalization lines featuring 10 radial menus with shared lines, 8 radial menus with character-specific lines and a radial menu for character selection/switching and going idle."
 	AddonAuthor		"ion"
 	AddonURL0		"https://steamcommunity.com/sharedfiles/filedetails/?id=698857882"
 

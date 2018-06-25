@@ -582,3 +582,97 @@ Rule iMT_PlayerIncapacitatedHurtMechanic
 	criteria iMT_PlayerIncapacitatedHurt IsMechanic
 	Response iMT_PlayerIncapacitatedHurtMechanic
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC Triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_VirgilMechanic
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilMechanic
+{
+	criteria iMT_Virgil IsMechanic
+	Response iMT_VirgilMechanic
+}
+
+Response iMT_WhitakerMechanic
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerMechanic
+{
+	criteria iMT_Whitaker IsMechanic
+	Response iMT_WhitakerMechanic
+}
+
+Response iMT_MoustachioMechanic
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioMechanic
+{
+	criteria iMT_Moustachio IsMechanic
+	Response iMT_MoustachioMechanic
+}
+
+Response iMT_ChurchGuyMechanic
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyMechanic
+{
+	criteria iMT_ChurchGuy IsMechanic
+	Response iMT_ChurchGuyMechanic
+}
+
+Response iMT_BoatmanMechanic
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanMechanic
+{
+	criteria iMT_Boatman IsMechanic
+	Response iMT_BoatmanMechanic
+}
+
+Response iMT_ChopperPilotMechanic
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotMechanic
+{
+	criteria iMT_ChopperPilot IsMechanic
+	Response iMT_ChopperPilotMechanic
+}
+
+Response iMT_PlanePilotMechanic
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotMechanic
+{
+	criteria iMT_PlanePilot IsMechanic
+	Response iMT_PlanePilotMechanic
+}
+
+Response iMT_Rescue9Mechanic
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9Mechanic
+{
+	criteria iMT_Rescue9 IsMechanic
+	Response iMT_Rescue9Mechanic
+}
+
+Response iMT_SoldiersMechanic
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersMechanic
+{
+	criteria iMT_Soldiers IsMechanic
+	Response iMT_SoldiersMechanic
+}

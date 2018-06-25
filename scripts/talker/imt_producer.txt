@@ -471,3 +471,97 @@ Rule iMT_PlayerIncapacitatedHurtProducer
 	criteria iMT_PlayerIncapacitatedHurt IsProducer
 	Response iMT_PlayerIncapacitatedHurtProducer
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC Triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_VirgilProducer
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilProducer
+{
+	criteria iMT_Virgil IsProducer
+	Response iMT_VirgilProducer
+}
+
+Response iMT_WhitakerProducer
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerProducer
+{
+	criteria iMT_Whitaker IsProducer
+	Response iMT_WhitakerProducer
+}
+
+Response iMT_MoustachioProducer
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioProducer
+{
+	criteria iMT_Moustachio IsProducer
+	Response iMT_MoustachioProducer
+}
+
+Response iMT_ChurchGuyProducer
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyProducer
+{
+	criteria iMT_ChurchGuy IsProducer
+	Response iMT_ChurchGuyProducer
+}
+
+Response iMT_BoatmanProducer
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanProducer
+{
+	criteria iMT_Boatman IsProducer
+	Response iMT_BoatmanProducer
+}
+
+Response iMT_ChopperPilotProducer
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotProducer
+{
+	criteria iMT_ChopperPilot IsProducer
+	Response iMT_ChopperPilotProducer
+}
+
+Response iMT_PlanePilotProducer
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotProducer
+{
+	criteria iMT_PlanePilot IsProducer
+	Response iMT_PlanePilotProducer
+}
+
+Response iMT_Rescue9Producer
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9Producer
+{
+	criteria iMT_Rescue9 IsProducer
+	Response iMT_Rescue9Producer
+}
+
+Response iMT_SoldiersProducer
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersProducer
+{
+	criteria iMT_Soldiers IsProducer
+	Response iMT_SoldiersProducer
+}

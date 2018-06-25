@@ -529,3 +529,97 @@ Rule iMT_PlayerIncapacitatedHurtCoach
 	criteria iMT_PlayerIncapacitatedHurt IsCoach
 	Response iMT_PlayerIncapacitatedHurtCoach
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC Triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_VirgilCoach
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilCoach
+{
+	criteria iMT_Virgil IsCoach
+	Response iMT_VirgilCoach
+}
+
+Response iMT_WhitakerCoach
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerCoach
+{
+	criteria iMT_Whitaker IsCoach
+	Response iMT_WhitakerCoach
+}
+
+Response iMT_MoustachioCoach
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioCoach
+{
+	criteria iMT_Moustachio IsCoach
+	Response iMT_MoustachioCoach
+}
+
+Response iMT_ChurchGuyCoach
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyCoach
+{
+	criteria iMT_ChurchGuy IsCoach
+	Response iMT_ChurchGuyCoach
+}
+
+Response iMT_BoatmanCoach
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanCoach
+{
+	criteria iMT_Boatman IsCoach
+	Response iMT_BoatmanCoach
+}
+
+Response iMT_ChopperPilotCoach
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotCoach
+{
+	criteria iMT_ChopperPilot IsCoach
+	Response iMT_ChopperPilotCoach
+}
+
+Response iMT_PlanePilotCoach
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotCoach
+{
+	criteria iMT_PlanePilot IsCoach
+	Response iMT_PlanePilotCoach
+}
+
+Response iMT_Rescue9Coach
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9Coach
+{
+	criteria iMT_Rescue9 IsCoach
+	Response iMT_Rescue9Coach
+}
+
+Response iMT_SoldiersCoach
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersCoach
+{
+	criteria iMT_Soldiers IsCoach
+	Response iMT_SoldiersCoach
+}

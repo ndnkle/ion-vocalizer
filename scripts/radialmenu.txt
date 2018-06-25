@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 9.5
+// ion's Vocalizer 10.0
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -451,6 +451,56 @@
 		{
 			"command"	"vocalize iMT_PlayerDeathScream"
 			"text"		"Fall scream"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"NPC,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Virgil"
+			"text"		"Virgil"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Moustachio"
+			"text"		"Moustachio"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_ChopperPilot"
+			"text"		"Chopper pilot"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Whitaker"
+			"text"		"Whitaker"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_PlanePilot"
+			"text"		"Plane pilot"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_Boatman"
+			"text"		"John Slater"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_Rescue9"
+			"text"		"Military"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Soldiers"
+			"text"		"Soldiers"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_ChurchGuy"
+			"text"		"Church guy"
 		}
 	}
 

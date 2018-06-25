@@ -495,3 +495,97 @@ Rule iMT_PlayerIncapacitatedHurtGambler
 	criteria iMT_PlayerIncapacitatedHurt IsGambler
 	Response iMT_PlayerIncapacitatedHurtGambler
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC Triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_VirgilGambler
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilGambler
+{
+	criteria iMT_Virgil IsGambler
+	Response iMT_VirgilGambler
+}
+
+Response iMT_WhitakerGambler
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerGambler
+{
+	criteria iMT_Whitaker IsGambler
+	Response iMT_WhitakerGambler
+}
+
+Response iMT_MoustachioGambler
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioGambler
+{
+	criteria iMT_Moustachio IsGambler
+	Response iMT_MoustachioGambler
+}
+
+Response iMT_ChurchGuyGambler
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyGambler
+{
+	criteria iMT_ChurchGuy IsGambler
+	Response iMT_ChurchGuyGambler
+}
+
+Response iMT_BoatmanGambler
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanGambler
+{
+	criteria iMT_Boatman IsGambler
+	Response iMT_BoatmanGambler
+}
+
+Response iMT_ChopperPilotGambler
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotGambler
+{
+	criteria iMT_ChopperPilot IsGambler
+	Response iMT_ChopperPilotGambler
+}
+
+Response iMT_PlanePilotGambler
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotGambler
+{
+	criteria iMT_PlanePilot IsGambler
+	Response iMT_PlanePilotGambler
+}
+
+Response iMT_Rescue9Gambler
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9Gambler
+{
+	criteria iMT_Rescue9 IsGambler
+	Response iMT_Rescue9Gambler
+}
+
+Response iMT_SoldiersGambler
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersGambler
+{
+	criteria iMT_Soldiers IsGambler
+	Response iMT_SoldiersGambler
+}

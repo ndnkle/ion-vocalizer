@@ -1,0 +1,308 @@
+//--------------------------------------------------------------------------------------------------------------
+// NPCs Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_Virgil
+{
+	speak "Virgil_C3End01" noscene  //Well hello there. I ain't heard another voice out here in three days.
+	speak "Virgil_C3End02" noscene  //Woo, hello. It's been real real quiet now since my woman got bit.
+	speak "Virgil_C3End03" noscene  //Woo, hello there. Well, I ain't heard nothin' from nobody in three days. What can I do for ya?
+	speak "Virgil_C3End04" noscene  //Who dat there? How is y'all are? Where you at?
+	speak "Virgil_C3End05" noscene  //Woo, hello there. How is y'all are? I ain't heard a nobody out here in a long time. What can I do for ya?
+	speak "Virgil_C3End06" noscene  //Hello there. It's been real quiet out here on the water, I ain't heard nobody in three days. Tell me what can I do for ya, now?
+	speak "Virgil_C3End07" noscene  //Well who dat there? Hey now, how is y'all are? Where you at?
+	speak "Virgil_C3End08" noscene  //Woo, well, how is y'all are? . It's been real quiet out here on the water since my wife got bit. Tell me, what can I do for ya now?
+	speak "Virgil_C3End09" noscene  //Hey now, where're you at?
+	speak "Virgil_C3End10" noscene  //Where is y'are?
+	speak "Virgil_C3End11" noscene  //Tell me now, where is ya?
+	speak "Virgil_C3End12" noscene  //Where is ya?
+	speak "Virgil_C3End13" noscene  //Now, where're you at?
+	speak "Virgil_C3End14" noscene  //What?
+	speak "Virgil_C3End15" noscene  //Say again now, what?
+	speak "Virgil_C3End16" noscene  //Now, what, now?
+	speak "Virgil_C3End17" noscene  //I can't quite hear ya now. Say what, now?
+	speak "Virgil_C3End18" noscene  //Now how many of y'all is there?
+	speak "Virgil_C3End19" noscene  //How many of ya is y'all are?
+	speak "Virgil_C3End20" noscene  //How many is there of y'all?
+	speak "Virgil_C3End21" noscene  //How many of y'all is ya?
+	speak "Virgil_C3End22" noscene  //Now tell me now, how many of ya is y'all?
+	speak "Virgil_C3End23" noscene  //How many of y'all are ya?
+	speak "Virgil_C3End24" noscene  //Alright now, stay right where you is. I'll come for ya.
+	speak "Virgil_C3End25" noscene  //Alright now, stay right where you is. I'll be right there for ya.
+	speak "Virgil_C3End26" noscene  //Alright now, stay right where you is at. I'm be comin' for ya.
+	speak "Virgil_C3End27" noscene  //Alright now, stay right where's you at. I'm comin' for ya.
+	speak "Virgil_C3End28" noscene  //Alright now, stay right where y'all are. I'll be right at ya.
+	speak "Virgil_C3End29" noscene  //Okay now, stay right where you are. I'm comin' for ya now.
+	speak "Virgil_C3End30" noscene  //Alright, real good. I'm comin' for ya now. Stay right where y'all are.
+	speak "Virgil_C3End31" noscene  //Woo, bonjour! It's real, real nice to hear another somebody.
+	speak "Virgil_C3End32" noscene  //Well, bonjour! It's real, real good to hear another somebody. It's real quiet out here.
+	speak "Virgil_C3End33" noscene  //Bonjour! Oh, it's real, real good to hear from somebody. It's been quiet out here, now.
+	speak "Virgil_C3End34" noscene  //Alright now, where y'at?
+	speak "Virgil_C3End35" noscene  //Where y'at?
+	speak "Virgil_C3End36" noscene  //Where is ya?
+	speak "Virgil_C3End37" noscene  //Where is y'all?
+	speak "Virgil_C3End38" noscene  //Where y'all at now?
+	speak "Virgil_C3End39" noscene  //Alright now tell me, where y'all are?
+	speak "Virgil_C3End40" noscene  //Where y'all at?
+}
+Rule iMT_Virgil
+{
+	criteria iMT_Virgil
+	Response iMT_Virgil
+}
+
+Response iMT_Whitaker
+{
+	speak "Whitaker_ComeUpstairs01" noscene  //Well, hello there. Why don't you grab yourselves some of my guns and come on upstairs. I got something you can help me with.
+	speak "Whitaker_ComeUpstairs02" noscene  //Hello there. My name's Whitaker. I own this establishment. Take anything you need and come on upstairs when you're done.
+	speak "Whitaker_ComeUpstairs03" noscene  //There ain't much time. Grab yourselves a gun and come upstairs, I'll explain on the way.
+	speak "Whitaker_ComeUpstairsLongerA01" noscene  //Well, now. This might just work out after all.
+	speak "Whitaker_ComeUpstairsLongerA02" noscene  //Help yourself to the weapons. Take anything you need.
+	speak "Whitaker_ComeUpstairsLongerA03" noscene  //I'm in a bit of a quandary, you see, and I suspect you're just the people to help me out of it.
+	speak "Whitaker_ComeUpstairsLongerA04" noscene  //Come on upstairs when you're done.
+	speak "Whitaker_ComeUpstairsLongerB01" noscene  //Well, now. This might just work out after all.
+	speak "Whitaker_ComeUpstairsLongerB02" noscene  //Help yourself to MY weapons.
+	speak "Whitaker_ComeUpstairsLongerB03" noscene  //Take anything you need. I'm in a bit of a quandary, you see, and...
+	speak "Whitaker_ComeUpstairsLongerB04" noscene  //GET YOUR HANDS OFF MY STORE YOU SON OF A BITCH.
+	speak "Whitaker_ComeUpstairsLongerB05" noscene  //and I suspect you're just the people to help me out of it.
+	speak "Whitaker_ComeUpstairsLongerB06" noscene  //Come on upstairs when you're done.
+	speak "Whitaker_ComeUpstairsLongerC01" noscene  //Hello there. Now, normally when four bloodstained looters break into my store, I would shoot them where they stand.
+	speak "Whitaker_ComeUpstairsLongerC02" noscene  //But you happen to have caught me at an opportune time.
+	speak "Whitaker_ComeUpstairsLongerC03" noscene  //Take what weapons you need and come on upstairs. I reckon we can come to an accordance.
+	speak "Whitaker_ComeUpstairsLongerD01" noscene  //Hello there.
+	speak "Whitaker_ComeUpstairsLongerD02" noscene  //Now, normally when four bloodstained looters break into my store, I would shoot them where they stand.
+	speak "Whitaker_ComeUpstairsLongerD03" noscene  //But you happen to have caught me at...
+	speak "Whitaker_ComeUpstairsLongerD04" noscene  //get your hands off my store.
+	speak "Whitaker_ComeUpstairsLongerD05" noscene  //caught me at an opportune time.
+	speak "Whitaker_ComeUpstairsLongerD06" noscene  //Take what weapons you need and come on upstairs. I reckon...
+	speak "Whitaker_ComeUpstairsLongerD07" noscene  //Climb that, you green-skinned sonofabitch.
+	speak "Whitaker_ComeUpstairsLongerD08" noscene  //reckon we can come to an accordance.
+	speak "Whitaker_MissionCompleted11" noscene  //Much obliged. Now go screw yourselves, I ain't helpin'. [laughs] I just wanted to see the looks on your faces. Here you go.
+	speak "Whitaker_WayBlockedLongerD01" noscene  //Cola and nuts is a weakness of mine-though I do not love it so much that I'd be fool enough to die in the attempt to procure it.
+}
+Rule iMT_Whitaker
+{
+	criteria iMT_Whitaker
+	Response iMT_Whitaker
+}
+
+Response iMT_Moustachio
+{
+	speak "Moustachio_StrengthAttract01" noscene  //Yes! YES!
+	speak "Moustachio_StrengthAttract02" noscene  //[Laughter]
+	speak "Moustachio_StrengthAttract03" noscene  //Moustachio!
+	speak "Moustachio_StrengthAttract04" noscene  //Moustachio!
+	speak "Moustachio_StrengthAttract05" noscene  //[Laughter]
+	speak "Moustachio_StrengthAttract06" noscene  //[Laughter]
+	speak "Moustachio_StrengthAttract07" noscene  //Moustachio!
+	speak "Moustachio_StrengthAttract08" noscene  //Grrrrr!
+	speak "Moustachio_StrengthAttract09" noscene  //[Laughter]
+	speak "Moustachio_StrengthAttract10" noscene  //Test Your Strength! Grrrr!
+	speak "Moustachio_StrengthBreakMachine" noscene  //Moustachio!
+	speak "Moustachio_StrengthLvl1_LittlePeanut" noscene  //L'il peanut, SO WEAK!
+	speak "Moustachio_StrengthLvl2_BabyPeanut" noscene  //Baby peanut. WEAK!
+	speak "Moustachio_StrengthLvl3_OldPeanut" noscene  //Old peanut! HA HA HA HA!
+	speak "Moustachio_StrengthLvl4_NotBad" noscene  //Not bad, ha ha! Moustachio!
+	speak "Moustachio_StrengthLvl5_SoStrong" noscene  //So Strong! Grrrr!
+}
+Rule iMT_Moustachio
+{
+	criteria iMT_Moustachio
+	Response iMT_Moustachio
+}
+
+Response iMT_ChurchGuy
+{
+	speak "npc.churchguy_RadioButton101" noscene  //No one gets in here until I know you're immune!
+	speak "npc.churchguy_RadioButton105" noscene  //I'm gonna ring this bell. I'm going to ring this bell! And they'll come! And they'll finish the job.
+	speak "npc.churchguy_RadioButton106" noscene  //No! My safehouse! I've got the bell! You stay the hell out!
+	speak "npc.churchguy_RadioButton107" noscene  //My safehouse! Come here! No! Stay out! Slide your guns under the door! No! Go away! Better safe than sorry!
+	speak "npc.churchguy_RadioButton1Extended03" noscene  //Nonono! You said that last time! You said that last time. I trusted you last time!
+	speak "npc.churchguy_RadioButton1Extended10" noscene  //Only when you can prove you're immune. And I know just how to do it.
+	speak "npc.churchguy_RadioButton1Extended11" noscene  //Only when I know you're human. Get ready for the test.
+	speak "npc.churchguy_RadioButton1Extended12" noscene  //I'm the one who decides who gets through this door.
+	speak "npc.churchguy_RadioButton1Extended13" noscene  //I - I opened the door before, and I got bit for my trouble. Better safe than sorry. Better safe than sorry!
+	speak "npc.churchguy_RadioButton1Extended16" noscene  //Do you think I care how old you are?
+	speak "npc.churchguy_RadioButton1Extended19" noscene  //You think you're special with your leather jackets and your fancy blood?
+	speak "npc.churchguy_RadioButton1Extended20" noscene  //Nobody rides for free! Ding dong!
+	speak "npc.churchguy_RadioButton1Extended21" noscene  //I am not a mental moron!
+	speak "npc.churchguy_RadioButton1Extended25" noscene  //You don't sound like cops!
+	speak "npc.churchguy_RadioButton1Extended28" noscene  //Your word means shit to me!
+	speak "npc.churchguy_RadioButton1Extended34" noscene  //I'm not letting you in until I'm sure you're immune.
+	speak "npc.churchguy_RadioButton1Extended35" noscene  //Not infected? Not infected? Prove it!
+	speak "npc.churchguy_RadioButton1Extended40" noscene  //Ding dong! Ding dong!
+	speak "npc.churchguy_RadioButton1Extended43" noscene  //Dinner's served! Come and get it!
+	speak "npc.churchguy_RadioInitialBroadCast01" noscene  //I trusted you. You said you were immune. You said you were immune.
+	speak "npc.churchguy_RadioInitialBroadCast02" noscene  //I trusted you. You said you were immune. You said you were immune. Better safe than sorry.
+	speak "npc.churchguy_RadioInitialBroadCast03" noscene  //Better safe than sorry. I can't believe he bit me. Never should have let him in.
+	speak "npc.churchguy_RadioInitialBroadCast04" noscene  //Won't fool me twice. I can't believe he bit me, I can't believe he bit me.
+	speak "npc.churchguy_RadioInitialBroadCast05" noscene  //Better safe than sorry. No matter how human they look. Won't be fooled twice.
+	speak "npc.churchguy_RadioInitialBroadCast06" noscene  //It's been an hour. Been an hour. Must be immune. That's right, must be immune. No. I have to be immune.
+	speak "npc.churchguy_RadioInitialBroadCast07" noscene  //Better safe than sorry. Better safe than sorry. Better safe than sorry. Better safe than sorry.
+	speak "npc.churchguy_RadioInitialBroadCast24" noscene  //Better safe than sorry. Better safe than sorry.
+}
+Rule iMT_ChurchGuy
+{
+	criteria iMT_ChurchGuy
+	Response iMT_ChurchGuy
+}
+
+Response iMT_Boatman
+{
+	speak "npc.boatman_RadioButton108" noscene  //They're gonna swarm when we come in. Stock up and radio back when you're ready.
+	speak "npc.boatman_RadioButton110" noscene  //We're heading to the military outpost upriver. We can come get you in ten minutes. Arm yourselves for the trip and tell me where to head out.
+	speak "npc.boatman_RadioButton124" noscene  //Police, radio us back when you are ready for pickup!
+	speak "npc.boatman_RadioButton212" noscene  //Allright, we're on our way. Make sure you clear the area. I don't want our first act of kindness to be our last.
+	speak "npc.boatman_RadioInitialBroadCast02" noscene  //If there is anyone out there. This is John and Amanda Slater. We are a small fishing vessel anchored off Riverside.
+	speak "npc.boatman_RadioInitialBroadCast03" noscene  //If there are any survivors, please respond.
+	speak "npc.boatman_RadioInitialBroadCast05" noscene  //If you can hear me, please respond!
+	speak "npc.boatman_RadioInitialBroadCast07" noscene  //Is there anybody out there?
+	speak "npc.boatman_RadioInitialBroadCast08" noscene  //John and Amanda Slater! We are a fishing vessel anchored off Riverside! Come in please!
+	speak "npc.boatman_RadioInitialBroadCast09" noscene  //Come in, refugees! If you can hear this.
+	speak "npc.boatman_RadioInitialBroadCast11" noscene  //Anybody? Come on, please respond.
+	speak "npc.boatman_RadioInitialBroadCast12" noscene  //We have provisions and a route to safety. We just need to get there alive. Anyone with firepower, respond.
+	speak "npc.boatman_RadioInitialBroadCast13" noscene  //We will ferry anyone with firearms and ammo. Please respond.
+	speak "npc.boatman_RadioInitialBroadCast14" noscene  //We are anchored off Riverside. Anyone on this frequency with weapons and ammo, please respond.
+	speak "npc.boatman_RadioInitialBroadCast15" noscene  //Attention anyone with ammo and firearms. If you can hear me, please respond.
+	speak "npc.boatman_RadioInitialBroadCast16" noscene  //Anyone with some firepower on this frequency, pick up.
+	speak "npc.boatman_RadioInitialBroadCast17" noscene  //Come in, anyone armed. Please pick up.
+	speak "npc.boatman_RadioInitialBroadCast18" noscene  //If you can hear me, pick up!
+	speak "npc.boatman_RadioInitialBroadCast19" noscene  //If you're out there and you're armed, pick up!
+	speak "npc.boatman_RadioNag01" noscene  //Tell us when you are ready to be picked up!
+	speak "npc.boatman_RadioNag02" noscene  //Let us know when you're ready to be picked up!
+	speak "npc.boatman_RadioNag03" noscene  //Tell us when you are ready to be picked up!
+	speak "npc.boatman_RadioNag04" noscene  //Let us know when you're ready to be picked up!
+	speak "npc.boatman_RadioNag05" noscene  //Use the radio to let us know when you're ready for pickup!
+	speak "npc.boatman_RadioNag07" noscene  //Police: Let us know when you're ready to be picked up.
+}
+Rule iMT_Boatman
+{
+	criteria iMT_Boatman
+	Response iMT_Boatman
+}
+
+Response iMT_ChopperPilot
+{
+	speak "npc.ChopperPilot_hospital_intro_heli_02" noscene  //The military, or what's left of it, has safe zone up north.
+	speak "npc.ChopperPilot_hospital_intro_heli_08" noscene  //Sorry, I can't risk another street landing. I think I may be the last pilot in the city.
+	speak "npc.ChopperPilot_hospital_intro_heli_17" noscene  //To anyone who can hear this, proceed to Mercy Hospital for Evacuation. Repeat, proceed to Mercy Hospital for Evacuation.
+	speak "npc.ChopperPilot_hospital_finale_intransit_01" noscene  //Mercy Hospital, going to be running a bit late, just had a... an incident. News Chopper 5 out.
+	speak "npc.ChopperPilot_hospital_finale_intransit_02" noscene  //News Chopper 5 to Mercy Hospital, ETA 10 minutes. News Chopper 5 out.
+	speak "npc.ChopperPilot_hospital_finale_intransit_03" noscene  //News Chopper 5 to Mercy Hospital, ETA 7 minutes. News Chopper 5 out.
+	speak "npc.ChopperPilot_hospital_finale_intransit_04" noscene  //News Chopper 5 to Mercy Hospital, looks like you are going to be my final run.
+	speak "npc.ChopperPilot_hospital_finale_intransit_05" noscene  //News Chopper 5 to Mercy Hospital, ETA 5 minutes. 5 Minutes.
+	speak "npc.ChopperPilot_hospital_finale_intransit_06" noscene  //I have a visual, Mercy Hospital, looks you have your hands full.
+	speak "npc.ChopperPilot_hospital_finale_intransit_07" noscene  //Mercy Hospital, you need to kill that Tank before I can land!
+	speak "npc.ChopperPilot_hospital_finale_intransit_08" noscene  //Mercy Hospital, you need to kill any Tanks before I can pick you up.
+	speak "npc.ChopperPilot_hospital_finale_intransit_09" noscene  //No way I can land, I'm going to have to come in hot next to the pad.
+	speak "npc.ChopperPilot_hospital_finale_intransit_10" noscene  //Mercy Hospital, get to the landing pad! Repeat. Get to the landing pad!
+	speak "npc.ChopperPilot_hospital_finale_onmyway_01" noscene  //Okay I am on my way. ETA 15 minutes. Just hang in there. News Chopper 5 out.
+	speak "npc.ChopperPilot_hospital_finale_onmyway_02" noscene  //I'm on my way. ETA 15 minutes. News Chopper 5 out.
+	speak "npc.ChopperPilot_hospital_finale_onmyway_03" noscene  //Mercy Hospital, that was quick, I hope you prepared. I'm on my way. ETA 15 minutes. News Chopper 5 out.
+	speak "npc.ChopperPilot_hospital_finale_pickup_01" noscene  //Mercy Hospital are you there?
+	speak "npc.ChopperPilot_hospital_finale_pickup_02" noscene  //Mercy Hospital are you there?
+	speak "npc.ChopperPilot_hospital_finale_pickup_03" noscene  //Pickup Mercy Hospital, Pickup.
+	speak "npc.ChopperPilot_hospital_finale_pickup_04" noscene  //News Chopper 5 to Mercy Hospital.
+	speak "npc.ChopperPilot_hospital_finale_pickup_05" noscene  //Mercy Hospital respond if you are there.
+	speak "npc.ChopperPilot_hospital_finale_pickup_06" noscene  //Mercy Hospital pick up the radio if you are there.
+	speak "npc.ChopperPilot_hospital_finale_pickup_07" noscene  //Mercy Hospital use the radio if you are there.
+}
+Rule iMT_ChopperPilot
+{
+	criteria iMT_ChopperPilot
+	Response iMT_ChopperPilot
+}
+
+Response iMT_PlanePilot
+{
+	speak "npc.planepilot_RadioArrived01" noscene  //Alright, we're fueled up! Get in!
+	speak "npc.planepilot_RadioArrived10" noscene  //What're you waitin' for, your row to be called? Get in!
+	speak "npc.planepilot_RadioButton104" noscene  //The pump's gonna make a real racket. So you make sure you're ready for a fight before you start 'er up.
+	speak "npc.planepilot_RadioButton105" noscene  //Alright! Gas me up, and we can fly out of here!
+	speak "npc.planepilot_RadioButton203" noscene  //That did it! I can hear the truck pumpin'!
+	speak "npc.planepilot_RadioButton205" noscene  //Hold 'em off for me while I fuel up!
+	speak "npc.planepilot_RadioCombatColor08" noscene  //You're doing great!
+	speak "npc.planepilot_RadioCombatColor28" noscene  //More comin'. Look alive.
+	speak "npc.planepilot_RadioCombatColor29" noscene  //Look out! More on the way!
+	speak "npc.planepilot_RadioInitialBroadCast06" noscene  //Hey! You there! Y'all wanna get me fueled up?
+	speak "npc.planepilot_RadioInitialBroadCast07" noscene  //Hey there! Don't suppose y'all wanna gas me up?
+	speak "npc.planepilot_RadioInitialBroadCast09" noscene  //Hey! You there! Gas me up, I'll getcha outta here!
+	speak "npc.planepilot_RadioInitialBroadCast10" noscene  //I get fuelled up, I can git goin here! Come on, you folks with me?
+	speak "npc.planepilot_RadioInitialBroadCast18" noscene  //You! Yes you! Come talk to me on the radio!
+	speak "npc.planepilot_RadioInTransit01" noscene  //Gas tank's a quarter full! Sorry, guys, still a ways yet!
+	speak "npc.planepilot_RadioInTransit02" noscene  //Fuel gauge at halfway, folks! Hang in there!
+	speak "npc.planepilot_RadioInTransit03" noscene  //Fuel gauge at three-quarters, people! Almost there!
+	speak "npc.planepilot_RadioInTransit04" noscene  //Fuel gauge near the top! We are just about good to go!
+	speak "npc.planepilot_RadioInTransit05" noscene  //Gas tank's almost full! We are just about good to go!
+	speak "npc.planepilot_RadioNag04" noscene  //Hit the fuel button and let's get outta here!
+}
+Rule iMT_PlanePilot
+{
+	criteria iMT_PlanePilot
+	Response iMT_PlanePilot
+}
+
+Response iMT_Rescue9
+{
+	speak "npc.soldier_RadioButton101" noscene  //Holy shit. Captain, someone actually responded!
+	speak "npc.soldier_RadioButton105" noscene  //We'll come get you! Convoy's gonna stir up the infected, though. Prepare yourselves and advise when ready.
+	speak "npc.soldier_RadioButton108" noscene  //I do not believe it. Captain, somebody's survived out there!
+	speak "npc.soldier_RadioButton109" noscene  //Jesus Christ. Captain, we got somebody alive out there!
+	speak "npc.soldier_RadioButton110" noscene  //Jesus Christ. Captain, we got survivors. They say they're cops!
+	speak "npc.soldier_RadioButton113" noscene  //We read you loud and clear, survivors! We are prepping an extraction team. Prepare yourselves and radio back when you're ready.
+	speak "npc.soldier_RadioButton201" noscene  //Read you loud and clear! Get ready, we're on our way!
+	speak "npc.soldier_RadioButton202" noscene  //We are prepped and good to go. Advise when ready!
+	speak "npc.soldier_RadioButton205" noscene  //We read you just fine. We're on our way.
+	speak "npc.soldier_RadioButton206" noscene  //Roger that, survivors. We are on our way.
+	speak "npc.soldier_RadioButton207" noscene  //Roger, survivors, we are go. ETA in ten minutes.
+	speak "npc.soldier_RadioButton208" noscene  //That is a go, survivors. Be advised it will take us ten minutes to reach you.
+	speak "npc.soldier_RadioButton209" noscene  //Copy that, survivors. It'll take us a good ten minutes to reach you. Dig in and hold on, you got me?
+	speak "npc.soldier_RadioButton210" noscene  //Copy that, survivors. We're coming for you! Hang on!
+	speak "npc.soldier_RadioInitialBroadCast01" noscene  //This is an emergency broadcast from the American Safety Zone. Please respond.
+	speak "npc.soldier_RadioInitialBroadCast06" noscene  //This is an emergency broadcast from the US Military. Please respond.
+	speak "npc.soldier_RadioNag01" noscene  //Please advise when ready!
+	speak "npc.soldier_RadioNag02" noscene  //Please advise when ready.
+}
+Rule iMT_Rescue9
+{
+	criteria iMT_Rescue9
+	Response iMT_Rescue9
+}
+
+Response iMT_Soldiers
+{
+	sequential
+	speak "Soldier1_Chatter01" noscene  //Rescue Seven, this is Papa Gator. Over.
+	speak "Soldier2_Chatter01" noscene  //This is Rescue 7. Over.
+	speak "Soldier1_Chatter02" noscene  //Rescue 7, what is your repair status. Over.
+	speak "Soldier2_Chatter03" noscene  //Repair ETA is ten minutes. Over.
+	speak "Soldier1_Chatter03" noscene  //Did not copy. Say again, Rescue 7. Over.
+	speak "Soldier2_Chatter04" noscene  //Ten minutes. Over.
+	speak "Soldier1_Chatter04" noscene  //Copy that. All lambs extracted. Last Buzzard starts run in fifteen minutes. Copy that? Over.
+	speak "Soldier2_Chatter05" noscene  //Roger, Papa Gator. Fifteen minutes. Ah, be advised we have seen flashes on the west bank. Ah, visually confirm west bank is clear. Over.
+	speak "Soldier1_Chatter05" noscene  //West bank is clear, Rescue 7. Ah, sector is clear. Over.
+	speak "Soldier2_Chatter06" noscene  //Negative. We are seeing something. Over.
+	speak "Soldier1_Chatter06" noscene  //Rescue Seven, are you, ah, seeing Whiskey Delta? Or friendly? Over.
+	speak "Soldier2_Chatter08" noscene  //Ahh, unclear. It-
+	speak "Soldier1_Chatter07" noscene  //Whisky Delta or, ah, friendly? Over.
+	speak "Soldier2_Chatter09" noscene  //Papa Gator, we're not sure. We are seeing, ah, multiple personnel and small arms fire. What is our current ROE? Over.
+	speak "Soldier1_Chatter08" noscene  //Rescue 7, all lost lambs are accounted for. Targets should be considered hostile. Only prosecute targets that are a clear threat. Over.
+	speak "Soldier2_Chatter10" noscene  //Roger, Papa Gator. All personnel on floating LZ. Clear for last Buzzard run. Over.
+	speak "Soldier1_Chatter09" noscene  //Affirmative, Rescue 7. Keep the bridge deck clear. Last Buzzard will start run in fifteen minutes. Out.
+	speak "Soldier2_Chatter12" noscene  //Ah-firmative. Out.
+	speak "Soldier1_SurvivorTalk01" noscene  //Rescue 7, that's coming from the bridge!
+	speak "Soldier1_SurvivorTalk02" noscene  //Bridge, identify yourself.
+	speak "Soldier1_SurvivorTalk03" noscene  //Bridge, who is this?
+	speak "Soldier1_SurvivorTalk04" noscene  //Bridge, are you immune?
+	speak "Soldier1_SurvivorTalk05" noscene  //Negative Bridge. Are you IMMUNE? Have you encountered the infected?
+	speak "Soldier1_SurvivorTalk06" noscene  //Rescue Seven, are you equipped for carriers?
+	speak "Soldier2_SurvivorTalk02" noscene  //Affirmative, Papa Gator.
+	speak "Soldier1_SurvivorTalk08" noscene  //Bridge, that sector is clear of friendlies. Your only remaining pickup is on the east bank of the bridge. Our last chopper is leaving in 10 minutes. You need to lower the span and get across to the east end.
+	speak "Soldier1_SurvivorTalk09" noscene  //Be advised: The bridge is crawling with Whiskey Delta.
+	speak "Soldier1_SurvivorTalk13" noscene  //God be with you, bridge.
+}
+Rule iMT_Soldiers
+{
+	criteria iMT_Soldiers
+	Response iMT_Soldiers
+}

@@ -495,3 +495,547 @@ Rule iMT_PlayerIncapacitatedHurtNamVet
 	criteria iMT_PlayerIncapacitatedHurt IsNamVet
 	Response iMT_PlayerIncapacitatedHurtNamVet
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC Triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_VirgilNamVet
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilNamVet
+{
+	criteria iMT_Virgil IsNamVet
+	Response iMT_VirgilNamVet
+}
+
+Response iMT_VirgilC8M5NamVet
+{
+	print " " then pilot iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC8M5NamVet
+{
+	criteria iMT_Virgil IsNamVet IsMap_C8M5
+	Response iMT_VirgilC8M5NamVet
+}
+
+Response iMT_VirgilC10M3NamVet
+{
+	print " " then churchguy iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC10M3NamVet
+{
+	criteria iMT_Virgil IsNamVet IsMap_C10M3
+	Response iMT_VirgilC10M3NamVet
+}
+
+Response iMT_VirgilC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC10M5NamVet
+{
+	criteria iMT_Virgil IsNamVet IsMap_C10M5
+	Response iMT_VirgilC10M5NamVet
+}
+
+Response iMT_VirgilC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC11M5NamVet
+{
+	criteria iMT_Virgil IsNamVet IsMap_C11M5
+	Response iMT_VirgilC11M5NamVet
+}
+
+Response iMT_VirgilC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC12M5NamVet
+{
+	criteria iMT_Virgil IsNamVet IsMap_C12M5
+	Response iMT_VirgilC12M5NamVet
+}
+
+Response iMT_WhitakerNamVet
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerNamVet
+{
+	criteria iMT_Whitaker IsNamVet
+	Response iMT_WhitakerNamVet
+}
+
+Response iMT_WhitakerC8M5NamVet
+{
+	print " " then pilot iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC8M5NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsMap_C8M5
+	Response iMT_WhitakerC8M5NamVet
+}
+
+Response iMT_WhitakerC10M3NamVet
+{
+	print " " then churchguy iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC10M3NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsMap_C10M3
+	Response iMT_WhitakerC10M3NamVet
+}
+
+Response iMT_WhitakerC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC10M5NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsMap_C10M5
+	Response iMT_WhitakerC10M5NamVet
+}
+
+Response iMT_WhitakerC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC11M5NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsMap_C11M5
+	Response iMT_WhitakerC11M5NamVet
+}
+
+Response iMT_WhitakerC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC12M5NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsMap_C12M5
+	Response iMT_WhitakerC12M5NamVet
+}
+
+Response iMT_MoustachioNamVet
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioNamVet
+{
+	criteria iMT_Moustachio IsNamVet
+	Response iMT_MoustachioNamVet
+}
+
+Response iMT_MoustachioC8M5NamVet
+{
+	print " " then pilot iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC8M5NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsMap_C8M5
+	Response iMT_MoustachioC8M5NamVet
+}
+
+Response iMT_MoustachioC10M3NamVet
+{
+	print " " then churchguy iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC10M3NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsMap_C10M3
+	Response iMT_MoustachioC10M3NamVet
+}
+
+Response iMT_MoustachioC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC10M5NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsMap_C10M5
+	Response iMT_MoustachioC10M5NamVet
+}
+
+Response iMT_MoustachioC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC11M5NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsMap_C11M5
+	Response iMT_MoustachioC11M5NamVet
+}
+
+Response iMT_MoustachioC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC12M5NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsMap_C12M5
+	Response iMT_MoustachioC12M5NamVet
+}
+
+Response iMT_ChurchGuyNamVet
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyNamVet
+{
+	criteria iMT_ChurchGuy IsNamVet
+	Response iMT_ChurchGuyNamVet
+}
+
+Response iMT_ChurchGuyC8M5NamVet
+{
+	print " " then pilot iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC8M5NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsMap_C8M5
+	Response iMT_ChurchGuyC8M5NamVet
+}
+
+Response iMT_ChurchGuyC10M3NamVet
+{
+	print " " then churchguy iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC10M3NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsMap_C10M3
+	Response iMT_ChurchGuyC10M3NamVet
+}
+
+Response iMT_ChurchGuyC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC10M5NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsMap_C10M5
+	Response iMT_ChurchGuyC10M5NamVet
+}
+
+Response iMT_ChurchGuyC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC11M5NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsMap_C11M5
+	Response iMT_ChurchGuyC11M5NamVet
+}
+
+Response iMT_ChurchGuyC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC12M5NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsMap_C12M5
+	Response iMT_ChurchGuyC12M5NamVet
+}
+
+Response iMT_BoatmanNamVet
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanNamVet
+{
+	criteria iMT_Boatman IsNamVet
+	Response iMT_BoatmanNamVet
+}
+
+Response iMT_BoatmanC8M5NamVet
+{
+	print " " then pilot iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC8M5NamVet
+{
+	criteria iMT_Boatman IsNamVet IsMap_C8M5
+	Response iMT_BoatmanC8M5NamVet
+}
+
+Response iMT_BoatmanC10M3NamVet
+{
+	print " " then churchguy iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC10M3NamVet
+{
+	criteria iMT_Boatman IsNamVet IsMap_C10M3
+	Response iMT_BoatmanC10M3NamVet
+}
+
+Response iMT_BoatmanC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC10M5NamVet
+{
+	criteria iMT_Boatman IsNamVet IsMap_C10M5
+	Response iMT_BoatmanC10M5NamVet
+}
+
+Response iMT_BoatmanC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC11M5NamVet
+{
+	criteria iMT_Boatman IsNamVet IsMap_C11M5
+	Response iMT_BoatmanC11M5NamVet
+}
+
+Response iMT_BoatmanC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC12M5NamVet
+{
+	criteria iMT_Boatman IsNamVet IsMap_C12M5
+	Response iMT_BoatmanC12M5NamVet
+}
+
+Response iMT_ChopperPilotNamVet
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotNamVet
+{
+	criteria iMT_ChopperPilot IsNamVet
+	Response iMT_ChopperPilotNamVet
+}
+
+Response iMT_ChopperPilotC8M5NamVet
+{
+	print " " then pilot iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC8M5NamVet
+{
+	criteria iMT_ChopperPilot IsNamVet IsMap_C8M5
+	Response iMT_ChopperPilotC8M5NamVet
+}
+
+Response iMT_ChopperPilotC10M3NamVet
+{
+	print " " then churchguy iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC10M3NamVet
+{
+	criteria iMT_ChopperPilot IsNamVet IsMap_C10M3
+	Response iMT_ChopperPilotC10M3NamVet
+}
+
+Response iMT_ChopperPilotC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC10M5NamVet
+{
+	criteria iMT_ChopperPilot IsNamVet IsMap_C10M5
+	Response iMT_ChopperPilotC10M5NamVet
+}
+
+Response iMT_ChopperPilotC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC11M5NamVet
+{
+	criteria iMT_ChopperPilot IsNamVet IsMap_C11M5
+	Response iMT_ChopperPilotC11M5NamVet
+}
+
+Response iMT_ChopperPilotC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC12M5NamVet
+{
+	criteria iMT_ChopperPilot IsNamVet IsMap_C12M5
+	Response iMT_ChopperPilotC12M5NamVet
+}
+
+Response iMT_PlanePilotNamVet
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotNamVet
+{
+	criteria iMT_PlanePilot IsNamVet
+	Response iMT_PlanePilotNamVet
+}
+
+Response iMT_PlanePilotC8M5NamVet
+{
+	print " " then pilot iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC8M5NamVet
+{
+	criteria iMT_PlanePilot IsNamVet IsMap_C8M5
+	Response iMT_PlanePilotC8M5NamVet
+}
+
+Response iMT_PlanePilotC10M3NamVet
+{
+	print " " then churchguy iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC10M3NamVet
+{
+	criteria iMT_PlanePilot IsNamVet IsMap_C10M3
+	Response iMT_PlanePilotC10M3NamVet
+}
+
+Response iMT_PlanePilotC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC10M5NamVet
+{
+	criteria iMT_PlanePilot IsNamVet IsMap_C10M5
+	Response iMT_PlanePilotC10M5NamVet
+}
+
+Response iMT_PlanePilotC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC11M5NamVet
+{
+	criteria iMT_PlanePilot IsNamVet IsMap_C11M5
+	Response iMT_PlanePilotC11M5NamVet
+}
+
+Response iMT_PlanePilotC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC12M5NamVet
+{
+	criteria iMT_PlanePilot IsNamVet IsMap_C12M5
+	Response iMT_PlanePilotC12M5NamVet
+}
+
+Response iMT_Rescue9NamVet
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9NamVet
+{
+	criteria iMT_Rescue9 IsNamVet
+	Response iMT_Rescue9NamVet
+}
+
+Response iMT_Rescue9C8M5NamVet
+{
+	print " " then pilot iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C8M5NamVet
+{
+	criteria iMT_Rescue9 IsNamVet IsMap_C8M5
+	Response iMT_Rescue9C8M5NamVet
+}
+
+Response iMT_Rescue9C10M3NamVet
+{
+	print " " then churchguy iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C10M3NamVet
+{
+	criteria iMT_Rescue9 IsNamVet IsMap_C10M3
+	Response iMT_Rescue9C10M3NamVet
+}
+
+Response iMT_Rescue9C10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C10M5NamVet
+{
+	criteria iMT_Rescue9 IsNamVet IsMap_C10M5
+	Response iMT_Rescue9C10M5NamVet
+}
+
+Response iMT_Rescue9C11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C11M5NamVet
+{
+	criteria iMT_Rescue9 IsNamVet IsMap_C11M5
+	Response iMT_Rescue9C11M5NamVet
+}
+
+Response iMT_Rescue9C12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C12M5NamVet
+{
+	criteria iMT_Rescue9 IsNamVet IsMap_C12M5
+	Response iMT_Rescue9C12M5NamVet
+}
+
+Response iMT_SoldiersNamVet
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersNamVet
+{
+	criteria iMT_Soldiers IsNamVet
+	Response iMT_SoldiersNamVet
+}
+
+Response iMT_SoldiersC8M5NamVet
+{
+	print " " then pilot iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC8M5NamVet
+{
+	criteria iMT_Soldiers IsNamVet IsMap_C8M5
+	Response iMT_SoldiersC8M5NamVet
+}
+
+Response iMT_SoldiersC10M3NamVet
+{
+	print " " then churchguy iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC10M3NamVet
+{
+	criteria iMT_Soldiers IsNamVet IsMap_C10M3
+	Response iMT_SoldiersC10M3NamVet
+}
+
+Response iMT_SoldiersC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC10M5NamVet
+{
+	criteria iMT_Soldiers IsNamVet IsMap_C10M5
+	Response iMT_SoldiersC10M5NamVet
+}
+
+Response iMT_SoldiersC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC11M5NamVet
+{
+	criteria iMT_Soldiers IsNamVet IsMap_C11M5
+	Response iMT_SoldiersC11M5NamVet
+}
+
+Response iMT_SoldiersC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC12M5NamVet
+{
+	criteria iMT_Soldiers IsNamVet IsMap_C12M5
+	Response iMT_SoldiersC12M5NamVet
+}

@@ -160,3 +160,23 @@ Criterion	"iMT_SexyBrunette"		"Concept"	"iMT_SexyBrunette"		required
 Criterion	"iMT_Shoes"			"Concept"	"iMT_Shoes"			required
 Criterion	"iMT_SoylentGreen"		"Concept"	"iMT_SoylentGreen"		required
 Criterion	"iMT_Yoink"			"Concept"	"iMT_Yoink"			required
+
+// NPCs
+
+Criterion	"iMT_Boatman"			"Concept"	"iMT_Boatman"			required
+Criterion	"iMT_ChopperPilot"		"Concept"	"iMT_ChopperPilot"		required
+Criterion	"iMT_ChurchGuy"			"Concept"	"iMT_ChurchGuy"			required
+Criterion	"iMT_Moustachio"		"Concept"	"iMT_Moustachio"		required
+Criterion	"iMT_PlanePilot"		"Concept"	"iMT_PlanePilot"		required
+Criterion	"iMT_Rescue9"			"Concept"	"iMT_Rescue9"			required
+Criterion	"iMT_Soldiers"			"Concept"	"iMT_Soldiers"			required
+Criterion	"iMT_Virgil"			"Concept"	"iMT_Virgil"			required
+Criterion	"iMT_Whitaker"			"Concept"	"iMT_Whitaker"			required
+
+// Map Switchs
+
+Criterion	"IsMap_C8M5"			"map"		"c8m5_rooftop"			required
+Criterion	"IsMap_C10M3"			"map"		"c10m3_ranchhouse"		required
+Criterion	"IsMap_C10M5"			"map"		"c10m5_houseboat"		required
+Criterion	"IsMap_C11M5"			"map"		"c11m5_runway"			required
+Criterion	"IsMap_C12M5"			"map"		"c12m5_cornfield"		required

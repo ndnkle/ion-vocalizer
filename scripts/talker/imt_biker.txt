@@ -532,3 +532,547 @@ Rule iMT_PlayerIncapacitatedHurtBiker
 	criteria iMT_PlayerIncapacitatedHurt IsBiker
 	Response iMT_PlayerIncapacitatedHurtBiker
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC Triggers
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_VirgilBiker
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilBiker
+{
+	criteria iMT_Virgil IsBiker
+	Response iMT_VirgilBiker
+}
+
+Response iMT_VirgilC8M5Biker
+{
+	print " " then pilot iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC8M5Biker
+{
+	criteria iMT_Virgil IsBiker IsMap_C8M5
+	Response iMT_VirgilC8M5Biker
+}
+
+Response iMT_VirgilC10M3Biker
+{
+	print " " then churchguy iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC10M3Biker
+{
+	criteria iMT_Virgil IsBiker IsMap_C10M3
+	Response iMT_VirgilC10M3Biker
+}
+
+Response iMT_VirgilC10M5Biker
+{
+	print " " then orator_boat_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC10M5Biker
+{
+	criteria iMT_Virgil IsBiker IsMap_C10M5
+	Response iMT_VirgilC10M5Biker
+}
+
+Response iMT_VirgilC11M5Biker
+{
+	print " " then orator_plane_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC11M5Biker
+{
+	criteria iMT_Virgil IsBiker IsMap_C11M5
+	Response iMT_VirgilC11M5Biker
+}
+
+Response iMT_VirgilC12M5Biker
+{
+	print " " then orator_farm_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC12M5Biker
+{
+	criteria iMT_Virgil IsBiker IsMap_C12M5
+	Response iMT_VirgilC12M5Biker
+}
+
+Response iMT_WhitakerBiker
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerBiker
+{
+	criteria iMT_Whitaker IsBiker
+	Response iMT_WhitakerBiker
+}
+
+Response iMT_WhitakerC8M5Biker
+{
+	print " " then pilot iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC8M5Biker
+{
+	criteria iMT_Whitaker IsBiker IsMap_C8M5
+	Response iMT_WhitakerC8M5Biker
+}
+
+Response iMT_WhitakerC10M3Biker
+{
+	print " " then churchguy iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC10M3Biker
+{
+	criteria iMT_Whitaker IsBiker IsMap_C10M3
+	Response iMT_WhitakerC10M3Biker
+}
+
+Response iMT_WhitakerC10M5Biker
+{
+	print " " then orator_boat_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC10M5Biker
+{
+	criteria iMT_Whitaker IsBiker IsMap_C10M5
+	Response iMT_WhitakerC10M5Biker
+}
+
+Response iMT_WhitakerC11M5Biker
+{
+	print " " then orator_plane_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC11M5Biker
+{
+	criteria iMT_Whitaker IsBiker IsMap_C11M5
+	Response iMT_WhitakerC11M5Biker
+}
+
+Response iMT_WhitakerC12M5Biker
+{
+	print " " then orator_farm_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC12M5Biker
+{
+	criteria iMT_Whitaker IsBiker IsMap_C12M5
+	Response iMT_WhitakerC12M5Biker
+}
+
+Response iMT_MoustachioBiker
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioBiker
+{
+	criteria iMT_Moustachio IsBiker
+	Response iMT_MoustachioBiker
+}
+
+Response iMT_MoustachioC8M5Biker
+{
+	print " " then pilot iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC8M5Biker
+{
+	criteria iMT_Moustachio IsBiker IsMap_C8M5
+	Response iMT_MoustachioC8M5Biker
+}
+
+Response iMT_MoustachioC10M3Biker
+{
+	print " " then churchguy iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC10M3Biker
+{
+	criteria iMT_Moustachio IsBiker IsMap_C10M3
+	Response iMT_MoustachioC10M3Biker
+}
+
+Response iMT_MoustachioC10M5Biker
+{
+	print " " then orator_boat_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC10M5Biker
+{
+	criteria iMT_Moustachio IsBiker IsMap_C10M5
+	Response iMT_MoustachioC10M5Biker
+}
+
+Response iMT_MoustachioC11M5Biker
+{
+	print " " then orator_plane_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC11M5Biker
+{
+	criteria iMT_Moustachio IsBiker IsMap_C11M5
+	Response iMT_MoustachioC11M5Biker
+}
+
+Response iMT_MoustachioC12M5Biker
+{
+	print " " then orator_farm_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC12M5Biker
+{
+	criteria iMT_Moustachio IsBiker IsMap_C12M5
+	Response iMT_MoustachioC12M5Biker
+}
+
+Response iMT_ChurchGuyBiker
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyBiker
+{
+	criteria iMT_ChurchGuy IsBiker
+	Response iMT_ChurchGuyBiker
+}
+
+Response iMT_ChurchGuyC8M5Biker
+{
+	print " " then pilot iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC8M5Biker
+{
+	criteria iMT_ChurchGuy IsBiker IsMap_C8M5
+	Response iMT_ChurchGuyC8M5Biker
+}
+
+Response iMT_ChurchGuyC10M3Biker
+{
+	print " " then churchguy iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC10M3Biker
+{
+	criteria iMT_ChurchGuy IsBiker IsMap_C10M3
+	Response iMT_ChurchGuyC10M3Biker
+}
+
+Response iMT_ChurchGuyC10M5Biker
+{
+	print " " then orator_boat_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC10M5Biker
+{
+	criteria iMT_ChurchGuy IsBiker IsMap_C10M5
+	Response iMT_ChurchGuyC10M5Biker
+}
+
+Response iMT_ChurchGuyC11M5Biker
+{
+	print " " then orator_plane_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC11M5Biker
+{
+	criteria iMT_ChurchGuy IsBiker IsMap_C11M5
+	Response iMT_ChurchGuyC11M5Biker
+}
+
+Response iMT_ChurchGuyC12M5Biker
+{
+	print " " then orator_farm_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC12M5Biker
+{
+	criteria iMT_ChurchGuy IsBiker IsMap_C12M5
+	Response iMT_ChurchGuyC12M5Biker
+}
+
+Response iMT_BoatmanBiker
+{
+	print " " then orator iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanBiker
+{
+	criteria iMT_Boatman IsBiker
+	Response iMT_BoatmanBiker
+}
+
+Response iMT_BoatmanC8M5Biker
+{
+	print " " then pilot iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC8M5Biker
+{
+	criteria iMT_Boatman IsBiker IsMap_C8M5
+	Response iMT_BoatmanC8M5Biker
+}
+
+Response iMT_BoatmanC10M3Biker
+{
+	print " " then churchguy iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC10M3Biker
+{
+	criteria iMT_Boatman IsBiker IsMap_C10M3
+	Response iMT_BoatmanC10M3Biker
+}
+
+Response iMT_BoatmanC10M5Biker
+{
+	print " " then orator_boat_radio iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC10M5Biker
+{
+	criteria iMT_Boatman IsBiker IsMap_C10M5
+	Response iMT_BoatmanC10M5Biker
+}
+
+Response iMT_BoatmanC11M5Biker
+{
+	print " " then orator_plane_radio iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC11M5Biker
+{
+	criteria iMT_Boatman IsBiker IsMap_C11M5
+	Response iMT_BoatmanC11M5Biker
+}
+
+Response iMT_BoatmanC12M5Biker
+{
+	print " " then orator_farm_radio iMT_Boatman foo:0 0
+}
+Rule iMT_BoatmanC12M5Biker
+{
+	criteria iMT_Boatman IsBiker IsMap_C12M5
+	Response iMT_BoatmanC12M5Biker
+}
+
+Response iMT_ChopperPilotBiker
+{
+	print " " then orator iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotBiker
+{
+	criteria iMT_ChopperPilot IsBiker
+	Response iMT_ChopperPilotBiker
+}
+
+Response iMT_ChopperPilotC8M5Biker
+{
+	print " " then pilot iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC8M5Biker
+{
+	criteria iMT_ChopperPilot IsBiker IsMap_C8M5
+	Response iMT_ChopperPilotC8M5Biker
+}
+
+Response iMT_ChopperPilotC10M3Biker
+{
+	print " " then churchguy iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC10M3Biker
+{
+	criteria iMT_ChopperPilot IsBiker IsMap_C10M3
+	Response iMT_ChopperPilotC10M3Biker
+}
+
+Response iMT_ChopperPilotC10M5Biker
+{
+	print " " then orator_boat_radio iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC10M5Biker
+{
+	criteria iMT_ChopperPilot IsBiker IsMap_C10M5
+	Response iMT_ChopperPilotC10M5Biker
+}
+
+Response iMT_ChopperPilotC11M5Biker
+{
+	print " " then orator_plane_radio iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC11M5Biker
+{
+	criteria iMT_ChopperPilot IsBiker IsMap_C11M5
+	Response iMT_ChopperPilotC11M5Biker
+}
+
+Response iMT_ChopperPilotC12M5Biker
+{
+	print " " then orator_farm_radio iMT_ChopperPilot foo:0 0
+}
+Rule iMT_ChopperPilotC12M5Biker
+{
+	criteria iMT_ChopperPilot IsBiker IsMap_C12M5
+	Response iMT_ChopperPilotC12M5Biker
+}
+
+Response iMT_PlanePilotBiker
+{
+	print " " then orator iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotBiker
+{
+	criteria iMT_PlanePilot IsBiker
+	Response iMT_PlanePilotBiker
+}
+
+Response iMT_PlanePilotC8M5Biker
+{
+	print " " then pilot iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC8M5Biker
+{
+	criteria iMT_PlanePilot IsBiker IsMap_C8M5
+	Response iMT_PlanePilotC8M5Biker
+}
+
+Response iMT_PlanePilotC10M3Biker
+{
+	print " " then churchguy iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC10M3Biker
+{
+	criteria iMT_PlanePilot IsBiker IsMap_C10M3
+	Response iMT_PlanePilotC10M3Biker
+}
+
+Response iMT_PlanePilotC10M5Biker
+{
+	print " " then orator_boat_radio iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC10M5Biker
+{
+	criteria iMT_PlanePilot IsBiker IsMap_C10M5
+	Response iMT_PlanePilotC10M5Biker
+}
+
+Response iMT_PlanePilotC11M5Biker
+{
+	print " " then orator_plane_radio iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC11M5Biker
+{
+	criteria iMT_PlanePilot IsBiker IsMap_C11M5
+	Response iMT_PlanePilotC11M5Biker
+}
+
+Response iMT_PlanePilotC12M5Biker
+{
+	print " " then orator_farm_radio iMT_PlanePilot foo:0 0
+}
+Rule iMT_PlanePilotC12M5Biker
+{
+	criteria iMT_PlanePilot IsBiker IsMap_C12M5
+	Response iMT_PlanePilotC12M5Biker
+}
+
+Response iMT_Rescue9Biker
+{
+	print " " then orator iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9Biker
+{
+	criteria iMT_Rescue9 IsBiker
+	Response iMT_Rescue9Biker
+}
+
+Response iMT_Rescue9C8M5Biker
+{
+	print " " then pilot iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C8M5Biker
+{
+	criteria iMT_Rescue9 IsBiker IsMap_C8M5
+	Response iMT_Rescue9C8M5Biker
+}
+
+Response iMT_Rescue9C10M3Biker
+{
+	print " " then churchguy iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C10M3Biker
+{
+	criteria iMT_Rescue9 IsBiker IsMap_C10M3
+	Response iMT_Rescue9C10M3Biker
+}
+
+Response iMT_Rescue9C10M5Biker
+{
+	print " " then orator_boat_radio iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C10M5Biker
+{
+	criteria iMT_Rescue9 IsBiker IsMap_C10M5
+	Response iMT_Rescue9C10M5Biker
+}
+
+Response iMT_Rescue9C11M5Biker
+{
+	print " " then orator_plane_radio iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C11M5Biker
+{
+	criteria iMT_Rescue9 IsBiker IsMap_C11M5
+	Response iMT_Rescue9C11M5Biker
+}
+
+Response iMT_Rescue9C12M5Biker
+{
+	print " " then orator_farm_radio iMT_Rescue9 foo:0 0
+}
+Rule iMT_Rescue9C12M5Biker
+{
+	criteria iMT_Rescue9 IsBiker IsMap_C12M5
+	Response iMT_Rescue9C12M5Biker
+}
+
+Response iMT_SoldiersBiker
+{
+	print " " then orator iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersBiker
+{
+	criteria iMT_Soldiers IsBiker
+	Response iMT_SoldiersBiker
+}
+
+Response iMT_SoldiersC8M5Biker
+{
+	print " " then pilot iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC8M5Biker
+{
+	criteria iMT_Soldiers IsBiker IsMap_C8M5
+	Response iMT_SoldiersC8M5Biker
+}
+
+Response iMT_SoldiersC10M3Biker
+{
+	print " " then churchguy iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC10M3Biker
+{
+	criteria iMT_Soldiers IsBiker IsMap_C10M3
+	Response iMT_SoldiersC10M3Biker
+}
+
+Response iMT_SoldiersC10M5Biker
+{
+	print " " then orator_boat_radio iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC10M5Biker
+{
+	criteria iMT_Soldiers IsBiker IsMap_C10M5
+	Response iMT_SoldiersC10M5Biker
+}
+
+Response iMT_SoldiersC11M5Biker
+{
+	print " " then orator_plane_radio iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC11M5Biker
+{
+	criteria iMT_Soldiers IsBiker IsMap_C11M5
+	Response iMT_SoldiersC11M5Biker
+}
+
+Response iMT_SoldiersC12M5Biker
+{
+	print " " then orator_farm_radio iMT_Soldiers foo:0 0
+}
+Rule iMT_SoldiersC12M5Biker
+{
+	criteria iMT_Soldiers IsBiker IsMap_C12M5
+	Response iMT_SoldiersC12M5Biker
+}

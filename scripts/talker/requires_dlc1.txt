@@ -11,3 +11,4 @@
 #include "talker/imt_coach.txt"
 #include "talker/imt_mechanic.txt"
 #include "talker/imt_producer.txt"
+#include "talker/imt_npcs.txt"
