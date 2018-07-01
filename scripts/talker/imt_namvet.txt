@@ -45,7 +45,6 @@ Rule iMT_WheelNamVet
 
 Response iMT_NoLoveNamVet
 {
-	scene "scenes/NamVet/YouAreWelcome14.vcd"  //Yeah, okay, it don't mean we're married now
 	scene "scenes/NamVet/YouAreWelcome15.vcd"  //Don't expect a hug
 }
 Rule iMT_NoLoveNamVet

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 10.0
+// ion's Vocalizer 10.1
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -714,8 +714,8 @@
 		}
 		"North"
 		{
-			"command"	"vocalize C6M1Intro_22g"
-			"text"		"Good luck"
+			"command"	"vocalize IntroCrashR09"
+			"text"		"Seconded"
 		}
 		"NorthEast"
 		{
@@ -734,8 +734,8 @@
 		}
 		"South"
 		{
-			"command"	"vocalize IntroCrashR09"
-			"text"		"Seconded"
+			"command"	"vocalize PlaneCrashResponse"
+			"text"		"Holy shit"
 		}
 		"SouthWest"
 		{
@@ -1964,7 +1964,7 @@
 		}
 		"North"
 		{
-			"command"	"vocalize ConceptBlock641"
+			"command"	"vocalize ResponseWeCanStill"
 			"text"		"Straight"
 		}
 		"NorthEast"
