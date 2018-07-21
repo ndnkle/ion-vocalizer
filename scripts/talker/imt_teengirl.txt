@@ -413,23 +413,6 @@ Rule iMT_PlayerBreathingTeenGirl
 	Response iMT_PlayerBreathingTeenGirl
 }
 
-Response iMT_PlayerAnswerReadyTeenGirl
-{
-	scene "scenes/TeenGirl/AnswerReady01.vcd"  //Ready
-	scene "scenes/TeenGirl/AnswerReady02.vcd"  //Yep, I'm ready
-	scene "scenes/TeenGirl/AnswerReady03.vcd"  //Yeah, ready
-	scene "scenes/TeenGirl/AnswerReady04.vcd"  //Let's go.
-	scene "scenes/TeenGirl/AnswerReady05.vcd" odds 10  //Yeah... yeah, I'm ready to bounce (laughing)
-	scene "scenes/TeenGirl/AnswerReady07.vcd"  //Ready
-	scene "scenes/TeenGirl/AnswerReady08.vcd"  //Yep, I'm ready
-	scene "scenes/TeenGirl/AnswerReady09.vcd"  //Yeah, ready
-}
-Rule iMT_PlayerAnswerReadyTeenGirl
-{
-	criteria iMT_PlayerAnswerReady IsTeenGirl
-	Response iMT_PlayerAnswerReadyTeenGirl
-}
-
 Response iMT_PlayerDeathScreamTeenGirl
 {
 	scene "scenes/TeenGirl/Fall01.vcd"  //[Death scream as you fall]
@@ -492,6 +475,66 @@ Rule iMT_PlayerIncapacitatedHurtTeenGirl
 {
 	criteria iMT_PlayerIncapacitatedHurt IsTeenGirl
 	Response iMT_PlayerIncapacitatedHurtTeenGirl
+}
+
+Response iMT_PlayerMournManagerTeenGirl
+{
+	scene "scenes/TeenGirl/GriefManager02.vcd"  //Louis!
+	scene "scenes/TeenGirl/GriefManager03.vcd"  //Louis, oh god I'm going to miss you.
+	scene "scenes/TeenGirl/GriefManager08.vcd"  //Oh no, not Louis!
+	scene "scenes/TeenGirl/GriefManager11.vcd"  //Oh Louis, oh god I can't believe it.
+}
+Rule iMT_PlayerMournManagerAliveTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl IssuerClose SubjectIsManager
+	Response iMT_PlayerMournManagerTeenGirl
+}
+Rule iMT_PlayerMournManagerDeadTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl IsManagerNear200 IsManagerNotAlive
+	Response iMT_PlayerMournManagerTeenGirl
+}
+
+Response iMT_PlayerMournNamVetTeenGirl
+{
+	scene "scenes/TeenGirl/GriefVet02.vcd"  //I ah oh Bill!!!
+	scene "scenes/TeenGirl/GriefVet03.vcd"  //Oh god. Not Bill!
+	scene "scenes/TeenGirl/GriefVet05.vcd"  //Bill! No!
+	scene "scenes/TeenGirl/GriefVet07.vcd"  //Ahh Bill!!!
+	scene "scenes/TeenGirl/GriefVet09.vcd"  //Bill!!!
+	scene "scenes/TeenGirl/GriefVet11.vcd"  //Oh god. Not Bill!
+	scene "scenes/TeenGirl/GriefVet12.vcd"  //Oh god. Bill!
+	scene "scenes/TeenGirl/GriefVet13.vcd"  //Bill!
+	scene "scenes/TeenGirl/GriefVet18.vcd"  //Bill!!!
+}
+Rule iMT_PlayerMournNamVetAliveTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl IssuerClose SubjectIsNamVet
+	Response iMT_PlayerMournNamVetTeenGirl
+}
+Rule iMT_PlayerMournNamVetDeadTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl IsNamVetNear200 IsNamVetNotAlive
+	Response iMT_PlayerMournNamVetTeenGirl
+}
+
+Response iMT_PlayerMournBikerTeenGirl
+{
+	scene "scenes/TeenGirl/GriefBiker01.vcd"  //Francis!
+	scene "scenes/TeenGirl/GriefBiker02.vcd"  //Francis!  NOOOO!
+	scene "scenes/TeenGirl/GriefBiker04.vcd"  //Francis!
+	scene "scenes/TeenGirl/GriefBiker06.vcd"  //God, not Francis!
+	scene "scenes/TeenGirl/GriefBiker07.vcd"  //Oh god, not Francis!
+}
+Rule iMT_PlayerMournBikerAliveTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl IssuerClose SubjectIsBiker
+	Response iMT_PlayerMournBikerTeenGirl
+}
+Rule iMT_PlayerMournBikerDeadTeenGirl
+{
+	criteria iMT_PlayerMourn IsTeenGirl IsBikerNear200 IsBikerNotAlive
+	Response iMT_PlayerMournBikerTeenGirl
 }
 
 //--------------------------------------------------------------------------------------------------------------

@@ -449,20 +449,6 @@ Rule iMT_PlayerBreathingBiker
 	Response iMT_PlayerBreathingBiker
 }
 
-Response iMT_PlayerAnswerReadyBiker
-{
-	scene "scenes/Biker/AnswerReady01.vcd"  //Ready.
-	scene "scenes/Biker/AnswerReady02.vcd"  //Yeah, ready.
-	scene "scenes/Biker/AnswerReady03.vcd"  //Yeah, let's do it.
-	scene "scenes/Biker/AnswerReady04.vcd"  //Let's go break stuff!
-	scene "scenes/Biker/AnswerReady05.vcd"  //Let's go kill somethin'!
-}
-Rule iMT_PlayerAnswerReadyBiker
-{
-	criteria iMT_PlayerAnswerReady IsBiker
-	Response iMT_PlayerAnswerReadyBiker
-}
-
 Response iMT_PlayerDeathScreamBiker
 {
 	scene "scenes/Biker/Fall01.vcd"  //[Death scream as you fall]
@@ -531,6 +517,59 @@ Rule iMT_PlayerIncapacitatedHurtBiker
 {
 	criteria iMT_PlayerIncapacitatedHurt IsBiker
 	Response iMT_PlayerIncapacitatedHurtBiker
+}
+
+Response iMT_PlayerMournManagerBiker
+{
+	scene "scenes/Biker/GriefManager01.vcd"  //Ahhh. the manager's down for the count.
+	scene "scenes/Biker/GriefManager02.vcd"  //Ah shit, I was just starting to like that guy.
+	scene "scenes/Biker/GriefManager03.vcd"  //Damn it, he didn't deserve this.
+	scene "scenes/Biker/GriefManager04.vcd"  //The manager's down for the count.
+	scene "scenes/Biker/GriefManager05.vcd"  //Shit, I was just starting to like that guy.
+}
+Rule iMT_PlayerMournManagerAliveBiker
+{
+	criteria iMT_PlayerMourn IsBiker IssuerClose SubjectIsManager
+	Response iMT_PlayerMournManagerBiker
+}
+Rule iMT_PlayerMournManagerDeadBiker
+{
+	criteria iMT_PlayerMourn IsBiker IsManagerNear200 IsManagerNotAlive
+	Response iMT_PlayerMournManagerBiker
+}
+
+Response iMT_PlayerMournNamVetBiker
+{
+	scene "scenes/Biker/GriefVet01.vcd"  //Bill's gone!
+	scene "scenes/Biker/GriefVet02.vcd"  //Rest in peace, old man.
+	scene "scenes/Biker/GriefVet03.vcd"  //Shit, I'm gonna miss the old guy.
+}
+Rule iMT_PlayerMournNamVetAliveBiker
+{
+	criteria iMT_PlayerMourn IsBiker IssuerClose SubjectIsNamVet
+	Response iMT_PlayerMournNamVetBiker
+}
+Rule iMT_PlayerMournNamVetDeadBiker
+{
+	criteria iMT_PlayerMourn IsBiker IsNamVetNear200 IsNamVetNotAlive
+	Response iMT_PlayerMournNamVetBiker
+}
+
+Response iMT_PlayerMournTeenGirlBiker
+{
+	scene "scenes/Biker/GriefFemaleGeneric03.vcd"  //Ah hell, she's dead.
+	scene "scenes/Biker/GriefTeenGirl01.vcd"  //Ahh Zoey. No.
+	scene "scenes/Biker/GriefTeenGirl02.vcd"  //Ahh damnit, not Zoey.
+}
+Rule iMT_PlayerMournTeenGirlAliveBiker
+{
+	criteria iMT_PlayerMourn IsBiker IssuerClose SubjectIsTeenGirl
+	Response iMT_PlayerMournTeenGirlBiker
+}
+Rule iMT_PlayerMournTeenGirlDeadBiker
+{
+	criteria iMT_PlayerMourn IsBiker IsTeenGirlNear200 IsTeenGirlNotAlive
+	Response iMT_PlayerMournTeenGirlBiker
 }
 
 //--------------------------------------------------------------------------------------------------------------

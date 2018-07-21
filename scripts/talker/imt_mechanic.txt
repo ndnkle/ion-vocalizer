@@ -406,6 +406,17 @@ Rule iMT_PlayerGoingToDieMechanic
 	Response iMT_PlayerGoingToDieMechanic
 }
 
+Response iMT_OtherPlayerWasPouncedMechanic
+{
+	scene "scenes/Mechanic/HunterPouncedC101.vcd"  //A zombie's got him!
+	scene "scenes/Mechanic/HunterPouncedC102.vcd"  //One of those things got him!
+}
+Rule iMT_OtherPlayerWasPouncedMechanic
+{
+	criteria iMT_OtherPlayerWasPounced IsMechanic
+	Response iMT_OtherPlayerWasPouncedMechanic
+}
+
 Response iMT_OtherPlayerWasPouncedGamblerMechanic
 {
 	scene "scenes/Mechanic/HunterNickPounced01.vcd"  //Hunter's got Nick!
@@ -430,6 +441,8 @@ Rule iMT_OtherPlayerWasPouncedCoachMechanic
 
 Response iMT_OtherPlayerWasPouncedProducerMechanic
 {
+	scene "scenes/Mechanic/HunterPouncedC1Producer01.vcd"  //Shit, a zombies got her!
+	scene "scenes/Mechanic/HunterPouncedC1Producer02.vcd"  //Hey, one of those things got her!
 	scene "scenes/Mechanic/HunterRochellePounced01.vcd"  //Hunter's got Rochelle!
 	scene "scenes/Mechanic/HunterRochellePounced02.vcd"  //Hunter on Rochelle!
 }
@@ -581,6 +594,65 @@ Rule iMT_PlayerIncapacitatedHurtMechanic
 {
 	criteria iMT_PlayerIncapacitatedHurt IsMechanic
 	Response iMT_PlayerIncapacitatedHurtMechanic
+}
+
+Response iMT_PlayerMournCoachMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournCoach01.vcd"  //Ah man Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach02.vcd"  //Well, Coach, thanks for all you done, man.
+	scene "scenes/Mechanic/SurvivorMournCoach03.vcd"  //Goodbye Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach04.vcd"  //You were a hell of a man, Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach05.vcd"  //Thanks Coach.
+	scene "scenes/Mechanic/SurvivorMournCoachC101.vcd"  //Man, I was hoping me and coach were gonna be friends.
+}
+Rule iMT_PlayerMournCoachAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IssuerClose SubjectIsCoach
+	Response iMT_PlayerMournCoachMechanic
+}
+Rule iMT_PlayerMournCoachDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsCoachNear200 IsCoachNotAlive
+	Response iMT_PlayerMournCoachMechanic
+}
+
+Response iMT_PlayerMournGamblerMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournGamblerC101.vcd"  //Bet he didn't think he'd die before me.
+	scene "scenes/Mechanic/SurvivorMournNick01.vcd"  //Ahh Nick.
+	scene "scenes/Mechanic/SurvivorMournNick02.vcd"  //Nick, you were cool.
+	scene "scenes/Mechanic/SurvivorMournNick03.vcd"  //Miss ya, brother.
+	scene "scenes/Mechanic/SurvivorMournNick04.vcd"  //Damn, Nick. We was just gettin' to be friends.
+}
+Rule iMT_PlayerMournGamblerAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IssuerClose SubjectIsGambler
+	Response iMT_PlayerMournGamblerMechanic
+}
+Rule iMT_PlayerMournGamblerDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsGamblerNear200 IsGamblerNotAlive
+	Response iMT_PlayerMournGamblerMechanic
+}
+
+Response iMT_PlayerMournProducerMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournProducerC101.vcd"  //She was the last one I wanted to see go.
+	scene "scenes/Mechanic/SurvivorMournProducerC102.vcd"  //She was the last one I wanted to see go.
+	scene "scenes/Mechanic/SurvivorMournRochelle01.vcd"  //Be good Rochelle.
+	scene "scenes/Mechanic/SurvivorMournRochelle02.vcd"  //Ro, I'm gonna miss ya.
+	scene "scenes/Mechanic/SurvivorMournRochelle03.vcd"  //I'll remember you in my prayers Ro.
+	scene "scenes/Mechanic/SurvivorMournRochelle04.vcd"  //Hell of a girl, Ro.
+}
+Rule iMT_PlayerMournProducerAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IssuerClose SubjectIsProducer
+	Response iMT_PlayerMournProducerMechanic
+}
+Rule iMT_PlayerMournProducerDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsProducerNear200 IsProducerNotAlive
+	Response iMT_PlayerMournProducerMechanic
 }
 
 //--------------------------------------------------------------------------------------------------------------

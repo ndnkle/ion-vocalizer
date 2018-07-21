@@ -413,19 +413,6 @@ Rule iMT_PlayerBreathingNamVet
 	Response iMT_PlayerBreathingNamVet
 }
 
-Response iMT_PlayerAnswerReadyNamVet
-{
-	scene "scenes/NamVet/AnswerReady01.vcd"  //Ready.
-	scene "scenes/NamVet/AnswerReady02.vcd"  //Good to go.
-	scene "scenes/NamVet/AnswerReady03.vcd"  //I'm ready.
-	scene "scenes/NamVet/AnswerReady04.vcd"  //I said I'm ready!
-}
-Rule iMT_PlayerAnswerReadyNamVet
-{
-	criteria iMT_PlayerAnswerReady IsNamVet
-	Response iMT_PlayerAnswerReadyNamVet
-}
-
 Response iMT_PlayerDeathScreamNamVet
 {
 	scene "scenes/NamVet/Fall01.vcd"  //[Death scream as you fall]
@@ -493,6 +480,60 @@ Rule iMT_PlayerIncapacitatedHurtNamVet
 {
 	criteria iMT_PlayerIncapacitatedHurt IsNamVet
 	Response iMT_PlayerIncapacitatedHurtNamVet
+}
+
+Response iMT_PlayerMournManagerNamVet
+{
+	scene "scenes/NamVet/GriefManager01.vcd"  //Ah, Louis.
+	scene "scenes/NamVet/GriefManager02.vcd"  //Louis didn't make it. Ah, Christ.
+	scene "scenes/NamVet/GriefManager03.vcd"  //C'mon people, if we make it, he didn't die for nothin'.
+}
+Rule iMT_PlayerMournManagerAliveNamVet
+{
+	criteria iMT_PlayerMourn IsNamVet IssuerClose SubjectIsManager
+	Response iMT_PlayerMournManagerNamVet
+}
+Rule iMT_PlayerMournManagerDeadNamVet
+{
+	criteria iMT_PlayerMourn IsNamVet IsManagerNear200 IsManagerNotAlive
+	Response iMT_PlayerMournManagerNamVet
+}
+
+Response iMT_PlayerMournBikerNamVet
+{
+	scene "scenes/NamVet/GriefBiker01.vcd"  //Ah, not Francis
+	scene "scenes/NamVet/GriefBiker02.vcd"  //Christ, I'm gonna miss that son of a bitch.
+	scene "scenes/NamVet/GriefBiker03.vcd"  //I am going to miss that man and his gun
+}
+Rule iMT_PlayerMournBikerAliveNamVet
+{
+	criteria iMT_PlayerMourn IsNamVet IssuerClose SubjectIsBiker
+	Response iMT_PlayerMournBikerNamVet
+}
+Rule iMT_PlayerMournBikerDeadNamVet
+{
+	criteria iMT_PlayerMourn IsNamVet IsBikerNear200 IsBikerNotAlive
+	Response iMT_PlayerMournBikerNamVet
+}
+
+Response iMT_PlayerMournTeenGirlNamVet
+{
+	scene "scenes/NamVet/GriefFemaleGeneric01.vcd"  //She's dead!
+	scene "scenes/NamVet/GriefFemaleGeneric02.vcd"  //Ah Christ, she's dead!
+	scene "scenes/NamVet/GriefFemaleGeneric04.vcd"  //Goddamit, she didn't make it.
+	scene "scenes/NamVet/GriefTeenGirl01.vcd"  //Ah not Zoey
+	scene "scenes/NamVet/GriefTeenGirl02.vcd"  //Ah jesus. What a waste.
+	scene "scenes/NamVet/GriefTeenGirl03.vcd"  //One of those sick sons of bitches just sealed all a' their death warrants.
+}
+Rule iMT_PlayerMournTeenGirlAliveNamVet
+{
+	criteria iMT_PlayerMourn IsNamVet IssuerClose SubjectIsTeenGirl
+	Response iMT_PlayerMournTeenGirlNamVet
+}
+Rule iMT_PlayerMournTeenGirlDeadNamVet
+{
+	criteria iMT_PlayerMourn IsNamVet IsTeenGirlNear200 IsTeenGirlNotAlive
+	Response iMT_PlayerMournTeenGirlNamVet
 }
 
 //--------------------------------------------------------------------------------------------------------------

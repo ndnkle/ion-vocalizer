@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 10.1
+// ion's Vocalizer 11.0
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -21,17 +21,17 @@
 		{
 			"command"	"vocalize PlayerLeadOn"
 			"text"		"Lead"
-		}	
+		}
 		"East"
 		{
 			"command"	"vocalize PlayerHurryUp"
 			"text"		"Hurry"
-		}	
+		}
 		"SouthEast"
 		{
 			"command"	"vocalize PlayerYellRun"
 			"text"		"Run"
-		}	
+		}
 		"South"
 		{
 			"command"	"vocalize PlayerWaitHere"
@@ -51,7 +51,7 @@
 		{
 			"command"	"vocalize PlayerStayTogether"
 			"text"		"Together"
-		}	
+		}
 	}
 
 	//--------------------------------------------------------------
@@ -153,7 +153,7 @@
 			"text"		"With you"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"Enemies,Survivor,Alive"
 	{
@@ -203,7 +203,7 @@
 			"text"		"Behind"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"Events,Survivor,Alive"
 	{
@@ -414,8 +414,8 @@
 		}
 		"North"
 		{
-			"command"	"vocalize iMT_PlayerAnswerReady"
-			"text"		"Ready"
+			"command"	"vocalize iMT_PlayerMourn"
+			"text"		"Mourn"
 		}
 		"NorthEast"
 		{
@@ -603,7 +603,7 @@
 			"text"		"Zombie"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"Z3,Survivor,Alive"
 	{
@@ -1003,7 +1003,7 @@
 			"text"		"Plan"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"F3,Survivor,Alive"
 	{
@@ -1403,7 +1403,7 @@
 			"text"		"Zombies"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"L3,Survivor,Alive"
 	{
@@ -1753,7 +1753,7 @@
 			"text"		"Open"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"B2,Survivor,Alive"
 	{
@@ -1803,7 +1803,7 @@
 			"text"		"Zombies"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"B3,Survivor,Alive"
 	{
@@ -2203,7 +2203,7 @@
 			"text"		"Vampires"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"R3,Survivor,Alive"
 	{
@@ -2553,7 +2553,7 @@
 			"text"		"Big ape"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"N2,Survivor,Alive"
 	{
@@ -2603,7 +2603,7 @@
 			"text"		"Messed up"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"N3,Survivor,Alive"
 	{
@@ -2953,7 +2953,7 @@
 			"text"		"Cotton candy"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"C2,Survivor,Alive"
 	{
@@ -3003,7 +3003,7 @@
 			"text"		"Vampires"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"C3,Survivor,Alive"
 	{
@@ -3353,7 +3353,7 @@
 			"text"		"Love you"
 		}
 	}
-	
+
 	//--------------------------------------------------------------
 	"E2,Survivor,Alive"
 	{
@@ -3851,6 +3851,56 @@
 		{
 			"command"	"alias +ch1 +mouse_menu F1; alias +ch2 +mouse_menu F2; alias +ch3 +mouse_menu F3; alias +ch4 +mouse_menu F4; alias +ch5 +mouse_menu F5; alias +ch6 +mouse_menu F6; alias +ch7 +mouse_menu F7; alias +ch8 +mouse_menu F8; jointeam 2 francis; radialmenu none"
 			"text"		"Francis"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Orders,Infected,Alive"
+	{
+		"Center"
+		{
+			"command"	"-mouse_menu"
+			"text"		""
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_ZombieSpecial"
+			"text"		"Special"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_ZombieDeath"
+			"text"		"Death"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_ZombiePain"
+			"text"		"Pain"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_ZombieFakeWitch1"
+			"text"		""
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_ZombieFakeTank"
+			"text"		""
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ZombieFakeWitch2"
+			"text"		""
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_ZombieWarn"
+			"text"		"Warn"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_ZombieAlert"
+			"text"		"Alert"
 		}
 	}
 }

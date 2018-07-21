@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// Character-Specific Includes
+// Required Includes
 //--------------------------------------------------------------------------------------------------------------
 
 #include "talker/imt_criteria.txt"
@@ -12,3 +12,4 @@
 #include "talker/imt_mechanic.txt"
 #include "talker/imt_producer.txt"
 #include "talker/imt_npcs.txt"
+#include "talker/imt_zombies.txt"

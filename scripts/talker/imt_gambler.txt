@@ -326,6 +326,18 @@ Rule iMT_PlayerGoingToDieGambler
 	Response iMT_PlayerGoingToDieGambler
 }
 
+Response iMT_OtherPlayerWasPouncedGambler
+{
+	scene "scenes/Gambler/HunterPouncedC101.vcd"  //Zombie's got him!
+	scene "scenes/Gambler/HunterPouncedC102.vcd"  //Zombie's got him!
+	scene "scenes/Gambler/HunterPouncedC103.vcd"  //Zombie on him!
+}
+Rule iMT_OtherPlayerWasPouncedGambler
+{
+	criteria iMT_OtherPlayerWasPounced IsGambler
+	Response iMT_OtherPlayerWasPouncedGambler
+}
+
 Response iMT_OtherPlayerWasPouncedCoachGambler
 {
 	scene "scenes/Gambler/HunterCoachPounced01.vcd"  //Hunter's got Coach!
@@ -352,6 +364,8 @@ Rule iMT_OtherPlayerWasPouncedMechanicGambler
 
 Response iMT_OtherPlayerWasPouncedProducerGambler
 {
+	scene "scenes/Gambler/HunterPouncedC1Producer01.vcd"  //Zombie on her!
+	scene "scenes/Gambler/HunterPouncedC1Producer02.vcd"  //Get that zombie off her!
 	scene "scenes/Gambler/HunterRochellePounced01.vcd"  //Hunter's got Rochelle!
 	scene "scenes/Gambler/HunterRochellePounced02.vcd"  //Hunter on Rochelle!
 }
@@ -494,6 +508,66 @@ Rule iMT_PlayerIncapacitatedHurtGambler
 {
 	criteria iMT_PlayerIncapacitatedHurt IsGambler
 	Response iMT_PlayerIncapacitatedHurtGambler
+}
+
+Response iMT_PlayerMournCoachGambler
+{
+	scene "scenes/Gambler/SurvivorMournCoach01.vcd"  //Ahh Coach.
+	scene "scenes/Gambler/SurvivorMournCoach02.vcd"  //Later Coach.
+	scene "scenes/Gambler/SurvivorMournCoach03.vcd"  //Shit Coach, I'll miss you.
+	scene "scenes/Gambler/SurvivorMournCoachC101.vcd"  //I am going to miss you big guy.
+	scene "scenes/Gambler/SurvivorMournCoachC102.vcd"  //Goddamn it coach, what'd you leave me with?
+	scene "scenes/Gambler/SurvivorMournCoachC103.vcd"  //Goddamn it coach, what'd you leave me with?
+}
+Rule iMT_PlayerMournCoachAliveGambler
+{
+	criteria iMT_PlayerMourn IsGambler IssuerClose SubjectIsCoach
+	Response iMT_PlayerMournCoachGambler
+}
+Rule iMT_PlayerMournCoachDeadGambler
+{
+	criteria iMT_PlayerMourn IsGambler IsCoachNear200 IsCoachNotAlive
+	Response iMT_PlayerMournCoachGambler
+}
+
+Response iMT_PlayerMournMechanicGambler
+{
+	scene "scenes/Gambler/SurvivorMournEllis01.vcd"  //Ellis.
+	scene "scenes/Gambler/SurvivorMournEllis02.vcd"  //Ahh Ellis.
+	scene "scenes/Gambler/SurvivorMournEllis03.vcd"  //Ellis, I am surprised you lasted as long as you did.
+	scene "scenes/Gambler/SurvivorMournMechanicC101.vcd"  //He was annoying but he could shoot a gun.
+	scene "scenes/Gambler/SurvivorMournMechanicC102.vcd"  //No time for mourning, let's go.
+	scene "scenes/Gambler/SurvivorMournMechanicC103.vcd"  //He was annoying but he could shoot a gun.
+}
+Rule iMT_PlayerMournMechanicAliveGambler
+{
+	criteria iMT_PlayerMourn IsGambler IssuerClose SubjectIsMechanic
+	Response iMT_PlayerMournMechanicGambler
+}
+Rule iMT_PlayerMournMechanicDeadGambler
+{
+	criteria iMT_PlayerMourn IsGambler IsMechanicNear200 IsMechanicNotAlive
+	Response iMT_PlayerMournMechanicGambler
+}
+
+Response iMT_PlayerMournProducerGambler
+{
+	scene "scenes/Gambler/SurvivorMournProducerC101.vcd"  //I can think of two other people I would have rather seen go first.
+	scene "scenes/Gambler/SurvivorMournProducerC102.vcd"  //Guys, what are we going to do now?
+	scene "scenes/Gambler/SurvivorMournRochelle01.vcd"  //Rochelle.
+	scene "scenes/Gambler/SurvivorMournRochelle02.vcd"  //Ahh shit Rochelle.
+	scene "scenes/Gambler/SurvivorMournRochelle03.vcd"  //Goodnight Rochelle.
+	scene "scenes/Gambler/SurvivorMournRochelle04.vcd"  //There goes repopulating the earth.
+}
+Rule iMT_PlayerMournProducerAliveGambler
+{
+	criteria iMT_PlayerMourn IsGambler IssuerClose SubjectIsProducer
+	Response iMT_PlayerMournProducerGambler
+}
+Rule iMT_PlayerMournProducerDeadGambler
+{
+	criteria iMT_PlayerMourn IsGambler IsProducerNear200 IsProducerNotAlive
+	Response iMT_PlayerMournProducerGambler
 }
 
 //--------------------------------------------------------------------------------------------------------------

@@ -330,6 +330,17 @@ Rule iMT_PlayerGoingToDieCoach
 	Response iMT_PlayerGoingToDieCoach
 }
 
+Response iMT_OtherPlayerWasPouncedCoach
+{
+	scene "scenes/Coach/HunterPouncedC101.vcd"  //That thing's ripping him up!
+	scene "scenes/Coach/HunterPouncedC102.vcd"  //Zombie's ripping him up!
+}
+Rule iMT_OtherPlayerWasPouncedCoach
+{
+	criteria iMT_OtherPlayerWasPounced IsCoach
+	Response iMT_OtherPlayerWasPouncedCoach
+}
+
 Response iMT_OtherPlayerWasPouncedGamblerCoach
 {
 	scene "scenes/Coach/HunterNickPounced01.vcd"  //Hunter's got Nick!
@@ -354,6 +365,8 @@ Rule iMT_OtherPlayerWasPouncedMechanicCoach
 
 Response iMT_OtherPlayerWasPouncedProducerCoach
 {
+	scene "scenes/Coach/HunterPouncedC1Producer01.vcd"  //Zombie's on Ro!
+	scene "scenes/Coach/HunterPouncedC1Producer02.vcd"  //Ro's getting ripped up!
 	scene "scenes/Coach/HunterRochellePounced01.vcd"  //Hunter's got Ro!
 	scene "scenes/Coach/HunterRochellePounced02.vcd"  //Hunter on  Rochelle!
 }
@@ -528,6 +541,61 @@ Rule iMT_PlayerIncapacitatedHurtCoach
 {
 	criteria iMT_PlayerIncapacitatedHurt IsCoach
 	Response iMT_PlayerIncapacitatedHurtCoach
+}
+
+Response iMT_PlayerMournGamblerCoach
+{
+	scene "scenes/Coach/SurvivorMournGamblerC101.vcd"  //Nick, we're gonna miss your gun.
+	scene "scenes/Coach/SurvivorMournGamblerC102.vcd"  //Damn. Nick, this just got a whole lot harder.
+	scene "scenes/Coach/SurvivorMournNick01.vcd"  //Nick, you gonna be missed.
+	scene "scenes/Coach/SurvivorMournNick02.vcd"  //Bye Nick.
+}
+Rule iMT_PlayerMournGamblerAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach IssuerClose SubjectIsGambler
+	Response iMT_PlayerMournGamblerCoach
+}
+Rule iMT_PlayerMournGamblerDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 IsGamblerNotAlive
+	Response iMT_PlayerMournGamblerCoach
+}
+
+Response iMT_PlayerMournMechanicCoach
+{
+	scene "scenes/Coach/SurvivorMournEllis01.vcd"  //Boy, I'm going to miss your goofy ass.
+	scene "scenes/Coach/SurvivorMournEllis02.vcd"  //Bye Ellis.
+	scene "scenes/Coach/SurvivorMournMechanicC101.vcd"  //Ahh damnit, I can't take losing anymore people.
+	scene "scenes/Coach/SurvivorMournMechanicC102.vcd"  //Little man, we are goin' to miss you.
+}
+Rule iMT_PlayerMournMechanicAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach IssuerClose SubjectIsMechanic
+	Response iMT_PlayerMournMechanicCoach
+}
+Rule iMT_PlayerMournMechanicDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 IsMechanicNotAlive
+	Response iMT_PlayerMournMechanicCoach
+}
+
+Response iMT_PlayerMournProducerCoach
+{
+	scene "scenes/Coach/SurvivorMournProducerC101.vcd"  //Gentlemen, we just lost the best thing in our little group.
+	scene "scenes/Coach/SurvivorMournProducerC102.vcd"  //Damn. Baby, I should have tried to protect you more.
+	scene "scenes/Coach/SurvivorMournRochelle01.vcd"  //Ahh baby girl, goodbye.
+	scene "scenes/Coach/SurvivorMournRochelle02.vcd"  //Oh Ro, oh Ro man...
+	scene "scenes/Coach/SurvivorMournRochelle03.vcd"  //Ahh baby girl, mmm.
+}
+Rule iMT_PlayerMournProducerAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach IssuerClose SubjectIsProducer
+	Response iMT_PlayerMournProducerCoach
+}
+Rule iMT_PlayerMournProducerDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsProducerNear200 IsProducerNotAlive
+	Response iMT_PlayerMournProducerCoach
 }
 
 //--------------------------------------------------------------------------------------------------------------

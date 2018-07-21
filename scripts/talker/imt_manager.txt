@@ -434,19 +434,6 @@ Rule iMT_PlayerBreathingManager
 	Response iMT_PlayerBreathingManager
 }
 
-Response iMT_PlayerAnswerReadyManager
-{
-	scene "scenes/Manager/AnswerReady01.vcd"  //Ready!
-	scene "scenes/Manager/AnswerReady02.vcd"  //Let's do it!
-	scene "scenes/Manager/AnswerReady03.vcd"  //Hit it!
-	scene "scenes/Manager/AnswerReady04.vcd"  //Come on, let's do it!
-}
-Rule iMT_PlayerAnswerReadyManager
-{
-	criteria iMT_PlayerAnswerReady IsManager
-	Response iMT_PlayerAnswerReadyManager
-}
-
 Response iMT_PlayerDeathScreamManager
 {
 	scene "scenes/Manager/Fall01.vcd"  //[Falling-to-Death scream]
@@ -509,6 +496,69 @@ Rule iMT_PlayerIncapacitatedHurtManager
 {
 	criteria iMT_PlayerIncapacitatedHurt IsManager
 	Response iMT_PlayerIncapacitatedHurtManager
+}
+
+Response iMT_PlayerMournBikerManager
+{
+	scene "scenes/Manager/GriefBiker01.vcd"  //Francis!  NO!
+	scene "scenes/Manager/GriefBiker03.vcd"  //Oh shit. Shit. Shit shit shit.
+	scene "scenes/Manager/GriefBiker04.vcd"  //Francis!  NO!
+	scene "scenes/Manager/GriefBiker05.vcd"  //Jesus, Francis!
+	scene "scenes/Manager/GriefBiker06.vcd"  //Oh shit. Shit. Shit shit shit.
+	scene "scenes/Manager/GriefBiker07.vcd"  //Jesus Christ, Francis, no, Francis!
+}
+Rule iMT_PlayerMournBikerAliveManager
+{
+	criteria iMT_PlayerMourn IsManager IssuerClose SubjectIsBiker
+	Response iMT_PlayerMournBikerManager
+}
+Rule iMT_PlayerMournBikerDeadManager
+{
+	criteria iMT_PlayerMourn IsManager IsBikerNear200 IsBikerNotAlive
+	Response iMT_PlayerMournBikerManager
+}
+
+Response iMT_PlayerMournNamVetManager
+{
+	scene "scenes/Manager/GriefVet01.vcd"  //Bill, no!
+	scene "scenes/Manager/GriefVet03.vcd"  //Ah Bill. Ah, shit.
+	scene "scenes/Manager/GriefVet04.vcd"  //Bill, Bill, no!
+	scene "scenes/Manager/GriefVet06.vcd"  //Bill, no!
+	scene "scenes/Manager/GriefVet07.vcd"  //Oh no, no, not the old man.
+	scene "scenes/Manager/GriefVet08.vcd"  //Ah Bill. Ah, shit.
+}
+Rule iMT_PlayerMournNamVetAliveManager
+{
+	criteria iMT_PlayerMourn IsManager IssuerClose SubjectIsNamVet
+	Response iMT_PlayerMournNamVetManager
+}
+Rule iMT_PlayerMournNamVetDeadManager
+{
+	criteria iMT_PlayerMourn IsManager IsNamVetNear200 IsNamVetNotAlive
+	Response iMT_PlayerMournNamVetManager
+}
+
+Response iMT_PlayerMournTeenGirlManager
+{
+	scene "scenes/Manager/GriefFemaleGeneric02.vcd"  //Oh this is bad - she's dead.
+	scene "scenes/Manager/GriefTeenGirl01.vcd"  //Ah! Zoey!
+	scene "scenes/Manager/GriefTeenGirl02.vcd"  //ZOEY! Goddamn it.
+	scene "scenes/Manager/GriefTeenGirl03.vcd"  //Noo, oh ho ho, ZOEY!
+	scene "scenes/Manager/GriefTeenGirl04.vcd"  //Goddamn it Zoey, wake up!
+	scene "scenes/Manager/GriefTeenGirl05.vcd"  //Ah! Zoey!
+	scene "scenes/Manager/GriefTeenGirl06.vcd"  //Zoey!
+	scene "scenes/Manager/GriefTeenGirl07.vcd"  //Damn Zoey
+	scene "scenes/Manager/GriefTeenGirl08.vcd"  //Zoey, Zoey Goddamnit
+}
+Rule iMT_PlayerMournTeenGirlAliveManager
+{
+	criteria iMT_PlayerMourn IsManager IssuerClose SubjectIsTeenGirl
+	Response iMT_PlayerMournTeenGirlManager
+}
+Rule iMT_PlayerMournTeenGirlDeadManager
+{
+	criteria iMT_PlayerMourn IsManager IsTeenGirlNear200 IsTeenGirlNotAlive
+	Response iMT_PlayerMournTeenGirlManager
 }
 
 //--------------------------------------------------------------------------------------------------------------

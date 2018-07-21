@@ -303,6 +303,17 @@ Rule iMT_PlayerGoingToDieProducer
 	Response iMT_PlayerGoingToDieProducer
 }
 
+Response iMT_OtherPlayerWasPouncedProducer
+{
+	scene "scenes/Producer/HunterPouncedC106.vcd"  //That thing's on him!
+	scene "scenes/Producer/HunterPouncedC107.vcd"  //Get that thing off him!
+}
+Rule iMT_OtherPlayerWasPouncedProducer
+{
+	criteria iMT_OtherPlayerWasPounced IsProducer
+	Response iMT_OtherPlayerWasPouncedProducer
+}
+
 Response iMT_OtherPlayerWasPouncedGamblerProducer
 {
 	scene "scenes/Producer/HunterNickPounced01.vcd"  //Hunter's got Nick!
@@ -470,6 +481,59 @@ Rule iMT_PlayerIncapacitatedHurtProducer
 {
 	criteria iMT_PlayerIncapacitatedHurt IsProducer
 	Response iMT_PlayerIncapacitatedHurtProducer
+}
+
+Response iMT_PlayerMournCoachProducer
+{
+	scene "scenes/Producer/SurvivorMournCoach01.vcd"  //Gonna miss you Coach.
+	scene "scenes/Producer/SurvivorMournCoach02.vcd"  //Do you think Coach was his first or last name?
+	scene "scenes/Producer/SurvivorMournCoach03.vcd"  //Goodbye coach?
+	scene "scenes/Producer/SurvivorMournCoach04.vcd"  //Damn, didn't even get to know you coach.
+}
+Rule iMT_PlayerMournCoachAliveProducer
+{
+	criteria iMT_PlayerMourn IsProducer IssuerClose SubjectIsCoach
+	Response iMT_PlayerMournCoachProducer
+}
+Rule iMT_PlayerMournCoachDeadProducer
+{
+	criteria iMT_PlayerMourn IsProducer IsCoachNear200 IsCoachNotAlive
+	Response iMT_PlayerMournCoachProducer
+}
+
+Response iMT_PlayerMournGamblerProducer
+{
+	scene "scenes/Producer/SurvivorMournGamblerC101.vcd"  //Not much to say my friend, goodbye.
+	scene "scenes/Producer/SurvivorMournNick01.vcd"  //Ahh Nick, at least you are dressed for a funeral.
+	scene "scenes/Producer/SurvivorMournNick02.vcd"  //Goodbye Nick, going to miss you.
+}
+Rule iMT_PlayerMournGamblerAliveProducer
+{
+	criteria iMT_PlayerMourn IsProducer IssuerClose SubjectIsGambler
+	Response iMT_PlayerMournGamblerProducer
+}
+Rule iMT_PlayerMournGamblerDeadProducer
+{
+	criteria iMT_PlayerMourn IsProducer IsGamblerNear200 IsGamblerNotAlive
+	Response iMT_PlayerMournGamblerProducer
+}
+
+Response iMT_PlayerMournMechanicProducer
+{
+	scene "scenes/Producer/SurvivorMournEllis01.vcd"  //Ellis, what did you go and do?
+	scene "scenes/Producer/SurvivorMournEllis02.vcd"  //Oh Ellis, Ellis, Ellis...
+	scene "scenes/Producer/SurvivorMournEllis03.vcd"  //Oh Ellis, I am going to miss you.
+	scene "scenes/Producer/SurvivorMournMechanicC101.vcd"  //Gonna miss our little mechanic.
+}
+Rule iMT_PlayerMournMechanicAliveProducer
+{
+	criteria iMT_PlayerMourn IsProducer IssuerClose SubjectIsMechanic
+	Response iMT_PlayerMournMechanicProducer
+}
+Rule iMT_PlayerMournMechanicDeadProducer
+{
+	criteria iMT_PlayerMourn IsProducer IsMechanicNear200 IsMechanicNotAlive
+	Response iMT_PlayerMournMechanicProducer
 }
 
 //--------------------------------------------------------------------------------------------------------------

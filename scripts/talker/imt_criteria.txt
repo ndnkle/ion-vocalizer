@@ -13,13 +13,13 @@ Criterion	"iMT_OtherPlayerWasPounced"	"Concept"	"iMT_OtherPlayerWasPounced"	requ
 Criterion	"iMT_PlayerAlsoWarnCharger"	"Concept"	"iMT_PlayerAlsoWarnCharger"	required
 Criterion	"iMT_PlayerAlsoWarnJockey"	"Concept"	"iMT_PlayerAlsoWarnJockey"	required
 Criterion	"iMT_PlayerAlsoWarnSpitter"	"Concept"	"iMT_PlayerAlsoWarnSpitter"	required
-Criterion	"iMT_PlayerAnswerReady"		"Concept"	"iMT_PlayerAnswerReady"		required
 Criterion	"iMT_PlayerBreathing"		"Concept"	"iMT_PlayerBreathing"		required
 Criterion	"iMT_PlayerCoughing"		"Concept"	"iMT_PlayerCoughing"		required
 Criterion	"iMT_PlayerDeathScream"		"Concept"	"iMT_PlayerDeathScream"		required
 Criterion	"iMT_PlayerEquippedItem"	"Concept"	"iMT_PlayerEquippedItem"	required
 Criterion	"iMT_PlayerGoingToDie"		"Concept"	"iMT_PlayerGoingToDie"		required
 Criterion	"iMT_PlayerIncapacitatedHurt"	"Concept"	"iMT_PlayerIncapacitatedHurt"	required
+Criterion	"iMT_PlayerMourn"		"Concept"	"iMT_PlayerMourn"		required
 Criterion	"iMT_PlayerNiceShot"		"Concept"	"iMT_PlayerNiceShot"		required
 Criterion	"iMT_PlayerSuggestHealth"	"Concept"	"iMT_PlayerSuggestHealth"	required
 Criterion	"iMT_PlayerTeamKill"		"Concept"	"iMT_PlayerTeamKill"		required
@@ -172,6 +172,25 @@ Criterion	"iMT_Rescue9"			"Concept"	"iMT_Rescue9"			required
 Criterion	"iMT_Soldiers"			"Concept"	"iMT_Soldiers"			required
 Criterion	"iMT_Virgil"			"Concept"	"iMT_Virgil"			required
 Criterion	"iMT_Whitaker"			"Concept"	"iMT_Whitaker"			required
+
+// Zombies
+
+Criterion	"iMT_ZombieAlert"		"Concept"	"iMT_ZombieAlert"		required
+Criterion	"iMT_ZombieDeath"		"Concept"	"iMT_ZombieDeath"		required
+Criterion	"iMT_ZombieFakeTank"		"Concept"	"iMT_ZombieFakeTank"		required
+Criterion	"iMT_ZombieFakeWitch1"		"Concept"	"iMT_ZombieFakeWitch1"		required
+Criterion	"iMT_ZombieFakeWitch2"		"Concept"	"iMT_ZombieFakeWitch2"		required
+Criterion	"iMT_ZombiePain"		"Concept"	"iMT_ZombiePain"		required
+Criterion	"iMT_ZombieSpecial"		"Concept"	"iMT_ZombieSpecial"		required
+Criterion	"iMT_ZombieWarn"		"Concept"	"iMT_ZombieWarn"		required
+Criterion	"IsCharger"			"Who"		"Charger"			required
+
+// Survivors
+
+Criterion	"IsTeenGirlNotAlive"		"IsTeenGirlAlive"	"!=1"			required
+Criterion	"IsNamVetNotAlive"		"IsNamVetAlive"		"!=1"			required
+Criterion	"IsManagerNotAlive"		"IsManagerAlive"	"!=1"			required
+Criterion	"IsBikerNotAlive"		"IsBikerAlive"		"!=1"			required
 
 // Map Switchs
 

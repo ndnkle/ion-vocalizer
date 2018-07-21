@@ -1,0 +1,517 @@
+//--------------------------------------------------------------------------------------------------------------
+// Zombies Response Rule File
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_ZombieFakeTank
+{
+	speak "HulkZombie.Breathe"
+}
+
+Response iMT_ZombieFakeWitch1
+{
+	speak "WitchZombie.Scream"
+}
+
+Response iMT_ZombieFakeWitch2
+{
+	speak "WitchZombie.Despair"
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Boomer
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_ZombieAlertBoomer
+{
+	speak "BoomerZombie.Alert"
+}
+Rule iMT_ZombieAlertBoomer
+{
+	criteria iMT_ZombieAlert IsBoomer
+	Response iMT_ZombieAlertBoomer
+}
+
+Response iMT_ZombieWarnBoomer
+{
+	speak "BoomerZombie.Warn"
+}
+Rule iMT_ZombieWarnBoomer
+{
+	criteria iMT_ZombieWarn IsBoomer
+	Response iMT_ZombieWarnBoomer
+}
+
+Response iMT_ZombiePainBoomer
+{
+	speak "BoomerZombie.Pain"
+}
+Rule iMT_ZombiePainBoomer
+{
+	criteria iMT_ZombiePain IsBoomer
+	Response iMT_ZombiePainBoomer
+}
+
+Response iMT_ZombieDeathBoomer
+{
+	speak "BoomerZombie.Detonate"
+}
+Rule iMT_ZombieDeathBoomer
+{
+	criteria iMT_ZombieDeath IsBoomer
+	Response iMT_ZombieDeathBoomer
+}
+
+Response iMT_ZombieSpecialBoomer
+{
+	speak "BoomerZombie.Fall"
+}
+Rule iMT_ZombieSpecialBoomer
+{
+	criteria iMT_ZombieSpecial IsBoomer
+	Response iMT_ZombieSpecialBoomer
+}
+
+Rule iMT_ZombieFakeTankBoomer
+{
+	criteria iMT_ZombieFakeTank IsBoomer
+	Response iMT_ZombieFakeTank
+}
+
+Rule iMT_ZombieFakeWitch1Boomer
+{
+	criteria iMT_ZombieFakeWitch1 IsBoomer
+	Response iMT_ZombieFakeWitch1
+}
+
+Rule iMT_ZombieFakeWitch2Boomer
+{
+	criteria iMT_ZombieFakeWitch2 IsBoomer
+	Response iMT_ZombieFakeWitch2
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Smoker
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_ZombieAlertSmoker
+{
+	speak "SmokerZombie.Alert"
+}
+Rule iMT_ZombieAlertSmoker
+{
+	criteria iMT_ZombieAlert IsSmoker
+	Response iMT_ZombieAlertSmoker
+}
+
+Response iMT_ZombieWarnSmoker
+{
+	speak "SmokerZombie.Warn"
+}
+Rule iMT_ZombieWarnSmoker
+{
+	criteria iMT_ZombieWarn IsSmoker
+	Response iMT_ZombieWarnSmoker
+}
+
+Response iMT_ZombiePainSmoker
+{
+	speak "SmokerZombie.Pain"
+}
+Rule iMT_ZombiePainSmoker
+{
+	criteria iMT_ZombiePain IsSmoker
+	Response iMT_ZombiePainSmoker
+}
+
+Response iMT_ZombieDeathSmoker
+{
+	speak "SmokerZombie.Death"
+}
+Rule iMT_ZombieDeathSmoker
+{
+	criteria iMT_ZombieDeath IsSmoker
+	Response iMT_ZombieDeathSmoker
+}
+
+Response iMT_ZombieSpecialSmoker
+{
+	speak "SmokerZombie.TongueStrain"
+}
+Rule iMT_ZombieSpecialSmoker
+{
+	criteria iMT_ZombieSpecial IsSmoker
+	Response iMT_ZombieSpecialSmoker
+}
+
+Rule iMT_ZombieFakeTankSmoker
+{
+	criteria iMT_ZombieFakeTank IsSmoker
+	Response iMT_ZombieFakeTank
+}
+
+Rule iMT_ZombieFakeWitch1Smoker
+{
+	criteria iMT_ZombieFakeWitch1 IsSmoker
+	Response iMT_ZombieFakeWitch1
+}
+
+Rule iMT_ZombieFakeWitch2Smoker
+{
+	criteria iMT_ZombieFakeWitch2 IsSmoker
+	Response iMT_ZombieFakeWitch2
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Hunter
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_ZombieAlertHunter
+{
+	speak "HunterZombie.Alert"
+}
+Rule iMT_ZombieAlertHunter
+{
+	criteria iMT_ZombieAlert IsHunter
+	Response iMT_ZombieAlertHunter
+}
+
+Response iMT_ZombieWarnHunter
+{
+	speak "HunterZombie.Warn"
+}
+Rule iMT_ZombieWarnHunter
+{
+	criteria iMT_ZombieWarn IsHunter
+	Response iMT_ZombieWarnHunter
+}
+
+Response iMT_ZombiePainHunter
+{
+	speak "HunterZombie.Pain"
+}
+Rule iMT_ZombiePainHunter
+{
+	criteria iMT_ZombiePain IsHunter
+	Response iMT_ZombiePainHunter
+}
+
+Response iMT_ZombieDeathHunter
+{
+	speak "HunterZombie.Death"
+}
+Rule iMT_ZombieDeathHunter
+{
+	criteria iMT_ZombieDeath IsHunter
+	Response iMT_ZombieDeathHunter
+}
+
+Response iMT_ZombieSpecialHunter
+{
+	speak "HunterZombie.LungeLand"
+}
+Rule iMT_ZombieSpecialHunter
+{
+	criteria iMT_ZombieSpecial IsHunter
+	Response iMT_ZombieSpecialHunter
+}
+
+Rule iMT_ZombieFakeTankHunter
+{
+	criteria iMT_ZombieFakeTank IsHunter
+	Response iMT_ZombieFakeTank
+}
+
+Rule iMT_ZombieFakeWitch1Hunter
+{
+	criteria iMT_ZombieFakeWitch1 IsHunter
+	Response iMT_ZombieFakeWitch1
+}
+
+Rule iMT_ZombieFakeWitch2Hunter
+{
+	criteria iMT_ZombieFakeWitch2 IsHunter
+	Response iMT_ZombieFakeWitch2
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Charger
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_ZombieAlertCharger
+{
+	speak "ChargerZombie.Alert"
+}
+Rule iMT_ZombieAlertCharger
+{
+	criteria iMT_ZombieAlert IsCharger
+	Response iMT_ZombieAlertCharger
+}
+
+Response iMT_ZombieWarnCharger
+{
+	speak "ChargerZombie.Warn"
+}
+Rule iMT_ZombieWarnCharger
+{
+	criteria iMT_ZombieWarn IsCharger
+	Response iMT_ZombieWarnCharger
+}
+
+Response iMT_ZombiePainCharger
+{
+	speak "ChargerZombie.Pain"
+}
+Rule iMT_ZombiePainCharger
+{
+	criteria iMT_ZombiePain IsCharger
+	Response iMT_ZombiePainCharger
+}
+
+Response iMT_ZombieDeathCharger
+{
+	speak "ChargerZombie.Death"
+}
+Rule iMT_ZombieDeathCharger
+{
+	criteria iMT_ZombieDeath IsCharger
+	Response iMT_ZombieDeathCharger
+}
+
+Response iMT_ZombieSpecialCharger
+{
+	speak "ChargerZombie.Melee"
+}
+Rule iMT_ZombieSpecialCharger
+{
+	criteria iMT_ZombieSpecial IsCharger
+	Response iMT_ZombieSpecialCharger
+}
+
+Rule iMT_ZombieFakeTankCharger
+{
+	criteria iMT_ZombieFakeTank IsCharger
+	Response iMT_ZombieFakeTank
+}
+
+Rule iMT_ZombieFakeWitch1Charger
+{
+	criteria iMT_ZombieFakeWitch1 IsCharger
+	Response iMT_ZombieFakeWitch1
+}
+
+Rule iMT_ZombieFakeWitch2Charger
+{
+	criteria iMT_ZombieFakeWitch2 IsCharger
+	Response iMT_ZombieFakeWitch2
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Spitter
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_ZombieAlertSpitter
+{
+	speak "SpitterZombie.Alert"
+}
+Rule iMT_ZombieAlertSpitter
+{
+	criteria iMT_ZombieAlert IsSpitter
+	Response iMT_ZombieAlertSpitter
+}
+
+Response iMT_ZombieWarnSpitter
+{
+	speak "SpitterZombie.Recognize"
+}
+Rule iMT_ZombieWarnSpitter
+{
+	criteria iMT_ZombieWarn IsSpitter
+	Response iMT_ZombieWarnSpitter
+}
+
+Response iMT_ZombiePainSpitter
+{
+	speak "SpitterZombie.Pain"
+}
+Rule iMT_ZombiePainSpitter
+{
+	criteria iMT_ZombiePain IsSpitter
+	Response iMT_ZombiePainSpitter
+}
+
+Response iMT_ZombieDeathSpitter
+{
+	speak "SpitterZombie.Death"
+}
+Rule iMT_ZombieDeathSpitter
+{
+	criteria iMT_ZombieDeath IsSpitter
+	Response iMT_ZombieDeathSpitter
+}
+
+Response iMT_ZombieSpecialSpitter
+{
+	speak "SpitterZombie.Spit"
+}
+Rule iMT_ZombieSpecialSpitter
+{
+	criteria iMT_ZombieSpecial IsSpitter
+	Response iMT_ZombieSpecialSpitter
+}
+
+Rule iMT_ZombieFakeTankSpitter
+{
+	criteria iMT_ZombieFakeTank IsSpitter
+	Response iMT_ZombieFakeTank
+}
+
+Rule iMT_ZombieFakeWitch1Spitter
+{
+	criteria iMT_ZombieFakeWitch1 IsSpitter
+	Response iMT_ZombieFakeWitch1
+}
+
+Rule iMT_ZombieFakeWitch2Spitter
+{
+	criteria iMT_ZombieFakeWitch2 IsSpitter
+	Response iMT_ZombieFakeWitch2
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Jockey
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_ZombieAlertJockey
+{
+	speak "JockeyZombie.Alert"
+}
+Rule iMT_ZombieAlertJockey
+{
+	criteria iMT_ZombieAlert IsJockey
+	Response iMT_ZombieAlertJockey
+}
+
+Response iMT_ZombieWarnJockey
+{
+	speak "JockeyZombie.Warn"
+}
+Rule iMT_ZombieWarnJockey
+{
+	criteria iMT_ZombieWarn IsJockey
+	Response iMT_ZombieWarnJockey
+}
+
+Response iMT_ZombiePainJockey
+{
+	speak "JockeyZombie.Pain"
+}
+Rule iMT_ZombiePainJockey
+{
+	criteria iMT_ZombiePain IsJockey
+	Response iMT_ZombiePainJockey
+}
+
+Response iMT_ZombieDeathJockey
+{
+	speak "JockeyZombie.Death"
+}
+Rule iMT_ZombieDeathJockey
+{
+	criteria iMT_ZombieDeath IsJockey
+	Response iMT_ZombieDeathJockey
+}
+
+Response iMT_ZombieSpecialJockey
+{
+	speak "JockeyZombie.Pounce"
+}
+Rule iMT_ZombieSpecialJockey
+{
+	criteria iMT_ZombieSpecial IsJockey
+	Response iMT_ZombieSpecialJockey
+}
+
+Rule iMT_ZombieFakeTankJockey
+{
+	criteria iMT_ZombieFakeTank IsJockey
+	Response iMT_ZombieFakeTank
+}
+
+Rule iMT_ZombieFakeWitch1Jockey
+{
+	criteria iMT_ZombieFakeWitch1 IsJockey
+	Response iMT_ZombieFakeWitch1
+}
+
+Rule iMT_ZombieFakeWitch2Jockey
+{
+	criteria iMT_ZombieFakeWitch2 IsJockey
+	Response iMT_ZombieFakeWitch2
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Tank
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_ZombieAlertTank
+{
+	speak "HulkZombie.Growl"
+}
+Rule iMT_ZombieAlertTank
+{
+	criteria iMT_ZombieAlert IsTank
+	Response iMT_ZombieAlertTank
+}
+
+Response iMT_ZombieWarnTank
+{
+	speak "HulkZombie.Yell"
+}
+Rule iMT_ZombieWarnTank
+{
+	criteria iMT_ZombieWarn IsTank
+	Response iMT_ZombieWarnTank
+}
+
+Response iMT_ZombiePainTank
+{
+	speak "HulkZombie.Pain"
+	speak "HulkZombie.PainFire"
+}
+Rule iMT_ZombiePainTank
+{
+	criteria iMT_ZombiePain IsTank
+	Response iMT_ZombiePainTank
+}
+
+Response iMT_ZombieDeathTank
+{
+	speak "HulkZombie.Die"
+}
+Rule iMT_ZombieDeathTank
+{
+	criteria iMT_ZombieDeath IsTank
+	Response iMT_ZombieDeathTank
+}
+
+Response iMT_ZombieSpecialTank
+{
+	speak "HulkZombie.Throw.Pickup"
+}
+Rule iMT_ZombieSpecialTank
+{
+	criteria iMT_ZombieSpecial IsTank
+	Response iMT_ZombieSpecialTank
+}
+
+Rule iMT_ZombieFakeWitch1Tank
+{
+	criteria iMT_ZombieFakeWitch1 IsTank
+	Response iMT_ZombieFakeWitch1
+}
+
+Rule iMT_ZombieFakeWitch2Tank
+{
+	criteria iMT_ZombieFakeWitch2 IsTank
+	Response iMT_ZombieFakeWitch2
+}
