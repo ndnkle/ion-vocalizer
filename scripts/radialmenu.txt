@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 11.0
+// ion's Vocalizer 12.1
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -219,8 +219,8 @@
 		}
 		"NorthEast"
 		{
-			"command"	"vocalize CallForRescue"
-			"text"		"Trapped"
+			"command"	"vocalize PlayerLedgeHangStart"
+			"text"		"Slipped"
 		}
 		"East"
 		{
@@ -359,6 +359,56 @@
 	{
 		"Center"
 		{
+			"command"	"vocalize ReviveFriendDownFinal"
+			"text"		"Good"
+		}
+		"North"
+		{
+			"command"	"vocalize C6M1_IntotheparkNoHealth"
+			"text"		"Health kit"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize CallForRescue"
+			"text"		"Trapped"
+		}
+		"East"
+		{
+			"command"	"vocalize SurvivorJockeyed"
+			"text"		"Ridden"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize RevivedByDefibrillatorDelayed"
+			"text"		"Defibbed"
+		}
+		"South"
+		{
+			"command"	"vocalize c2m3SeeChopper"
+			"text"		"Chopper"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize PlayerLedgeSave"
+			"text"		"Save"
+		}
+		"West"
+		{
+			"command"	"vocalize PlayerReviveFriend"
+			"text"		"Revive"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize PlayerReviveFriendCritical"
+			"text"		"Critical"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Misc4,Survivor,Alive"
+	{
+		"Center"
+		{
 			"command"	"vocalize iMT_PlayerCoughing"
 			"text"		"Cough"
 		}
@@ -405,7 +455,7 @@
 	}
 
 	//--------------------------------------------------------------
-	"Misc4,Survivor,Alive"
+	"Misc5,Survivor,Alive"
 	{
 		"Center"
 		{
@@ -2914,8 +2964,8 @@
 		}
 		"North"
 		{
-			"command"	"vocalize DLC1_C6M2_SafeRoomConvo18e"
-			"text"		"Guard"
+			"command"	"vocalize DLC1_C6M2_SafeRoomConvo18c"
+			"text"		"Girl"
 		}
 		"NorthEast"
 		{

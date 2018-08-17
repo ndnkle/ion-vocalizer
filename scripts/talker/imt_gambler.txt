@@ -127,6 +127,17 @@ Rule iMT_TattoosGambler
 	Response iMT_TattoosGambler
 }
 
+Response iMT_AllAboardGambler
+{
+	scene "scenes/Gambler/CMTY_LineSend02.vcd"  //Hey Ellis, all aboard! Toot! Toot!
+	scene "scenes/Gambler/CMTY_LineSend03.vcd"  //All aboard! Toot! Toot!
+}
+Rule iMT_AllAboardGambler
+{
+	criteria iMT_AllAboard IsGambler
+	Response iMT_AllAboardGambler
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------

@@ -2,6 +2,16 @@
 // Producer Response Rule File
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_SingingProducer
+{
+	scene "scenes/Producer/TransitionClose08.vcd"  //We made it uh huh. We made it oh yeah (sung)
+}
+Rule iMT_SingingProducer
+{
+	criteria iMT_Singing IsProducer
+	Response iMT_SingingProducer
+}
+
 Response iMT_CharmingProducer
 {
 	scene "scenes/Producer/DLC1_C6M1_InitialMeeting17.vcd"  //Oh, Nick, charming is not a word I would use to describe you.
