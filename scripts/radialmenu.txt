@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 12.1
+// ion's Vocalizer 12.2
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -1179,8 +1179,8 @@
 		}
 		"SouthEast"
 		{
-			"command"	"vocalize ConceptBlock632"
-			"text"		"Obedient"
+			"command"	"vocalize C6M1Intro_14b"
+			"text"		"You four"
 		}
 		"South"
 		{
@@ -2949,8 +2949,8 @@
 		}
 		"NorthWest"
 		{
-			"command"	"vocalize iMT_ChangeOfPlans"
-			"text"		"Change"
+			"command"	"vocalize iMT_NotDie"
+			"text"		"Not die"
 		}
 	}
 
@@ -3744,8 +3744,8 @@
 		}
 		"West"
 		{
-			"command"	"vocalize iMT_SoMad"
-			"text"		"Mad"
+			"command"	"vocalize iMT_Candy"
+			"text"		"Candy"
 		}
 		"NorthWest"
 		{

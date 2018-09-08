@@ -86,14 +86,14 @@ Rule iMT_FeelingGambler
 	Response iMT_FeelingGambler
 }
 
-Response iMT_ChangeOfPlansGambler
+Response iMT_NotDieGambler
 {
-	scene "scenes/Gambler/TeaserIntroMovie07.vcd"  //Looks like there's been a change of plans.
+	scene "scenes/Gambler/WorldC5MGoingToDie02.vcd"  //I have not come this far to die now.
 }
-Rule iMT_ChangeOfPlansGambler
+Rule iMT_NotDieGambler
 {
-	criteria iMT_ChangeOfPlans IsGambler
-	Response iMT_ChangeOfPlansGambler
+	criteria iMT_NotDie IsGambler
+	Response iMT_NotDieGambler
 }
 
 Response iMT_EllisStoryInterruptGambler

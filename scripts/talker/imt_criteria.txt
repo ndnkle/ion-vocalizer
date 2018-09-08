@@ -32,12 +32,12 @@ Criterion	"iMT_WitchGettingAngry"		"Concept"	"iMT_WitchGettingAngry"		required
 // Nick
 
 Criterion	"iMT_Angel"			"Concept"	"iMT_Angel"			required
-Criterion	"iMT_ChangeOfPlans"		"Concept"	"iMT_ChangeOfPlans"		required
 Criterion	"iMT_Fantasy"			"Concept"	"iMT_Fantasy"			required
 Criterion	"iMT_Feeling"			"Concept"	"iMT_Feeling"			required
 Criterion	"iMT_Fish"			"Concept"	"iMT_Fish"			required
 Criterion	"iMT_FourRiders"		"Concept"	"iMT_FourRiders"		required
 Criterion	"iMT_Honeymoon"			"Concept"	"iMT_Honeymoon"			required
+Criterion	"iMT_NotDie"			"Concept"	"iMT_NotDie"			required
 Criterion	"iMT_ShitAir"			"Concept"	"iMT_ShitAir"			required
 Criterion	"iMT_Trust"			"Concept"	"iMT_Trust"			required
 
@@ -56,6 +56,7 @@ Criterion	"iMT_What"			"Concept"	"iMT_What"			required
 
 Criterion	"iMT_AllAboard"			"Concept"	"iMT_AllAboard"			required
 Criterion	"iMT_CaCaw"			"Concept"	"iMT_CaCaw"			required
+Criterion	"iMT_Candy"			"Concept"	"iMT_Candy"			required
 Criterion	"iMT_CoachBreathingReac"	"Concept"	"iMT_CoachBreathingReac"	required
 Criterion	"iMT_EllisStories"		"Concept"	"iMT_EllisStories"		required
 Criterion	"iMT_EllisStoryReac01"		"Concept"	"iMT_EllisStoryReac01"		required
@@ -65,7 +66,6 @@ Criterion	"iMT_DLC1_KeithStories03b"	"Concept"	"iMT_DLC1_KeithStories03b"	requir
 Criterion	"iMT_DLC1_KeithStories03c"	"Concept"	"iMT_DLC1_KeithStories03c"	required
 Criterion	"iMT_Marriage"			"Concept"	"iMT_Marriage"			required
 Criterion	"iMT_SayingZoey"		"Concept"	"iMT_SayingZoey"		required
-Criterion	"iMT_SoMad"			"Concept"	"iMT_SoMad"			required
 Criterion	"iMT_Tattoos"			"Concept"	"iMT_Tattoos"			required
 Criterion	"iMT_TeamFortress2"		"Concept"	"iMT_TeamFortress2"		required
 

@@ -89,15 +89,14 @@ Rule iMT_CaCawMechanic
 	Response iMT_CaCawMechanic
 }
 
-Response iMT_SoMadMechanic
+Response iMT_CandyMechanic
 {
-	scene "scenes/Mechanic/FriendlyFire16.vcd" //I'm gettin' so mad I could shit a squealin' worm.
-	scene "scenes/Mechanic/FriendlyFire22.vcd" //I'm gettin' so mad I could shit a squealin' worm, man.
+	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater02.vcd" //Oh man, I found a candy bar! [beat] Whup. False alarm.
 }
-Rule iMT_SoMadMechanic
+Rule iMT_CandyMechanic
 {
-	criteria iMT_SoMad IsMechanic
-	Response iMT_SoMadMechanic
+	criteria iMT_Candy IsMechanic
+	Response iMT_CandyMechanic
 }
 
 Response iMT_CoachBreathingReacMechanic
