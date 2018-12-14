@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 12.3
+// ion's Vocalizer 12.4
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -2434,7 +2434,7 @@
 		}
 		"South"
 		{
-			"command"	"vocalize C3M2SafeRoom2c"
+			"command"	"vocalize C3M3SafeRoom2a3"
 			"text"		"Swamp people"
 		}
 		"SouthWest"
@@ -3644,8 +3644,8 @@
 		}
 		"West"
 		{
-			"command"	"vocalize C1M3AlarmOffa"
-			"text"		"Ringing"
+			"command"	"vocalize C5M3Bodies02"
+			"text"		"People"
 		}
 		"NorthWest"
 		{
