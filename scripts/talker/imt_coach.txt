@@ -131,9 +131,78 @@ Rule iMT_AllAboardCoach
 	Response iMT_AllAboardCoach
 }
 
+Response iMT_NotDieCoach
+{
+	scene "scenes/Coach/GoingToDieR01.vcd"  //Come on now, put it all out there.
+	scene "scenes/Coach/GoingToDieR02.vcd"  //Come on, it's all you.
+	scene "scenes/Coach/GoingToDieR03.vcd"  //That's it. Stay focused.
+	scene "scenes/Coach/GoingToDieR04.vcd"  //Stay with us.
+	scene "scenes/Coach/GoingToDieR05.vcd"  //That's it. Yeah. Fight thru it.
+	scene "scenes/Coach/GoingToDieR06.vcd"  //Come on now, walk that shit off.
+	scene "scenes/Coach/GoingToDieR07.vcd"  //Keep it up, come on, keep it up, keep it up. You're gonna make it.
+	scene "scenes/Coach/GoingToDieR08.vcd"  //Hey. Listen to me, you are gonna make it.
+	scene "scenes/Coach/GoingToDieR09.vcd"  //They put a hurtin on ya but ain't no thing.
+	scene "scenes/Coach/GoingToDieR10.vcd"  //Come on now, put it behind ya, you good, you good.
+}
+Rule iMT_NotDieCoach
+{
+	criteria iMT_NotDie IsCoach
+	Response iMT_NotDieCoach
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerHeardBoomerCoach
+{
+	scene "scenes/Coach/HeardBoomer01.vcd"  //I hear a Boomer.
+	scene "scenes/Coach/HeardBoomer02.vcd"  //Boomer's sneakin 'round.
+	scene "scenes/Coach/HeardBoomer03.vcd"  //Careful now, boomer.
+	scene "scenes/Coach/HeardBoomer04.vcd"  //Step slow ya' all, boomer round.
+}
+Rule iMT_PlayerHeardBoomerCoach
+{
+	criteria iMT_PlayerHeardBoomer IsCoach
+	Response iMT_PlayerHeardBoomerCoach
+}
+
+Response iMT_PlayerHeardHunterCoach
+{
+	scene "scenes/Coach/HeardHunter01.vcd"  //I hear a hunter.
+	scene "scenes/Coach/HeardHunter02.vcd"  //Punk ass hunter around.
+	scene "scenes/Coach/HeardHunter03.vcd"  //Sounds like a hunter.
+}
+Rule iMT_PlayerHeardHunterCoach
+{
+	criteria iMT_PlayerHeardHunter IsCoach
+	Response iMT_PlayerHeardHunterCoach
+}
+
+Response iMT_PlayerHeardSmokerCoach
+{
+	scene "scenes/Coach/HeardSmoker01.vcd"  //Sounds like a Smoker.
+	scene "scenes/Coach/HeardSmoker02.vcd"  //I hear a smoker.
+	scene "scenes/Coach/HeardSmoker03.vcd"  //Sounds like one of them smoker bitches.
+}
+Rule iMT_PlayerHeardSmokerCoach
+{
+	criteria iMT_PlayerHeardSmoker IsCoach
+	Response iMT_PlayerHeardSmokerCoach
+}
+
+Response iMT_PlayerHeardChargerCoach
+{
+	scene "scenes/Coach/HeardCharger01.vcd"  //We gotta Charger round.
+	scene "scenes/Coach/HeardCharger02.vcd"  //Gotta Charger round.
+	scene "scenes/Coach/HeardCharger03.vcd"  //I hear a Charger.
+	scene "scenes/Coach/HeardCharger04.vcd"  //I hear a charger, don't get charged and shit.
+}
+Rule iMT_PlayerHeardChargerCoach
+{
+	criteria iMT_PlayerHeardCharger IsCoach
+	Response iMT_PlayerHeardChargerCoach
+}
 
 Response iMT_PlayerAlsoWarnChargerCoach
 {
@@ -145,6 +214,32 @@ Rule iMT_PlayerAlsoWarnChargerCoach
 {
 	criteria iMT_PlayerAlsoWarnCharger IsCoach
 	Response iMT_PlayerAlsoWarnChargerCoach
+}
+
+Response iMT_PlayerAlsoWarnChargerC1Coach
+{
+	scene "scenes/Coach/WarnChargerC101.vcd"  //Big arm!
+	scene "scenes/Coach/WarnChargerC102.vcd"  //One arm!
+}
+Rule iMT_PlayerAlsoWarnChargerC1Coach
+{
+	criteria iMT_PlayerAlsoWarnCharger IsCoach C1M1orC1M2
+	Response iMT_PlayerAlsoWarnChargerC1Coach
+}
+
+Response iMT_PlayerHeardJockeyCoach
+{
+	scene "scenes/Coach/HeardJockey01.vcd"  //I hear a jockey.
+	scene "scenes/Coach/HeardJockey02.vcd"  //One of those little jockeys is around.
+	scene "scenes/Coach/HeardJockey03.vcd"  //That sounds like a little jockey.
+	scene "scenes/Coach/HeardJockey04.vcd"  //One of those leapin' on your back bitches is around.
+	scene "scenes/Coach/HeardJockey05.vcd"  //One of those leapin' on your back bitches is around.
+	scene "scenes/Coach/HeardJockey06.vcd"  //I hear one of those jockeys.  If I see it, I'm gonna shoot the shit out of it.
+}
+Rule iMT_PlayerHeardJockeyCoach
+{
+	criteria iMT_PlayerHeardJockey IsCoach
+	Response iMT_PlayerHeardJockeyCoach
 }
 
 Response iMT_PlayerAlsoWarnJockeyCoach
@@ -159,6 +254,32 @@ Rule iMT_PlayerAlsoWarnJockeyCoach
 	Response iMT_PlayerAlsoWarnJockeyCoach
 }
 
+Response iMT_PlayerAlsoWarnJockeyC1Coach
+{
+	scene "scenes/Coach/WarnJockeyC101.vcd"  //Little guy!
+	scene "scenes/Coach/WarnJockeyC102.vcd"  //Little creep!
+	scene "scenes/Coach/WarnJockeyC103.vcd"  //Skittish one.
+}
+Rule iMT_PlayerAlsoWarnJockeyC1Coach
+{
+	criteria iMT_PlayerAlsoWarnJockey IsCoach C1M1orC1M2
+	Response iMT_PlayerAlsoWarnJockeyC1Coach
+}
+
+Response iMT_PlayerHeardSpitterCoach
+{
+	scene "scenes/Coach/HeardSpitter01.vcd"  //I hear a spitter.
+	scene "scenes/Coach/HeardSpitter02.vcd"  //That sounds like a spitter.
+	scene "scenes/Coach/HeardSpitter03.vcd"  //Spitter's around.
+	scene "scenes/Coach/HeardSpitter04.vcd"  //That fat spittin' bitch is around.
+	scene "scenes/Coach/HeardSpitter05.vcd"  //I hear that fat woman.
+}
+Rule iMT_PlayerHeardSpitterCoach
+{
+	criteria iMT_PlayerHeardSpitter IsCoach
+	Response iMT_PlayerHeardSpitterCoach
+}
+
 Response iMT_PlayerAlsoWarnSpitterCoach
 {
 	scene "scenes/Coach/WarnSpitter01.vcd"  //SPITTER!
@@ -169,6 +290,45 @@ Rule iMT_PlayerAlsoWarnSpitterCoach
 {
 	criteria iMT_PlayerAlsoWarnSpitter IsCoach
 	Response iMT_PlayerAlsoWarnSpitterCoach
+}
+
+Response iMT_PlayerAlsoWarnSpitterC1Coach
+{
+	scene "scenes/Coach/WarnSpitterC101.vcd"  //Crazy woman!
+	scene "scenes/Coach/WarnSpitterC102.vcd"  //Neck!
+	scene "scenes/Coach/WarnSpitterC103.vcd"  //Spitting thing!
+}
+Rule iMT_PlayerAlsoWarnSpitterC1Coach
+{
+	criteria iMT_PlayerAlsoWarnSpitter IsCoach C1M1orC1M2
+	Response iMT_PlayerAlsoWarnSpitterC1Coach
+}
+
+Response iMT_PlayerHeardWitchCoach
+{
+	scene "scenes/Coach/HeardWitch01.vcd"  //Ya'all hear her?,Get ready to toss that bitch.
+	scene "scenes/Coach/HeardWitch02.vcd"  //Quiet everybody I hear a bitch.
+	scene "scenes/Coach/HeardWitch03.vcd"  //That there sounds like a witch.
+	scene "scenes/Coach/HeardWitch04.vcd"  //Quiet y'all, I hear a witch.
+}
+Rule iMT_PlayerHeardWitchCoach
+{
+	criteria iMT_PlayerHeardWitch IsCoach
+	Response iMT_PlayerHeardWitchCoach
+}
+
+Response iMT_PlayerHeardWitchC1Coach
+{
+	scene "scenes/Coach/HeardWitchC101.vcd" then Producer PlayerNo foo:0 0.3  //Rochelle, that ain't you is it girl?
+	scene "scenes/Coach/HeardWitchC102.vcd" then Producer PlayerNo foo:0 0.3  //Rochelle, that ain't you is it girl?
+	scene "scenes/Coach/HeardWitchC103.vcd"  //What is that crying?
+	scene "scenes/Coach/HeardWitchC104.vcd"  //What's doing that crying?
+	scene "scenes/Coach/HeardWitchC105.vcd"  //Man, that crying don't sound right.
+}
+Rule iMT_PlayerHeardWitchC1Coach
+{
+	criteria iMT_PlayerHeardWitch IsCoach C1M1orC1M2
+	Response iMT_PlayerHeardWitchC1Coach
 }
 
 Response iMT_PlayerCoughingCoach
@@ -425,6 +585,18 @@ Rule iMT_PlayerBreathingCoach
 	Response iMT_PlayerBreathingCoach
 }
 
+Response iMT_PlayerAnswerReadyCoach
+{
+	scene "scenes/Coach/TakeMelee01.vcd"  //Oh yeah.
+	scene "scenes/Coach/TakeMelee02.vcd"  //Alright now, mm-hm. This is gonna work.
+	scene "scenes/Coach/TakeMelee07.vcd"  //Alright. Now I am ready.
+}
+Rule iMT_PlayerAnswerReadyCoach
+{
+	criteria iMT_PlayerAnswerReady IsCoach
+	Response iMT_PlayerAnswerReadyCoach
+}
+
 Response iMT_PlayerDeathScreamCoach
 {
 	scene "scenes/Coach/DeathScream01.vcd"  //[Loud painful death scream]
@@ -596,6 +768,18 @@ Rule iMT_PlayerMournProducerDeadCoach
 {
 	criteria iMT_PlayerMourn IsCoach IsProducerNear200 IsProducerNotAlive
 	Response iMT_PlayerMournProducerCoach
+}
+
+Response iMT_PlayerNearExitCoach
+{
+	scene "scenes/Coach/SafeSpotAhead01.vcd"  //Safe house up ahead!
+	scene "scenes/Coach/SafeSpotAhead02.vcd"  //Safe house!
+	scene "scenes/Coach/SafeSpotAhead03.vcd"  //Safe house, let's go!
+}
+Rule iMT_PlayerNearExitCoach
+{
+	criteria iMT_PlayerNearExit IsCoach
+	Response iMT_PlayerNearExitCoach
 }
 
 //--------------------------------------------------------------------------------------------------------------

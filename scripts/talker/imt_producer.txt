@@ -153,6 +153,61 @@ Rule iMT_AllAboardProducer
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerHeardBoomerProducer
+{
+	scene "scenes/Producer/HeardBoomer01.vcd"  //Careful I can hear a boomer.
+	scene "scenes/Producer/HeardBoomer02.vcd"  //Boomer's around.
+	scene "scenes/Producer/HeardBoomer03.vcd"  //Careful I hear a boomer.
+}
+Rule iMT_PlayerHeardBoomerProducer
+{
+	criteria iMT_PlayerHeardBoomer IsProducer
+	Response iMT_PlayerHeardBoomerProducer
+}
+
+Response iMT_PlayerHeardHunterProducer
+{
+	scene "scenes/Producer/HeardHunter01.vcd"  //I hear a Hunter.
+	scene "scenes/Producer/HeardHunter02.vcd"  //Careful, a Hunter's around.
+	scene "scenes/Producer/HeardHunter03.vcd"  //Oaohhh, hunter. (disgusted)
+	scene "scenes/Producer/HeardHunter04.vcd"  //There's a Hunter out there.
+	scene "scenes/Producer/HeardHunter05.vcd"  //A hunter's around, don't get pounced.
+	scene "scenes/Producer/HeardHunter06.vcd"  //I hear a Hunter.
+}
+Rule iMT_PlayerHeardHunterProducer
+{
+	criteria iMT_PlayerHeardHunter IsProducer
+	Response iMT_PlayerHeardHunterProducer
+}
+
+Response iMT_PlayerHeardSmokerProducer
+{
+	scene "scenes/Producer/HeardSmoker01.vcd"  //There's a Smoker around here.
+	scene "scenes/Producer/HeardSmoker02.vcd"  //Careful, Smoker.
+	scene "scenes/Producer/HeardSmoker03.vcd"  //I hear a smoker.
+	scene "scenes/Producer/HeardSmoker04.vcd"  //Oh lord, not another smoker.
+	scene "scenes/Producer/HeardSmoker05.vcd"  //Careful, Smoker.
+}
+Rule iMT_PlayerHeardSmokerProducer
+{
+	criteria iMT_PlayerHeardSmoker IsProducer
+	Response iMT_PlayerHeardSmokerProducer
+}
+
+Response iMT_PlayerHeardChargerProducer
+{
+	scene "scenes/Producer/HeardCharger01.vcd"  //Careful there's a charger around.
+	scene "scenes/Producer/HeardCharger02.vcd"  //I hear a charger.
+	scene "scenes/Producer/HeardCharger03.vcd"  //Watch out, charger!
+	scene "scenes/Producer/HeardCharger04.vcd"  //Watch out, charger!
+	scene "scenes/Producer/HeardCharger05.vcd"  //Careful there's a charger around.
+}
+Rule iMT_PlayerHeardChargerProducer
+{
+	criteria iMT_PlayerHeardCharger IsProducer
+	Response iMT_PlayerHeardChargerProducer
+}
+
 Response iMT_PlayerAlsoWarnChargerProducer
 {
 	scene "scenes/Producer/WarnCharger01.vcd"  //CHARGER!
@@ -163,6 +218,32 @@ Rule iMT_PlayerAlsoWarnChargerProducer
 {
 	criteria iMT_PlayerAlsoWarnCharger IsProducer
 	Response iMT_PlayerAlsoWarnChargerProducer
+}
+
+Response iMT_PlayerAlsoWarnChargerC1Producer
+{
+	scene "scenes/Producer/WarnChargerC101.vcd"  //ONE OF THOSE CHARGING THNGS!
+	scene "scenes/Producer/WarnChargerC102.vcd"  //ONE OF THOSE CHARGING THNGS!
+	scene "scenes/Producer/WarnChargerC103.vcd"  //ONE OF THOSE CHARGING THNGS!
+}
+Rule iMT_PlayerAlsoWarnChargerC1Producer
+{
+	criteria iMT_PlayerAlsoWarnCharger IsProducer C1M1orC1M2
+	Response iMT_PlayerAlsoWarnChargerC1Producer
+}
+
+Response iMT_PlayerHeardJockeyProducer
+{
+	scene "scenes/Producer/HeardJockey01.vcd"  //I hear a jockey.
+	scene "scenes/Producer/HeardJockey02.vcd"  //Oh shit, I hear a jockey.
+	scene "scenes/Producer/HeardJockey03.vcd"  //I hear one of those little things.
+	scene "scenes/Producer/HeardJockey04.vcd"  //Jockey around.
+	scene "scenes/Producer/HeardJockeyC101.vcd" odds 10  //Uh oh, I hear one of those, what do you call it? A jockey?
+}
+Rule iMT_PlayerHeardJockeyProducer
+{
+	criteria iMT_PlayerHeardJockey IsProducer
+	Response iMT_PlayerHeardJockeyProducer
 }
 
 Response iMT_PlayerAlsoWarnJockeyProducer
@@ -176,6 +257,32 @@ Rule iMT_PlayerAlsoWarnJockeyProducer
 	Response iMT_PlayerAlsoWarnJockeyProducer
 }
 
+Response iMT_PlayerAlsoWarnJockeyC1Producer
+{
+	scene "scenes/Producer/WarnHunterC104.vcd"  //JUMPER!
+	scene "scenes/Producer/WarnHunterC105.vcd"  //LEAPER!
+}
+Rule iMT_PlayerAlsoWarnJockeyC1Producer
+{
+	criteria iMT_PlayerAlsoWarnJockey IsProducer C1M1orC1M2
+	Response iMT_PlayerAlsoWarnJockeyC1Producer
+}
+
+Response iMT_PlayerHeardSpitterProducer
+{
+	scene "scenes/Producer/HeardSpitter01.vcd"  //Spitter around.
+	scene "scenes/Producer/HeardSpitter02.vcd"  //I hear a spitter.
+	scene "scenes/Producer/HeardSpitter03.vcd"  //I hear one of those spitter things.
+	scene "scenes/Producer/HeardSpitter04.vcd"  //Spitter around.
+	scene "scenes/Producer/HeardSpitter05.vcd"  //I hear a spitter.
+	scene "scenes/Producer/HeardSpitter06.vcd"  //I hear one of those spitting things.
+}
+Rule iMT_PlayerHeardSpitterProducer
+{
+	criteria iMT_PlayerHeardSpitter IsProducer
+	Response iMT_PlayerHeardSpitterProducer
+}
+
 Response iMT_PlayerAlsoWarnSpitterProducer
 {
 	scene "scenes/Producer/WarnSpitter01.vcd"  //SPITTER!
@@ -186,6 +293,43 @@ Rule iMT_PlayerAlsoWarnSpitterProducer
 {
 	criteria iMT_PlayerAlsoWarnSpitter IsProducer
 	Response iMT_PlayerAlsoWarnSpitterProducer
+}
+
+Response iMT_PlayerAlsoWarnSpitterC1Producer
+{
+	scene "scenes/Producer/WarnSpitterC101.vcd"  //GREEN GUY!
+	scene "scenes/Producer/WarnSpitterC102.vcd"  //CRAZY NECK!
+	scene "scenes/Producer/WarnSpitterC103.vcd"  //GREEN GUY!
+}
+Rule iMT_PlayerAlsoWarnSpitterC1Producer
+{
+	criteria iMT_PlayerAlsoWarnSpitter IsProducer C1M1orC1M2
+	Response iMT_PlayerAlsoWarnSpitterC1Producer
+}
+
+Response iMT_PlayerHeardWitchProducer
+{
+	scene "scenes/Producer/HeardWitch01.vcd"  //That sounds like a Witch.
+	scene "scenes/Producer/HeardWitch02.vcd"  //I hear a witch crying.
+	scene "scenes/Producer/HeardWitch03.vcd"  //I'm gonna give that witch something to cry about.
+	scene "scenes/Producer/HeardWitch04.vcd"  //Listen up, a witch!
+}
+Rule iMT_PlayerHeardWitchProducer
+{
+	criteria iMT_PlayerHeardWitch IsProducer
+	Response iMT_PlayerHeardWitchProducer
+}
+
+Response iMT_PlayerHeardWitchC1Producer
+{
+	scene "scenes/Producer/HeardWitchC101.vcd"  //She doesn't sound happy.
+	scene "scenes/Producer/HeardWitchC102.vcd"  //What the hell's with that crying?
+	scene "scenes/Producer/HeardWitchC103.vcd"  //We should steer clear of her.
+}
+Rule iMT_PlayerHeardWitchC1Producer
+{
+	criteria iMT_PlayerHeardWitch IsProducer C1M1orC1M2
+	Response iMT_PlayerHeardWitchC1Producer
 }
 
 Response iMT_PlayerCoughingProducer
@@ -390,6 +534,18 @@ Rule iMT_PlayerBreathingProducer
 	Response iMT_PlayerBreathingProducer
 }
 
+Response iMT_PlayerAnswerReadyProducer
+{
+	scene "scenes/Producer/TakeMelee03.vcd"  //Oh yeah, gonna wack some heads.
+	scene "scenes/Producer/TakeMelee06.vcd"  //Oh yeah, gonna wack some heads.
+	scene "scenes/Producer/TakeMelee07.vcd"  //This is what I'm talking about.
+}
+Rule iMT_PlayerAnswerReadyProducer
+{
+	criteria iMT_PlayerAnswerReady IsProducer
+	Response iMT_PlayerAnswerReadyProducer
+}
+
 Response iMT_PlayerDeathScreamProducer
 {
 	scene "scenes/Producer/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
@@ -544,6 +700,21 @@ Rule iMT_PlayerMournMechanicDeadProducer
 {
 	criteria iMT_PlayerMourn IsProducer IsMechanicNear200 IsMechanicNotAlive
 	Response iMT_PlayerMournMechanicProducer
+}
+
+Response iMT_PlayerNearExitProducer
+{
+	scene "scenes/Producer/SafeSpotAhead01.vcd"  //Safe house ahead.
+	scene "scenes/Producer/SafeSpotAhead02.vcd"  //Safe house up here.
+	scene "scenes/Producer/SafeSpotAhead03.vcd"  //Safe house this way!
+	scene "scenes/Producer/SafeSpotAhead04.vcd"  //I see a safe house this way!
+	scene "scenes/Producer/SafeSpotAhead05.vcd"  //Safe house up ahead!
+	scene "scenes/Producer/SafeSpotAhead06.vcd"  //Oh, a safe house up ahead!
+}
+Rule iMT_PlayerNearExitProducer
+{
+	criteria iMT_PlayerNearExit IsProducer
+	Response iMT_PlayerNearExitProducer
 }
 
 //--------------------------------------------------------------------------------------------------------------

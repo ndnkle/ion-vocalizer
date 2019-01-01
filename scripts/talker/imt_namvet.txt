@@ -191,6 +191,60 @@ Rule iMT_MaryJosefNamVet
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerHeardBoomerNamVet
+{
+	scene "scenes/NamVet/HeardBoomer01.vcd"  //I hear a boomer out there.
+	scene "scenes/NamVet/HeardBoomer02.vcd"  //There's a Boomer around here.
+	scene "scenes/NamVet/HeardBoomer03.vcd"  //Careful, Boomer.
+	scene "scenes/NamVet/HeardBoomer04.vcd"  //Watch it, Boomer in the vacinity.
+	scene "scenes/NamVet/HeardBoomer05.vcd"  //Boomer around here.
+	scene "scenes/NamVet/HeardBoomer06.vcd"  //Boomer nearby.
+	scene "scenes/NamVet/HeardBoomer07.vcd"  //There's a Boomer trackin' us.
+	scene "scenes/NamVet/HeardBoomer08.vcd"  //Boomer closeby.
+	scene "scenes/NamVet/HeardBoomer09.vcd"  //Boomer nearby.
+	scene "scenes/NamVet/HeardBoomer10.vcd"  //Christ, there's a Boomer around here.
+	scene "scenes/NamVet/HeardBoomer11.vcd"  //Dammit, Boomer nearby.
+}
+Rule iMT_PlayerHeardBoomerNamVet
+{
+	criteria iMT_PlayerHeardBoomer IsNamVet
+	Response iMT_PlayerHeardBoomerNamVet
+}
+
+Response iMT_PlayerHeardHunterNamVet
+{
+	scene "scenes/NamVet/HeardHunter01.vcd"  //There's a Hunter around here.
+	scene "scenes/NamVet/HeardHunter02.vcd"  //Careful, people, there's a Hunter nearby.
+	scene "scenes/NamVet/HeardHunter03.vcd"  //There's a hunter spookin' around out there
+	scene "scenes/NamVet/HeardHunter04.vcd"  //There's a hunter out there
+	scene "scenes/NamVet/HeardHunter05.vcd"  //Careful, Hunter around here.
+	scene "scenes/NamVet/HeardHunter06.vcd"  //Hunter out there.
+	scene "scenes/NamVet/HeardHunter08.vcd"  //Watch your back - Hunter.
+	scene "scenes/NamVet/HeardHunter09.vcd"  //Watch your back, there's a hunter out there.
+	scene "scenes/NamVet/HeardHunter10.vcd"  //I think I saw a goddamn Hunter
+}
+Rule iMT_PlayerHeardHunterNamVet
+{
+	criteria iMT_PlayerHeardHunter IsNamVet
+	Response iMT_PlayerHeardHunterNamVet
+}
+
+Response iMT_PlayerHeardSmokerNamVet
+{
+	scene "scenes/NamVet/HeardSmoker01.vcd"  //Smoker, right around here.
+	scene "scenes/NamVet/HeardSmoker02.vcd"  //There's a Smoker nearby.
+	scene "scenes/NamVet/HeardSmoker03.vcd"  //We got a Smoker around here.
+	scene "scenes/NamVet/HeardSmoker04.vcd"  //Heads up, Smoker somewhere around here.
+	scene "scenes/NamVet/HeardSmoker05.vcd"  //Smoker right around here someplace.
+	scene "scenes/NamVet/HeardSmoker06.vcd"  //Smoker. And it's close.
+	scene "scenes/NamVet/HeardSmoker07.vcd"  //There's a Smoker
+}
+Rule iMT_PlayerHeardSmokerNamVet
+{
+	criteria iMT_PlayerHeardSmoker IsNamVet
+	Response iMT_PlayerHeardSmokerNamVet
+}
+
 Response iMT_PlayerAlsoWarnChargerNamVet
 {
 	scene "scenes/NamVet/C6DLC3Creatures01.vcd"  //Charger!
@@ -225,6 +279,20 @@ Rule iMT_PlayerAlsoWarnSpitterNamVet
 {
 	criteria iMT_PlayerAlsoWarnSpitter IsNamVet
 	Response iMT_PlayerAlsoWarnSpitterNamVet
+}
+
+Response iMT_PlayerHeardWitchNamVet
+{
+	scene "scenes/NamVet/HeardWitch01.vcd"  //Hear that, that's a witch
+	scene "scenes/NamVet/HeardWitch02.vcd"  //Witch around here.
+	scene "scenes/NamVet/HeardWitch03.vcd"  //Shit, Witch
+	scene "scenes/NamVet/HeardWitch04.vcd"  //Quiet, there's a Witch around here.
+	scene "scenes/NamVet/HeardWitch05.vcd"  //Shhh, Witch near here.
+}
+Rule iMT_PlayerHeardWitchNamVet
+{
+	criteria iMT_PlayerHeardWitch IsNamVet
+	Response iMT_PlayerHeardWitchNamVet
 }
 
 Response iMT_PlayerCoughingNamVet
@@ -413,6 +481,19 @@ Rule iMT_PlayerBreathingNamVet
 	Response iMT_PlayerBreathingNamVet
 }
 
+Response iMT_PlayerAnswerReadyNamVet
+{
+	scene "scenes/NamVet/AnswerReady01.vcd"  //Ready.
+	scene "scenes/NamVet/AnswerReady02.vcd"  //Good to go.
+	scene "scenes/NamVet/AnswerReady03.vcd"  //I'm ready.
+	scene "scenes/NamVet/AnswerReady04.vcd"  //I said I'm ready!
+}
+Rule iMT_PlayerAnswerReadyNamVet
+{
+	criteria iMT_PlayerAnswerReady IsNamVet
+	Response iMT_PlayerAnswerReadyNamVet
+}
+
 Response iMT_PlayerDeathScreamNamVet
 {
 	scene "scenes/NamVet/Fall01.vcd"  //[Death scream as you fall]
@@ -534,6 +615,38 @@ Rule iMT_PlayerMournTeenGirlDeadNamVet
 {
 	criteria iMT_PlayerMourn IsNamVet IsTeenGirlNear200 IsTeenGirlNotAlive
 	Response iMT_PlayerMournTeenGirlNamVet
+}
+
+Response iMT_PlayerNearExitNamVet
+{
+	scene "scenes/NamVet/FinaleAhead01.vcd"  //This looks like it - we're almost out of here.
+	scene "scenes/NamVet/FinaleAhead02.vcd"  //We're almost out of here!
+	scene "scenes/NamVet/FinaleAhead03.vcd"  //Okay, people, we're almost there. Let's keep moving!
+	scene "scenes/NamVet/FinaleAhead04.vcd"  //Keep it together people. We're almost home free.
+	scene "scenes/NamVet/SafeSpotAhead02.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //There's a safe spot just ahead.
+	scene "scenes/NamVet/SafeSpotAhead05.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //There's a safe place up ahead.
+	scene "scenes/NamVet/SafeSpotAhead07.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house ahead!
+	scene "scenes/NamVet/SafeSpotAhead08.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house!
+}
+Rule iMT_PlayerNearExitNamVet
+{
+	criteria iMT_PlayerNearExit IsNamVet
+	Response iMT_PlayerNearExitNamVet
+}
+
+Response iMT_PlayerNearExitResponseNamVet
+{
+	scene "scenes/NamVet/SafeSpotAheadReaction01.vcd" odds 2  //Finally!
+	scene "scenes/NamVet/SafeSpotAheadReaction02.vcd" odds 2  //Thank God.
+	scene "scenes/NamVet/SafeSpotAheadReaction03.vcd" odds 2  //'Bout time!
+	scene "scenes/NamVet/SafeSpotAheadReaction04.vcd" odds 2  //Hallelujah!
+	scene "scenes/NamVet/SafeSpotAheadReaction05.vcd" odds 2  //Well it's about damn time.
+	scene "scenes/NamVet/SafeSpotAheadReaction06.vcd" odds 2  //I could use a damn break.
+}
+Rule iMT_PlayerNearExitResponseNamVet
+{
+	criteria iMT_PlayerNearExitResponse IsNamVet
+	Response iMT_PlayerNearExitResponseNamVet
 }
 
 //--------------------------------------------------------------------------------------------------------------

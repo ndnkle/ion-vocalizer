@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 12.4
+// ion's Vocalizer 13.0
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -419,18 +419,18 @@
 		}
 		"NorthEast"
 		{
-			"command"	"vocalize iMT_PlayerAlsoWarnCharger"
-			"text"		"Charger"
+			"command"	"vocalize iMT_PlayerNiceShot"
+			"text"		"Nice shot"
 		}
 		"East"
 		{
-			"command"	"vocalize iMT_PlayerAlsoWarnJockey"
-			"text"		"Jockey"
+			"command"	"vocalize iMT_PlayerEquippedItem"
+			"text"		"Got it"
 		}
 		"SouthEast"
 		{
-			"command"	"vocalize iMT_PlayerAlsoWarnSpitter"
-			"text"		"Spitter"
+			"command"	"vocalize iMT_PlayerTransition"
+			"text"		"Close one"
 		}
 		"South"
 		{
@@ -439,18 +439,18 @@
 		}
 		"SouthWest"
 		{
-			"command"	"vocalize iMT_PlayerTransition"
-			"text"		"Close one"
+			"command"	"vocalize iMT_PlayerAlsoWarnSpitter"
+			"text"		"Spitter"
 		}
 		"West"
 		{
-			"command"	"vocalize iMT_PlayerEquippedItem"
-			"text"		"Got it"
+			"command"	"vocalize iMT_PlayerAlsoWarnJockey"
+			"text"		"Jockey"
 		}
 		"NorthWest"
 		{
-			"command"	"vocalize iMT_PlayerNiceShot"
-			"text"		"Nice shot"
+			"command"	"vocalize iMT_PlayerAlsoWarnCharger"
+			"text"		"Charger"
 		}
 	}
 
@@ -501,6 +501,56 @@
 		{
 			"command"	"vocalize iMT_PlayerDeathScream"
 			"text"		"Fall scream"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"Misc6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_PlayerNearExit"
+			"text"		"Safe"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_PlayerAnswerReady"
+			"text"		"Ready"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_PlayerHeardBoomer"
+			"text"		"Hear Boomer"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_PlayerHeardHunter"
+			"text"		"Hear Hunter"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_PlayerHeardSmoker"
+			"text"		"Hear Smoker"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_PlayerHeardWitch"
+			"text"		"Hear Witch"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_PlayerHeardSpitter"
+			"text"		"Hear Spitter"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_PlayerHeardJockey"
+			"text"		"Hear Jockey"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_PlayerHeardCharger"
+			"text"		"Hear Charger"
 		}
 	}
 

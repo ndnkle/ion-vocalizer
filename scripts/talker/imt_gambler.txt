@@ -142,6 +142,62 @@ Rule iMT_AllAboardGambler
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerHeardBoomerGambler
+{
+	scene "scenes/Gambler/HeardBoomer01.vcd"  //Keep a lookout. I hear a boomer.
+	scene "scenes/Gambler/HeardBoomer02.vcd"  //I hear a boomer.
+	scene "scenes/Gambler/HeardBoomer03.vcd"  //You hear that boomer?
+	scene "scenes/Gambler/HeardBoomer04.vcd"  //You hear that boomer?
+	scene "scenes/Gambler/HeardBoomer05.vcd"  //You hear that boomer? Don't let him spew on you.
+	scene "scenes/Gambler/HeardBoomer06.vcd"  //Boomer around.  Don't shoot him if he's near me! OKAY?
+}
+Rule iMT_PlayerHeardBoomerGambler
+{
+	criteria iMT_PlayerHeardBoomer IsGambler
+	Response iMT_PlayerHeardBoomerGambler
+}
+
+Response iMT_PlayerHeardHunterGambler
+{
+	scene "scenes/Gambler/HeardHunter01.vcd"  //You hear that hunter?
+	scene "scenes/Gambler/HeardHunter02.vcd"  //Pay attention, hunter's around.
+	scene "scenes/Gambler/HeardHunter03.vcd"  //I hear a hunter.
+}
+Rule iMT_PlayerHeardHunterGambler
+{
+	criteria iMT_PlayerHeardHunter IsGambler
+	Response iMT_PlayerHeardHunterGambler
+}
+
+Response iMT_PlayerHeardSmokerGambler
+{
+	scene "scenes/Gambler/HeardSmoker01.vcd"  //There's a Smoker around here.
+	scene "scenes/Gambler/HeardSmoker02.vcd"  //Smoker's around.
+	scene "scenes/Gambler/HeardSmoker03.vcd"  //I hear a smoker.
+	scene "scenes/Gambler/HeardSmoker04.vcd"  //There's a Smoker around here.
+}
+Rule iMT_PlayerHeardSmokerGambler
+{
+	criteria iMT_PlayerHeardSmoker IsGambler
+	Response iMT_PlayerHeardSmokerGambler
+}
+
+Response iMT_PlayerHeardChargerGambler
+{
+	scene "scenes/Gambler/HeardCharger01.vcd"  //Keep your eyes peeled, I hear a charger.
+	scene "scenes/Gambler/HeardCharger02.vcd"  //I hear a charger.
+	scene "scenes/Gambler/HeardCharger03.vcd"  //Charger around, get ready.
+	scene "scenes/Gambler/HeardCharger04.vcd"  //Charger around, get ready.
+	scene "scenes/Gambler/HeardCharger05.vcd"  //Do you hear that charger?
+	scene "scenes/Gambler/HeardCharger06.vcd"  //I hear a charger.
+	scene "scenes/Gambler/HeardCharger07.vcd"  //You hear that charger?
+}
+Rule iMT_PlayerHeardChargerGambler
+{
+	criteria iMT_PlayerHeardCharger IsGambler
+	Response iMT_PlayerHeardChargerGambler
+}
+
 Response iMT_PlayerAlsoWarnChargerGambler
 {
 	scene "scenes/Gambler/WarnCharger01.vcd"  //CHARGER!
@@ -153,6 +209,33 @@ Rule iMT_PlayerAlsoWarnChargerGambler
 {
 	criteria iMT_PlayerAlsoWarnCharger IsGambler
 	Response iMT_PlayerAlsoWarnChargerGambler
+}
+
+Response iMT_PlayerAlsoWarnChargerC1Gambler
+{
+	scene "scenes/Gambler/WarnChargerC101.vcd"  //One Arm!
+	scene "scenes/Gambler/WarnChargerC102.vcd"  //Overalls!
+	scene "scenes/Gambler/WarnChargerC103.vcd"  //Hillbilly!
+}
+Rule iMT_PlayerAlsoWarnChargerC1Gambler
+{
+	criteria iMT_PlayerAlsoWarnCharger IsGambler C1M1orC1M2
+	Response iMT_PlayerAlsoWarnChargerC1Gambler
+}
+
+Response iMT_PlayerHeardJockeyGambler
+{
+	scene "scenes/Gambler/HeardJockey01.vcd"  //I can hear a jockey.
+	scene "scenes/Gambler/HeardJockey02.vcd"  //Jockey's around.
+	scene "scenes/Gambler/HeardJockey03.vcd"  //One of those little jockey bastards is around.
+	scene "scenes/Gambler/HeardJockey04.vcd"  //I can hear a jockey.
+	scene "scenes/Gambler/HeardJockey05.vcd"  //Jockey's around.
+	scene "scenes/Gambler/HeardJockey06.vcd"  //One of those little jockey bastards is around.
+}
+Rule iMT_PlayerHeardJockeyGambler
+{
+	criteria iMT_PlayerHeardJockey IsGambler
+	Response iMT_PlayerHeardJockeyGambler
 }
 
 Response iMT_PlayerAlsoWarnJockeyGambler
@@ -167,6 +250,33 @@ Rule iMT_PlayerAlsoWarnJockeyGambler
 	Response iMT_PlayerAlsoWarnJockeyGambler
 }
 
+Response iMT_PlayerAlsoWarnJockeyC1Gambler
+{
+	scene "scenes/Gambler/WarnJockeyC101.vcd"  //Little guy!
+	scene "scenes/Gambler/WarnJockeyC102.vcd"  //Little freak!
+	scene "scenes/Gambler/WarnJockeyC103.vcd"  //Little guy!
+}
+Rule iMT_PlayerAlsoWarnJockeyC1Gambler
+{
+	criteria iMT_PlayerAlsoWarnJockey IsGambler C1M1orC1M2
+	Response iMT_PlayerAlsoWarnJockeyC1Gambler
+}
+
+Response iMT_PlayerHeardSpitterGambler
+{
+	scene "scenes/Gambler/HeardSpitter01.vcd"  //Spitter around.
+	scene "scenes/Gambler/HeardSpitter02.vcd"  //I hear a spitter.
+	scene "scenes/Gambler/HeardSpitter03.vcd"  //There's a spitter around.
+	scene "scenes/Gambler/HeardSpitter04.vcd"  //There's a spitter around.
+	scene "scenes/Gambler/HeardSpitter05.vcd"  //I hear a spitter.
+	scene "scenes/Gambler/HeardSpitter06.vcd"  //There's a spitter around.
+}
+Rule iMT_PlayerHeardSpitterGambler
+{
+	criteria iMT_PlayerHeardSpitter IsGambler
+	Response iMT_PlayerHeardSpitterGambler
+}
+
 Response iMT_PlayerAlsoWarnSpitterGambler
 {
 	scene "scenes/Gambler/WarnSpitter01.vcd"  //Spitter
@@ -177,6 +287,46 @@ Rule iMT_PlayerAlsoWarnSpitterGambler
 {
 	criteria iMT_PlayerAlsoWarnSpitter IsGambler
 	Response iMT_PlayerAlsoWarnSpitterGambler
+}
+
+Response iMT_PlayerAlsoWarnSpitterC1Gambler
+{
+	scene "scenes/Gambler/WarnSpitterC101.vcd"  //Green thing!
+	scene "scenes/Gambler/WarnSpitterC102.vcd"  //Neck!
+}
+Rule iMT_PlayerAlsoWarnSpitterC1Gambler
+{
+	criteria iMT_PlayerAlsoWarnSpitter IsGambler C1M1orC1M2
+	Response iMT_PlayerAlsoWarnSpitterC1Gambler
+}
+
+Response iMT_PlayerHeardWitchGambler
+{
+	scene "scenes/Gambler/HeardWitch01.vcd"  //Sounds like a witch.
+	scene "scenes/Gambler/HeardWitch02.vcd"  //Sounds like a witch.
+	scene "scenes/Gambler/HeardWitch03.vcd"  //I think I hear my ex-wife...
+	scene "scenes/Gambler/HeardWitch04.vcd"  //Everybody hear that witch?
+	scene "scenes/Gambler/HeardWitch05.vcd"  //I hear a witch.
+}
+Rule iMT_PlayerHeardWitchGambler
+{
+	criteria iMT_PlayerHeardWitch IsGambler
+	Response iMT_PlayerHeardWitchGambler
+}
+
+Response iMT_PlayerHeardWitchC1Gambler
+{
+	scene "scenes/Gambler/HeardWitchC101.vcd"  //Oh there's a sound that's familiar.
+	scene "scenes/Gambler/HeardWitchC102.vcd"  //That sound is familiar.
+	scene "scenes/Gambler/HeardWitchC103.vcd"  //I don't like the sound of this crying.
+	scene "scenes/Gambler/HeardWitchC104.vcd"  //I don't like the sound of this crying.
+	scene "scenes/Gambler/HeardWitchC105.vcd"  //A crying woman, what do you think she's sad the mall's closed?
+	scene "scenes/Gambler/HeardWitchC106.vcd"  //A crying woman, you think she's sad the mall's closed?
+}
+Rule iMT_PlayerHeardWitchC1Gambler
+{
+	criteria iMT_PlayerHeardWitch IsGambler C1M1orC1M2
+	Response iMT_PlayerHeardWitchC1Gambler
 }
 
 Response iMT_PlayerCoughingGambler
@@ -424,6 +574,18 @@ Rule iMT_PlayerBreathingGambler
 	Response iMT_PlayerBreathingGambler
 }
 
+Response iMT_PlayerAnswerReadyGambler
+{
+	scene "scenes/Gambler/TakeMelee01.vcd"  //Hell yeah.
+	scene "scenes/Gambler/TakeMelee02.vcd"  //This feels good.
+	scene "scenes/Gambler/WorldC1M1B34.vcd"  //Now we're talking.
+}
+Rule iMT_PlayerAnswerReadyGambler
+{
+	criteria iMT_PlayerAnswerReady IsGambler
+	Response iMT_PlayerAnswerReadyGambler
+}
+
 Response iMT_PlayerDeathScreamGambler
 {
 	scene "scenes/Gambler/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
@@ -579,6 +741,19 @@ Rule iMT_PlayerMournProducerDeadGambler
 {
 	criteria iMT_PlayerMourn IsGambler IsProducerNear200 IsProducerNotAlive
 	Response iMT_PlayerMournProducerGambler
+}
+
+Response iMT_PlayerNearExitGambler
+{
+	scene "scenes/Gambler/SafeSpotAhead01.vcd"  //Safe house!
+	scene "scenes/Gambler/SafeSpotAhead02.vcd"  //We got a safe house!
+	scene "scenes/Gambler/SafeSpotAhead03.vcd"  //Safe house ahead!
+	scene "scenes/Gambler/SafeSpotAhead04.vcd"  //There's the safe house!
+}
+Rule iMT_PlayerNearExitGambler
+{
+	criteria iMT_PlayerNearExit IsGambler
+	Response iMT_PlayerNearExitGambler
 }
 
 //--------------------------------------------------------------------------------------------------------------

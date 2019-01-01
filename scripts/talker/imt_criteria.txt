@@ -13,6 +13,7 @@ Criterion	"iMT_OtherPlayerWasPounced"	"Concept"	"iMT_OtherPlayerWasPounced"	requ
 Criterion	"iMT_PlayerAlsoWarnCharger"	"Concept"	"iMT_PlayerAlsoWarnCharger"	required
 Criterion	"iMT_PlayerAlsoWarnJockey"	"Concept"	"iMT_PlayerAlsoWarnJockey"	required
 Criterion	"iMT_PlayerAlsoWarnSpitter"	"Concept"	"iMT_PlayerAlsoWarnSpitter"	required
+Criterion	"iMT_PlayerAnswerReady"		"Concept"	"iMT_PlayerAnswerReady"		required
 Criterion	"iMT_PlayerBreathing"		"Concept"	"iMT_PlayerBreathing"		required
 Criterion	"iMT_PlayerCoughing"		"Concept"	"iMT_PlayerCoughing"		required
 Criterion	"iMT_PlayerDeathScream"		"Concept"	"iMT_PlayerDeathScream"		required
@@ -20,10 +21,19 @@ Criterion	"iMT_PlayerEquippedItem"	"Concept"	"iMT_PlayerEquippedItem"	required
 Criterion	"iMT_PlayerGoingToDie"		"Concept"	"iMT_PlayerGoingToDie"		required
 Criterion	"iMT_PlayerIncapacitatedHurt"	"Concept"	"iMT_PlayerIncapacitatedHurt"	required
 Criterion	"iMT_PlayerMourn"		"Concept"	"iMT_PlayerMourn"		required
+Criterion	"iMT_PlayerNearExit"		"Concept"	"iMT_PlayerNearExit"		required
+Criterion	"iMT_PlayerNearExitResponse"	"Concept"	"iMT_PlayerNearExitResponse"	required
 Criterion	"iMT_PlayerNiceShot"		"Concept"	"iMT_PlayerNiceShot"		required
 Criterion	"iMT_PlayerSuggestHealth"	"Concept"	"iMT_PlayerSuggestHealth"	required
 Criterion	"iMT_PlayerTeamKill"		"Concept"	"iMT_PlayerTeamKill"		required
 Criterion	"iMT_PlayerTransition"		"Concept"	"iMT_PlayerTransition"		required
+Criterion	"iMT_PlayerHeardBoomer"		"Concept"	"iMT_PlayerHeardBoomer"		required
+Criterion	"iMT_PlayerHeardCharger"	"Concept"	"iMT_PlayerHeardCharger"	required
+Criterion	"iMT_PlayerHeardHunter"		"Concept"	"iMT_PlayerHeardHunter"		required
+Criterion	"iMT_PlayerHeardJockey"		"Concept"	"iMT_PlayerHeardJockey"		required
+Criterion	"iMT_PlayerHeardSmoker"		"Concept"	"iMT_PlayerHeardSmoker"		required
+Criterion	"iMT_PlayerHeardSpitter"	"Concept"	"iMT_PlayerHeardSpitter"	required
+Criterion	"iMT_PlayerHeardWitch"		"Concept"	"iMT_PlayerHeardWitch"		required
 Criterion	"iMT_PlayerWitchChasing"	"Concept"	"iMT_PlayerWitchChasing"	required
 Criterion	"iMT_Recycle"			"Concept"	"iMT_Recycle"			required
 Criterion	"iMT_Singing"			"Concept"	"iMT_Singing"			required

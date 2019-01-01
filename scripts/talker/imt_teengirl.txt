@@ -196,6 +196,67 @@ Rule iMT_GodIsDeadTeenGirl
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerHeardBoomerTeenGirl
+{
+	scene "scenes/TeenGirl/HeardBoomer01.vcd"  //I think one of those vomit bags is around here
+	scene "scenes/TeenGirl/HeardBoomer02.vcd"  //Sounds like a boomer's around
+	scene "scenes/TeenGirl/HeardBoomer03.vcd"  //Ahh a Boomer. Hear it?
+	scene "scenes/TeenGirl/HeardBoomer05.vcd"  //Ugh, I can hear a boomer sloshing around
+	scene "scenes/TeenGirl/HeardBoomer07.vcd"  //ah no... I think I hear a boomer
+	scene "scenes/TeenGirl/HeardBoomer08.vcd"  //I hear a Boomer
+	scene "scenes/TeenGirl/HeardBoomer09.vcd"  //Oh god, there's a boomer around
+	scene "scenes/TeenGirl/HeardBoomer10.vcd"  //Hear that boomer?
+	scene "scenes/TeenGirl/HeardBoomer11.vcd"  //I think I hear a boomer
+	scene "scenes/TeenGirl/HeardBoomer14.vcd"  //Wait up, I hear a boomer
+	scene "scenes/TeenGirl/HeardBoomer15.vcd"  //Boomer, hear it?
+	scene "scenes/TeenGirl/HeardBoomer16.vcd"  //Ugh, yuck. Another Boomer. You hear that?
+	scene "scenes/TeenGirl/HeardBoomer17.vcd"  //Hear that? Boomer.
+	scene "scenes/TeenGirl/HeardBoomer19.vcd"  //Boomer, don't let it puke on you.
+}
+Rule iMT_PlayerHeardBoomerTeenGirl
+{
+	criteria iMT_PlayerHeardBoomer IsTeenGirl
+	Response iMT_PlayerHeardBoomerTeenGirl
+}
+
+Response iMT_PlayerHeardHunterTeenGirl
+{
+	scene "scenes/TeenGirl/HeardHunter03.vcd"  //There's a Hunter around
+	scene "scenes/TeenGirl/HeardHunter04.vcd"  //There's a Hunter out there.
+	scene "scenes/TeenGirl/HeardHunter06.vcd"  //Hunter around, don't get pounced
+	scene "scenes/TeenGirl/HeardHunter07.vcd"  //Careful, a Hunter's around.
+	scene "scenes/TeenGirl/HeardHunter08.vcd"  //Crap, hunter.
+	scene "scenes/TeenGirl/HeardHunter09.vcd"  //I think I hear a Hunter.
+	scene "scenes/TeenGirl/HeardHunter10.vcd"  //Pretty sure I can hear a hunter [calm]
+	scene "scenes/TeenGirl/HeardHunter11.vcd"  //Hear that hunter? [calm]
+	scene "scenes/TeenGirl/HeardHunter13.vcd"  //I know that noise, Hunter
+	scene "scenes/TeenGirl/HeardHunter23.vcd"  //Hunter, hear it?
+	scene "scenes/TeenGirl/HeardHunter26.vcd"  //There's a Hunter out there.
+	scene "scenes/TeenGirl/HeardHunter27.vcd"  //Hunter and it's close.
+}
+Rule iMT_PlayerHeardHunterTeenGirl
+{
+	criteria iMT_PlayerHeardHunter IsTeenGirl
+	Response iMT_PlayerHeardHunterTeenGirl
+}
+
+Response iMT_PlayerHeardSmokerTeenGirl
+{
+	scene "scenes/TeenGirl/HeardSmoker06.vcd"  //There's a Smoker around here.
+	scene "scenes/TeenGirl/HeardSmoker09.vcd"  //Smoker... don't get hung.
+	scene "scenes/TeenGirl/HeardSmoker10.vcd"  //Watch the roof tops, there's a smoker around.
+	scene "scenes/TeenGirl/HeardSmoker11.vcd"  //I hear a Smoker.
+	scene "scenes/TeenGirl/HeardSmoker12.vcd"  //Careful, Smoker.
+	scene "scenes/TeenGirl/HeardSmoker13.vcd"  //There's a Smoker around here.
+	scene "scenes/TeenGirl/HeardSmoker14.vcd"  //I know that sound - a Smoker!
+	scene "scenes/TeenGirl/HeardSmoker16.vcd"  //Smoker... don't let him hang you.
+}
+Rule iMT_PlayerHeardSmokerTeenGirl
+{
+	criteria iMT_PlayerHeardSmoker IsTeenGirl
+	Response iMT_PlayerHeardSmokerTeenGirl
+}
+
 Response iMT_PlayerAlsoWarnChargerTeenGirl
 {
 	scene "scenes/TeenGirl/DLC1_L4D1Charger01.vcd"  //CHARGER!
@@ -230,6 +291,22 @@ Rule iMT_PlayerAlsoWarnSpitterTeenGirl
 {
 	criteria iMT_PlayerAlsoWarnSpitter IsTeenGirl
 	Response iMT_PlayerAlsoWarnSpitterTeenGirl
+}
+
+Response iMT_PlayerHeardWitchTeenGirl
+{
+	scene "scenes/TeenGirl/HeardWitch01.vcd"  //I think I hear a Witch
+	scene "scenes/TeenGirl/HeardWitch02.vcd"  //Sounds like a Witch
+	scene "scenes/TeenGirl/HeardWitch03.vcd"  //Shhh.... witch
+	scene "scenes/TeenGirl/HeardWitch04.vcd"  //Quiet, listen.
+	scene "scenes/TeenGirl/HeardWitch05.vcd"  //Quiiii-et, I hear a Witch.
+	scene "scenes/TeenGirl/HeardWitch06.vcd"  //That sounds like a Witch
+	scene "scenes/TeenGirl/HeardWitch07.vcd"  //It's a Witch. Don't disturb her and we'll be okay.
+}
+Rule iMT_PlayerHeardWitchTeenGirl
+{
+	criteria iMT_PlayerHeardWitch IsTeenGirl
+	Response iMT_PlayerHeardWitchTeenGirl
 }
 
 Response iMT_PlayerCoughingTeenGirl
@@ -413,6 +490,23 @@ Rule iMT_PlayerBreathingTeenGirl
 	Response iMT_PlayerBreathingTeenGirl
 }
 
+Response iMT_PlayerAnswerReadyTeenGirl
+{
+	scene "scenes/TeenGirl/AnswerReady01.vcd"  //Ready
+	scene "scenes/TeenGirl/AnswerReady02.vcd"  //Yep, I'm ready
+	scene "scenes/TeenGirl/AnswerReady03.vcd"  //Yeah, ready
+	scene "scenes/TeenGirl/AnswerReady04.vcd"  //Let's go.
+	scene "scenes/TeenGirl/AnswerReady05.vcd" odds 10  //Yeah... yeah, I'm ready to bounce (laughing)
+	scene "scenes/TeenGirl/AnswerReady07.vcd"  //Ready
+	scene "scenes/TeenGirl/AnswerReady08.vcd"  //Yep, I'm ready
+	scene "scenes/TeenGirl/AnswerReady09.vcd"  //Yeah, ready
+}
+Rule iMT_PlayerAnswerReadyTeenGirl
+{
+	criteria iMT_PlayerAnswerReady IsTeenGirl
+	Response iMT_PlayerAnswerReadyTeenGirl
+}
+
 Response iMT_PlayerDeathScreamTeenGirl
 {
 	scene "scenes/TeenGirl/Fall01.vcd"  //[Death scream as you fall]
@@ -535,6 +629,36 @@ Rule iMT_PlayerMournBikerDeadTeenGirl
 {
 	criteria iMT_PlayerMourn IsTeenGirl IsBikerNear200 IsBikerNotAlive
 	Response iMT_PlayerMournBikerTeenGirl
+}
+
+Response iMT_PlayerNearExitTeenGirl
+{
+	scene "scenes/TeenGirl/FinaleAhead01.vcd"  //Hey guys, I think we're almost there.
+	scene "scenes/TeenGirl/FinaleAhead02.vcd"  //Thank god, we're almost outta here!
+	scene "scenes/TeenGirl/FinaleAhead03.vcd"  //Finally. You see that?  We're almost out of here!
+	scene "scenes/TeenGirl/FinaleAhead04.vcd"  //This is all going to be over soon.
+	scene "scenes/TeenGirl/SafeSpotAhead01.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house just ahead.
+	scene "scenes/TeenGirl/SafeSpotAhead06.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house ahead!
+	scene "scenes/TeenGirl/SafeSpotAhead08.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //There's a safe house ahead.
+	scene "scenes/TeenGirl/SafeSpotAhead09.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //We're near a safe house.
+}
+Rule iMT_PlayerNearExitTeenGirl
+{
+	criteria iMT_PlayerNearExit IsTeenGirl
+	Response iMT_PlayerNearExitTeenGirl
+}
+
+Response iMT_PlayerNearExitResponseTeenGirl
+{
+	scene "scenes/TeenGirl/SafeSpotAheadReaction02.vcd" odds 2  //Finally!
+	scene "scenes/TeenGirl/SafeSpotAheadReaction08.vcd" odds 2  //Thank God!
+	scene "scenes/TeenGirl/SafeSpotAheadReaction10.vcd" odds 2  //Oh thank god!
+	scene "scenes/TeenGirl/SafeSpotAheadReaction14.vcd" odds 2  //Sweet Jesus!
+}
+Rule iMT_PlayerNearExitResponseTeenGirl
+{
+	criteria iMT_PlayerNearExitResponse IsTeenGirl
+	Response iMT_PlayerNearExitResponseTeenGirl
 }
 
 //--------------------------------------------------------------------------------------------------------------

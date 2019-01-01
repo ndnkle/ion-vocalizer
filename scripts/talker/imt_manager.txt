@@ -213,6 +213,70 @@ Rule iMT_TankFactory2Manager
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerHeardBoomerManager
+{
+	scene "scenes/Manager/HeardBoomer01.vcd"  //Watch your fire, I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer02.vcd"  //I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer03.vcd"  //Careful, there's a Boomer's around.
+	scene "scenes/Manager/HeardBoomer04.vcd"  //I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer05.vcd"  //Careful, I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer06.vcd"  //Watch it, I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer07.vcd"  //Heads up, man, I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer08.vcd"  //Ah, man, that sounds like a Boomer.
+	scene "scenes/Manager/HeardBoomer09.vcd"  //Look out, we got a Boomer around here.
+	scene "scenes/Manager/HeardBoomer10.vcd"  //I definitely hear a Boomer.
+	scene "scenes/Manager/HeardBoomer11.vcd"  //Watch your fire, I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer12.vcd"  //Careful, there's a Boomer's around.
+	scene "scenes/Manager/HeardBoomer13.vcd"  //I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer14.vcd"  //Careful, I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer15.vcd"  //Watch it, I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer16.vcd"  //Heads up, man, I hear a Boomer.
+	scene "scenes/Manager/HeardBoomer17.vcd"  //Ah, man, that sounds like a Boomer.
+	scene "scenes/Manager/HeardBoomer18.vcd"  //Look out, we got a Boomer around here.
+	scene "scenes/Manager/HeardBoomer19.vcd"  //I definitely hear a Boomer.
+}
+Rule iMT_PlayerHeardBoomerManager
+{
+	criteria iMT_PlayerHeardBoomer IsManager
+	Response iMT_PlayerHeardBoomerManager
+}
+
+Response iMT_PlayerHeardHunterManager
+{
+	scene "scenes/Manager/HeardHunter01.vcd"  //Watch your back, I hear a Hunter.
+	scene "scenes/Manager/HeardHunter02.vcd"  //Careful, I hear a Hunter.
+	scene "scenes/Manager/HeardHunter03.vcd"  //I hear a Hunter
+	scene "scenes/Manager/HeardHunter04.vcd"  //There's a Hunter out there.
+	scene "scenes/Manager/HeardHunter05.vcd"  //Careful now,  there's a Hunter around here.
+	scene "scenes/Manager/HeardHunter06.vcd"  //Watch your back, I hear a Hunter.
+	scene "scenes/Manager/HeardHunter07.vcd"  //Careful, I hear a Hunter.
+	scene "scenes/Manager/HeardHunter08.vcd"  //I hear a Hunter
+	scene "scenes/Manager/HeardHunter09.vcd"  //There's a Hunter out there.
+	scene "scenes/Manager/HeardHunter10.vcd"  //Careful now, there's a hunter around here.
+}
+Rule iMT_PlayerHeardHunterManager
+{
+	criteria iMT_PlayerHeardHunter IsManager
+	Response iMT_PlayerHeardHunterManager
+}
+
+Response iMT_PlayerHeardSmokerManager
+{
+	scene "scenes/Manager/HeardSmoker01.vcd"  //There's a Smoker around here.
+	scene "scenes/Manager/HeardSmoker02.vcd"  //Smoker - somewhere around here.
+	scene "scenes/Manager/HeardSmoker03.vcd"  //Careful, I smell a Smoker.
+	scene "scenes/Manager/HeardSmoker04.vcd"  //I hear a Smoker.
+	scene "scenes/Manager/HeardSmoker05.vcd"  //There's a Smoker around here.
+	scene "scenes/Manager/HeardSmoker06.vcd"  //Smoker - somewhere around here.
+	scene "scenes/Manager/HeardSmoker07.vcd"  //Careful, I smell a Smoker.
+	scene "scenes/Manager/HeardSmoker08.vcd"  //I hear a Smoker.
+}
+Rule iMT_PlayerHeardSmokerManager
+{
+	criteria iMT_PlayerHeardSmoker IsManager
+	Response iMT_PlayerHeardSmokerManager
+}
+
 Response iMT_PlayerAlsoWarnChargerManager
 {
 	scene "scenes/Manager/DLC1_L4D1Charger01.vcd"  //CHARGER!
@@ -247,6 +311,22 @@ Rule iMT_PlayerAlsoWarnSpitterManager
 {
 	criteria iMT_PlayerAlsoWarnSpitter IsManager
 	Response iMT_PlayerAlsoWarnSpitterManager
+}
+
+Response iMT_PlayerHeardWitchManager
+{
+	scene "scenes/Manager/HeardWitch01.vcd"  //Shhh, I hear a Witch.
+	scene "scenes/Manager/HeardWitch02.vcd"  //I hear a Witch.
+	scene "scenes/Manager/HeardWitch03.vcd"  //I hear a damn Witch.
+	scene "scenes/Manager/HeardWitch04.vcd"  //There's a Witch around here.
+	scene "scenes/Manager/HeardWitch05.vcd"  //Hold on, hold on, shhh, that's a witch!
+	scene "scenes/Manager/HeardWitch06.vcd"  //Ahh damn, a witch is around here.
+	scene "scenes/Manager/HeardWitch07.vcd"  //Stop, Stop, Stop - I hear a witch
+}
+Rule iMT_PlayerHeardWitchManager
+{
+	criteria iMT_PlayerHeardWitch IsManager
+	Response iMT_PlayerHeardWitchManager
 }
 
 Response iMT_PlayerCoughingManager
@@ -434,6 +514,19 @@ Rule iMT_PlayerBreathingManager
 	Response iMT_PlayerBreathingManager
 }
 
+Response iMT_PlayerAnswerReadyManager
+{
+	scene "scenes/Manager/AnswerReady01.vcd"  //Ready!
+	scene "scenes/Manager/AnswerReady02.vcd"  //Let's do it!
+	scene "scenes/Manager/AnswerReady03.vcd"  //Hit it!
+	scene "scenes/Manager/AnswerReady04.vcd"  //Come on, let's do it!
+}
+Rule iMT_PlayerAnswerReadyManager
+{
+	criteria iMT_PlayerAnswerReady IsManager
+	Response iMT_PlayerAnswerReadyManager
+}
+
 Response iMT_PlayerDeathScreamManager
 {
 	scene "scenes/Manager/Fall01.vcd"  //[Falling-to-Death scream]
@@ -559,6 +652,34 @@ Rule iMT_PlayerMournTeenGirlDeadManager
 {
 	criteria iMT_PlayerMourn IsManager IsTeenGirlNear200 IsTeenGirlNotAlive
 	Response iMT_PlayerMournTeenGirlManager
+}
+
+Response iMT_PlayerNearExitManager
+{
+	scene "scenes/Manager/FinaleAhead01.vcd"  //We're almost out of here!
+	scene "scenes/Manager/FinaleAhead02.vcd"  //We're almost out of here!
+	scene "scenes/Manager/SafeSpotAhead04.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house ahead!
+	scene "scenes/Manager/SafeSpotAhead05.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //There's the safe house!
+	scene "scenes/Manager/SafeSpotAhead06.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house!
+	scene "scenes/Manager/SafeSpotAhead07.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house up ahead!
+}
+Rule iMT_PlayerNearExitManager
+{
+	criteria iMT_PlayerNearExit IsManager
+	Response iMT_PlayerNearExitManager
+}
+
+Response iMT_PlayerNearExitResponseManager
+{
+	scene "scenes/Manager/SafeSpotAheadReaction01.vcd" odds 2  //Finally!
+	scene "scenes/Manager/SafeSpotAheadReaction02.vcd" odds 2  //We made it!
+	scene "scenes/Manager/SafeSpotAheadReaction03.vcd" odds 2  //Knew we'd make it!
+	scene "scenes/Manager/SafeSpotAheadReaction05.vcd" odds 2  //Man, I KNEW we was gonna make it.
+}
+Rule iMT_PlayerNearExitResponseManager
+{
+	criteria iMT_PlayerNearExitResponse IsManager
+	Response iMT_PlayerNearExitResponseManager
 }
 
 //--------------------------------------------------------------------------------------------------------------

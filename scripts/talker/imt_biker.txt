@@ -226,6 +226,55 @@ Rule iMT_TankFactoryBiker
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerHeardBoomerBiker
+{
+	scene "scenes/Biker/HeardBoomer01.vcd"  //I hear a Boomer out there.
+	scene "scenes/Biker/HeardBoomer02.vcd"  //Careful, I hear a Boomer.
+	scene "scenes/Biker/HeardBoomer03.vcd"  //There's a Boomer around here.
+	scene "scenes/Biker/HeardBoomer04.vcd"  //Watch it, we got a Boomer.
+	scene "scenes/Biker/HeardBoomer05.vcd"  //Hear that Boomer? I'm gonna kill its ass.
+	scene "scenes/Biker/HeardBoomer06.vcd"  //I hear a Boomer.
+}
+Rule iMT_PlayerHeardBoomerBiker
+{
+	criteria iMT_PlayerHeardBoomer IsBiker
+	Response iMT_PlayerHeardBoomerBiker
+}
+
+Response iMT_PlayerHeardHunterBiker
+{
+	scene "scenes/Biker/HeardHunter01.vcd"  //There's a hunter out there.
+	scene "scenes/Biker/HeardHunter02.vcd"  //Careful, there's a Hunter around here.
+	scene "scenes/Biker/HeardHunter03.vcd"  //I hear a Hunter.
+	scene "scenes/Biker/HeardHunter04.vcd"  //Careful, there's a Hunter around here.
+	scene "scenes/Biker/HeardHunter05.vcd"  //Sounds like a freakin' Hunter.
+	scene "scenes/Biker/HeardHunter06.vcd"  //Hunter out there.
+	scene "scenes/Biker/HeardHunter07.vcd"  //There's a Hunter someplace around here.
+	scene "scenes/Biker/HeardHunter08.vcd"  //I hear a Hunter. COME ON OUT, WUSSY!
+	scene "scenes/Biker/HeardHunter09.vcd"  //YEAH, YOU BETTER HIDE! Sweathshirt wearin' little wuss.
+}
+Rule iMT_PlayerHeardHunterBiker
+{
+	criteria iMT_PlayerHeardHunter IsBiker
+	Response iMT_PlayerHeardHunterBiker
+}
+
+Response iMT_PlayerHeardSmokerBiker
+{
+	scene "scenes/Biker/HeardSmoker01.vcd"  //Man, there's a Smoker around here.
+	scene "scenes/Biker/HeardSmoker02.vcd"  //Smell that Smoker?
+	scene "scenes/Biker/HeardSmoker03.vcd"  //Smoker. Hear it?
+	scene "scenes/Biker/HeardSmoker04.vcd"  //I hear a smoker.
+	scene "scenes/Biker/HeardSmoker05.vcd"  //Sounds like a Smoker.
+	scene "scenes/Biker/HeardSmoker06.vcd"  //Smoker. He's gonna have to use that tongue to choke my foot out of his ass.
+	scene "scenes/Biker/HeardSmoker07.vcd"  //Sounds like a Smoker.
+}
+Rule iMT_PlayerHeardSmokerBiker
+{
+	criteria iMT_PlayerHeardSmoker IsBiker
+	Response iMT_PlayerHeardSmokerBiker
+}
+
 Response iMT_PlayerAlsoWarnChargerBiker
 {
 	scene "scenes/Biker/DLC1_L4D1Charger01.vcd"  //CHARGER!
@@ -260,6 +309,23 @@ Rule iMT_PlayerAlsoWarnSpitterBiker
 {
 	criteria iMT_PlayerAlsoWarnSpitter IsBiker
 	Response iMT_PlayerAlsoWarnSpitterBiker
+}
+
+Response iMT_PlayerHeardWitchBiker
+{
+	scene "scenes/Biker/HeardWitch01.vcd"  //I hear a Witch.
+	scene "scenes/Biker/HeardWitch02.vcd"  //Witch, and she's close!
+	scene "scenes/Biker/HeardWitch03.vcd"  //There's a Witch around here.
+	scene "scenes/Biker/HeardWitch04.vcd"  //Witch, and she's close!
+	scene "scenes/Biker/HeardWitch05.vcd"  //Hear that Witch? I'm gonna give her something to cry about.
+	scene "scenes/Biker/HeardWitch06.vcd"  //Shhh, I hear a Witch.
+	scene "scenes/Biker/HeardWitch07.vcd"  //There's a Witch around here.
+	scene "scenes/Biker/HeardWitch08.vcd"  //I hear a Witch.
+}
+Rule iMT_PlayerHeardWitchBiker
+{
+	criteria iMT_PlayerHeardWitch IsBiker
+	Response iMT_PlayerHeardWitchBiker
 }
 
 Response iMT_PlayerCoughingBiker
@@ -449,6 +515,20 @@ Rule iMT_PlayerBreathingBiker
 	Response iMT_PlayerBreathingBiker
 }
 
+Response iMT_PlayerAnswerReadyBiker
+{
+	scene "scenes/Biker/AnswerReady01.vcd"  //Ready.
+	scene "scenes/Biker/AnswerReady02.vcd"  //Yeah, ready.
+	scene "scenes/Biker/AnswerReady03.vcd"  //Yeah, let's do it.
+	scene "scenes/Biker/AnswerReady04.vcd"  //Let's go break stuff!
+	scene "scenes/Biker/AnswerReady05.vcd"  //Let's go kill somethin'!
+}
+Rule iMT_PlayerAnswerReadyBiker
+{
+	criteria iMT_PlayerAnswerReady IsBiker
+	Response iMT_PlayerAnswerReadyBiker
+}
+
 Response iMT_PlayerDeathScreamBiker
 {
 	scene "scenes/Biker/Fall01.vcd"  //[Death scream as you fall]
@@ -570,6 +650,38 @@ Rule iMT_PlayerMournTeenGirlDeadBiker
 {
 	criteria iMT_PlayerMourn IsBiker IsTeenGirlNear200 IsTeenGirlNotAlive
 	Response iMT_PlayerMournTeenGirlBiker
+}
+
+Response iMT_PlayerNearExitBiker
+{
+	scene "scenes/Biker/FinaleAhead01.vcd"  //We're almost there!
+	scene "scenes/Biker/FinaleAhead02.vcd"  //We're almost out of here!
+	scene "scenes/Biker/FinaleAhead03.vcd"  //Now there's a sight for sore eyes. Looks like we're gonna make it, kids.
+	scene "scenes/Biker/FinaleAhead04.vcd"  //Hey, we're almost outta this shithole. I told you I'd get you here.
+	scene "scenes/Biker/SafeSpotAhead03.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //We're near a safe spot.
+	scene "scenes/Biker/SafeSpotAhead06.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house ahead!
+	scene "scenes/Biker/SafeSpotAhead07.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house!
+	scene "scenes/Biker/SafeSpotAhead08.vcd" then any iMT_PlayerNearExitResponse foo:0 0  //Safe house, let's go!
+}
+Rule iMT_PlayerNearExitBiker
+{
+	criteria iMT_PlayerNearExit IsBiker
+	Response iMT_PlayerNearExitBiker
+}
+
+Response iMT_PlayerNearExitResponseBiker
+{
+	scene "scenes/Biker/SafeSpotAheadReaction01.vcd" odds 2  //Finally!
+	scene "scenes/Biker/SafeSpotAheadReaction02.vcd" odds 2  //A-men to that!
+	scene "scenes/Biker/SafeSpotAheadReaction03.vcd" odds 2  //Cool.
+	scene "scenes/Biker/SafeSpotAheadReaction04.vcd" odds 2  //Well, all right!
+	scene "scenes/Biker/SafeSpotAheadReaction05.vcd" odds 2  //Finally.
+	scene "scenes/Biker/SafeSpotAheadReaction07.vcd" odds 2  //A-frickin'-men.
+}
+Rule iMT_PlayerNearExitResponseBiker
+{
+	criteria iMT_PlayerNearExitResponse IsBiker
+	Response iMT_PlayerNearExitResponseBiker
 }
 
 //--------------------------------------------------------------------------------------------------------------

@@ -208,6 +208,57 @@ Rule iMT_EllisStoryReac01GoatMechanic
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerHeardBoomerMechanic
+{
+	scene "scenes/Mechanic/HeardBoomer01.vcd"  //I hear a boomer.
+	scene "scenes/Mechanic/HeardBoomer02.vcd"  //Hey, think I heard a boomer.
+	scene "scenes/Mechanic/HeardBoomer03.vcd"  //Careful, boomer 'round.
+	scene "scenes/Mechanic/HeardBoomer04.vcd"  //Careful, boomer 'round.
+	scene "scenes/Mechanic/HeardBoomer05.vcd"  //Think I heard a boomer.
+	scene "scenes/Mechanic/HeardBoomer06.vcd"  //I hear a boomer.
+}
+Rule iMT_PlayerHeardBoomerMechanic
+{
+	criteria iMT_PlayerHeardBoomer IsMechanic
+	Response iMT_PlayerHeardBoomerMechanic
+}
+
+Response iMT_PlayerHeardHunterMechanic
+{
+	scene "scenes/Mechanic/HeardHunter01.vcd"  //I hear a hunter around.
+	scene "scenes/Mechanic/HeardHunter02.vcd"  //Careful. Hunter.
+	scene "scenes/Mechanic/HeardHunter03.vcd"  //I hear a hunter.
+}
+Rule iMT_PlayerHeardHunterMechanic
+{
+	criteria iMT_PlayerHeardHunter IsMechanic
+	Response iMT_PlayerHeardHunterMechanic
+}
+
+Response iMT_PlayerHeardSmokerMechanic
+{
+	scene "scenes/Mechanic/HeardSmoker01.vcd"  //Smoker around these parts.
+	scene "scenes/Mechanic/HeardSmoker02.vcd"  //Careful, Smoker.
+	scene "scenes/Mechanic/HeardSmoker03.vcd"  //Hey, I hear a smoker.
+}
+Rule iMT_PlayerHeardSmokerMechanic
+{
+	criteria iMT_PlayerHeardSmoker IsMechanic
+	Response iMT_PlayerHeardSmokerMechanic
+}
+
+Response iMT_PlayerHeardChargerMechanic
+{
+	scene "scenes/Mechanic/HeardCharger01.vcd"  //Charger around.
+	scene "scenes/Mechanic/HeardCharger02.vcd"  //I hear a charger.
+	scene "scenes/Mechanic/HeardCharger03.vcd"  //Hear that charger?
+}
+Rule iMT_PlayerHeardChargerMechanic
+{
+	criteria iMT_PlayerHeardCharger IsMechanic
+	Response iMT_PlayerHeardChargerMechanic
+}
+
 Response iMT_PlayerAlsoWarnChargerMechanic
 {
 	scene "scenes/Mechanic/WarnCharger01.vcd"  //CHARGER!
@@ -219,6 +270,36 @@ Rule iMT_PlayerAlsoWarnChargerMechanic
 {
 	criteria iMT_PlayerAlsoWarnCharger IsMechanic
 	Response iMT_PlayerAlsoWarnChargerMechanic
+}
+
+Response iMT_PlayerAlsoWarnChargerC1Mechanic
+{
+	scene "scenes/Mechanic/WarnChargerC101.vcd"  //Watch out, man, that thing charges!
+	scene "scenes/Mechanic/WarnChargerC102.vcd"  //ONE ARM!
+	scene "scenes/Mechanic/WarnChargerC103.vcd"  //BIG ARM!
+}
+Rule iMT_PlayerAlsoWarnChargerC1Mechanic
+{
+	criteria iMT_PlayerAlsoWarnCharger IsMechanic C1M1orC1M2
+	Response iMT_PlayerAlsoWarnChargerC1Mechanic
+}
+
+Response iMT_PlayerHeardJockeyMechanic
+{
+	scene "scenes/Mechanic/HeardJockey01.vcd"  //I hear one of those back humpers around here.
+	scene "scenes/Mechanic/HeardJockey02.vcd"  //A freaking jockey's around.
+	scene "scenes/Mechanic/HeardJockey03.vcd"  //Hey, watch your back, jockey's around here.
+	scene "scenes/Mechanic/HeardJockey04.vcd"  //I hate them things.
+	scene "scenes/Mechanic/HeardJockey05.vcd"  //I hate those jockeys.
+	scene "scenes/Mechanic/HeardJockey06.vcd"  //That is just offensive what they do.
+	scene "scenes/Mechanic/HeardJockey07.vcd"  //Dude,I hear one of those back humpers around.
+	scene "scenes/Mechanic/HeardJockey08.vcd"  //There's a freaking jockey's around here.
+	scene "scenes/Mechanic/HeardJockeyC101.vcd" odds 10  //I think that's one of them little things.
+}
+Rule iMT_PlayerHeardJockeyMechanic
+{
+	criteria iMT_PlayerHeardJockey IsMechanic
+	Response iMT_PlayerHeardJockeyMechanic
 }
 
 Response iMT_PlayerAlsoWarnJockeyMechanic
@@ -234,6 +315,30 @@ Rule iMT_PlayerAlsoWarnJockeyMechanic
 	Response iMT_PlayerAlsoWarnJockeyMechanic
 }
 
+Response iMT_PlayerAlsoWarnJockeyC1Mechanic
+{
+	scene "scenes/Mechanic/WarnJockeyC101.vcd"  //HUMPER!
+	scene "scenes/Mechanic/WarnJockeyC102.vcd"  //HUMPER!
+	scene "scenes/Mechanic/WarnJockeyC103.vcd"  //LITTLE GUY! LITTLE GUY!
+}
+Rule iMT_PlayerAlsoWarnJockeyC1Mechanic
+{
+	criteria iMT_PlayerAlsoWarnJockey IsMechanic C1M1orC1M2
+	Response iMT_PlayerAlsoWarnJockeyC1Mechanic
+}
+
+Response iMT_PlayerHeardSpitterMechanic
+{
+	scene "scenes/Mechanic/HeardSpitter01.vcd"  //I hear a spitter.
+	scene "scenes/Mechanic/HeardSpitter02.vcd"  //Spitting thing's around.
+	scene "scenes/Mechanic/HeardSpitter03.vcd"  //I hear one of them spitters.
+}
+Rule iMT_PlayerHeardSpitterMechanic
+{
+	criteria iMT_PlayerHeardSpitter IsMechanic
+	Response iMT_PlayerHeardSpitterMechanic
+}
+
 Response iMT_PlayerAlsoWarnSpitterMechanic
 {
 	scene "scenes/Mechanic/WarnSpitter01.vcd"  //YO, SPITTER!
@@ -245,6 +350,47 @@ Rule iMT_PlayerAlsoWarnSpitterMechanic
 {
 	criteria iMT_PlayerAlsoWarnSpitter IsMechanic
 	Response iMT_PlayerAlsoWarnSpitterMechanic
+}
+
+Response iMT_PlayerAlsoWarnSpitterC1Mechanic
+{
+	scene "scenes/Mechanic/WarnSpitterC101.vcd"  //SPITTING THING!
+	scene "scenes/Mechanic/WarnSpitterC102.vcd"  //SPITTING NASTY THING!
+	scene "scenes/Mechanic/WarnSpitterC103.vcd"  //THAT LOOGIE DUDE!
+	scene "scenes/Mechanic/WarnSpitterC104.vcd"  //IT'S THAT GOO GUY!
+	scene "scenes/Mechanic/WarnSpitterC105.vcd"  //HEY, THAT BIG NECK THING!
+}
+Rule iMT_PlayerAlsoWarnSpitterC1Mechanic
+{
+	criteria iMT_PlayerAlsoWarnSpitter IsMechanic C1M1orC1M2
+	Response iMT_PlayerAlsoWarnSpitterC1Mechanic
+}
+
+Response iMT_PlayerHeardWitchMechanic
+{
+	scene "scenes/Mechanic/HeardWitch01.vcd"  //That crying girl's around.
+	scene "scenes/Mechanic/HeardWitch02.vcd"  //Hey, I hear a witch.
+	scene "scenes/Mechanic/HeardWitch03.vcd"  //I hear a witch crying.
+}
+Rule iMT_PlayerHeardWitchMechanic
+{
+	criteria iMT_PlayerHeardWitch IsMechanic
+	Response iMT_PlayerHeardWitchMechanic
+}
+
+Response iMT_PlayerHeardWitchC1Mechanic
+{
+	scene "scenes/Mechanic/HeardWitchC101.vcd"  //Hey, do you hear that crying?
+	scene "scenes/Mechanic/HeardWitchC102.vcd"  //Dude, she don't sound happy.
+	scene "scenes/Mechanic/HeardWitchC103.vcd"  //Let's not go by the crying girl.
+	scene "scenes/Mechanic/HeardWitchC104.vcd"  //Seriously, I'm thinkin' we should just leave the crying girl alone.
+	scene "scenes/Mechanic/HeardWitchC105.vcd"  //I don't like the sound of that crying.
+	scene "scenes/Mechanic/HeardWitchC106.vcd"  //I'm not - I'm not going near the crying girl.
+}
+Rule iMT_PlayerHeardWitchC1Mechanic
+{
+	criteria iMT_PlayerHeardWitch IsMechanic C1M1orC1M2
+	Response iMT_PlayerHeardWitchC1Mechanic
 }
 
 Response iMT_PlayerCoughingMechanic
@@ -486,6 +632,20 @@ Rule iMT_PlayerBreathingMechanic
 	Response iMT_PlayerBreathingMechanic
 }
 
+Response iMT_PlayerAnswerReadyMechanic
+{
+	scene "scenes/Mechanic/MeleeWeapons30.vcd"  //Man, I'm gonna beat these sons of bitches till I lose my watch.
+	scene "scenes/Mechanic/MeleeWeapons31.vcd"  //Time to beat on some sons of bitches.
+	scene "scenes/Mechanic/MeleeWeapons32.vcd"  //Gonna beat me a zombie till there ain't a chunk big enough to hit.
+	scene "scenes/Mechanic/TakeMelee07.vcd"  //I'm gonna mess some zombies up now.
+	scene "scenes/Mechanic/WorldC2M4B02.vcd"  //I was born ready. So... yes.
+}
+Rule iMT_PlayerAnswerReadyMechanic
+{
+	criteria iMT_PlayerAnswerReady IsMechanic
+	Response iMT_PlayerAnswerReadyMechanic
+}
+
 Response iMT_PlayerDeathScreamMechanic
 {
 	scene "scenes/Mechanic/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
@@ -652,6 +812,19 @@ Rule iMT_PlayerMournProducerDeadMechanic
 {
 	criteria iMT_PlayerMourn IsMechanic IsProducerNear200 IsProducerNotAlive
 	Response iMT_PlayerMournProducerMechanic
+}
+
+Response iMT_PlayerNearExitMechanic
+{
+	scene "scenes/Mechanic/SafeSpotAhead01.vcd"  //Safe house ahead!
+	scene "scenes/Mechanic/SafeSpotAhead02.vcd"  //Yeah, safehouse y'all!
+	scene "scenes/Mechanic/SafeSpotAhead03.vcd"  //Hey, we got a safe room ahead!
+	scene "scenes/Mechanic/SafeSpotAhead04.vcd"  //Hey, we got a safe room right ahead!
+}
+Rule iMT_PlayerNearExitMechanic
+{
+	criteria iMT_PlayerNearExit IsMechanic
+	Response iMT_PlayerNearExitMechanic
 }
 
 //--------------------------------------------------------------------------------------------------------------
