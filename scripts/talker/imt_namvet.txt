@@ -453,6 +453,17 @@ Rule iMT_OtherPlayerWasPouncedTeenGirlNamVet
 	Response iMT_OtherPlayerWasPouncedTeenGirlNamVet
 }
 
+Response iMT_BattleCryNamVet
+{
+	scene "scenes/NamVet/Taunt07.vcd"  //[loud, evil laugh]
+	scene "scenes/NamVet/Taunt08.vcd"  //[loud, evil laugh]
+}
+Rule iMT_BattleCryNamVet
+{
+	criteria iMT_BattleCry IsNamVet
+	Response iMT_BattleCryNamVet
+}
+
 Response iMT_PlayerEquippedItemNamVet
 {
 	scene "scenes/NamVet/KillConfirmation02.vcd"  //Got it

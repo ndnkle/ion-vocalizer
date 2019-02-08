@@ -2,6 +2,18 @@
 // ion's Vocalizer: Biker Response Rule File
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_NervousHummingBiker
+{
+	scene "scenes/Biker/NervousHumming01.vcd"  //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming06.vcd"  //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming07.vcd"  //[Not-So-Nervous Humming with lame zombie lyrics]
+}
+Rule iMT_NervousHummingBiker
+{
+	criteria iMT_NervousHumming IsBiker
+	Response iMT_NervousHummingBiker
+}
+
 Response iMT_FrozenBeardBiker
 {
 	scene "scenes/Biker/DLC1_CommunityL4D101.vcd"  //Hey Bill, your beard's frozen.

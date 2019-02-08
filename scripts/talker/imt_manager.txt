@@ -2,6 +2,17 @@
 // ion's Vocalizer: Manager Response Rule File
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_NervousHummingManager
+{
+	scene "scenes/Manager/NervousHumming01.vcd"  //[Nervous Humming]
+	scene "scenes/Manager/NervousHumming02.vcd"  //[Nervous Humming]
+}
+Rule iMT_NervousHummingManager
+{
+	criteria iMT_NervousHumming IsManager
+	Response iMT_NervousHummingManager
+}
+
 Response iMT_BelchManager
 {
 	scene "scenes/Manager/Generic14.vcd" then any elevatorShortLaugh foo:0 -0.8 //BELCH - Excuse me
@@ -483,6 +494,16 @@ Rule iMT_OtherPlayerWasPouncedTeenGirlManager
 {
 	criteria iMT_OtherPlayerWasPounced IsManager IssuerClose SubjectIsTeenGirl
 	Response iMT_OtherPlayerWasPouncedTeenGirlManager
+}
+
+Response iMT_BattleCryManager
+{
+	scene "scenes/Manager/Taunt05.vcd"  //Oh yeah, who's your momma, who's your daddy
+}
+Rule iMT_BattleCryManager
+{
+	criteria iMT_BattleCry IsManager
+	Response iMT_BattleCryManager
 }
 
 Response iMT_PlayerEquippedItemManager
