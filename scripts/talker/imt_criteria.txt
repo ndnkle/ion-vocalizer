@@ -45,9 +45,9 @@ Criterion	"iMT_Angel"			"Concept"	"iMT_Angel"			required
 Criterion	"iMT_Fantasy"			"Concept"	"iMT_Fantasy"			required
 Criterion	"iMT_Feeling"			"Concept"	"iMT_Feeling"			required
 Criterion	"iMT_Fish"			"Concept"	"iMT_Fish"			required
-Criterion	"iMT_FourRiders"		"Concept"	"iMT_FourRiders"		required
 Criterion	"iMT_Honeymoon"			"Concept"	"iMT_Honeymoon"			required
 Criterion	"iMT_NotDie"			"Concept"	"iMT_NotDie"			required
+Criterion	"iMT_Panic"			"Concept"	"iMT_Panic"			required
 Criterion	"iMT_ShitAir"			"Concept"	"iMT_ShitAir"			required
 Criterion	"iMT_Trust"			"Concept"	"iMT_Trust"			required
 
@@ -133,10 +133,12 @@ Criterion	"iMT_WarmUp2"			"Concept"	"iMT_WarmUp2"			required
 // Bill
 
 Criterion	"iMT_10Miles"			"Concept"	"iMT_10Miles"			required
+Criterion	"iMT_Beautiful"			"Concept"	"iMT_Beautiful"			required
 Criterion	"iMT_BigMouth"			"Concept"	"iMT_BigMouth"			required
 Criterion	"iMT_Cold"			"Concept"	"iMT_Cold"			required
 Criterion	"iMT_Family"			"Concept"	"iMT_Family"			required
 Criterion	"iMT_GoodEnough"		"Concept"	"iMT_GoodEnough"		required
+Criterion	"iMT_GoodRun"			"Concept"	"iMT_GoodRun"			required
 Criterion	"iMT_Hallelujah"		"Concept"	"iMT_Hallelujah"		required
 Criterion	"iMT_Home"			"Concept"	"iMT_Home"			required
 Criterion	"iMT_Idiot"			"Concept"	"iMT_Idiot"			required
@@ -144,9 +146,7 @@ Criterion	"iMT_KnowingLouis"		"Concept"	"iMT_KnowingLouis"		required
 Criterion	"iMT_LastFight"			"Concept"	"iMT_LastFight"			required
 Criterion	"iMT_Lonely"			"Concept"	"iMT_Lonely"			required
 Criterion	"iMT_MaryJosef"			"Concept"	"iMT_MaryJosef"			required
-Criterion	"iMT_NoLove"			"Concept"	"iMT_NoLove"			required
 Criterion	"iMT_Phone"			"Concept"	"iMT_Phone"			required
-Criterion	"iMT_PrettyGood"		"Concept"	"iMT_PrettyGood"		required
 Criterion	"iMT_Stink"			"Concept"	"iMT_Stink"			required
 Criterion	"iMT_Wheel"			"Concept"	"iMT_Wheel"			required
 Criterion	"iMT_Woods"			"Concept"	"iMT_Woods"			required
@@ -199,6 +199,7 @@ Criterion	"IsCharger"			"Who"		"Charger"			required
 
 Criterion	"IsTeenGirlNotAlive"		"IsTeenGirlAlive"	"!=1"			required
 Criterion	"IsNamVetNotAlive"		"IsNamVetAlive"		"!=1"			required
+Criterion	"IsManagerAliveA"		"IsManagerAlive"	"1"			required
 Criterion	"IsManagerNotAlive"		"IsManagerAlive"	"!=1"			required
 Criterion	"IsBikerNotAlive"		"IsBikerAlive"		"!=1"			required
 

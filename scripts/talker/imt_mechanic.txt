@@ -920,3 +920,500 @@ Rule iMT_SoldiersMechanic
 	criteria iMT_Soldiers IsMechanic
 	Response iMT_SoldiersMechanic
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// General Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerYellRunMechanic
+{
+	scene "scenes/Mechanic/YellRun01.vcd"  //RUN!
+	scene "scenes/Mechanic/YellRun02.vcd"  //RUN! RUN! RUN!
+	scene "scenes/Mechanic/YellRun03.vcd"  //MAN, DON'T STOP RUNNING!
+}
+Rule iMT_PlayerYellRunMechanic
+{
+	criteria ConceptPlayerYellRun IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerYellRunMechanic
+}
+
+Response iMT_PlayerLaughMechanic
+{
+	scene "scenes/Mechanic/Laughter04.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter05.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter06.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter13b.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter13c.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter13d.vcd"  //<Hearty Laugh>
+}
+Rule iMT_PlayerLaughMechanic
+{
+	criteria ConceptPlayerLaugh IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerLaughMechanic
+}
+
+Response iMT_SurvivorTauntResponseMechanic
+{
+	scene "scenes/Mechanic/Taunt01.vcd"  //Why don't you remember that for next time you son's of a bitches.
+	scene "scenes/Mechanic/Taunt02.vcd"  //They ain't takin' us alive!
+	scene "scenes/Mechanic/Taunt03.vcd"  //We knocked the piss out of them
+	scene "scenes/Mechanic/Taunt04.vcd"  //Haha! We whipped the dogshit out of them!
+	scene "scenes/Mechanic/Taunt05.vcd"  //That's right, you can't kill us!
+	scene "scenes/Mechanic/Taunt07.vcd"  //Yo! Whose your daddy!?!?
+	scene "scenes/Mechanic/Taunt08.vcd"  //Uh oh. My trigger finger got tired!
+}
+Rule iMT_SurvivorTauntResponseMechanic
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_SurvivorTauntResponseMechanic
+}
+
+Response iMT_PlayerNegativeMechanic
+{
+	scene "scenes/Mechanic/HurtCritical01.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical02.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical03.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical04.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical06.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtMajor01.vcd"  //[pain noise - huh]
+	scene "scenes/Mechanic/HurtMajor02.vcd"  //[pain noise - ahh]
+	scene "scenes/Mechanic/HurtMajor03.vcd"  //[pain noise - oy]
+	scene "scenes/Mechanic/HurtMajor04.vcd"  //[pain noise - ugh]
+	scene "scenes/Mechanic/HurtMajor05.vcd"  //[pain noise - ugh]
+	scene "scenes/Mechanic/HurtMajor06.vcd"  //[pain noise - ugh]
+}
+Rule iMT_PlayerNegativeMechanic
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerNegativeMechanic
+}
+
+Response iMT_PlayerSorryMechanic
+{
+	scene "scenes/Mechanic/Sorry01.vcd"  //Sorry.
+	scene "scenes/Mechanic/Sorry02.vcd"  //Sorry 'bout that.
+	scene "scenes/Mechanic/Sorry03.vcd"  //You can lay that blame on me.
+	scene "scenes/Mechanic/Sorry04.vcd"  //That coulda happened to anybody.
+	scene "scenes/Mechanic/Sorry05.vcd"  //Yeah, I'm sorry about that one.
+	scene "scenes/Mechanic/Sorry06.vcd"  //Sorry, sun was in my eyes.
+	scene "scenes/Mechanic/Sorry07.vcd"  //Sorry 'bout that.
+	scene "scenes/Mechanic/Sorry08.vcd"  //My bad on that one.
+	scene "scenes/Mechanic/Sorry09.vcd"  //Sorry!
+	scene "scenes/Mechanic/Sorry10.vcd"  //Sorry over there.
+}
+Rule iMT_PlayerSorryMechanic
+{
+	criteria ConceptPlayerSorry IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerSorryMechanic
+}
+
+Response iMT_PlayerHurrahMechanic
+{
+	scene "scenes/Mechanic/Hurrah01.vcd"  //We opened up a can of whup ass on them!
+	scene "scenes/Mechanic/Hurrah02.vcd"  //I'm thinkin' we can take on anything!
+	scene "scenes/Mechanic/Hurrah03.vcd"  //We are kings of the world!
+	scene "scenes/Mechanic/Hurrah04.vcd"  //I am proud to be part of this team!
+	scene "scenes/Mechanic/Hurrah05.vcd"  //We are a right damn good team!
+	scene "scenes/Mechanic/Hurrah06.vcd"  //Hey, let me tell ya something. Y'all are the best!
+	scene "scenes/Mechanic/Hurrah07.vcd"  //Well, slap my head and call me silly we are kickin' some ass!
+	scene "scenes/Mechanic/Hurrah08.vcd"  //Ahh HELL YEAH!
+	scene "scenes/Mechanic/Hurrah09.vcd"  //All right then!
+	scene "scenes/Mechanic/Hurrah10.vcd"  //I ain't no god damn son of a bitch, yeah ya better think about that baby.
+	scene "scenes/Mechanic/Hurrah11.vcd"  //That's how it's done RIGHT!
+	scene "scenes/Mechanic/Hurrah12.vcd"  //We're kickin' more ass than a boot in an ass factory!
+	scene "scenes/Mechanic/Hurrah13.vcd"  //DAMN, we are good.
+	scene "scenes/Mechanic/Hurrah14.vcd"  //Load, lock, and cut the talk! That's how it's done!
+	scene "scenes/Mechanic/Hurrah15.vcd"  //We in the ZOMBIE-killin' bidness!
+	scene "scenes/Mechanic/Hurrah18.vcd"  //Hoohoo! Apocalypse, my ass! We're livin' in the best shooting range of ALL TIME!
+	scene "scenes/Mechanic/Hurrah20.vcd"  //We gotta make this fair for the zombies! I'm-a tie an arm around my back.
+}
+Rule iMT_PlayerHurrahMechanic
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerHurrahMechanic
+}
+
+Response iMT_PlayerYouAreWelcomeMechanic
+{
+	scene "scenes/Mechanic/YouAreWelcome01.vcd"  //You're welcome.
+	scene "scenes/Mechanic/YouAreWelcome02.vcd"  //Yeah, you're welcome.
+	scene "scenes/Mechanic/YouAreWelcome03.vcd"  //We're cool.
+	scene "scenes/Mechanic/YouAreWelcome04.vcd"  //We're good.
+	scene "scenes/Mechanic/YouAreWelcome05.vcd"  //Anytime, man.
+	scene "scenes/Mechanic/YouAreWelcome06.vcd"  //Hey, you bet!
+	scene "scenes/Mechanic/YouAreWelcome07.vcd"  //Hey, you bet!
+	scene "scenes/Mechanic/YouAreWelcome08.vcd"  //Always.
+	scene "scenes/Mechanic/YouAreWelcome09.vcd"  //You got it, man.
+	scene "scenes/Mechanic/YouAreWelcome10.vcd"  //You got it, girl.
+}
+Rule iMT_PlayerYouAreWelcomeMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeMechanic
+}
+
+Response iMT_PlayerToTheRescueRosMechanic
+{
+	scene "scenes/Mechanic/ToTheRescue01.vcd"  //Keep your britches on, I'm a comin'.
+	scene "scenes/Mechanic/ToTheRescue02.vcd"  //I'm a comin!
+	scene "scenes/Mechanic/ToTheRescue03.vcd"  //Hold on now, I'm coming!
+	scene "scenes/Mechanic/ToTheRescue04.vcd"  //Ellis on the way!
+	scene "scenes/Mechanic/ToTheRescue05.vcd"  //Hang on, I'm coming!
+	scene "scenes/Mechanic/ToTheRescue06.vcd"  //I'm comin', I'm comin'!
+	scene "scenes/Mechanic/ToTheRescue07.vcd"  //Makin' a beeline for ya!
+}
+Rule iMT_PlayerToTheRescueRosMechanic
+{
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerToTheRescueRosMechanic
+}
+
+Response iMT_PlayerHelpMechanic
+{
+	scene "scenes/Mechanic/Help01.vcd"  //Help! Help!
+	scene "scenes/Mechanic/Help02.vcd"  //Hey, I need some help over here!
+	scene "scenes/Mechanic/Help03.vcd"  //Help me out!
+	scene "scenes/Mechanic/Help04.vcd"  //Help!
+	scene "scenes/Mechanic/Help05.vcd"  //Oh shit! Help!
+	scene "scenes/Mechanic/Help06.vcd"  //I need some help!
+}
+Rule iMT_PlayerHelpMechanic
+{
+	criteria ConceptPlayerHelp IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerHelpMechanic
+}
+
+Response iMT_SurvivorSpottedTankC1Mechanic
+{
+	scene "scenes/Mechanic/WarnTankC101.vcd"  //HOLY SHIT TANK!
+	scene "scenes/Mechanic/WarnTankC102.vcd"  //GIANT THING!
+	scene "scenes/Mechanic/WarnTankC103.vcd"  //Oh lordy! Big ass thing!
+}
+Rule iMT_SurvivorSpottedTankC1Mechanic
+{
+	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedTankC1Mechanic
+}
+
+Response iMT_SurvivorSpottedBoomerC1Mechanic
+{
+	scene "scenes/Mechanic/WarnBoomerC101.vcd"  //PUKER!
+	scene "scenes/Mechanic/WarnBoomerC102.vcd"  //IT'S EXPLODING GUY!
+	scene "scenes/Mechanic/WarnBoomerC103.vcd"  //BOOMER! YEAH - BOOMER!
+}
+Rule iMT_SurvivorSpottedBoomerC1Mechanic
+{
+	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedBoomerC1Mechanic
+}
+
+Response iMT_SurvivorSpottedHunterC1Mechanic
+{
+	scene "scenes/Mechanic/WarnHunterC101.vcd"  //LEAPER!
+	scene "scenes/Mechanic/WarnHunterC102.vcd"  //JUMPER!
+	scene "scenes/Mechanic/WarnHunterC103.vcd"  //HOODED DUDE!
+}
+Rule iMT_SurvivorSpottedHunterC1Mechanic
+{
+	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedHunterC1Mechanic
+}
+
+Response iMT_SurvivorSpottedSmokerC1Mechanic
+{
+	scene "scenes/Mechanic/WarnSmokerC101.vcd"  //It's that nasty tongue thing!
+	scene "scenes/Mechanic/WarnSmokerC102.vcd"  //YO, IT'S THAT SMOKING DUDE WITH THE TONGUE!
+	scene "scenes/Mechanic/WarnSmokerC103.vcd"  //THAT'S A TONGUE GUY!
+	scene "scenes/Mechanic/WarnSmokerC104.vcd"  //SMOKING DUDE!
+	scene "scenes/Mechanic/WarnSmokerC105.vcd"  //TONGUER!
+}
+Rule iMT_SurvivorSpottedSmokerC1Mechanic
+{
+	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedSmokerC1Mechanic
+}
+
+Response iMT_SurvivorVocalizeBackUpMechanic
+{
+	scene "scenes/Mechanic/BackUp01.vcd"  //Whoa, back it up!
+	scene "scenes/Mechanic/BackUp02.vcd"  //Come on, back up!
+	scene "scenes/Mechanic/BackUp03.vcd"  //Move back! Move back!
+	scene "scenes/Mechanic/BackUp04.vcd"  //Back it up!
+	scene "scenes/Mechanic/BackUp05.vcd"  //Back up!
+	scene "scenes/Mechanic/BackUp06.vcd"  //Come on, move back!
+	scene "scenes/Mechanic/BackUp07.vcd"  //Move back! Move back!
+	scene "scenes/Mechanic/BackUp08.vcd"  //Hey, back it up!
+}
+Rule iMT_SurvivorVocalizeBackUpMechanic
+{
+	criteria ConceptPlayerBackUp IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_SurvivorVocalizeBackUpMechanic
+}
+
+Response iMT_SurvivorTankPoundMechanic
+{
+	scene "scenes/Mechanic/TankPound01.vcd"  //JESUS CHRIST SHOOT THIS MOTHER!
+	scene "scenes/Mechanic/TankPound02.vcd"  //KILL THE BASTARD WILL YA!
+	scene "scenes/Mechanic/TankPound03.vcd"  //This thing's crushin' the shit outa me!
+	scene "scenes/Mechanic/TankPound04.vcd"  //KILL THIS THING!
+}
+Rule iMT_SurvivorTankPoundMechanic
+{
+	criteria ConceptPlayerGroundPoundedByTank IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_SurvivorTankPoundMechanic
+}
+
+Response iMT_SurvivorVocalizeEmphaticGoMechanic
+{
+	scene "scenes/Mechanic/EmphaticGo01.vcd"  //Let's  go!
+	scene "scenes/Mechanic/EmphaticGo02.vcd"  //Go!
+	scene "scenes/Mechanic/EmphaticGo03.vcd"  //Go go go!
+	scene "scenes/Mechanic/EmphaticGo04.vcd"  //Hey man, we gotta go!
+	scene "scenes/Mechanic/EmphaticGo05.vcd"  //Just run!
+}
+Rule iMT_SurvivorVocalizeEmphaticGoMechanic
+{
+	criteria ConceptPlayerEmphaticGo IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_SurvivorVocalizeEmphaticGoMechanic
+}
+
+Response iMT_PlayerAreaClearMechanic
+{
+	scene "scenes/Mechanic/Defibrillator07.vcd"  //Clear!
+}
+Rule iMT_PlayerAreaClearMechanic
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerAreaClearMechanic
+}
+
+Response iMT_PlayerGettingRevivedMechanic
+{
+	scene "scenes/Mechanic/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 -0.608  //Bleedin'.
+	scene "scenes/Mechanic/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 -1.083  //Think I'm okay.
+	scene "scenes/Mechanic/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 -0.979  //I hurt aplenty
+	scene "scenes/Mechanic/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 -0.726  //I hurt.
+	scene "scenes/Mechanic/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 -0.950  //I'm pretty torn up.
+	scene "scenes/Mechanic/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 -0.936  //Reckon I'm okay.
+	scene "scenes/Mechanic/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 -1.348  //Reckon I been better.
+	scene "scenes/Mechanic/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 -0.610  //I'm okay.
+	scene "scenes/Mechanic/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 -0.546  //I'm alright.
+	scene "scenes/Mechanic/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 -0.833  //Good... I think.
+	scene "scenes/Mechanic/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 -0.916  //Good... I think.
+	scene "scenes/Mechanic/GettingRevived12.vcd" then From ReviveFriendDownFinal foo:0 -1.949  //I could be better.
+	scene "scenes/Mechanic/GettingRevived13.vcd" then From ReviveFriendDownFinal foo:0 -0.948  //Hell, I don't know.
+	scene "scenes/Mechanic/GettingRevived14.vcd" then From ReviveFriendDownFinal foo:0 -0.996  //Do I look all right?
+	scene "scenes/Mechanic/GettingRevived15.vcd" then From ReviveFriendDownFinal foo:0 -0.591  //Hurtin'.
+	scene "scenes/Mechanic/GettingRevived16.vcd" then From ReviveFriendDownFinal foo:0 -0.779  //Been better.
+	scene "scenes/Mechanic/GettingRevived17.vcd" then From ReviveFriendDownFinal foo:0 -0.927  //Cool.
+	scene "scenes/Mechanic/GettingRevived18.vcd" then From ReviveFriendDownFinal foo:0 -0.756  //Good, how're you?
+	scene "scenes/Mechanic/GettingRevived19.vcd" then From ReviveFriendDownFinal foo:0 -1.301  //I'm just great, thanks.
+	scene "scenes/Mechanic/GettingRevived20.vcd" then From ReviveFriendDownFinal foo:0 -2.070  //Sorry, don't mean to put you out none.
+	scene "scenes/Mechanic/GettingRevived21.vcd" then From ReviveFriendDownFinal foo:0 -1.447  //Hell no, I ain't cryin'.
+	scene "scenes/Mechanic/GettingRevived22.vcd" then From ReviveFriendDownFinal foo:0 -2.410  //I still got some fight in me.
+	scene "scenes/Mechanic/GettingRevived23.vcd" then From ReviveFriendDownFinal foo:0 -0.652  //I'll live.
+	scene "scenes/Mechanic/GettingRevived24.vcd" then From ReviveFriendDownFinal foo:0 -0.610  //Little sore.
+	scene "scenes/Mechanic/GettingRevived25.vcd" then From ReviveFriendDownFinal foo:0 -1.186  //Pissed at myself.
+}
+Rule iMT_PlayerGettingRevivedMechanic
+{
+	criteria ConceptReviveFriendDown IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	forceweight 1000
+	Response iMT_PlayerGettingRevivedMechanic
+}
+
+Response iMT_PlayerReviveFriendBMechanic
+{
+	scene "scenes/Mechanic/ReviveFriendB01.vcd"  //Alright, well let's go now.
+	scene "scenes/Mechanic/ReviveFriendB02.vcd"  //Okay, on your feet.
+	scene "scenes/Mechanic/ReviveFriendB03.vcd"  //Up we go!
+	scene "scenes/Mechanic/ReviveFriendB04.vcd"  //Alright, upsy daisy!
+	scene "scenes/Mechanic/ReviveFriendB05.vcd"  //See you're all good.
+	scene "scenes/Mechanic/ReviveFriendB06.vcd"  //I knew you'd be okay.
+	scene "scenes/Mechanic/ReviveFriendB07.vcd"  //There you go. Right back to normal.
+	scene "scenes/Mechanic/ReviveFriendB08.vcd"  //Good as new. Let's go kill some zombies.
+	scene "scenes/Mechanic/ReviveFriendB09.vcd"  //On your feet now
+	scene "scenes/Mechanic/ReviveFriendB10.vcd"  //Well let's get you up.
+	scene "scenes/Mechanic/ReviveFriendB11.vcd"  //Alright now, you gonna be all right.
+	scene "scenes/Mechanic/ReviveFriendB12.vcd"  //There ya go. Good as new.
+	scene "scenes/Mechanic/ReviveFriendB13.vcd"  //You'll be good.
+	scene "scenes/Mechanic/ReviveFriendB14.vcd"  //Ah come on now, you'll be all right.
+	scene "scenes/Mechanic/ReviveFriendB15.vcd"  //Shake it off and let's go.
+}
+Rule iMT_PlayerReviveFriendBMechanic
+{
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	ApplyContext "ReviveTalk:1:5,Talk:1:1"
+	forceweight 1000
+	Response iMT_PlayerReviveFriendBMechanic
+}
+
+Response iMT_PlayerGrabbedByJockeyMechanic
+{
+	scene "scenes/Mechanic/GrabbedByJockey01.vcd"  //GET THIS OFF MY BACK!
+	scene "scenes/Mechanic/GrabbedByJockey02.vcd"  //I GOT A JOCKEY ON ME!
+	scene "scenes/Mechanic/GrabbedByJockey03.vcd"  //SUMBITCH IS ON MY BACK!
+	scene "scenes/Mechanic/GrabbedByJockey04.vcd"  //THIS AIN'T RIGHT HAVING THIS THING ON ME!
+	scene "scenes/Mechanic/GrabbedByJockey05.vcd"  //GET THIS THING OFF ME!
+	scene "scenes/Mechanic/GrabbedByJockey06.vcd"  //THIS THINGS RIDING ME!
+	scene "scenes/Mechanic/GrabbedByJockey07.vcd"  //IS THIS THING HUMPING ME!??!
+}
+Rule iMT_PlayerGrabbedByJockeyMechanic
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 900
+	Response iMT_PlayerGrabbedByJockeyMechanic
+}
+
+Response iMT_PlayerGrabbedByJockeyC1Mechanic
+{
+	scene "scenes/Mechanic/GrabbedByJockey04.vcd"  //THIS AIN'T RIGHT HAVING THIS THING ON ME!
+	scene "scenes/Mechanic/GrabbedByJockey05.vcd"  //GET THIS THING OFF ME!
+	scene "scenes/Mechanic/GrabbedByJockey06.vcd"  //THIS THINGS RIDING ME!
+}
+Rule iMT_PlayerGrabbedByJockeyC1Mechanic
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_PlayerGrabbedByJockeyC1Mechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character-Specific Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_DLC1_C6M3_SafeRoomConvo07cMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo19.vcd"  //Yeah, it was like love at first sight. The other four seconds was gravy.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo07cMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo07c IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo07cMechanic
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo08cMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo23.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo08d foo:0 -0.936  //I will kill him.
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo24.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo08e foo:0 -1.581  //He is a dead man.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo08cMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo08c IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo08cMechanic
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo08dMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo26.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo08f foo:0 -1.479  //I will kill him.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo08dMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo08d IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo08dMechanic
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo08eMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo25.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo08f foo:0 -2.608  //He is a dead man.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo08eMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo08e IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo08eMechanic
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo08fMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo28.vcd"  //Folks, we got a new goal. New Orleans is gonna have to wait. We are going to have to hunt that biker man down.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo08fMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo08f IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo08fMechanic
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo03cMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo10.vcd" then Gambler DLC1_C6M3_SafeRoomConvo03d foo:0 -1.799  //You got a turd on your shoulder, Nick.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo03cMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo03c IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo03cMechanic
+}
+
+Response iMT_C2M3SafeIntro006Mechanic
+{
+	scene "scenes/Mechanic/WorldC2M3B01.vcd"  //This ain't that kinda ride, Nick. [whisper] This is where you make out with your girlfriend.
+}
+Rule iMT_C2M3SafeIntro006Mechanic
+{
+	criteria ConceptC2M3SafeIntro006 IsMechanic IsNotInStartArea
+	Response iMT_C2M3SafeIntro006Mechanic
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo01aMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo01.vcd" then Producer DLC1_C6M3_SafeRoomConvo01b foo:0 -7.373  //Oh sure! Rochelle and biker dude sitting in a tree, K-I-S-S-I-N-G.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo01aMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo01a IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo01aMechanic
+}
+
+Response iMT_c2m5_intro024Mechanic
+{
+	scene "scenes/Mechanic/WorldC2M4B02.vcd"  //I was born ready. So... yes.
+	scene "scenes/Mechanic/WorldC2M5B03.vcd" odds 20  //I always wanted to run to a helicopter during a guitar solo. Just like in a music video.
+}
+Rule iMT_c2m5_intro024Mechanic
+{
+	criteria Conceptc2m5_intro024 IsMechanic IsNotInStartArea
+	Response iMT_c2m5_intro024Mechanic
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo02eMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo05.vcd"  //Nah, he don't live there.
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo06.vcd"  //No man, he don't live there.
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo07.vcd"  //I saw how he was lookin' at Rochelle. He ain't goin nowhere.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo02eMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo02e IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo02eMechanic
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo06bMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo17.vcd"  //Well, I don't doubt it. That is a cool guy.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo06bMechanic
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo06b IsMechanic IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo06bMechanic
+}

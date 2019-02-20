@@ -496,16 +496,6 @@ Rule iMT_OtherPlayerWasPouncedTeenGirlManager
 	Response iMT_OtherPlayerWasPouncedTeenGirlManager
 }
 
-Response iMT_BattleCryManager
-{
-	scene "scenes/Manager/Taunt05.vcd"  //Oh yeah, who's your momma, who's your daddy
-}
-Rule iMT_BattleCryManager
-{
-	criteria iMT_BattleCry IsManager
-	Response iMT_BattleCryManager
-}
-
 Response iMT_PlayerEquippedItemManager
 {
 	scene "scenes/Manager/KillConfirmation01.vcd"  //Got it!
@@ -1245,4 +1235,541 @@ Rule iMT_SoldiersC12M5Manager
 {
 	criteria iMT_Soldiers IsManager IsMap_C12M5
 	Response iMT_SoldiersC12M5Manager
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// General Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerHurryUpManager
+{
+	scene "scenes/Manager/HurryUp01.vcd"  //Hurry up!
+	scene "scenes/Manager/HurryUp02.vcd"  //Hurry up!
+	scene "scenes/Manager/HurryUp03.vcd"  //Hurry!
+	scene "scenes/Manager/HurryUp04.vcd"  //Hurry!
+	scene "scenes/Manager/HurryUp05.vcd"  //Move!
+	scene "scenes/Manager/HurryUp06.vcd"  //Come on!
+	scene "scenes/Manager/HurryUp07.vcd"  //Hurry!
+	scene "scenes/Manager/HurryUp08.vcd"  //Faster!
+	scene "scenes/Manager/HurryUp09.vcd"  //Move it
+	scene "scenes/Manager/HurryUp10.vcd"  //Let's go let's go let's go!
+	scene "scenes/Manager/HurryUp11.vcd"  //Come on, catch up!
+	scene "scenes/Manager/HurryUp12.vcd"  //Move it, move it up here!
+	scene "scenes/Manager/HurryUp13.vcd"  //I'm not waiting on you, get up here!
+}
+Rule iMT_PlayerHurryUpManager
+{
+	criteria ConceptPlayerHurryUp IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerHurryUpManager
+}
+
+Response iMT_PlayerAskReadyManager
+{
+	scene "scenes/Manager/AskReady01.vcd"  //Ready?
+	scene "scenes/Manager/AskReady02.vcd"  //Ready?
+	scene "scenes/Manager/AskReady03.vcd"  //Ready for this?
+	scene "scenes/Manager/AskReady04.vcd"  //Ready for this?
+	scene "scenes/Manager/AskReady05.vcd"  //Waddya say, we ready?
+	scene "scenes/Manager/AskReady06.vcd" odds 10 then TeenGirl BounceReaction foo:0 0  //Your ready to bounce?
+	scene "scenes/Manager/AskReady07.vcd"  //You Ready?
+	scene "scenes/Manager/AskReady08.vcd"  //Yeah, let's get ready
+	scene "scenes/Manager/AskReady09.vcd"  //I'm ready, you ready?
+}
+Rule iMT_PlayerAskReadyManager
+{
+	criteria ConceptPlayerAskReady IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerAskReadyManager
+}
+
+Response iMT_PlayerLaughManager
+{
+	scene "scenes/Manager/Laughter04.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter05.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter13.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter17.vcd"  //<Short laugh>
+	scene "scenes/Manager/Laughter20.vcd"  //<Hearty Laugh>
+	scene "scenes/Manager/Laughter21.vcd"  //<Hearty Laugh>
+}
+Rule iMT_PlayerLaughManager
+{
+	criteria ConceptPlayerLaugh IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerLaughManager
+}
+
+Response iMT_SurvivorTauntResponseManager
+{
+	scene "scenes/Manager/Taunt01.vcd"  //That's right!
+	scene "scenes/Manager/Taunt02.vcd"  //Woo Hoo, that's right!
+	scene "scenes/Manager/Taunt03.vcd"  //Yeah, baby, Yeah!
+	scene "scenes/Manager/Taunt04.vcd"  //Alllright!
+	scene "scenes/Manager/Taunt05.vcd"  //Oh yeah, who's your momma, who's your daddy
+	scene "scenes/Manager/Taunt06.vcd"  //Helll yeah, Hell yeah!
+	scene "scenes/Manager/Taunt07.vcd"  //[loud, evil laugh]
+	scene "scenes/Manager/Taunt08.vcd"  //[loud, evil laugh]
+	scene "scenes/Manager/Taunt09.vcd"  //[loud, evil laugh]
+	scene "scenes/Manager/Taunt10.vcd"  //[loud, evil laugh]
+}
+Rule iMT_SurvivorTauntResponseManager
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_SurvivorTauntResponseManager
+}
+
+Response iMT_PlayerNegativeManager
+{
+	scene "scenes/Manager/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Manager/HurtMajor01.vcd"  //[Pain noise - huh]
+	scene "scenes/Manager/HurtMajor02.vcd"  //[Pain noise - ahh]
+	scene "scenes/Manager/HurtMajor03.vcd"  //[Pain noise - oy]
+	scene "scenes/Manager/HurtMajor04.vcd"  //[Pain noise - oy]
+	scene "scenes/Manager/HurtMajor05.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor06.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor07.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor08.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor09.vcd"  //[Pain noise - ugh]
+	scene "scenes/Manager/HurtMajor10.vcd"  //[Pain noise - ugh]
+}
+Rule iMT_PlayerNegativeManager
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerNegativeManager
+}
+
+Response iMT_PlayerNoManager
+{
+	scene "scenes/Manager/No01.vcd"  //No way.
+	scene "scenes/Manager/No02.vcd"  //Uh uh.
+	scene "scenes/Manager/No03.vcd"  //Nope.
+	scene "scenes/Manager/No04.vcd"  //Not a chance.
+	scene "scenes/Manager/No05.vcd"  //No way, man.
+	scene "scenes/Manager/No08.vcd"  //No.
+	scene "scenes/Manager/No09.vcd"  //I said No
+}
+Rule iMT_PlayerNoManager
+{
+	criteria ConceptPlayerNo IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerNoManager
+}
+
+Response iMT_PlayerHurrahManager
+{
+	scene "scenes/Manager/Hurrah01.vcd"  //Aw riiiight!
+	scene "scenes/Manager/Hurrah02.vcd"  //Woo baby, Aw riiiight!
+	scene "scenes/Manager/Hurrah03.vcd"  //Hell yeah.
+	scene "scenes/Manager/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We're going to be okay.
+	scene "scenes/Manager/Hurrah06.vcd" then any HurrahAlso foo:0 0  //We're going to be okay!
+	scene "scenes/Manager/Hurrah07.vcd"  //Man, I think we're gonna make it.
+	scene "scenes/Manager/Hurrah08.vcd" then any HurrahAlso foo:0 0  //They can't stop us now
+	scene "scenes/Manager/Hurrah09.vcd" then any HurrahAlso foo:0 0  //Nothing can stop us.
+	scene "scenes/Manager/Hurrah10.vcd" then any HurrahAlso foo:0 0  //Nothing can stop us, do you hear me? Nothing can stop us!
+	scene "scenes/Manager/Hurrah11.vcd" then any HurrahAlso foo:0 0  //We are unstoppable.
+	scene "scenes/Manager/Hurrah12.vcd" then any HurrahAlso foo:0 0  //That's right, we should call ourselves the unstoppables
+	scene "scenes/Manager/Hurrah13.vcd" then any HurrahAlso foo:0 0  //We are unstoppable.
+	scene "scenes/Manager/Hurrah14.vcd"  //YEAH!
+	scene "scenes/Manager/Hurrah15.vcd"  //YEAH WOO!
+	scene "scenes/Manager/Hurrah16.vcd" then any HurrahAlso foo:0 0  //I am bad, yes I am bad, YES I AM! WOO!
+}
+Rule iMT_PlayerHurrahManager
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerHurrahManager
+}
+
+Response iMT_PlayerThanksManager
+{
+	scene "scenes/Manager/Thanks01.vcd"  //Thanks.
+	scene "scenes/Manager/Thanks02.vcd"  //Thanks.
+	scene "scenes/Manager/Thanks03.vcd"  //Thanks, I owe you one.
+	scene "scenes/Manager/Thanks04.vcd"  //Thanks.
+	scene "scenes/Manager/Thanks05.vcd"  //Thanks, man.
+	scene "scenes/Manager/Thanks06.vcd"  //Thanks, man.
+	scene "scenes/Manager/Thanks07.vcd"  //Thank you.
+	scene "scenes/Manager/Thanks08.vcd"  //Thanks, I owe ya a big one.
+	scene "scenes/Manager/Thanks09.vcd"  //Thanks a lot.
+	scene "scenes/Manager/Thanks10.vcd"  //Whoo, thanks.
+	scene "scenes/Manager/Thanks11.vcd"  //Hey, thanks.
+	scene "scenes/Manager/Thanks12.vcd"  //Thanks Dog
+	scene "scenes/Manager/Thanks14.vcd"  //Thanks, Playa
+}
+Rule iMT_PlayerThanksManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerThanksManager
+}
+
+Response iMT_PlayerProfanityManager
+{
+	scene "scenes/Manager/Swears02.vcd"  //Dammit.
+	scene "scenes/Manager/Swears03.vcd"  //Aw hell.
+	scene "scenes/Manager/Swears05.vcd"  //Shit.
+	scene "scenes/Manager/Swears06.vcd"  //Ah shit.
+	scene "scenes/Manager/Swears07.vcd"  //Shit shit shit.
+	scene "scenes/Manager/Swears10.vcd"  //Dammit.
+	scene "scenes/Manager/Swears11.vcd"  //Aw hell.
+	scene "scenes/Manager/Swears12.vcd"  //Shit.
+	scene "scenes/Manager/Swears13.vcd"  //Ah shit.
+	scene "scenes/Manager/Swears16.vcd"  //That's some country-ass bullshit.
+}
+Rule iMT_PlayerProfanityManager
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerProfanityManager
+}
+
+Response iMT_PlayerYouAreWelcomeManager
+{
+	scene "scenes/Manager/YouAreWelcome03.vcd"  //It's fine.
+	scene "scenes/Manager/YouAreWelcome04.vcd"  //Any time.
+	scene "scenes/Manager/YouAreWelcome05.vcd"  //Hey, no problem.
+	scene "scenes/Manager/YouAreWelcome07.vcd"  //Sure.
+	scene "scenes/Manager/YouAreWelcome08.vcd"  //Its all good.
+	scene "scenes/Manager/YouAreWelcome09.vcd"  //Hey, no problem.
+	scene "scenes/Manager/YouAreWelcome10.vcd"  //My pleasure.
+	scene "scenes/Manager/YouAreWelcome13.vcd"  //Hey, man, no problem.
+	scene "scenes/Manager/YouAreWelcome14.vcd"  //Not a problem.
+	scene "scenes/Manager/YouAreWelcome15.vcd"  //You are totally welcome.
+	scene "scenes/Manager/YouAreWelcome16.vcd"  //Sure thing, man.
+	scene "scenes/Manager/YouAreWelcome17.vcd"  //Sure
+}
+Rule iMT_PlayerYouAreWelcomeManager
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeManager
+}
+
+Response iMT_PlayerToTheRescueRosManager
+{
+	scene "scenes/Manager/ToTheRescue01.vcd"  //Hold on, I'm on my way!
+	scene "scenes/Manager/ToTheRescue02.vcd"  //Look, I'm coming!
+	scene "scenes/Manager/ToTheRescue03.vcd"  //Don't worry, I'm on my way!
+}
+Rule iMT_PlayerToTheRescueRosManager
+{
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerToTheRescueRosManager
+}
+
+Response iMT_PlayerWarnCarefulManager
+{
+	scene "scenes/Manager/WarnCareful01.vcd"  //Be very damn careful....
+	scene "scenes/Manager/WarnCareful02.vcd"  //Caarefullll...
+	scene "scenes/Manager/WarnCareful03.vcd"  //Careful...
+	scene "scenes/Manager/WarnCareful04.vcd"  //Be careful...
+	scene "scenes/Manager/WarnCareful05.vcd"  //Watch yourself now...
+	scene "scenes/Manager/WarnCareful06.vcd"  //Take it easy...
+	scene "scenes/Manager/WarnCareful07.vcd"  //We gotta be careful...
+	scene "scenes/Manager/WarnCareful08.vcd"  //Careful, careful
+	scene "scenes/Manager/WarnCareful09.vcd"  //Careful...
+	scene "scenes/Manager/WarnCareful10.vcd"  //We've got to be careful...
+	scene "scenes/Manager/WarnCareful11.vcd"  //Careful...
+}
+Rule iMT_PlayerWarnCarefulManager
+{
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerWarnCarefulManager
+}
+
+Response iMT_PlayerHelpManager
+{
+	scene "scenes/Manager/Help01.vcd"  //Help!
+	scene "scenes/Manager/Help02.vcd"  //I need some help over here!
+	scene "scenes/Manager/Help03.vcd"  //Need a little help over here!
+	scene "scenes/Manager/Help05.vcd"  //Help me!
+	scene "scenes/Manager/Help06.vcd"  //Help!
+	scene "scenes/Manager/Help07.vcd"  //I'm in trouble!
+	scene "scenes/Manager/Help08.vcd"  //I need some help!
+	scene "scenes/Manager/Help09.vcd"  //Somebody help me!
+	scene "scenes/Manager/Help10.vcd"  //Can you hear me? I need some help!
+	scene "scenes/Manager/Help11.vcd"  //What part of help do you not understand?  Help!
+}
+Rule iMT_PlayerHelpManager
+{
+	criteria ConceptPlayerHelp IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerHelpManager
+}
+
+Response iMT_SurvivorVocalizeBackUpManager
+{
+	scene "scenes/Manager/BackUp01.vcd"  //Back up!
+	scene "scenes/Manager/BackUp02.vcd"  //Backbackback!
+	scene "scenes/Manager/BackUp03.vcd"  //Back up!
+}
+Rule iMT_SurvivorVocalizeBackUpManager
+{
+	criteria ConceptPlayerBackUp IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_SurvivorVocalizeBackUpManager
+}
+
+Response iMT_SurvivorSpottedInfectedManager
+{
+	scene "scenes/Manager/Incoming01.vcd"  //Here they come!
+	scene "scenes/Manager/Incoming02.vcd"  //They're comin'!
+	scene "scenes/Manager/Incoming03.vcd"  //Incoming!
+	scene "scenes/Manager/Incoming04.vcd"  //Oh shit, here they come!
+}
+Rule iMT_SurvivorSpottedInfectedManager
+{
+	criteria ConceptPlayerIncoming IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_SurvivorSpottedInfectedManager
+}
+
+Response iMT_PlayerWatchOutBehindManager
+{
+	scene "scenes/Manager/WatchOutBehind01.vcd"  //Behind us!
+	scene "scenes/Manager/WatchOutBehind02.vcd"  //They're behind us!
+	scene "scenes/Manager/WatchOutBehind03.vcd" odds 20 //Turn around man!
+}
+Rule iMT_PlayerWatchOutBehindManager
+{
+	criteria ConceptPlayerWatchOutBehind IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerWatchOutBehindManager
+}
+
+Response iMT_SurvivorDeathManager
+{
+	scene "scenes/Manager/DeathScream01.vcd"  //[Death rattle and final breath]
+	scene "scenes/Manager/DeathScream02.vcd"  //[Loud, painful death scream]
+	scene "scenes/Manager/DeathScream03.vcd"  //[Loud, painful death scream]
+	scene "scenes/Manager/DeathScream04.vcd"  //[Loud, painful death scream]
+	scene "scenes/Manager/DeathScream05.vcd"  //[Loud, painful death scream]
+	scene "scenes/Manager/DeathScream06.vcd"  //[Short quick death scream]
+	scene "scenes/Manager/DeathScream07.vcd"  //[Short quick death scream]
+	scene "scenes/Manager/DeathScream08.vcd"  //[Death rattle and final breath]
+	scene "scenes/Manager/DeathScream09.vcd"  //[Death rattle and final breath]
+	scene "scenes/Manager/DeathScream10.vcd"  //[Death rattle and final breath]
+}
+Rule iMT_SurvivorDeathManager
+{
+	criteria ConceptPlayerDeath IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_SurvivorDeathManager
+}
+
+Response iMT_PlayerLedgeHangStartManager
+{
+	scene "scenes/Manager/LedgeHangStart01.vcd"  //Someone pull me up!
+	scene "scenes/Manager/LedgeHangStart02.vcd"  //Could somebody give me a hand up over here?
+	scene "scenes/Manager/LedgeHangStart03.vcd"  //Could somebody give me a hand up over here?
+	scene "scenes/Manager/LedgeHangStart04.vcd"  //I could really use a hand up over here!
+	scene "scenes/Manager/LedgeHangStart05.vcd"  //Hey! I need somebody to pull me up!
+	scene "scenes/Manager/LedgeHangStart06.vcd"  //Throw me a hand man, pull me up!
+	scene "scenes/Manager/LedgeHangStart07.vcd"  //Don't laugh man, just pull me up
+}
+Rule iMT_PlayerLedgeHangStartManager
+{
+	criteria ConceptPlayerLedgeHangStart IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerLedgeHangStartManager
+}
+
+Response iMT_PlayerLedgeHangEndManager
+{
+	scene "scenes/Manager/LedgeHangEnd01.vcd"  //I'M SLIPPING! PULL ME UP!
+	scene "scenes/Manager/LedgeHangEnd02.vcd"  //I'm about to fall off this thing. HELP! HELLLLLP!!!!
+	scene "scenes/Manager/LedgeHangEnd03.vcd"  //I CAN'T HOLD ON - I CAN'T HOLD ON I'M FALLING!
+	scene "scenes/Manager/LedgeHangEnd04.vcd"  //SOMEBODY, SOMEBODY OH SHIT I'M FALLING! I'M FALLING!
+}
+Rule iMT_PlayerLedgeHangEndManager
+{
+	criteria ConceptPlayerLedgeHangEnd IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerLedgeHangEndManager
+}
+
+Response iMT_PlayerChokeResponseManager
+{
+	scene "scenes/Manager/Choke01.vcd"  //[Choking]
+	scene "scenes/Manager/Choke02.vcd"  //[Choking]
+	scene "scenes/Manager/Choke03.vcd"  //[Choking]
+	scene "scenes/Manager/Choke04.vcd"  //[Choking]
+	scene "scenes/Manager/Choke05.vcd"  //[Choking]
+	scene "scenes/Manager/Choke06.vcd"  //[Choking]
+	scene "scenes/Manager/Choke07.vcd"  //[Choking]
+	scene "scenes/Manager/Choke08.vcd"  //[Choking]
+}
+Rule iMT_PlayerChokeResponseManager
+{
+	criteria ConceptPlayerChoke IsManager IsTalk IsTalkManager IsNotHangingFromTongue
+	forceweight 1000
+	Response iMT_PlayerChokeResponseManager
+}
+
+Response iMT_SurvivorVocalizeEmphaticGoManager
+{
+	scene "scenes/Manager/EmphaticGo02.vcd"  //Go go go!
+	scene "scenes/Manager/EmphaticGo03.vcd"  //Go go GO!
+	scene "scenes/Manager/EmphaticGo04.vcd"  //GO!
+	scene "scenes/Manager/EmphaticGo05.vcd"  //MOVE!
+	scene "scenes/Manager/EmphaticGo06.vcd"  //C'mon go!
+	scene "scenes/Manager/EmphaticGo07.vcd"  //MOVE!
+	scene "scenes/Manager/EmphaticGo08.vcd"  //MOVE IT!
+	scene "scenes/Manager/EmphaticGo09.vcd"  //Move it mooove it!
+}
+Rule iMT_SurvivorVocalizeEmphaticGoManager
+{
+	criteria ConceptPlayerEmphaticGo IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_SurvivorVocalizeEmphaticGoManager
+}
+
+Response iMT_ResponseSoftDispleasureSwearManager
+{
+	scene "scenes/Manager/NegativeNoise01.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Manager/NegativeNoise02.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Manager/NegativeNoise03.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Manager/ReactionApprehensive01.vcd"  //I have a bad feeling about this
+	scene "scenes/Manager/ReactionApprehensive03.vcd"  //I don't like this one damn bit.
+	scene "scenes/Manager/ReactionNegative01.vcd"  //Uh oh.
+	scene "scenes/Manager/ReactionNegative04.vcd"  //Ah, Jesus.
+}
+Rule iMT_ResponseSoftDispleasureSwearManager
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_ResponseSoftDispleasureSwearManager
+}
+
+Response iMT_SurvivorAskForHealthManager
+{
+	scene "scenes/Manager/GoingToDieAskForHeal01.vcd"  //Someone got a first aid kit?
+	scene "scenes/Manager/GoingToDieAskForHeal02.vcd"  //Can anybody spare a kit?
+	scene "scenes/Manager/GoingToDieAskForHeal03.vcd"  //I could use a first aid kit.
+	scene "scenes/Manager/GoingToDieAskForHeal04.vcd"  //I could use some first aid.
+}
+Rule iMT_SurvivorAskForHealthManager
+{
+	criteria ConceptAskForHealth2 IsManager
+	Response iMT_SurvivorAskForHealthManager
+}
+
+Response iMT_PlayerAreaClearManager
+{
+	scene "scenes/Manager/AreaClear01.vcd"  //Clear!
+	scene "scenes/Manager/AreaClear02.vcd"  //Nothing in here!
+	scene "scenes/Manager/AreaClear03.vcd"  //Nothin' here!
+	scene "scenes/Manager/AreaClear04.vcd"  //All Clean!
+}
+Rule iMT_PlayerAreaClearManager
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerAreaClearManager
+}
+
+Response iMT_SurvivorSpottedWeaponManager
+{
+	scene "scenes/Manager/SpotWeapons01.vcd"  //Weapons here!
+	scene "scenes/Manager/SpotWeapons02.vcd"  //Weapons over here!
+	scene "scenes/Manager/SpotWeapons03.vcd"  //Weapons!
+}
+Rule iMT_SurvivorSpottedWeaponManager
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_SurvivorSpottedWeaponManager
+}
+
+Response iMT_PlayerGettingRevivedManager
+{
+	scene "scenes/Manager/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 0  //I'm okay.
+	scene "scenes/Manager/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0  //I'm allright.
+	scene "scenes/Manager/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 0  //[groan]
+	scene "scenes/Manager/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 0  //I don't even know.
+	scene "scenes/Manager/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 0  //Aw hell, I'm bleedin'.
+	scene "scenes/Manager/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 0  //[groan2]
+	scene "scenes/Manager/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 0  //I'll make it.
+	scene "scenes/Manager/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 0  //I'll live.
+	scene "scenes/Manager/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 0  //I can shake it off.
+	scene "scenes/Manager/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 0  //Just help me up.
+	scene "scenes/Manager/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 0  //I ain't done yet.
+}
+Rule iMT_PlayerGettingRevivedManager
+{
+	criteria ConceptReviveFriendDown IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerGettingRevivedManager
+}
+
+Response iMT_PlayerLostCallManager
+{
+	scene "scenes/Manager/LostCall01.vcd"  //Hello?
+	scene "scenes/Manager/LostCall03.vcd"  //Where is everyone?
+	scene "scenes/Manager/LostCall04.vcd"  //Is anyone there?
+	scene "scenes/Manager/LostCall05.vcd"  //Where'd everybody get to?
+	scene "scenes/Manager/LostCall06.vcd"  //Can anyone hear me?
+}
+Rule iMT_PlayerLostCallManager
+{
+	criteria ConceptPlayerLostCall IsNotCoughing IsManager IsTalk IsTalkManager
+	forceweight 1000
+	Response iMT_PlayerLostCallManager
+}
+
+Response iMT_PlayerReviveFriendBManager
+{
+	scene "scenes/Manager/ReviveFriendB04.vcd"  //You'll be okay.
+	scene "scenes/Manager/ReviveFriendB07.vcd"  //You're fine.
+	scene "scenes/Manager/ReviveFriendB08.vcd"  //It doesn't look bad.
+	scene "scenes/Manager/ReviveFriendB11.vcd"  //You'll be fine.
+}
+Rule iMT_PlayerReviveFriendBManager
+{
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsManager IsTalk IsTalkManager
+	ApplyContext "ReviveTalk:1:5,Talk:1:1"
+	forceweight 1000
+	Response iMT_PlayerReviveFriendBManager
+}
+
+Response iMT_PlayerCallForRescueManager
+{
+	scene "scenes/Manager/CallForRescue01.vcd"  //Come on, let me out!  I can give you a hand!
+	scene "scenes/Manager/CallForRescue02.vcd"  //Come on, let me out!  I can help!
+	scene "scenes/Manager/CallForRescue03.vcd"  //I'm trapped in here, let me out!
+}
+Rule iMT_PlayerCallForRescueManager
+{
+	criteria ConceptCallForRescue IsNotCoughing IsManager IsTalk IsTalkManager IsManagerAliveA
+	forceweight 1000
+	Response iMT_PlayerCallForRescueManager
+}
+
+Response iMT_PlayerGrabbedByJockeyManager
+{
+	scene "scenes/Manager/ScreamWhilePounced01.vcd"  //GET IT OFF!
+	scene "scenes/Manager/ScreamWhilePounced02.vcd"  //GET IT GET IT OFF GET IT OFF!
+	scene "scenes/Manager/FallShort03.vcd" //Aaah!
+	scene "scenes/Manager/FallShort04.vcd" //YAA!
+	scene "scenes/Manager/ReactionNegative04.vcd" //Ah Jesus!
+	scene "scenes/Manager/ReactionStartled04.vcd" //Ah ah!
+	scene "scenes/Manager/Swears02.vcd" //DAMN IT!
+}
+Rule iMT_PlayerGrabbedByJockeyManager
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsManager IsTalk IsTalkManager
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_PlayerGrabbedByJockeyManager
 }

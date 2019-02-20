@@ -350,6 +350,8 @@ Rule iMT_PlayerCoughingCoach
 
 Response iMT_PlayerSuggestHealthCoach
 {
+	scene "scenes/Coach/SuggestHealth02.vcd"  //Heal if ya got em.
+	scene "scenes/Coach/SuggestHealth03.vcd"  //This ain't about me people, let's heal up.
 	scene "scenes/Coach/SuggestHealthC101.vcd"  //This would be the time to heal up.
 	scene "scenes/Coach/SuggestHealthC102.vcd"  //Now's a good time to heal if you can.
 	scene "scenes/Coach/SuggestHealthC103.vcd"  //If you got a health kit you should use it.
@@ -874,4 +876,441 @@ Rule iMT_SoldiersCoach
 {
 	criteria iMT_Soldiers IsCoach
 	Response iMT_SoldiersCoach
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// General Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_SurvivorTauntResponseCoach
+{
+	scene "scenes/Coach/Taunt01.vcd"  //Hell yeah!
+	scene "scenes/Coach/Taunt02.vcd"  //Goddamn right!
+	scene "scenes/Coach/Taunt03.vcd"  //Goddamn right!
+	scene "scenes/Coach/Taunt04.vcd"  //Aw riiiight.
+	scene "scenes/Coach/Taunt05.vcd"  //Oh hell yeah!
+	scene "scenes/Coach/Taunt06.vcd"  //Ooh. How ya like me now? Mmm.
+	scene "scenes/Coach/Taunt07.vcd"  //[Loud, evil laugh]
+	scene "scenes/Coach/Taunt08.vcd"  //[Loud, evil laugh]
+}
+Rule iMT_SurvivorTauntResponseCoach
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_SurvivorTauntResponseCoach
+}
+
+Response iMT_PlayerNegativeCoach
+{
+	scene "scenes/Coach/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical06.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical07.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical08.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtMajor01.vcd"  //[Pain noise - huh]
+	scene "scenes/Coach/HurtMajor02.vcd"  //[Pain noise - huh]
+	scene "scenes/Coach/HurtMajor03.vcd"  //[Pain noise - ahh]
+	scene "scenes/Coach/HurtMajor04.vcd"  //[Pain noise - oy]
+	scene "scenes/Coach/HurtMajor05.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor06.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor07.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor08.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor09.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor10.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor11.vcd"  //[Pain noise - ugh]
+}
+Rule iMT_PlayerNegativeCoach
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerNegativeCoach
+}
+
+Response iMT_PlayerSorryCoach
+{
+	scene "scenes/Coach/Sorry01.vcd"  //Shit, my bad.
+	scene "scenes/Coach/Sorry02.vcd"  //That right there was my fault.
+	scene "scenes/Coach/Sorry03.vcd"  //My bad.
+	scene "scenes/Coach/Sorry04.vcd"  //Sorry.
+	scene "scenes/Coach/Sorry05.vcd"  //Hey, sorry.
+	scene "scenes/Coach/Sorry06.vcd"  //Ha, you know what? My bad.
+	scene "scenes/Coach/Sorry07.vcd"  //Oh shit, sorry.
+}
+Rule iMT_PlayerSorryCoach
+{
+	criteria ConceptPlayerSorry IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerSorryCoach
+}
+
+Response iMT_PlayerHurrahCoach
+{
+	scene "scenes/Coach/Hurrah01.vcd"  //We cool.
+	scene "scenes/Coach/Hurrah02.vcd"  //We gonna be all right.
+	scene "scenes/Coach/Hurrah03.vcd"  //We good, this ain't shit.
+	scene "scenes/Coach/Hurrah04.vcd"  //We gonna do this.
+	scene "scenes/Coach/Hurrah05.vcd"  //We got this.
+	scene "scenes/Coach/Hurrah06.vcd"  //Those things ain't shit.
+	scene "scenes/Coach/Hurrah07.vcd"  //Oh hell yeah!
+	scene "scenes/Coach/Hurrah08.vcd"  //We're gonna be okay.
+	scene "scenes/Coach/Hurrah09.vcd"  //We got up in their shit.
+	scene "scenes/Coach/Hurrah10.vcd"  //We are kicking their ass.
+	scene "scenes/Coach/Hurrah11.vcd"  //Oh hell yeah!
+	scene "scenes/Coach/Hurrah12.vcd"  //mmm. Allright.
+	scene "scenes/Coach/Hurrah13.vcd"  //Woo! Haha! That's how we do it.
+	scene "scenes/Coach/Hurrah14.vcd"  //Alright! Way to go! Way to go!
+	scene "scenes/Coach/Hurrah15.vcd"  //Yeah! You are a great bunch.
+	scene "scenes/Coach/Hurrah16.vcd"  //That was outstanding.
+	scene "scenes/Coach/Hurrah17.vcd"  //Alright! Good effort.
+	scene "scenes/Coach/Hurrah18.vcd"  //Alright, alright! Way to put it all out there!
+	scene "scenes/Coach/Hurrah19.vcd"  //Ya boy!
+	scene "scenes/Coach/Hurrah20.vcd"  //That is how you kick some ASS, baby!
+	scene "scenes/Coach/Hurrah21.vcd"  //Baby, that is how that's DONE!
+	scene "scenes/Coach/Hurrah23.vcd"  //We are kickin' some zombie ASS!
+	scene "scenes/Coach/Hurrah24.vcd"  //THAT is how you kick zombie ASS!
+	scene "scenes/Coach/Hurrah26.vcd"  //You made me proud out there, people...
+}
+Rule iMT_PlayerHurrahCoach
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerHurrahCoach
+}
+
+Response iMT_PlayerThanksCoach
+{
+	scene "scenes/Coach/Thanks01.vcd"  //Thanks.
+	scene "scenes/Coach/Thanks02.vcd"  //Thanks.
+	scene "scenes/Coach/Thanks04.vcd"  //Thanks.
+	scene "scenes/Coach/Thanks05.vcd"  //Thanks, we straight?
+	scene "scenes/Coach/Thanks06.vcd"  //Allright thanks.
+	scene "scenes/Coach/Thanks07.vcd"  //THANKS!
+}
+Rule iMT_PlayerThanksCoach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerThanksCoach
+}
+
+Response iMT_PlayerYouAreWelcomeCoach
+{
+	scene "scenes/Coach/YouAreWelcome01.vcd"  //It ain't nothin.
+	scene "scenes/Coach/YouAreWelcome02.vcd"  //We cool.
+	scene "scenes/Coach/YouAreWelcome03.vcd"  //We straight.
+	scene "scenes/Coach/YouAreWelcome04.vcd"  //It's all good.
+	scene "scenes/Coach/YouAreWelcome05.vcd"  //You're Welcome.
+}
+Rule iMT_PlayerYouAreWelcomeCoach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeCoach
+}
+
+Response iMT_PlayerToTheRescueRosCoach
+{
+	scene "scenes/Coach/ToTheRescue01.vcd"  //Hang on, hang on, I'm comin!
+	scene "scenes/Coach/ToTheRescue02.vcd"  //Hang in there, I'm coming!
+	scene "scenes/Coach/ToTheRescue03.vcd"  //I hear ya, I'm comin'!
+	scene "scenes/Coach/ToTheRescue04.vcd"  //I comin', I comin'.
+	scene "scenes/Coach/ToTheRescue05.vcd"  //On my way! Right now!
+	scene "scenes/Coach/ToTheRescue06.vcd"  //Hang on, I'm comin'
+}
+Rule iMT_PlayerToTheRescueRosCoach
+{
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerToTheRescueRosCoach
+}
+
+Response iMT_PlayerHelpCoach
+{
+	scene "scenes/Coach/Help01.vcd"  //I need some help!
+	scene "scenes/Coach/Help02.vcd"  //Help! [Screamed angrily]
+	scene "scenes/Coach/Help03.vcd"  //Hey y'all I need some help.
+	scene "scenes/Coach/Help04.vcd"  //Could use some help over here.
+	scene "scenes/Coach/Help05.vcd"  //Get ya ass over here and help me!
+	scene "scenes/Coach/Help06.vcd"  //Help!
+}
+Rule iMT_PlayerHelpCoach
+{
+	criteria ConceptPlayerHelp IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerHelpCoach
+}
+
+Response iMT_SurvivorSpottedTankC1Coach
+{
+	scene "scenes/Coach/WarnTankC101.vcd"  //Some kind of super ass zombie.
+	scene "scenes/Coach/WarnTankC102.vcd"  //Gigantic thing!
+	scene "scenes/Coach/WarnTankC103.vcd"  //HOLY SHIT WHAT IS THAT?!?!
+}
+Rule iMT_SurvivorSpottedTankC1Coach
+{
+	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedTankC1Coach
+}
+
+Response iMT_SurvivorSpottedBoomerC1Coach
+{
+	scene "scenes/Coach/WarnBoomerC101.vcd"  //Fat guy!
+	scene "scenes/Coach/WarnBoomerC102.vcd"  //Roly poly!
+	scene "scenes/Coach/WarnBoomerC103.vcd"  //Fat thing!
+}
+Rule iMT_SurvivorSpottedBoomerC1Coach
+{
+	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedBoomerC1Coach
+}
+
+Response iMT_SurvivorSpottedHunterC1Coach
+{
+	scene "scenes/Coach/WarnHunterC101.vcd"  //We got a Jumper!
+	scene "scenes/Coach/WarnHunterC102.vcd"  //Crazy legs!
+}
+Rule iMT_SurvivorSpottedHunterC1Coach
+{
+	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedHunterC1Coach
+}
+
+Response iMT_SurvivorSpottedSmokerC1Coach
+{
+	scene "scenes/Coach/WarnSmokerC101.vcd"  //Smokin' one.
+	scene "scenes/Coach/WarnSmokerC102.vcd"  //Tonguer!
+}
+Rule iMT_SurvivorSpottedSmokerC1Coach
+{
+	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedSmokerC1Coach
+}
+
+Response iMT_SurvivorVocalizeBackUpCoach
+{
+	scene "scenes/Coach/BackUp01.vcd"  //Oh shit, back it up!
+	scene "scenes/Coach/BackUp02.vcd"  //Back it up!
+	scene "scenes/Coach/BackUp03.vcd"  //BackBackBack!
+	scene "scenes/Coach/BackUp04.vcd"  //Back up, back up!
+	scene "scenes/Coach/BackUp05.vcd"  //Back up!
+	scene "scenes/Coach/BackUp06.vcd"  //Back Back Back Back Back!
+}
+Rule iMT_SurvivorVocalizeBackUpCoach
+{
+	criteria ConceptPlayerBackUp IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_SurvivorVocalizeBackUpCoach
+}
+
+Response iMT_SurvivorTankPoundCoach
+{
+	scene "scenes/Coach/TankPound01.vcd"  //Oh shit get this thing off me!
+	scene "scenes/Coach/TankPound02.vcd"  //Can't y'all see this thing is beatin' the shit out of me!!?!?!!?
+	scene "scenes/Coach/TankPound03.vcd"  //Hey! in case ya'll didn't see it, I got a tank on me!
+	scene "scenes/Coach/TankPound04.vcd"  //I got a tank on me!
+	scene "scenes/Coach/TankPound05.vcd"  //Get it off - ah - Get it off me!
+	scene "scenes/Coach/TankPound06.vcd"  //Get this damn thing off!
+}
+Rule iMT_SurvivorTankPoundCoach
+{
+	criteria ConceptPlayerGroundPoundedByTank IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_SurvivorTankPoundCoach
+}
+
+Response iMT_SurvivorVocalizeEmphaticGoCoach
+{
+	scene "scenes/Coach/EmphaticGo01.vcd"  //GO!
+	scene "scenes/Coach/EmphaticGo02.vcd"  //Let's go people.
+	scene "scenes/Coach/EmphaticGo03.vcd"  //Move your ass.
+	scene "scenes/Coach/EmphaticGo04.vcd"  //Go go go!
+	scene "scenes/Coach/EmphaticGo05.vcd"  //Go go GO!
+	scene "scenes/Coach/EmphaticGo06.vcd"  //MOVE IT!
+}
+Rule iMT_SurvivorVocalizeEmphaticGoCoach
+{
+	criteria ConceptPlayerEmphaticGo IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_SurvivorVocalizeEmphaticGoCoach
+}
+
+Response iMT_PlayerAreaClearCoach
+{
+	scene "scenes/Coach/Defibrillator05.vcd"  //Clear!
+}
+Rule iMT_PlayerAreaClearCoach
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerAreaClearCoach
+}
+
+Response iMT_PlayerGettingRevivedCoach
+{
+	scene "scenes/Coach/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 -1.648  //I'm cool.
+	scene "scenes/Coach/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 -1.077  //It's all good.
+	scene "scenes/Coach/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 -1.608  //Hell yeah it hurts.
+	scene "scenes/Coach/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 -1.239  //Yeah it hurts.
+	scene "scenes/Coach/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 -1.270  //I'm good, I'm good.
+	scene "scenes/Coach/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 -1.654  //What in the hell do you think?
+	scene "scenes/Coach/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 -1.177  //Ohhh shit.
+	scene "scenes/Coach/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 -1.123  //Hook me up.
+	scene "scenes/Coach/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 -0.895  //Hurry it up.
+	scene "scenes/Coach/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 -1.045  //[groan]
+	scene "scenes/Coach/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 -0.811  //[groan2]
+	scene "scenes/Coach/GettingRevived12.vcd" then From ReviveFriendDownFinal foo:0 -1.664  //[groan2]
+	scene "scenes/Coach/GettingRevived13.vcd" then From ReviveFriendDownFinal foo:0 -2.350  //They better name a school after me for this shit.
+	scene "scenes/Coach/GettingRevived14.vcd" then From ReviveFriendDownFinal foo:0 -1.811  //Help me up and I can walk this off.
+	scene "scenes/Coach/GettingRevived15.vcd" then From ReviveFriendDownFinal foo:0 -1.813  //Ain't gonna be nothing left of me.
+	scene "scenes/Coach/GettingRevived16.vcd" then From ReviveFriendDownFinal foo:0 -1.275  //I'm just screwin with ya.
+	scene "scenes/Coach/GettingRevived18.vcd" then From ReviveFriendDownFinal foo:0 -1.333  //What ya tellin me man?
+	scene "scenes/Coach/GettingRevived19.vcd" then From ReviveFriendDownFinal foo:0 -0.988  //I've been worse.
+	scene "scenes/Coach/GettingRevived20.vcd" then From ReviveFriendDownFinal foo:0 -0.790  //Whata you mean?
+	scene "scenes/Coach/GettingRevived21.vcd" then From ReviveFriendDownFinal foo:0 -0.626  //I'm okay.
+	scene "scenes/Coach/GettingRevived22.vcd" then From ReviveFriendDownFinal foo:0 -0.588  //Ain't nothin'.
+	scene "scenes/Coach/GettingRevived23.vcd" then From ReviveFriendDownFinal foo:0 -0.978  //I can walk it off.
+	scene "scenes/Coach/GettingRevived24.vcd" then From ReviveFriendDownFinal foo:0 -0.488  //Okay.
+	scene "scenes/Coach/GettingRevived25.vcd" then From ReviveFriendDownFinal foo:0 -0.778  //Good enough.
+	scene "scenes/Coach/GettingRevived26.vcd" then From ReviveFriendDownFinal foo:0 -0.656  //Just get me up.
+	scene "scenes/Coach/GettingRevived27.vcd" then From ReviveFriendDownFinal foo:0 -4.297  //Man, been better, been better.
+	scene "scenes/Coach/GettingRevived28.vcd" then From ReviveFriendDownFinal foo:0 -1.764  //Can't lie, been better.
+	scene "scenes/Coach/GettingRevived29.vcd" then From ReviveFriendDownFinal foo:0 -2.076  //Damn, this shit hurts.
+	scene "scenes/Coach/GettingRevived30.vcd" then From ReviveFriendDownFinal foo:0 -1.651  //Don't like bein' on the ground.
+	scene "scenes/Coach/GettingRevived31.vcd" then From ReviveFriendDownFinal foo:0 -1.062  //I'm hurtin down here.
+	scene "scenes/Coach/GettingRevived32.vcd" then From ReviveFriendDownFinal foo:0 -1.791  //Well I ain't on my back for nothin'.
+	scene "scenes/Coach/GettingRevived33.vcd" then From ReviveFriendDownFinal foo:0 -1.924  //Man, how the hell you think I'm doin'?
+	scene "scenes/Coach/GettingRevived34.vcd"  //I'm fine, but let's not waste time chit-chattin'.
+	scene "scenes/Coach/GettingRevived35.vcd" then From ReviveFriendDownFinal foo:0 -0.484  //I'm good.
+	scene "scenes/Coach/GettingRevived36.vcd" then From ReviveFriendDownFinal foo:0 -2.086  //I'll live... most likely.
+	scene "scenes/Coach/GettingRevived37.vcd" then From ReviveFriendDownFinal foo:0 -2.288  //Tell you what, ain't my best day.
+}
+Rule iMT_PlayerGettingRevivedCoach
+{
+	criteria ConceptReviveFriendDown IsNotCoughing IsCoach IsTalk IsTalkCoach
+	forceweight 1000
+	Response iMT_PlayerGettingRevivedCoach
+}
+
+Response iMT_PlayerReviveFriendBCoach
+{
+	scene "scenes/Coach/ReviveFriendB01.vcd"  //Allright good.
+	scene "scenes/Coach/ReviveFriendB02.vcd"  //Walk it off.
+	scene "scenes/Coach/ReviveFriendB03.vcd"  //You okay.
+	scene "scenes/Coach/ReviveFriendB04.vcd"  //You look good.
+	scene "scenes/Coach/ReviveFriendB05.vcd"  //Come on now.
+	scene "scenes/Coach/ReviveFriendB06.vcd"  //Now you're back in business.
+	scene "scenes/Coach/ReviveFriendB07.vcd"  //Up we go.
+	scene "scenes/Coach/ReviveFriendB08.vcd"  //You good.
+	scene "scenes/Coach/ReviveFriendB09.vcd"  //You're doin fine.
+	scene "scenes/Coach/ReviveFriendB10.vcd"  //This don't look bad.
+	scene "scenes/Coach/ReviveFriendB11.vcd"  //Can't lose you now can we?
+	scene "scenes/Coach/ReviveFriendB12.vcd"  //See you're gonna make it.
+	scene "scenes/Coach/ReviveFriendB13.vcd"  //Told ya. Wasn't nothing.
+	scene "scenes/Coach/ReviveFriendB14.vcd"  //All right, let's finish what we started.
+	scene "scenes/Coach/ReviveFriendB15.vcd"  //Alright now, we're back in business.
+}
+Rule iMT_PlayerReviveFriendBCoach
+{
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsCoach IsTalk IsTalkCoach
+	ApplyContext "ReviveTalk:1:5,Talk:1:1"
+	forceweight 1000
+	Response iMT_PlayerReviveFriendBCoach
+}
+
+Response iMT_PlayerGrabbedByJockeyCoach
+{
+	scene "scenes/Coach/GrabbedByJockey01.vcd"  //Jockey on me!
+	scene "scenes/Coach/GrabbedByJockey02.vcd"  //JOCKEY ON MY BACK!
+	scene "scenes/Coach/GrabbedByJockey03.vcd"  //Oh lord no, that things on me!
+	scene "scenes/Coach/GrabbedByJockey04.vcd"  //Agh, that things on me!
+	scene "scenes/Coach/GrabbedByJockey05.vcd"  //Kill the thing on my back!
+	scene "scenes/Coach/GrabbedByJockey06.vcd"  //Ellis is that you? What the hell!?!?
+	scene "scenes/Coach/GrabbedByJockey07.vcd"  //OH SHIT GET THIS THING OFF ME!
+	scene "scenes/Coach/GrabbedByJockey08.vcd"  //Gah, get this thing off my back!
+}
+Rule iMT_PlayerGrabbedByJockeyCoach
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsCoach IsTalk IsTalkCoach
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 900
+	Response iMT_PlayerGrabbedByJockeyCoach
+}
+
+Response iMT_PlayerGrabbedByJockeyC1Coach
+{
+	scene "scenes/Coach/GrabbedByJockey04.vcd"  //Agh, that things on me!
+	scene "scenes/Coach/GrabbedByJockey05.vcd"  //Kill the thing on my back!
+	scene "scenes/Coach/GrabbedByJockey08.vcd"  //Gah, get this thing off my back!
+}
+Rule iMT_PlayerGrabbedByJockeyC1Coach
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_PlayerGrabbedByJockeyC1Coach
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character-Specific Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_C2M3SafeIntro009Coach
+{
+	scene "scenes/Coach/WorldC2M316.vcd"  //This is some crazy ass world we live in now.
+}
+Rule iMT_C2M3SafeIntro009Coach
+{
+	criteria ConceptC2M3SafeIntro009 IsCoach IsNotInStartArea
+	Response iMT_C2M3SafeIntro009Coach
+}
+
+Response iMT_C5M5_saferoom005Coach
+{
+	scene "scenes/Coach/WorldC5M5B03.vcd" then Gambler C5M5_saferoom003 foo:0 0  //Well, you free to make yourself a new life here in this room, Nick.
+}
+Rule iMT_C5M5_saferoom005Coach
+{
+	criteria ConceptC5M5_saferoom005 IsCoach IsNotInStartArea
+	Response iMT_C5M5_saferoom005Coach
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo02eCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_SafeRoomConvo01.vcd"  //Sometimes you just gotta have faith, Nick.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo02eCoach
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo02e IsCoach IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo02eCoach
+}
+
+Response iMT_C2M3SafeIntro011Coach
+{
+	scene "scenes/Coach/WorldC2M3B03.vcd"  //Nick, I was on the football team. Coach did just fine.
+	scene "scenes/Coach/WorldC2M3B04.vcd"  //Coach didn't do too bad for himself back in the day, Nick.
+	scene "scenes/Coach/WorldC2M3B05.vcd" then Gambler C2M3SafeIntro012 foo:0 0  //How many tunnel of love memories YOU got, Nick?
+}
+Rule iMT_C2M3SafeIntro011Coach
+{
+	criteria ConceptC2M3SafeIntro011 IsCoach IsNotInStartArea
+	Response iMT_C2M3SafeIntro011Coach
+}
+
+Response iMT_c2m5_intro023Coach
+{
+	scene "scenes/Coach/WorldC2M4B06.vcd" then Mechanic c2m5_intro024 foo:0 0  //Ellis, you ready to rock?
+}
+Rule iMT_c2m5_intro023Coach
+{
+	criteria Conceptc2m5_intro023 IsCoach IsNotInStartArea
+	Response iMT_c2m5_intro023Coach
 }

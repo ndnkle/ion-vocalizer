@@ -352,8 +352,10 @@ Response iMT_PlayerSuggestHealthProducer
 {
 	scene "scenes/Producer/SuggestHealth02.vcd"  //You should heal up.
 	scene "scenes/Producer/SuggestHealth04.vcd"  //Heal up!
+	scene "scenes/Producer/SuggestHealth05.vcd"  //We should heal.
 	scene "scenes/Producer/SuggestHealth06.vcd"  //Heal if you need to.
 	scene "scenes/Producer/SuggestHealth07.vcd"  //Heal up!
+	scene "scenes/Producer/SuggestHealth08.vcd"  //We should heal.
 }
 Rule iMT_PlayerSuggestHealthProducer
 {
@@ -809,4 +811,430 @@ Rule iMT_SoldiersProducer
 {
 	criteria iMT_Soldiers IsProducer
 	Response iMT_SoldiersProducer
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// General Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_SurvivorTauntResponseProducer
+{
+	scene "scenes/Producer/Taunt01.vcd"  //Who's barking now?
+	scene "scenes/Producer/Taunt02.vcd"  //Oh hell yes!
+	scene "scenes/Producer/Taunt03.vcd"  //What's up with that?
+	scene "scenes/Producer/Taunt05.vcd"  //Yeah right.
+	scene "scenes/Producer/Taunt06.vcd"  //Yeah, thats right. [grim, determined]
+	scene "scenes/Producer/Taunt07.vcd"  //Forget about it.
+	scene "scenes/Producer/Taunt08.vcd"  //Ohhh shut up!
+}
+Rule iMT_SurvivorTauntResponseProducer
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_SurvivorTauntResponseProducer
+}
+
+Response iMT_PlayerNegativeProducer
+{
+	scene "scenes/Producer/HurtCritical01.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Producer/HurtCritical02.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Producer/HurtCritical03.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Producer/HurtCritical04.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Producer/HurtMajor01.vcd"  //[pain noise - huh]
+	scene "scenes/Producer/HurtMajor02.vcd"  //[pain noise - ahh]
+	scene "scenes/Producer/HurtMajor03.vcd"  //[pain noise - oy]
+	scene "scenes/Producer/HurtMajor04.vcd"  //[pain noise - ugh]
+}
+Rule iMT_PlayerNegativeProducer
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerNegativeProducer
+}
+
+Response iMT_PlayerSorryProducer
+{
+	scene "scenes/Producer/Sorry01.vcd"  //Sorry.
+	scene "scenes/Producer/Sorry02.vcd"  //Oh man, you can blame that one on me.
+	scene "scenes/Producer/Sorry03.vcd"  //Sorry about that.
+	scene "scenes/Producer/Sorry04.vcd"  //Okay that was a mistake.
+	scene "scenes/Producer/Sorry05.vcd"  //Sorry.
+	scene "scenes/Producer/Sorry06.vcd"  //Guilty, sorry!
+	scene "scenes/Producer/Sorry07.vcd"  //Oh I'm sorry.
+	scene "scenes/Producer/Sorry08.vcd"  //Sorry.
+}
+Rule iMT_PlayerSorryProducer
+{
+	criteria ConceptPlayerSorry IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerSorryProducer
+}
+
+Response iMT_PlayerHurrahProducer
+{
+	scene "scenes/Producer/Hurrah01.vcd"  //Woo - haha, we are kickin' it!
+	scene "scenes/Producer/Hurrah02.vcd"  //We're really doing this!
+	scene "scenes/Producer/Hurrah03.vcd"  //We kicked some ass.
+	scene "scenes/Producer/Hurrah04.vcd"  //We kick ass, yes we did. Woo!
+	scene "scenes/Producer/Hurrah05.vcd"  //Alright, this party is over.
+	scene "scenes/Producer/Hurrah06.vcd"  //Woo! We are going to make it!
+	scene "scenes/Producer/Hurrah07.vcd"  //Shit, we re all right!
+	scene "scenes/Producer/Hurrah08.vcd"  //Woo - we are doing all right.
+	scene "scenes/Producer/Hurrah09.vcd"  //Okay. We can do this, we can do this.
+	scene "scenes/Producer/Hurrah10.vcd"  //Oh yeah, oh yeah, oh yeah.
+	scene "scenes/Producer/Hurrah11.vcd"  //Ha! Oh yeah, oh yeah!
+	scene "scenes/Producer/Hurrah12.vcd"  //Thanks to you guys, I am the baddest woman alive!
+	scene "scenes/Producer/Hurrah15.vcd"  //Woo! Keep that up and we are out of here!
+}
+Rule iMT_PlayerHurrahProducer
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerHurrahProducer
+}
+
+Response iMT_PlayerThanksProducer
+{
+	scene "scenes/Producer/Thanks01.vcd"  //Thanks for that.
+	scene "scenes/Producer/Thanks02.vcd"  //Hey, thanks!
+	scene "scenes/Producer/Thanks03.vcd"  //Thanks!
+	scene "scenes/Producer/Thanks04.vcd"  //Thanks I owe you one.
+	scene "scenes/Producer/Thanks05.vcd"  //Thanks.
+}
+Rule iMT_PlayerThanksProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerThanksProducer
+}
+
+Response iMT_PlayerYouAreWelcomeProducer
+{
+	scene "scenes/Producer/YouAreWelcome01.vcd"  //You are welcome.
+	scene "scenes/Producer/YouAreWelcome02.vcd"  //You are welcome.
+	scene "scenes/Producer/YouAreWelcome03.vcd"  //You're welcome.
+	scene "scenes/Producer/YouAreWelcome04.vcd"  //We're cool.
+	scene "scenes/Producer/YouAreWelcome05.vcd"  //No problem.
+	scene "scenes/Producer/YouAreWelcome06.vcd"  //Anytime.
+	scene "scenes/Producer/YouAreWelcome07.vcd"  //Don't worry about it.
+	scene "scenes/Producer/YouAreWelcome08.vcd"  //Don't even start.
+	scene "scenes/Producer/YouAreWelcome09.vcd"  //That's okay.
+	scene "scenes/Producer/YouAreWelcome10.vcd"  //That's okay.
+}
+Rule iMT_PlayerYouAreWelcomeProducer
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeProducer
+}
+
+Response iMT_PlayerToTheRescueRosProducer
+{
+	scene "scenes/Producer/ToTheRescue01.vcd"  //Help is coming, hang on!
+	scene "scenes/Producer/ToTheRescue02.vcd"  //Hold on, I'm coming!
+	scene "scenes/Producer/ToTheRescue03.vcd"  //I'm on the way!
+	scene "scenes/Producer/ToTheRescue04.vcd"  //Hang in there, I'm coming!
+	scene "scenes/Producer/ToTheRescue05.vcd"  //I'm coming!
+	scene "scenes/Producer/ToTheRescue06.vcd"  //Hang in there a few more seconds.
+}
+Rule iMT_PlayerToTheRescueRosProducer
+{
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerToTheRescueRosProducer
+}
+
+Response iMT_PlayerHelpProducer
+{
+	scene "scenes/Producer/Help01.vcd"  //For the love of god, someone help me!!!
+	scene "scenes/Producer/Help02.vcd"  //Damn, I need some help!
+	scene "scenes/Producer/Help03.vcd"  //Ohhh I need some help!
+	scene "scenes/Producer/Help04.vcd"  //Help me!
+	scene "scenes/Producer/Help05.vcd"  //Help!
+	scene "scenes/Producer/Help06.vcd"  //Help!
+	scene "scenes/Producer/Help07.vcd"  //Gentlemen, I need some help!
+	scene "scenes/Producer/Help08.vcd"  //Come on guys, I need some help!
+}
+Rule iMT_PlayerHelpProducer
+{
+	criteria ConceptPlayerHelp IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerHelpProducer
+}
+
+Response iMT_SurvivorSpottedTankC1Producer
+{
+	scene "scenes/Producer/WarnTankC101.vcd"  //Why can't that thing be on our side?
+	scene "scenes/Producer/WarnTankC102.vcd"  //HOLY SHIT WHAT'S THAT?!?!
+	scene "scenes/Producer/WarnTankC103.vcd"  //OH GODDAMN that things big!
+	scene "scenes/Producer/WarnTankC104.vcd"  //HOLY SHIT WHAT'S THAT?!?!
+}
+Rule iMT_SurvivorSpottedTankC1Producer
+{
+	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedTankC1Producer
+}
+
+Response iMT_SurvivorSpottedBoomerC1Producer
+{
+	scene "scenes/Producer/WarnBoomerC101.vcd"  //OH SHIT, FAT GUY!
+	scene "scenes/Producer/WarnBoomerC102.vcd"  //BIG GUY!
+	scene "scenes/Producer/WarnBoomerC103.vcd"  //FAT GUY!
+	scene "scenes/Producer/WarnBoomerC104.vcd"  //BIG GUY!
+	scene "scenes/Producer/WarnBoomerC105.vcd"  //OH, THERE'S A FAT GUY!
+	scene "scenes/Producer/WarnBoomerC106.vcd"  //BARF BAG!
+	scene "scenes/Producer/WarnBoomerC107.vcd"  //BARF BAG!
+}
+Rule iMT_SurvivorSpottedBoomerC1Producer
+{
+	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedBoomerC1Producer
+}
+
+Response iMT_SurvivorSpottedHunterC1Producer
+{
+	scene "scenes/Producer/WarnHunterC101.vcd"  //ONE OF THOSE POUNCING THINGS!
+	scene "scenes/Producer/WarnHunterC102.vcd"  //HOODIE!
+	scene "scenes/Producer/WarnHunterC103.vcd"  //HOODIE BASTARD!
+	scene "scenes/Producer/WarnHunterC104.vcd"  //JUMPER!
+	scene "scenes/Producer/WarnHunterC105.vcd"  //LEAPER!
+}
+Rule iMT_SurvivorSpottedHunterC1Producer
+{
+	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedHunterC1Producer
+}
+
+Response iMT_SurvivorSpottedSmokerC1Producer
+{
+	scene "scenes/Producer/WarnSmokerC101.vcd"  //TONGUE GUY!
+	scene "scenes/Producer/WarnSmokerC102.vcd"  //TONGUE!
+	scene "scenes/Producer/WarnSmokerC103.vcd"  //ONE OF THOSE SMOKNG GUYS!
+	scene "scenes/Producer/WarnSmokerC104.vcd"  //ONE OF THOSE SMOKNG GUYS!
+	scene "scenes/Producer/WarnSmokerC105.vcd"  //TONGUE GUY!
+	scene "scenes/Producer/WarnSmokerC106.vcd"  //TONGUE!
+}
+Rule iMT_SurvivorSpottedSmokerC1Producer
+{
+	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedSmokerC1Producer
+}
+
+Response iMT_SurvivorVocalizeBackUpProducer
+{
+	scene "scenes/Producer/BackUp01.vcd"  //Back back back!
+	scene "scenes/Producer/BackUp02.vcd"  //Come on move, move back.
+	scene "scenes/Producer/BackUp03.vcd"  //Back it up! Back it up!
+	scene "scenes/Producer/BackUp04.vcd"  //Let's back it up!
+}
+Rule iMT_SurvivorVocalizeBackUpProducer
+{
+	criteria ConceptPlayerBackUp IsProducer IsTalk IsTalkProducer
+	forceweight 1000	
+	Response iMT_SurvivorVocalizeBackUpProducer
+}
+
+Response iMT_SurvivorTankPoundProducer
+{
+	scene "scenes/Producer/TankPound01.vcd"  //Oh, Jesus, sweet Jesus get this thing off me!
+	scene "scenes/Producer/TankPound02.vcd"  //Get him off me! Get him off me!
+	scene "scenes/Producer/TankPound03.vcd"  //Kill him! KILL HIM! KILL HIM!  KILL HIM!  KILL HIM!  KILL HIM!  OH GOD KILL HIM!
+	scene "scenes/Producer/TankPound04.vcd"  //Kill him! KILL HIM!
+	scene "scenes/Producer/TankPound05.vcd"  //Can't you see he is crushing me?!?!
+}
+Rule iMT_SurvivorTankPoundProducer
+{
+	criteria ConceptPlayerGroundPoundedByTank IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_SurvivorTankPoundProducer
+}
+
+Response iMT_SurvivorVocalizeEmphaticGoProducer
+{
+	scene "scenes/Producer/EmphaticGo01.vcd"  //What are you doing? GO!
+	scene "scenes/Producer/EmphaticGo02.vcd"  //Come on, come on, let's move!
+	scene "scenes/Producer/EmphaticGo03.vcd"  //Come on, come on, let's move!
+	scene "scenes/Producer/EmphaticGo04.vcd"  //Well, go!
+	scene "scenes/Producer/EmphaticGo05.vcd"  //Go go go!
+	scene "scenes/Producer/EmphaticGo06.vcd"  //Go!
+	scene "scenes/Producer/EmphaticGo07.vcd"  //GO!
+}
+Rule iMT_SurvivorVocalizeEmphaticGoProducer
+{
+	criteria ConceptPlayerEmphaticGo IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_SurvivorVocalizeEmphaticGoProducer
+}
+
+Response iMT_PlayerAreaClearProducer
+{
+	scene "scenes/Producer/Defibrillator07.vcd"  //Clear!
+}
+Rule iMT_PlayerAreaClearProducer
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerAreaClearProducer
+}
+
+Response iMT_PlayerGettingRevivedProducer
+{
+	scene "scenes/Producer/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 -1.860  //Uh, yeah, yeah, I'm okay.
+	scene "scenes/Producer/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 -0.909  //I think I'm okay.
+	scene "scenes/Producer/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 -1.412  //Guess I feel all right.
+	scene "scenes/Producer/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 -1.820  //Don't worry about me.
+	scene "scenes/Producer/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 -0.715  //I'm good.
+	scene "scenes/Producer/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 -0.780  //Is it bad?
+	scene "scenes/Producer/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 -1.165  //I don't know, get me up.
+	scene "scenes/Producer/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 -2.365  //Oh shit, I don't know.
+	scene "scenes/Producer/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 -1.793  //Well how do I look?
+	scene "scenes/Producer/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 -0.780  //Is it bad?
+	scene "scenes/Producer/GettingRevived12.vcd" then From ReviveFriendDownFinal foo:0 -1.563  //I'm a little bit of a mess.
+	scene "scenes/Producer/GettingRevived14.vcd" then From ReviveFriendDownFinal foo:0 -2.237  //This is great, nah, this is great.  I'm good.
+	scene "scenes/Producer/GettingRevived15.vcd" then From ReviveFriendDownFinal foo:0 -3.152  //Blah blah blah, just please get me up.
+	scene "scenes/Producer/GettingRevived16.vcd" then From ReviveFriendDownFinal foo:0 -1.438  //Does my hair look good?
+	scene "scenes/Producer/GettingRevived17.vcd" then From ReviveFriendDownFinal foo:0 -1.675  //I have no idea.
+	scene "scenes/Producer/GettingRevived18.vcd" then From ReviveFriendDownFinal foo:0 -1.914  //I don't know, bad?
+	scene "scenes/Producer/GettingRevived19.vcd" then From ReviveFriendDownFinal foo:0 -1.393  //You tell me!
+	scene "scenes/Producer/GettingRevived20.vcd" then From ReviveFriendDownFinal foo:0 -1.121  //Shitty.
+	scene "scenes/Producer/GettingRevived21.vcd" then From ReviveFriendDownFinal foo:0 -1.488  //Broke.
+	scene "scenes/Producer/GettingRevived22.vcd" then From ReviveFriendDownFinal foo:0 -1.143  //Okay I guess.
+	scene "scenes/Producer/GettingRevived23.vcd" then From ReviveFriendDownFinal foo:0 -1.212  //I've been better.
+}
+Rule iMT_PlayerGettingRevivedProducer
+{
+	criteria ConceptReviveFriendDown IsNotCoughing IsProducer IsTalk IsTalkProducer
+	forceweight 1000
+	Response iMT_PlayerGettingRevivedProducer
+}
+
+Response iMT_PlayerReviveFriendBProducer
+{
+	scene "scenes/Producer/ReviveFriendB01.vcd"  //Well let's go.
+	scene "scenes/Producer/ReviveFriendB02.vcd"  //Up and at 'em.
+	scene "scenes/Producer/ReviveFriendB03.vcd"  //Come on get up.
+	scene "scenes/Producer/ReviveFriendB04.vcd"  //Up we go.
+	scene "scenes/Producer/ReviveFriendB05.vcd"  //See you're fine.
+	scene "scenes/Producer/ReviveFriendB06.vcd"  //Yeah, you look fine now.
+	scene "scenes/Producer/ReviveFriendB07.vcd"  //Nothing to worry about.
+	scene "scenes/Producer/ReviveFriendB08.vcd"  //You had me worried there.
+	scene "scenes/Producer/ReviveFriendB09.vcd"  //Come on, we can't lose you.
+	scene "scenes/Producer/ReviveFriendB10.vcd"  //Oh, I knew you'd be okay.
+	scene "scenes/Producer/ReviveFriendB11.vcd"  //The picture of health.
+	scene "scenes/Producer/ReviveFriendB12.vcd"  //Good as new.
+	scene "scenes/Producer/ReviveFriendB13.vcd"  //You're good, you're good.
+}
+Rule iMT_PlayerReviveFriendBProducer
+{
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsProducer IsTalk IsTalkProducer
+	ApplyContext "ReviveTalk:1:5,Talk:1:1"
+	forceweight 1000
+	Response iMT_PlayerReviveFriendBProducer
+}
+
+Response iMT_PlayerGrabbedByJockeyProducer
+{
+	scene "scenes/Producer/GrabbedByJockey01.vcd"  //GET THIS THING OFF ME!!!
+	scene "scenes/Producer/GrabbedByJockey02.vcd"  //I CAN"T SEE! THIS THING IS ON ME!!
+	scene "scenes/Producer/GrabbedByJockey03.vcd"  //HELP!!
+	scene "scenes/Producer/GrabbedByJockey04.vcd"  //GET THIS THING OFF MY HEAD!!!
+	scene "scenes/Producer/GrabbedByJockey05.vcd"  //AGH! LET GO! LET GO! LET GO!
+	scene "scenes/Producer/GrabbedByJockey06.vcd"  //LET GO! LET GO! LET GO!
+	scene "scenes/Producer/GrabbedByJockey07.vcd"  //IT'S ON MY FACE!
+	scene "scenes/Producer/GrabbedByJockey08.vcd"  //OH! IT'S, IT'S ON MY FACE!
+}
+Rule iMT_PlayerGrabbedByJockeyProducer
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsProducer IsTalk IsTalkProducer
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 900
+	Response iMT_PlayerGrabbedByJockeyProducer
+}
+
+Response iMT_PlayerGrabbedByJockeyC1Producer
+{
+	scene "scenes/Producer/GrabbedByJockey01.vcd"  //GET THIS THING OFF ME!!!
+	scene "scenes/Producer/GrabbedByJockey02.vcd"  //I CAN"T SEE! THIS THING IS ON ME!!
+	scene "scenes/Producer/GrabbedByJockey04.vcd"  //GET THIS THING OFF MY HEAD!!!
+	scene "scenes/Producer/GrabbedByJockey08.vcd"  //OH! IT'S, IT'S ON MY FACE!
+}
+Rule iMT_PlayerGrabbedByJockeyC1Producer
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_PlayerGrabbedByJockeyC1Producer
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character-Specific Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_DLC1_C6M3_SafeRoomConvo09bProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_SafeRoomConvo25.vcd"  //Oh, yeah, um... What woman wouldn't love that.
+	scene "scenes/Producer/DLC1_C6M3_SafeRoomConvo27.vcd"  //Uh... Lucky girl.
+	scene "scenes/Producer/DLC1_C6M3_SafeRoomConvo28.vcd"  //Lucky girl.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo09bProducer
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo09b IsProducer IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo09bProducer
+}
+
+Response iMT_C2M3SafeIntro003Producer
+{
+	scene "scenes/Producer/WorldC2M2B34.vcd"  //Gee, my bedroom was painted like this when I was a kid. [beat] Baby blue. I think my dad wanted a boy.
+}
+Rule iMT_C2M3SafeIntro003Producer
+{
+	criteria ConceptC2M3SafeIntro003 IsProducer IsNotInStartArea
+	Response iMT_C2M3SafeIntro003Producer
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo06aProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_SafeRoomConvo17.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo06b foo:0 -3.045  //I think someone has a crush on that "awesome" biker dude.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo06aProducer
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo06a IsProducer IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo06aProducer
+}
+
+Response iMT_C2M3SafeIntro002Producer
+{
+	scene "scenes/Producer/WorldC2M2B33.vcd"  //This is the most RELAXING safe room I've ever been in.
+}
+Rule iMT_C2M3SafeIntro002Producer
+{
+	criteria ConceptC2M3SafeIntro002 IsProducer IsNotInStartArea
+	Response iMT_C2M3SafeIntro002Producer
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo04dProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_SafeRoomConvo09.vcd"  //I just think Nick is jealous.
+	scene "scenes/Producer/DLC1_C6M3_SafeRoomConvo10.vcd"  //Nick is just jealous.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo04dProducer
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo04d IsProducer IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo04dProducer
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo01bProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_SafeRoomConvo02.vcd"  //Ellis!
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo01bProducer
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo01b IsProducer IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo01bProducer
 }

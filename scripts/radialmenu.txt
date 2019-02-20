@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 13.1
+// ion's Vocalizer 14.0
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -2114,13 +2114,13 @@
 		}
 		"North"
 		{
-			"command"	"vocalize iMT_PrettyGood"
-			"text"		"Pretty good"
+			"command"	"vocalize iMT_GoodRun"
+			"text"		"Good run"
 		}
 		"NorthEast"
 		{
-			"command"	"vocalize iMT_NoLove"
-			"text"		"No love"
+			"command"	"vocalize iMT_Beautiful"
+			"text"		"Beautiful"
 		}
 		"East"
 		{
@@ -2984,13 +2984,13 @@
 		}
 		"South"
 		{
-			"command"	"vocalize iMT_FourRiders"
-			"text"		"Four riders"
+			"command"	"vocalize iMT_Honeymoon"
+			"text"		"Honeymoon"
 		}
 		"SouthWest"
 		{
-			"command"	"vocalize iMT_Honeymoon"
-			"text"		"Honeymoon"
+			"command"	"vocalize iMT_Panic"
+			"text"		"Panic"
 		}
 		"West"
 		{

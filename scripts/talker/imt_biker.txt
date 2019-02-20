@@ -1239,3 +1239,439 @@ Rule iMT_SoldiersC12M5Biker
 	criteria iMT_Soldiers IsBiker IsMap_C12M5
 	Response iMT_SoldiersC12M5Biker
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// General Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerFollowMeBiker
+{
+	scene "scenes/Biker/FollowMe01.vcd"  //Come on, this way.
+	scene "scenes/Biker/FollowMe02.vcd"  //Follow me!
+	scene "scenes/Biker/FollowMe03.vcd"  //Follow me.
+	scene "scenes/Biker/FollowMe04.vcd"  //This way.
+	scene "scenes/Biker/FollowMe05.vcd"  //This way.
+	scene "scenes/Biker/FollowMe06.vcd"  //I got the lead - follow me.
+	scene "scenes/Biker/FollowMe07.vcd"  //I got the lead.
+	scene "scenes/Biker/FollowMe08.vcd"  //Well, hell, let's all follow me.
+	scene "scenes/Biker/FollowMe09.vcd"  //This way, kids.
+}
+Rule iMT_PlayerFollowMeBiker
+{
+	criteria ConceptPlayerFollowMe IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerFollowMeBiker
+}
+
+Response iMT_SurvivorTauntResponseBiker
+{
+	scene "scenes/Biker/Taunt01.vcd"  //That's right!
+	scene "scenes/Biker/Taunt02.vcd"  //HELL YEAH!
+	scene "scenes/Biker/Taunt03.vcd"  //OH YEAH!
+	scene "scenes/Biker/Taunt04.vcd"  //Oh yeah!
+	scene "scenes/Biker/Taunt05.vcd"  //[Loud, evil laugh]
+	scene "scenes/Biker/Taunt06.vcd"  //[Loud, evil laugh]
+	scene "scenes/Biker/Taunt07.vcd"  //[Loud, evil laugh]
+	scene "scenes/Biker/Taunt08.vcd"  //YEAH! YEAH!
+	scene "scenes/Biker/Taunt09.vcd"  //Damn straight!
+	scene "scenes/Biker/Taunt10.vcd"  //HELL YEAH!
+}
+Rule iMT_SurvivorTauntResponseBiker
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_SurvivorTauntResponseBiker
+}
+
+Response iMT_PlayerNegativeBiker
+{
+	scene "scenes/Biker/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical06.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical07.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical08.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical09.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical10.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtCritical11.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Biker/HurtMajor01.vcd"  //[Pain noise - ahh]
+	scene "scenes/Biker/HurtMajor02.vcd"  //[Pain noise - huh]
+	scene "scenes/Biker/HurtMajor03.vcd"  //[Pain noise - oy]
+	scene "scenes/Biker/HurtMajor04.vcd"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor05.vcd"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor06.vcd"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor07.vcd"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor08.vcd"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor09.vcd"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor10.vcd"  //[Pain noise - ugh]
+	scene "scenes/Biker/HurtMajor11.vcd"  //[Pain noise - ugh]
+}
+Rule iMT_PlayerNegativeBiker
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerNegativeBiker
+}
+
+Response iMT_PlayerSorryBiker
+{
+	scene "scenes/Biker/Sorry01.vcd"  //Sorry.
+	scene "scenes/Biker/Sorry02.vcd"  //Sorry about that.
+	scene "scenes/Biker/Sorry03.vcd"  //Sorry about that.
+	scene "scenes/Biker/Sorry04.vcd"  //Aww, man, sorry.
+	scene "scenes/Biker/Sorry05.vcd"  //Sorry.
+	scene "scenes/Biker/Sorry06.vcd"  //Sorry about that.
+	scene "scenes/Biker/Sorry07.vcd"  //Yeah, guess that was my fault.
+	scene "scenes/Biker/Sorry08.vcd"  //Yeah, guess that was my fault. Again.
+	scene "scenes/Biker/Sorry09.vcd"  //Sorry.
+	scene "scenes/Biker/Sorry10.vcd"  //Sorry, man, shit happens.
+	scene "scenes/Biker/Sorry12.vcd"  //My bad.
+	scene "scenes/Biker/Sorry13.vcd"  //Whoopsie.
+	scene "scenes/Biker/Sorry14.vcd"  //Uh, yeah, sorry.
+	scene "scenes/Biker/Sorry15.vcd"  //Sorry.
+	scene "scenes/Biker/Sorry16.vcd"  //oopsy daisy
+	scene "scenes/Biker/Sorry17.vcd"  //That was my fault.
+	scene "scenes/Biker/Sorry18.vcd"  //My bad.
+}
+Rule iMT_PlayerSorryBiker
+{
+	criteria ConceptPlayerSorry IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerSorryBiker
+}
+
+Response iMT_PlayerHurrahBiker
+{
+	scene "scenes/Biker/Hurrah01.vcd"  //All right.
+	scene "scenes/Biker/Hurrah02.vcd"  //Aw riiiight.
+	scene "scenes/Biker/Hurrah03.vcd"  //Awesome.
+	scene "scenes/Biker/Hurrah04.vcd"  //Awesome.
+	scene "scenes/Biker/Hurrah05.vcd"  //We just might make it out of here after all.
+	scene "scenes/Biker/Hurrah06.vcd"  //We're gonna be okay.
+	scene "scenes/Biker/Hurrah07.vcd"  //I think we're gonna make it.
+	scene "scenes/Biker/Hurrah08.vcd"  //They can't stop us.
+	scene "scenes/Biker/Hurrah09.vcd"  //Nothing can stop us.
+	scene "scenes/Biker/Hurrah10.vcd"  //We are unstoppable!
+	scene "scenes/Biker/Hurrah11.vcd"  //YEAH!
+	scene "scenes/Biker/Hurrah12.vcd"  //Everybody havin' as much fun as me?
+	scene "scenes/Biker/Hurrah13.vcd"  //Everyone havin' fun?
+	scene "scenes/Biker/Hurrah14.vcd"  //You know all those monsters? I don't think they're gonna make it.
+	scene "scenes/Biker/Hurrah15.vcd"  //We just might make it out of here after all.
+	scene "scenes/Biker/Hurrah16.vcd"  //Awesome.
+	scene "scenes/Biker/Hurrah17.vcd"  //Aw riiiight.
+	scene "scenes/Biker/Hurrah18.vcd"  //Aw riiiight.
+	scene "scenes/Biker/Hurrah19.vcd"  //Goddamn right!
+	scene "scenes/Biker/Hurrah20.vcd"  //Hell yeah!
+	scene "scenes/Biker/Hurrah21.vcd"  //You guys are all right.
+	scene "scenes/Biker/Hurrah22.vcd"  //I think we gotta chance
+	scene "scenes/Biker/Hurrah23.vcd"  //Lookin' good
+	scene "scenes/Biker/Hurrah24.vcd"  //Hey, this is just gettin fun.
+}
+Rule iMT_PlayerHurrahBiker
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerHurrahBiker
+}
+
+Response iMT_PlayerProfanityBiker
+{
+	scene "scenes/Biker/Swear01.vcd"  //Goddammit.
+	scene "scenes/Biker/Swear02.vcd"  //Shit.
+	scene "scenes/Biker/Swear03.vcd"  //Ah shit.
+	scene "scenes/Biker/Swear04.vcd"  //Ah hell.
+	scene "scenes/Biker/Swear06.vcd"  //Crap.
+	scene "scenes/Biker/Swear08.vcd"  //Ah bullshit.
+	scene "scenes/Biker/Swear09.vcd"  //Dammit.
+	scene "scenes/Biker/Swear10.vcd"  //Bullshit.
+	scene "scenes/Biker/Swear12.vcd"  //Shit.
+	scene "scenes/Biker/Swear14.vcd"  //Ah hell.
+	scene "scenes/Biker/Swear15.vcd"  //Son of a bitch.
+	scene "scenes/Biker/Swear16.vcd"  //Ah bullshit.
+	scene "scenes/Biker/Swear17.vcd"  //Dammit.
+	scene "scenes/Biker/Swear18.vcd"  //Bullshit.
+	scene "scenes/Biker/Swear19.vcd"  //Ah bullshit.
+	scene "scenes/Biker/SwearCoupDeGrace01.vcd"  //Burn you son of a bitch.
+}
+Rule iMT_PlayerProfanityBiker
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerProfanityBiker
+}
+
+Response iMT_PlayerYouAreWelcomeBiker
+{
+	scene "scenes/Biker/YouAreWelcome02.vcd"  //I got your back.
+	scene "scenes/Biker/YouAreWelcome04.vcd"  //Hey, no problem.
+	scene "scenes/Biker/YouAreWelcome05.vcd"  //No problem.
+	scene "scenes/Biker/YouAreWelcome06.vcd"  //Sure.
+	scene "scenes/Biker/YouAreWelcome07.vcd"  //I told ya I'd take care of ya.
+	scene "scenes/Biker/YouAreWelcome08.vcd"  //No, thank YOU!
+	scene "scenes/Biker/YouAreWelcome09.vcd"  //Yer welcome.
+	scene "scenes/Biker/YouAreWelcome10.vcd"  //Yea, I’m pretty awesome.
+	scene "scenes/Biker/YouAreWelcome11.vcd"  //No problemo, pal.
+	scene "scenes/Biker/YouAreWelcome12.vcd"  //It's all good.
+	scene "scenes/Biker/YouAreWelcome13.vcd"  //Gotcha.
+	scene "scenes/Biker/YouAreWelcome14.vcd"  //Whatever, whenever, man.
+}
+Rule iMT_PlayerYouAreWelcomeBiker
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeBiker
+}
+
+Response iMT_PlayerToTheRescueRosBiker
+{
+	scene "scenes/Biker/ToTheRescue01.vcd"  //Hang on, I'm on my way!
+	scene "scenes/Biker/ToTheRescue02.vcd"  //I'm coming!
+	scene "scenes/Biker/ToTheRescue03.vcd"  //Hang in there buddy, I'm comin.
+	scene "scenes/Biker/ToTheRescue04.vcd"  //I'm coming for ya!
+	scene "scenes/Biker/ToTheRescue05.vcd"  //Hang on I'm coming!
+	scene "scenes/Biker/ToTheRescue06.vcd"  //Hang in there, I'm comin!
+	scene "scenes/Biker/ToTheRescue07.vcd"  //Hang on, hang on, I'm comin!
+	scene "scenes/Biker/ToTheRescue08.vcd"  //I heard ya, I'm comin'!
+}
+Rule iMT_PlayerToTheRescueRosBiker
+{
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerToTheRescueRosBiker
+}
+
+Response iMT_SurvivorVocalizeBackUpBiker
+{
+	scene "scenes/Biker/BackUp01.vcd"  //Back Back Back!
+	scene "scenes/Biker/BackUp02.vcd"  //Back up!
+	scene "scenes/Biker/BackUp03.vcd"  //Back up!
+	scene "scenes/Biker/BackUp04.vcd"  //Get the hell back!
+	scene "scenes/Biker/BackUp05.vcd"  //Back it up!
+}
+Rule iMT_SurvivorVocalizeBackUpBiker
+{
+	criteria ConceptPlayerBackUp IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_SurvivorVocalizeBackUpBiker
+}
+
+Response iMT_PlayerChokeResponseBiker
+{
+	scene "scenes/Biker/Choke01.vcd"  //[Choking]
+	scene "scenes/Biker/Choke02.vcd"  //[Choking]
+	scene "scenes/Biker/Choke03.vcd"  //[Choking]
+	scene "scenes/Biker/Choke04.vcd"  //[Choking]
+	scene "scenes/Biker/Choke05.vcd"  //[Choking]
+	scene "scenes/Biker/Choke06.vcd"  //[Choking]
+	scene "scenes/Biker/Choke07.vcd"  //[Choking]
+	scene "scenes/Biker/Choke08.vcd"  //[Choking]
+	scene "scenes/Biker/Choke09.vcd"  //[Choking]
+}
+Rule iMT_PlayerChokeResponseBiker
+{
+	criteria ConceptPlayerChoke IsBiker IsTalk IsTalkBiker IsNotHangingFromTongue
+	forceweight 1000
+	Response iMT_PlayerChokeResponseBiker
+}
+
+Response iMT_PlayerTonguePullStartResponseBiker
+{
+	scene "scenes/Biker/GrabbedBySmoker01a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+	scene "scenes/Biker/GrabbedBySmoker02a.vcd"  //no, No, NO, NOOOOOOO!!!!!!!!!
+	scene "scenes/Biker/GrabbedBySmoker03.vcd"  //no, No, NO, NO!!!
+}
+Rule iMT_PlayerTonguePullStartResponseBiker
+{
+	criteria ConceptPlayerTonguePullStart IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerTonguePullStartResponseBiker
+}
+
+Response iMT_SurvivorVocalizeEmphaticGoBiker
+{
+	scene "scenes/Biker/EmphaticGo01.vcd"  //GET MOVING!
+	scene "scenes/Biker/EmphaticGo02.vcd"  //MOVE!
+	scene "scenes/Biker/EmphaticGo03.vcd"  //Go go go!
+	scene "scenes/Biker/EmphaticGo04.vcd"  //GO!
+	scene "scenes/Biker/EmphaticGo05.vcd"  //Get your rear in gear!
+	scene "scenes/Biker/EmphaticGo06.vcd"  //Get your rear in gear!
+}
+Rule iMT_SurvivorVocalizeEmphaticGoBiker
+{
+	criteria ConceptPlayerEmphaticGo IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_SurvivorVocalizeEmphaticGoBiker
+}
+
+Response iMT_ResponseSoftDispleasureSwearBiker
+{
+	scene "scenes/Biker/NegativeNoise08.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Biker/ReactionApprehensive03.vcd"  //I don't like this one damn bit.
+	scene "scenes/Biker/ReactionNegative02.vcd"  //That's bad.
+	scene "scenes/Biker/ReactionNegative03.vcd"  //Damn
+	scene "scenes/Biker/ReactionNegative04.vcd"  //Holy jesus.
+	scene "scenes/Biker/ReactionNegative05.vcd"  //Shit
+	scene "scenes/Biker/ReactionNegative06.vcd"  //Ah shit.
+	scene "scenes/Biker/ReactionNegative07.vcd"  //Damnit.
+	scene "scenes/Biker/ReactionNegative08.vcd"  //Damnit.
+	scene "scenes/Biker/ReactionNegative09.vcd"  //Ahhhhh.
+	scene "scenes/Biker/ReactionNegative10.vcd"  //Effin hell.
+}
+Rule iMT_ResponseSoftDispleasureSwearBiker
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_ResponseSoftDispleasureSwearBiker
+}
+
+Response iMT_SurvivorAskForHealthBiker
+{
+	scene "scenes/Biker/GoingToDieAskForHeal01.vcd"  //Anyone have some first aid? I'm about to die.
+	scene "scenes/Biker/GoingToDieAskForHeal02.vcd"  //Sure could use a med kit. Just sayin'.
+	scene "scenes/Biker/GoingToDieAskForHeal03.vcd"  //Can anyone patch me up?
+	scene "scenes/Biker/GoingToDieAskForHeal04.vcd"  //Hey, someone wanna patch me up?
+}
+Rule iMT_SurvivorAskForHealthBiker
+{
+	criteria ConceptAskForHealth2 IsBiker
+	Response iMT_SurvivorAskForHealthBiker
+}
+
+Response iMT_SurvivorAskBillForHealthBiker
+{
+	scene "scenes/Biker/PlayerSuggestHealthSpecific05.vcd"  //Bill, could I borrow your med kit? I just wanna look at it.
+	scene "scenes/Biker/PlayerSuggestHealthSpecific07.vcd"  //Hey Bill, you got a med kit I could have?
+	scene "scenes/Biker/PlayerSuggestHealthSpecific11.vcd"  //Old man, you forget you have a health pack, or you just saving that for me?
+}
+Rule iMT_SurvivorAskBillForHealthBiker
+{
+	criteria ConceptAskForHealth2 IsBiker SubjectIsNamVet IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskBillForHealthBiker
+}
+
+Response iMT_SurvivorAskLouisForHealthBiker
+{
+	scene "scenes/Biker/PlayerSuggestHealthSpecific06.vcd"  //Louis, you got a med kit I could have?
+	scene "scenes/Biker/PlayerSuggestHealthSpecific08.vcd"  //Louis, don't bogard that med kit, man. I'm hurt.
+	scene "scenes/Biker/PlayerSuggestHealthSpecific10.vcd"  //Louis, while I hate to break that ensemble and all, can I have your health pack?
+	scene "scenes/Biker/PlayerSuggestHealthSpecific12.vcd"  //Louis, gimme your health pack.
+}
+Rule iMT_SurvivorAskLouisForHealthBiker
+{
+	criteria ConceptAskForHealth2 IsBiker SubjectIsManager IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskLouisForHealthBiker
+}
+
+Response iMT_SurvivorSpottedWeaponBiker
+{
+	scene "scenes/Biker/SpotWeapons01.vcd"  //Weapons here!
+	scene "scenes/Biker/SpotWeapons02.vcd"  //Weapon's over here!
+	scene "scenes/Biker/SpotWeapons03.vcd"  //Buncha guns over here!
+	scene "scenes/Biker/SpotWeapons04.vcd"  //Weapon's over here!
+	scene "scenes/Biker/SpotWeapons05.vcd"  //We got weapons over here.
+}
+Rule iMT_SurvivorSpottedWeaponBiker
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_SurvivorSpottedWeaponBiker
+}
+
+Response iMT_PlayerGettingRevivedBiker
+{
+	scene "scenes/Biker/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 0  //I'm okay.
+	scene "scenes/Biker/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0  //No, no, I'm allright.
+	scene "scenes/Biker/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 0  //[groan]
+	scene "scenes/Biker/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 0  //Hell if I know.
+	scene "scenes/Biker/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 0  //Ah, hey, is this my blood?
+	scene "scenes/Biker/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 0  //[groan2]
+	scene "scenes/Biker/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 0  //I'll make it.
+	scene "scenes/Biker/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 0  //I'll live, I'll live.
+	scene "scenes/Biker/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 0  //Uh, how's my face?
+	scene "scenes/Biker/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 0  //I've been better.
+	scene "scenes/Biker/GettingRevived13.vcd" then From ReviveFriendDownFinal foo:0 0  //Shit. I hope I don't NEED all that blood.
+	scene "scenes/Biker/GettingRevived14.vcd" then From ReviveFriendDownFinal foo:0 0  //Good thing I'm indestructible.
+	scene "scenes/Biker/GettingRevived15.vcd" then From ReviveFriendDownFinal foo:0 0  //You... should see the other hundred guys.
+	scene "scenes/Biker/GettingRevived16.vcd" then From ReviveFriendDownFinal foo:0 0  //You think they'll call us heroes someday?
+}
+Rule iMT_PlayerGettingRevivedBiker
+{
+	criteria ConceptReviveFriendDown IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerGettingRevivedBiker
+}
+
+Response iMT_PlayerLostCallBiker
+{
+	scene "scenes/Biker/LostCall01.vcd"  //Hello!
+	scene "scenes/Biker/LostCall04.vcd"  //Is anyone there?
+	scene "scenes/Biker/LostCall05.vcd"  //Marco!
+	scene "scenes/Biker/LostCall08.vcd"  //Hello? Where dja go?
+}
+Rule iMT_PlayerLostCallBiker
+{
+	criteria ConceptPlayerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker
+	forceweight 1000
+	Response iMT_PlayerLostCallBiker
+}
+
+Response iMT_PlayerReviveFriendBBiker
+{
+	scene "scenes/Biker/ReviveFriendB04.vcd"  //You'll be okay.
+	scene "scenes/Biker/ReviveFriendB07.vcd"  //Hell, you're fine.
+	scene "scenes/Biker/ReviveFriendB08.vcd"  //It don't look bad.
+	scene "scenes/Biker/ReviveFriendB11.vcd"  //You're fine.
+}
+Rule iMT_PlayerReviveFriendBBiker
+{
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsBiker IsTalk IsTalkBiker
+	ApplyContext "ReviveTalk:1:5,Talk:1:1"
+	forceweight 1000
+	Response iMT_PlayerReviveFriendBBiker
+}
+
+Response iMT_PlayerCallForRescueBiker
+{
+	scene "scenes/Biker/CallForRescue01.vcd"  //I could use some help over here! Anyone?
+	scene "scenes/Biker/CallForRescue02.vcd"  //Anyone out there?  I got myself stuck in here!
+	scene "scenes/Biker/CallForRescue03.vcd"  //Get me the hell out of here!
+	scene "scenes/Biker/CallForRescue04.vcd"  //Heeeeyyyy! Can anyone here me?  I could use a hand.
+	scene "scenes/Biker/CallForRescue06.vcd"  //Goddammit, I'm stuck in here!  Someone let me out!
+	scene "scenes/Biker/CallForRescue07.vcd"  //When you get a chance, can you guys get me outta here?
+	scene "scenes/Biker/CallForRescue08.vcd"  //If it ain't too much trouble, I could use a hand out of here!
+	scene "scenes/Biker/CallForRescue09.vcd"  //Hey, can anyone hear me?  I got my ass stuck in here.
+	scene "scenes/Biker/CallForRescue10.vcd"  //Someone want to let me outta here?
+	scene "scenes/Biker/CallForRescue11.vcd"  //Ah shit I'm stuck! C'mon! I could use a hand out of here!
+	scene "scenes/Biker/CallForRescue12.vcd"  //[Grunting]  Shit, I'm stuck in here!  Someone give me a hand!
+	scene "scenes/Biker/CallForRescue13.vcd"  //Goddamn it!  I need to get the hell out of here!
+}
+Rule iMT_PlayerCallForRescueBiker
+{
+	criteria ConceptCallForRescue IsNotCoughing IsBiker IsTalk IsTalkBiker IsBikerAlive
+	forceweight 1000
+	Response iMT_PlayerCallForRescueBiker
+}
+
+Response iMT_PlayerGrabbedByJockeyBiker
+{
+	scene "scenes/Biker/ScreamWhilePounced01.vcd"  //GET IT OFF!
+	scene "scenes/Biker/ScreamWhilePounced02.vcd"  //GET IT OFF! [angry]
+	scene "scenes/Biker/FallShort01.vcd" //OH NO!
+	scene "scenes/Biker/ReactionNegative06.vcd" //Oh SHIT!
+	scene "scenes/Biker/ReactionNegative07.vcd" //DAMN IT!
+	scene "scenes/Biker/Swear15.vcd" //SON OF A BITCH.
+}
+Rule iMT_PlayerGrabbedByJockeyBiker
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsBiker IsTalk IsTalkBiker
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_PlayerGrabbedByJockeyBiker
+}

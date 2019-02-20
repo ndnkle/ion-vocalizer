@@ -1204,3 +1204,400 @@ Rule iMT_SoldiersC12M5TeenGirl
 	criteria iMT_Soldiers IsTeenGirl IsMap_C12M5
 	Response iMT_SoldiersC12M5TeenGirl
 }
+
+//--------------------------------------------------------------------------------------------------------------
+// General Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_SurvivorTauntResponseTeenGirl
+{
+	scene "scenes/TeenGirl/Taunt02.vcd"  //Thats right. [grim, determined]
+	scene "scenes/TeenGirl/Taunt13.vcd"  //Awesome!
+	scene "scenes/TeenGirl/Taunt18.vcd"  //All right!
+	scene "scenes/TeenGirl/Taunt19.vcd"  //Awesome!
+	scene "scenes/TeenGirl/Taunt20.vcd"  //YEAH!
+	scene "scenes/TeenGirl/Taunt21.vcd"  //YESSS!
+	scene "scenes/TeenGirl/Taunt24.vcd"  //Lookin good.
+	scene "scenes/TeenGirl/Taunt25.vcd"  //Oh yeah!
+	scene "scenes/TeenGirl/Taunt26.vcd"  //Impressive.
+	scene "scenes/TeenGirl/Taunt28.vcd"  //Thats right. [grim, determined]
+	scene "scenes/TeenGirl/Taunt29.vcd"  //Oh yeah, lovely.
+	scene "scenes/TeenGirl/Taunt30.vcd"  //Lookin good.
+	scene "scenes/TeenGirl/Taunt31.vcd"  //OH YEAH!
+	scene "scenes/TeenGirl/Taunt34.vcd"  //Thats right. [grim, determined]
+	scene "scenes/TeenGirl/Taunt35.vcd"  //YESSS!
+	scene "scenes/TeenGirl/Taunt39.vcd"  //YEAHHHH!
+}
+Rule iMT_SurvivorTauntResponseTeenGirl
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_SurvivorTauntResponseTeenGirl
+}
+
+Response iMT_PlayerNegativeTeenGirl
+{
+	scene "scenes/TeenGirl/HurtCritical01.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical02.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical03.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical04.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical05.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical06.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtCritical07.vcd"  //[pain noise - loud major pain]
+	scene "scenes/TeenGirl/HurtMajor01.vcd"  //[pain noise - ahh]
+	scene "scenes/TeenGirl/HurtMajor02.vcd"  //[pain noise - huh]
+	scene "scenes/TeenGirl/HurtMajor03.vcd"  //[pain noise - oy]
+	scene "scenes/TeenGirl/HurtMajor04.vcd"  //[pain noise - ugh]
+	scene "scenes/TeenGirl/HurtMajor05.vcd"  //[pain noise - ugh]
+	scene "scenes/TeenGirl/HurtMajor06.vcd"  //[pain noise - ugh]
+}
+Rule iMT_PlayerNegativeTeenGirl
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_PlayerNegativeTeenGirl
+}
+
+Response iMT_PlayerHurrahTeenGirl
+{
+	scene "scenes/TeenGirl/Hurrah01.vcd"  //Cool.
+	scene "scenes/TeenGirl/Hurrah03.vcd"  //Awesome!
+	scene "scenes/TeenGirl/Hurrah04.vcd"  //YESSS!
+	scene "scenes/TeenGirl/Hurrah07.vcd"  //I think we're gonna make it
+	scene "scenes/TeenGirl/Hurrah08.vcd"  //Looks good
+	scene "scenes/TeenGirl/Hurrah10.vcd"  //We're doing all right.
+	scene "scenes/TeenGirl/Hurrah11.vcd"  //YEAH!
+	scene "scenes/TeenGirl/Hurrah12.vcd"  //Oh yeah, lovely.
+	scene "scenes/TeenGirl/Hurrah13.vcd"  //We're gonna be okay
+	scene "scenes/TeenGirl/Hurrah16.vcd"  //Oh yeah!
+	scene "scenes/TeenGirl/Hurrah17.vcd"  //Impressive.
+	scene "scenes/TeenGirl/Hurrah18.vcd"  //We are kickin' ass
+	scene "scenes/TeenGirl/Hurrah19.vcd" then any HurrahAlso foo:0 0  //No stopping us!
+	scene "scenes/TeenGirl/Hurrah20.vcd" then any HurrahAlso foo:0 0  //We are unstoppable
+	scene "scenes/TeenGirl/Hurrah22.vcd" then any HurrahAlso foo:0 0  //Oh yeah, oh yeah, oh yeah
+	scene "scenes/TeenGirl/Hurrah31.vcd"  //Oh god, we're gonna be okay
+	scene "scenes/TeenGirl/Hurrah34.vcd"  //Okayyy, okayyy, okay.
+	scene "scenes/TeenGirl/Hurrah35.vcd"  //We might actually make it through this
+	scene "scenes/TeenGirl/Hurrah38.vcd"  //We're doing all right.
+	scene "scenes/TeenGirl/Hurrah46.vcd"  //Oh, thank god!
+	scene "scenes/TeenGirl/Hurrah48.vcd"  //Wow, I can't believe we did that.
+	scene "scenes/TeenGirl/Hurrah51.vcd"  //Oh god!
+	scene "scenes/TeenGirl/Hurrah52.vcd"  //Whoo!
+	scene "scenes/TeenGirl/Hurrah53.vcd" then any HurrahAlso foo:0 0  //We are awesome together.
+	scene "scenes/TeenGirl/Hurrah54.vcd" then any HurrahAlso foo:0 0  //Oh my god, we made that. Can you believe it?
+	scene "scenes/TeenGirl/Hurrah55.vcd"  //Wow, oh, thank god!
+	scene "scenes/TeenGirl/Hurrah56.vcd"  //Oh man, ha!
+	scene "scenes/TeenGirl/Hurrah57.vcd"  //Wow.
+	scene "scenes/TeenGirl/Hurrah58.vcd"  //We did it. Can you believe it?
+}
+Rule iMT_PlayerHurrahTeenGirl
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_PlayerHurrahTeenGirl
+}
+
+Response iMT_PlayerProfanityTeenGirl
+{
+	scene "scenes/TeenGirl/Swear02.vcd"  //Shit.
+	scene "scenes/TeenGirl/Swear06.vcd"  //Mother.
+	scene "scenes/TeenGirl/Swear09.vcd"  //Ah bullshit.
+	scene "scenes/TeenGirl/Swear10.vcd"  //Dammit.
+	scene "scenes/TeenGirl/Swear12.vcd"  //Shit.
+	scene "scenes/TeenGirl/Swear13.vcd"  //Goddammit.
+	scene "scenes/TeenGirl/Swear14.vcd"  //Shit.
+	scene "scenes/TeenGirl/Swear22.vcd"  //Dammit.
+}
+Rule iMT_PlayerProfanityTeenGirl
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_PlayerProfanityTeenGirl
+}
+
+Response iMT_PlayerYouAreWelcomeTeenGirl
+{
+	scene "scenes/TeenGirl/YouAreWelcome03.vcd"  //You are welcome, sir.
+	scene "scenes/TeenGirl/YouAreWelcome04.vcd"  //That's okay.
+	scene "scenes/TeenGirl/YouAreWelcome05.vcd"  //Hey, no problem.
+	scene "scenes/TeenGirl/YouAreWelcome06.vcd"  //No problem.
+	scene "scenes/TeenGirl/YouAreWelcome08.vcd"  //Sure thing.
+	scene "scenes/TeenGirl/YouAreWelcome09.vcd"  //ah, whatever.
+	scene "scenes/TeenGirl/YouAreWelcome11.vcd"  //We're cool.
+	scene "scenes/TeenGirl/YouAreWelcome12.vcd"  //It was my pleasure.
+	scene "scenes/TeenGirl/YouAreWelcome13.vcd"  //My pleasure.
+	scene "scenes/TeenGirl/YouAreWelcome14.vcd"  //Anytime.
+	scene "scenes/TeenGirl/YouAreWelcome15.vcd"  //Yeah, cool.
+	scene "scenes/TeenGirl/YouAreWelcome16.vcd"  //Cool
+	scene "scenes/TeenGirl/YouAreWelcome17.vcd"  //Don't worry about it.
+	scene "scenes/TeenGirl/YouAreWelcome18.vcd"  //You're welcome.
+	scene "scenes/TeenGirl/YouAreWelcome20.vcd"  //That's okay.
+	scene "scenes/TeenGirl/YouAreWelcome21.vcd"  //Hey, no problem.
+	scene "scenes/TeenGirl/YouAreWelcome23.vcd"  //Sure.
+	scene "scenes/TeenGirl/YouAreWelcome25.vcd"  //ah, whatever.
+	scene "scenes/TeenGirl/YouAreWelcome26.vcd"  //No worries.
+	scene "scenes/TeenGirl/YouAreWelcome30.vcd"  //Anytime.
+	scene "scenes/TeenGirl/YouAreWelcome32.vcd"  //Anytihing for you, Louis.
+	scene "scenes/TeenGirl/YouAreWelcome36.vcd"  //Glad to be of help, old man.
+}
+Rule iMT_PlayerYouAreWelcomeTeenGirl
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeTeenGirl
+}
+
+Response iMT_PlayerToTheRescueRosTeenGirl
+{
+	scene "scenes/TeenGirl/ToTheRescue01.vcd"  //Hold on, I'm on my way!
+	scene "scenes/TeenGirl/ToTheRescue02.vcd"  //I'm coming!
+	scene "scenes/TeenGirl/ToTheRescue03.vcd"  //Hold on, I'm coming!
+	scene "scenes/TeenGirl/ToTheRescue04.vcd"  //Help is on the way!
+	scene "scenes/TeenGirl/ToTheRescue06.vcd"  //Hang on, hang on, I'm coming!
+	scene "scenes/TeenGirl/ToTheRescue07.vcd"  //Hang in there, I'm coming!
+	scene "scenes/TeenGirl/ToTheRescue08.vcd"  //Coming, coming, coming!
+	scene "scenes/TeenGirl/ToTheRescue09.vcd"  //Hold on, I'm on my way!
+}
+Rule iMT_PlayerToTheRescueRosTeenGirl
+{
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_PlayerToTheRescueRosTeenGirl
+}
+
+Response iMT_SurvivorVocalizeBackUpTeenGirl
+{
+	scene "scenes/TeenGirl/BackUp01.vcd"  //Back back back!
+	scene "scenes/TeenGirl/BackUp02.vcd"  //Back back!
+	scene "scenes/TeenGirl/BackUp04.vcd"  //Move back
+	scene "scenes/TeenGirl/BackUp08.vcd"  //Back it up!
+	scene "scenes/TeenGirl/BackUp09.vcd"  //Back back!
+	scene "scenes/TeenGirl/BackUp15.vcd"  //Back up!
+	scene "scenes/TeenGirl/BackUp16.vcd"  //Move back
+	scene "scenes/TeenGirl/BackUp17.vcd"  //Get Back
+}
+Rule iMT_SurvivorVocalizeBackUpTeenGirl
+{
+	criteria ConceptPlayerBackUp IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_SurvivorVocalizeBackUpTeenGirl
+}
+
+Response iMT_PlayerChokeResponseTeenGirl
+{
+	scene "scenes/TeenGirl/Choke01.vcd"  //[Choking]
+	scene "scenes/TeenGirl/Choke02.vcd"  //[Choking]
+	scene "scenes/TeenGirl/Choke03.vcd"  //[Choking]
+	scene "scenes/TeenGirl/Choke04.vcd"  //[Choking]
+}
+Rule iMT_PlayerChokeResponseTeenGirl
+{
+	criteria ConceptPlayerChoke IsTeenGirl IsTalk IsTalkTeenGirl IsNotHangingFromTongue
+	forceweight 1000
+	Response iMT_PlayerChokeResponseTeenGirl
+}
+
+Response iMT_SurvivorPouncedByHunterTeenGirl
+{
+	scene "scenes/TeenGirl/ScreamWhilePounced01.vcd"  //GET IT OFF ME!
+	scene "scenes/TeenGirl/ScreamWhilePounced02.vcd"  //GET IT GET IT OFF GET IT OFF!
+	scene "scenes/TeenGirl/ScreamWhilePounced03.vcd"  //GET IT OFF!
+	scene "scenes/TeenGirl/ScreamWhilePounced04.vcd"  //GET IT GET IT OFF GET IT OFF!
+	scene "scenes/TeenGirl/ScreamWhilePounced06.vcd"  //GET IT OFF ME!
+}
+Rule iMT_SurvivorPouncedByHunterTeenGirl
+{
+	criteria ConceptScreamWhilePounced IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_SurvivorPouncedByHunterTeenGirl
+}
+
+Response iMT_SurvivorVocalizeEmphaticGoTeenGirl
+{
+	scene "scenes/TeenGirl/EmphaticGo01.vcd"  //Go go go!
+	scene "scenes/TeenGirl/EmphaticGo02.vcd"  //Go go go!
+	scene "scenes/TeenGirl/EmphaticGo04.vcd"  //Move move move!
+	scene "scenes/TeenGirl/EmphaticGo05.vcd"  //Move move!
+	scene "scenes/TeenGirl/EmphaticGo06.vcd"  //GO!
+	scene "scenes/TeenGirl/EmphaticGo07.vcd"  //GO!
+	scene "scenes/TeenGirl/EmphaticGo08.vcd"  //Go!
+	scene "scenes/TeenGirl/EmphaticGo09.vcd"  //MOVE!
+	scene "scenes/TeenGirl/EmphaticGo10.vcd"  //Come on, move
+	scene "scenes/TeenGirl/EmphaticGo11.vcd"  //Let's go, Let's go
+	scene "scenes/TeenGirl/EmphaticGo12.vcd"  //Go go go!
+	scene "scenes/TeenGirl/EmphaticGo15.vcd"  //Move move move!
+	scene "scenes/TeenGirl/EmphaticGo21.vcd"  //Come on, move
+	scene "scenes/TeenGirl/EmphaticGo22.vcd"  //Let's go, Let's go
+	scene "scenes/TeenGirl/EmphaticGo23.vcd"  //Come on, move
+}
+Rule iMT_SurvivorVocalizeEmphaticGoTeenGirl
+{
+	criteria ConceptPlayerEmphaticGo IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_SurvivorVocalizeEmphaticGoTeenGirl
+}
+
+Response iMT_ResponseSoftDispleasureSwearTeenGirl
+{
+	scene "scenes/TeenGirl/NegativeNoise13.vcd"  //[Improv non-verbal displeasure sounds]
+	scene "scenes/TeenGirl/ReactionApprehensive18.vcd"  //I have a bad feeling about this
+	scene "scenes/TeenGirl/ReactionNegative01.vcd"  //Uh oh
+	scene "scenes/TeenGirl/ReactionNegative02.vcd"  //This is so messed up
+	scene "scenes/TeenGirl/ReactionNegative03.vcd"  //This sucks
+	scene "scenes/TeenGirl/ReactionNegative04.vcd"  //This sucks big time
+	scene "scenes/TeenGirl/ReactionNegative05.vcd"  //Oh damn
+	scene "scenes/TeenGirl/ReactionNegative06.vcd"  //This isn't working
+	scene "scenes/TeenGirl/ReactionNegative08.vcd"  //What the hell was that?
+	scene "scenes/TeenGirl/ReactionNegative10.vcd"  //This is so messed up
+	scene "scenes/TeenGirl/ReactionNegative11.vcd"  //Are you kidding me?
+	scene "scenes/TeenGirl/ReactionNegative12.vcd"  //Not again
+	scene "scenes/TeenGirl/ReactionNegative14.vcd"  //This is never going to end
+	scene "scenes/TeenGirl/ReactionNegative15.vcd"  //This is not going well
+	scene "scenes/TeenGirl/ReactionNegative16.vcd"  //Oh man oh man oh man
+	scene "scenes/TeenGirl/ReactionNegative17.vcd"  //Shit  (matter of factly)
+	scene "scenes/TeenGirl/ReactionNegative18.vcd"  //This sucks
+	scene "scenes/TeenGirl/ReactionNegative19.vcd"  //This sucks big time
+	scene "scenes/TeenGirl/ReactionNegative21.vcd"  //Oh no
+	scene "scenes/TeenGirl/ReactionNegative22.vcd"  //Ah crapl
+	scene "scenes/TeenGirl/ReactionNegative23.vcd"  //This is bad
+	scene "scenes/TeenGirl/ReactionNegative25.vcd"  //Crap
+	scene "scenes/TeenGirl/ReactionNegative26.vcd"  //No No No No NO
+	scene "scenes/TeenGirl/ReactionNegative27.vcd"  //This is never going to end
+	scene "scenes/TeenGirl/ReactionNegative28.vcd"  //This is not going well
+	scene "scenes/TeenGirl/ReactionNegative29.vcd"  //Oh man oh man oh man
+	scene "scenes/TeenGirl/ReactionNegative31.vcd"  //Shit  (matter of factly)
+	scene "scenes/TeenGirl/ReactionNegative32.vcd"  //This is bad
+	scene "scenes/TeenGirl/ReactionNegative33.vcd"  //Ah crap!
+	scene "scenes/TeenGirl/ReactionNegativeSpecial03.vcd"  //[Frustration sound]
+	scene "scenes/TeenGirl/ReactionNegativeSpecial12.vcd"  //[Frustration sound]
+	scene "scenes/TeenGirl/ReactionNegativeSpecial13.vcd"  //[Frustration sound]
+}
+Rule iMT_ResponseSoftDispleasureSwearTeenGirl
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_ResponseSoftDispleasureSwearTeenGirl
+}
+
+Response iMT_SurvivorAskForHealthTeenGirl
+{
+	scene "scenes/TeenGirl/GoingToDieAskForHeal01.vcd"  //Anyone have some first aid?
+	scene "scenes/TeenGirl/GoingToDieAskForHeal02.vcd"  //I need some first aid, now!
+	scene "scenes/TeenGirl/GoingToDieAskForHeal04.vcd"  //Anyone have some first aid? I'm gonna die.
+	scene "scenes/TeenGirl/GoingToDieAskForHeal05.vcd"  //I need some first aid, now!
+	scene "scenes/TeenGirl/GoingToDieAskForHeal13.vcd"  //I can't make it without some help...
+}
+Rule iMT_SurvivorAskForHealthTeenGirl
+{
+	criteria ConceptAskForHealth2 IsTeenGirl
+	Response iMT_SurvivorAskForHealthTeenGirl
+}
+
+Response iMT_SurvivorSpottedWeaponTeenGirl
+{
+	scene "scenes/TeenGirl/SpotWeapons01.vcd"  //Weapons here!
+	scene "scenes/TeenGirl/SpotWeapons02.vcd"  //Weapons here!
+	scene "scenes/TeenGirl/SpotWeapons03.vcd"  //Weapons here!
+	scene "scenes/TeenGirl/SpotWeapons04.vcd"  //Weapons here!
+	scene "scenes/TeenGirl/SpotWeapons05.vcd"  //Weapons over here!
+	scene "scenes/TeenGirl/SpotWeapons06.vcd"  //Hey, there's weapon' over here!
+	scene "scenes/TeenGirl/SpotWeapons07.vcd" odds 20 //Guys, better weapons!
+	scene "scenes/TeenGirl/SpotWeapons08.vcd" odds 20 //Guys, better weapons!
+	scene "scenes/TeenGirl/SpotWeapons09.vcd" odds 20 //Guys, big, badass, nasty weapons over here!
+}
+Rule iMT_SurvivorSpottedWeaponTeenGirl
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSmartLookAuto
+	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_SurvivorSpottedWeaponTeenGirl
+}
+
+Response iMT_PlayerGettingRevivedTeenGirl
+{
+	scene "scenes/TeenGirl/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 0  //I'm okay.
+	scene "scenes/TeenGirl/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0  //I'm fine.
+	scene "scenes/TeenGirl/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 0  //Oh shit.
+	scene "scenes/TeenGirl/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 0  //I don't know.
+	scene "scenes/TeenGirl/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 0  //I'm bleeding.
+	scene "scenes/TeenGirl/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 0  //Ughhh.
+	scene "scenes/TeenGirl/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 0  //I'll make it.
+	scene "scenes/TeenGirl/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 0  //How do I look?
+	scene "scenes/TeenGirl/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 0  //Is it bad?
+	scene "scenes/TeenGirl/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 0  //How bad is it?
+	scene "scenes/TeenGirl/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 0  //Did they get my face?
+}
+Rule iMT_PlayerGettingRevivedTeenGirl
+{
+	criteria ConceptReviveFriendDown IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_PlayerGettingRevivedTeenGirl
+}
+
+Response iMT_PlayerLostCallTeenGirl
+{
+	scene "scenes/TeenGirl/LostCall01.vcd"  //Hello?
+	scene "scenes/TeenGirl/LostCall04.vcd"  //Is anyone there?
+	scene "scenes/TeenGirl/LostCall06.vcd"  //Helloooo?
+	scene "scenes/TeenGirl/LostCall07.vcd"  //Anyone around?
+	scene "scenes/TeenGirl/LostCall09.vcd"  //Hey guys, where are you?
+	scene "scenes/TeenGirl/LostCall010.vcd"  //Where are you guys?
+	scene "scenes/TeenGirl/LostCall13.vcd"  //Guys?
+}
+Rule iMT_PlayerLostCallTeenGirl
+{
+	criteria ConceptPlayerLostCall IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	forceweight 1000
+	Response iMT_PlayerLostCallTeenGirl
+}
+
+Response iMT_PlayerReviveFriendBTeenGirl
+{
+	scene "scenes/TeenGirl/ReviveFriendB05.vcd"  //You'll be okay.
+	scene "scenes/TeenGirl/ReviveFriendB08.vcd"  //You're fine.
+	scene "scenes/TeenGirl/ReviveFriendB09.vcd"  //It doesn't look bad.
+	scene "scenes/TeenGirl/ReviveFriendB10.vcd"  //It doesn't look bad.
+}
+Rule iMT_PlayerReviveFriendBTeenGirl
+{
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	ApplyContext "ReviveTalk:1:5,Talk:1:1"
+	forceweight 1000
+	Response iMT_PlayerReviveFriendBTeenGirl
+}
+
+Response iMT_PlayerCallForRescueTeenGirl
+{
+	scene "scenes/TeenGirl/CallForRescue01.vcd"  //Anyone out there?  I'm trapped in here!
+	scene "scenes/TeenGirl/CallForRescue02.vcd"  //Please! I need some help!  LET ME OUT OF HERE!!
+	scene "scenes/TeenGirl/CallForRescue06.vcd"  //Help please!  I need some help getting out of here!
+	scene "scenes/TeenGirl/CallForRescue07.vcd"  //Someone? Anyone! Help!  Please!
+	scene "scenes/TeenGirl/CallForRescue14.vcd"  //Hello?  Anyone out there? I need some help!
+	scene "scenes/TeenGirl/CallForRescue16.vcd"  //Guys! GUYS! I'm over here! I'm trapped!
+}
+Rule iMT_PlayerCallForRescueTeenGirl
+{
+	criteria ConceptCallForRescue IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsTeenGirlAlive
+	forceweight 1000
+	Response iMT_PlayerCallForRescueTeenGirl
+}
+
+Response iMT_PlayerGrabbedByJockeyTeenGirl
+{
+	scene "scenes/TeenGirl/ScreamWhilePounced01.vcd"  //GET IT OFF ME!
+	scene "scenes/TeenGirl/ScreamWhilePounced06.vcd"  //GET IT OFF ME!
+	scene "scenes/TeenGirl/FallShort02.vcd" //OH NO
+	scene "scenes/TeenGirl/FallShort03.vcd" //AHH!
+	scene "scenes/TeenGirl/HordeAttack04.vcd" //SHIT!
+	scene "scenes/TeenGirl/HordeAttack05.vcd" //AH!
+	scene "scenes/TeenGirl/HordeAttack14.vcd" //DAMN IT!
+}
+Rule iMT_PlayerGrabbedByJockeyTeenGirl
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_PlayerGrabbedByJockeyTeenGirl
+}

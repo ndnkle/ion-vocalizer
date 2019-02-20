@@ -33,14 +33,14 @@ Rule iMT_HoneymoonGambler
 	Response iMT_HoneymoonGambler
 }
 
-Response iMT_FourRidersGambler
+Response iMT_PanicGambler
 {
-	scene "scenes/Gambler/Hurrah10.vcd"  //We're the four riders of the goddamn apocalypse!
+	scene "scenes/Gambler/WorldC5M3B25.vcd"  //You sure we shouldn't just panic? I mean, I think panic was invented for just this sort of situation.
 }
-Rule iMT_FourRidersGambler
+Rule iMT_PanicGambler
 {
-	criteria iMT_FourRiders IsGambler
-	Response iMT_FourRidersGambler
+	criteria iMT_Panic IsGambler
+	Response iMT_PanicGambler
 }
 
 Response iMT_TrustGambler
@@ -344,6 +344,12 @@ Rule iMT_PlayerCoughingGambler
 
 Response iMT_PlayerSuggestHealthGambler
 {
+	scene "scenes/Gambler/SuggestHealth01.vcd"  //Heal up!
+	scene "scenes/Gambler/SuggestHealth02.vcd"  //Heal up!
+	scene "scenes/Gambler/SuggestHealth03.vcd"  //Good time to heal.
+	scene "scenes/Gambler/SuggestHealth04.vcd"  //This would be a good time to heal.
+	scene "scenes/Gambler/SuggestHealth05.vcd"  //Maybe you could heal up now.
+	scene "scenes/Gambler/SuggestHealth06.vcd"  //Heal if you need to.
 	scene "scenes/Gambler/SuggestHealthC101.vcd"  //This might be a good time to heal.
 	scene "scenes/Gambler/SuggestHealthC102.vcd"  //Time for people to heal.
 	scene "scenes/Gambler/SuggestHealthC103.vcd"  //Don't forget you can heal yourself.
@@ -848,4 +854,457 @@ Rule iMT_SoldiersGambler
 {
 	criteria iMT_Soldiers IsGambler
 	Response iMT_SoldiersGambler
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// General Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_SurvivorTauntResponseGambler
+{
+	scene "scenes/Gambler/Taunt01.vcd"  //Suck on that
+	scene "scenes/Gambler/Taunt02.vcd"  //Stick that where the sun don't shine!
+	scene "scenes/Gambler/Taunt03.vcd"  //Take that you mealy-mouthed bastards.
+	scene "scenes/Gambler/Taunt04.vcd"  //Stick it up your ass!
+	scene "scenes/Gambler/Taunt05.vcd"  //Stick that up your ass!
+	scene "scenes/Gambler/Taunt06.vcd"  //We are wiping the floor with you.
+	scene "scenes/Gambler/Taunt07.vcd"  //You don't stand a chance.
+	scene "scenes/Gambler/Taunt08.vcd"  //Give up now!
+	scene "scenes/Gambler/Taunt09.vcd"  //Candyasses!
+}
+Rule iMT_SurvivorTauntResponseGambler
+{
+	criteria ConceptPlayerTaunt IsNotCoughing IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_SurvivorTauntResponseGambler
+}
+
+Response iMT_PlayerNegativeGambler
+{
+	scene "scenes/Gambler/HurtCritical01.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical02.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical03.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical04.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical05.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical06.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtCritical07.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Gambler/HurtMajor01.vcd"  //[pain noise - huh]
+	scene "scenes/Gambler/HurtMajor02.vcd"  //[pain noise - ahh]
+	scene "scenes/Gambler/HurtMajor03.vcd"  //[pain noise - oy]
+	scene "scenes/Gambler/HurtMajor04.vcd"  //[pain noise - ugh]
+	scene "scenes/Gambler/HurtMajor05.vcd"  //[pain noise - ugh]
+	scene "scenes/Gambler/HurtMajor06.vcd"  //[pain noise - ugh]
+	scene "scenes/Gambler/HurtMajor07.vcd"  //[pain noise - ugh]
+	scene "scenes/Gambler/HurtMajor08.vcd"  //[pain noise - ugh]
+	scene "scenes/Gambler/HurtMajor09.vcd"  //[pain noise - ugh]
+	scene "scenes/Gambler/HurtMajor10.vcd"  //[pain noise - ugh]
+	scene "scenes/Gambler/HurtMajor11.vcd"  //[pain noise - ugh]
+
+}
+Rule iMT_PlayerNegativeGambler
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_PlayerNegativeGambler
+}
+
+Response iMT_PlayerSorryGambler
+{
+	scene "scenes/Gambler/Sorry01.vcd"  //Excuse me.
+	scene "scenes/Gambler/Sorry02.vcd"  //Excuse me.
+	scene "scenes/Gambler/Sorry03.vcd"  //Forgive me, okay?
+	scene "scenes/Gambler/Sorry04.vcd"  //Well sorry.
+	scene "scenes/Gambler/Sorry05.vcd"  //I'm sorry is that what you want me to say?
+	scene "scenes/Gambler/Sorry06.vcd"  //I'm sorry, okay?
+	scene "scenes/Gambler/Sorry07.vcd"  //Can you forgive me?
+	scene "scenes/Gambler/Sorry08.vcd"  //Don't look at me like that.
+}
+Rule iMT_PlayerSorryGambler
+{
+	criteria ConceptPlayerSorry IsNotCoughing IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_PlayerSorryGambler
+}
+
+Response iMT_PlayerHurrahGambler
+{
+	scene "scenes/Gambler/Hurrah01.vcd"  //We are walking through the valley of the shadow of death and kicking ass.
+	scene "scenes/Gambler/Hurrah02.vcd"  //It may not be pretty, but we're doing this.
+	scene "scenes/Gambler/Hurrah03.vcd"  //You guys aren't so damn bad.
+	scene "scenes/Gambler/Hurrah04.vcd"  //What do ya know, we're going to make it.
+	scene "scenes/Gambler/Hurrah05.vcd"  //You guys are pretty good.
+	scene "scenes/Gambler/Hurrah06.vcd"  //Aces!
+	scene "scenes/Gambler/Hurrah07.vcd"  //I'm starting to like you guys.
+	scene "scenes/Gambler/Hurrah08.vcd"  //We're makin' it look EASY!
+	scene "scenes/Gambler/Hurrah09.vcd"  //And THAT is how you do that!
+	scene "scenes/Gambler/Hurrah10.vcd"  //We're the four riders of the goddamn apocalypse!
+	scene "scenes/Gambler/Hurrah11.vcd"  //And THAT is how you do it!
+}
+Rule iMT_PlayerHurrahGambler
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_PlayerHurrahGambler
+}
+
+Response iMT_PlayerYouAreWelcomeGambler
+{
+	scene "scenes/Gambler/YouAreWelcome01.vcd"  //You're welcome.
+	scene "scenes/Gambler/YouAreWelcome02.vcd"  //You're welcome.
+	scene "scenes/Gambler/YouAreWelcome03.vcd"  //You're welcome.
+	scene "scenes/Gambler/YouAreWelcome04.vcd"  //Don't worry about it.
+	scene "scenes/Gambler/YouAreWelcome05.vcd"  //You're welcome.
+	scene "scenes/Gambler/YouAreWelcome06.vcd"  //Don't worry about it.
+	scene "scenes/Gambler/YouAreWelcome07.vcd"  //Don't worry about it.
+	scene "scenes/Gambler/YouAreWelcome08.vcd"  //That's what I'm here for.
+	scene "scenes/Gambler/YouAreWelcome09.vcd"  //That's what I'm here for.
+	scene "scenes/Gambler/YouAreWelcome10.vcd"  //That's what I'm here for.
+	scene "scenes/Gambler/YouAreWelcome11.vcd"  //Anytime.
+	scene "scenes/Gambler/YouAreWelcome12.vcd"  //Anytime.
+	scene "scenes/Gambler/YouAreWelcome13.vcd"  //Anytime.
+	scene "scenes/Gambler/YouAreWelcome14.vcd"  //Sure thing.
+	scene "scenes/Gambler/YouAreWelcome15.vcd"  //Sure thing.
+	scene "scenes/Gambler/YouAreWelcome16.vcd"  //Sure thing.
+	scene "scenes/Gambler/YouAreWelcome17.vcd"  //Sure thing.
+}
+Rule iMT_PlayerYouAreWelcomeGambler
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler
+	forceweight 900
+	Response iMT_PlayerYouAreWelcomeGambler
+}
+
+Response iMT_PlayerYouAreWelcomeC1Gambler
+{
+	scene "scenes/Gambler/YouAreWelcomeC101.vcd"  //Whatever.
+	scene "scenes/Gambler/YouAreWelcomeC102.vcd"  //Um yeah.
+	scene "scenes/Gambler/YouAreWelcomeC103.vcd"  //Sure.
+	scene "scenes/Gambler/YouAreWelcomeC104.vcd"  //Whatever.
+	scene "scenes/Gambler/YouAreWelcomeC105.vcd"  //Sure.
+	scene "scenes/Gambler/YouAreWelcomeC106.vcd"  //Um yeah.
+	scene "scenes/Gambler/YouAreWelcomeC107.vcd"  //Sure.
+	scene "scenes/Gambler/YouAreWelcomeC108.vcd"  //Whatever.
+	scene "scenes/Gambler/YouAreWelcomeC109.vcd"  //Um yeah.
+}
+Rule iMT_PlayerYouAreWelcomeC1Gambler
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler ismap_c1m1_hotel
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeC1Gambler
+}
+
+Response iMT_PlayerToTheRescueRosGambler
+{
+	scene "scenes/Gambler/ToTheRescue01.vcd"  //Relax, Relax I'm coming!
+	scene "scenes/Gambler/ToTheRescue02.vcd"  //I'm on my way!
+	scene "scenes/Gambler/ToTheRescue03.vcd"  //Hold on, coming!
+	scene "scenes/Gambler/ToTheRescue04.vcd"  //I'm on the way!
+}
+Rule iMT_PlayerToTheRescueRosGambler
+{
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_PlayerToTheRescueRosGambler
+}
+
+Response iMT_PlayerHelpGambler
+{
+	scene "scenes/Gambler/Help01.vcd"  //I need some help.
+	scene "scenes/Gambler/Help02.vcd"  //I can't do this on my own, gimme some help!
+	scene "scenes/Gambler/Help03.vcd"  //Somebody want to lend me a hand, here?
+	scene "scenes/Gambler/Help04.vcd"  //Help!
+	scene "scenes/Gambler/Help05.vcd"  //Hey, over here!
+}
+Rule iMT_PlayerHelpGambler
+{
+	criteria ConceptPlayerHelp IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_PlayerHelpGambler
+}
+
+Response iMT_SurvivorSpottedTankC1Gambler
+{
+	scene "scenes/Gambler/WarnTankC101.vcd"  //We have a problem!
+	scene "scenes/Gambler/WarnTankC102.vcd"  //HOLY SHIT! BIG FREAKING ZOMBIE!
+	scene "scenes/Gambler/WarnTankC103.vcd"  //We have a problem!
+	scene "scenes/Gambler/WarnTankC104.vcd"  //HOLY SHIT! BIG FREAKING ZOMBIE!
+}
+Rule iMT_SurvivorSpottedTankC1Gambler
+{
+	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedTankC1Gambler
+}
+
+Response iMT_SurvivorSpottedBoomerC1Gambler
+{
+	scene "scenes/Gambler/WarnBoomerC101.vcd"  //Fat guy!
+	scene "scenes/Gambler/WarnBoomerC102.vcd"  //Goiter man!
+	scene "scenes/Gambler/WarnBoomerC103.vcd"  //Aunt bee.
+	scene "scenes/Gambler/WarnBoomerC104.vcd"  //Fatty!
+	scene "scenes/Gambler/WarnBoomerC105.vcd"  //Fat guy!
+}
+Rule iMT_SurvivorSpottedBoomerC1Gambler
+{
+	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedBoomerC1Gambler
+}
+
+Response iMT_SurvivorSpottedHunterC1Gambler
+{
+	scene "scenes/Gambler/WarnHunterC101.vcd"  //Jumper!
+	scene "scenes/Gambler/WarnHunterC102.vcd"  //Leaper!
+	scene "scenes/Gambler/WarnHunterC103.vcd"  //Scrawny little bitch I'm gonna kill.
+}
+Rule iMT_SurvivorSpottedHunterC1Gambler
+{
+	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedHunterC1Gambler
+}
+
+Response iMT_SurvivorSpottedSmokerC1Gambler
+{
+	scene "scenes/Gambler/WarnSmokerC101.vcd"  //TONGUE!
+	scene "scenes/Gambler/WarnSmokerC102.vcd"  //The smoking thing!
+}
+Rule iMT_SurvivorSpottedSmokerC1Gambler
+{
+	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	forceweight 1000
+	Response iMT_SurvivorSpottedSmokerC1Gambler
+}
+
+Response iMT_SurvivorVocalizeBackUpGambler
+{
+	scene "scenes/Gambler/BackUp01.vcd"  //Back it up!
+	scene "scenes/Gambler/BackUp02.vcd"  //Back, back, back!
+	scene "scenes/Gambler/BackUp03.vcd"  //Come on back.
+	scene "scenes/Gambler/BackUp04.vcd"  //Back it up!
+}
+Rule iMT_SurvivorVocalizeBackUpGambler
+{
+	criteria ConceptPlayerBackUp IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_SurvivorVocalizeBackUpGambler
+}
+
+Response iMT_SurvivorTankPoundGambler
+{
+	scene "scenes/Gambler/TankPound01.vcd"  //Freaking tank is killing me!
+	scene "scenes/Gambler/TankPound02.vcd"  //Freaking tank is killing me!
+	scene "scenes/Gambler/TankPound03.vcd"  //Do you see this big giant thing on me?!?!
+	scene "scenes/Gambler/TankPound04.vcd"  //Do you see this big giant thing on me?!?!
+	scene "scenes/Gambler/TankPound05.vcd"  //Mother of Mercy! This thing is killing me!
+	scene "scenes/Gambler/TankPound06.vcd"  //Mother of Mercy! This thing is killing me!
+}
+Rule iMT_SurvivorTankPoundGambler
+{
+	criteria ConceptPlayerGroundPoundedByTank IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_SurvivorTankPoundGambler
+}
+
+Response iMT_SurvivorVocalizeEmphaticGoGambler
+{
+	scene "scenes/Gambler/EmphaticGo01.vcd"  //Go!
+	scene "scenes/Gambler/EmphaticGo02.vcd"  //GO!
+	scene "scenes/Gambler/EmphaticGo03.vcd"  //GOOO!
+	scene "scenes/Gambler/EmphaticGo04.vcd"  //Go go go!
+	scene "scenes/Gambler/EmphaticGo05.vcd"  //Let's go. Let's go.
+	scene "scenes/Gambler/EmphaticGo06.vcd"  //GO!
+	scene "scenes/Gambler/EmphaticGo07.vcd"  //Let's go.
+}
+Rule iMT_SurvivorVocalizeEmphaticGoGambler
+{
+	criteria ConceptPlayerEmphaticGo IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_SurvivorVocalizeEmphaticGoGambler
+}
+
+Response iMT_PlayerAreaClearGambler
+{
+	scene "scenes/Gambler/Defibrillator06.vcd"  //Clear!
+}
+Rule iMT_PlayerAreaClearGambler
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_PlayerAreaClearGambler
+}
+
+Response iMT_PlayerGettingRevivedGambler
+{
+	scene "scenes/Gambler/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 -1.187  //Well, what do I look like?
+	scene "scenes/Gambler/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 -1.028  //I'm fine.
+	scene "scenes/Gambler/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 -0.742  //You tell me.
+	scene "scenes/Gambler/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 -1.062  //Same as always.
+	scene "scenes/Gambler/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 -1.538  //Not exactly great.
+	scene "scenes/Gambler/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 -1.459  //I'm cool, I'm cool.
+	scene "scenes/Gambler/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 -1.846  //I'm good, I'm good. Get me up.
+	scene "scenes/Gambler/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 -1.103  //Don't worry about me.
+	scene "scenes/Gambler/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 -0.751  //Good enough.
+	scene "scenes/Gambler/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 -1.763  //Fine, I'm fine, fine.
+	scene "scenes/Gambler/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 -1.961  //Oh I'm super. (sarcastic)
+	scene "scenes/Gambler/GettingRevived12.vcd" then From ReviveFriendDownFinal foo:0 -0.773  //I been better.
+	scene "scenes/Gambler/GettingRevived13.vcd" then From ReviveFriendDownFinal foo:0 -2.200  //Just get me up.
+	scene "scenes/Gambler/GettingRevived14.vcd" then From ReviveFriendDownFinal foo:0 -0.636  //I'll be fine.
+	scene "scenes/Gambler/GettingRevived15.vcd" then From ReviveFriendDownFinal foo:0 -0.803  //Oh I'm great, (sarcastic)
+	scene "scenes/Gambler/GettingRevived16.vcd"  //Fan-freaking-tastic, that's how I am. (sarcastic)
+	scene "scenes/Gambler/GettingRevived17.vcd" then From ReviveFriendDownFinal foo:0 -1.171  //I'll live. Let's go.
+	scene "scenes/Gambler/GettingRevived18.vcd" then From ReviveFriendDownFinal foo:0 -0.669  //Been better.
+	scene "scenes/Gambler/GettingRevived19.vcd" then From ReviveFriendDownFinal foo:0 -0.664  //I've been better.
+	scene "scenes/Gambler/GettingRevived20.vcd" then From ReviveFriendDownFinal foo:0 -1.097  //Don't worry, just get me up.
+}
+Rule iMT_PlayerGettingRevivedGambler
+{
+	criteria ConceptReviveFriendDown IsNotCoughing IsGambler IsTalk IsTalkGambler
+	forceweight 1000
+	Response iMT_PlayerGettingRevivedGambler
+}
+
+Response iMT_PlayerReviveFriendBGambler
+{
+	scene "scenes/Gambler/ReviveFriendB01.vcd"  //Come on,  still lots to be done.
+	scene "scenes/Gambler/ReviveFriendB02.vcd"  //Rise and shine!
+	scene "scenes/Gambler/ReviveFriendB03.vcd"  //Let's hit the road.
+	scene "scenes/Gambler/ReviveFriendB04.vcd"  //Here we go.
+	scene "scenes/Gambler/ReviveFriendB05.vcd"  //Up and at 'em.
+	scene "scenes/Gambler/ReviveFriendB06.vcd"  //Let's roll.
+	scene "scenes/Gambler/ReviveFriendB07.vcd"  //You owe me one.
+	scene "scenes/Gambler/ReviveFriendB08.vcd"  //Let's have a look at you.
+	scene "scenes/Gambler/ReviveFriendB09.vcd"  //Time to get some revenge.
+	scene "scenes/Gambler/ReviveFriendB10.vcd"  //It's time to get some revenge.
+	scene "scenes/Gambler/ReviveFriendB11.vcd"  //Let's go.
+	scene "scenes/Gambler/ReviveFriendB12.vcd"  //See - all good.
+	scene "scenes/Gambler/ReviveFriendB13.vcd"  //Good as new.
+	scene "scenes/Gambler/ReviveFriendB14.vcd"  //Let's go kill some zombies.
+}
+Rule iMT_PlayerReviveFriendBGambler
+{
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsGambler IsTalk IsTalkGambler
+	ApplyContext "ReviveTalk:1:5,Talk:1:1"
+	forceweight 1000
+	Response iMT_PlayerReviveFriendBGambler
+}
+
+Response iMT_PlayerGrabbedByJockeyGambler
+{
+	scene "scenes/Gambler/GrabbedByJockey01.vcd"  //Jockey's got me. (disgusted)
+	scene "scenes/Gambler/GrabbedByJockey02.vcd"  //Shoot this thing on my back!
+	scene "scenes/Gambler/GrabbedByJockey03.vcd"  //Kill this jockey on me!
+	scene "scenes/Gambler/GrabbedByJockey04.vcd"  //Jockey on me!
+	scene "scenes/Gambler/GrabbedByJockey05.vcd"  //Jockey! Jockey!
+	scene "scenes/Gambler/GrabbedByJockey06.vcd"  //Shoot this thing off my back!
+}
+Rule iMT_PlayerGrabbedByJockeyGambler
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsGambler IsTalk IsTalkGambler
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 900
+	Response iMT_PlayerGrabbedByJockeyGambler
+}
+
+Response iMT_PlayerGrabbedByJockeyC1Gambler
+{
+	scene "scenes/Gambler/GrabbedByJockey02.vcd"  //Shoot this thing on my back!
+	scene "scenes/Gambler/GrabbedByJockey06.vcd"  //Shoot this thing off my back!
+}
+Rule iMT_PlayerGrabbedByJockeyC1Gambler
+{
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	ApplyContext "_auto_NoSpotting:1:4"
+	applycontexttoworld
+	forceweight 1000
+	Response iMT_PlayerGrabbedByJockeyC1Gambler
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Character-Specific Fixes
+//--------------------------------------------------------------------------------------------------------------
+
+Response iMT_C2M3SafeIntro013Gambler
+{
+	scene "scenes/Gambler/WorldC2M3B01.vcd"  //I think we should clarify what constitutes "close".
+}
+Rule iMT_C2M3SafeIntro013Gambler
+{
+	criteria ConceptC2M3SafeIntro013 IsGambler IsNotInStartArea
+	Response iMT_C2M3SafeIntro013Gambler
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo05dGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_SafeRoomConvo12.vcd"  //What? I'm a handsome man.
+	scene "scenes/Gambler/DLC1_C6M3_SafeRoomConvo13.vcd"  //What? I'm a closer.
+	scene "scenes/Gambler/DLC1_C6M3_SafeRoomConvo14.vcd"  //What? I'm a handsome man, what can I tell ya?
+	scene "scenes/Gambler/DLC1_C6M3_SafeRoomConvo15.vcd"  //A-B-C. A;ways be closing.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo05dGambler
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo05d IsGambler IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo05dGambler
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo02dGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_SafeRoomConvo03.vcd" then Any DLC1_C6M3_SafeRoomConvo02e foo:0 -3.014  //You got a good feeling about every scumbag that lives on a bridge.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo02dGambler
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo02d IsGambler IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo02dGambler
+}
+
+Response iMT_C2M3SafeIntro001Gambler
+{
+	scene "scenes/Gambler/WorldC2M2B22.vcd"  //This is the most RELAXING safe room I've ever been in.
+}
+Rule iMT_C2M3SafeIntro001Gambler
+{
+	criteria ConceptC2M3SafeIntro001 IsGambler IsNotInStartArea
+	Response iMT_C2M3SafeIntro001Gambler
+}
+
+Response iMT_C2M3SafeIntro007Gambler
+{
+	scene "scenes/Gambler/WorldC2M303.vcd"  //Did you see the sign out front?  Cousins only day today.
+}
+Rule iMT_C2M3SafeIntro007Gambler
+{
+	criteria ConceptC2M3SafeIntro007 IsGambler IsNotInStartArea
+	Response iMT_C2M3SafeIntro007Gambler
+}
+
+Response iMT_C5M5_saferoom003Gambler
+{
+	scene "scenes/Gambler/WorldC5M5B04.vcd"  //[chuckles] Okay, allright, let's go.
+}
+Rule iMT_C5M5_saferoom003Gambler
+{
+	criteria ConceptC5M5_saferoom003 IsGambler IsNotInStartArea
+	Response iMT_C5M5_saferoom003Gambler
+}
+
+Response iMT_C2M3SafeIntro012Gambler
+{
+	scene "scenes/Gambler/WorldC2M3B04.vcd"  //Psh! Huh. Several. Easily.
+}
+Rule iMT_C2M3SafeIntro012Gambler
+{
+	criteria ConceptC2M3SafeIntro012 IsGambler IsNotInStartArea
+	Response iMT_C2M3SafeIntro012Gambler
+}
+
+Response iMT_DLC1_C6M3_SafeRoomConvo03dGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_SafeRoomConvo06.vcd"  //I'm not even going to look.
+	scene "scenes/Gambler/DLC1_C6M3_SafeRoomConvo07.vcd"  //I'm not even going to look, Ellis.
+}
+Rule iMT_DLC1_C6M3_SafeRoomConvo03dGambler
+{
+	criteria ConceptDLC1_C6M3_SafeRoomConvo03d IsGambler IsNotInStartArea
+	Response iMT_DLC1_C6M3_SafeRoomConvo03dGambler
 }
