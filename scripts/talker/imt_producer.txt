@@ -829,8 +829,7 @@ Response iMT_SurvivorTauntResponseProducer
 }
 Rule iMT_SurvivorTauntResponseProducer
 {
-	criteria ConceptPlayerTaunt IsNotCoughing IsProducer IsTalk IsTalkProducer
-	forceweight 1000
+	criteria ConceptPlayerTaunt IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	Response iMT_SurvivorTauntResponseProducer
 }
 
@@ -847,7 +846,7 @@ Response iMT_PlayerNegativeProducer
 }
 Rule iMT_PlayerNegativeProducer
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsProducer IsTalk IsTalkProducer
+	criteria ConceptPlayerNegative IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	forceweight 1000
 	Response iMT_PlayerNegativeProducer
 }
@@ -855,41 +854,39 @@ Rule iMT_PlayerNegativeProducer
 Response iMT_PlayerSorryProducer
 {
 	scene "scenes/Producer/Sorry01.vcd"  //Sorry.
-	scene "scenes/Producer/Sorry02.vcd"  //Oh man, you can blame that one on me.
+	scene "scenes/Producer/Sorry02.vcd" then subject PlayerAnswerLostCall foo:0 0  //Oh man, you can blame that one on me.
 	scene "scenes/Producer/Sorry03.vcd"  //Sorry about that.
-	scene "scenes/Producer/Sorry04.vcd"  //Okay that was a mistake.
+	scene "scenes/Producer/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //Okay that was a mistake.
 	scene "scenes/Producer/Sorry05.vcd"  //Sorry.
 	scene "scenes/Producer/Sorry06.vcd"  //Guilty, sorry!
-	scene "scenes/Producer/Sorry07.vcd"  //Oh I'm sorry.
+	scene "scenes/Producer/Sorry07.vcd" then subject PlayerAnswerLostCall foo:0 0  //Oh I'm sorry.
 	scene "scenes/Producer/Sorry08.vcd"  //Sorry.
 }
 Rule iMT_PlayerSorryProducer
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsProducer IsTalk IsTalkProducer
-	forceweight 1000
+	criteria ConceptPlayerSorry IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	Response iMT_PlayerSorryProducer
 }
 
 Response iMT_PlayerHurrahProducer
 {
-	scene "scenes/Producer/Hurrah01.vcd"  //Woo - haha, we are kickin' it!
-	scene "scenes/Producer/Hurrah02.vcd"  //We're really doing this!
-	scene "scenes/Producer/Hurrah03.vcd"  //We kicked some ass.
-	scene "scenes/Producer/Hurrah04.vcd"  //We kick ass, yes we did. Woo!
+	scene "scenes/Producer/Hurrah01.vcd" then any HurrahAlso foo:0 0  //Woo - haha, we are kickin' it!
+	scene "scenes/Producer/Hurrah02.vcd" then any HurrahAlso foo:0 0  //We're really doing this!
+	scene "scenes/Producer/Hurrah03.vcd" then any HurrahAlso foo:0 0  //We kicked some ass.
+	scene "scenes/Producer/Hurrah04.vcd" then any HurrahAlso foo:0 0  //We kick ass, yes we did. Woo!
 	scene "scenes/Producer/Hurrah05.vcd"  //Alright, this party is over.
-	scene "scenes/Producer/Hurrah06.vcd"  //Woo! We are going to make it!
-	scene "scenes/Producer/Hurrah07.vcd"  //Shit, we re all right!
-	scene "scenes/Producer/Hurrah08.vcd"  //Woo - we are doing all right.
-	scene "scenes/Producer/Hurrah09.vcd"  //Okay. We can do this, we can do this.
+	scene "scenes/Producer/Hurrah06.vcd" then any HurrahAlso foo:0 0  //Woo! We are going to make it!
+	scene "scenes/Producer/Hurrah07.vcd" then any HurrahAlso foo:0 0  //Shit, we re all right!
+	scene "scenes/Producer/Hurrah08.vcd" then any HurrahAlso foo:0 0  //Woo - we are doing all right.
+	scene "scenes/Producer/Hurrah09.vcd" then any HurrahAlso foo:0 0  //Okay. We can do this, we can do this.
 	scene "scenes/Producer/Hurrah10.vcd"  //Oh yeah, oh yeah, oh yeah.
 	scene "scenes/Producer/Hurrah11.vcd"  //Ha! Oh yeah, oh yeah!
 	scene "scenes/Producer/Hurrah12.vcd"  //Thanks to you guys, I am the baddest woman alive!
-	scene "scenes/Producer/Hurrah15.vcd"  //Woo! Keep that up and we are out of here!
+	scene "scenes/Producer/Hurrah15.vcd" then any HurrahAlso foo:0 0  //Woo! Keep that up and we are out of here!
 }
 Rule iMT_PlayerHurrahProducer
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsProducer IsTalk IsTalkProducer
-	forceweight 1000
+	criteria ConceptPlayerHurrah IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	Response iMT_PlayerHurrahProducer
 }
 
@@ -903,8 +900,7 @@ Response iMT_PlayerThanksProducer
 }
 Rule iMT_PlayerThanksProducer
 {
-	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer
-	forceweight 1000
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	Response iMT_PlayerThanksProducer
 }
 
@@ -923,9 +919,43 @@ Response iMT_PlayerYouAreWelcomeProducer
 }
 Rule iMT_PlayerYouAreWelcomeProducer
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer
-	forceweight 1000
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	forceweight 900
 	Response iMT_PlayerYouAreWelcomeProducer
+}
+
+Response iMT_PlayerYouAreWelcomeCoachProducer
+{
+	scene "scenes/Producer/YouAreWelcomeCoach01.vcd"  //Anything for a brother.
+	scene "scenes/Producer/YouAreWelcomeCoach02.vcd"  //Anything for a brother.
+}
+Rule iMT_PlayerYouAreWelcomeCoachProducer
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsCoach IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeCoachProducer
+}
+
+Response iMT_PlayerYouAreWelcomeGamblerProducer
+{
+	scene "scenes/Producer/YouAreWelcomeNick01.vcd"  //No problem suit.
+}
+Rule iMT_PlayerYouAreWelcomeGamblerProducer
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsGambler IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeGamblerProducer
+}
+
+Response iMT_PlayerYouAreWelcomeMechanicProducer
+{
+	scene "scenes/Producer/YouAreWelcomeEllis01.vcd"  //No problem shorty.
+}
+Rule iMT_PlayerYouAreWelcomeMechanicProducer
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsMechanic IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeMechanicProducer
 }
 
 Response iMT_PlayerToTheRescueRosProducer
@@ -939,7 +969,7 @@ Response iMT_PlayerToTheRescueRosProducer
 }
 Rule iMT_PlayerToTheRescueRosProducer
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsProducer IsTalk IsTalkProducer
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	forceweight 1000
 	Response iMT_PlayerToTheRescueRosProducer
 }
@@ -957,8 +987,7 @@ Response iMT_PlayerHelpProducer
 }
 Rule iMT_PlayerHelpProducer
 {
-	criteria ConceptPlayerHelp IsProducer IsTalk IsTalkProducer
-	forceweight 1000
+	criteria ConceptPlayerHelp IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	Response iMT_PlayerHelpProducer
 }
 
@@ -971,7 +1000,7 @@ Response iMT_SurvivorSpottedTankC1Producer
 }
 Rule iMT_SurvivorSpottedTankC1Producer
 {
-	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedTankC1Producer
 }
@@ -988,7 +1017,7 @@ Response iMT_SurvivorSpottedBoomerC1Producer
 }
 Rule iMT_SurvivorSpottedBoomerC1Producer
 {
-	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedBoomerC1Producer
 }
@@ -1003,7 +1032,7 @@ Response iMT_SurvivorSpottedHunterC1Producer
 }
 Rule iMT_SurvivorSpottedHunterC1Producer
 {
-	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedHunterC1Producer
 }
@@ -1019,7 +1048,7 @@ Response iMT_SurvivorSpottedSmokerC1Producer
 }
 Rule iMT_SurvivorSpottedSmokerC1Producer
 {
-	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedSmokerC1Producer
 }
@@ -1033,7 +1062,7 @@ Response iMT_SurvivorVocalizeBackUpProducer
 }
 Rule iMT_SurvivorVocalizeBackUpProducer
 {
-	criteria ConceptPlayerBackUp IsProducer IsTalk IsTalkProducer
+	criteria ConceptPlayerBackUp IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	forceweight 1000	
 	Response iMT_SurvivorVocalizeBackUpProducer
 }
@@ -1048,7 +1077,7 @@ Response iMT_SurvivorTankPoundProducer
 }
 Rule iMT_SurvivorTankPoundProducer
 {
-	criteria ConceptPlayerGroundPoundedByTank IsProducer IsTalk IsTalkProducer
+	criteria ConceptPlayerGroundPoundedByTank IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	forceweight 1000
 	Response iMT_SurvivorTankPoundProducer
 }
@@ -1065,8 +1094,7 @@ Response iMT_SurvivorVocalizeEmphaticGoProducer
 }
 Rule iMT_SurvivorVocalizeEmphaticGoProducer
 {
-	criteria ConceptPlayerEmphaticGo IsProducer IsTalk IsTalkProducer
-	forceweight 1000
+	criteria ConceptPlayerEmphaticGo IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	Response iMT_SurvivorVocalizeEmphaticGoProducer
 }
 
@@ -1076,7 +1104,7 @@ Response iMT_PlayerAreaClearProducer
 }
 Rule iMT_PlayerAreaClearProducer
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsProducer IsTalk IsTalkProducer
+	criteria ConceptPlayerAreaClear IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	forceweight 1000
 	Response iMT_PlayerAreaClearProducer
 }
@@ -1107,7 +1135,7 @@ Response iMT_PlayerGettingRevivedProducer
 }
 Rule iMT_PlayerGettingRevivedProducer
 {
-	criteria ConceptReviveFriendDown IsNotCoughing IsProducer IsTalk IsTalkProducer
+	criteria ConceptReviveFriendDown IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	forceweight 1000
 	Response iMT_PlayerGettingRevivedProducer
 }
@@ -1130,7 +1158,7 @@ Response iMT_PlayerReviveFriendBProducer
 }
 Rule iMT_PlayerReviveFriendBProducer
 {
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsProducer IsTalk IsTalkProducer
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	ApplyContext "ReviveTalk:1:5,Talk:1:1"
 	forceweight 1000
 	Response iMT_PlayerReviveFriendBProducer
@@ -1149,7 +1177,7 @@ Response iMT_PlayerGrabbedByJockeyProducer
 }
 Rule iMT_PlayerGrabbedByJockeyProducer
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsProducer IsTalk IsTalkProducer
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 900
@@ -1165,7 +1193,7 @@ Response iMT_PlayerGrabbedByJockeyC1Producer
 }
 Rule iMT_PlayerGrabbedByJockeyC1Producer
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsProducer IsTalk IsTalkProducer C1M1orC1M2
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer C1M1orC1M2
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 1000

@@ -1258,13 +1258,29 @@ Response iMT_PlayerFollowMeBiker
 }
 Rule iMT_PlayerFollowMeBiker
 {
-	criteria ConceptPlayerFollowMe IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerFollowMe IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_PlayerFollowMeBiker
 }
 
 Response iMT_SurvivorTauntResponseBiker
 {
+	scene "scenes/Biker/Hurrah01.vcd"  //All right.
+	scene "scenes/Biker/Hurrah02.vcd"  //Aw riiiight.
+	scene "scenes/Biker/Hurrah03.vcd"  //Awesome.
+	scene "scenes/Biker/Hurrah04.vcd"  //Awesome.
+	scene "scenes/Biker/Hurrah11.vcd"  //YEAH!
+	scene "scenes/Biker/Hurrah16.vcd"  //Awesome.
+	scene "scenes/Biker/Hurrah17.vcd"  //Aw riiiight.
+	scene "scenes/Biker/Hurrah18.vcd"  //Aw riiiight.
+	scene "scenes/Biker/Hurrah19.vcd"  //Goddamn right!
+	scene "scenes/Biker/Hurrah20.vcd"  //Hell yeah!
+	scene "scenes/Biker/ReactionPositive03.vcd"  //Rock-n-roll!
+	scene "scenes/Biker/ReactionPositive06.vcd"  //Hell yeah!
+	scene "scenes/Biker/ReactionPositive08.vcd"  //Yeah!
+	scene "scenes/Biker/ReactionPositive09.vcd"  //Yeah!
+	scene "scenes/Biker/ReactionPositive10.vcd"  //Hell yeah!
+	scene "scenes/Biker/ReactionPositive11.vcd"  //All right!
 	scene "scenes/Biker/Taunt01.vcd"  //That's right!
 	scene "scenes/Biker/Taunt02.vcd"  //HELL YEAH!
 	scene "scenes/Biker/Taunt03.vcd"  //OH YEAH!
@@ -1278,7 +1294,7 @@ Response iMT_SurvivorTauntResponseBiker
 }
 Rule iMT_SurvivorTauntResponseBiker
 {
-	criteria ConceptPlayerTaunt IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerTaunt IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_SurvivorTauntResponseBiker
 }
@@ -1310,7 +1326,7 @@ Response iMT_PlayerNegativeBiker
 }
 Rule iMT_PlayerNegativeBiker
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_PlayerNegativeBiker
 }
@@ -1319,65 +1335,59 @@ Response iMT_PlayerSorryBiker
 {
 	scene "scenes/Biker/Sorry01.vcd"  //Sorry.
 	scene "scenes/Biker/Sorry02.vcd"  //Sorry about that.
-	scene "scenes/Biker/Sorry03.vcd"  //Sorry about that.
-	scene "scenes/Biker/Sorry04.vcd"  //Aww, man, sorry.
+	scene "scenes/Biker/Sorry03.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry about that.
+	scene "scenes/Biker/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //Aww, man, sorry.
 	scene "scenes/Biker/Sorry05.vcd"  //Sorry.
 	scene "scenes/Biker/Sorry06.vcd"  //Sorry about that.
 	scene "scenes/Biker/Sorry07.vcd"  //Yeah, guess that was my fault.
-	scene "scenes/Biker/Sorry08.vcd"  //Yeah, guess that was my fault. Again.
+	scene "scenes/Biker/Sorry08.vcd" then subject PlayerAnswerLostCall foo:0 0  //Yeah, guess that was my fault. Again.
 	scene "scenes/Biker/Sorry09.vcd"  //Sorry.
-	scene "scenes/Biker/Sorry10.vcd"  //Sorry, man, shit happens.
+	scene "scenes/Biker/Sorry10.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry, man, shit happens.
 	scene "scenes/Biker/Sorry12.vcd"  //My bad.
 	scene "scenes/Biker/Sorry13.vcd"  //Whoopsie.
-	scene "scenes/Biker/Sorry14.vcd"  //Uh, yeah, sorry.
+	scene "scenes/Biker/Sorry14.vcd" then subject PlayerAnswerLostCall foo:0 0  //Uh, yeah, sorry.
 	scene "scenes/Biker/Sorry15.vcd"  //Sorry.
 	scene "scenes/Biker/Sorry16.vcd"  //oopsy daisy
-	scene "scenes/Biker/Sorry17.vcd"  //That was my fault.
+	scene "scenes/Biker/Sorry17.vcd" then subject PlayerAnswerLostCall foo:0 0  //That was my fault.
 	scene "scenes/Biker/Sorry18.vcd"  //My bad.
 }
 Rule iMT_PlayerSorryBiker
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsBiker IsTalk IsTalkBiker
-	forceweight 1000
+	criteria ConceptPlayerSorry IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	Response iMT_PlayerSorryBiker
 }
 
 Response iMT_PlayerHurrahBiker
 {
-	scene "scenes/Biker/Hurrah01.vcd"  //All right.
-	scene "scenes/Biker/Hurrah02.vcd"  //Aw riiiight.
-	scene "scenes/Biker/Hurrah03.vcd"  //Awesome.
-	scene "scenes/Biker/Hurrah04.vcd"  //Awesome.
-	scene "scenes/Biker/Hurrah05.vcd"  //We just might make it out of here after all.
-	scene "scenes/Biker/Hurrah06.vcd"  //We're gonna be okay.
-	scene "scenes/Biker/Hurrah07.vcd"  //I think we're gonna make it.
-	scene "scenes/Biker/Hurrah08.vcd"  //They can't stop us.
-	scene "scenes/Biker/Hurrah09.vcd"  //Nothing can stop us.
-	scene "scenes/Biker/Hurrah10.vcd"  //We are unstoppable!
-	scene "scenes/Biker/Hurrah11.vcd"  //YEAH!
-	scene "scenes/Biker/Hurrah12.vcd"  //Everybody havin' as much fun as me?
-	scene "scenes/Biker/Hurrah13.vcd"  //Everyone havin' fun?
-	scene "scenes/Biker/Hurrah14.vcd"  //You know all those monsters? I don't think they're gonna make it.
-	scene "scenes/Biker/Hurrah15.vcd"  //We just might make it out of here after all.
-	scene "scenes/Biker/Hurrah16.vcd"  //Awesome.
-	scene "scenes/Biker/Hurrah17.vcd"  //Aw riiiight.
-	scene "scenes/Biker/Hurrah18.vcd"  //Aw riiiight.
-	scene "scenes/Biker/Hurrah19.vcd"  //Goddamn right!
-	scene "scenes/Biker/Hurrah20.vcd"  //Hell yeah!
+	scene "scenes/Biker/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We just might make it out of here after all.
+	scene "scenes/Biker/Hurrah06.vcd" then any HurrahAlso foo:0 0  //We're gonna be okay.
+	scene "scenes/Biker/Hurrah07.vcd" then any HurrahAlso foo:0 0  //I think we're gonna make it.
+	scene "scenes/Biker/Hurrah08.vcd" then any HurrahAlso foo:0 0  //They can't stop us.
+	scene "scenes/Biker/Hurrah09.vcd" then any HurrahAlso foo:0 0  //Nothing can stop us.
+	scene "scenes/Biker/Hurrah10.vcd" then any HurrahAlso foo:0 0  //We are unstoppable!
+	scene "scenes/Biker/Hurrah12.vcd" then any HurrahAlso foo:0 0  //Everybody havin' as much fun as me?
+	scene "scenes/Biker/Hurrah13.vcd" then any HurrahAlso foo:0 0  //Everyone havin' fun?
+	scene "scenes/Biker/Hurrah14.vcd" then any HurrahAlso foo:0 0  //You know all those monsters? I don't think they're gonna make it.
+	scene "scenes/Biker/Hurrah15.vcd" then any HurrahAlso foo:0 0  //We just might make it out of here after all.
 	scene "scenes/Biker/Hurrah21.vcd"  //You guys are all right.
-	scene "scenes/Biker/Hurrah22.vcd"  //I think we gotta chance
+	scene "scenes/Biker/Hurrah22.vcd" then any HurrahAlso foo:0 0  //I think we gotta chance
 	scene "scenes/Biker/Hurrah23.vcd"  //Lookin' good
 	scene "scenes/Biker/Hurrah24.vcd"  //Hey, this is just gettin fun.
 }
 Rule iMT_PlayerHurrahBiker
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerHurrah IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_PlayerHurrahBiker
 }
 
 Response iMT_PlayerProfanityBiker
 {
+	scene "scenes/Biker/ReactionNegative05.vcd"  //Shit
+	scene "scenes/Biker/ReactionNegative06.vcd"  //Ah shit.
+	scene "scenes/Biker/ReactionNegative07.vcd"  //Damnit.
+	scene "scenes/Biker/ReactionNegative08.vcd"  //Damnit.
+	scene "scenes/Biker/ReactionNegative10.vcd"  //Effin hell.
 	scene "scenes/Biker/Swear01.vcd"  //Goddammit.
 	scene "scenes/Biker/Swear02.vcd"  //Shit.
 	scene "scenes/Biker/Swear03.vcd"  //Ah shit.
@@ -1397,7 +1407,7 @@ Response iMT_PlayerProfanityBiker
 }
 Rule iMT_PlayerProfanityBiker
 {
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_PlayerProfanityBiker
 }
@@ -1412,16 +1422,36 @@ Response iMT_PlayerYouAreWelcomeBiker
 	scene "scenes/Biker/YouAreWelcome08.vcd"  //No, thank YOU!
 	scene "scenes/Biker/YouAreWelcome09.vcd"  //Yer welcome.
 	scene "scenes/Biker/YouAreWelcome10.vcd"  //Yea, I’m pretty awesome.
-	scene "scenes/Biker/YouAreWelcome11.vcd"  //No problemo, pal.
 	scene "scenes/Biker/YouAreWelcome12.vcd"  //It's all good.
 	scene "scenes/Biker/YouAreWelcome13.vcd"  //Gotcha.
-	scene "scenes/Biker/YouAreWelcome14.vcd"  //Whatever, whenever, man.
 }
 Rule iMT_PlayerYouAreWelcomeBiker
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsBiker IsTalk IsTalkBiker
-	forceweight 1000
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	forceweight 900
 	Response iMT_PlayerYouAreWelcomeBiker
+}
+
+Response iMT_PlayerYouAreWelcomeManagerBiker
+{
+	scene "scenes/Biker/YouAreWelcome11.vcd"  //No problemo, pal.
+}
+Rule iMT_PlayerYouAreWelcomeManagerBiker
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsManager IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeManagerBiker
+}
+
+Response iMT_PlayerYouAreWelcomeNamVetBiker
+{
+	scene "scenes/Biker/YouAreWelcome14.vcd"  //Whatever, whenever, man.
+}
+Rule iMT_PlayerYouAreWelcomeNamVetBiker
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsNamVet IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeNamVetBiker
 }
 
 Response iMT_PlayerToTheRescueRosBiker
@@ -1437,7 +1467,7 @@ Response iMT_PlayerToTheRescueRosBiker
 }
 Rule iMT_PlayerToTheRescueRosBiker
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_PlayerToTheRescueRosBiker
 }
@@ -1452,7 +1482,7 @@ Response iMT_SurvivorVocalizeBackUpBiker
 }
 Rule iMT_SurvivorVocalizeBackUpBiker
 {
-	criteria ConceptPlayerBackUp IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerBackUp IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_SurvivorVocalizeBackUpBiker
 }
@@ -1471,7 +1501,7 @@ Response iMT_PlayerChokeResponseBiker
 }
 Rule iMT_PlayerChokeResponseBiker
 {
-	criteria ConceptPlayerChoke IsBiker IsTalk IsTalkBiker IsNotHangingFromTongue
+	criteria ConceptPlayerChoke IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotHangingFromTongue
 	forceweight 1000
 	Response iMT_PlayerChokeResponseBiker
 }
@@ -1484,7 +1514,7 @@ Response iMT_PlayerTonguePullStartResponseBiker
 }
 Rule iMT_PlayerTonguePullStartResponseBiker
 {
-	criteria ConceptPlayerTonguePullStart IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerTonguePullStart IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_PlayerTonguePullStartResponseBiker
 }
@@ -1500,28 +1530,25 @@ Response iMT_SurvivorVocalizeEmphaticGoBiker
 }
 Rule iMT_SurvivorVocalizeEmphaticGoBiker
 {
-	criteria ConceptPlayerEmphaticGo IsBiker IsTalk IsTalkBiker
-	forceweight 1000
+	criteria ConceptPlayerEmphaticGo IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	Response iMT_SurvivorVocalizeEmphaticGoBiker
 }
 
 Response iMT_ResponseSoftDispleasureSwearBiker
 {
+	scene "scenes/Biker/Laughter08.vcd"  //<Short laugh>
+	scene "scenes/Biker/NegativeNoise06.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Biker/NegativeNoise07.vcd"  //[Improv non-verbal displeasure & frustration sounds]
 	scene "scenes/Biker/NegativeNoise08.vcd"  //[Improv non-verbal displeasure & frustration sounds]
 	scene "scenes/Biker/ReactionApprehensive03.vcd"  //I don't like this one damn bit.
 	scene "scenes/Biker/ReactionNegative02.vcd"  //That's bad.
 	scene "scenes/Biker/ReactionNegative03.vcd"  //Damn
 	scene "scenes/Biker/ReactionNegative04.vcd"  //Holy jesus.
-	scene "scenes/Biker/ReactionNegative05.vcd"  //Shit
-	scene "scenes/Biker/ReactionNegative06.vcd"  //Ah shit.
-	scene "scenes/Biker/ReactionNegative07.vcd"  //Damnit.
-	scene "scenes/Biker/ReactionNegative08.vcd"  //Damnit.
 	scene "scenes/Biker/ReactionNegative09.vcd"  //Ahhhhh.
-	scene "scenes/Biker/ReactionNegative10.vcd"  //Effin hell.
 }
 Rule iMT_ResponseSoftDispleasureSwearBiker
 {
-	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_ResponseSoftDispleasureSwearBiker
 }
@@ -1536,20 +1563,8 @@ Response iMT_SurvivorAskForHealthBiker
 Rule iMT_SurvivorAskForHealthBiker
 {
 	criteria ConceptAskForHealth2 IsBiker
+	forceweight 900
 	Response iMT_SurvivorAskForHealthBiker
-}
-
-Response iMT_SurvivorAskBillForHealthBiker
-{
-	scene "scenes/Biker/PlayerSuggestHealthSpecific05.vcd"  //Bill, could I borrow your med kit? I just wanna look at it.
-	scene "scenes/Biker/PlayerSuggestHealthSpecific07.vcd"  //Hey Bill, you got a med kit I could have?
-	scene "scenes/Biker/PlayerSuggestHealthSpecific11.vcd"  //Old man, you forget you have a health pack, or you just saving that for me?
-}
-Rule iMT_SurvivorAskBillForHealthBiker
-{
-	criteria ConceptAskForHealth2 IsBiker SubjectIsNamVet IsSubjectNear400
-	forceweight 1000
-	Response iMT_SurvivorAskBillForHealthBiker
 }
 
 Response iMT_SurvivorAskLouisForHealthBiker
@@ -1566,6 +1581,31 @@ Rule iMT_SurvivorAskLouisForHealthBiker
 	Response iMT_SurvivorAskLouisForHealthBiker
 }
 
+Response iMT_SurvivorAskBillForHealthBiker
+{
+	scene "scenes/Biker/PlayerSuggestHealthSpecific05.vcd"  //Bill, could I borrow your med kit? I just wanna look at it.
+	scene "scenes/Biker/PlayerSuggestHealthSpecific07.vcd"  //Hey Bill, you got a med kit I could have?
+	scene "scenes/Biker/PlayerSuggestHealthSpecific11.vcd"  //Old man, you forget you have a health pack, or you just saving that for me?
+}
+Rule iMT_SurvivorAskBillForHealthBiker
+{
+	criteria ConceptAskForHealth2 IsBiker SubjectIsNamVet IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskBillForHealthBiker
+}
+
+Response iMT_SurvivorAskZoeyForHealthBiker
+{
+	scene "scenes/Biker/PlayerSuggestHealthSpecific04.vcd"  //Zoey, you got a health kit for me?
+	scene "scenes/Biker/PlayerSuggestHealthSpecific09.vcd"  //Hey little lady, if you ain't gonna use that health kit I could use it.
+}
+Rule iMT_SurvivorAskZoeyForHealthBiker
+{
+	criteria ConceptAskForHealth2 IsBiker SubjectIsTeenGirl IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskZoeyForHealthBiker
+}
+
 Response iMT_SurvivorSpottedWeaponBiker
 {
 	scene "scenes/Biker/SpotWeapons01.vcd"  //Weapons here!
@@ -1576,7 +1616,7 @@ Response iMT_SurvivorSpottedWeaponBiker
 }
 Rule iMT_SurvivorSpottedWeaponBiker
 {
-	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSmartLookAuto
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	forceweight 1000
@@ -1602,21 +1642,21 @@ Response iMT_PlayerGettingRevivedBiker
 }
 Rule iMT_PlayerGettingRevivedBiker
 {
-	criteria ConceptReviveFriendDown IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptReviveFriendDown IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_PlayerGettingRevivedBiker
 }
 
 Response iMT_PlayerLostCallBiker
 {
-	scene "scenes/Biker/LostCall01.vcd"  //Hello!
-	scene "scenes/Biker/LostCall04.vcd"  //Is anyone there?
-	scene "scenes/Biker/LostCall05.vcd"  //Marco!
-	scene "scenes/Biker/LostCall08.vcd"  //Hello? Where dja go?
+	scene "scenes/Biker/LostCall01.vcd" then any ReplyLostCall foo:0 0  //Hello!
+	scene "scenes/Biker/LostCall04.vcd" then any ReplyLostCall foo:0 0  //Is anyone there?
+	scene "scenes/Biker/LostCall05.vcd" then any ReplyLostCall foo:0 0  //Marco!
+	scene "scenes/Biker/LostCall08.vcd" then any ReplyLostCall foo:0 0  //Hello? Where dja go?
 }
 Rule iMT_PlayerLostCallBiker
 {
-	criteria ConceptPlayerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptPlayerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 1000
 	Response iMT_PlayerLostCallBiker
 }
@@ -1630,7 +1670,7 @@ Response iMT_PlayerReviveFriendBBiker
 }
 Rule iMT_PlayerReviveFriendBBiker
 {
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	ApplyContext "ReviveTalk:1:5,Talk:1:1"
 	forceweight 1000
 	Response iMT_PlayerReviveFriendBBiker
@@ -1653,7 +1693,7 @@ Response iMT_PlayerCallForRescueBiker
 }
 Rule iMT_PlayerCallForRescueBiker
 {
-	criteria ConceptCallForRescue IsNotCoughing IsBiker IsTalk IsTalkBiker IsBikerAlive
+	criteria ConceptCallForRescue IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsBikerAlive
 	forceweight 1000
 	Response iMT_PlayerCallForRescueBiker
 }
@@ -1669,7 +1709,7 @@ Response iMT_PlayerGrabbedByJockeyBiker
 }
 Rule iMT_PlayerGrabbedByJockeyBiker
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsBiker IsTalk IsTalkBiker
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 1000

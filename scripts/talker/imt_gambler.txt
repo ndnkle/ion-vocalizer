@@ -874,7 +874,7 @@ Response iMT_SurvivorTauntResponseGambler
 }
 Rule iMT_SurvivorTauntResponseGambler
 {
-	criteria ConceptPlayerTaunt IsNotCoughing IsGambler IsTalk IsTalkGambler
+	criteria ConceptPlayerTaunt IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 1000
 	Response iMT_SurvivorTauntResponseGambler
 }
@@ -903,7 +903,7 @@ Response iMT_PlayerNegativeGambler
 }
 Rule iMT_PlayerNegativeGambler
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler
+	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 1000
 	Response iMT_PlayerNegativeGambler
 }
@@ -914,36 +914,34 @@ Response iMT_PlayerSorryGambler
 	scene "scenes/Gambler/Sorry02.vcd"  //Excuse me.
 	scene "scenes/Gambler/Sorry03.vcd"  //Forgive me, okay?
 	scene "scenes/Gambler/Sorry04.vcd"  //Well sorry.
-	scene "scenes/Gambler/Sorry05.vcd"  //I'm sorry is that what you want me to say?
+	scene "scenes/Gambler/Sorry05.vcd" then subject PlayerAnswerLostCall foo:0 0  //I'm sorry is that what you want me to say?
 	scene "scenes/Gambler/Sorry06.vcd"  //I'm sorry, okay?
 	scene "scenes/Gambler/Sorry07.vcd"  //Can you forgive me?
-	scene "scenes/Gambler/Sorry08.vcd"  //Don't look at me like that.
+	scene "scenes/Gambler/Sorry08.vcd" then subject PlayerAnswerLostCall foo:0 0  //Don't look at me like that.
 }
 Rule iMT_PlayerSorryGambler
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsGambler IsTalk IsTalkGambler
-	forceweight 1000
+	criteria ConceptPlayerSorry IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response iMT_PlayerSorryGambler
 }
 
 Response iMT_PlayerHurrahGambler
 {
-	scene "scenes/Gambler/Hurrah01.vcd"  //We are walking through the valley of the shadow of death and kicking ass.
-	scene "scenes/Gambler/Hurrah02.vcd"  //It may not be pretty, but we're doing this.
-	scene "scenes/Gambler/Hurrah03.vcd"  //You guys aren't so damn bad.
-	scene "scenes/Gambler/Hurrah04.vcd"  //What do ya know, we're going to make it.
-	scene "scenes/Gambler/Hurrah05.vcd"  //You guys are pretty good.
+	scene "scenes/Gambler/Hurrah01.vcd" then any HurrahAlso foo:0 0  //We are walking through the valley of the shadow of death and kicking ass.
+	scene "scenes/Gambler/Hurrah02.vcd" then any HurrahAlso foo:0 0  //It may not be pretty, but we're doing this.
+	scene "scenes/Gambler/Hurrah03.vcd" then any HurrahAlso foo:0 0  //You guys aren't so damn bad.
+	scene "scenes/Gambler/Hurrah04.vcd" then any HurrahAlso foo:0 0  //What do ya know, we're going to make it.
+	scene "scenes/Gambler/Hurrah05.vcd" then any HurrahAlso foo:0 0  //You guys are pretty good.
 	scene "scenes/Gambler/Hurrah06.vcd"  //Aces!
-	scene "scenes/Gambler/Hurrah07.vcd"  //I'm starting to like you guys.
-	scene "scenes/Gambler/Hurrah08.vcd"  //We're makin' it look EASY!
-	scene "scenes/Gambler/Hurrah09.vcd"  //And THAT is how you do that!
-	scene "scenes/Gambler/Hurrah10.vcd"  //We're the four riders of the goddamn apocalypse!
-	scene "scenes/Gambler/Hurrah11.vcd"  //And THAT is how you do it!
+	scene "scenes/Gambler/Hurrah07.vcd" then any HurrahAlso foo:0 0  //I'm starting to like you guys.
+	scene "scenes/Gambler/Hurrah08.vcd" then any HurrahAlso foo:0 0  //We're makin' it look EASY!
+	scene "scenes/Gambler/Hurrah09.vcd" then any HurrahAlso foo:0 0  //And THAT is how you do that!
+	scene "scenes/Gambler/Hurrah10.vcd" then any HurrahAlso foo:0 0  //We're the four riders of the goddamn apocalypse!
+	scene "scenes/Gambler/Hurrah11.vcd" then any HurrahAlso foo:0 0  //And THAT is how you do it!
 }
 Rule iMT_PlayerHurrahGambler
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsGambler IsTalk IsTalkGambler
-	forceweight 1000
+	criteria ConceptPlayerHurrah IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response iMT_PlayerHurrahGambler
 }
 
@@ -969,7 +967,7 @@ Response iMT_PlayerYouAreWelcomeGambler
 }
 Rule iMT_PlayerYouAreWelcomeGambler
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 900
 	Response iMT_PlayerYouAreWelcomeGambler
 }
@@ -988,9 +986,45 @@ Response iMT_PlayerYouAreWelcomeC1Gambler
 }
 Rule iMT_PlayerYouAreWelcomeC1Gambler
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler ismap_c1m1_hotel
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler ismap_c1m1_hotel
 	forceweight 1000
 	Response iMT_PlayerYouAreWelcomeC1Gambler
+}
+
+Response iMT_PlayerYouAreWelcomeCoachGambler
+{
+	scene "scenes/Gambler/YouAreWelcomeCoach01.vcd"  //No problem, Coach.
+	scene "scenes/Gambler/YouAreWelcomeCoach02.vcd"  //No problem, Coach.
+}
+Rule iMT_PlayerYouAreWelcomeCoachGambler
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsCoach IsSubjectDistNear100
+	forceweight 950
+	Response iMT_PlayerYouAreWelcomeCoachGambler
+}
+
+Response iMT_PlayerYouAreWelcomeMechanicGambler
+{
+	scene "scenes/Gambler/YouAreWelcomeMechanic01.vcd"  //You owe me, Ellis.
+	scene "scenes/Gambler/YouAreWelcomeMechanic02.vcd"  //You owe me, Ellis.
+}
+Rule iMT_PlayerYouAreWelcomeMechanicGambler
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsMechanic IsSubjectDistNear100
+	forceweight 950
+	Response iMT_PlayerYouAreWelcomeMechanicGambler
+}
+
+Response iMT_PlayerYouAreWelcomeProducerGambler
+{
+	scene "scenes/Gambler/YouAreWelcomeProducer01.vcd"  //Sure thing, Ro.
+	scene "scenes/Gambler/YouAreWelcomeProducer02.vcd"  //Sure thing, Ro.
+}
+Rule iMT_PlayerYouAreWelcomeProducerGambler
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsProducer IsSubjectDistNear100
+	forceweight 950
+	Response iMT_PlayerYouAreWelcomeProducerGambler
 }
 
 Response iMT_PlayerToTheRescueRosGambler
@@ -1002,7 +1036,7 @@ Response iMT_PlayerToTheRescueRosGambler
 }
 Rule iMT_PlayerToTheRescueRosGambler
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsGambler IsTalk IsTalkGambler
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 1000
 	Response iMT_PlayerToTheRescueRosGambler
 }
@@ -1017,8 +1051,7 @@ Response iMT_PlayerHelpGambler
 }
 Rule iMT_PlayerHelpGambler
 {
-	criteria ConceptPlayerHelp IsGambler IsTalk IsTalkGambler
-	forceweight 1000
+	criteria ConceptPlayerHelp IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response iMT_PlayerHelpGambler
 }
 
@@ -1031,7 +1064,7 @@ Response iMT_SurvivorSpottedTankC1Gambler
 }
 Rule iMT_SurvivorSpottedTankC1Gambler
 {
-	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedTankC1Gambler
 }
@@ -1046,7 +1079,7 @@ Response iMT_SurvivorSpottedBoomerC1Gambler
 }
 Rule iMT_SurvivorSpottedBoomerC1Gambler
 {
-	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedBoomerC1Gambler
 }
@@ -1059,7 +1092,7 @@ Response iMT_SurvivorSpottedHunterC1Gambler
 }
 Rule iMT_SurvivorSpottedHunterC1Gambler
 {
-	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedHunterC1Gambler
 }
@@ -1071,7 +1104,7 @@ Response iMT_SurvivorSpottedSmokerC1Gambler
 }
 Rule iMT_SurvivorSpottedSmokerC1Gambler
 {
-	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedSmokerC1Gambler
 }
@@ -1085,7 +1118,7 @@ Response iMT_SurvivorVocalizeBackUpGambler
 }
 Rule iMT_SurvivorVocalizeBackUpGambler
 {
-	criteria ConceptPlayerBackUp IsGambler IsTalk IsTalkGambler
+	criteria ConceptPlayerBackUp IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 1000
 	Response iMT_SurvivorVocalizeBackUpGambler
 }
@@ -1101,7 +1134,7 @@ Response iMT_SurvivorTankPoundGambler
 }
 Rule iMT_SurvivorTankPoundGambler
 {
-	criteria ConceptPlayerGroundPoundedByTank IsGambler IsTalk IsTalkGambler
+	criteria ConceptPlayerGroundPoundedByTank IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 1000
 	Response iMT_SurvivorTankPoundGambler
 }
@@ -1118,8 +1151,7 @@ Response iMT_SurvivorVocalizeEmphaticGoGambler
 }
 Rule iMT_SurvivorVocalizeEmphaticGoGambler
 {
-	criteria ConceptPlayerEmphaticGo IsGambler IsTalk IsTalkGambler
-	forceweight 1000
+	criteria ConceptPlayerEmphaticGo IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response iMT_SurvivorVocalizeEmphaticGoGambler
 }
 
@@ -1129,7 +1161,7 @@ Response iMT_PlayerAreaClearGambler
 }
 Rule iMT_PlayerAreaClearGambler
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsGambler IsTalk IsTalkGambler
+	criteria ConceptPlayerAreaClear IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 1000
 	Response iMT_PlayerAreaClearGambler
 }
@@ -1159,7 +1191,7 @@ Response iMT_PlayerGettingRevivedGambler
 }
 Rule iMT_PlayerGettingRevivedGambler
 {
-	criteria ConceptReviveFriendDown IsNotCoughing IsGambler IsTalk IsTalkGambler
+	criteria ConceptReviveFriendDown IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 1000
 	Response iMT_PlayerGettingRevivedGambler
 }
@@ -1183,7 +1215,7 @@ Response iMT_PlayerReviveFriendBGambler
 }
 Rule iMT_PlayerReviveFriendBGambler
 {
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsGambler IsTalk IsTalkGambler
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	ApplyContext "ReviveTalk:1:5,Talk:1:1"
 	forceweight 1000
 	Response iMT_PlayerReviveFriendBGambler
@@ -1200,7 +1232,7 @@ Response iMT_PlayerGrabbedByJockeyGambler
 }
 Rule iMT_PlayerGrabbedByJockeyGambler
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsGambler IsTalk IsTalkGambler
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 900
@@ -1214,7 +1246,7 @@ Response iMT_PlayerGrabbedByJockeyC1Gambler
 }
 Rule iMT_PlayerGrabbedByJockeyC1Gambler
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsGambler IsTalk IsTalkGambler C1M1orC1M2
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler C1M1orC1M2
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 1000

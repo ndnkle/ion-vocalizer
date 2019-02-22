@@ -925,19 +925,6 @@ Rule iMT_SoldiersMechanic
 // General Fixes
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_PlayerYellRunMechanic
-{
-	scene "scenes/Mechanic/YellRun01.vcd"  //RUN!
-	scene "scenes/Mechanic/YellRun02.vcd"  //RUN! RUN! RUN!
-	scene "scenes/Mechanic/YellRun03.vcd"  //MAN, DON'T STOP RUNNING!
-}
-Rule iMT_PlayerYellRunMechanic
-{
-	criteria ConceptPlayerYellRun IsNotCoughing IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
-	Response iMT_PlayerYellRunMechanic
-}
-
 Response iMT_PlayerLaughMechanic
 {
 	scene "scenes/Mechanic/Laughter04.vcd"  //<Hearty Laugh>
@@ -949,8 +936,7 @@ Response iMT_PlayerLaughMechanic
 }
 Rule iMT_PlayerLaughMechanic
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
+	criteria ConceptPlayerLaugh IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response iMT_PlayerLaughMechanic
 }
 
@@ -966,8 +952,7 @@ Response iMT_SurvivorTauntResponseMechanic
 }
 Rule iMT_SurvivorTauntResponseMechanic
 {
-	criteria ConceptPlayerTaunt IsNotCoughing IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
+	criteria ConceptPlayerTaunt IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response iMT_SurvivorTauntResponseMechanic
 }
 
@@ -988,7 +973,7 @@ Response iMT_PlayerNegativeMechanic
 }
 Rule iMT_PlayerNegativeMechanic
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	criteria ConceptPlayerNegative IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	forceweight 1000
 	Response iMT_PlayerNegativeMechanic
 }
@@ -997,46 +982,44 @@ Response iMT_PlayerSorryMechanic
 {
 	scene "scenes/Mechanic/Sorry01.vcd"  //Sorry.
 	scene "scenes/Mechanic/Sorry02.vcd"  //Sorry 'bout that.
-	scene "scenes/Mechanic/Sorry03.vcd"  //You can lay that blame on me.
-	scene "scenes/Mechanic/Sorry04.vcd"  //That coulda happened to anybody.
+	scene "scenes/Mechanic/Sorry03.vcd" then subject PlayerAnswerLostCall foo:0 0  //You can lay that blame on me.
+	scene "scenes/Mechanic/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //That coulda happened to anybody.
 	scene "scenes/Mechanic/Sorry05.vcd"  //Yeah, I'm sorry about that one.
-	scene "scenes/Mechanic/Sorry06.vcd"  //Sorry, sun was in my eyes.
+	scene "scenes/Mechanic/Sorry06.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry, sun was in my eyes.
 	scene "scenes/Mechanic/Sorry07.vcd"  //Sorry 'bout that.
-	scene "scenes/Mechanic/Sorry08.vcd"  //My bad on that one.
+	scene "scenes/Mechanic/Sorry08.vcd" then subject PlayerAnswerLostCall foo:0 0  //My bad on that one.
 	scene "scenes/Mechanic/Sorry09.vcd"  //Sorry!
 	scene "scenes/Mechanic/Sorry10.vcd"  //Sorry over there.
 }
 Rule iMT_PlayerSorryMechanic
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
+	criteria ConceptPlayerSorry IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response iMT_PlayerSorryMechanic
 }
 
 Response iMT_PlayerHurrahMechanic
 {
-	scene "scenes/Mechanic/Hurrah01.vcd"  //We opened up a can of whup ass on them!
-	scene "scenes/Mechanic/Hurrah02.vcd"  //I'm thinkin' we can take on anything!
-	scene "scenes/Mechanic/Hurrah03.vcd"  //We are kings of the world!
-	scene "scenes/Mechanic/Hurrah04.vcd"  //I am proud to be part of this team!
-	scene "scenes/Mechanic/Hurrah05.vcd"  //We are a right damn good team!
-	scene "scenes/Mechanic/Hurrah06.vcd"  //Hey, let me tell ya something. Y'all are the best!
-	scene "scenes/Mechanic/Hurrah07.vcd"  //Well, slap my head and call me silly we are kickin' some ass!
+	scene "scenes/Mechanic/Hurrah01.vcd" then any HurrahAlso foo:0 0  //We opened up a can of whup ass on them!
+	scene "scenes/Mechanic/Hurrah02.vcd" then any HurrahAlso foo:0 0  //I'm thinkin' we can take on anything!
+	scene "scenes/Mechanic/Hurrah03.vcd" then any HurrahAlso foo:0 0  //We are kings of the world!
+	scene "scenes/Mechanic/Hurrah04.vcd" then any HurrahAlso foo:0 0  //I am proud to be part of this team!
+	scene "scenes/Mechanic/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We are a right damn good team!
+	scene "scenes/Mechanic/Hurrah06.vcd" then any HurrahAlso foo:0 0  //Hey, let me tell ya something. Y'all are the best!
+	scene "scenes/Mechanic/Hurrah07.vcd" then any HurrahAlso foo:0 0  //Well, slap my head and call me silly we are kickin' some ass!
 	scene "scenes/Mechanic/Hurrah08.vcd"  //Ahh HELL YEAH!
 	scene "scenes/Mechanic/Hurrah09.vcd"  //All right then!
-	scene "scenes/Mechanic/Hurrah10.vcd"  //I ain't no god damn son of a bitch, yeah ya better think about that baby.
+	scene "scenes/Mechanic/Hurrah10.vcd" then any HurrahAlso foo:0 0  //I ain't no god damn son of a bitch, yeah ya better think about that baby.
 	scene "scenes/Mechanic/Hurrah11.vcd"  //That's how it's done RIGHT!
-	scene "scenes/Mechanic/Hurrah12.vcd"  //We're kickin' more ass than a boot in an ass factory!
+	scene "scenes/Mechanic/Hurrah12.vcd" then any HurrahAlso foo:0 0  //We're kickin' more ass than a boot in an ass factory!
 	scene "scenes/Mechanic/Hurrah13.vcd"  //DAMN, we are good.
-	scene "scenes/Mechanic/Hurrah14.vcd"  //Load, lock, and cut the talk! That's how it's done!
-	scene "scenes/Mechanic/Hurrah15.vcd"  //We in the ZOMBIE-killin' bidness!
-	scene "scenes/Mechanic/Hurrah18.vcd"  //Hoohoo! Apocalypse, my ass! We're livin' in the best shooting range of ALL TIME!
-	scene "scenes/Mechanic/Hurrah20.vcd"  //We gotta make this fair for the zombies! I'm-a tie an arm around my back.
+	scene "scenes/Mechanic/Hurrah14.vcd" then any HurrahAlso foo:0 0  //Load, lock, and cut the talk! That's how it's done!
+	scene "scenes/Mechanic/Hurrah15.vcd" then any HurrahAlso foo:0 0  //We in the ZOMBIE-killin' bidness!
+	scene "scenes/Mechanic/Hurrah18.vcd" then any HurrahAlso foo:0 0  //Hoohoo! Apocalypse, my ass! We're livin' in the best shooting range of ALL TIME!
+	scene "scenes/Mechanic/Hurrah20.vcd" then any HurrahAlso foo:0 0  //We gotta make this fair for the zombies! I'm-a tie an arm around my back.
 }
 Rule iMT_PlayerHurrahMechanic
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
+	criteria ConceptPlayerHurrah IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response iMT_PlayerHurrahMechanic
 }
 
@@ -1046,22 +1029,64 @@ Response iMT_PlayerYouAreWelcomeMechanic
 	scene "scenes/Mechanic/YouAreWelcome02.vcd"  //Yeah, you're welcome.
 	scene "scenes/Mechanic/YouAreWelcome03.vcd"  //We're cool.
 	scene "scenes/Mechanic/YouAreWelcome04.vcd"  //We're good.
-	scene "scenes/Mechanic/YouAreWelcome05.vcd"  //Anytime, man.
 	scene "scenes/Mechanic/YouAreWelcome06.vcd"  //Hey, you bet!
 	scene "scenes/Mechanic/YouAreWelcome07.vcd"  //Hey, you bet!
 	scene "scenes/Mechanic/YouAreWelcome08.vcd"  //Always.
-	scene "scenes/Mechanic/YouAreWelcome09.vcd"  //You got it, man.
-	scene "scenes/Mechanic/YouAreWelcome10.vcd"  //You got it, girl.
 }
 Rule iMT_PlayerYouAreWelcomeMechanic
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 900
 	Response iMT_PlayerYouAreWelcomeMechanic
+}
+
+Response iMT_PlayerYouAreWelcomeCoachMechanic
+{
+	scene "scenes/Mechanic/YouAreWelcome05.vcd"  //Anytime, man.
+	scene "scenes/Mechanic/YouAreWelcomeCoach01.vcd"  //Yeah, no problem, Coach.
+	scene "scenes/Mechanic/YouAreWelcomeCoach02.vcd"  //No big thing, Coach.
+	scene "scenes/Mechanic/YouAreWelcomeCoach03.vcd"  //Ah it's all you, big guy.
+	scene "scenes/Mechanic/YouAreWelcomeCoach04.vcd"  //All good, Coach.
+}
+Rule iMT_PlayerYouAreWelcomeCoachMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeCoachMechanic
+}
+
+Response iMT_PlayerYouAreWelcomeGamblerMechanic
+{
+	scene "scenes/Mechanic/YouAreWelcome09.vcd"  //You got it, man.
+	scene "scenes/Mechanic/YouAreWelcomeGambler01.vcd"  //That's what I do, Nick.
+	scene "scenes/Mechanic/YouAreWelcomeGambler02.vcd"  //No worries, Nick.
+	scene "scenes/Mechanic/YouAreWelcomeGambler03.vcd"  //No problem, Nick.
+}
+Rule iMT_PlayerYouAreWelcomeGamblerMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeGamblerMechanic
+}
+
+Response iMT_PlayerYouAreWelcomeProducerMechanic
+{
+	scene "scenes/Mechanic/YouAreWelcome10.vcd"  //You got it, girl.
+	scene "scenes/Mechanic/YouAreWelcomeProducer01.vcd"  //Anything for you, Ro.
+	scene "scenes/Mechanic/YouAreWelcomeProducer02.vcd"  //Anything for you, Rochelle.
+	scene "scenes/Mechanic/YouAreWelcomeProducer03.vcd"  //You know I got your back, Rochelle.
+}
+Rule iMT_PlayerYouAreWelcomeProducerMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeProducerMechanic
 }
 
 Response iMT_PlayerToTheRescueRosMechanic
 {
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleBridgeRun01.vcd" odds 10  //I'm coming baby!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleBridgeRun02.vcd" odds 10  //I'm coming baby!
 	scene "scenes/Mechanic/ToTheRescue01.vcd"  //Keep your britches on, I'm a comin'.
 	scene "scenes/Mechanic/ToTheRescue02.vcd"  //I'm a comin!
 	scene "scenes/Mechanic/ToTheRescue03.vcd"  //Hold on now, I'm coming!
@@ -1072,7 +1097,7 @@ Response iMT_PlayerToTheRescueRosMechanic
 }
 Rule iMT_PlayerToTheRescueRosMechanic
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	forceweight 1000
 	Response iMT_PlayerToTheRescueRosMechanic
 }
@@ -1088,8 +1113,7 @@ Response iMT_PlayerHelpMechanic
 }
 Rule iMT_PlayerHelpMechanic
 {
-	criteria ConceptPlayerHelp IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
+	criteria ConceptPlayerHelp IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response iMT_PlayerHelpMechanic
 }
 
@@ -1101,7 +1125,7 @@ Response iMT_SurvivorSpottedTankC1Mechanic
 }
 Rule iMT_SurvivorSpottedTankC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedTankC1Mechanic
 }
@@ -1114,7 +1138,7 @@ Response iMT_SurvivorSpottedBoomerC1Mechanic
 }
 Rule iMT_SurvivorSpottedBoomerC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedBoomerC1Mechanic
 }
@@ -1127,7 +1151,7 @@ Response iMT_SurvivorSpottedHunterC1Mechanic
 }
 Rule iMT_SurvivorSpottedHunterC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedHunterC1Mechanic
 }
@@ -1142,7 +1166,7 @@ Response iMT_SurvivorSpottedSmokerC1Mechanic
 }
 Rule iMT_SurvivorSpottedSmokerC1Mechanic
 {
-	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedSmokerC1Mechanic
 }
@@ -1160,8 +1184,7 @@ Response iMT_SurvivorVocalizeBackUpMechanic
 }
 Rule iMT_SurvivorVocalizeBackUpMechanic
 {
-	criteria ConceptPlayerBackUp IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
+	criteria ConceptPlayerBackUp IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response iMT_SurvivorVocalizeBackUpMechanic
 }
 
@@ -1174,7 +1197,7 @@ Response iMT_SurvivorTankPoundMechanic
 }
 Rule iMT_SurvivorTankPoundMechanic
 {
-	criteria ConceptPlayerGroundPoundedByTank IsMechanic IsTalk IsTalkMechanic
+	criteria ConceptPlayerGroundPoundedByTank IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	forceweight 1000
 	Response iMT_SurvivorTankPoundMechanic
 }
@@ -1189,8 +1212,7 @@ Response iMT_SurvivorVocalizeEmphaticGoMechanic
 }
 Rule iMT_SurvivorVocalizeEmphaticGoMechanic
 {
-	criteria ConceptPlayerEmphaticGo IsMechanic IsTalk IsTalkMechanic
-	forceweight 1000
+	criteria ConceptPlayerEmphaticGo IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response iMT_SurvivorVocalizeEmphaticGoMechanic
 }
 
@@ -1200,7 +1222,7 @@ Response iMT_PlayerAreaClearMechanic
 }
 Rule iMT_PlayerAreaClearMechanic
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	criteria ConceptPlayerAreaClear IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	forceweight 1000
 	Response iMT_PlayerAreaClearMechanic
 }
@@ -1235,7 +1257,7 @@ Response iMT_PlayerGettingRevivedMechanic
 }
 Rule iMT_PlayerGettingRevivedMechanic
 {
-	criteria ConceptReviveFriendDown IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	criteria ConceptReviveFriendDown IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	forceweight 1000
 	Response iMT_PlayerGettingRevivedMechanic
 }
@@ -1260,7 +1282,7 @@ Response iMT_PlayerReviveFriendBMechanic
 }
 Rule iMT_PlayerReviveFriendBMechanic
 {
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	ApplyContext "ReviveTalk:1:5,Talk:1:1"
 	forceweight 1000
 	Response iMT_PlayerReviveFriendBMechanic
@@ -1278,7 +1300,7 @@ Response iMT_PlayerGrabbedByJockeyMechanic
 }
 Rule iMT_PlayerGrabbedByJockeyMechanic
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsMechanic IsTalk IsTalkMechanic
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 900
@@ -1293,7 +1315,7 @@ Response iMT_PlayerGrabbedByJockeyC1Mechanic
 }
 Rule iMT_PlayerGrabbedByJockeyC1Mechanic
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsMechanic IsTalk IsTalkMechanic C1M1orC1M2
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 1000

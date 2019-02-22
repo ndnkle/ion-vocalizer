@@ -1213,7 +1213,7 @@ Response iMT_PlayerStayTogetherNamVet
 }
 Rule iMT_PlayerStayTogetherNamVet
 {
-	criteria ConceptPlayerStayTogether IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerStayTogether IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerStayTogetherNamVet
 }
@@ -1229,13 +1229,19 @@ Response iMT_PlayerAskReadyNamVet
 }
 Rule iMT_PlayerAskReadyNamVet
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerAskReady IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerAskReadyNamVet
 }
 
 Response iMT_SurvivorTauntResponseNamVet
 {
+	scene "scenes/NamVet/ReactionPositive02.vcd"  //Heh hehhh
+	scene "scenes/NamVet/ReactionPositive04.vcd"  //Trah-mendous
+	scene "scenes/NamVet/ReactionPositive05.vcd"  //[chuckles and giggles]
+	scene "scenes/NamVet/ReactionPositive07.vcd"  //[chuckles and giggles]
+	scene "scenes/NamVet/ReactionPositive08.vcd"  //[chuckles and giggles]
+	scene "scenes/NamVet/ReactionPositive10.vcd"  //Out standing
 	scene "scenes/NamVet/Taunt01.vcd"  //[loud, evil laugh]
 	scene "scenes/NamVet/Taunt02.vcd"  //[loud, evil laugh]
 	scene "scenes/NamVet/Taunt07.vcd"  //[loud, evil laugh]
@@ -1244,7 +1250,7 @@ Response iMT_SurvivorTauntResponseNamVet
 }
 Rule iMT_SurvivorTauntResponseNamVet
 {
-	criteria ConceptPlayerTaunt IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerTaunt IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_SurvivorTauntResponseNamVet
 }
@@ -1272,7 +1278,7 @@ Response iMT_PlayerNegativeNamVet
 }
 Rule iMT_PlayerNegativeNamVet
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerNegative IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerNegativeNamVet
 }
@@ -1281,19 +1287,24 @@ Response iMT_PlayerHurrahNamVet
 {
 	scene "scenes/NamVet/Hurrah02.vcd"  //We're doing pretty goddamn good. Don't let it go to your head.
 	scene "scenes/NamVet/Hurrah03.vcd" then any HurrahAlso foo:0 0  //GREAT JOB, PEOPLE!
-	scene "scenes/NamVet/Hurrah05.vcd"  //We're going to be okay.
+	scene "scenes/NamVet/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We're going to be okay.
 	scene "scenes/NamVet/Hurrah18.vcd"  //Those bastards are in for a big surprise.
 	scene "scenes/NamVet/Hurrah20.vcd" then any HurrahAlso foo:0 0  //You people are gettin' good.
 }
 Rule iMT_PlayerHurrahNamVet
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerHurrah IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerHurrahNamVet
 }
 
 Response iMT_PlayerProfanityNamVet
 {
+	scene "scenes/NamVet/C6DLC3MovieLine11.vcd"  //Awwww, horseshit.
+	scene "scenes/NamVet/ReactionDisgusted04.vcd"  //Oh shit.
+	scene "scenes/NamVet/ReactionNegative07.vcd"  //God dammit
+	scene "scenes/NamVet/ReactionNegative09.vcd"  //Son of a bitch
+	scene "scenes/NamVet/ReactionNegative10.vcd"  //Dammit
 	scene "scenes/NamVet/SwearCoupdeGrace02.vcd"  //Go to hell.
 	scene "scenes/NamVet/Swears03.vcd"  //Son of a bitch.
 	scene "scenes/NamVet/Swears04.vcd"  //Bull-frickin-horseshit.
@@ -1301,14 +1312,14 @@ Response iMT_PlayerProfanityNamVet
 	scene "scenes/NamVet/Swears07.vcd"  //Ah hell.
 	scene "scenes/NamVet/Swears08.vcd"  //Dammit.
 	scene "scenes/NamVet/Swears09.vcd"  //God DAMMIT.
-	scene "scenes/NamVet/Swears10.vcd"  //Mother of mercy.
 	scene "scenes/NamVet/Swears12.vcd"  //Ah shit.
 	scene "scenes/NamVet/Swears16.vcd"  //Ah shit.
 	scene "scenes/NamVet/Swears19.vcd"  //What a crock a' shit...
+	scene "scenes/NamVet/WorldHospital0318.vcd"  //That's a crock of shit.
 }
 Rule iMT_PlayerProfanityNamVet
 {
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerProfanityNamVet
 }
@@ -1323,12 +1334,12 @@ Response iMT_PlayerYouAreWelcomeNamVet
 	scene "scenes/NamVet/YouAreWelcome10.vcd"  //Yeah, yeah, yeah.
 	scene "scenes/NamVet/YouAreWelcome11.vcd"  //Don't get too used to it.
 	scene "scenes/NamVet/YouAreWelcome12.vcd"  //Don't mention it.
-	scene "scenes/NamVet/YouAreWelcome14.vcd"  //Yeah, okay, it don't mean we're married now
-	scene "scenes/NamVet/YouAreWelcome15.vcd"  //Don't expect a hug
+	scene "scenes/NamVet/YouAreWelcome14.vcd" odds 20  //Yeah, okay, it don't mean we're married now
+	scene "scenes/NamVet/YouAreWelcome15.vcd" odds 20  //Don't expect a hug
 }
 Rule iMT_PlayerYouAreWelcomeNamVet
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerYouAreWelcomeNamVet
 }
@@ -1341,7 +1352,7 @@ Response iMT_PlayerToTheRescueRosNamVet
 }
 Rule iMT_PlayerToTheRescueRosNamVet
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerToTheRescueRosNamVet
 }
@@ -1358,7 +1369,7 @@ Response iMT_SurvivorVocalizeBackUpNamVet
 }
 Rule iMT_SurvivorVocalizeBackUpNamVet
 {
-	criteria ConceptPlayerBackUp IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerBackUp IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_SurvivorVocalizeBackUpNamVet
 }
@@ -1367,13 +1378,13 @@ Response iMT_SurvivorSpottedInfectedNamVet
 {
 	scene "scenes/NamVet/Incoming01.vcd"  //Here they come!
 	scene "scenes/NamVet/Incoming03.vcd"  //INCOMING!
-	scene "scenes/NamVet/Incoming04.vcd"  //Bookoo crazies inbound!
+	scene "scenes/NamVet/Incoming04.vcd" odds 40  //Bookoo crazies inbound!
 	scene "scenes/NamVet/Incoming05.vcd"  //HERE THEY COME!
 	scene "scenes/NamVet/Incoming07.vcd"  //INCOMING!
 }
 Rule iMT_SurvivorSpottedInfectedNamVet
 {
-	criteria ConceptPlayerIncoming IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerIncoming IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_SurvivorSpottedInfectedNamVet
 }
@@ -1389,13 +1400,13 @@ Response iMT_PlayerChokeResponseNamVet
 	scene "scenes/NamVet/Choke07.vcd"  //Choking
 	scene "scenes/NamVet/Choke08.vcd"  //Choking
 	scene "scenes/NamVet/Choke09.vcd"  //Choking
-	scene "scenes/NamVet/Choke10.vcd"  //[Choking]
-	scene "scenes/NamVet/Choke11.vcd"  //[Choking]
-	scene "scenes/NamVet/Choke12.vcd"  //[Choking]
+	scene "scenes/NamVet/Choke10.vcd"  //Choking
+	scene "scenes/NamVet/Choke11.vcd"  //Choking
+	scene "scenes/NamVet/Choke12.vcd"  //Choking
 }
 Rule iMT_PlayerChokeResponseNamVet
 {
-	criteria ConceptPlayerChoke IsNamVet IsTalk IsTalkNamVet IsNotHangingFromTongue
+	criteria ConceptPlayerChoke IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotHangingFromTongue
 	forceweight 1000
 	Response iMT_PlayerChokeResponseNamVet
 }
@@ -1411,8 +1422,7 @@ Response iMT_SurvivorVocalizeEmphaticGoNamVet
 }
 Rule iMT_SurvivorVocalizeEmphaticGoNamVet
 {
-	criteria ConceptPlayerEmphaticGo IsNamVet IsTalk IsTalkNamVet
-	forceweight 1000
+	criteria ConceptPlayerEmphaticGo IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	Response iMT_SurvivorVocalizeEmphaticGoNamVet
 }
 
@@ -1424,14 +1434,12 @@ Response iMT_ResponseSoftDispleasureSwearNamVet
 	scene "scenes/NamVet/ReactionNegative02.vcd"  //Christ
 	scene "scenes/NamVet/ReactionNegative03.vcd"  //Gee-zus
 	scene "scenes/NamVet/ReactionNegative04.vcd"  //[Frustration sound]
-	scene "scenes/NamVet/ReactionNegative07.vcd"  //God dammit
-	scene "scenes/NamVet/ReactionNegative09.vcd"  //Son of a bitch
-	scene "scenes/NamVet/ReactionNegative10.vcd"  //Dammit
 	scene "scenes/NamVet/ReactionNegative12.vcd"  //[Frustration sound]
+	scene "scenes/NamVet/Swears10.vcd"  //Mother of mercy.
 }
 Rule iMT_ResponseSoftDispleasureSwearNamVet
 {
-	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_ResponseSoftDispleasureSwearNamVet
 }
@@ -1446,7 +1454,41 @@ Response iMT_SurvivorAskForHealthNamVet
 Rule iMT_SurvivorAskForHealthNamVet
 {
 	criteria ConceptAskForHealth2 IsNamVet
+	forceweight 900
 	Response iMT_SurvivorAskForHealthNamVet
+}
+
+Response iMT_SurvivorAskFrancisForHealthNamVet
+{
+	scene "scenes/NamVet/PlayerSuggestHealthSpecific01.vcd"  //Francis, buddy, you gonna use that health kit?
+}
+Rule iMT_SurvivorAskFrancisForHealthNamVet
+{
+	criteria ConceptAskForHealth2 IsNamVet SubjectIsBiker IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskFrancisForHealthNamVet
+}
+
+Response iMT_SurvivorAskLouisForHealthNamVet
+{
+	scene "scenes/NamVet/PlayerSuggestHealthSpecific03.vcd"  //Louis, mind givin' an old man your health kit?
+}
+Rule iMT_SurvivorAskLouisForHealthNamVet
+{
+	criteria ConceptAskForHealth2 IsNamVet SubjectIsManager IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskLouisForHealthNamVet
+}
+
+Response iMT_SurvivorAskZoeyForHealthNamVet
+{
+	scene "scenes/NamVet/PlayerSuggestHealthSpecific02.vcd"  //Zoey, can you spare me a health kit?
+}
+Rule iMT_SurvivorAskZoeyForHealthNamVet
+{
+	criteria ConceptAskForHealth2 IsNamVet SubjectIsTeenGirl IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskZoeyForHealthNamVet
 }
 
 Response iMT_SurvivorSpottedWeaponNamVet
@@ -1457,7 +1499,7 @@ Response iMT_SurvivorSpottedWeaponNamVet
 }
 Rule iMT_SurvivorSpottedWeaponNamVet
 {
-	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsNotSmartLookAuto
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSmartLookAuto
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	forceweight 1000
@@ -1482,25 +1524,25 @@ Response iMT_PlayerGettingRevivedNamVet
 }
 Rule iMT_PlayerGettingRevivedNamVet
 {
-	criteria ConceptReviveFriendDown IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptReviveFriendDown IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerGettingRevivedNamVet
 }
 
 Response iMT_PlayerLostCallNamVet
 {
-	scene "scenes/NamVet/LostCall01.vcd"  //Hello?
-	scene "scenes/NamVet/LostCall02.vcd"  //Where are you?
-	scene "scenes/NamVet/LostCall03.vcd"  //Where is everyone?
-	scene "scenes/NamVet/LostCall04.vcd"  //Is anyone there?
-	scene "scenes/NamVet/LostCall05.vcd"  //Report in, people! Report!
-	scene "scenes/NamVet/LostCall06.vcd"  //Hello?
-	scene "scenes/NamVet/LostCall08.vcd"  //Anybody out there?
-	scene "scenes/NamVet/LostCall09.vcd"  //Is anyone out there?
+	scene "scenes/NamVet/LostCall01.vcd" then any ReplyLostCall foo:0 0  //Hello?
+	scene "scenes/NamVet/LostCall02.vcd" then any ReplyLostCall foo:0 0  //Where are you?
+	scene "scenes/NamVet/LostCall03.vcd" then any ReplyLostCall foo:0 0  //Where is everyone?
+	scene "scenes/NamVet/LostCall04.vcd" then any ReplyLostCall foo:0 0  //Is anyone there?
+	scene "scenes/NamVet/LostCall05.vcd" then any ReplyLostCall foo:0 0  //Report in, people! Report!
+	scene "scenes/NamVet/LostCall06.vcd" then any ReplyLostCall foo:0 0  //Hello?
+	scene "scenes/NamVet/LostCall08.vcd" then any ReplyLostCall foo:0 0  //Anybody out there?
+	scene "scenes/NamVet/LostCall09.vcd" then any ReplyLostCall foo:0 0  //Is anyone out there?
 }
 Rule iMT_PlayerLostCallNamVet
 {
-	criteria ConceptPlayerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptPlayerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 1000
 	Response iMT_PlayerLostCallNamVet
 }
@@ -1515,7 +1557,7 @@ Response iMT_PlayerReviveFriendBNamVet
 }
 Rule iMT_PlayerReviveFriendBNamVet
 {
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	ApplyContext "ReviveTalk:1:5,Talk:1:1"
 	forceweight 1000
 	Response iMT_PlayerReviveFriendBNamVet
@@ -1536,7 +1578,7 @@ Response iMT_PlayerCallForRescueNamVet
 }
 Rule iMT_PlayerCallForRescueNamVet
 {
-	criteria ConceptCallForRescue IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsNamVetAlive
+	criteria ConceptCallForRescue IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNamVetAlive
 	forceweight 1000
 	Response iMT_PlayerCallForRescueNamVet
 }
@@ -1552,7 +1594,7 @@ Response iMT_PlayerGrabbedByJockeyNamVet
 }
 Rule iMT_PlayerGrabbedByJockeyNamVet
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsNamVet IsTalk IsTalkNamVet
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsNamVet IsTalk IsWorldTalkNamVet IsTalkNamVet
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 1000

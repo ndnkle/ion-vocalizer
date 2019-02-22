@@ -1256,10 +1256,12 @@ Response iMT_PlayerHurryUpManager
 	scene "scenes/Manager/HurryUp11.vcd"  //Come on, catch up!
 	scene "scenes/Manager/HurryUp12.vcd"  //Move it, move it up here!
 	scene "scenes/Manager/HurryUp13.vcd"  //I'm not waiting on you, get up here!
+	scene "scenes/Manager/WorldHospital0326.vcd"  //Hurry!
+	scene "scenes/Manager/WorldHospital0421.vcd"  //Hurry up.
 }
 Rule iMT_PlayerHurryUpManager
 {
-	criteria ConceptPlayerHurryUp IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerHurryUp IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerHurryUpManager
 }
@@ -1271,14 +1273,14 @@ Response iMT_PlayerAskReadyManager
 	scene "scenes/Manager/AskReady03.vcd"  //Ready for this?
 	scene "scenes/Manager/AskReady04.vcd"  //Ready for this?
 	scene "scenes/Manager/AskReady05.vcd"  //Waddya say, we ready?
-	scene "scenes/Manager/AskReady06.vcd" odds 10 then TeenGirl BounceReaction foo:0 0  //Your ready to bounce?
+	scene "scenes/Manager/AskReady06.vcd" odds 10 then TeenGirl BounceReaction foo:0 -1.0  //Your ready to bounce?
 	scene "scenes/Manager/AskReady07.vcd"  //You Ready?
-	scene "scenes/Manager/AskReady08.vcd"  //Yeah, let's get ready
+	scene "scenes/Manager/AskReady08.vcd" odds 20  //Yeah, let's get ready
 	scene "scenes/Manager/AskReady09.vcd"  //I'm ready, you ready?
 }
 Rule iMT_PlayerAskReadyManager
 {
-	criteria ConceptPlayerAskReady IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerAskReady IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerAskReadyManager
 }
@@ -1294,13 +1296,25 @@ Response iMT_PlayerLaughManager
 }
 Rule iMT_PlayerLaughManager
 {
-	criteria ConceptPlayerLaugh IsNotCoughing IsManager IsTalk IsTalkManager
-	forceweight 1000
+	criteria ConceptPlayerLaugh IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	Response iMT_PlayerLaughManager
 }
 
 Response iMT_SurvivorTauntResponseManager
 {
+	scene "scenes/Manager/GenericResponses40.vcd" odds 20  //Hell yeah.
+	scene "scenes/Manager/Hurrah01.vcd"  //Aw riiiight!
+	scene "scenes/Manager/Hurrah02.vcd"  //Woo baby, Aw riiiight!
+	scene "scenes/Manager/Hurrah03.vcd"  //Hell yeah.
+	scene "scenes/Manager/Hurrah14.vcd"  //YEAH!
+	scene "scenes/Manager/Hurrah15.vcd"  //YEAH WOO!
+	scene "scenes/Manager/PositiveNoise02.vcd"  //[Improv non-verbal pleasure & interest sounds]
+	scene "scenes/Manager/PositiveNoise03.vcd"  //[Improv non-verbal pleasure & interest sounds]
+	scene "scenes/Manager/ReactionPositive05.vcd"  //Allright!
+	scene "scenes/Manager/ReactionPositive06.vcd"  //Heh hehhhh.
+	scene "scenes/Manager/ReactionPositive07.vcd"  //Nice!
+	scene "scenes/Manager/ReactionPositive09.vcd"  //Sweet Baby!
+	scene "scenes/Manager/ReactionPositive10.vcd"  //That's what I'm talkin' about
 	scene "scenes/Manager/Taunt01.vcd"  //That's right!
 	scene "scenes/Manager/Taunt02.vcd"  //Woo Hoo, that's right!
 	scene "scenes/Manager/Taunt03.vcd"  //Yeah, baby, Yeah!
@@ -1314,7 +1328,7 @@ Response iMT_SurvivorTauntResponseManager
 }
 Rule iMT_SurvivorTauntResponseManager
 {
-	criteria ConceptPlayerTaunt IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerTaunt IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_SurvivorTauntResponseManager
 }
@@ -1339,13 +1353,15 @@ Response iMT_PlayerNegativeManager
 }
 Rule iMT_PlayerNegativeManager
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerNegative IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerNegativeManager
 }
 
 Response iMT_PlayerNoManager
 {
+	scene "scenes/Manager/DLC2Intro03.vcd" odds 10  //No.
+	scene "scenes/Manager/GenericResponses39.vcd" odds 10  //Oh no. Ain't no damn way...
 	scene "scenes/Manager/No01.vcd"  //No way.
 	scene "scenes/Manager/No02.vcd"  //Uh uh.
 	scene "scenes/Manager/No03.vcd"  //Nope.
@@ -1356,32 +1372,27 @@ Response iMT_PlayerNoManager
 }
 Rule iMT_PlayerNoManager
 {
-	criteria ConceptPlayerNo IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerNo IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerNoManager
 }
 
 Response iMT_PlayerHurrahManager
 {
-	scene "scenes/Manager/Hurrah01.vcd"  //Aw riiiight!
-	scene "scenes/Manager/Hurrah02.vcd"  //Woo baby, Aw riiiight!
-	scene "scenes/Manager/Hurrah03.vcd"  //Hell yeah.
-	scene "scenes/Manager/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We're going to be okay.
+	scene "scenes/Manager/Hurrah05.vcd"  //We're going to be okay.
 	scene "scenes/Manager/Hurrah06.vcd" then any HurrahAlso foo:0 0  //We're going to be okay!
-	scene "scenes/Manager/Hurrah07.vcd"  //Man, I think we're gonna make it.
+	scene "scenes/Manager/Hurrah07.vcd" then any HurrahAlso foo:0 0  //Man, I think we're gonna make it.
 	scene "scenes/Manager/Hurrah08.vcd" then any HurrahAlso foo:0 0  //They can't stop us now
 	scene "scenes/Manager/Hurrah09.vcd" then any HurrahAlso foo:0 0  //Nothing can stop us.
 	scene "scenes/Manager/Hurrah10.vcd" then any HurrahAlso foo:0 0  //Nothing can stop us, do you hear me? Nothing can stop us!
 	scene "scenes/Manager/Hurrah11.vcd" then any HurrahAlso foo:0 0  //We are unstoppable.
 	scene "scenes/Manager/Hurrah12.vcd" then any HurrahAlso foo:0 0  //That's right, we should call ourselves the unstoppables
 	scene "scenes/Manager/Hurrah13.vcd" then any HurrahAlso foo:0 0  //We are unstoppable.
-	scene "scenes/Manager/Hurrah14.vcd"  //YEAH!
-	scene "scenes/Manager/Hurrah15.vcd"  //YEAH WOO!
 	scene "scenes/Manager/Hurrah16.vcd" then any HurrahAlso foo:0 0  //I am bad, yes I am bad, YES I AM! WOO!
 }
 Rule iMT_PlayerHurrahManager
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerHurrah IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerHurrahManager
 }
@@ -1399,12 +1410,12 @@ Response iMT_PlayerThanksManager
 	scene "scenes/Manager/Thanks09.vcd"  //Thanks a lot.
 	scene "scenes/Manager/Thanks10.vcd"  //Whoo, thanks.
 	scene "scenes/Manager/Thanks11.vcd"  //Hey, thanks.
-	scene "scenes/Manager/Thanks12.vcd"  //Thanks Dog
-	scene "scenes/Manager/Thanks14.vcd"  //Thanks, Playa
+	scene "scenes/Manager/Thanks12.vcd" odds 20  //Thanks Dog
+	scene "scenes/Manager/Thanks14.vcd" odds 20  //Thanks, Playa
 }
 Rule iMT_PlayerThanksManager
 {
-	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerThanksManager
 }
@@ -1424,7 +1435,7 @@ Response iMT_PlayerProfanityManager
 }
 Rule iMT_PlayerProfanityManager
 {
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerProfanityManager
 }
@@ -1438,17 +1449,39 @@ Response iMT_PlayerYouAreWelcomeManager
 	scene "scenes/Manager/YouAreWelcome08.vcd"  //Its all good.
 	scene "scenes/Manager/YouAreWelcome09.vcd"  //Hey, no problem.
 	scene "scenes/Manager/YouAreWelcome10.vcd"  //My pleasure.
-	scene "scenes/Manager/YouAreWelcome13.vcd"  //Hey, man, no problem.
 	scene "scenes/Manager/YouAreWelcome14.vcd"  //Not a problem.
 	scene "scenes/Manager/YouAreWelcome15.vcd"  //You are totally welcome.
-	scene "scenes/Manager/YouAreWelcome16.vcd"  //Sure thing, man.
 	scene "scenes/Manager/YouAreWelcome17.vcd"  //Sure
 }
 Rule iMT_PlayerYouAreWelcomeManager
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsManager IsTalk IsTalkManager
-	forceweight 1000
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	forceweight 900
 	Response iMT_PlayerYouAreWelcomeManager
+}
+
+Response iMT_PlayerYouAreWelcomeBikerManager
+{
+	scene "scenes/Manager/YouAreWelcome13.vcd"  //Hey, man, no problem.
+	scene "scenes/Manager/YouAreWelcome16.vcd"  //Sure thing, man.
+}
+Rule iMT_PlayerYouAreWelcomeBikerManager
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsBiker IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeBikerManager
+}
+
+Response iMT_PlayerYouAreWelcomeNamVetManager
+{
+	scene "scenes/Manager/YouAreWelcome13.vcd"  //Hey, man, no problem.
+	scene "scenes/Manager/YouAreWelcome16.vcd"  //Sure thing, man.
+}
+Rule iMT_PlayerYouAreWelcomeNamVetManager
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsNamVet IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeNamVetManager
 }
 
 Response iMT_PlayerToTheRescueRosManager
@@ -1459,7 +1492,7 @@ Response iMT_PlayerToTheRescueRosManager
 }
 Rule iMT_PlayerToTheRescueRosManager
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerToTheRescueRosManager
 }
@@ -1480,16 +1513,21 @@ Response iMT_PlayerWarnCarefulManager
 }
 Rule iMT_PlayerWarnCarefulManager
 {
-	criteria ConceptPlayerWarnCareful IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerWarnCareful IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerWarnCarefulManager
 }
 
 Response iMT_PlayerHelpManager
 {
+	scene "scenes/Manager/Dying01.vcd" odds 10  //Guys! I need help now!
+	scene "scenes/Manager/Dying02.vcd" odds 10  //Yo, I need some help RIGHT NOW!
+	scene "scenes/Manager/Dying03.vcd" odds 10  //Yo, I need help right the hell now!
+	scene "scenes/Manager/Dying04.vcd" odds 10  //I need help right the hell now!
 	scene "scenes/Manager/Help01.vcd"  //Help!
 	scene "scenes/Manager/Help02.vcd"  //I need some help over here!
 	scene "scenes/Manager/Help03.vcd"  //Need a little help over here!
+	scene "scenes/Manager/Help04.vcd"  //Dammit, I need some help!
 	scene "scenes/Manager/Help05.vcd"  //Help me!
 	scene "scenes/Manager/Help06.vcd"  //Help!
 	scene "scenes/Manager/Help07.vcd"  //I'm in trouble!
@@ -1500,7 +1538,7 @@ Response iMT_PlayerHelpManager
 }
 Rule iMT_PlayerHelpManager
 {
-	criteria ConceptPlayerHelp IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerHelp IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerHelpManager
 }
@@ -1513,7 +1551,7 @@ Response iMT_SurvivorVocalizeBackUpManager
 }
 Rule iMT_SurvivorVocalizeBackUpManager
 {
-	criteria ConceptPlayerBackUp IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerBackUp IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_SurvivorVocalizeBackUpManager
 }
@@ -1527,7 +1565,7 @@ Response iMT_SurvivorSpottedInfectedManager
 }
 Rule iMT_SurvivorSpottedInfectedManager
 {
-	criteria ConceptPlayerIncoming IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerIncoming IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_SurvivorSpottedInfectedManager
 }
@@ -1540,7 +1578,7 @@ Response iMT_PlayerWatchOutBehindManager
 }
 Rule iMT_PlayerWatchOutBehindManager
 {
-	criteria ConceptPlayerWatchOutBehind IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerWatchOutBehind IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerWatchOutBehindManager
 }
@@ -1550,7 +1588,7 @@ Response iMT_SurvivorDeathManager
 	scene "scenes/Manager/DeathScream01.vcd"  //[Death rattle and final breath]
 	scene "scenes/Manager/DeathScream02.vcd"  //[Loud, painful death scream]
 	scene "scenes/Manager/DeathScream03.vcd"  //[Loud, painful death scream]
-	scene "scenes/Manager/DeathScream04.vcd"  //[Loud, painful death scream]
+	scene "scenes/Manager/DeathScream04.vcd" odds 40  //[Loud, painful death scream]
 	scene "scenes/Manager/DeathScream05.vcd"  //[Loud, painful death scream]
 	scene "scenes/Manager/DeathScream06.vcd"  //[Short quick death scream]
 	scene "scenes/Manager/DeathScream07.vcd"  //[Short quick death scream]
@@ -1560,8 +1598,7 @@ Response iMT_SurvivorDeathManager
 }
 Rule iMT_SurvivorDeathManager
 {
-	criteria ConceptPlayerDeath IsNotCoughing IsManager IsTalk IsTalkManager
-	forceweight 1000
+	criteria ConceptPlayerDeath IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	Response iMT_SurvivorDeathManager
 }
 
@@ -1577,7 +1614,7 @@ Response iMT_PlayerLedgeHangStartManager
 }
 Rule iMT_PlayerLedgeHangStartManager
 {
-	criteria ConceptPlayerLedgeHangStart IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerLedgeHangStart IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerLedgeHangStartManager
 }
@@ -1591,7 +1628,7 @@ Response iMT_PlayerLedgeHangEndManager
 }
 Rule iMT_PlayerLedgeHangEndManager
 {
-	criteria ConceptPlayerLedgeHangEnd IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerLedgeHangEnd IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerLedgeHangEndManager
 }
@@ -1609,7 +1646,7 @@ Response iMT_PlayerChokeResponseManager
 }
 Rule iMT_PlayerChokeResponseManager
 {
-	criteria ConceptPlayerChoke IsManager IsTalk IsTalkManager IsNotHangingFromTongue
+	criteria ConceptPlayerChoke IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotHangingFromTongue
 	forceweight 1000
 	Response iMT_PlayerChokeResponseManager
 }
@@ -1627,16 +1664,17 @@ Response iMT_SurvivorVocalizeEmphaticGoManager
 }
 Rule iMT_SurvivorVocalizeEmphaticGoManager
 {
-	criteria ConceptPlayerEmphaticGo IsManager IsTalk IsTalkManager
-	forceweight 1000
+	criteria ConceptPlayerEmphaticGo IsManager IsTalk IsTalkManager IsWorldTalkManager
 	Response iMT_SurvivorVocalizeEmphaticGoManager
 }
 
 Response iMT_ResponseSoftDispleasureSwearManager
 {
+	scene "scenes/Manager/FallShort02.vcd"  //ohhh nooooo
 	scene "scenes/Manager/NegativeNoise01.vcd"  //[Improv non-verbal displeasure & frustration sounds]
 	scene "scenes/Manager/NegativeNoise02.vcd"  //[Improv non-verbal displeasure & frustration sounds]
 	scene "scenes/Manager/NegativeNoise03.vcd"  //[Improv non-verbal displeasure & frustration sounds]
+	scene "scenes/Manager/PositiveNoise04.vcd"  //[Improv non-verbal pleasure & interest sounds]
 	scene "scenes/Manager/ReactionApprehensive01.vcd"  //I have a bad feeling about this
 	scene "scenes/Manager/ReactionApprehensive03.vcd"  //I don't like this one damn bit.
 	scene "scenes/Manager/ReactionNegative01.vcd"  //Uh oh.
@@ -1644,7 +1682,7 @@ Response iMT_ResponseSoftDispleasureSwearManager
 }
 Rule iMT_ResponseSoftDispleasureSwearManager
 {
-	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_ResponseSoftDispleasureSwearManager
 }
@@ -1659,7 +1697,45 @@ Response iMT_SurvivorAskForHealthManager
 Rule iMT_SurvivorAskForHealthManager
 {
 	criteria ConceptAskForHealth2 IsManager
+	forceweight 900
 	Response iMT_SurvivorAskForHealthManager
+}
+
+Response iMT_SurvivorAskFrancisForHealthManager
+{
+	scene "scenes/Manager/PlayerSuggestHealthSpecific01.vcd"  //Francis, can you lend me your med kit?
+	scene "scenes/Manager/PlayerSuggestHealthSpecific02.vcd"  //Francis, mind spottin' me a med kit?
+	scene "scenes/Manager/PlayerSuggestHealthSpecific03.vcd"  //Francis, health kit?
+}
+Rule iMT_SurvivorAskFrancisForHealthManager
+{
+	criteria ConceptAskForHealth2 IsManager SubjectIsBiker IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskFrancisForHealthManager
+}
+
+Response iMT_SurvivorAskBillForHealthManager
+{
+	scene "scenes/Manager/PlayerSuggestHealthSpecific06.vcd"  //Bill, Bill... first aid kit?
+	scene "scenes/Manager/PlayerSuggestHealthSpecific07.vcd"  //Bill, could I get some first aid?
+}
+Rule iMT_SurvivorAskBillForHealthManager
+{
+	criteria ConceptAskForHealth2 IsManager SubjectIsNamVet IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskBillForHealthManager
+}
+
+Response iMT_SurvivorAskZoeyForHealthManager
+{
+	scene "scenes/Manager/PlayerSuggestHealthSpecific04.vcd"  //Zoey, are you going to use that med kit?
+	scene "scenes/Manager/PlayerSuggestHealthSpecific05.vcd"  //Zoey, any chance I could get some first aid?
+}
+Rule iMT_SurvivorAskZoeyForHealthManager
+{
+	criteria ConceptAskForHealth2 IsManager SubjectIsTeenGirl IsSubjectNear400
+	forceweight 1000
+	Response iMT_SurvivorAskZoeyForHealthManager
 }
 
 Response iMT_PlayerAreaClearManager
@@ -1667,11 +1743,11 @@ Response iMT_PlayerAreaClearManager
 	scene "scenes/Manager/AreaClear01.vcd"  //Clear!
 	scene "scenes/Manager/AreaClear02.vcd"  //Nothing in here!
 	scene "scenes/Manager/AreaClear03.vcd"  //Nothin' here!
-	scene "scenes/Manager/AreaClear04.vcd"  //All Clean!
+	scene "scenes/Manager/AreaClear04.vcd" odds 50  //All Clean!
 }
 Rule iMT_PlayerAreaClearManager
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerAreaClear IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerAreaClearManager
 }
@@ -1684,7 +1760,7 @@ Response iMT_SurvivorSpottedWeaponManager
 }
 Rule iMT_SurvivorSpottedWeaponManager
 {
-	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsNotSmartLookAuto
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotSmartLookAuto
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
 	applycontexttoworld
 	forceweight 1000
@@ -1707,22 +1783,22 @@ Response iMT_PlayerGettingRevivedManager
 }
 Rule iMT_PlayerGettingRevivedManager
 {
-	criteria ConceptReviveFriendDown IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptReviveFriendDown IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerGettingRevivedManager
 }
 
 Response iMT_PlayerLostCallManager
 {
-	scene "scenes/Manager/LostCall01.vcd"  //Hello?
-	scene "scenes/Manager/LostCall03.vcd"  //Where is everyone?
-	scene "scenes/Manager/LostCall04.vcd"  //Is anyone there?
-	scene "scenes/Manager/LostCall05.vcd"  //Where'd everybody get to?
-	scene "scenes/Manager/LostCall06.vcd"  //Can anyone hear me?
+	scene "scenes/Manager/LostCall01.vcd" then any ReplyLostCall foo:0 0  //Hello?
+	scene "scenes/Manager/LostCall03.vcd" then any ReplyLostCall foo:0 0  //Where is everyone?
+	scene "scenes/Manager/LostCall04.vcd" then any ReplyLostCall foo:0 0  //Is anyone there?
+	scene "scenes/Manager/LostCall05.vcd" then any ReplyLostCall foo:0 0  //Where'd everybody get to?
+	scene "scenes/Manager/LostCall06.vcd" then any ReplyLostCall foo:0 0  //Can anyone hear me?
 }
 Rule iMT_PlayerLostCallManager
 {
-	criteria ConceptPlayerLostCall IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptPlayerLostCall IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 1000
 	Response iMT_PlayerLostCallManager
 }
@@ -1736,7 +1812,7 @@ Response iMT_PlayerReviveFriendBManager
 }
 Rule iMT_PlayerReviveFriendBManager
 {
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	ApplyContext "ReviveTalk:1:5,Talk:1:1"
 	forceweight 1000
 	Response iMT_PlayerReviveFriendBManager
@@ -1750,7 +1826,7 @@ Response iMT_PlayerCallForRescueManager
 }
 Rule iMT_PlayerCallForRescueManager
 {
-	criteria ConceptCallForRescue IsNotCoughing IsManager IsTalk IsTalkManager IsManagerAliveA
+	criteria ConceptCallForRescue IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsManagerAliveA
 	forceweight 1000
 	Response iMT_PlayerCallForRescueManager
 }
@@ -1767,7 +1843,7 @@ Response iMT_PlayerGrabbedByJockeyManager
 }
 Rule iMT_PlayerGrabbedByJockeyManager
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsManager IsTalk IsTalkManager
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 1000

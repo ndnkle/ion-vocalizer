@@ -895,8 +895,7 @@ Response iMT_SurvivorTauntResponseCoach
 }
 Rule iMT_SurvivorTauntResponseCoach
 {
-	criteria ConceptPlayerTaunt IsNotCoughing IsCoach IsTalk IsTalkCoach
-	forceweight 1000
+	criteria ConceptPlayerTaunt IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	Response iMT_SurvivorTauntResponseCoach
 }
 
@@ -924,7 +923,7 @@ Response iMT_PlayerNegativeCoach
 }
 Rule iMT_PlayerNegativeCoach
 {
-	criteria ConceptPlayerNegative IsNotCoughing IsCoach IsTalk IsTalkCoach
+	criteria ConceptPlayerNegative IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	forceweight 1000
 	Response iMT_PlayerNegativeCoach
 }
@@ -932,51 +931,49 @@ Rule iMT_PlayerNegativeCoach
 Response iMT_PlayerSorryCoach
 {
 	scene "scenes/Coach/Sorry01.vcd"  //Shit, my bad.
-	scene "scenes/Coach/Sorry02.vcd"  //That right there was my fault.
+	scene "scenes/Coach/Sorry02.vcd" then subject PlayerAnswerLostCall foo:0 0  //That right there was my fault.
 	scene "scenes/Coach/Sorry03.vcd"  //My bad.
 	scene "scenes/Coach/Sorry04.vcd"  //Sorry.
 	scene "scenes/Coach/Sorry05.vcd"  //Hey, sorry.
-	scene "scenes/Coach/Sorry06.vcd"  //Ha, you know what? My bad.
+	scene "scenes/Coach/Sorry06.vcd" then subject PlayerAnswerLostCall foo:0 0  //Ha, you know what? My bad.
 	scene "scenes/Coach/Sorry07.vcd"  //Oh shit, sorry.
 }
 Rule iMT_PlayerSorryCoach
 {
-	criteria ConceptPlayerSorry IsNotCoughing IsCoach IsTalk IsTalkCoach
-	forceweight 1000
+	criteria ConceptPlayerSorry IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	Response iMT_PlayerSorryCoach
 }
 
 Response iMT_PlayerHurrahCoach
 {
-	scene "scenes/Coach/Hurrah01.vcd"  //We cool.
-	scene "scenes/Coach/Hurrah02.vcd"  //We gonna be all right.
-	scene "scenes/Coach/Hurrah03.vcd"  //We good, this ain't shit.
-	scene "scenes/Coach/Hurrah04.vcd"  //We gonna do this.
-	scene "scenes/Coach/Hurrah05.vcd"  //We got this.
+	scene "scenes/Coach/Hurrah01.vcd" then any HurrahAlso foo:0 0  //We cool.
+	scene "scenes/Coach/Hurrah02.vcd" then any HurrahAlso foo:0 0  //We gonna be all right.
+	scene "scenes/Coach/Hurrah03.vcd" then any HurrahAlso foo:0 0  //We good, this ain't shit.
+	scene "scenes/Coach/Hurrah04.vcd" then any HurrahAlso foo:0 0  //We gonna do this.
+	scene "scenes/Coach/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We got this.
 	scene "scenes/Coach/Hurrah06.vcd"  //Those things ain't shit.
 	scene "scenes/Coach/Hurrah07.vcd"  //Oh hell yeah!
-	scene "scenes/Coach/Hurrah08.vcd"  //We're gonna be okay.
-	scene "scenes/Coach/Hurrah09.vcd"  //We got up in their shit.
-	scene "scenes/Coach/Hurrah10.vcd"  //We are kicking their ass.
+	scene "scenes/Coach/Hurrah08.vcd" then any HurrahAlso foo:0 0  //We're gonna be okay.
+	scene "scenes/Coach/Hurrah09.vcd" then any HurrahAlso foo:0 0  //We got up in their shit.
+	scene "scenes/Coach/Hurrah10.vcd" then any HurrahAlso foo:0 0  //We are kicking their ass.
 	scene "scenes/Coach/Hurrah11.vcd"  //Oh hell yeah!
 	scene "scenes/Coach/Hurrah12.vcd"  //mmm. Allright.
-	scene "scenes/Coach/Hurrah13.vcd"  //Woo! Haha! That's how we do it.
-	scene "scenes/Coach/Hurrah14.vcd"  //Alright! Way to go! Way to go!
-	scene "scenes/Coach/Hurrah15.vcd"  //Yeah! You are a great bunch.
+	scene "scenes/Coach/Hurrah13.vcd" then any HurrahAlso foo:0 0  //Woo! Haha! That's how we do it.
+	scene "scenes/Coach/Hurrah14.vcd" then any HurrahAlso foo:0 0  //Alright! Way to go! Way to go!
+	scene "scenes/Coach/Hurrah15.vcd" then any HurrahAlso foo:0 0  //Yeah! You are a great bunch.
 	scene "scenes/Coach/Hurrah16.vcd"  //That was outstanding.
 	scene "scenes/Coach/Hurrah17.vcd"  //Alright! Good effort.
 	scene "scenes/Coach/Hurrah18.vcd"  //Alright, alright! Way to put it all out there!
 	scene "scenes/Coach/Hurrah19.vcd"  //Ya boy!
-	scene "scenes/Coach/Hurrah20.vcd"  //That is how you kick some ASS, baby!
-	scene "scenes/Coach/Hurrah21.vcd"  //Baby, that is how that's DONE!
-	scene "scenes/Coach/Hurrah23.vcd"  //We are kickin' some zombie ASS!
-	scene "scenes/Coach/Hurrah24.vcd"  //THAT is how you kick zombie ASS!
-	scene "scenes/Coach/Hurrah26.vcd"  //You made me proud out there, people...
+	scene "scenes/Coach/Hurrah20.vcd" then any HurrahAlso foo:0 0  //That is how you kick some ASS, baby!
+	scene "scenes/Coach/Hurrah21.vcd" then any HurrahAlso foo:0 0  //Baby, that is how that's DONE!
+	scene "scenes/Coach/Hurrah23.vcd" then any HurrahAlso foo:0 0  //We are kickin' some zombie ASS!
+	scene "scenes/Coach/Hurrah24.vcd" then any HurrahAlso foo:0 0  //THAT is how you kick zombie ASS!
+	scene "scenes/Coach/Hurrah26.vcd" then any HurrahAlso foo:0 0  //You made me proud out there, people...
 }
 Rule iMT_PlayerHurrahCoach
 {
-	criteria ConceptPlayerHurrah IsNotCoughing IsCoach IsTalk IsTalkCoach
-	forceweight 1000
+	criteria ConceptPlayerHurrah IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	Response iMT_PlayerHurrahCoach
 }
 
@@ -991,7 +988,7 @@ Response iMT_PlayerThanksCoach
 }
 Rule iMT_PlayerThanksCoach
 {
-	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	forceweight 1000
 	Response iMT_PlayerThanksCoach
 }
@@ -1006,9 +1003,42 @@ Response iMT_PlayerYouAreWelcomeCoach
 }
 Rule iMT_PlayerYouAreWelcomeCoach
 {
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach
-	forceweight 1000
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 900
 	Response iMT_PlayerYouAreWelcomeCoach
+}
+
+Response iMT_PlayerYouAreWelcomeGamblerCoach
+{
+	scene "scenes/Coach/YouAreWelcomeGambler01.vcd"  //We're all in this together, Nick.
+}
+Rule iMT_PlayerYouAreWelcomeGamblerCoach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsGambler IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeGamblerCoach
+}
+
+Response iMT_PlayerYouAreWelcomeMechanicCoach
+{
+	scene "scenes/Coach/YouAreWelcomeMechanic01.vcd"  //No problem, Ellis.
+}
+Rule iMT_PlayerYouAreWelcomeMechanicCoach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsMechanic IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeMechanicCoach
+}
+
+Response iMT_PlayerYouAreWelcomeProducerCoach
+{
+	scene "scenes/Coach/YouAreWelcomeProducer01.vcd"  //Anytime, Ro.
+}
+Rule iMT_PlayerYouAreWelcomeProducerCoach
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsProducer IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerYouAreWelcomeProducerCoach
 }
 
 Response iMT_PlayerToTheRescueRosCoach
@@ -1022,7 +1052,7 @@ Response iMT_PlayerToTheRescueRosCoach
 }
 Rule iMT_PlayerToTheRescueRosCoach
 {
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsCoach IsTalk IsTalkCoach
+	criteria ConceptPlayerToTheRescue IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	forceweight 1000
 	Response iMT_PlayerToTheRescueRosCoach
 }
@@ -1038,8 +1068,7 @@ Response iMT_PlayerHelpCoach
 }
 Rule iMT_PlayerHelpCoach
 {
-	criteria ConceptPlayerHelp IsCoach IsTalk IsTalkCoach
-	forceweight 1000
+	criteria ConceptPlayerHelp IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	Response iMT_PlayerHelpCoach
 }
 
@@ -1051,7 +1080,7 @@ Response iMT_SurvivorSpottedTankC1Coach
 }
 Rule iMT_SurvivorSpottedTankC1Coach
 {
-	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedTankC1Coach
 }
@@ -1064,7 +1093,7 @@ Response iMT_SurvivorSpottedBoomerC1Coach
 }
 Rule iMT_SurvivorSpottedBoomerC1Coach
 {
-	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedBoomerC1Coach
 }
@@ -1076,7 +1105,7 @@ Response iMT_SurvivorSpottedHunterC1Coach
 }
 Rule iMT_SurvivorSpottedHunterC1Coach
 {
-	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedHunterC1Coach
 }
@@ -1088,7 +1117,7 @@ Response iMT_SurvivorSpottedSmokerC1Coach
 }
 Rule iMT_SurvivorSpottedSmokerC1Coach
 {
-	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
 	forceweight 1000
 	Response iMT_SurvivorSpottedSmokerC1Coach
 }
@@ -1104,7 +1133,7 @@ Response iMT_SurvivorVocalizeBackUpCoach
 }
 Rule iMT_SurvivorVocalizeBackUpCoach
 {
-	criteria ConceptPlayerBackUp IsCoach IsTalk IsTalkCoach
+	criteria ConceptPlayerBackUp IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	forceweight 1000
 	Response iMT_SurvivorVocalizeBackUpCoach
 }
@@ -1120,7 +1149,7 @@ Response iMT_SurvivorTankPoundCoach
 }
 Rule iMT_SurvivorTankPoundCoach
 {
-	criteria ConceptPlayerGroundPoundedByTank IsCoach IsTalk IsTalkCoach
+	criteria ConceptPlayerGroundPoundedByTank IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	forceweight 1000
 	Response iMT_SurvivorTankPoundCoach
 }
@@ -1136,8 +1165,7 @@ Response iMT_SurvivorVocalizeEmphaticGoCoach
 }
 Rule iMT_SurvivorVocalizeEmphaticGoCoach
 {
-	criteria ConceptPlayerEmphaticGo IsCoach IsTalk IsTalkCoach
-	forceweight 1000
+	criteria ConceptPlayerEmphaticGo IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	Response iMT_SurvivorVocalizeEmphaticGoCoach
 }
 
@@ -1147,7 +1175,7 @@ Response iMT_PlayerAreaClearCoach
 }
 Rule iMT_PlayerAreaClearCoach
 {
-	criteria ConceptPlayerAreaClear IsNotCoughing IsCoach IsTalk IsTalkCoach
+	criteria ConceptPlayerAreaClear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	forceweight 1000
 	Response iMT_PlayerAreaClearCoach
 }
@@ -1193,7 +1221,7 @@ Response iMT_PlayerGettingRevivedCoach
 }
 Rule iMT_PlayerGettingRevivedCoach
 {
-	criteria ConceptReviveFriendDown IsNotCoughing IsCoach IsTalk IsTalkCoach
+	criteria ConceptReviveFriendDown IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	forceweight 1000
 	Response iMT_PlayerGettingRevivedCoach
 }
@@ -1218,7 +1246,7 @@ Response iMT_PlayerReviveFriendBCoach
 }
 Rule iMT_PlayerReviveFriendBCoach
 {
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsCoach IsTalk IsTalkCoach
+	criteria ConceptReviveFriendDownFinal IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	ApplyContext "ReviveTalk:1:5,Talk:1:1"
 	forceweight 1000
 	Response iMT_PlayerReviveFriendBCoach
@@ -1237,7 +1265,7 @@ Response iMT_PlayerGrabbedByJockeyCoach
 }
 Rule iMT_PlayerGrabbedByJockeyCoach
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsCoach IsTalk IsTalkCoach
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 900
@@ -1252,7 +1280,7 @@ Response iMT_PlayerGrabbedByJockeyC1Coach
 }
 Rule iMT_PlayerGrabbedByJockeyC1Coach
 {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsCoach IsTalk IsTalkCoach C1M1orC1M2
+	criteria ConceptSurvivorJockeyed IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
 	ApplyContext "_auto_NoSpotting:1:4"
 	applycontexttoworld
 	forceweight 1000
