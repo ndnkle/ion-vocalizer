@@ -1023,6 +1023,49 @@ Rule iMT_PlayerHurrahMechanic
 	Response iMT_PlayerHurrahMechanic
 }
 
+Response iMT_PlayerThanksMechanic
+{
+	scene "scenes/Mechanic/Thanks02.vcd"  //Much obliged
+	scene "scenes/Mechanic/Thanks04.vcd"  //I owe you one.
+	scene "scenes/Mechanic/Thanks05.vcd"  //Hey, thanks a lot.
+}
+Rule iMT_PlayerThanksMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 900
+	Response iMT_PlayerThanksMechanic
+}
+
+Response iMT_PlayerThanksMaleMechanic
+{
+	scene "scenes/Mechanic/Thanks01.vcd"  //Hey thanks, man!
+	scene "scenes/Mechanic/Thanks06.vcd"  //Thanks man.
+	scene "scenes/Mechanic/WorldC5M1B03.vcd"  //Thanks, brother!
+}
+Rule iMT_PlayerThanksCoachMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksMaleMechanic
+}
+Rule iMT_PlayerThanksGamblerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksMaleMechanic
+}
+
+Response iMT_PlayerThanksProducerMechanic
+{
+	scene "scenes/Mechanic/Thanks03.vcd"  //Thank you kindly, ma'm.
+}
+Rule iMT_PlayerThanksProducerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksProducerMechanic
+}
+
 Response iMT_PlayerYouAreWelcomeMechanic
 {
 	scene "scenes/Mechanic/YouAreWelcome01.vcd"  //You're welcome.

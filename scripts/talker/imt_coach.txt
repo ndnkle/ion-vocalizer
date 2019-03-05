@@ -989,8 +989,26 @@ Response iMT_PlayerThanksCoach
 Rule iMT_PlayerThanksCoach
 {
 	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 1000
+	forceweight 900
 	Response iMT_PlayerThanksCoach
+}
+
+Response iMT_PlayerThanksMaleCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items08.vcd"  //Thanks my man.
+	scene "scenes/Coach/Thanks08.vcd"  //Thanks man.
+}
+Rule iMT_PlayerThanksGamblerCoach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsGambler IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksMaleCoach
+}
+Rule iMT_PlayerThanksMechanicCoach
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsMechanic IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksMaleCoach
 }
 
 Response iMT_PlayerYouAreWelcomeCoach

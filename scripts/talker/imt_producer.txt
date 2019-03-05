@@ -88,14 +88,14 @@ Rule iMT_MonsterProducer
 	Response iMT_MonsterProducer
 }
 
-Response iMT_HeartProducer
+Response iMT_KitchenProducer
 {
-	scene "scenes/Producer/ThanksNick01.vcd"  //Look at you Nick, you do have a heart, A HEART OF GOLD!
+	scene "scenes/Producer/TakeFryingPan01.vcd"  //No one better make a crack about me in the kitchen.
 }
-Rule iMT_HeartProducer
+Rule iMT_KitchenProducer
 {
-	criteria iMT_Heart IsProducer
-	Response iMT_HeartProducer
+	criteria iMT_Kitchen IsProducer
+	Response iMT_KitchenProducer
 }
 
 Response iMT_AliensProducer
@@ -892,6 +892,8 @@ Rule iMT_PlayerHurrahProducer
 
 Response iMT_PlayerThanksProducer
 {
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting18.vcd" odds 10  //THANK YOU!
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting19.vcd" odds 10  //THANK YOU, VERY MUCH!
 	scene "scenes/Producer/Thanks01.vcd"  //Thanks for that.
 	scene "scenes/Producer/Thanks02.vcd"  //Hey, thanks!
 	scene "scenes/Producer/Thanks03.vcd"  //Thanks!
@@ -901,7 +903,41 @@ Response iMT_PlayerThanksProducer
 Rule iMT_PlayerThanksProducer
 {
 	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	forceweight 900
 	Response iMT_PlayerThanksProducer
+}
+
+Response iMT_PlayerThanksCoachProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_SafeRoomConvo22.vcd"  //Thanks, Coach.
+}
+Rule iMT_PlayerThanksCoachProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsCoach IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksCoachProducer
+}
+
+Response iMT_PlayerThanksGamblerProducer
+{
+	scene "scenes/Producer/ThanksNick01.vcd"  //Look at you Nick, you do have a heart, A HEART OF GOLD!
+}
+Rule iMT_PlayerThanksGamblerProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsGambler IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksGamblerProducer
+}
+
+Response iMT_PlayerThanksMechanicProducer
+{
+	scene "scenes/Producer/ThanksEllis01.vcd"  //Thanks Ellis, I guess I will keep you.
+}
+Rule iMT_PlayerThanksMechanicProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsMechanic IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksMechanicProducer
 }
 
 Response iMT_PlayerYouAreWelcomeProducer

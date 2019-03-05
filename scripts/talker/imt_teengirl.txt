@@ -1276,6 +1276,32 @@ Rule iMT_PlayerNegativeTeenGirl
 	Response iMT_PlayerNegativeTeenGirl
 }
 
+Response iMT_PlayerSorryTeenGirl
+{
+	scene "scenes/TeenGirl/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //Oops, sorry
+	scene "scenes/TeenGirl/Sorry05.vcd"  //Sorry about that
+	scene "scenes/TeenGirl/Sorry06.vcd"  //Oh, my bad
+	scene "scenes/TeenGirl/Sorry07.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry
+	scene "scenes/TeenGirl/Sorry08.vcd"  //I am really sorry
+	scene "scenes/TeenGirl/Sorry09.vcd"  //My bad
+	scene "scenes/TeenGirl/Sorry10.vcd"  //I am so sorry
+	scene "scenes/TeenGirl/Sorry11.vcd"  //Ohh, sorry!
+	scene "scenes/TeenGirl/Sorry12.vcd"  //I really am sorry 'bout that
+	scene "scenes/TeenGirl/Sorry13.vcd"  //Oops, sorry
+	scene "scenes/TeenGirl/Sorry14.vcd"  //Sorry
+	scene "scenes/TeenGirl/Sorry15.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry about that
+	scene "scenes/TeenGirl/Sorry16.vcd" then subject PlayerAnswerLostCall foo:0 0  //Oh, my bad
+	scene "scenes/TeenGirl/Sorry17.vcd"  //I'm really sorry
+	scene "scenes/TeenGirl/Sorry18.vcd" then subject PlayerAnswerLostCall foo:0 0  //I'm really sorry
+	scene "scenes/TeenGirl/Sorry20.vcd"  //I am so sorry
+	scene "scenes/TeenGirl/Sorry23.vcd" then subject PlayerAnswerLostCall foo:0 0  //Ohh, sorry!
+}
+Rule iMT_PlayerSorryTeenGirl
+{
+	criteria ConceptPlayerSorry IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	Response iMT_PlayerSorryTeenGirl
+}
+
 Response iMT_PlayerHurrahTeenGirl
 {
 	scene "scenes/TeenGirl/Hurrah07.vcd" then any HurrahAlso foo:0 0  //I think we're gonna make it
@@ -1299,6 +1325,76 @@ Rule iMT_PlayerHurrahTeenGirl
 	criteria ConceptPlayerHurrah IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	forceweight 1000
 	Response iMT_PlayerHurrahTeenGirl
+}
+
+Response iMT_PlayerThanksTeenGirl
+{
+	scene "scenes/TeenGirl/ReactionPositive27.vcd" odds 10  //You are beautiful, sexy and charming. Thank you.
+	scene "scenes/TeenGirl/Thanks01.vcd"  //Thanks, I owe you.
+	scene "scenes/TeenGirl/Thanks02.vcd"  //Thanks
+	scene "scenes/TeenGirl/Thanks03.vcd"  //Thanks!
+	scene "scenes/TeenGirl/Thanks04.vcd"  //Thanks, thanks a lot
+	scene "scenes/TeenGirl/Thanks06.vcd"  //Thanks a bunch.
+	scene "scenes/TeenGirl/Thanks07.vcd"  //Hey, thanks!
+	scene "scenes/TeenGirl/Thanks08.vcd"  //Thank you
+	scene "scenes/TeenGirl/Thanks09.vcd"  //Thank you.
+	scene "scenes/TeenGirl/Thanks13.vcd"  //Really, thanks
+	scene "scenes/TeenGirl/Thanks19.vcd"  //Thanks
+	scene "scenes/TeenGirl/Thanks20.vcd"  //Thanks, I owe you.
+	scene "scenes/TeenGirl/Thanks23.vcd"  //I really appreciate it.
+	scene "scenes/TeenGirl/Thanks24.vcd"  //Thanks a bunch.
+	scene "scenes/TeenGirl/Thanks25.vcd"  //Hey, thanks!
+	scene "scenes/TeenGirl/Thanks27.vcd"  //Thank you very much
+	scene "scenes/TeenGirl/Thanks28.vcd"  //Like, thanks
+	scene "scenes/TeenGirl/Thanks30.vcd"  //Phew, thanks!
+}
+Rule iMT_PlayerThanksTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+	forceweight 900
+	Response iMT_PlayerThanksTeenGirl
+}
+
+Response iMT_PlayerThanksBikerTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks11.vcd"  //Thanks, man
+	scene "scenes/TeenGirl/Thanks41.vcd"  //Thanks, Francis.
+	scene "scenes/TeenGirl/Thanks44.vcd"  //Thanks, Francis.
+}
+Rule iMT_PlayerThanksBikerTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsBiker IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksBikerTeenGirl
+}
+
+Response iMT_PlayerThanksManagerTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks11.vcd"  //Thanks, man
+	scene "scenes/TeenGirl/Thanks32.vcd"  //Thanks Louis.
+	scene "scenes/TeenGirl/Thanks42.vcd"  //Thanks, Louis.
+	scene "scenes/TeenGirl/Thanks43.vcd"  //Thanks, Louis. I owe you one
+	scene "scenes/TeenGirl/Thanks45.vcd"  //Thanks, Louis.
+	scene "scenes/TeenGirl/Thanks46.vcd"  //Thanks, Louis. I owe you one
+}
+Rule iMT_PlayerThanksManagerTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsManager IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksManagerTeenGirl
+}
+
+Response iMT_PlayerThanksNamVetTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks05.vcd"  //Thanks, Bill.
+	scene "scenes/TeenGirl/Thanks11.vcd"  //Thanks, man
+	scene "scenes/TeenGirl/Thanks40.vcd"  //Thanks, Bill.
+}
+Rule iMT_PlayerThanksNamVetTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsNamVet IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksNamVetTeenGirl
 }
 
 Response iMT_PlayerProfanityTeenGirl
@@ -1442,7 +1538,6 @@ Response iMT_SurvivorPouncedByHunterTeenGirl
 {
 	scene "scenes/TeenGirl/ScreamWhilePounced01.vcd"  //GET IT OFF ME!
 	scene "scenes/TeenGirl/ScreamWhilePounced02.vcd"  //GET IT GET IT OFF GET IT OFF!
-	scene "scenes/TeenGirl/ScreamWhilePounced03.vcd"  //GET IT OFF!
 	scene "scenes/TeenGirl/ScreamWhilePounced04.vcd"  //GET IT GET IT OFF GET IT OFF!
 	scene "scenes/TeenGirl/ScreamWhilePounced06.vcd"  //GET IT OFF ME!
 }

@@ -1283,6 +1283,26 @@ Rule iMT_PlayerNegativeNamVet
 	Response iMT_PlayerNegativeNamVet
 }
 
+Response iMT_PlayerSorryNamVet
+{
+	scene "scenes/NamVet/Sorry01.vcd"  //Sorry.
+	scene "scenes/NamVet/Sorry02.vcd"  //I am sorry.
+	scene "scenes/NamVet/Sorry03.vcd"  //Sorry about that.
+	scene "scenes/NamVet/Sorry04.vcd"  //My fault!
+	scene "scenes/NamVet/Sorry05.vcd" then subject PlayerAnswerLostCall foo:0 0  //I shouldn't have done that.
+	scene "scenes/NamVet/Sorry07.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry about that.
+	scene "scenes/NamVet/Sorry08.vcd" then subject PlayerAnswerLostCall foo:0 0  //My fault!
+	scene "scenes/NamVet/Sorry09.vcd"  //Won't happen again.
+	scene "scenes/NamVet/Sorry10.vcd"  //I regret that mistake.
+	scene "scenes/NamVet/Sorry11.vcd" then subject PlayerAnswerLostCall foo:0 0  //Ah, hell, I'm gettin too old for this shit
+	scene "scenes/NamVet/Sorry12.vcd" then subject PlayerAnswerLostCall foo:0 0  //That was careless of me.
+}
+Rule iMT_PlayerSorryNamVet
+{
+	criteria ConceptPlayerSorry IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	Response iMT_PlayerSorryNamVet
+}
+
 Response iMT_PlayerHurrahNamVet
 {
 	scene "scenes/NamVet/Hurrah02.vcd"  //We're doing pretty goddamn good. Don't let it go to your head.

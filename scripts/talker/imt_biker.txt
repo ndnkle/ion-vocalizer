@@ -1381,6 +1381,65 @@ Rule iMT_PlayerHurrahBiker
 	Response iMT_PlayerHurrahBiker
 }
 
+Response iMT_PlayerThanksBiker
+{
+	scene "scenes/Biker/Thanks01.vcd"  //I owe you one.
+	scene "scenes/Biker/Thanks02.vcd"  //Thanks.
+	scene "scenes/Biker/Thanks03.vcd"  //Thanks.
+	scene "scenes/Biker/Thanks04.vcd"  //Thanks [noise you make gun clicking your mouth twice]
+	scene "scenes/Biker/Thanks07.vcd"  //Yeah, thanks.
+	scene "scenes/Biker/Thanks08.vcd"  //Thank you.
+	scene "scenes/Biker/Thanks09.vcd"  //Thanks, I owe ya.
+	scene "scenes/Biker/Thanks10.vcd"  //Thanks, I owe ya.
+	scene "scenes/Biker/Thanks12.vcd"  //Thanks for that.
+	scene "scenes/Biker/Thanks15.vcd"  //Thanks.
+}
+Rule iMT_PlayerThanksBiker
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	forceweight 900
+	Response iMT_PlayerThanksBiker
+}
+
+Response iMT_PlayerThanksManagerBiker
+{
+	scene "scenes/Biker/Thanks06.vcd"  //Hey, thanks man.
+	scene "scenes/Biker/Thanks11.vcd"  //Thanks, dude.
+	scene "scenes/Biker/Thanks13.vcd"  //Thanks bro.
+	scene "scenes/Biker/Thanks18.vcd"  //Thanks, Louis.
+	scene "scenes/Biker/Thanks19.vcd"  //Thanks, Louis. I owe you one
+}
+Rule iMT_PlayerThanksManagerBiker
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsManager IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksManagerBiker
+}
+
+Response iMT_PlayerThanksNamVetBiker
+{
+	scene "scenes/Biker/Thanks05.vcd"  //Thanks, man.
+	scene "scenes/Biker/Thanks14.vcd"  //Thanks brother.
+	scene "scenes/Biker/Thanks16.vcd"  //Thanks, Bill.
+}
+Rule iMT_PlayerThanksNamVetBiker
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsNamVet IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksNamVetBiker
+}
+
+Response iMT_PlayerThanksTeenGirlBiker
+{
+	scene "scenes/Biker/Thanks17.vcd"  //Thanks, Zoey.
+}
+Rule iMT_PlayerThanksTeenGirlBiker
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsTeenGirl IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksTeenGirlBiker
+}
+
 Response iMT_PlayerProfanityBiker
 {
 	scene "scenes/Biker/ReactionNegative05.vcd"  //Shit

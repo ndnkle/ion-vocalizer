@@ -84,7 +84,7 @@ Criterion	"iMT_TeamFortress2"		"Concept"	"iMT_TeamFortress2"		required
 Criterion	"iMT_Aliens"			"Concept"	"iMT_Aliens"			required
 Criterion	"iMT_Charming"			"Concept"	"iMT_Charming"			required
 Criterion	"iMT_GunStore"			"Concept"	"iMT_GunStore"			required
-Criterion	"iMT_Heart"			"Concept"	"iMT_Heart"			required
+Criterion	"iMT_Kitchen"			"Concept"	"iMT_Kitchen"			required
 Criterion	"iMT_Monster"			"Concept"	"iMT_Monster"			required
 Criterion	"iMT_NoNoNo"			"Concept"	"iMT_NoNoNo"			required
 Criterion	"iMT_Popcorn"			"Concept"	"iMT_Popcorn"			required

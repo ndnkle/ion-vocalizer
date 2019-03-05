@@ -1377,6 +1377,21 @@ Rule iMT_PlayerNoManager
 	Response iMT_PlayerNoManager
 }
 
+Response iMT_PlayerSorryManager
+{
+	scene "scenes/Manager/Sorry01.vcd"  //Sorry!
+	scene "scenes/Manager/Sorry02.vcd"  //Sorry!
+	scene "scenes/Manager/Sorry03.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry about that!
+	scene "scenes/Manager/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //Aww, man, sorry.
+	scene "scenes/Manager/Sorry06.vcd" then subject PlayerAnswerLostCall foo:0 0  //My bad.
+	scene "scenes/Manager/Sorry07.vcd" then subject PlayerAnswerLostCall foo:0 0  //100% my fault
+}
+Rule iMT_PlayerSorryManager
+{
+	criteria ConceptPlayerSorry IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	Response iMT_PlayerSorryManager
+}
+
 Response iMT_PlayerHurrahManager
 {
 	scene "scenes/Manager/Hurrah05.vcd"  //We're going to be okay.
@@ -1403,21 +1418,55 @@ Response iMT_PlayerThanksManager
 	scene "scenes/Manager/Thanks02.vcd"  //Thanks.
 	scene "scenes/Manager/Thanks03.vcd"  //Thanks, I owe you one.
 	scene "scenes/Manager/Thanks04.vcd"  //Thanks.
-	scene "scenes/Manager/Thanks05.vcd"  //Thanks, man.
-	scene "scenes/Manager/Thanks06.vcd"  //Thanks, man.
 	scene "scenes/Manager/Thanks07.vcd"  //Thank you.
 	scene "scenes/Manager/Thanks08.vcd"  //Thanks, I owe ya a big one.
 	scene "scenes/Manager/Thanks09.vcd"  //Thanks a lot.
 	scene "scenes/Manager/Thanks10.vcd"  //Whoo, thanks.
 	scene "scenes/Manager/Thanks11.vcd"  //Hey, thanks.
-	scene "scenes/Manager/Thanks12.vcd" odds 20  //Thanks Dog
-	scene "scenes/Manager/Thanks14.vcd" odds 20  //Thanks, Playa
 }
 Rule iMT_PlayerThanksManager
 {
 	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
-	forceweight 1000
+	forceweight 900
 	Response iMT_PlayerThanksManager
+}
+
+Response iMT_PlayerThanksBikerManager
+{
+	scene "scenes/Manager/C6DLC3Intro22.vcd"  //Thanks, man!
+	scene "scenes/Manager/Thanks06.vcd"  //Thanks, man.
+	scene "scenes/Manager/Thanks14.vcd"  //Thanks, Playa.
+	scene "scenes/Manager/ToTheRescueThanks03.vcd"  //Yo, thanks, man.
+}
+Rule iMT_PlayerThanksBikerManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsBiker IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksBikerManager
+}
+
+Response iMT_PlayerThanksNamVetManager
+{
+	scene "scenes/Manager/Thanks05.vcd"  //Thanks, man.
+	scene "scenes/Manager/Thanks12.vcd"  //Thanks, Dog.
+	scene "scenes/Manager/ToTheRescueThanks02.vcd"  //Thanks, man!
+}
+Rule iMT_PlayerThanksNamVetManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsNamVet IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksNamVetManager
+}
+
+Response iMT_PlayerThanksTeenGirlManager
+{
+	scene "scenes/Manager/Thanks13.vcd"  //Girl, thanks
+}
+Rule iMT_PlayerThanksTeenGirlManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsTeenGirl IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksTeenGirlManager
 }
 
 Response iMT_PlayerProfanityManager

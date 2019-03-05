@@ -945,6 +945,54 @@ Rule iMT_PlayerHurrahGambler
 	Response iMT_PlayerHurrahGambler
 }
 
+Response iMT_PlayerThanksGambler
+{
+	scene "scenes/Gambler/Thanks01.vcd"  //Thanks.
+	scene "scenes/Gambler/Thanks03.vcd"  //Thanks!
+	scene "scenes/Gambler/Thanks05.vcd"  //I owe you one.
+}
+Rule iMT_PlayerThanksGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	forceweight 900
+	Response iMT_PlayerThanksGambler
+}
+
+Response iMT_PlayerThanksCoachGambler
+{
+	scene "scenes/Gambler/Thanks04.vcd"  //Thanks, man, I owe you.
+	scene "scenes/Gambler/ThanksCoach01.vcd"  //Thanks bro.
+}
+Rule iMT_PlayerThanksCoachGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsCoach IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksCoachGambler
+}
+
+Response iMT_PlayerThanksMechanicGambler
+{
+	scene "scenes/Gambler/Thanks04.vcd"  //Thanks, man, I owe you.
+	scene "scenes/Gambler/ThanksEllis01.vcd"  //Thanks killer.
+}
+Rule iMT_PlayerThanksMechanicGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsMechanic IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksMechanicGambler
+}
+
+Response iMT_PlayerThanksProducerGambler
+{
+	scene "scenes/Gambler/ThanksRochelle01.vcd"  //Thanks Ro.
+}
+Rule iMT_PlayerThanksProducerGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsProducer IsSubjectDistNear100
+	forceweight 1000
+	Response iMT_PlayerThanksProducerGambler
+}
+
 Response iMT_PlayerYouAreWelcomeGambler
 {
 	scene "scenes/Gambler/YouAreWelcome01.vcd"  //You're welcome.
