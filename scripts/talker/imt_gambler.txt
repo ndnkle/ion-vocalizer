@@ -1203,6 +1203,18 @@ Rule iMT_SurvivorVocalizeEmphaticGoGambler
 	Response iMT_SurvivorVocalizeEmphaticGoGambler
 }
 
+Response iMT_ResponseSoftDispleasureSwearGambler
+{
+	scene "scenes/Gambler/DoubleDeathResponse03.vcd"  //Ahhh SHIT!
+	scene "scenes/Gambler/WorldC5M4B06.vcd"  //SHIT!
+}
+Rule iMT_ResponseSoftDispleasureSwearGambler
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+	forceweight 1000
+	Response iMT_ResponseSoftDispleasureSwearGambler
+}
+
 Response iMT_PlayerAreaClearGambler
 {
 	scene "scenes/Gambler/Defibrillator06.vcd"  //Clear!

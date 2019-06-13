@@ -1187,6 +1187,18 @@ Rule iMT_SurvivorVocalizeEmphaticGoCoach
 	Response iMT_SurvivorVocalizeEmphaticGoCoach
 }
 
+Response iMT_ResponseSoftDispleasureSwearCoach
+{
+	scene "scenes/Coach/Exclamation01.vcd"  //Oh Shit!
+	scene "scenes/Coach/WorldC5M4B03.vcd"  //SHIT!
+}
+Rule iMT_ResponseSoftDispleasureSwearCoach
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 1000
+	Response iMT_ResponseSoftDispleasureSwearCoach
+}
+
 Response iMT_PlayerAreaClearCoach
 {
 	scene "scenes/Coach/Defibrillator05.vcd"  //Clear!

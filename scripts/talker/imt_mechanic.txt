@@ -1259,6 +1259,18 @@ Rule iMT_SurvivorVocalizeEmphaticGoMechanic
 	Response iMT_SurvivorVocalizeEmphaticGoMechanic
 }
 
+Response iMT_ResponseSoftDispleasureSwearMechanic
+{
+	scene "scenes/Mechanic/WorldC2M3B14.vcd"  //Ohmigod!
+	scene "scenes/Mechanic/WorldC5M4B01.vcd"  //Woah!
+}
+Rule iMT_ResponseSoftDispleasureSwearMechanic
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 1000
+	Response iMT_ResponseSoftDispleasureSwearMechanic
+}
+
 Response iMT_PlayerAreaClearMechanic
 {
 	scene "scenes/Mechanic/Defibrillator07.vcd"  //Clear!

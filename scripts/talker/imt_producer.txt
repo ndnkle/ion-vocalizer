@@ -1134,6 +1134,18 @@ Rule iMT_SurvivorVocalizeEmphaticGoProducer
 	Response iMT_SurvivorVocalizeEmphaticGoProducer
 }
 
+Response iMT_ResponseSoftDispleasureSwearProducer
+{
+	scene "scenes/Producer/WorldC1M2B18.vcd"  //Oh… my… GOD.
+	scene "scenes/Producer/WorldC1M3B28.vcd"  //Oh, damn it, I knew it.
+}
+Rule iMT_ResponseSoftDispleasureSwearProducer
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+	forceweight 1000
+	Response iMT_ResponseSoftDispleasureSwearProducer
+}
+
 Response iMT_PlayerAreaClearProducer
 {
 	scene "scenes/Producer/Defibrillator07.vcd"  //Clear!
