@@ -188,6 +188,100 @@ Rule iMT_MaryJosefNamVet
 	Response iMT_MaryJosefNamVet
 }
 
+Response iMT_BirdsNamVet
+{
+	scene "scenes/NamVet/C6DLC3GravelHill04.vcd"  //Horseshit goddamn birds...
+	scene "scenes/NamVet/C6DLC3GravelHill05.vcd"  //Shut-up you goddamn birds!
+}
+Rule iMT_BirdsNamVet
+{
+	criteria iMT_Birds IsNamVet
+	Response iMT_BirdsNamVet
+}
+
+Response iMT_JobDoneNamVet
+{
+	scene "scenes/NamVet/C6DLC3MovieLine01.vcd"  //My job's done. Have at me you bastards!
+	scene "scenes/NamVet/C6DLC3MovieLine02.vcd"  //My job's done. Let's see what you got, you big dumb sons of bitches.
+}
+Rule iMT_JobDoneNamVet
+{
+	criteria iMT_JobDone IsNamVet
+	Response iMT_JobDoneNamVet
+}
+
+Response iMT_FirstStepNamVet
+{
+	scene "scenes/NamVet/WorldHospital0423.vcd"  //That first step'll kill ya.
+	scene "scenes/NamVet/WorldHospital0424.vcd"  //Watch out that first step'll kill ya.
+}
+Rule iMT_FirstStepNamVet
+{
+	criteria iMT_FirstStep IsNamVet
+	Response iMT_FirstStepNamVet
+}
+
+Response iMT_NotPrettyNamVet
+{
+	scene "scenes/NamVet/C6DLC3InTankTrainCar01.vcd"  //This is not pretty.
+}
+Rule iMT_NotPrettyNamVet
+{
+	criteria iMT_NotPretty IsNamVet
+	Response iMT_NotPrettyNamVet
+}
+
+Response iMT_BareHandsNamVet
+{
+	scene "scenes/NamVet/C6DLC3MovieLine10.vcd"  //I'll see peace back on Earth… if I gotta murder every one of you bastards…. with my bare goddamn hands.
+}
+Rule iMT_BareHandsNamVet
+{
+	criteria iMT_BareHands IsNamVet
+	Response iMT_BareHandsNamVet
+}
+
+Response iMT_ShoeLeatherNamVet
+{
+	scene "scenes/NamVet/C6DLC3MovieLine20.vcd"  //If I'd known how many of you sonsabitches there were when we started out--guess I woulda saved the shoe leather and fought you there.
+}
+Rule iMT_ShoeLeatherNamVet
+{
+	criteria iMT_ShoeLeather IsNamVet
+	Response iMT_ShoeLeatherNamVet
+}
+
+Response iMT_PlanNamVet
+{
+	scene "scenes/NamVet/C6DLC3Intro20.vcd"  //Zoey, we all made it together.  That was my plan.
+	scene "scenes/NamVet/C6DLC3Intro21.vcd"  //Zoey, we all made this far together.  That was my plan.
+}
+Rule iMT_PlanNamVet
+{
+	criteria iMT_Plan IsNamVet
+	Response iMT_PlanNamVet
+}
+
+Response iMT_MadNamVet
+{
+	scene "scenes/NamVet/C6DLC3Intro26.vcd"  //Zoey. You still mad?
+}
+Rule iMT_MadNamVet
+{
+	criteria iMT_Mad IsNamVet
+	Response iMT_MadNamVet
+}
+
+Response iMT_ThatsItNamVet
+{
+	scene "scenes/NamVet/C6DLC3FirstEventOver01.vcd"  //Alright, I think that's it!
+}
+Rule iMT_ThatsItNamVet
+{
+	criteria iMT_ThatsIt IsNamVet
+	Response iMT_ThatsItNamVet
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------

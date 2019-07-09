@@ -139,6 +139,100 @@ Rule iMT_AngelProducer
 	Response iMT_AngelProducer
 }
 
+Response iMT_AyeProducer
+{
+	scene "scenes/Producer/DLC1_C6M2_StartingJukeBox03.vcd"  //(FONZIE) AYYYYYEEEE!
+}
+Rule iMT_AyeProducer
+{
+	criteria iMT_Aye IsProducer
+	Response iMT_AyeProducer
+}
+
+Response iMT_OtherGuyProducer
+{
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting52.vcd"  //Can we talk to that other guy?
+}
+Rule iMT_OtherGuyProducer
+{
+	criteria iMT_OtherGuy IsProducer
+	Response iMT_OtherGuyProducer
+}
+
+Response iMT_TurdProducer
+{
+	scene "scenes/Producer/DLC1_C6M2_InWaterFindLadder01.vcd"  //Nick, you've got a turd on your shoulder.
+	scene "scenes/Producer/DLC1_C6M2_InWaterFindLadder02.vcd"  //Nick, you've got a turd on your shoulder.
+	scene "scenes/Producer/DLC1_C6M2_InWaterFindLadder03.vcd"  //Nick, there's something on your shoulder.
+}
+Rule iMT_TurdProducer
+{
+	criteria iMT_Turd IsProducer
+	Response iMT_TurdProducer
+}
+
+Response iMT_LearningProducer
+{
+	scene "scenes/Producer/DLC1_C6M2_Phase206.vcd"  //I've never had so much fun learning.
+	scene "scenes/Producer/DLC1_C6M2_Phase207.vcd"  //I've never had so much fun learning.
+}
+Rule iMT_LearningProducer
+{
+	criteria iMT_Learning IsProducer
+	Response iMT_LearningProducer
+}
+
+Response iMT_SomethingProducer
+{
+	scene "scenes/Producer/DLC1_C6M1_WeddingWitch15.vcd"  //Something old, something new, something about to rip your guts out.
+}
+Rule iMT_SomethingProducer
+{
+	criteria iMT_Something IsProducer
+	Response iMT_SomethingProducer
+}
+
+Response iMT_NewVoicesProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_Elevator05.vcd"  //After a few hours in the car with you guys, it's nice to hear some new voices.
+}
+Rule iMT_NewVoicesProducer
+{
+	criteria iMT_NewVoices IsProducer
+	Response iMT_NewVoicesProducer
+}
+
+Response iMT_HateProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_FinaleChat05.vcd"  //Sure, never really thought about it but yeah I hate things.
+	scene "scenes/Producer/DLC1_C6M3_FinaleChat06.vcd"  //Sure, never really thought about it but yeah I hate stuff.
+}
+Rule iMT_HateProducer
+{
+	criteria iMT_Hate IsProducer
+	Response iMT_HateProducer
+}
+
+Response iMT_BotheringProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_FinaleChat32.vcd"  //Ellis! Quit bothering these poor people. I am so sorry.
+}
+Rule iMT_BotheringProducer
+{
+	criteria iMT_Bothering IsProducer
+	Response iMT_BotheringProducer
+}
+
+Response iMT_WhereFromProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_FinaleChat25.vcd"  //Wow, where the hell did you come from?
+}
+Rule iMT_WhereFromProducer
+{
+	criteria iMT_WhereFrom IsProducer
+	Response iMT_WhereFromProducer
+}
+
 Response iMT_AllAboardProducer
 {
 	scene "scenes/Producer/DLC1_CommunityR13.vcd"  //All aboard! Toot toot!

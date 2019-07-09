@@ -192,6 +192,106 @@ Rule iMT_GodIsDeadTeenGirl
 	Response iMT_GodIsDeadTeenGirl
 }
 
+Response iMT_GreetingTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat15.vcd"  //Hey.
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat16.vcd"  //Hey.
+}
+Rule iMT_GreetingTeenGirl
+{
+	criteria iMT_Greeting IsTeenGirl
+	Response iMT_GreetingTeenGirl
+}
+
+Response iMT_NiceCarTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting05.vcd"  //Nice car!
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting06.vcd"  //Nice car, dude!
+}
+Rule iMT_NiceCarTeenGirl
+{
+	criteria iMT_NiceCar IsTeenGirl
+	Response iMT_NiceCarTeenGirl
+}
+
+Response iMT_ReallyTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat05.vcd"  //(noting flirting) Francis? Him? Are you kidding? REALLY?
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat06.vcd"  //(noting flirting) Francis? Him? Are you kidding? REALLY?
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat09.vcd"  //(noting flirting) Francis? Him? Are you kidding? REALLY?
+}
+Rule iMT_ReallyTeenGirl
+{
+	criteria iMT_Really IsTeenGirl
+	Response iMT_ReallyTeenGirl
+}
+
+Response iMT_MoronsTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat14.vcd"  //Hello! Morons. I think we have a bridge to lower.
+}
+Rule iMT_MoronsTeenGirl
+{
+	criteria iMT_Morons IsTeenGirl
+	Response iMT_MoronsTeenGirl
+}
+
+Response iMT_GoodLuckTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting24.vcd"  //Good luck.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleFinalGas04.vcd"  //Good luck!
+}
+Rule iMT_GoodLuckTeenGirl
+{
+	criteria iMT_GoodLuck IsTeenGirl
+	Response iMT_GoodLuckTeenGirl
+}
+
+Response iMT_MissEllisTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic06.vcd"  //Ellis! ELLIS!!! Maybe we should have gone with him?
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic07.vcd"  //Ellis! ELLIS!!! Maybe he should have come with us?
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic23.vcd"  //I'm going to miss Ellis.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic24.vcd"  //Hm. I'm going to miss Ellis.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic25.vcd"  //I'm going to miss Ellis.
+}
+Rule iMT_MissEllisTeenGirl
+{
+	criteria iMT_MissEllis IsTeenGirl
+	Response iMT_MissEllisTeenGirl
+}
+
+Response iMT_ComeBackTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic19.vcd"  //Y'all come back now!
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic20.vcd"  //Y'all come back now!
+}
+Rule iMT_ComeBackTeenGirl
+{
+	criteria iMT_ComeBack IsTeenGirl
+	Response iMT_ComeBackTeenGirl
+}
+
+Response iMT_StealTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_CommunityL4D102.vcd"  //If no one minds, we can steal a boat.
+}
+Rule iMT_StealTeenGirl
+{
+	criteria iMT_Steal IsTeenGirl
+	Response iMT_StealTeenGirl
+}
+
+Response iMT_SnowColdTeenGirl
+{
+	scene "scenes/TeenGirl/DLC1_CommunityL4D105.vcd"  //Francis, what do you hate more: the snow or the cold?
+}
+Rule iMT_SnowColdTeenGirl
+{
+	criteria iMT_SnowCold IsTeenGirl
+	Response iMT_SnowColdTeenGirl
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------

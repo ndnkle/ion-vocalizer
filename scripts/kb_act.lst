@@ -65,6 +65,7 @@
 "+ch6; alias -ch6 -mouse_menu"	"Character-specific 6"
 "+ch7; alias -ch7 -mouse_menu"	"Character-specific 7 (limited use)"
 "+ch8; alias -ch8 -mouse_menu"	"Character-specific 8 (limited use)"
+"+ch9; alias -ch9 -mouse_menu"	"Character-specific 9 (limited use)"
 "+mouse_menu Misc4"		"Miscellaneous 4 (limited use)"
 "+mouse_menu Misc5"		"Miscellaneous 5 (limited use)"
 "+mouse_menu Misc6"		"Miscellaneous 6 (limited use)"

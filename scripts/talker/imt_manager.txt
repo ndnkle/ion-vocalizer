@@ -220,6 +220,108 @@ Rule iMT_TankFactory2Manager
 	Response iMT_TankFactory2Manager
 }
 
+Response iMT_ShotHimManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat02.vcd"  //You're right, Francis. He's not friendly. I think Bill would have shot him by now.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat03.vcd"  //You're right, Francis. He's not friendly. I think Bill would have shot him by now.
+}
+Rule iMT_ShotHimManager
+{
+	criteria iMT_ShotHim IsManager
+	Response iMT_ShotHimManager
+}
+
+Response iMT_IntroductionManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat05.vcd"  //Hi, I'm Louis!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat06.vcd"  //Hi, I'm Louis!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat23.vcd"  //Hey guys! My name's Louis.
+}
+Rule iMT_IntroductionManager
+{
+	criteria iMT_Introduction IsManager
+	Response iMT_IntroductionManager
+}
+
+Response iMT_MadeItManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat08.vcd"  //Hey, you made it!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat09.vcd"  //Hey, you made it!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat10.vcd"  //Hey, you made it!
+}
+Rule iMT_MadeItManager
+{
+	criteria iMT_MadeIt IsManager
+	Response iMT_MadeItManager
+}
+
+Response iMT_WontWorkManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat29.vcd"  //I don't think that would work.
+}
+Rule iMT_WontWorkManager
+{
+	criteria iMT_WontWork IsManager
+	Response iMT_WontWorkManager
+}
+
+Response iMT_OkayManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat38.vcd"  //Okay.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat39.vcd"  //Okay.
+}
+Rule iMT_OkayManager
+{
+	criteria iMT_Okay IsManager
+	Response iMT_OkayManager
+}
+
+Response iMT_SeeingMoreManager
+{
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic08.vcd"  //I think we're gonna be seeing more of that guy!
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic09.vcd"  //I think we're gonna be seeing more of that guy!
+}
+Rule iMT_SeeingMoreManager
+{
+	criteria iMT_SeeingMore IsManager
+	Response iMT_SeeingMoreManager
+}
+
+Response iMT_MissThemManager
+{
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic01.vcd"  //I'm gonna miss them.
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic13.vcd"  //Bye! Be safe! We're gonna miss you!
+}
+Rule iMT_MissThemManager
+{
+	criteria iMT_MissThem IsManager
+	Response iMT_MissThemManager
+}
+
+Response iMT_NewManager
+{
+	scene "scenes/Manager/DLC1_C6M3_L4D11stSpot01.vcd"  //Is that a new zombie?
+	scene "scenes/Manager/DLC1_C6M3_L4D11stSpot02.vcd"  //Is that a new zombie?
+	scene "scenes/Manager/DLC1_C6M3_L4D11stSpot03.vcd"  //Is that a new zombie?
+	scene "scenes/Manager/DLC1_CommunityL4D106.vcd" odds 20  //Zombies are driving trucks?
+}
+Rule iMT_NewManager
+{
+	criteria iMT_New IsManager
+	Response iMT_NewManager
+}
+
+Response iMT_BelievingManager
+{
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat20.vcd"  //Francis said you weren't goin' to make it. But I said I had a good feelin' about you.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat21.vcd"  //Francis said you weren't goin' to make it. But I had a good feelin' about you.
+}
+Rule iMT_BelievingManager
+{
+	criteria iMT_Believing IsManager
+	Response iMT_BelievingManager
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------

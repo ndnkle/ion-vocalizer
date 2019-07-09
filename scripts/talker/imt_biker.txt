@@ -234,6 +234,102 @@ Rule iMT_TankFactoryBiker
 	Response iMT_TankFactoryBiker
 }
 
+Response iMT_WazzupBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat44.vcd"  //What's up?
+}
+Rule iMT_WazzupBiker
+{
+	criteria iMT_Wazzup IsBiker
+	Response iMT_WazzupBiker
+}
+
+Response iMT_YourNameBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat02.vcd"  //What's your name again?
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat06.vcd"  //What's your name again?
+}
+Rule iMT_YourNameBiker
+{
+	criteria iMT_YourName IsBiker
+	Response iMT_YourNameBiker
+}
+
+Response iMT_ImACopBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat21.vcd"  //Nah, I'm a cop.
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat22.vcd"  //No no no, I am a cop.
+}
+Rule iMT_ImACopBiker
+{
+	criteria iMT_ImACop IsBiker
+	Response iMT_ImACopBiker
+}
+
+Response iMT_HateTooBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat11.vcd"  //Oh my god. I HATE THOSE TOO! I HATE EM SO MUCH!
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat12.vcd"  //Oh my god. You hate stuff too?
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat13.vcd"  //Oh my god. You hate stuff too?
+}
+Rule iMT_HateTooBiker
+{
+	criteria iMT_HateToo IsBiker
+	Response iMT_HateTooBiker
+}
+
+Response iMT_WomanOfTasteBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat31.vcd"  //What? She's a woman of taste.
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat32.vcd"  //What? Obviously she's a woman of taste.
+}
+Rule iMT_WomanOfTasteBiker
+{
+	criteria iMT_WomanOfTaste IsBiker
+	Response iMT_WomanOfTasteBiker
+}
+
+Response iMT_LoveRoBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic16.vcd"  //Bye RO! I love you!!!!!!!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic17.vcd"  //Bye RO! I love you!!!!!!! (sobbing) I love you!
+}
+Rule iMT_LoveRoBiker
+{
+	criteria iMT_LoveRo IsBiker
+	Response iMT_LoveRoBiker
+}
+
+Response iMT_ShotHimBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat05.vcd"  //Oh yeah. Bill definitely woulda shot him.
+}
+Rule iMT_ShotHimBiker
+{
+	criteria iMT_ShotHim IsBiker
+	Response iMT_ShotHimBiker
+}
+
+Response iMT_ThisFarBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat19.vcd"  //Hey! Never thought a fancy ass like you would have made it this far.
+}
+Rule iMT_ThisFarBiker
+{
+	criteria iMT_ThisFar IsBiker
+	Response iMT_ThisFarBiker
+}
+
+Response iMT_SlowBiker
+{
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat33.vcd"  //Takin' it slow, huh? I can respect that.
+}
+Rule iMT_SlowBiker
+{
+	criteria iMT_Slow IsBiker
+	Response iMT_SlowBiker
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------

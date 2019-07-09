@@ -99,6 +99,104 @@ Rule iMT_CandyMechanic
 	Response iMT_CandyMechanic
 }
 
+Response iMT_MadamMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat01.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat02.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat03.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat04.vcd"  //Oh, yes, ma'am.
+}
+Rule iMT_MadamMechanic
+{
+	criteria iMT_Madam IsMechanic
+	Response iMT_MadamMechanic
+}
+
+Response iMT_GotYouMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat08.vcd"  //Man, he got you Nick. It's like he's known you forever.
+}
+Rule iMT_GotYouMechanic
+{
+	criteria iMT_GotYou IsMechanic
+	Response iMT_GotYouMechanic
+}
+
+Response iMT_DogMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat18.vcd"  //Can we not talk about dogs?
+}
+Rule iMT_DogMechanic
+{
+	criteria iMT_Dog IsMechanic
+	Response iMT_DogMechanic
+}
+
+Response iMT_AttitudeMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_Loss01.vcd"  //You know what? I like your attitude. I hope you get through this okay.
+	scene "scenes/Mechanic/DLC1_C6M3_Loss02.vcd"  //You know what? I like your attitude. I hope you get through this okay.
+}
+Rule iMT_AttitudeMechanic
+{
+	criteria iMT_Attitude IsMechanic
+	Response iMT_AttitudeMechanic
+}
+
+Response iMT_InLoveMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing01.vcd"  //A girl who can shoot? I am in love.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing05.vcd"  //Man. A girl who can shoot? I am in love.
+}
+Rule iMT_InLoveMechanic
+{
+	criteria iMT_InLove IsMechanic
+	Response iMT_InLoveMechanic
+}
+
+Response iMT_CannonballMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Phase2JumpInWater06.vcd"  //CANNONBALL!
+}
+Rule iMT_CannonballMechanic
+{
+	criteria iMT_Cannonball IsMechanic
+	Response iMT_CannonballMechanic
+}
+
+Response iMT_InHonorMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator03.vcd"  //Man, I'm gonna kill so many zombies she's gonna have to love me.
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator04.vcd"  //I'm gonna kill a tank in her honor and then I'm gonna name it after her.
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator05.vcd"  //I'm gonna kill a tank in her honor. Ooh, and then I'm gonna name it after her.
+}
+Rule iMT_InHonorMechanic
+{
+	criteria iMT_InHonor IsMechanic
+	Response iMT_InHonorMechanic
+}
+
+Response iMT_BreakMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater03.vcd"  //Okay if anybody needs a bathroom break, now'd be a good time.
+}
+Rule iMT_BreakMechanic
+{
+	criteria iMT_Break IsMechanic
+	Response iMT_BreakMechanic
+}
+
+Response iMT_FeelHerMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Saferoom02.vcd"  //Oh man, we're getting close, I can just feel her. I mean the car of course.
+	scene "scenes/Mechanic/DLC1_C6M2_Saferoom05.vcd"  //Oh We are getting close, man, I can feel her. I mean the car.
+}
+Rule iMT_FeelHerMechanic
+{
+	criteria iMT_FeelHer IsMechanic
+	Response iMT_FeelHerMechanic
+}
+
 Response iMT_CoachBreathingReacMechanic
 {
 	scene "scenes/Mechanic/WorldC2M123.vcd" odds 10  //Coach, you're breathin' a little hard, you alright?

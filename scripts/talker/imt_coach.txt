@@ -150,6 +150,98 @@ Rule iMT_NotDieCoach
 	Response iMT_NotDieCoach
 }
 
+Response iMT_FairCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat10.vcd"  //Sounds fair.
+}
+Rule iMT_FairCoach
+{
+	criteria iMT_Fair IsCoach
+	Response iMT_FairCoach
+}
+
+Response iMT_AintForRealCoach
+{
+	scene "scenes/Coach/DLC1_C6M1_InitialMeeting07.vcd"  //(to group) Tell me this boy ain't for real.
+	scene "scenes/Coach/DLC1_C6M1_InitialMeeting08.vcd"  //(to group) Tell me this boy ain't for real.
+}
+Rule iMT_AintForRealCoach
+{
+	criteria iMT_AintForReal IsCoach
+	Response iMT_AintForRealCoach
+}
+
+Response iMT_SecretsCoach
+{
+	scene "scenes/Coach/DLC1_C6M2_Tattoo04.vcd"  //Hey, Coach keeps his secrets.
+}
+Rule iMT_SecretsCoach
+{
+	criteria iMT_Secrets IsCoach
+	Response iMT_SecretsCoach
+}
+
+Response iMT_KillingCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat03.vcd"  //Damn right. We're getting good at killing these things.
+}
+Rule iMT_KillingCoach
+{
+	criteria iMT_Killing IsCoach
+	Response iMT_KillingCoach
+}
+
+Response iMT_LeaveEllisCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat11.vcd"  //Hell, we can even leave Ellis behind to make room for y'all.
+}
+Rule iMT_LeaveEllisCoach
+{
+	criteria iMT_LeaveEllis IsCoach
+	Response iMT_LeaveEllisCoach
+}
+
+Response iMT_BadNewsCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_Loss03.vcd"  //Shit. Not a lot of good news goin' round these days.
+	scene "scenes/Coach/DLC1_C6M3_Loss06.vcd"  //Shit. Not a lot of good news goin' round these days.
+}
+Rule iMT_BadNewsCoach
+{
+	criteria iMT_BadNews IsCoach
+	Response iMT_BadNewsCoach
+}
+
+Response iMT_GetBusyCoach
+{
+	scene "scenes/Coach/DLC1_Community04.vcd"  //Get busy living, or get busy dying.
+}
+Rule iMT_GetBusyCoach
+{
+	criteria iMT_GetBusy IsCoach
+	Response iMT_GetBusyCoach
+}
+
+Response iMT_NightCoach
+{
+	scene "scenes/Coach/DLC1_Community11.vcd"  //Shit! Looks like it's gonna be one hell of a night.
+}
+Rule iMT_NightCoach
+{
+	criteria iMT_Night IsCoach
+	Response iMT_NightCoach
+}
+
+Response iMT_LouisRulesCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Killing02.vcd"  //Louis in the house!
+}
+Rule iMT_LouisRulesCoach
+{
+	criteria iMT_LouisRules IsCoach
+	Response iMT_LouisRulesCoach
+}
+
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 14.3
+// ion's Vocalizer 15.0
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -1005,6 +1005,56 @@
 	}
 
 	//--------------------------------------------------------------
+	"Z9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Greeting"
+			"text"		"Hey"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_NiceCar"
+			"text"		"Nice car"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Really"
+			"text"		"Really?"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Morons"
+			"text"		"Morons"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_GoodLuck"
+			"text"		"Good luck"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_MissEllis"
+			"text"		"Miss Ellis"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ComeBack"
+			"text"		"Come back"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Steal"
+			"text"		"Steal"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_SnowCold"
+			"text"		"Snow/cold"
+		}
+	}
+
+	//--------------------------------------------------------------
 	"F1,Survivor,Alive"
 	{
 		"Center"
@@ -1401,6 +1451,56 @@
 		{
 			"command"	"vocalize iMT_Predict"
 			"text"		"Predict"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"F9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Wazzup"
+			"text"		"Wazzup"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_WomanOfTaste"
+			"text"		"Woman"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_HateToo"
+			"text"		"Hate too"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_ImACop"
+			"text"		"Cop"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_YourName"
+			"text"		"Your name"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_LoveRo"
+			"text"		"Love Ro"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ShotHim"
+			"text"		"Shot him"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Slow"
+			"text"		"Slow"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_ThisFar"
+			"text"		"This far"
 		}
 	}
 
@@ -1805,6 +1905,56 @@
 	}
 
 	//--------------------------------------------------------------
+	"L9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Introduction"
+			"text"		"Hi"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_MadeIt"
+			"text"		"Made it"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Believing"
+			"text"		"Believing"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Okay"
+			"text"		"Okay"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_SeeingMore"
+			"text"		"Seeing more"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_MissThem"
+			"text"		"Miss them"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ShotHim"
+			"text"		"Shot him"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_New"
+			"text"		"New"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_WontWork"
+			"text"		"Won't work"
+		}
+	}
+
+	//--------------------------------------------------------------
 	"B1,Survivor,Alive"
 	{
 		"Center"
@@ -2201,6 +2351,56 @@
 		{
 			"command"	"vocalize iMT_LastFight"
 			"text"		"Get some"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"B9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Mad"
+			"text"		"Mad"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_NotPretty"
+			"text"		"Not pretty"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_FirstStep"
+			"text"		"First step"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Plan"
+			"text"		"Plan"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_BareHands"
+			"text"		"Bare hands"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_ShoeLeather"
+			"text"		"Shoe leather"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_ThatsIt"
+			"text"		"That's it"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Birds"
+			"text"		"Birds"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_JobDone"
+			"text"		"Job's done"
 		}
 	}
 
@@ -2605,6 +2805,56 @@
 	}
 
 	//--------------------------------------------------------------
+	"R9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Aye"
+			"text"		"Aye"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Learning"
+			"text"		"Learning"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Something"
+			"text"		"Something"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Turd"
+			"text"		"Turd"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_NewVoices"
+			"text"		"New voices"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_WhereFrom"
+			"text"		"Where from?"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_OtherGuy"
+			"text"		"Other guy"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Hate"
+			"text"		"Hate"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Bothering"
+			"text"		"Bothering"
+		}
+	}
+
+	//--------------------------------------------------------------
 	"N1,Survivor,Alive"
 	{
 		"Center"
@@ -3001,6 +3251,56 @@
 		{
 			"command"	"vocalize iMT_NotDie"
 			"text"		"Not die"
+		}
+	}
+
+	//--------------------------------------------------------------
+	"N9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_True"
+			"text"		"True"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Depressing"
+			"text"		"Depressing"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Attractive"
+			"text"		"Attractive"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_ScrewYou"
+			"text"		"Screw"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_LazyAss"
+			"text"		"Lazy ass"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_GetRoom"
+			"text"		"Get a room"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_TooWeird"
+			"text"		"Too weird"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Test"
+			"text"		"Test"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Sevensome"
+			"text"		"Sevensome"
 		}
 	}
 
@@ -3405,6 +3705,56 @@
 	}
 
 	//--------------------------------------------------------------
+	"C9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Fair"
+			"text"		"Fair"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Killing"
+			"text"		"Killing"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_Secrets"
+			"text"		"Secrets"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_LouisRules"
+			"text"		"Louis"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_AintForReal"
+			"text"		"This boy"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_LeaveEllis"
+			"text"		"Leave Ellis"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_BadNews"
+			"text"		"Bad news"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Night"
+			"text"		"Night"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_GetBusy"
+			"text"		"Get busy"
+		}
+	}
+
+	//--------------------------------------------------------------
 	"E1,Survivor,Alive"
 	{
 		"Center"
@@ -3805,6 +4155,56 @@
 	}
 
 	//--------------------------------------------------------------
+	"E9,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_Madam"
+			"text"		"Ma'am"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_Cannonball"
+			"text"		"Cannonball"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_GotYou"
+			"text"		"Got you"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_Dog"
+			"text"		"Dogs"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_InLove"
+			"text"		"In love"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_FeelHer"
+			"text"		"Feel her"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_InHonor"
+			"text"		"In honor"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_Break"
+			"text"		"Break"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_Attitude"
+			"text"		"Attitude"
+		}
+	}
+
+	//--------------------------------------------------------------
 	"Characters,Survivor,Alive"
 	{
 		"Center"
@@ -3814,42 +4214,42 @@
 		}
 		"North"
 		{
-			"command"	"alias +ch1 +mouse_menu Z1; alias +ch2 +mouse_menu Z2; alias +ch3 +mouse_menu Z3; alias +ch4 +mouse_menu Z4; alias +ch5 +mouse_menu Z5; alias +ch6 +mouse_menu Z6; alias +ch7 +mouse_menu Z7; alias +ch8 +mouse_menu Z8"
+			"command"	"alias +ch1 +mouse_menu Z1; alias +ch2 +mouse_menu Z2; alias +ch3 +mouse_menu Z3; alias +ch4 +mouse_menu Z4; alias +ch5 +mouse_menu Z5; alias +ch6 +mouse_menu Z6; alias +ch7 +mouse_menu Z7; alias +ch8 +mouse_menu Z8; alias +ch9 +mouse_menu Z9"
 			"text"		"Zoey"
 		}
 		"NorthEast"
 		{
-			"command"	"alias +ch1 +mouse_menu E1; alias +ch2 +mouse_menu E2; alias +ch3 +mouse_menu E3; alias +ch4 +mouse_menu E4; alias +ch5 +mouse_menu E5; alias +ch6 +mouse_menu E6; alias +ch7 +mouse_menu E7; alias +ch8 +mouse_menu E8"
+			"command"	"alias +ch1 +mouse_menu E1; alias +ch2 +mouse_menu E2; alias +ch3 +mouse_menu E3; alias +ch4 +mouse_menu E4; alias +ch5 +mouse_menu E5; alias +ch6 +mouse_menu E6; alias +ch7 +mouse_menu E7; alias +ch8 +mouse_menu E8; alias +ch9 +mouse_menu E9"
 			"text"		"Ellis"
 		}
 		"East"
 		{
-			"command"	"alias +ch1 +mouse_menu C1; alias +ch2 +mouse_menu C2; alias +ch3 +mouse_menu C3; alias +ch4 +mouse_menu C4; alias +ch5 +mouse_menu C5; alias +ch6 +mouse_menu C6; alias +ch7 +mouse_menu C7; alias +ch8 +mouse_menu C8"
+			"command"	"alias +ch1 +mouse_menu C1; alias +ch2 +mouse_menu C2; alias +ch3 +mouse_menu C3; alias +ch4 +mouse_menu C4; alias +ch5 +mouse_menu C5; alias +ch6 +mouse_menu C6; alias +ch7 +mouse_menu C7; alias +ch8 +mouse_menu C8; alias +ch9 +mouse_menu C9"
 			"text"		"Coach"
 		}
 		"SouthEast"
 		{
-			"command"	"alias +ch1 +mouse_menu N1; alias +ch2 +mouse_menu N2; alias +ch3 +mouse_menu N3; alias +ch4 +mouse_menu N4; alias +ch5 +mouse_menu N5; alias +ch6 +mouse_menu N6; alias +ch7 +mouse_menu N7; alias +ch8 +mouse_menu N8"
+			"command"	"alias +ch1 +mouse_menu N1; alias +ch2 +mouse_menu N2; alias +ch3 +mouse_menu N3; alias +ch4 +mouse_menu N4; alias +ch5 +mouse_menu N5; alias +ch6 +mouse_menu N6; alias +ch7 +mouse_menu N7; alias +ch8 +mouse_menu N8; alias +ch9 +mouse_menu N9"
 			"text"		"Nick"
 		}
 		"South"
 		{
-			"command"	"alias +ch1 +mouse_menu R1; alias +ch2 +mouse_menu R2; alias +ch3 +mouse_menu R3; alias +ch4 +mouse_menu R4; alias +ch5 +mouse_menu R5; alias +ch6 +mouse_menu R6; alias +ch7 +mouse_menu R7; alias +ch8 +mouse_menu R8"
+			"command"	"alias +ch1 +mouse_menu R1; alias +ch2 +mouse_menu R2; alias +ch3 +mouse_menu R3; alias +ch4 +mouse_menu R4; alias +ch5 +mouse_menu R5; alias +ch6 +mouse_menu R6; alias +ch7 +mouse_menu R7; alias +ch8 +mouse_menu R8; alias +ch9 +mouse_menu R9"
 			"text"		"Rochelle"
 		}
 		"SouthWest"
 		{
-			"command"	"alias +ch1 +mouse_menu B1; alias +ch2 +mouse_menu B2; alias +ch3 +mouse_menu B3; alias +ch4 +mouse_menu B4; alias +ch5 +mouse_menu B5; alias +ch6 +mouse_menu B6; alias +ch7 +mouse_menu B7; alias +ch8 +mouse_menu B8"
+			"command"	"alias +ch1 +mouse_menu B1; alias +ch2 +mouse_menu B2; alias +ch3 +mouse_menu B3; alias +ch4 +mouse_menu B4; alias +ch5 +mouse_menu B5; alias +ch6 +mouse_menu B6; alias +ch7 +mouse_menu B7; alias +ch8 +mouse_menu B8; alias +ch9 +mouse_menu B9"
 			"text"		"Bill"
 		}
 		"West"
 		{
-			"command"	"alias +ch1 +mouse_menu L1; alias +ch2 +mouse_menu L2; alias +ch3 +mouse_menu L3; alias +ch4 +mouse_menu L4; alias +ch5 +mouse_menu L5; alias +ch6 +mouse_menu L6; alias +ch7 +mouse_menu L7; alias +ch8 +mouse_menu L8"
+			"command"	"alias +ch1 +mouse_menu L1; alias +ch2 +mouse_menu L2; alias +ch3 +mouse_menu L3; alias +ch4 +mouse_menu L4; alias +ch5 +mouse_menu L5; alias +ch6 +mouse_menu L6; alias +ch7 +mouse_menu L7; alias +ch8 +mouse_menu L8; alias +ch9 +mouse_menu L9"
 			"text"		"Louis"
 		}
 		"NorthWest"
 		{
-			"command"	"alias +ch1 +mouse_menu F1; alias +ch2 +mouse_menu F2; alias +ch3 +mouse_menu F3; alias +ch4 +mouse_menu F4; alias +ch5 +mouse_menu F5; alias +ch6 +mouse_menu F6; alias +ch7 +mouse_menu F7; alias +ch8 +mouse_menu F8"
+			"command"	"alias +ch1 +mouse_menu F1; alias +ch2 +mouse_menu F2; alias +ch3 +mouse_menu F3; alias +ch4 +mouse_menu F4; alias +ch5 +mouse_menu F5; alias +ch6 +mouse_menu F6; alias +ch7 +mouse_menu F7; alias +ch8 +mouse_menu F8; alias +ch9 +mouse_menu F9"
 			"text"		"Francis"
 		}
 	}
@@ -3864,42 +4264,42 @@
 		}
 		"North"
 		{
-			"command"	"alias +ch1 +mouse_menu Z1; alias +ch2 +mouse_menu Z2; alias +ch3 +mouse_menu Z3; alias +ch4 +mouse_menu Z4; alias +ch5 +mouse_menu Z5; alias +ch6 +mouse_menu Z6; alias +ch7 +mouse_menu Z7; alias +ch8 +mouse_menu Z8"
+			"command"	"alias +ch1 +mouse_menu Z1; alias +ch2 +mouse_menu Z2; alias +ch3 +mouse_menu Z3; alias +ch4 +mouse_menu Z4; alias +ch5 +mouse_menu Z5; alias +ch6 +mouse_menu Z6; alias +ch7 +mouse_menu Z7; alias +ch8 +mouse_menu Z8; alias +ch9 +mouse_menu Z9"
 			"text"		"Zoey"
 		}
 		"NorthEast"
 		{
-			"command"	"alias +ch1 +mouse_menu E1; alias +ch2 +mouse_menu E2; alias +ch3 +mouse_menu E3; alias +ch4 +mouse_menu E4; alias +ch5 +mouse_menu E5; alias +ch6 +mouse_menu E6; alias +ch7 +mouse_menu E7; alias +ch8 +mouse_menu E8"
+			"command"	"alias +ch1 +mouse_menu E1; alias +ch2 +mouse_menu E2; alias +ch3 +mouse_menu E3; alias +ch4 +mouse_menu E4; alias +ch5 +mouse_menu E5; alias +ch6 +mouse_menu E6; alias +ch7 +mouse_menu E7; alias +ch8 +mouse_menu E8; alias +ch9 +mouse_menu E9"
 			"text"		"Ellis"
 		}
 		"East"
 		{
-			"command"	"alias +ch1 +mouse_menu C1; alias +ch2 +mouse_menu C2; alias +ch3 +mouse_menu C3; alias +ch4 +mouse_menu C4; alias +ch5 +mouse_menu C5; alias +ch6 +mouse_menu C6; alias +ch7 +mouse_menu C7; alias +ch8 +mouse_menu C8"
+			"command"	"alias +ch1 +mouse_menu C1; alias +ch2 +mouse_menu C2; alias +ch3 +mouse_menu C3; alias +ch4 +mouse_menu C4; alias +ch5 +mouse_menu C5; alias +ch6 +mouse_menu C6; alias +ch7 +mouse_menu C7; alias +ch8 +mouse_menu C8; alias +ch9 +mouse_menu C9"
 			"text"		"Coach"
 		}
 		"SouthEast"
 		{
-			"command"	"alias +ch1 +mouse_menu N1; alias +ch2 +mouse_menu N2; alias +ch3 +mouse_menu N3; alias +ch4 +mouse_menu N4; alias +ch5 +mouse_menu N5; alias +ch6 +mouse_menu N6; alias +ch7 +mouse_menu N7; alias +ch8 +mouse_menu N8"
+			"command"	"alias +ch1 +mouse_menu N1; alias +ch2 +mouse_menu N2; alias +ch3 +mouse_menu N3; alias +ch4 +mouse_menu N4; alias +ch5 +mouse_menu N5; alias +ch6 +mouse_menu N6; alias +ch7 +mouse_menu N7; alias +ch8 +mouse_menu N8; alias +ch9 +mouse_menu N9"
 			"text"		"Nick"
 		}
 		"South"
 		{
-			"command"	"alias +ch1 +mouse_menu R1; alias +ch2 +mouse_menu R2; alias +ch3 +mouse_menu R3; alias +ch4 +mouse_menu R4; alias +ch5 +mouse_menu R5; alias +ch6 +mouse_menu R6; alias +ch7 +mouse_menu R7; alias +ch8 +mouse_menu R8"
+			"command"	"alias +ch1 +mouse_menu R1; alias +ch2 +mouse_menu R2; alias +ch3 +mouse_menu R3; alias +ch4 +mouse_menu R4; alias +ch5 +mouse_menu R5; alias +ch6 +mouse_menu R6; alias +ch7 +mouse_menu R7; alias +ch8 +mouse_menu R8; alias +ch9 +mouse_menu R9"
 			"text"		"Rochelle"
 		}
 		"SouthWest"
 		{
-			"command"	"alias +ch1 +mouse_menu B1; alias +ch2 +mouse_menu B2; alias +ch3 +mouse_menu B3; alias +ch4 +mouse_menu B4; alias +ch5 +mouse_menu B5; alias +ch6 +mouse_menu B6; alias +ch7 +mouse_menu B7; alias +ch8 +mouse_menu B8"
+			"command"	"alias +ch1 +mouse_menu B1; alias +ch2 +mouse_menu B2; alias +ch3 +mouse_menu B3; alias +ch4 +mouse_menu B4; alias +ch5 +mouse_menu B5; alias +ch6 +mouse_menu B6; alias +ch7 +mouse_menu B7; alias +ch8 +mouse_menu B8; alias +ch9 +mouse_menu B9"
 			"text"		"Bill"
 		}
 		"West"
 		{
-			"command"	"alias +ch1 +mouse_menu L1; alias +ch2 +mouse_menu L2; alias +ch3 +mouse_menu L3; alias +ch4 +mouse_menu L4; alias +ch5 +mouse_menu L5; alias +ch6 +mouse_menu L6; alias +ch7 +mouse_menu L7; alias +ch8 +mouse_menu L8"
+			"command"	"alias +ch1 +mouse_menu L1; alias +ch2 +mouse_menu L2; alias +ch3 +mouse_menu L3; alias +ch4 +mouse_menu L4; alias +ch5 +mouse_menu L5; alias +ch6 +mouse_menu L6; alias +ch7 +mouse_menu L7; alias +ch8 +mouse_menu L8; alias +ch9 +mouse_menu L9"
 			"text"		"Louis"
 		}
 		"NorthWest"
 		{
-			"command"	"alias +ch1 +mouse_menu F1; alias +ch2 +mouse_menu F2; alias +ch3 +mouse_menu F3; alias +ch4 +mouse_menu F4; alias +ch5 +mouse_menu F5; alias +ch6 +mouse_menu F6; alias +ch7 +mouse_menu F7; alias +ch8 +mouse_menu F8"
+			"command"	"alias +ch1 +mouse_menu F1; alias +ch2 +mouse_menu F2; alias +ch3 +mouse_menu F3; alias +ch4 +mouse_menu F4; alias +ch5 +mouse_menu F5; alias +ch6 +mouse_menu F6; alias +ch7 +mouse_menu F7; alias +ch8 +mouse_menu F8; alias +ch9 +mouse_menu F9"
 			"text"		"Francis"
 		}
 	}

@@ -127,6 +127,106 @@ Rule iMT_TattoosGambler
 	Response iMT_TattoosGambler
 }
 
+Response iMT_TrueGambler
+{
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead08.vcd"  //Very true.
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead09.vcd"  //Well put.
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead10.vcd"  //Wow, true.
+}
+Rule iMT_TrueGambler
+{
+	criteria iMT_True IsGambler
+	Response iMT_TrueGambler
+}
+
+Response iMT_AttractiveGambler
+{
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting11.vcd"  //Or: I could try is being more attractive to grease ball bikers.
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting12.vcd"  //Or: I could try is being more attractive to grease ball bikers.
+}
+Rule iMT_AttractiveGambler
+{
+	criteria iMT_Attractive IsGambler
+	Response iMT_AttractiveGambler
+}
+
+Response iMT_ScrewYouGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_FinaleChat07.vcd"  //You know what? Screw the both of you. Okay? So what are we doing here?
+}
+Rule iMT_ScrewYouGambler
+{
+	criteria iMT_ScrewYou IsGambler
+	Response iMT_ScrewYouGambler
+}
+
+Response iMT_GetRoomGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_FinaleChat09.vcd"  //Should we leave you two alone?
+	scene "scenes/Gambler/DLC1_C6M3_FinaleChat10.vcd"  //Maybe we should leave you two alone?
+	scene "scenes/Gambler/DLC1_C6M3_FinaleChat11.vcd"  //Should we leave you two alone?
+	scene "scenes/Gambler/DLC1_C6M3_FinaleChat12.vcd"  //Get a room.
+	scene "scenes/Gambler/DLC1_C6M3_FinaleChat13.vcd"  //Maybe you two should get a room.
+}
+Rule iMT_GetRoomGambler
+{
+	criteria iMT_GetRoom IsGambler
+	Response iMT_GetRoomGambler
+}
+
+Response iMT_DepressingGambler
+{
+	scene "scenes/Gambler/DLC1_C6M1_Wedding03.vcd"  //Oh Christ, this is more depressing than the zombies.
+}
+Rule iMT_DepressingGambler
+{
+	criteria iMT_Depressing IsGambler
+	Response iMT_DepressingGambler
+}
+
+Response iMT_LazyAssGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_FinaleChat03.vcd"  //That's funny. I knew your lazy ass would still be here.
+}
+Rule iMT_LazyAssGambler
+{
+	criteria iMT_LazyAss IsGambler
+	Response iMT_LazyAssGambler
+}
+
+Response iMT_TooWeirdGambler
+{
+	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead04.vcd"  //Even for us, that was just too weird.
+}
+Rule iMT_TooWeirdGambler
+{
+	criteria iMT_TooWeird IsGambler
+	Response iMT_TooWeirdGambler
+}
+
+Response iMT_TestGambler
+{
+	scene "scenes/Gambler/DLC1_C6M2_Bridge2Up01.vcd"  //Hey Ellis... you test it.
+	scene "scenes/Gambler/DLC1_C6M2_Bridge2Up02.vcd"  //Looks real safe. Ellis, you go first.
+	scene "scenes/Gambler/DLC1_C6M2_Bridge2Up03.vcd"  //Ellis... you test it.
+}
+Rule iMT_TestGambler
+{
+	criteria iMT_Test IsGambler
+	Response iMT_TestGambler
+}
+
+Response iMT_SevensomeGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_Loss08.vcd"  //Should we join forces?
+	scene "scenes/Gambler/DLC1_C6M3_Loss09.vcd"  //You want to make this a… sevensome?
+}
+Rule iMT_SevensomeGambler
+{
+	criteria iMT_Sevensome IsGambler
+	Response iMT_SevensomeGambler
+}
+
 Response iMT_AllAboardGambler
 {
 	scene "scenes/Gambler/CMTY_LineSend02.vcd"  //Hey Ellis, all aboard! Toot! Toot!
