@@ -164,27 +164,27 @@
 		}
 		"North"
 		{
-			"command"	"vocalize PlayerAlsoWarnTank"
+			"command"	"vocalize PlayerWarnTank"
 			"text"		"Tank"
 		}
 		"NorthEast"
 		{
-			"command"	"vocalize PlayerAlsoWarnBoomer"
+			"command"	"vocalize PlayerWarnBoomer"
 			"text"		"Boomer"
 		}
 		"East"
 		{
-			"command"	"vocalize PlayerAlsoWarnHunter"
+			"command"	"vocalize PlayerWarnHunter"
 			"text"		"Hunter"
 		}
 		"SouthEast"
 		{
-			"command"	"vocalize PlayerAlsoWarnSmoker"
+			"command"	"vocalize PlayerWarnSmoker"
 			"text"		"Smoker"
 		}
 		"South"
 		{
-			"command"	"vocalize PlayerAlsoWarnWitch"
+			"command"	"vocalize PlayerWarnWitch"
 			"text"		"Witch"
 		}
 		"SouthWest"
@@ -244,7 +244,7 @@
 		}
 		"West"
 		{
-			"command"	"vocalize PlayerTonguePullStart"
+			"command"	"vocalize PlayerGrabbedByTongue"
 			"text"		"Pulled"
 		}
 		"NorthWest"
