@@ -1435,30 +1435,30 @@ Rule iMT_SurvivorTauntResponseManager
 	Response iMT_SurvivorTauntResponseManager
 }
 
-Response iMT_PlayerNegativeManager
-{
-	scene "scenes/Manager/HurtCritical01.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical02.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical03.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical04.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical05.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtMajor01.vcd"  //[Pain noise - huh]
-	scene "scenes/Manager/HurtMajor02.vcd"  //[Pain noise - ahh]
-	scene "scenes/Manager/HurtMajor03.vcd"  //[Pain noise - oy]
-	scene "scenes/Manager/HurtMajor04.vcd"  //[Pain noise - oy]
-	scene "scenes/Manager/HurtMajor05.vcd"  //[Pain noise - ugh]
-	scene "scenes/Manager/HurtMajor06.vcd"  //[Pain noise - ugh]
-	scene "scenes/Manager/HurtMajor07.vcd"  //[Pain noise - ugh]
-	scene "scenes/Manager/HurtMajor08.vcd"  //[Pain noise - ugh]
-	scene "scenes/Manager/HurtMajor09.vcd"  //[Pain noise - ugh]
-	scene "scenes/Manager/HurtMajor10.vcd"  //[Pain noise - ugh]
-}
-Rule iMT_PlayerNegativeManager
-{
-	criteria ConceptPlayerNegative IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
-	forceweight 1000
-	Response iMT_PlayerNegativeManager
-}
+// Response iMT_PlayerNegativeManager
+// {
+//	scene "scenes/Manager/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Manager/HurtMajor01.vcd"  //[Pain noise - huh]
+//	scene "scenes/Manager/HurtMajor02.vcd"  //[Pain noise - ahh]
+//	scene "scenes/Manager/HurtMajor03.vcd"  //[Pain noise - oy]
+//	scene "scenes/Manager/HurtMajor04.vcd"  //[Pain noise - oy]
+//	scene "scenes/Manager/HurtMajor05.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Manager/HurtMajor06.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Manager/HurtMajor07.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Manager/HurtMajor08.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Manager/HurtMajor09.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Manager/HurtMajor10.vcd"  //[Pain noise - ugh]
+// }
+// Rule iMT_PlayerNegativeManager
+// {
+//	criteria ConceptPlayerNegative IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+//	forceweight 1000
+//	Response iMT_PlayerNegativeManager
+// }
 
 Response iMT_PlayerNoManager
 {
@@ -1571,25 +1571,25 @@ Rule iMT_PlayerThanksTeenGirlManager
 	Response iMT_PlayerThanksTeenGirlManager
 }
 
-Response iMT_PlayerProfanityManager
-{
-	scene "scenes/Manager/Swears02.vcd"  //Dammit.
-	scene "scenes/Manager/Swears03.vcd"  //Aw hell.
-	scene "scenes/Manager/Swears05.vcd"  //Shit.
-	scene "scenes/Manager/Swears06.vcd"  //Ah shit.
-	scene "scenes/Manager/Swears07.vcd"  //Shit shit shit.
-	scene "scenes/Manager/Swears10.vcd"  //Dammit.
-	scene "scenes/Manager/Swears11.vcd"  //Aw hell.
-	scene "scenes/Manager/Swears12.vcd"  //Shit.
-	scene "scenes/Manager/Swears13.vcd"  //Ah shit.
-	scene "scenes/Manager/Swears16.vcd"  //That's some country-ass bullshit.
-}
-Rule iMT_PlayerProfanityManager
-{
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
-	forceweight 1000
-	Response iMT_PlayerProfanityManager
-}
+// Response iMT_PlayerProfanityManager
+// {
+//	scene "scenes/Manager/Swears02.vcd"  //Dammit.
+//	scene "scenes/Manager/Swears03.vcd"  //Aw hell.
+//	scene "scenes/Manager/Swears05.vcd"  //Shit.
+//	scene "scenes/Manager/Swears06.vcd"  //Ah shit.
+//	scene "scenes/Manager/Swears07.vcd"  //Shit shit shit.
+//	scene "scenes/Manager/Swears10.vcd"  //Dammit.
+//	scene "scenes/Manager/Swears11.vcd"  //Aw hell.
+//	scene "scenes/Manager/Swears12.vcd"  //Shit.
+//	scene "scenes/Manager/Swears13.vcd"  //Ah shit.
+//	scene "scenes/Manager/Swears16.vcd"  //That's some country-ass bullshit.
+// }
+// Rule iMT_PlayerProfanityManager
+// {
+//	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+//	forceweight 1000
+//	Response iMT_PlayerProfanityManager
+// }
 
 Response iMT_PlayerYouAreWelcomeManager
 {

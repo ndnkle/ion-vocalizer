@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 15.0
+// ion's Vocalizer 15.3
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -75,7 +75,7 @@
 		"East"
 		{
 			"command"	"vocalize PlayerNegative"
-			"text"		"Argh"
+			"text"		"Swear"
 		}
 		"SouthEast"
 		{
@@ -115,7 +115,7 @@
 		"North"
 		{
 			"command"	"vocalize PlayerAnswerLostCall"
-			"text"		"Swear"
+			"text"		"I'm here"
 		}
 		"NorthEast"
 		{
@@ -269,8 +269,8 @@
 		}
 		"NorthEast"
 		{
-			"command"	"vocalize ScenarioJoin"
-			"text"		"I'm here"
+			"command"	"vocalize PlayerSpotAmmo"
+			"text"		"Ammo"
 		}
 		"East"
 		{

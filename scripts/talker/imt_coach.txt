@@ -991,34 +991,34 @@ Rule iMT_SurvivorTauntResponseCoach
 	Response iMT_SurvivorTauntResponseCoach
 }
 
-Response iMT_PlayerNegativeCoach
-{
-	scene "scenes/Coach/HurtCritical01.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical02.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical03.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical04.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical05.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical06.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical07.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtCritical08.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Coach/HurtMajor01.vcd"  //[Pain noise - huh]
-	scene "scenes/Coach/HurtMajor02.vcd"  //[Pain noise - huh]
-	scene "scenes/Coach/HurtMajor03.vcd"  //[Pain noise - ahh]
-	scene "scenes/Coach/HurtMajor04.vcd"  //[Pain noise - oy]
-	scene "scenes/Coach/HurtMajor05.vcd"  //[Pain noise - ugh]
-	scene "scenes/Coach/HurtMajor06.vcd"  //[Pain noise - ugh]
-	scene "scenes/Coach/HurtMajor07.vcd"  //[Pain noise - ugh]
-	scene "scenes/Coach/HurtMajor08.vcd"  //[Pain noise - ugh]
-	scene "scenes/Coach/HurtMajor09.vcd"  //[Pain noise - ugh]
-	scene "scenes/Coach/HurtMajor10.vcd"  //[Pain noise - ugh]
-	scene "scenes/Coach/HurtMajor11.vcd"  //[Pain noise - ugh]
-}
-Rule iMT_PlayerNegativeCoach
-{
-	criteria ConceptPlayerNegative IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 1000
-	Response iMT_PlayerNegativeCoach
-}
+// Response iMT_PlayerNegativeCoach
+// {
+//	scene "scenes/Coach/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical06.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical07.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtCritical08.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Coach/HurtMajor01.vcd"  //[Pain noise - huh]
+//	scene "scenes/Coach/HurtMajor02.vcd"  //[Pain noise - huh]
+//	scene "scenes/Coach/HurtMajor03.vcd"  //[Pain noise - ahh]
+//	scene "scenes/Coach/HurtMajor04.vcd"  //[Pain noise - oy]
+//	scene "scenes/Coach/HurtMajor05.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Coach/HurtMajor06.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Coach/HurtMajor07.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Coach/HurtMajor08.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Coach/HurtMajor09.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Coach/HurtMajor10.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Coach/HurtMajor11.vcd"  //[Pain noise - ugh]
+// }
+// Rule iMT_PlayerNegativeCoach
+// {
+//	criteria ConceptPlayerNegative IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+//	forceweight 1000
+//	Response iMT_PlayerNegativeCoach
+// }
 
 Response iMT_PlayerSorryCoach
 {

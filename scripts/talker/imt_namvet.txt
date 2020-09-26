@@ -1349,33 +1349,33 @@ Rule iMT_SurvivorTauntResponseNamVet
 	Response iMT_SurvivorTauntResponseNamVet
 }
 
-Response iMT_PlayerNegativeNamVet
-{
-	scene "scenes/NamVet/HurtCritical01.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical02.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical03.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical04.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical05.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical06.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical07.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical08.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical09.vcd"  //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtMajor01.vcd"  //[pain noise - ahh]
-	scene "scenes/NamVet/HurtMajor02.vcd"  //[pain noise - huh]
-	scene "scenes/NamVet/HurtMajor03.vcd"  //[pain noise - oy]
-	scene "scenes/NamVet/HurtMajor04.vcd"  //[pain noise - ugh]
-	scene "scenes/NamVet/HurtMajor05.vcd"  //[pain noise - ugh]
-	scene "scenes/NamVet/HurtMajor06.vcd"  //[pain noise - ugh]
-	scene "scenes/NamVet/HurtMajor07.vcd"  //[pain noise - ugh]
-	scene "scenes/NamVet/HurtMajor08.vcd"  //[pain noise - oy]
-	scene "scenes/NamVet/HurtMajor09.vcd"  //[pain noise - ugh]
-}
-Rule iMT_PlayerNegativeNamVet
-{
-	criteria ConceptPlayerNegative IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_PlayerNegativeNamVet
-}
+// Response iMT_PlayerNegativeNamVet
+// {
+//	scene "scenes/NamVet/HurtCritical01.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtCritical02.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtCritical03.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtCritical04.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtCritical05.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtCritical06.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtCritical07.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtCritical08.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtCritical09.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/NamVet/HurtMajor01.vcd"  //[pain noise - ahh]
+//	scene "scenes/NamVet/HurtMajor02.vcd"  //[pain noise - huh]
+//	scene "scenes/NamVet/HurtMajor03.vcd"  //[pain noise - oy]
+//	scene "scenes/NamVet/HurtMajor04.vcd"  //[pain noise - ugh]
+//	scene "scenes/NamVet/HurtMajor05.vcd"  //[pain noise - ugh]
+//	scene "scenes/NamVet/HurtMajor06.vcd"  //[pain noise - ugh]
+//	scene "scenes/NamVet/HurtMajor07.vcd"  //[pain noise - ugh]
+//	scene "scenes/NamVet/HurtMajor08.vcd"  //[pain noise - oy]
+//	scene "scenes/NamVet/HurtMajor09.vcd"  //[pain noise - ugh]
+// }
+// Rule iMT_PlayerNegativeNamVet
+// {
+//	criteria ConceptPlayerNegative IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+//	forceweight 1000
+//	Response iMT_PlayerNegativeNamVet
+// }
 
 Response iMT_PlayerSorryNamVet
 {
@@ -1412,31 +1412,31 @@ Rule iMT_PlayerHurrahNamVet
 	Response iMT_PlayerHurrahNamVet
 }
 
-Response iMT_PlayerProfanityNamVet
-{
-	scene "scenes/NamVet/C6DLC3MovieLine11.vcd"  //Awwww, horseshit.
-	scene "scenes/NamVet/ReactionDisgusted04.vcd"  //Oh shit.
-	scene "scenes/NamVet/ReactionNegative07.vcd"  //God dammit
-	scene "scenes/NamVet/ReactionNegative09.vcd"  //Son of a bitch
-	scene "scenes/NamVet/ReactionNegative10.vcd"  //Dammit
-	scene "scenes/NamVet/SwearCoupdeGrace02.vcd"  //Go to hell.
-	scene "scenes/NamVet/Swears03.vcd"  //Son of a bitch.
-	scene "scenes/NamVet/Swears04.vcd"  //Bull-frickin-horseshit.
-	scene "scenes/NamVet/Swears05.vcd"  //Mother. Humper.
-	scene "scenes/NamVet/Swears07.vcd"  //Ah hell.
-	scene "scenes/NamVet/Swears08.vcd"  //Dammit.
-	scene "scenes/NamVet/Swears09.vcd"  //God DAMMIT.
-	scene "scenes/NamVet/Swears12.vcd"  //Ah shit.
-	scene "scenes/NamVet/Swears16.vcd"  //Ah shit.
-	scene "scenes/NamVet/Swears19.vcd"  //What a crock a' shit...
-	scene "scenes/NamVet/WorldHospital0318.vcd"  //That's a crock of shit.
-}
-Rule iMT_PlayerProfanityNamVet
-{
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_PlayerProfanityNamVet
-}
+// Response iMT_PlayerProfanityNamVet
+// {
+//	scene "scenes/NamVet/C6DLC3MovieLine11.vcd"  //Awwww, horseshit.
+//	scene "scenes/NamVet/ReactionDisgusted04.vcd"  //Oh shit.
+//	scene "scenes/NamVet/ReactionNegative07.vcd"  //God dammit
+//	scene "scenes/NamVet/ReactionNegative09.vcd"  //Son of a bitch
+//	scene "scenes/NamVet/ReactionNegative10.vcd"  //Dammit
+//	scene "scenes/NamVet/SwearCoupdeGrace02.vcd"  //Go to hell.
+//	scene "scenes/NamVet/Swears03.vcd"  //Son of a bitch.
+//	scene "scenes/NamVet/Swears04.vcd"  //Bull-frickin-horseshit.
+//	scene "scenes/NamVet/Swears05.vcd"  //Mother. Humper.
+//	scene "scenes/NamVet/Swears07.vcd"  //Ah hell.
+//	scene "scenes/NamVet/Swears08.vcd"  //Dammit.
+//	scene "scenes/NamVet/Swears09.vcd"  //God DAMMIT.
+//	scene "scenes/NamVet/Swears12.vcd"  //Ah shit.
+//	scene "scenes/NamVet/Swears16.vcd"  //Ah shit.
+//	scene "scenes/NamVet/Swears19.vcd"  //What a crock a' shit...
+//	scene "scenes/NamVet/WorldHospital0318.vcd"  //That's a crock of shit.
+// }
+// Rule iMT_PlayerProfanityNamVet
+// {
+//	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+//	forceweight 1000
+//	Response iMT_PlayerProfanityNamVet
+// }
 
 Response iMT_PlayerYouAreWelcomeNamVet
 {

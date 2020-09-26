@@ -1395,37 +1395,37 @@ Rule iMT_SurvivorTauntResponseBiker
 	Response iMT_SurvivorTauntResponseBiker
 }
 
-Response iMT_PlayerNegativeBiker
-{
-	scene "scenes/Biker/HurtCritical01.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical02.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical03.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical04.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical05.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical06.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical07.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical08.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical09.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical10.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical11.vcd"  //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtMajor01.vcd"  //[Pain noise - ahh]
-	scene "scenes/Biker/HurtMajor02.vcd"  //[Pain noise - huh]
-	scene "scenes/Biker/HurtMajor03.vcd"  //[Pain noise - oy]
-	scene "scenes/Biker/HurtMajor04.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor05.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor06.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor07.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor08.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor09.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor10.vcd"  //[Pain noise - ugh]
-	scene "scenes/Biker/HurtMajor11.vcd"  //[Pain noise - ugh]
-}
-Rule iMT_PlayerNegativeBiker
-{
-	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
-	forceweight 1000
-	Response iMT_PlayerNegativeBiker
-}
+// Response iMT_PlayerNegativeBiker
+// {
+//	scene "scenes/Biker/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical06.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical07.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical08.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical09.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical10.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtCritical11.vcd"  //[Pain noise - loud major pain]
+//	scene "scenes/Biker/HurtMajor01.vcd"  //[Pain noise - ahh]
+//	scene "scenes/Biker/HurtMajor02.vcd"  //[Pain noise - huh]
+//	scene "scenes/Biker/HurtMajor03.vcd"  //[Pain noise - oy]
+//	scene "scenes/Biker/HurtMajor04.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Biker/HurtMajor05.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Biker/HurtMajor06.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Biker/HurtMajor07.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Biker/HurtMajor08.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Biker/HurtMajor09.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Biker/HurtMajor10.vcd"  //[Pain noise - ugh]
+//	scene "scenes/Biker/HurtMajor11.vcd"  //[Pain noise - ugh]
+// }
+// Rule iMT_PlayerNegativeBiker
+// {
+//	criteria ConceptPlayerNegative IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+//	forceweight 1000
+//	Response iMT_PlayerNegativeBiker
+// }
 
 Response iMT_PlayerSorryBiker
 {
@@ -1536,36 +1536,36 @@ Rule iMT_PlayerThanksTeenGirlBiker
 	Response iMT_PlayerThanksTeenGirlBiker
 }
 
-Response iMT_PlayerProfanityBiker
-{
-	scene "scenes/Biker/ReactionNegative05.vcd"  //Shit
-	scene "scenes/Biker/ReactionNegative06.vcd"  //Ah shit.
-	scene "scenes/Biker/ReactionNegative07.vcd"  //Damnit.
-	scene "scenes/Biker/ReactionNegative08.vcd"  //Damnit.
-	scene "scenes/Biker/ReactionNegative10.vcd"  //Effin hell.
-	scene "scenes/Biker/Swear01.vcd"  //Goddammit.
-	scene "scenes/Biker/Swear02.vcd"  //Shit.
-	scene "scenes/Biker/Swear03.vcd"  //Ah shit.
-	scene "scenes/Biker/Swear04.vcd"  //Ah hell.
-	scene "scenes/Biker/Swear06.vcd"  //Crap.
-	scene "scenes/Biker/Swear08.vcd"  //Ah bullshit.
-	scene "scenes/Biker/Swear09.vcd"  //Dammit.
-	scene "scenes/Biker/Swear10.vcd"  //Bullshit.
-	scene "scenes/Biker/Swear12.vcd"  //Shit.
-	scene "scenes/Biker/Swear14.vcd"  //Ah hell.
-	scene "scenes/Biker/Swear15.vcd"  //Son of a bitch.
-	scene "scenes/Biker/Swear16.vcd"  //Ah bullshit.
-	scene "scenes/Biker/Swear17.vcd"  //Dammit.
-	scene "scenes/Biker/Swear18.vcd"  //Bullshit.
-	scene "scenes/Biker/Swear19.vcd"  //Ah bullshit.
-	scene "scenes/Biker/SwearCoupDeGrace01.vcd"  //Burn you son of a bitch.
-}
-Rule iMT_PlayerProfanityBiker
-{
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
-	forceweight 1000
-	Response iMT_PlayerProfanityBiker
-}
+// Response iMT_PlayerProfanityBiker
+// {
+//	scene "scenes/Biker/ReactionNegative05.vcd"  //Shit
+//	scene "scenes/Biker/ReactionNegative06.vcd"  //Ah shit.
+//	scene "scenes/Biker/ReactionNegative07.vcd"  //Damnit.
+//	scene "scenes/Biker/ReactionNegative08.vcd"  //Damnit.
+//	scene "scenes/Biker/ReactionNegative10.vcd"  //Effin hell.
+//	scene "scenes/Biker/Swear01.vcd"  //Goddammit.
+//	scene "scenes/Biker/Swear02.vcd"  //Shit.
+//	scene "scenes/Biker/Swear03.vcd"  //Ah shit.
+//	scene "scenes/Biker/Swear04.vcd"  //Ah hell.
+//	scene "scenes/Biker/Swear06.vcd"  //Crap.
+//	scene "scenes/Biker/Swear08.vcd"  //Ah bullshit.
+//	scene "scenes/Biker/Swear09.vcd"  //Dammit.
+//	scene "scenes/Biker/Swear10.vcd"  //Bullshit.
+//	scene "scenes/Biker/Swear12.vcd"  //Shit.
+//	scene "scenes/Biker/Swear14.vcd"  //Ah hell.
+//	scene "scenes/Biker/Swear15.vcd"  //Son of a bitch.
+//	scene "scenes/Biker/Swear16.vcd"  //Ah bullshit.
+//	scene "scenes/Biker/Swear17.vcd"  //Dammit.
+//	scene "scenes/Biker/Swear18.vcd"  //Bullshit.
+//	scene "scenes/Biker/Swear19.vcd"  //Ah bullshit.
+//	scene "scenes/Biker/SwearCoupDeGrace01.vcd"  //Burn you son of a bitch.
+// }
+// Rule iMT_PlayerProfanityBiker
+// {
+//	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+//	forceweight 1000
+//	Response iMT_PlayerProfanityBiker
+// }
 
 Response iMT_PlayerYouAreWelcomeBiker
 {

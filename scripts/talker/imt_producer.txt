@@ -927,23 +927,23 @@ Rule iMT_SurvivorTauntResponseProducer
 	Response iMT_SurvivorTauntResponseProducer
 }
 
-Response iMT_PlayerNegativeProducer
-{
-	scene "scenes/Producer/HurtCritical01.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Producer/HurtCritical02.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Producer/HurtCritical03.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Producer/HurtCritical04.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Producer/HurtMajor01.vcd"  //[pain noise - huh]
-	scene "scenes/Producer/HurtMajor02.vcd"  //[pain noise - ahh]
-	scene "scenes/Producer/HurtMajor03.vcd"  //[pain noise - oy]
-	scene "scenes/Producer/HurtMajor04.vcd"  //[pain noise - ugh]
-}
-Rule iMT_PlayerNegativeProducer
-{
-	criteria ConceptPlayerNegative IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
-	forceweight 1000
-	Response iMT_PlayerNegativeProducer
-}
+// Response iMT_PlayerNegativeProducer
+// {
+//	scene "scenes/Producer/HurtCritical01.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Producer/HurtCritical02.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Producer/HurtCritical03.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Producer/HurtCritical04.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Producer/HurtMajor01.vcd"  //[pain noise - huh]
+//	scene "scenes/Producer/HurtMajor02.vcd"  //[pain noise - ahh]
+//	scene "scenes/Producer/HurtMajor03.vcd"  //[pain noise - oy]
+//	scene "scenes/Producer/HurtMajor04.vcd"  //[pain noise - ugh]
+// }
+// Rule iMT_PlayerNegativeProducer
+// {
+//	criteria ConceptPlayerNegative IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
+//	forceweight 1000
+//	Response iMT_PlayerNegativeProducer
+// }
 
 Response iMT_PlayerSorryProducer
 {

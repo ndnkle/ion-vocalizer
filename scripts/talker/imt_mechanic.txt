@@ -1054,27 +1054,27 @@ Rule iMT_SurvivorTauntResponseMechanic
 	Response iMT_SurvivorTauntResponseMechanic
 }
 
-Response iMT_PlayerNegativeMechanic
-{
-	scene "scenes/Mechanic/HurtCritical01.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical02.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical03.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical04.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtCritical06.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Mechanic/HurtMajor01.vcd"  //[pain noise - huh]
-	scene "scenes/Mechanic/HurtMajor02.vcd"  //[pain noise - ahh]
-	scene "scenes/Mechanic/HurtMajor03.vcd"  //[pain noise - oy]
-	scene "scenes/Mechanic/HurtMajor04.vcd"  //[pain noise - ugh]
-	scene "scenes/Mechanic/HurtMajor05.vcd"  //[pain noise - ugh]
-	scene "scenes/Mechanic/HurtMajor06.vcd"  //[pain noise - ugh]
-}
-Rule iMT_PlayerNegativeMechanic
-{
-	criteria ConceptPlayerNegative IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	forceweight 1000
-	Response iMT_PlayerNegativeMechanic
-}
+// Response iMT_PlayerNegativeMechanic
+// {
+//	scene "scenes/Mechanic/HurtCritical01.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical02.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical03.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical04.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtCritical06.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Mechanic/HurtMajor01.vcd"  //[pain noise - huh]
+//	scene "scenes/Mechanic/HurtMajor02.vcd"  //[pain noise - ahh]
+//	scene "scenes/Mechanic/HurtMajor03.vcd"  //[pain noise - oy]
+//	scene "scenes/Mechanic/HurtMajor04.vcd"  //[pain noise - ugh]
+//	scene "scenes/Mechanic/HurtMajor05.vcd"  //[pain noise - ugh]
+//	scene "scenes/Mechanic/HurtMajor06.vcd"  //[pain noise - ugh]
+// }
+// Rule iMT_PlayerNegativeMechanic
+// {
+//	criteria ConceptPlayerNegative IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+//	forceweight 1000
+//	Response iMT_PlayerNegativeMechanic
+// }
 
 Response iMT_PlayerSorryMechanic
 {

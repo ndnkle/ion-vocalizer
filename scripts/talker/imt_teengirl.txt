@@ -1353,28 +1353,28 @@ Rule iMT_SurvivorTauntResponseTeenGirl
 	Response iMT_SurvivorTauntResponseTeenGirl
 }
 
-Response iMT_PlayerNegativeTeenGirl
-{
-	scene "scenes/TeenGirl/HurtCritical01.vcd"  //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical02.vcd"  //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical03.vcd"  //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical04.vcd"  //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical05.vcd"  //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical06.vcd"  //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtCritical07.vcd"  //[pain noise - loud major pain]
-	scene "scenes/TeenGirl/HurtMajor01.vcd"  //[pain noise - ahh]
-	scene "scenes/TeenGirl/HurtMajor02.vcd"  //[pain noise - huh]
-	scene "scenes/TeenGirl/HurtMajor03.vcd"  //[pain noise - oy]
-	scene "scenes/TeenGirl/HurtMajor04.vcd"  //[pain noise - ugh]
-	scene "scenes/TeenGirl/HurtMajor05.vcd"  //[pain noise - ugh]
-	scene "scenes/TeenGirl/HurtMajor06.vcd"  //[pain noise - ugh]
-}
-Rule iMT_PlayerNegativeTeenGirl
-{
-	criteria ConceptPlayerNegative IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
-	forceweight 1000
-	Response iMT_PlayerNegativeTeenGirl
-}
+// Response iMT_PlayerNegativeTeenGirl
+// {
+//	scene "scenes/TeenGirl/HurtCritical01.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical02.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical03.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical04.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical05.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical06.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtCritical07.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/TeenGirl/HurtMajor01.vcd"  //[pain noise - ahh]
+//	scene "scenes/TeenGirl/HurtMajor02.vcd"  //[pain noise - huh]
+//	scene "scenes/TeenGirl/HurtMajor03.vcd"  //[pain noise - oy]
+//	scene "scenes/TeenGirl/HurtMajor04.vcd"  //[pain noise - ugh]
+//	scene "scenes/TeenGirl/HurtMajor05.vcd"  //[pain noise - ugh]
+//	scene "scenes/TeenGirl/HurtMajor06.vcd"  //[pain noise - ugh]
+// }
+// Rule iMT_PlayerNegativeTeenGirl
+// {
+//	criteria ConceptPlayerNegative IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+//	forceweight 1000
+//	Response iMT_PlayerNegativeTeenGirl
+// }
 
 Response iMT_PlayerSorryTeenGirl
 {
@@ -1497,26 +1497,26 @@ Rule iMT_PlayerThanksNamVetTeenGirl
 	Response iMT_PlayerThanksNamVetTeenGirl
 }
 
-Response iMT_PlayerProfanityTeenGirl
-{
-	scene "scenes/TeenGirl/ReactionNegative17.vcd"  //Shit  (matter of factly)
-	scene "scenes/TeenGirl/ReactionNegative25.vcd"  //Crap
-	scene "scenes/TeenGirl/ReactionNegative31.vcd"  //Shit  (matter of factly)
-	scene "scenes/TeenGirl/Swear02.vcd"  //Shit.
-	scene "scenes/TeenGirl/Swear06.vcd"  //Mother.
-	scene "scenes/TeenGirl/Swear09.vcd"  //Ah bullshit.
-	scene "scenes/TeenGirl/Swear10.vcd"  //Dammit.
-	scene "scenes/TeenGirl/Swear12.vcd"  //Shit.
-	scene "scenes/TeenGirl/Swear13.vcd"  //Goddammit.
-	scene "scenes/TeenGirl/Swear14.vcd"  //Shit.
-	scene "scenes/TeenGirl/Swear22.vcd"  //Dammit.
-}
-Rule iMT_PlayerProfanityTeenGirl
-{
-	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
-	forceweight 1000
-	Response iMT_PlayerProfanityTeenGirl
-}
+// Response iMT_PlayerProfanityTeenGirl
+// {
+//	scene "scenes/TeenGirl/ReactionNegative17.vcd"  //Shit  (matter of factly)
+//	scene "scenes/TeenGirl/ReactionNegative25.vcd"  //Crap
+//	scene "scenes/TeenGirl/ReactionNegative31.vcd"  //Shit  (matter of factly)
+//	scene "scenes/TeenGirl/Swear02.vcd"  //Shit.
+//	scene "scenes/TeenGirl/Swear06.vcd"  //Mother.
+//	scene "scenes/TeenGirl/Swear09.vcd"  //Ah bullshit.
+//	scene "scenes/TeenGirl/Swear10.vcd"  //Dammit.
+//	scene "scenes/TeenGirl/Swear12.vcd"  //Shit.
+//	scene "scenes/TeenGirl/Swear13.vcd"  //Goddammit.
+//	scene "scenes/TeenGirl/Swear14.vcd"  //Shit.
+//	scene "scenes/TeenGirl/Swear22.vcd"  //Dammit.
+// }
+// Rule iMT_PlayerProfanityTeenGirl
+// {
+//	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
+//	forceweight 1000
+//	Response iMT_PlayerProfanityTeenGirl
+// }
 
 Response iMT_PlayerYouAreWelcomeTeenGirl
 {

@@ -979,34 +979,34 @@ Rule iMT_SurvivorTauntResponseGambler
 	Response iMT_SurvivorTauntResponseGambler
 }
 
-Response iMT_PlayerNegativeGambler
-{
-	scene "scenes/Gambler/HurtCritical01.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical02.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical03.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical04.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical05.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical06.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtCritical07.vcd"  //[pain noise - loud major pain]
-	scene "scenes/Gambler/HurtMajor01.vcd"  //[pain noise - huh]
-	scene "scenes/Gambler/HurtMajor02.vcd"  //[pain noise - ahh]
-	scene "scenes/Gambler/HurtMajor03.vcd"  //[pain noise - oy]
-	scene "scenes/Gambler/HurtMajor04.vcd"  //[pain noise - ugh]
-	scene "scenes/Gambler/HurtMajor05.vcd"  //[pain noise - ugh]
-	scene "scenes/Gambler/HurtMajor06.vcd"  //[pain noise - ugh]
-	scene "scenes/Gambler/HurtMajor07.vcd"  //[pain noise - ugh]
-	scene "scenes/Gambler/HurtMajor08.vcd"  //[pain noise - ugh]
-	scene "scenes/Gambler/HurtMajor09.vcd"  //[pain noise - ugh]
-	scene "scenes/Gambler/HurtMajor10.vcd"  //[pain noise - ugh]
-	scene "scenes/Gambler/HurtMajor11.vcd"  //[pain noise - ugh]
-
-}
-Rule iMT_PlayerNegativeGambler
-{
-	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
-	forceweight 1000
-	Response iMT_PlayerNegativeGambler
-}
+// Response iMT_PlayerNegativeGambler
+// {
+//	scene "scenes/Gambler/HurtCritical01.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical02.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical03.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical04.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical05.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical06.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtCritical07.vcd"  //[pain noise - loud major pain]
+//	scene "scenes/Gambler/HurtMajor01.vcd"  //[pain noise - huh]
+//	scene "scenes/Gambler/HurtMajor02.vcd"  //[pain noise - ahh]
+//	scene "scenes/Gambler/HurtMajor03.vcd"  //[pain noise - oy]
+//	scene "scenes/Gambler/HurtMajor04.vcd"  //[pain noise - ugh]
+//	scene "scenes/Gambler/HurtMajor05.vcd"  //[pain noise - ugh]
+//	scene "scenes/Gambler/HurtMajor06.vcd"  //[pain noise - ugh]
+//	scene "scenes/Gambler/HurtMajor07.vcd"  //[pain noise - ugh]
+//	scene "scenes/Gambler/HurtMajor08.vcd"  //[pain noise - ugh]
+//	scene "scenes/Gambler/HurtMajor09.vcd"  //[pain noise - ugh]
+//	scene "scenes/Gambler/HurtMajor10.vcd"  //[pain noise - ugh]
+//	scene "scenes/Gambler/HurtMajor11.vcd"  //[pain noise - ugh]
+//
+// }
+// Rule iMT_PlayerNegativeGambler
+// {
+//	criteria ConceptPlayerNegative IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
+//	forceweight 1000
+//	Response iMT_PlayerNegativeGambler
+// }
 
 Response iMT_PlayerSorryGambler
 {
