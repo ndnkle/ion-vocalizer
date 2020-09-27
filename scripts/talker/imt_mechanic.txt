@@ -1080,12 +1080,12 @@ Response iMT_PlayerSorryMechanic
 {
 	scene "scenes/Mechanic/Sorry01.vcd"  //Sorry.
 	scene "scenes/Mechanic/Sorry02.vcd"  //Sorry 'bout that.
-	scene "scenes/Mechanic/Sorry03.vcd" then subject PlayerAnswerLostCall foo:0 0  //You can lay that blame on me.
-	scene "scenes/Mechanic/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //That coulda happened to anybody.
+	scene "scenes/Mechanic/Sorry03.vcd" then subject PlayerNegative foo:0 0  //You can lay that blame on me.
+	scene "scenes/Mechanic/Sorry04.vcd" then subject PlayerNegative foo:0 0  //That coulda happened to anybody.
 	scene "scenes/Mechanic/Sorry05.vcd"  //Yeah, I'm sorry about that one.
-	scene "scenes/Mechanic/Sorry06.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry, sun was in my eyes.
+	scene "scenes/Mechanic/Sorry06.vcd" then subject PlayerNegative foo:0 0  //Sorry, sun was in my eyes.
 	scene "scenes/Mechanic/Sorry07.vcd"  //Sorry 'bout that.
-	scene "scenes/Mechanic/Sorry08.vcd" then subject PlayerAnswerLostCall foo:0 0  //My bad on that one.
+	scene "scenes/Mechanic/Sorry08.vcd" then subject PlayerNegative foo:0 0  //My bad on that one.
 	scene "scenes/Mechanic/Sorry09.vcd"  //Sorry!
 	scene "scenes/Mechanic/Sorry10.vcd"  //Sorry over there.
 }

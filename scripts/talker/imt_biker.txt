@@ -1431,20 +1431,20 @@ Response iMT_PlayerSorryBiker
 {
 	scene "scenes/Biker/Sorry01.vcd"  //Sorry.
 	scene "scenes/Biker/Sorry02.vcd"  //Sorry about that.
-	scene "scenes/Biker/Sorry03.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry about that.
-	scene "scenes/Biker/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //Aww, man, sorry.
+	scene "scenes/Biker/Sorry03.vcd" then subject PlayerNegative foo:0 0  //Sorry about that.
+	scene "scenes/Biker/Sorry04.vcd" then subject PlayerNegative foo:0 0  //Aww, man, sorry.
 	scene "scenes/Biker/Sorry05.vcd"  //Sorry.
 	scene "scenes/Biker/Sorry06.vcd"  //Sorry about that.
 	scene "scenes/Biker/Sorry07.vcd"  //Yeah, guess that was my fault.
-	scene "scenes/Biker/Sorry08.vcd" then subject PlayerAnswerLostCall foo:0 0  //Yeah, guess that was my fault. Again.
+	scene "scenes/Biker/Sorry08.vcd" then subject PlayerNegative foo:0 0  //Yeah, guess that was my fault. Again.
 	scene "scenes/Biker/Sorry09.vcd"  //Sorry.
-	scene "scenes/Biker/Sorry10.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry, man, shit happens.
+	scene "scenes/Biker/Sorry10.vcd" then subject PlayerNegative foo:0 0  //Sorry, man, shit happens.
 	scene "scenes/Biker/Sorry12.vcd"  //My bad.
 	scene "scenes/Biker/Sorry13.vcd"  //Whoopsie.
-	scene "scenes/Biker/Sorry14.vcd" then subject PlayerAnswerLostCall foo:0 0  //Uh, yeah, sorry.
+	scene "scenes/Biker/Sorry14.vcd" then subject PlayerNegative foo:0 0  //Uh, yeah, sorry.
 	scene "scenes/Biker/Sorry15.vcd"  //Sorry.
 	scene "scenes/Biker/Sorry16.vcd"  //oopsy daisy
-	scene "scenes/Biker/Sorry17.vcd" then subject PlayerAnswerLostCall foo:0 0  //That was my fault.
+	scene "scenes/Biker/Sorry17.vcd" then subject PlayerNegative foo:0 0  //That was my fault.
 	scene "scenes/Biker/Sorry18.vcd"  //My bad.
 }
 Rule iMT_PlayerSorryBiker

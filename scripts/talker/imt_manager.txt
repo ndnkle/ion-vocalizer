@@ -1483,10 +1483,10 @@ Response iMT_PlayerSorryManager
 {
 	scene "scenes/Manager/Sorry01.vcd"  //Sorry!
 	scene "scenes/Manager/Sorry02.vcd"  //Sorry!
-	scene "scenes/Manager/Sorry03.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry about that!
-	scene "scenes/Manager/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //Aww, man, sorry.
-	scene "scenes/Manager/Sorry06.vcd" then subject PlayerAnswerLostCall foo:0 0  //My bad.
-	scene "scenes/Manager/Sorry07.vcd" then subject PlayerAnswerLostCall foo:0 0  //100% my fault
+	scene "scenes/Manager/Sorry03.vcd" then subject PlayerNegative foo:0 0  //Sorry about that!
+	scene "scenes/Manager/Sorry04.vcd" then subject PlayerNegative foo:0 0  //Aww, man, sorry.
+	scene "scenes/Manager/Sorry06.vcd" then subject PlayerNegative foo:0 0  //My bad.
+	scene "scenes/Manager/Sorry07.vcd" then subject PlayerNegative foo:0 0  //100% my fault
 }
 Rule iMT_PlayerSorryManager
 {

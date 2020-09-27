@@ -1378,10 +1378,10 @@ Rule iMT_SurvivorTauntResponseTeenGirl
 
 Response iMT_PlayerSorryTeenGirl
 {
-	scene "scenes/TeenGirl/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //Oops, sorry
+	scene "scenes/TeenGirl/Sorry04.vcd" then subject PlayerNegative foo:0 0  //Oops, sorry
 	scene "scenes/TeenGirl/Sorry05.vcd"  //Sorry about that
 	scene "scenes/TeenGirl/Sorry06.vcd"  //Oh, my bad
-	scene "scenes/TeenGirl/Sorry07.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry
+	scene "scenes/TeenGirl/Sorry07.vcd" then subject PlayerNegative foo:0 0  //Sorry
 	scene "scenes/TeenGirl/Sorry08.vcd"  //I am really sorry
 	scene "scenes/TeenGirl/Sorry09.vcd"  //My bad
 	scene "scenes/TeenGirl/Sorry10.vcd"  //I am so sorry
@@ -1389,12 +1389,12 @@ Response iMT_PlayerSorryTeenGirl
 	scene "scenes/TeenGirl/Sorry12.vcd"  //I really am sorry 'bout that
 	scene "scenes/TeenGirl/Sorry13.vcd"  //Oops, sorry
 	scene "scenes/TeenGirl/Sorry14.vcd"  //Sorry
-	scene "scenes/TeenGirl/Sorry15.vcd" then subject PlayerAnswerLostCall foo:0 0  //Sorry about that
-	scene "scenes/TeenGirl/Sorry16.vcd" then subject PlayerAnswerLostCall foo:0 0  //Oh, my bad
+	scene "scenes/TeenGirl/Sorry15.vcd" then subject PlayerNegative foo:0 0  //Sorry about that
+	scene "scenes/TeenGirl/Sorry16.vcd" then subject PlayerNegative foo:0 0  //Oh, my bad
 	scene "scenes/TeenGirl/Sorry17.vcd"  //I'm really sorry
-	scene "scenes/TeenGirl/Sorry18.vcd" then subject PlayerAnswerLostCall foo:0 0  //I'm really sorry
+	scene "scenes/TeenGirl/Sorry18.vcd" then subject PlayerNegative foo:0 0  //I'm really sorry
 	scene "scenes/TeenGirl/Sorry20.vcd"  //I am so sorry
-	scene "scenes/TeenGirl/Sorry23.vcd" then subject PlayerAnswerLostCall foo:0 0  //Ohh, sorry!
+	scene "scenes/TeenGirl/Sorry23.vcd" then subject PlayerNegative foo:0 0  //Ohh, sorry!
 }
 Rule iMT_PlayerSorryTeenGirl
 {

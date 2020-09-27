@@ -1023,11 +1023,11 @@ Rule iMT_SurvivorTauntResponseCoach
 Response iMT_PlayerSorryCoach
 {
 	scene "scenes/Coach/Sorry01.vcd"  //Shit, my bad.
-	scene "scenes/Coach/Sorry02.vcd" then subject PlayerAnswerLostCall foo:0 0  //That right there was my fault.
+	scene "scenes/Coach/Sorry02.vcd" then subject PlayerNegative foo:0 0  //That right there was my fault.
 	scene "scenes/Coach/Sorry03.vcd"  //My bad.
 	scene "scenes/Coach/Sorry04.vcd"  //Sorry.
 	scene "scenes/Coach/Sorry05.vcd"  //Hey, sorry.
-	scene "scenes/Coach/Sorry06.vcd" then subject PlayerAnswerLostCall foo:0 0  //Ha, you know what? My bad.
+	scene "scenes/Coach/Sorry06.vcd" then subject PlayerNegative foo:0 0  //Ha, you know what? My bad.
 	scene "scenes/Coach/Sorry07.vcd"  //Oh shit, sorry.
 }
 Rule iMT_PlayerSorryCoach

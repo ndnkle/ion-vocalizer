@@ -948,12 +948,12 @@ Rule iMT_SurvivorTauntResponseProducer
 Response iMT_PlayerSorryProducer
 {
 	scene "scenes/Producer/Sorry01.vcd"  //Sorry.
-	scene "scenes/Producer/Sorry02.vcd" then subject PlayerAnswerLostCall foo:0 0  //Oh man, you can blame that one on me.
+	scene "scenes/Producer/Sorry02.vcd" then subject PlayerNegative foo:0 0  //Oh man, you can blame that one on me.
 	scene "scenes/Producer/Sorry03.vcd"  //Sorry about that.
-	scene "scenes/Producer/Sorry04.vcd" then subject PlayerAnswerLostCall foo:0 0  //Okay that was a mistake.
+	scene "scenes/Producer/Sorry04.vcd" then subject PlayerNegative foo:0 0  //Okay that was a mistake.
 	scene "scenes/Producer/Sorry05.vcd"  //Sorry.
 	scene "scenes/Producer/Sorry06.vcd"  //Guilty, sorry!
-	scene "scenes/Producer/Sorry07.vcd" then subject PlayerAnswerLostCall foo:0 0  //Oh I'm sorry.
+	scene "scenes/Producer/Sorry07.vcd" then subject PlayerNegative foo:0 0  //Oh I'm sorry.
 	scene "scenes/Producer/Sorry08.vcd"  //Sorry.
 }
 Rule iMT_PlayerSorryProducer

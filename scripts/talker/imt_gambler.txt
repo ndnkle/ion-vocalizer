@@ -1014,10 +1014,10 @@ Response iMT_PlayerSorryGambler
 	scene "scenes/Gambler/Sorry02.vcd"  //Excuse me.
 	scene "scenes/Gambler/Sorry03.vcd"  //Forgive me, okay?
 	scene "scenes/Gambler/Sorry04.vcd"  //Well sorry.
-	scene "scenes/Gambler/Sorry05.vcd" then subject PlayerAnswerLostCall foo:0 0  //I'm sorry is that what you want me to say?
+	scene "scenes/Gambler/Sorry05.vcd" then subject PlayerNegative foo:0 0  //I'm sorry is that what you want me to say?
 	scene "scenes/Gambler/Sorry06.vcd"  //I'm sorry, okay?
 	scene "scenes/Gambler/Sorry07.vcd"  //Can you forgive me?
-	scene "scenes/Gambler/Sorry08.vcd" then subject PlayerAnswerLostCall foo:0 0  //Don't look at me like that.
+	scene "scenes/Gambler/Sorry08.vcd" then subject PlayerNegative foo:0 0  //Don't look at me like that.
 }
 Rule iMT_PlayerSorryGambler
 {
