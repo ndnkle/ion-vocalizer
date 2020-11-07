@@ -2,546 +2,126 @@
 // ion's Vocalizer: Coach Response Rule File
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_SingingCoach
-{
-	scene "scenes/Coach/DLC1_C6M2_SuitcasePistols01.vcd" odds 20  //[singing] "...a suitcase full of pistols and MON-NAY!"
-	scene "scenes/Coach/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn... dunh-nuh-NAH-nuh-NAH-nha!
-	scene "scenes/Coach/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around... dunh-nuh-NAH-nuh-NAH-nha!
-}
-Rule iMT_SingingCoach
-{
-	criteria iMT_Singing IsCoach
-	Response iMT_SingingCoach
-}
-
-Response iMT_WhatCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_FinaleChat01.vcd"  //WHAT??
-}
-Rule iMT_WhatCoach
-{
-	criteria iMT_What IsCoach
-	Response iMT_WhatCoach
-}
-
-Response iMT_NeighborhoodCoach
-{
-	scene "scenes/Coach/TeaserIntroMovie03.vcd" //This used to be a NICE NEIGHBORHOOD!
-	scene "scenes/Coach/TeaserIntroMovie04.vcd" //This used to be a NICE NEIGHBORHOOD!
-}
-Rule iMT_NeighborhoodCoach
-{
-	criteria iMT_Neighborhood IsCoach
-	Response iMT_NeighborhoodCoach
-}
-
-Response iMT_ApocalypseCoach
-{
-	scene "scenes/Coach/WorldC2M2B23.vcd"  //I find a Burger Tank in this place? I'm-a be a one-man cheeseburger apocalypse.
-}
-Rule iMT_ApocalypseCoach
-{
-	criteria iMT_Apocalypse IsCoach
-	Response iMT_ApocalypseCoach
-}
-
-Response iMT_DreamingCoach
-{
-	scene "scenes/Coach/DLC1_C6M2_MidnightRiders01.vcd"  //Man, I think I just saw... nah.
-	scene "scenes/Coach/DLC1_C6M2_MidnightRiders02.vcd"  //I must be dreaming.
-	scene "scenes/Coach/DLC1_C6M2_MidnightRiders03.vcd"  //I think I just saw... nah.
-}
-Rule iMT_DreamingCoach
-{
-	criteria iMT_Dreaming IsCoach
-	Response iMT_DreamingCoach
-}
-
-Response iMT_HungryCoach
-{
-	scene "scenes/Coach/DLC1_C6M2_SafeRoomConvo17.vcd"  //Man, I just realized with all this runnin', climbin' and fightin', I ain't even had time to eat.
-	scene "scenes/Coach/WorldC1M3B13.vcd"  //I could roll up a whole pizza right now, eat it sub-style.
-	scene "scenes/Coach/WorldC2M2B22.vcd"  //Oh, baby, I could destroy some kettle corn right now.
-	scene "scenes/Coach/WorldC2M2B37.vcd"  //Damn it. They can't keep a candy machine filled up around here?
-}
-Rule iMT_HungryCoach
-{
-	criteria iMT_Hungry IsCoach
-	Response iMT_HungryCoach
-}
-
-Response iMT_RideCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_FinaleCinematic03.vcd"  //Coach is going for a ride!
-}
-Rule iMT_RideCoach
-{
-	criteria iMT_Ride IsCoach
-	Response iMT_RideCoach
-}
-
-Response iMT_CrazyManCoach
-{
-	scene "scenes/Coach/WorldC2M134.vcd"  //You a crazy man Ellis.
-}
-Rule iMT_CrazyManCoach
-{
-	criteria iMT_CrazyMan IsCoach
-	Response iMT_CrazyManCoach
-}
-
-Response iMT_TeachingCoach
-{
-	scene "scenes/Coach/DLC1_Community13.vcd"  //Man, this shit's worse than teachin' Health class!
-}
-Rule iMT_TeachingCoach
-{
-	criteria iMT_Teaching IsCoach
-	Response iMT_TeachingCoach
-}
+//--------------------------------------------------------------------------------------------------------------
+// Stories
+//--------------------------------------------------------------------------------------------------------------
 
 Response iMT_EllisStoryInterruptCoach
 {
-	scene "scenes/Coach/EllisInterrupt02.vcd" then Mechanic iMT_EllisStoryReac01 foo:0 0  //We ain't got time for this, Ellis.
+	scene "scenes/Coach/EllisInterrupt01.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //Boy, you are WEARIN' me out.
+	scene "scenes/Coach/EllisInterrupt02.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //We ain't got time for this, Ellis.
+	scene "scenes/Coach/WorldC1M1B51.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //You're tirin' me REAL fast, son.
 }
 Rule iMT_EllisStoryInterruptCoach
 {
-	criteria iMT_EllisStoryInterrupt IsCoach
+	criteria iMT_EllisStoryInterrupt IsCoach IsMechanicNear800
 	Response iMT_EllisStoryInterruptCoach
+}
+
+Response iMT_EllisStoryInterruptC1Coach
+{
+	scene "scenes/Coach/EllisInterrupt01.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //Boy, you are WEARIN' me out.
+	scene "scenes/Coach/WorldC1M1B51.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //You're tirin' me REAL fast, son.
+}
+Rule iMT_EllisStoryInterruptC1Coach
+{
+	criteria iMT_EllisStoryInterrupt IsCoach IsMechanicNear800 ismap_c1m1_hotelC1 NoKnowNames
+	Response iMT_EllisStoryInterruptC1Coach
 }
 
 Response iMT_EllisStoryInterruptGoatCoach
 {
-	scene "scenes/Coach/EllisInterrupt02.vcd" then Mechanic iMT_EllisStoryReac01Goat foo:0 0  //We ain't got time for this, Ellis.
+	scene "scenes/Coach/EllisInterrupt01.vcd" then Mechanic iMT_EllisStoryReacGoat foo:0 0.3  //Boy, you are WEARIN' me out.
+	scene "scenes/Coach/EllisInterrupt02.vcd" then Mechanic iMT_EllisStoryReacGoat foo:0 0.3  //We ain't got time for this, Ellis.
+	scene "scenes/Coach/WorldC1M1B51.vcd" then Mechanic iMT_EllisStoryReacGoat foo:0 0.3  //You're tirin' me REAL fast, son.
 }
 Rule iMT_EllisStoryInterruptGoatCoach
 {
-	criteria iMT_EllisStoryInterruptGoat IsCoach
+	criteria iMT_EllisStoryInterruptGoat IsCoach IsMechanicNear800
 	Response iMT_EllisStoryInterruptGoatCoach
 }
 
-Response iMT_AllAboardCoach
+Response iMT_EllisStoryInterruptGoatC1Coach
 {
-	scene "scenes/Coach/DLC1_Community15.vcd"  //Shit, all aboard!
-	scene "scenes/Coach/DLC1_Community16.vcd"  //Shit, all aboard!
+	scene "scenes/Coach/EllisInterrupt01.vcd" then Mechanic iMT_EllisStoryReacGoat foo:0 0.3  //Boy, you are WEARIN' me out.
+	scene "scenes/Coach/WorldC1M1B51.vcd" then Mechanic iMT_EllisStoryReacGoat foo:0 0.3  //You're tirin' me REAL fast, son.
 }
-Rule iMT_AllAboardCoach
+Rule iMT_EllisStoryInterruptGoatC1Coach
 {
-	criteria iMT_AllAboard IsCoach
-	Response iMT_AllAboardCoach
-}
-
-Response iMT_NotDieCoach
-{
-	scene "scenes/Coach/GoingToDieR01.vcd"  //Come on now, put it all out there.
-	scene "scenes/Coach/GoingToDieR02.vcd"  //Come on, it's all you.
-	scene "scenes/Coach/GoingToDieR03.vcd"  //That's it. Stay focused.
-	scene "scenes/Coach/GoingToDieR04.vcd"  //Stay with us.
-	scene "scenes/Coach/GoingToDieR05.vcd"  //That's it. Yeah. Fight thru it.
-	scene "scenes/Coach/GoingToDieR06.vcd"  //Come on now, walk that shit off.
-	scene "scenes/Coach/GoingToDieR07.vcd"  //Keep it up, come on, keep it up, keep it up. You're gonna make it.
-	scene "scenes/Coach/GoingToDieR08.vcd"  //Hey. Listen to me, you are gonna make it.
-	scene "scenes/Coach/GoingToDieR09.vcd"  //They put a hurtin on ya but ain't no thing.
-	scene "scenes/Coach/GoingToDieR10.vcd"  //Come on now, put it behind ya, you good, you good.
-}
-Rule iMT_NotDieCoach
-{
-	criteria iMT_NotDie IsCoach
-	Response iMT_NotDieCoach
-}
-
-Response iMT_FairCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_FinaleChat10.vcd"  //Sounds fair.
-}
-Rule iMT_FairCoach
-{
-	criteria iMT_Fair IsCoach
-	Response iMT_FairCoach
-}
-
-Response iMT_AintForRealCoach
-{
-	scene "scenes/Coach/DLC1_C6M1_InitialMeeting07.vcd"  //(to group) Tell me this boy ain't for real.
-	scene "scenes/Coach/DLC1_C6M1_InitialMeeting08.vcd"  //(to group) Tell me this boy ain't for real.
-}
-Rule iMT_AintForRealCoach
-{
-	criteria iMT_AintForReal IsCoach
-	Response iMT_AintForRealCoach
-}
-
-Response iMT_SecretsCoach
-{
-	scene "scenes/Coach/DLC1_C6M2_Tattoo04.vcd"  //Hey, Coach keeps his secrets.
-}
-Rule iMT_SecretsCoach
-{
-	criteria iMT_Secrets IsCoach
-	Response iMT_SecretsCoach
-}
-
-Response iMT_KillingCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_FinaleChat03.vcd"  //Damn right. We're getting good at killing these things.
-}
-Rule iMT_KillingCoach
-{
-	criteria iMT_Killing IsCoach
-	Response iMT_KillingCoach
-}
-
-Response iMT_LeaveEllisCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_FinaleChat11.vcd"  //Hell, we can even leave Ellis behind to make room for y'all.
-}
-Rule iMT_LeaveEllisCoach
-{
-	criteria iMT_LeaveEllis IsCoach
-	Response iMT_LeaveEllisCoach
-}
-
-Response iMT_BadNewsCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_Loss03.vcd"  //Shit. Not a lot of good news goin' round these days.
-	scene "scenes/Coach/DLC1_C6M3_Loss06.vcd"  //Shit. Not a lot of good news goin' round these days.
-}
-Rule iMT_BadNewsCoach
-{
-	criteria iMT_BadNews IsCoach
-	Response iMT_BadNewsCoach
-}
-
-Response iMT_GetBusyCoach
-{
-	scene "scenes/Coach/DLC1_Community04.vcd"  //Get busy living, or get busy dying.
-}
-Rule iMT_GetBusyCoach
-{
-	criteria iMT_GetBusy IsCoach
-	Response iMT_GetBusyCoach
-}
-
-Response iMT_NightCoach
-{
-	scene "scenes/Coach/DLC1_Community11.vcd"  //Shit! Looks like it's gonna be one hell of a night.
-}
-Rule iMT_NightCoach
-{
-	criteria iMT_Night IsCoach
-	Response iMT_NightCoach
-}
-
-Response iMT_LouisRulesCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Killing02.vcd"  //Louis in the house!
-}
-Rule iMT_LouisRulesCoach
-{
-	criteria iMT_LouisRules IsCoach
-	Response iMT_LouisRulesCoach
+	criteria iMT_EllisStoryInterruptGoat IsCoach IsMechanicNear800 ismap_c1m1_hotelC1 NoKnowNames
+	Response iMT_EllisStoryInterruptGoatC1Coach
 }
 
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_PlayerHeardBoomerCoach
+Response iMT_PlayerAnswerReadyCoach
 {
-	scene "scenes/Coach/HeardBoomer01.vcd"  //I hear a Boomer.
-	scene "scenes/Coach/HeardBoomer02.vcd"  //Boomer's sneakin 'round.
-	scene "scenes/Coach/HeardBoomer03.vcd"  //Careful now, boomer.
-	scene "scenes/Coach/HeardBoomer04.vcd"  //Step slow ya' all, boomer round.
+	scene "scenes/Coach/TakeMelee01.vcd"  //Oh yeah.
+	scene "scenes/Coach/TakeMelee02.vcd"  //Alright now, mm-hm. This is gonna work.
+	scene "scenes/Coach/TakeMelee07.vcd"  //Alright. Now I am ready.
 }
-Rule iMT_PlayerHeardBoomerCoach
+Rule iMT_PlayerAnswerReadyCoach
 {
-	criteria iMT_PlayerHeardBoomer IsCoach
-	Response iMT_PlayerHeardBoomerCoach
-}
-
-Response iMT_PlayerHeardHunterCoach
-{
-	scene "scenes/Coach/HeardHunter01.vcd"  //I hear a hunter.
-	scene "scenes/Coach/HeardHunter02.vcd"  //Punk ass hunter around.
-	scene "scenes/Coach/HeardHunter03.vcd"  //Sounds like a hunter.
-}
-Rule iMT_PlayerHeardHunterCoach
-{
-	criteria iMT_PlayerHeardHunter IsCoach
-	Response iMT_PlayerHeardHunterCoach
+	criteria iMT_PlayerAnswerReady IsCoach
+	Response iMT_PlayerAnswerReadyCoach
 }
 
-Response iMT_PlayerHeardSmokerCoach
+Rule iMT_PlayerBattleCryCoach
 {
-	scene "scenes/Coach/HeardSmoker01.vcd"  //Sounds like a Smoker.
-	scene "scenes/Coach/HeardSmoker02.vcd"  //I hear a smoker.
-	scene "scenes/Coach/HeardSmoker03.vcd"  //Sounds like one of them smoker bitches.
-}
-Rule iMT_PlayerHeardSmokerCoach
-{
-	criteria iMT_PlayerHeardSmoker IsCoach
-	Response iMT_PlayerHeardSmokerCoach
+	criteria iMT_PlayerBattleCry IsCoach
+	Response PlayerChainSawUsedCoach
 }
 
-Response iMT_PlayerHeardChargerCoach
+Response iMT_PlayerBreathingCoach
 {
-	scene "scenes/Coach/HeardCharger01.vcd"  //We gotta Charger round.
-	scene "scenes/Coach/HeardCharger02.vcd"  //Gotta Charger round.
-	scene "scenes/Coach/HeardCharger03.vcd"  //I hear a Charger.
-	scene "scenes/Coach/HeardCharger04.vcd"  //I hear a charger, don't get charged and shit.
+	scene "scenes/Coach/HeavyBreathing01.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing02.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing03.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, small]
+	scene "scenes/Coach/HeavyBreathing04.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, medium]
+	scene "scenes/Coach/HeavyBreathing05.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, medium]
+	scene "scenes/Coach/HeavyBreathing06.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing07.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing08.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, gasping]
+	scene "scenes/Coach/HeavyBreathing09.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, big]
+	scene "scenes/Coach/HeavyBreathing10.vcd" then Mechanic iMT_PlayerBreathingReac foo:0 0  //[panting, gasping]
 }
-Rule iMT_PlayerHeardChargerCoach
+Rule iMT_PlayerBreathingCoach
 {
-	criteria iMT_PlayerHeardCharger IsCoach
-	Response iMT_PlayerHeardChargerCoach
-}
-
-Response iMT_PlayerAlsoWarnChargerCoach
-{
-	scene "scenes/Coach/WarnCharger01.vcd"  //CHARGER!
-	scene "scenes/Coach/WarnCharger02.vcd"  //CHARGER!
-	scene "scenes/Coach/WarnCharger03.vcd"  //CHARGER!
-}
-Rule iMT_PlayerAlsoWarnChargerCoach
-{
-	criteria iMT_PlayerAlsoWarnCharger IsCoach
-	Response iMT_PlayerAlsoWarnChargerCoach
+	criteria iMT_PlayerBreathing IsCoach
+	Response iMT_PlayerBreathingCoach
 }
 
-Response iMT_PlayerAlsoWarnChargerC1Coach
-{
-	scene "scenes/Coach/WarnChargerC101.vcd"  //Big arm!
-	scene "scenes/Coach/WarnChargerC102.vcd"  //One arm!
-}
-Rule iMT_PlayerAlsoWarnChargerC1Coach
-{
-	criteria iMT_PlayerAlsoWarnCharger IsCoach C1M1orC1M2
-	Response iMT_PlayerAlsoWarnChargerC1Coach
-}
-
-Response iMT_PlayerHeardJockeyCoach
-{
-	scene "scenes/Coach/HeardJockey01.vcd"  //I hear a jockey.
-	scene "scenes/Coach/HeardJockey02.vcd"  //One of those little jockeys is around.
-	scene "scenes/Coach/HeardJockey03.vcd"  //That sounds like a little jockey.
-	scene "scenes/Coach/HeardJockey04.vcd"  //One of those leapin' on your back bitches is around.
-	scene "scenes/Coach/HeardJockey05.vcd"  //One of those leapin' on your back bitches is around.
-	scene "scenes/Coach/HeardJockey06.vcd"  //I hear one of those jockeys.  If I see it, I'm gonna shoot the shit out of it.
-}
-Rule iMT_PlayerHeardJockeyCoach
-{
-	criteria iMT_PlayerHeardJockey IsCoach
-	Response iMT_PlayerHeardJockeyCoach
-}
-
-Response iMT_PlayerAlsoWarnJockeyCoach
-{
-	scene "scenes/Coach/WarnJockey01.vcd"  //JOCKEY!
-	scene "scenes/Coach/WarnJockey02.vcd"  //JOCKEY!
-	scene "scenes/Coach/WarnJockey03.vcd"  //JOCKEY!
-}
-Rule iMT_PlayerAlsoWarnJockeyCoach
-{
-	criteria iMT_PlayerAlsoWarnJockey IsCoach
-	Response iMT_PlayerAlsoWarnJockeyCoach
-}
-
-Response iMT_PlayerAlsoWarnJockeyC1Coach
-{
-	scene "scenes/Coach/WarnJockeyC101.vcd"  //Little guy!
-	scene "scenes/Coach/WarnJockeyC102.vcd"  //Little creep!
-	scene "scenes/Coach/WarnJockeyC103.vcd"  //Skittish one.
-}
-Rule iMT_PlayerAlsoWarnJockeyC1Coach
-{
-	criteria iMT_PlayerAlsoWarnJockey IsCoach C1M1orC1M2
-	Response iMT_PlayerAlsoWarnJockeyC1Coach
-}
-
-Response iMT_PlayerHeardSpitterCoach
-{
-	scene "scenes/Coach/HeardSpitter01.vcd"  //I hear a spitter.
-	scene "scenes/Coach/HeardSpitter02.vcd"  //That sounds like a spitter.
-	scene "scenes/Coach/HeardSpitter03.vcd"  //Spitter's around.
-	scene "scenes/Coach/HeardSpitter04.vcd"  //That fat spittin' bitch is around.
-	scene "scenes/Coach/HeardSpitter05.vcd"  //I hear that fat woman.
-}
-Rule iMT_PlayerHeardSpitterCoach
-{
-	criteria iMT_PlayerHeardSpitter IsCoach
-	Response iMT_PlayerHeardSpitterCoach
-}
-
-Response iMT_PlayerAlsoWarnSpitterCoach
-{
-	scene "scenes/Coach/WarnSpitter01.vcd"  //SPITTER!
-	scene "scenes/Coach/WarnSpitter02.vcd"  //SPITTER!
-	scene "scenes/Coach/WarnSpitter03.vcd"  //SPITTER!
-}
-Rule iMT_PlayerAlsoWarnSpitterCoach
-{
-	criteria iMT_PlayerAlsoWarnSpitter IsCoach
-	Response iMT_PlayerAlsoWarnSpitterCoach
-}
-
-Response iMT_PlayerAlsoWarnSpitterC1Coach
-{
-	scene "scenes/Coach/WarnSpitterC101.vcd"  //Crazy woman!
-	scene "scenes/Coach/WarnSpitterC102.vcd"  //Neck!
-	scene "scenes/Coach/WarnSpitterC103.vcd"  //Spitting thing!
-}
-Rule iMT_PlayerAlsoWarnSpitterC1Coach
-{
-	criteria iMT_PlayerAlsoWarnSpitter IsCoach C1M1orC1M2
-	Response iMT_PlayerAlsoWarnSpitterC1Coach
-}
-
-Response iMT_PlayerHeardWitchCoach
-{
-	scene "scenes/Coach/HeardWitch01.vcd"  //Ya'all hear her?,Get ready to toss that bitch.
-	scene "scenes/Coach/HeardWitch02.vcd"  //Quiet everybody I hear a bitch.
-	scene "scenes/Coach/HeardWitch03.vcd"  //That there sounds like a witch.
-	scene "scenes/Coach/HeardWitch04.vcd"  //Quiet y'all, I hear a witch.
-}
-Rule iMT_PlayerHeardWitchCoach
-{
-	criteria iMT_PlayerHeardWitch IsCoach
-	Response iMT_PlayerHeardWitchCoach
-}
-
-Response iMT_PlayerHeardWitchC1Coach
-{
-	scene "scenes/Coach/HeardWitchC101.vcd" then Producer PlayerNo foo:0 0.3  //Rochelle, that ain't you is it girl?
-	scene "scenes/Coach/HeardWitchC102.vcd" then Producer PlayerNo foo:0 0.3  //Rochelle, that ain't you is it girl?
-	scene "scenes/Coach/HeardWitchC103.vcd"  //What is that crying?
-	scene "scenes/Coach/HeardWitchC104.vcd"  //What's doing that crying?
-	scene "scenes/Coach/HeardWitchC105.vcd"  //Man, that crying don't sound right.
-}
-Rule iMT_PlayerHeardWitchC1Coach
-{
-	criteria iMT_PlayerHeardWitch IsCoach C1M1orC1M2
-	Response iMT_PlayerHeardWitchC1Coach
-}
-
-Response iMT_PlayerCoughingCoach
-{
-	scene "scenes/Coach/Cough01.vcd"  //[Coughing from smoke]
-	scene "scenes/Coach/Cough02.vcd"  //[Coughing from smoke]
-	scene "scenes/Coach/Cough03.vcd"  //[Coughing from smoke]
-	scene "scenes/Coach/Cough04.vcd"  //[Coughing from smoke]
-	scene "scenes/Coach/Cough05.vcd"  //[Coughing from smoke]
-	scene "scenes/Coach/Cough06.vcd"  //[Coughing from smoke]
-	scene "scenes/Coach/Cough07.vcd"  //[Coughing from smoke]
-	scene "scenes/Coach/Cough08.vcd"  //[Coughing from smoke]
-}
 Rule iMT_PlayerCoughingCoach
 {
 	criteria iMT_PlayerCoughing IsCoach
-	Response iMT_PlayerCoughingCoach
+	Response SurvivorCoughingCoach
 }
 
-Response iMT_PlayerSuggestHealthCoach
+Response iMT_PlayerDeathScreamCoach
 {
-	scene "scenes/Coach/SuggestHealth02.vcd"  //Heal if ya got em.
-	scene "scenes/Coach/SuggestHealth03.vcd"  //This ain't about me people, let's heal up.
-	scene "scenes/Coach/SuggestHealthC101.vcd"  //This would be the time to heal up.
-	scene "scenes/Coach/SuggestHealthC102.vcd"  //Now's a good time to heal if you can.
-	scene "scenes/Coach/SuggestHealthC103.vcd"  //If you got a health kit you should use it.
+	scene "scenes/Coach/DeathScream01.vcd"  //[Loud painful death scream]
+	scene "scenes/Coach/DeathScream03.vcd"  //[Loud painful death scream]
+	scene "scenes/Coach/DeathScream05.vcd"  //[Short quick death scream]
+	scene "scenes/Coach/DeathScream06.vcd"  //[Short quick death scream]
 }
-Rule iMT_PlayerSuggestHealthCoach
+Rule iMT_PlayerDeathScreamCoach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach
-	Response iMT_PlayerSuggestHealthCoach
-}
-
-Response iMT_PlayerSuggestHealthGamblerCoach
-{
-	scene "scenes/Coach/SuggestHealthGambler01.vcd"  //Nick, don't be stupid, heal up.
-	scene "scenes/Coach/SuggestHealthNick01.vcd"  //Nicolas I think it is time for you to heal.
-	scene "scenes/Coach/SuggestHealthNick02.vcd"  //Nick, you should use that kit on your self.
-	scene "scenes/Coach/SuggestHealthNick03.vcd"  //Nick, its all right, we all gotta heal sometime.
-}
-Rule iMT_PlayerSuggestHealthGamblerCoach
-{
-	criteria iMT_PlayerSuggestHealth IsCoach IssuerClose SubjectIsGambler
-	Response iMT_PlayerSuggestHealthGamblerCoach
+	criteria iMT_PlayerDeathScream IsCoach
+	Response iMT_PlayerDeathScreamCoach
 }
 
-Response iMT_PlayerSuggestHealthMechanicCoach
+Response iMT_PlayerEquippedItemCoach
 {
-	scene "scenes/Coach/SuggestHealthEllis01.vcd"  //Ellis, time for you to heal boy.
-	scene "scenes/Coach/SuggestHealthEllis02.vcd"  //Allright Ellis, come on now, get yourself right.
-	scene "scenes/Coach/SuggestHealthEllis03.vcd"  //Hey Ellis, that health kit ain't gonna use itself.
+	scene "scenes/Coach/KillConfirmation01.vcd"  //Got it!
+	scene "scenes/Coach/KillConfirmation07.vcd"  //Got it! [calmer]
+	scene "scenes/Coach/KillConfirmation08.vcd"  //I got it. [calmer]
 }
-Rule iMT_PlayerSuggestHealthMechanicCoach
+Rule iMT_PlayerEquippedItemCoach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IssuerClose SubjectIsMechanic
-	Response iMT_PlayerSuggestHealthMechanicCoach
-}
-
-Response iMT_PlayerSuggestHealthProducerCoach
-{
-	scene "scenes/Coach/SuggestHealthRochell01.vcd"  //Ro, time to heal.
-	scene "scenes/Coach/SuggestHealthRochell02.vcd"  //Ro, heal up, hear me girl?
-	scene "scenes/Coach/SuggestHealthRochell03.vcd"  //Girl, time for you to heal up.
-	scene "scenes/Coach/SuggestHealthRochell04.vcd"  //Hey girl, why don't you heal up?
-}
-Rule iMT_PlayerSuggestHealthProducerCoach
-{
-	criteria iMT_PlayerSuggestHealth IsCoach IssuerClose SubjectIsProducer
-	Response iMT_PlayerSuggestHealthProducerCoach
-}
-
-Response iMT_PlayerNiceShotCoach
-{
-	scene "scenes/Coach/NiceShot01.vcd"  //Nice shot.
-	scene "scenes/Coach/NiceShot02.vcd"  //Damn. Good one.
-	scene "scenes/Coach/NiceShot03.vcd"  //Good one!
-	scene "scenes/Coach/NiceShot04.vcd"  //You on it.
-	scene "scenes/Coach/NiceShot05.vcd"  //You got it.
-	scene "scenes/Coach/NiceShot06.vcd"  //ohh hoo hoo, allright!
-	scene "scenes/Coach/NiceShot07.vcd"  //Damn. I'm impressed.
-	scene "scenes/Coach/NiceShot08.vcd"  //You nailed it.
-	scene "scenes/Coach/NiceShot09.vcd"  //You beat 'em.
-	scene "scenes/Coach/NiceShot10.vcd"  //Well alright now, you're in charge.
-}
-Rule iMT_PlayerNiceShotCoach
-{
-	criteria iMT_PlayerNiceShot IsCoach
-	Response iMT_PlayerNiceShotCoach
-}
-
-Response iMT_PlayerNiceShotGamblerCoach
-{
-	scene "scenes/Coach/NiceShotGambler01.vcd"  //Nice kill, Nick.
-}
-Rule iMT_PlayerNiceShotGamblerCoach
-{
-	criteria iMT_PlayerNiceShot IsCoach IssuerClose SubjectIsGambler
-	Response iMT_PlayerNiceShotGamblerCoach
-}
-
-Response iMT_PlayerNiceShotMechanicCoach
-{
-	scene "scenes/Coach/NiceShot11.vcd"  //Alright now, yeah!  You got it, boy!
-	scene "scenes/Coach/NiceShotEllis01.vcd"  //Nice shot, youngin'.
-	scene "scenes/Coach/NiceShotMechanic01.vcd"  //Ellis, nice shot.
-}
-Rule iMT_PlayerNiceShotMechanicCoach
-{
-	criteria iMT_PlayerNiceShot IsCoach IssuerClose SubjectIsMechanic
-	Response iMT_PlayerNiceShotMechanicCoach
-}
-
-Response iMT_PlayerNiceShotProducerCoach
-{
-	scene "scenes/Coach/NiceShotFemale01.vcd"  //All right, girl.
-	scene "scenes/Coach/NiceShotProducer01.vcd"  //Ro that was a nice shot.
-}
-Rule iMT_PlayerNiceShotProducerCoach
-{
-	criteria iMT_PlayerNiceShot IsCoach IssuerClose SubjectIsProducer
-	Response iMT_PlayerNiceShotProducerCoach
+	criteria iMT_PlayerEquippedItem IsCoach
+	Response iMT_PlayerEquippedItemCoach
 }
 
 Response iMT_PlayerGoingToDieCoach
@@ -584,152 +164,309 @@ Rule iMT_PlayerGoingToDieCoach
 	Response iMT_PlayerGoingToDieCoach
 }
 
-Response iMT_OtherPlayerWasPouncedCoach
+Response iMT_PlayerHelloCoach
+{
+	scene "scenes/Coach/ScenarioJoin02.vcd"  //Hello!
+}
+Rule iMT_PlayerHelloCoach
+{
+	criteria iMT_PlayerHello IsCoach
+	Response iMT_PlayerHelloCoach
+}
+
+Rule iMT_PlayerIncapacitatedHurtCoach
+{
+	criteria iMT_PlayerIncapacitatedHurt IsCoach
+	Response SurvivorIncapacitatedHurtCoach
+}
+
+Response iMT_PlayerMournGamblerCoach
+{
+	scene "scenes/Coach/SurvivorMournGamblerC101.vcd"  //Nick, we're gonna miss your gun.
+	scene "scenes/Coach/SurvivorMournGamblerC102.vcd"  //Damn. Nick, this just got a whole lot harder.
+	scene "scenes/Coach/SurvivorMournNick01.vcd"  //Nick, you gonna be missed.
+	scene "scenes/Coach/SurvivorMournNick02.vcd"  //Bye Nick.
+}
+Rule iMT_PlayerMournGamblerAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 SubjectIsGambler
+	Response iMT_PlayerMournGamblerCoach
+}
+Rule iMT_PlayerMournGamblerDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 IsGamblerNotAlive
+	Response iMT_PlayerMournGamblerCoach
+}
+
+Rule iMT_PlayerMournGamblerAliveC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 SubjectIsGambler ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournGamblerC1Coach
+}
+Rule iMT_PlayerMournGamblerDeadC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 IsGamblerNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournGamblerC1Coach
+}
+
+Response iMT_PlayerMournMechanicCoach
+{
+	scene "scenes/Coach/SurvivorMournEllis01.vcd"  //Boy, I'm going to miss your goofy ass.
+	scene "scenes/Coach/SurvivorMournEllis02.vcd"  //Bye Ellis.
+	scene "scenes/Coach/SurvivorMournMechanicC101.vcd"  //Ahh damnit, I can't take losing anymore people.
+	scene "scenes/Coach/SurvivorMournMechanicC102.vcd"  //Little man, we are goin' to miss you.
+}
+Rule iMT_PlayerMournMechanicAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 SubjectIsMechanic
+	Response iMT_PlayerMournMechanicCoach
+}
+Rule iMT_PlayerMournMechanicDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 IsMechanicNotAlive
+	Response iMT_PlayerMournMechanicCoach
+}
+
+Rule iMT_PlayerMournMechanicAliveC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 SubjectIsMechanic ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournMechanicC1Coach
+}
+Rule iMT_PlayerMournMechanicDeadC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 IsMechanicNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournMechanicC1Coach
+}
+
+Response iMT_PlayerMournProducerCoach
+{
+	scene "scenes/Coach/SurvivorMournProducerC101.vcd"  //Gentlemen, we just lost the best thing in our little group.
+	scene "scenes/Coach/SurvivorMournProducerC102.vcd"  //Damn. Baby, I should have tried to protect you more.
+	scene "scenes/Coach/SurvivorMournRochelle01.vcd"  //Ahh baby girl, goodbye.
+	scene "scenes/Coach/SurvivorMournRochelle02.vcd"  //Oh Ro, oh Ro man...
+	scene "scenes/Coach/SurvivorMournRochelle03.vcd"  //Ahh baby girl, mmm.
+}
+Rule iMT_PlayerMournProducerAliveCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsProducerNear200 SubjectIsProducer
+	Response iMT_PlayerMournProducerCoach
+}
+Rule iMT_PlayerMournProducerDeadCoach
+{
+	criteria iMT_PlayerMourn IsCoach IsProducerNear200 IsProducerNotAlive
+	Response iMT_PlayerMournProducerCoach
+}
+
+Rule iMT_PlayerMournProducerAliveC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsProducerNear200 SubjectIsProducer ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournProducerC1Coach
+}
+Rule iMT_PlayerMournProducerDeadC1Coach
+{
+	criteria iMT_PlayerMourn IsCoach IsProducerNear200 IsProducerNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournProducerC1Coach
+}
+
+Rule iMT_PlayerNearExitCoach
+{
+	criteria iMT_PlayerNearExit IsCoach
+	Response SurvivorNearCheckpointCoach
+}
+
+Response iMT_PlayerNiceShotCoach
+{
+	scene "scenes/Coach/NiceShot01.vcd"  //Nice shot.
+	scene "scenes/Coach/NiceShot02.vcd"  //Damn. Good one.
+	scene "scenes/Coach/NiceShot03.vcd"  //Good one!
+	scene "scenes/Coach/NiceShot04.vcd"  //You on it.
+	scene "scenes/Coach/NiceShot05.vcd"  //You got it.
+	scene "scenes/Coach/NiceShot06.vcd"  //ohh hoo hoo, allright!
+	scene "scenes/Coach/NiceShot07.vcd"  //Damn. I'm impressed.
+	scene "scenes/Coach/NiceShot08.vcd"  //You nailed it.
+	scene "scenes/Coach/NiceShot09.vcd"  //You beat 'em.
+	scene "scenes/Coach/NiceShot10.vcd"  //Well alright now, you're in charge.
+}
+Rule iMT_PlayerNiceShotCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach
+	Response iMT_PlayerNiceShotCoach
+}
+
+Rule iMT_PlayerNiceShotGamblerCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach IsGamblerNear800 SubjectIsGambler isNotmap_c1m1_hotel
+	Response PlayerNiceShotGamblerCoach
+}
+Rule iMT_PlayerNiceShotGamblerC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach IsGamblerNear800 SubjectIsGambler ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerNiceShotGamblerCoach
+}
+
+Rule iMT_PlayerNiceShotMechanicCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach IsMechanicNear800 SubjectIsMechanic isNotmap_c1m1_hotel
+	Response PlayerNiceShotMechanicCoach
+}
+Rule iMT_PlayerNiceShotMechanicC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerNiceShotMechanicCoach
+}
+
+Response iMT_PlayerNiceShotProducerCoach
+{
+	scene "scenes/Coach/NiceShotFemale01.vcd"  //All right, girl.
+	scene "scenes/Coach/NiceShotFemale02.vcd"  //Work it, girl.
+	scene "scenes/Coach/NiceShotFemale03.vcd"  //Right, work it, girl.
+	scene "scenes/Coach/NiceShotProducer01.vcd"  //Ro that was a nice shot.
+}
+Rule iMT_PlayerNiceShotProducerCoach
+{
+	criteria iMT_PlayerNiceShot IsCoach IsProducerNear800 SubjectIsProducer isNotmap_c1m1_hotel
+	Response iMT_PlayerNiceShotProducerCoach
+}
+Rule iMT_PlayerNiceShotProducerC1Coach
+{
+	criteria iMT_PlayerNiceShot IsCoach IsProducerNear800 SubjectIsProducer ismap_c1m1_hotelC1 YesKnowNames
+	Response iMT_PlayerNiceShotProducerCoach
+}
+
+Response iMT_PlayerPainNoiseCoach
+{
+	scene "scenes/Coach/HurtCritical01.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical02.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical03.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical04.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical05.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical06.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical07.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtCritical08.vcd"  //[Pain noise - loud major pain]
+	scene "scenes/Coach/HurtMajor01.vcd"  //[Pain noise - huh]
+	scene "scenes/Coach/HurtMajor02.vcd"  //[Pain noise - huh]
+	scene "scenes/Coach/HurtMajor03.vcd"  //[Pain noise - ahh]
+	scene "scenes/Coach/HurtMajor04.vcd"  //[Pain noise - oy]
+	scene "scenes/Coach/HurtMajor05.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor06.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor07.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor08.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor09.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor10.vcd"  //[Pain noise - ugh]
+	scene "scenes/Coach/HurtMajor11.vcd"  //[Pain noise - ugh]
+}
+Rule iMT_PlayerPainNoiseCoach
+{
+	criteria iMT_PlayerPainNoise IsCoach
+	Response iMT_PlayerPainNoiseCoach
+}
+
+Response iMT_PlayerPouncedC1Coach
 {
 	scene "scenes/Coach/HunterPouncedC101.vcd"  //That thing's ripping him up!
 	scene "scenes/Coach/HunterPouncedC102.vcd"  //Zombie's ripping him up!
 }
-Rule iMT_OtherPlayerWasPouncedCoach
+Rule iMT_PlayerPouncedGamblerC1Coach
 {
-	criteria iMT_OtherPlayerWasPounced IsCoach
-	Response iMT_OtherPlayerWasPouncedCoach
+	criteria iMT_SurvivorWasPounced IsCoach IsGamblerNear800 SubjectIsGambler C1M1orC1M2 NoKnowHunter
+	Response iMT_PlayerPouncedC1Coach
+}
+Rule iMT_PlayerPouncedMechanicC1Coach
+{
+	criteria iMT_SurvivorWasPounced IsCoach IsMechanicNear800 SubjectIsMechanic C1M1orC1M2 NoKnowHunter
+	Response iMT_PlayerPouncedC1Coach
 }
 
-Response iMT_OtherPlayerWasPouncedGamblerCoach
+Response iMT_PlayerPouncedProducerC1Coach
+{
+	scene "scenes/Coach/HunterPouncedC1Producer01.vcd"  //Zombie's on Ro!
+	scene "scenes/Coach/HunterPouncedC1Producer02.vcd"  //Ro's getting ripped up!
+}
+Rule iMT_PlayerPouncedProducerC1Coach
+{
+	criteria iMT_SurvivorWasPounced IsCoach IsProducerNear800 SubjectIsProducer C1M1orC1M2 NoKnowHunter
+	Response iMT_PlayerPouncedProducerC1Coach
+}
+
+Response iMT_PlayerPouncedGamblerCoach
 {
 	scene "scenes/Coach/HunterNickPounced01.vcd"  //Hunter's got Nick!
 	scene "scenes/Coach/HunterNickPounced02.vcd"  //Hunter's on Nick!
 }
-Rule iMT_OtherPlayerWasPouncedGamblerCoach
+Rule iMT_PlayerPouncedGamblerCoach
 {
-	criteria iMT_OtherPlayerWasPounced IsCoach IssuerClose SubjectIsGambler
-	Response iMT_OtherPlayerWasPouncedGamblerCoach
+	criteria iMT_SurvivorWasPounced IsCoach IsGamblerNear800 SubjectIsGambler
+	Response iMT_PlayerPouncedGamblerCoach
 }
 
-Response iMT_OtherPlayerWasPouncedMechanicCoach
+Response iMT_PlayerPouncedMechanicCoach
 {
 	scene "scenes/Coach/HunterEllisPounced01.vcd"  //Hunter's got Ellis!
 	scene "scenes/Coach/HunterEllisPounced02.vcd"  //Hunter on Ellis!
 }
-Rule iMT_OtherPlayerWasPouncedMechanicCoach
+Rule iMT_PlayerPouncedMechanicCoach
 {
-	criteria iMT_OtherPlayerWasPounced IsCoach IssuerClose SubjectIsMechanic
-	Response iMT_OtherPlayerWasPouncedMechanicCoach
+	criteria iMT_SurvivorWasPounced IsCoach IsMechanicNear800 SubjectIsMechanic
+	Response iMT_PlayerPouncedMechanicCoach
 }
 
-Response iMT_OtherPlayerWasPouncedProducerCoach
+Response iMT_PlayerPouncedProducerCoach
 {
-	scene "scenes/Coach/HunterPouncedC1Producer01.vcd"  //Zombie's on Ro!
-	scene "scenes/Coach/HunterPouncedC1Producer02.vcd"  //Ro's getting ripped up!
 	scene "scenes/Coach/HunterRochellePounced01.vcd"  //Hunter's got Ro!
-	scene "scenes/Coach/HunterRochellePounced02.vcd"  //Hunter on  Rochelle!
+	scene "scenes/Coach/HunterRochellePounced02.vcd"  //Hunter on Rochelle!
 }
-Rule iMT_OtherPlayerWasPouncedProducerCoach
+Rule iMT_PlayerPouncedProducerCoach
 {
-	criteria iMT_OtherPlayerWasPounced IsCoach IssuerClose SubjectIsProducer
-	Response iMT_OtherPlayerWasPouncedProducerCoach
-}
-
-Response iMT_BattleCryCoach
-{
-	scene "scenes/Coach/BattleCry01.vcd"  //EAT THAT SHIT!
-	scene "scenes/Coach/BattleCry02.vcd"  //How you like that?
-	scene "scenes/Coach/BattleCry03.vcd"  //HOW THAT FEEL?
-	scene "scenes/Coach/BattleCry04.vcd"  //YEAH!
-	scene "scenes/Coach/BattleCry05.vcd"  //CHEW ON THAT!
-	scene "scenes/Coach/BattleCry06.vcd"  //ALLRIGHT!
-	scene "scenes/Coach/BattleCry07.vcd"  //GYEAHHHHHH!
-	scene "scenes/Coach/BattleCry08.vcd"  //GRRRR YEAH!
-	scene "scenes/Coach/BattleCry09.vcd"  //WHOOO! YEAH BABY!
-}
-Rule iMT_BattleCryCoach
-{
-	criteria iMT_BattleCry IsCoach
-	Response iMT_BattleCryCoach
+	criteria iMT_SurvivorWasPounced IsCoach IsProducerNear800 SubjectIsProducer
+	Response iMT_PlayerPouncedProducerCoach
 }
 
-Response iMT_PlayerEquippedItemCoach
+Response iMT_PlayerSuggestHealthCoach
 {
-	scene "scenes/Coach/KillConfirmation01.vcd"  //Got it!
-	scene "scenes/Coach/KillConfirmation07.vcd"  //Got it! [calmer]
-	scene "scenes/Coach/KillConfirmation08.vcd"  //I got it. [calmer]
+	scene "scenes/Coach/SuggestHealth01.vcd"  //We oughta heal up while it's quiet.
+	scene "scenes/Coach/SuggestHealth02.vcd"  //Heal if ya got em.
+	scene "scenes/Coach/SuggestHealth03.vcd"  //This ain't about me people, let's heal up.
+	scene "scenes/Coach/SuggestHealthC101.vcd"  //This would be the time to heal up.
+	scene "scenes/Coach/SuggestHealthC102.vcd"  //Now's a good time to heal if you can.
+	scene "scenes/Coach/SuggestHealthC103.vcd"  //If you got a health kit you should use it.
 }
-Rule iMT_PlayerEquippedItemCoach
+Rule iMT_PlayerSuggestHealthCoach
 {
-	criteria iMT_PlayerEquippedItem IsCoach
-	Response iMT_PlayerEquippedItemCoach
-}
-
-Response iMT_PlayerBreathingCoach
-{
-	scene "scenes/Coach/HeavyBreathing01.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, small]
-	scene "scenes/Coach/HeavyBreathing02.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, small]
-	scene "scenes/Coach/HeavyBreathing03.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, small]
-	scene "scenes/Coach/HeavyBreathing04.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, medium]
-	scene "scenes/Coach/HeavyBreathing05.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, medium]
-	scene "scenes/Coach/HeavyBreathing06.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, big]
-	scene "scenes/Coach/HeavyBreathing07.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, big]
-	scene "scenes/Coach/HeavyBreathing08.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, gasping]
-	scene "scenes/Coach/HeavyBreathing09.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, big]
-	scene "scenes/Coach/HeavyBreathing10.vcd" then Mechanic iMT_CoachBreathingReac foo:0 0  //[panting, gasping]
-}
-Rule iMT_PlayerBreathingCoach
-{
-	criteria iMT_PlayerBreathing IsCoach
-	Response iMT_PlayerBreathingCoach
+	criteria iMT_PlayerSuggestHealth IsCoach
+	Response iMT_PlayerSuggestHealthCoach
 }
 
-Response iMT_PlayerAnswerReadyCoach
+Rule iMT_PlayerSuggestHealthGamblerCoach
 {
-	scene "scenes/Coach/TakeMelee01.vcd"  //Oh yeah.
-	scene "scenes/Coach/TakeMelee02.vcd"  //Alright now, mm-hm. This is gonna work.
-	scene "scenes/Coach/TakeMelee07.vcd"  //Alright. Now I am ready.
+	criteria iMT_PlayerSuggestHealth IsCoach IsGamblerNear400 SubjectIsGambler isNotmap_c1m1_hotel
+	Response PlayerSuggestHealthGamblerCoach
 }
-Rule iMT_PlayerAnswerReadyCoach
+Rule iMT_PlayerSuggestHealthGamblerC1Coach
 {
-	criteria iMT_PlayerAnswerReady IsCoach
-	Response iMT_PlayerAnswerReadyCoach
-}
-
-Response iMT_PlayerDeathScreamCoach
-{
-	scene "scenes/Coach/DeathScream01.vcd"  //[Loud painful death scream]
-	scene "scenes/Coach/DeathScream03.vcd"  //[Loud painful death scream]
-	scene "scenes/Coach/DeathScream05.vcd"  //[Short quick death scream]
-	scene "scenes/Coach/DeathScream06.vcd"  //[Short quick death scream]
-}
-Rule iMT_PlayerDeathScreamCoach
-{
-	criteria iMT_PlayerDeathScream IsCoach
-	Response iMT_PlayerDeathScreamCoach
+	criteria iMT_PlayerSuggestHealth IsCoach IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerSuggestHealthGamblerCoach
 }
 
-Response iMT_PlayerWitchChasingCoach
+Rule iMT_PlayerSuggestHealthMechanicCoach
 {
-	scene "scenes/Coach/WitchChasing01.vcd"  //The bitch is chasing me!
-	scene "scenes/Coach/WitchChasing02.vcd"  //Bitch on my ass!
-	scene "scenes/Coach/WitchChasing03.vcd"  //Run, run, witch coming through!
-	scene "scenes/Coach/WitchChasing04.vcd"  //Shoot the witch! Shoot the witch!
-	scene "scenes/Coach/WitchChasing05.vcd"  //Coming through! Witch on my ass!
-	scene "scenes/Coach/WitchChasing06.vcd"  //Get out of the way! Witch!!!!
-	scene "scenes/Coach/WitchChasing07.vcd"  //Aw shit. Witch! Witch! Witch!
+	criteria iMT_PlayerSuggestHealth IsCoach IsMechanicNear400 SubjectIsMechanic isNotmap_c1m1_hotel
+	Response PlayerSuggestHealthMechanicCoach
 }
-Rule iMT_PlayerWitchChasingCoach
+Rule iMT_PlayerSuggestHealthMechanicC1Coach
 {
-	criteria iMT_PlayerWitchChasing IsCoach
-	Response iMT_PlayerWitchChasingCoach
+	criteria iMT_PlayerSuggestHealth IsCoach IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerSuggestHealthMechanicCoach
 }
 
-Response iMT_PlayerWeddingWitchChasingCoach
+Rule iMT_PlayerSuggestHealthProducerCoach
 {
-	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing01.vcd"  //Bride's chasing me!
-	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing02.vcd"  //Ugly brides chasing me! Brides chasing me!
-	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing03.vcd"  //Kill the bride! Kill the bride!
+	criteria iMT_PlayerSuggestHealth IsCoach IsProducerNear400 SubjectIsProducer isNotmap_c1m1_hotel
+	Response PlayerSuggestHealthProducerCoach
 }
-Rule iMT_PlayerWeddingWitchChasingCoach
+Rule iMT_PlayerSuggestHealthProducerC1Coach
 {
-	criteria iMT_PlayerWitchChasing IsCoach Isc6m1_riverbank
-	Response iMT_PlayerWeddingWitchChasingCoach
+	criteria iMT_PlayerSuggestHealth IsCoach IsProducerNear400 SubjectIsProducer ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerSuggestHealthProducerCoach
 }
 
 Response iMT_PlayerTeamKillCoach
@@ -776,149 +513,234 @@ Rule iMT_PlayerTransitionCoach
 	Response iMT_PlayerTransitionCoach
 }
 
-Response iMT_WitchGettingAngryCoach
+Rule iMT_SurvivorCaughtVomitCoach
 {
-	scene "scenes/Coach/WitchGettingAngry01.vcd"  //Oh shit, that bitch's pissed.
-	scene "scenes/Coach/WitchGettingAngry02.vcd"  //Quit trifling with that bitch, she gonna explode.
-	scene "scenes/Coach/WitchGettingAngry03.vcd"  //Watch out ya'all, someone pissed off that bitch.
-	scene "scenes/Coach/WitchGettingAngry04.vcd"  //Ohh shit, that bitch's gettin' angry!
-}
-Rule iMT_WitchGettingAngryCoach
-{
-	criteria iMT_WitchGettingAngry IsCoach
-	Response iMT_WitchGettingAngryCoach
-}
-
-Response iMT_PlayerIncapacitatedHurtCoach
-{
-	scene "scenes/Coach/IncapacitatedInjury01.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury02.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury03.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury04.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury05.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury06.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury07.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury08.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury09.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury10.vcd"  //[Ahhhh - terrified yell]
-	scene "scenes/Coach/IncapacitatedInjury11.vcd"  //[Ahhhh - terrified yell]
-}
-Rule iMT_PlayerIncapacitatedHurtCoach
-{
-	criteria iMT_PlayerIncapacitatedHurt IsCoach
-	Response iMT_PlayerIncapacitatedHurtCoach
-}
-
-Response iMT_PlayerMournGamblerCoach
-{
-	scene "scenes/Coach/SurvivorMournGamblerC101.vcd"  //Nick, we're gonna miss your gun.
-	scene "scenes/Coach/SurvivorMournGamblerC102.vcd"  //Damn. Nick, this just got a whole lot harder.
-	scene "scenes/Coach/SurvivorMournNick01.vcd"  //Nick, you gonna be missed.
-	scene "scenes/Coach/SurvivorMournNick02.vcd"  //Bye Nick.
-}
-Rule iMT_PlayerMournGamblerAliveCoach
-{
-	criteria iMT_PlayerMourn IsCoach IssuerClose SubjectIsGambler
-	Response iMT_PlayerMournGamblerCoach
-}
-Rule iMT_PlayerMournGamblerDeadCoach
-{
-	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 IsGamblerNotAlive
-	Response iMT_PlayerMournGamblerCoach
-}
-
-Response iMT_PlayerMournMechanicCoach
-{
-	scene "scenes/Coach/SurvivorMournEllis01.vcd"  //Boy, I'm going to miss your goofy ass.
-	scene "scenes/Coach/SurvivorMournEllis02.vcd"  //Bye Ellis.
-	scene "scenes/Coach/SurvivorMournMechanicC101.vcd"  //Ahh damnit, I can't take losing anymore people.
-	scene "scenes/Coach/SurvivorMournMechanicC102.vcd"  //Little man, we are goin' to miss you.
-}
-Rule iMT_PlayerMournMechanicAliveCoach
-{
-	criteria iMT_PlayerMourn IsCoach IssuerClose SubjectIsMechanic
-	Response iMT_PlayerMournMechanicCoach
-}
-Rule iMT_PlayerMournMechanicDeadCoach
-{
-	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 IsMechanicNotAlive
-	Response iMT_PlayerMournMechanicCoach
-}
-
-Response iMT_PlayerMournProducerCoach
-{
-	scene "scenes/Coach/SurvivorMournProducerC101.vcd"  //Gentlemen, we just lost the best thing in our little group.
-	scene "scenes/Coach/SurvivorMournProducerC102.vcd"  //Damn. Baby, I should have tried to protect you more.
-	scene "scenes/Coach/SurvivorMournRochelle01.vcd"  //Ahh baby girl, goodbye.
-	scene "scenes/Coach/SurvivorMournRochelle02.vcd"  //Oh Ro, oh Ro man...
-	scene "scenes/Coach/SurvivorMournRochelle03.vcd"  //Ahh baby girl, mmm.
-}
-Rule iMT_PlayerMournProducerAliveCoach
-{
-	criteria iMT_PlayerMourn IsCoach IssuerClose SubjectIsProducer
-	Response iMT_PlayerMournProducerCoach
-}
-Rule iMT_PlayerMournProducerDeadCoach
-{
-	criteria iMT_PlayerMourn IsCoach IsProducerNear200 IsProducerNotAlive
-	Response iMT_PlayerMournProducerCoach
-}
-
-Response iMT_PlayerNearExitCoach
-{
-	scene "scenes/Coach/SafeSpotAhead01.vcd"  //Safe house up ahead!
-	scene "scenes/Coach/SafeSpotAhead02.vcd"  //Safe house!
-	scene "scenes/Coach/SafeSpotAhead03.vcd"  //Safe house, let's go!
-}
-Rule iMT_PlayerNearExitCoach
-{
-	criteria iMT_PlayerNearExit IsCoach
-	Response iMT_PlayerNearExitCoach
+	criteria iMT_PlayerVomitInFace IsCoach
+	Response SurvivorCaughtVomitCoach
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// NPC Triggers
+// Character-specific
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_VirgilCoach
+Response iMT_AllAboardCoach
 {
-	print " " then orator iMT_Virgil foo:0 0
+	scene "scenes/Coach/DLC1_Community15.vcd"  //Shit, all aboard!
+	scene "scenes/Coach/DLC1_Community16.vcd"  //Shit, all aboard!
 }
-Rule iMT_VirgilCoach
+Rule iMT_AllAboardCoach
 {
-	criteria iMT_Virgil IsCoach
-	Response iMT_VirgilCoach
-}
-
-Response iMT_WhitakerCoach
-{
-	print " " then orator iMT_Whitaker foo:0 0
-}
-Rule iMT_WhitakerCoach
-{
-	criteria iMT_Whitaker IsCoach
-	Response iMT_WhitakerCoach
+	criteria iMT_AllAboard IsCoach
+	Response iMT_AllAboardCoach
 }
 
-Response iMT_MoustachioCoach
+Response iMT_ApocalypseCoach
 {
-	print " " then orator iMT_Moustachio foo:0 0
+	scene "scenes/Coach/WorldC2M2B23.vcd"  //I find a Burger Tank in this place? I'm-a be a one-man cheeseburger apocalypse.
 }
-Rule iMT_MoustachioCoach
+Rule iMT_ApocalypseCoach
 {
-	criteria iMT_Moustachio IsCoach
-	Response iMT_MoustachioCoach
+	criteria iMT_Apocalypse IsCoach
+	Response iMT_ApocalypseCoach
 }
 
-Response iMT_ChurchGuyCoach
+Response iMT_ChickenCoach
 {
-	print " " then orator iMT_ChurchGuy foo:0 0
+	scene "scenes/Coach/Generic01.vcd"  //Chicken ain't nothing but a bird.
+	scene "scenes/Coach/WorldC1M1B71.vcd" odds 30  //Mm-hmm.
 }
-Rule iMT_ChurchGuyCoach
+Rule iMT_ChickenCoach
 {
-	criteria iMT_ChurchGuy IsCoach
-	Response iMT_ChurchGuyCoach
+	criteria iMT_Chicken IsCoach
+	Response iMT_ChickenCoach
 }
+
+Rule iMT_DreamingCoach
+{
+	criteria iMT_Dreaming IsCoach
+	Response PlayerRemarkremark_MidnightRidersBusCoach
+}
+
+Response iMT_FairCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat10.vcd"  //Sounds fair.
+}
+Rule iMT_FairCoach
+{
+	criteria iMT_Fair IsCoach
+	Response iMT_FairCoach
+}
+
+Response iMT_GetBusyCoach
+{
+	scene "scenes/Coach/DLC1_Community04.vcd"  //Get busy living, or get busy dying.
+}
+Rule iMT_GetBusyCoach
+{
+	criteria iMT_GetBusy IsCoach
+	Response iMT_GetBusyCoach
+}
+
+Response iMT_HosannaCoach
+{
+	scene "scenes/Coach/WorldC1M1B30.vcd"  //Mm. Sweet Hosanna...
+	scene "scenes/Coach/WorldC1M1B31.vcd"  //Sweet Hosanna...
+	scene "scenes/Coach/WorldC1M1B34.vcd"  //Oh... sweet Hosanna...
+}
+Rule iMT_HosannaCoach
+{
+	criteria iMT_Hosanna IsCoach
+	Response iMT_HosannaCoach
+}
+
+Response iMT_HungryCoach
+{
+	scene "scenes/Coach/DLC1_C6M2_SafeRoomConvo17.vcd"  //Man, I just realized with all this runnin', climbin' and fightin', I ain't even had time to eat.
+	scene "scenes/Coach/WorldC1M3B13.vcd"  //I could roll up a whole pizza right now, eat it sub-style.
+	scene "scenes/Coach/WorldC2M2B22.vcd"  //Oh, baby, I could destroy some kettle corn right now.
+	scene "scenes/Coach/WorldC2M2B37.vcd"  //Damn it. They can't keep a candy machine filled up around here?
+}
+Rule iMT_HungryCoach
+{
+	criteria iMT_Hungry IsCoach FromIsNotProducer
+	Response iMT_HungryCoach
+}
+Rule iMT_HungryResponseCoach
+{
+	criteria iMT_Hungry IsCoach FromIsProducer IsProducerNear400 ChanceToFire30Percent
+	Response iMT_HungryCoach
+}
+
+Response iMT_KillingCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat03.vcd"  //Damn right. We're getting good at killing these things.
+}
+Rule iMT_KillingCoach
+{
+	criteria iMT_Killing IsCoach
+	Response iMT_KillingCoach
+}
+
+Response iMT_LeaveEllisCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleChat11.vcd"  //Hell, we can even leave Ellis behind to make room for y'all.
+}
+Rule iMT_LeaveEllisCoach
+{
+	criteria iMT_LeaveEllis IsCoach
+	Response iMT_LeaveEllisCoach
+}
+
+Rule iMT_LouisRulesCoach
+{
+	criteria iMT_LouisRules IsCoach
+	Response L4D1PlayerNiceShotLouisCoach
+}
+
+Response iMT_NeighborhoodCoach
+{
+	scene "scenes/Coach/TeaserIntroMovie03.vcd" //This used to be a NICE NEIGHBORHOOD!
+	scene "scenes/Coach/TeaserIntroMovie04.vcd" //This used to be a NICE NEIGHBORHOOD!
+}
+Rule iMT_NeighborhoodCoach
+{
+	criteria iMT_Neighborhood IsCoach
+	Response iMT_NeighborhoodCoach
+}
+
+Response iMT_NightCoach
+{
+	scene "scenes/Coach/DLC1_Community11.vcd"  //Shit! Looks like it's gonna be one hell of a night.
+}
+Rule iMT_NightCoach
+{
+	criteria iMT_Night IsCoach
+	Response iMT_NightCoach
+}
+
+Rule iMT_NotDieCoach
+{
+	criteria iMT_NotDie IsCoach
+	Response PlayercoachcoachesCoach
+}
+
+Response iMT_PancakesCoach
+{
+	scene "scenes/Coach/EllisInterrupt09.vcd"  //I'm listening. But this better be about pancakes.
+	scene "scenes/Coach/EllisInterrupt10.vcd"  //All right, you MENTIONED pancakes, but it wasn't really ABOUT them, was it?
+}
+Rule iMT_PancakesCoach
+{
+	criteria iMT_Pancakes IsCoach
+	Response iMT_PancakesCoach
+}
+
+Response iMT_PrayCoach
+{
+	scene "scenes/Coach/WorldC1M3B02.vcd" then self C1M3SafeRoom2d foo:0 0.5  //Everybody, gather 'round. Let's pray. Dear Lord. See us safely through our time of trial in this mall. And please Lord... let the food court be okay.
+}
+Rule iMT_PrayCoach
+{
+	criteria iMT_Pray IsCoach
+	Response iMT_PrayCoach
+}
+
+Response iMT_RideCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleCinematic03.vcd"  //Coach is going for a ride!
+}
+Rule iMT_RideCoach
+{
+	criteria iMT_Ride IsCoach
+	Response iMT_RideCoach
+}
+
+Response iMT_SingingCoach
+{
+	scene "scenes/Coach/DLC1_C6M2_SuitcasePistols01.vcd" odds 20  //[singing] "...a suitcase full of pistols and MON-NAY!"
+	scene "scenes/Coach/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn... dunh-nuh-NAH-nuh-NAH-nha!
+	scene "scenes/Coach/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around... dunh-nuh-NAH-nuh-NAH-nha!
+}
+Rule iMT_SingingCoach
+{
+	criteria iMT_Singing IsCoach
+	Response iMT_SingingCoach
+}
+
+Response iMT_SwallowCoach
+{
+	scene "scenes/Coach/WorldC4M104.vcd"  //Shit. All these zombies should help you swallow.
+}
+Rule iMT_SwallowCoach
+{
+	criteria iMT_Swallow IsCoach
+	Response iMT_SwallowCoach
+}
+
+Response iMT_SwampCoach
+{
+	scene "scenes/Coach/WorldC3M1B11.vcd"  //I ain't a prejudiced man, but-livin' in a swamp? That's sorta crazy.
+	scene "scenes/Coach/WorldC3M1B13.vcd"  //I ain't a prejudiced man, but-livin' in a swamp? That's sorta crazy.
+}
+Rule iMT_SwampCoach
+{
+	criteria iMT_Swamp IsCoach
+	Response iMT_SwampCoach
+}
+
+Response iMT_TeachingCoach
+{
+	scene "scenes/Coach/DLC1_Community13.vcd"  //Man, this shit's worse than teachin' Health class!
+}
+Rule iMT_TeachingCoach
+{
+	criteria iMT_Teaching IsCoach
+	Response iMT_TeachingCoach
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC triggers
+//--------------------------------------------------------------------------------------------------------------
 
 Response iMT_BoatmanCoach
 {
@@ -938,6 +760,26 @@ Rule iMT_ChopperPilotCoach
 {
 	criteria iMT_ChopperPilot IsCoach
 	Response iMT_ChopperPilotCoach
+}
+
+Response iMT_ChurchGuyCoach
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyCoach
+{
+	criteria iMT_ChurchGuy IsCoach
+	Response iMT_ChurchGuyCoach
+}
+
+Response iMT_MoustachioCoach
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioCoach
+{
+	criteria iMT_Moustachio IsCoach
+	Response iMT_MoustachioCoach
 }
 
 Response iMT_PlanePilotCoach
@@ -970,12 +812,96 @@ Rule iMT_SoldiersCoach
 	Response iMT_SoldiersCoach
 }
 
+Response iMT_VirgilCoach
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilCoach
+{
+	criteria iMT_Virgil IsCoach
+	Response iMT_VirgilCoach
+}
+
+Response iMT_WhitakerCoach
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerCoach
+{
+	criteria iMT_Whitaker IsCoach
+	Response iMT_WhitakerCoach
+}
+
 //--------------------------------------------------------------------------------------------------------------
-// General Fixes
+// Fixes
 //--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAreaClearCoach
+{
+	scene "scenes/Coach/Defibrillator05.vcd"  //Clear!
+}
+Rule iMT_PlayerAreaClearCoach
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response iMT_PlayerAreaClearCoach
+}
+
+Response iMT_PlayerLaughCoach
+{
+	scene "scenes/Coach/Laughter01.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter04.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter05.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter07.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter13.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter14.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter16.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter20.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter21.vcd"  //[Laughter]
+}
+Rule iMT_PlayerLaughCoach
+{
+	criteria ConceptPlayerLaugh IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 100
+	Response iMT_PlayerLaughCoach
+}
+
+Response iMT_ResponseSoftDispleasureSwearCoach
+{
+	scene "scenes/Coach/Exclamation01.vcd"  //Oh Shit!
+	scene "scenes/Coach/WorldC5M4B03.vcd"  //SHIT!
+}
+Rule iMT_ResponseSoftDispleasureSwearCoach
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	Response iMT_ResponseSoftDispleasureSwearCoach
+}
+
+Rule iMT_SurvivorDeathCoach
+{
+	criteria ConceptPlayerDeath IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 100
+	Response SurvivorDeathCoach
+}
+
+Rule iMT_SurvivorSpottedAmmoCoach
+{
+	criteria ConceptPlayerSpotAmmo IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 100
+	Response SurvivorSpottedAmmoCoach
+}
+
+Rule iMT_SurvivorSpottedOtherWeaponCoach
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 100
+	Response SurvivorSpottedWeaponCoach
+}
 
 Response iMT_SurvivorTauntResponseCoach
 {
+	scene "scenes/Coach/Laughter15.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter22.vcd"  //[Laughter]
+	scene "scenes/Coach/Laughter23.vcd"  //[Laughter]
 	scene "scenes/Coach/Taunt01.vcd"  //Hell yeah!
 	scene "scenes/Coach/Taunt02.vcd"  //Goddamn right!
 	scene "scenes/Coach/Taunt03.vcd"  //Goddamn right!
@@ -988,479 +914,20 @@ Response iMT_SurvivorTauntResponseCoach
 Rule iMT_SurvivorTauntResponseCoach
 {
 	criteria ConceptPlayerTaunt IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 100
 	Response iMT_SurvivorTauntResponseCoach
 }
 
-// Response iMT_PlayerNegativeCoach
-// {
-//	scene "scenes/Coach/HurtCritical01.vcd"  //[Pain noise - loud major pain]
-//	scene "scenes/Coach/HurtCritical02.vcd"  //[Pain noise - loud major pain]
-//	scene "scenes/Coach/HurtCritical03.vcd"  //[Pain noise - loud major pain]
-//	scene "scenes/Coach/HurtCritical04.vcd"  //[Pain noise - loud major pain]
-//	scene "scenes/Coach/HurtCritical05.vcd"  //[Pain noise - loud major pain]
-//	scene "scenes/Coach/HurtCritical06.vcd"  //[Pain noise - loud major pain]
-//	scene "scenes/Coach/HurtCritical07.vcd"  //[Pain noise - loud major pain]
-//	scene "scenes/Coach/HurtCritical08.vcd"  //[Pain noise - loud major pain]
-//	scene "scenes/Coach/HurtMajor01.vcd"  //[Pain noise - huh]
-//	scene "scenes/Coach/HurtMajor02.vcd"  //[Pain noise - huh]
-//	scene "scenes/Coach/HurtMajor03.vcd"  //[Pain noise - ahh]
-//	scene "scenes/Coach/HurtMajor04.vcd"  //[Pain noise - oy]
-//	scene "scenes/Coach/HurtMajor05.vcd"  //[Pain noise - ugh]
-//	scene "scenes/Coach/HurtMajor06.vcd"  //[Pain noise - ugh]
-//	scene "scenes/Coach/HurtMajor07.vcd"  //[Pain noise - ugh]
-//	scene "scenes/Coach/HurtMajor08.vcd"  //[Pain noise - ugh]
-//	scene "scenes/Coach/HurtMajor09.vcd"  //[Pain noise - ugh]
-//	scene "scenes/Coach/HurtMajor10.vcd"  //[Pain noise - ugh]
-//	scene "scenes/Coach/HurtMajor11.vcd"  //[Pain noise - ugh]
-// }
-// Rule iMT_PlayerNegativeCoach
-// {
-//	criteria ConceptPlayerNegative IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-//	forceweight 1000
-//	Response iMT_PlayerNegativeCoach
-// }
-
-Response iMT_PlayerSorryCoach
-{
-	scene "scenes/Coach/Sorry01.vcd"  //Shit, my bad.
-	scene "scenes/Coach/Sorry02.vcd" then subject PlayerNegative foo:0 0  //That right there was my fault.
-	scene "scenes/Coach/Sorry03.vcd"  //My bad.
-	scene "scenes/Coach/Sorry04.vcd"  //Sorry.
-	scene "scenes/Coach/Sorry05.vcd"  //Hey, sorry.
-	scene "scenes/Coach/Sorry06.vcd" then subject PlayerNegative foo:0 0  //Ha, you know what? My bad.
-	scene "scenes/Coach/Sorry07.vcd"  //Oh shit, sorry.
-}
-Rule iMT_PlayerSorryCoach
-{
-	criteria ConceptPlayerSorry IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	Response iMT_PlayerSorryCoach
-}
-
-Response iMT_PlayerHurrahCoach
-{
-	scene "scenes/Coach/Hurrah01.vcd" then any HurrahAlso foo:0 0  //We cool.
-	scene "scenes/Coach/Hurrah02.vcd" then any HurrahAlso foo:0 0  //We gonna be all right.
-	scene "scenes/Coach/Hurrah03.vcd" then any HurrahAlso foo:0 0  //We good, this ain't shit.
-	scene "scenes/Coach/Hurrah04.vcd" then any HurrahAlso foo:0 0  //We gonna do this.
-	scene "scenes/Coach/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We got this.
-	scene "scenes/Coach/Hurrah06.vcd"  //Those things ain't shit.
-	scene "scenes/Coach/Hurrah07.vcd"  //Oh hell yeah!
-	scene "scenes/Coach/Hurrah08.vcd" then any HurrahAlso foo:0 0  //We're gonna be okay.
-	scene "scenes/Coach/Hurrah09.vcd" then any HurrahAlso foo:0 0  //We got up in their shit.
-	scene "scenes/Coach/Hurrah10.vcd" then any HurrahAlso foo:0 0  //We are kicking their ass.
-	scene "scenes/Coach/Hurrah11.vcd"  //Oh hell yeah!
-	scene "scenes/Coach/Hurrah12.vcd"  //mmm. Allright.
-	scene "scenes/Coach/Hurrah13.vcd" then any HurrahAlso foo:0 0  //Woo! Haha! That's how we do it.
-	scene "scenes/Coach/Hurrah14.vcd" then any HurrahAlso foo:0 0  //Alright! Way to go! Way to go!
-	scene "scenes/Coach/Hurrah15.vcd" then any HurrahAlso foo:0 0  //Yeah! You are a great bunch.
-	scene "scenes/Coach/Hurrah16.vcd"  //That was outstanding.
-	scene "scenes/Coach/Hurrah17.vcd"  //Alright! Good effort.
-	scene "scenes/Coach/Hurrah18.vcd"  //Alright, alright! Way to put it all out there!
-	scene "scenes/Coach/Hurrah19.vcd"  //Ya boy!
-	scene "scenes/Coach/Hurrah20.vcd" then any HurrahAlso foo:0 0  //That is how you kick some ASS, baby!
-	scene "scenes/Coach/Hurrah21.vcd" then any HurrahAlso foo:0 0  //Baby, that is how that's DONE!
-	scene "scenes/Coach/Hurrah23.vcd" then any HurrahAlso foo:0 0  //We are kickin' some zombie ASS!
-	scene "scenes/Coach/Hurrah24.vcd" then any HurrahAlso foo:0 0  //THAT is how you kick zombie ASS!
-	scene "scenes/Coach/Hurrah26.vcd" then any HurrahAlso foo:0 0  //You made me proud out there, people...
-}
-Rule iMT_PlayerHurrahCoach
-{
-	criteria ConceptPlayerHurrah IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	Response iMT_PlayerHurrahCoach
-}
-
-Response iMT_PlayerThanksCoach
-{
-	scene "scenes/Coach/Thanks01.vcd"  //Thanks.
-	scene "scenes/Coach/Thanks02.vcd"  //Thanks.
-	scene "scenes/Coach/Thanks04.vcd"  //Thanks.
-	scene "scenes/Coach/Thanks05.vcd"  //Thanks, we straight?
-	scene "scenes/Coach/Thanks06.vcd"  //Allright thanks.
-	scene "scenes/Coach/Thanks07.vcd"  //THANKS!
-}
-Rule iMT_PlayerThanksCoach
-{
-	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 900
-	Response iMT_PlayerThanksCoach
-}
-
-Response iMT_PlayerThanksMaleCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items08.vcd"  //Thanks my man.
-	scene "scenes/Coach/Thanks08.vcd"  //Thanks man.
-}
-Rule iMT_PlayerThanksGamblerCoach
-{
-	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsGambler IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerThanksMaleCoach
-}
-Rule iMT_PlayerThanksMechanicCoach
-{
-	criteria ConceptPlayerThanks IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsMechanic IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerThanksMaleCoach
-}
-
-Response iMT_PlayerYouAreWelcomeCoach
-{
-	scene "scenes/Coach/YouAreWelcome01.vcd"  //It ain't nothin.
-	scene "scenes/Coach/YouAreWelcome02.vcd"  //We cool.
-	scene "scenes/Coach/YouAreWelcome03.vcd"  //We straight.
-	scene "scenes/Coach/YouAreWelcome04.vcd"  //It's all good.
-	scene "scenes/Coach/YouAreWelcome05.vcd"  //You're Welcome.
-}
-Rule iMT_PlayerYouAreWelcomeCoach
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 900
-	Response iMT_PlayerYouAreWelcomeCoach
-}
-
-Response iMT_PlayerYouAreWelcomeGamblerCoach
-{
-	scene "scenes/Coach/YouAreWelcomeGambler01.vcd"  //We're all in this together, Nick.
-}
-Rule iMT_PlayerYouAreWelcomeGamblerCoach
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsGambler IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerYouAreWelcomeGamblerCoach
-}
-
-Response iMT_PlayerYouAreWelcomeMechanicCoach
-{
-	scene "scenes/Coach/YouAreWelcomeMechanic01.vcd"  //No problem, Ellis.
-}
-Rule iMT_PlayerYouAreWelcomeMechanicCoach
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsMechanic IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerYouAreWelcomeMechanicCoach
-}
-
-Response iMT_PlayerYouAreWelcomeProducerCoach
-{
-	scene "scenes/Coach/YouAreWelcomeProducer01.vcd"  //Anytime, Ro.
-}
-Rule iMT_PlayerYouAreWelcomeProducerCoach
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach SubjectIsProducer IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerYouAreWelcomeProducerCoach
-}
-
-Response iMT_PlayerToTheRescueRosCoach
-{
-	scene "scenes/Coach/ToTheRescue01.vcd"  //Hang on, hang on, I'm comin!
-	scene "scenes/Coach/ToTheRescue02.vcd"  //Hang in there, I'm coming!
-	scene "scenes/Coach/ToTheRescue03.vcd"  //I hear ya, I'm comin'!
-	scene "scenes/Coach/ToTheRescue04.vcd"  //I comin', I comin'.
-	scene "scenes/Coach/ToTheRescue05.vcd"  //On my way! Right now!
-	scene "scenes/Coach/ToTheRescue06.vcd"  //Hang on, I'm comin'
-}
-Rule iMT_PlayerToTheRescueRosCoach
-{
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 1000
-	Response iMT_PlayerToTheRescueRosCoach
-}
-
-Response iMT_PlayerHelpCoach
-{
-	scene "scenes/Coach/Help01.vcd"  //I need some help!
-	scene "scenes/Coach/Help02.vcd"  //Help! [Screamed angrily]
-	scene "scenes/Coach/Help03.vcd"  //Hey y'all I need some help.
-	scene "scenes/Coach/Help04.vcd"  //Could use some help over here.
-	scene "scenes/Coach/Help05.vcd"  //Get ya ass over here and help me!
-	scene "scenes/Coach/Help06.vcd"  //Help!
-}
-Rule iMT_PlayerHelpCoach
-{
-	criteria ConceptPlayerHelp IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	Response iMT_PlayerHelpCoach
-}
-
-Response iMT_SurvivorSpottedTankC1Coach
-{
-	scene "scenes/Coach/WarnTankC101.vcd"  //Some kind of super ass zombie.
-	scene "scenes/Coach/WarnTankC102.vcd"  //Gigantic thing!
-	scene "scenes/Coach/WarnTankC103.vcd"  //HOLY SHIT WHAT IS THAT?!?!
-}
-Rule iMT_SurvivorSpottedTankC1Coach
-{
-	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
-	forceweight 1000
-	Response iMT_SurvivorSpottedTankC1Coach
-}
-
-Response iMT_SurvivorSpottedBoomerC1Coach
-{
-	scene "scenes/Coach/WarnBoomerC101.vcd"  //Fat guy!
-	scene "scenes/Coach/WarnBoomerC102.vcd"  //Roly poly!
-	scene "scenes/Coach/WarnBoomerC103.vcd"  //Fat thing!
-}
-Rule iMT_SurvivorSpottedBoomerC1Coach
-{
-	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
-	forceweight 1000
-	Response iMT_SurvivorSpottedBoomerC1Coach
-}
-
-Response iMT_SurvivorSpottedHunterC1Coach
-{
-	scene "scenes/Coach/WarnHunterC101.vcd"  //We got a Jumper!
-	scene "scenes/Coach/WarnHunterC102.vcd"  //Crazy legs!
-}
-Rule iMT_SurvivorSpottedHunterC1Coach
-{
-	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
-	forceweight 1000
-	Response iMT_SurvivorSpottedHunterC1Coach
-}
-
-Response iMT_SurvivorSpottedSmokerC1Coach
-{
-	scene "scenes/Coach/WarnSmokerC101.vcd"  //Smokin' one.
-	scene "scenes/Coach/WarnSmokerC102.vcd"  //Tonguer!
-}
-Rule iMT_SurvivorSpottedSmokerC1Coach
-{
-	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
-	forceweight 1000
-	Response iMT_SurvivorSpottedSmokerC1Coach
-}
-
-Response iMT_SurvivorVocalizeBackUpCoach
-{
-	scene "scenes/Coach/BackUp01.vcd"  //Oh shit, back it up!
-	scene "scenes/Coach/BackUp02.vcd"  //Back it up!
-	scene "scenes/Coach/BackUp03.vcd"  //BackBackBack!
-	scene "scenes/Coach/BackUp04.vcd"  //Back up, back up!
-	scene "scenes/Coach/BackUp05.vcd"  //Back up!
-	scene "scenes/Coach/BackUp06.vcd"  //Back Back Back Back Back!
-}
 Rule iMT_SurvivorVocalizeBackUpCoach
 {
-	criteria ConceptPlayerBackUp IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 1000
-	Response iMT_SurvivorVocalizeBackUpCoach
+	criteria ConceptPlayerBackUp IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 100
+	Response SurvivorVocalizeBackUpCoach
 }
 
-Response iMT_SurvivorTankPoundCoach
-{
-	scene "scenes/Coach/TankPound01.vcd"  //Oh shit get this thing off me!
-	scene "scenes/Coach/TankPound02.vcd"  //Can't y'all see this thing is beatin' the shit out of me!!?!?!!?
-	scene "scenes/Coach/TankPound03.vcd"  //Hey! in case ya'll didn't see it, I got a tank on me!
-	scene "scenes/Coach/TankPound04.vcd"  //I got a tank on me!
-	scene "scenes/Coach/TankPound05.vcd"  //Get it off - ah - Get it off me!
-	scene "scenes/Coach/TankPound06.vcd"  //Get this damn thing off!
-}
-Rule iMT_SurvivorTankPoundCoach
-{
-	criteria ConceptPlayerGroundPoundedByTank IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 1000
-	Response iMT_SurvivorTankPoundCoach
-}
-
-Response iMT_SurvivorVocalizeEmphaticGoCoach
-{
-	scene "scenes/Coach/EmphaticGo01.vcd"  //GO!
-	scene "scenes/Coach/EmphaticGo02.vcd"  //Let's go people.
-	scene "scenes/Coach/EmphaticGo03.vcd"  //Move your ass.
-	scene "scenes/Coach/EmphaticGo04.vcd"  //Go go go!
-	scene "scenes/Coach/EmphaticGo05.vcd"  //Go go GO!
-	scene "scenes/Coach/EmphaticGo06.vcd"  //MOVE IT!
-}
 Rule iMT_SurvivorVocalizeEmphaticGoCoach
 {
-	criteria ConceptPlayerEmphaticGo IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	Response iMT_SurvivorVocalizeEmphaticGoCoach
-}
-
-Response iMT_ResponseSoftDispleasureSwearCoach
-{
-	scene "scenes/Coach/Exclamation01.vcd"  //Oh Shit!
-	scene "scenes/Coach/WorldC5M4B03.vcd"  //SHIT!
-}
-Rule iMT_ResponseSoftDispleasureSwearCoach
-{
-	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 1000
-	Response iMT_ResponseSoftDispleasureSwearCoach
-}
-
-Response iMT_PlayerAreaClearCoach
-{
-	scene "scenes/Coach/Defibrillator05.vcd"  //Clear!
-}
-Rule iMT_PlayerAreaClearCoach
-{
-	criteria ConceptPlayerAreaClear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 1000
-	Response iMT_PlayerAreaClearCoach
-}
-
-Response iMT_PlayerGettingRevivedCoach
-{
-	scene "scenes/Coach/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 -1.648  //I'm cool.
-	scene "scenes/Coach/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 -1.077  //It's all good.
-	scene "scenes/Coach/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 -1.608  //Hell yeah it hurts.
-	scene "scenes/Coach/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 -1.239  //Yeah it hurts.
-	scene "scenes/Coach/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 -1.270  //I'm good, I'm good.
-	scene "scenes/Coach/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 -1.654  //What in the hell do you think?
-	scene "scenes/Coach/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 -1.177  //Ohhh shit.
-	scene "scenes/Coach/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 -1.123  //Hook me up.
-	scene "scenes/Coach/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 -0.895  //Hurry it up.
-	scene "scenes/Coach/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 -1.045  //[groan]
-	scene "scenes/Coach/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 -0.811  //[groan2]
-	scene "scenes/Coach/GettingRevived12.vcd" then From ReviveFriendDownFinal foo:0 -1.664  //[groan2]
-	scene "scenes/Coach/GettingRevived13.vcd" then From ReviveFriendDownFinal foo:0 -2.350  //They better name a school after me for this shit.
-	scene "scenes/Coach/GettingRevived14.vcd" then From ReviveFriendDownFinal foo:0 -1.811  //Help me up and I can walk this off.
-	scene "scenes/Coach/GettingRevived15.vcd" then From ReviveFriendDownFinal foo:0 -1.813  //Ain't gonna be nothing left of me.
-	scene "scenes/Coach/GettingRevived16.vcd" then From ReviveFriendDownFinal foo:0 -1.275  //I'm just screwin with ya.
-	scene "scenes/Coach/GettingRevived18.vcd" then From ReviveFriendDownFinal foo:0 -1.333  //What ya tellin me man?
-	scene "scenes/Coach/GettingRevived19.vcd" then From ReviveFriendDownFinal foo:0 -0.988  //I've been worse.
-	scene "scenes/Coach/GettingRevived20.vcd" then From ReviveFriendDownFinal foo:0 -0.790  //Whata you mean?
-	scene "scenes/Coach/GettingRevived21.vcd" then From ReviveFriendDownFinal foo:0 -0.626  //I'm okay.
-	scene "scenes/Coach/GettingRevived22.vcd" then From ReviveFriendDownFinal foo:0 -0.588  //Ain't nothin'.
-	scene "scenes/Coach/GettingRevived23.vcd" then From ReviveFriendDownFinal foo:0 -0.978  //I can walk it off.
-	scene "scenes/Coach/GettingRevived24.vcd" then From ReviveFriendDownFinal foo:0 -0.488  //Okay.
-	scene "scenes/Coach/GettingRevived25.vcd" then From ReviveFriendDownFinal foo:0 -0.778  //Good enough.
-	scene "scenes/Coach/GettingRevived26.vcd" then From ReviveFriendDownFinal foo:0 -0.656  //Just get me up.
-	scene "scenes/Coach/GettingRevived27.vcd" then From ReviveFriendDownFinal foo:0 -4.297  //Man, been better, been better.
-	scene "scenes/Coach/GettingRevived28.vcd" then From ReviveFriendDownFinal foo:0 -1.764  //Can't lie, been better.
-	scene "scenes/Coach/GettingRevived29.vcd" then From ReviveFriendDownFinal foo:0 -2.076  //Damn, this shit hurts.
-	scene "scenes/Coach/GettingRevived30.vcd" then From ReviveFriendDownFinal foo:0 -1.651  //Don't like bein' on the ground.
-	scene "scenes/Coach/GettingRevived31.vcd" then From ReviveFriendDownFinal foo:0 -1.062  //I'm hurtin down here.
-	scene "scenes/Coach/GettingRevived32.vcd" then From ReviveFriendDownFinal foo:0 -1.791  //Well I ain't on my back for nothin'.
-	scene "scenes/Coach/GettingRevived33.vcd" then From ReviveFriendDownFinal foo:0 -1.924  //Man, how the hell you think I'm doin'?
-	scene "scenes/Coach/GettingRevived34.vcd"  //I'm fine, but let's not waste time chit-chattin'.
-	scene "scenes/Coach/GettingRevived35.vcd" then From ReviveFriendDownFinal foo:0 -0.484  //I'm good.
-	scene "scenes/Coach/GettingRevived36.vcd" then From ReviveFriendDownFinal foo:0 -2.086  //I'll live... most likely.
-	scene "scenes/Coach/GettingRevived37.vcd" then From ReviveFriendDownFinal foo:0 -2.288  //Tell you what, ain't my best day.
-}
-Rule iMT_PlayerGettingRevivedCoach
-{
-	criteria ConceptReviveFriendDown IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	forceweight 1000
-	Response iMT_PlayerGettingRevivedCoach
-}
-
-Response iMT_PlayerReviveFriendBCoach
-{
-	scene "scenes/Coach/ReviveFriendB01.vcd"  //Allright good.
-	scene "scenes/Coach/ReviveFriendB02.vcd"  //Walk it off.
-	scene "scenes/Coach/ReviveFriendB03.vcd"  //You okay.
-	scene "scenes/Coach/ReviveFriendB04.vcd"  //You look good.
-	scene "scenes/Coach/ReviveFriendB05.vcd"  //Come on now.
-	scene "scenes/Coach/ReviveFriendB06.vcd"  //Now you're back in business.
-	scene "scenes/Coach/ReviveFriendB07.vcd"  //Up we go.
-	scene "scenes/Coach/ReviveFriendB08.vcd"  //You good.
-	scene "scenes/Coach/ReviveFriendB09.vcd"  //You're doin fine.
-	scene "scenes/Coach/ReviveFriendB10.vcd"  //This don't look bad.
-	scene "scenes/Coach/ReviveFriendB11.vcd"  //Can't lose you now can we?
-	scene "scenes/Coach/ReviveFriendB12.vcd"  //See you're gonna make it.
-	scene "scenes/Coach/ReviveFriendB13.vcd"  //Told ya. Wasn't nothing.
-	scene "scenes/Coach/ReviveFriendB14.vcd"  //All right, let's finish what we started.
-	scene "scenes/Coach/ReviveFriendB15.vcd"  //Alright now, we're back in business.
-}
-Rule iMT_PlayerReviveFriendBCoach
-{
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	ApplyContext "ReviveTalk:1:5,Talk:1:1"
-	forceweight 1000
-	Response iMT_PlayerReviveFriendBCoach
-}
-
-Response iMT_PlayerGrabbedByJockeyCoach
-{
-	scene "scenes/Coach/GrabbedByJockey01.vcd"  //Jockey on me!
-	scene "scenes/Coach/GrabbedByJockey02.vcd"  //JOCKEY ON MY BACK!
-	scene "scenes/Coach/GrabbedByJockey03.vcd"  //Oh lord no, that things on me!
-	scene "scenes/Coach/GrabbedByJockey04.vcd"  //Agh, that things on me!
-	scene "scenes/Coach/GrabbedByJockey05.vcd"  //Kill the thing on my back!
-	scene "scenes/Coach/GrabbedByJockey06.vcd"  //Ellis is that you? What the hell!?!?
-	scene "scenes/Coach/GrabbedByJockey07.vcd"  //OH SHIT GET THIS THING OFF ME!
-	scene "scenes/Coach/GrabbedByJockey08.vcd"  //Gah, get this thing off my back!
-}
-Rule iMT_PlayerGrabbedByJockeyCoach
-{
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
-	ApplyContext "_auto_NoSpotting:1:4"
-	applycontexttoworld
-	forceweight 900
-	Response iMT_PlayerGrabbedByJockeyCoach
-}
-
-Response iMT_PlayerGrabbedByJockeyC1Coach
-{
-	scene "scenes/Coach/GrabbedByJockey04.vcd"  //Agh, that things on me!
-	scene "scenes/Coach/GrabbedByJockey05.vcd"  //Kill the thing on my back!
-	scene "scenes/Coach/GrabbedByJockey08.vcd"  //Gah, get this thing off my back!
-}
-Rule iMT_PlayerGrabbedByJockeyC1Coach
-{
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach C1M1orC1M2
-	ApplyContext "_auto_NoSpotting:1:4"
-	applycontexttoworld
-	forceweight 1000
-	Response iMT_PlayerGrabbedByJockeyC1Coach
-}
-
-//--------------------------------------------------------------------------------------------------------------
-// Character-Specific Fixes
-//--------------------------------------------------------------------------------------------------------------
-
-Response iMT_C2M3SafeIntro009Coach
-{
-	scene "scenes/Coach/WorldC2M316.vcd"  //This is some crazy ass world we live in now.
-}
-Rule iMT_C2M3SafeIntro009Coach
-{
-	criteria ConceptC2M3SafeIntro009 IsCoach IsNotInStartArea
-	Response iMT_C2M3SafeIntro009Coach
-}
-
-Response iMT_C5M5_saferoom005Coach
-{
-	scene "scenes/Coach/WorldC5M5B03.vcd" then Gambler C5M5_saferoom003 foo:0 0  //Well, you free to make yourself a new life here in this room, Nick.
-}
-Rule iMT_C5M5_saferoom005Coach
-{
-	criteria ConceptC5M5_saferoom005 IsCoach IsNotInStartArea
-	Response iMT_C5M5_saferoom005Coach
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo02eCoach
-{
-	scene "scenes/Coach/DLC1_C6M3_SafeRoomConvo01.vcd"  //Sometimes you just gotta have faith, Nick.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo02eCoach
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo02e IsCoach IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo02eCoach
-}
-
-Response iMT_C2M3SafeIntro011Coach
-{
-	scene "scenes/Coach/WorldC2M3B03.vcd"  //Nick, I was on the football team. Coach did just fine.
-	scene "scenes/Coach/WorldC2M3B04.vcd"  //Coach didn't do too bad for himself back in the day, Nick.
-	scene "scenes/Coach/WorldC2M3B05.vcd" then Gambler C2M3SafeIntro012 foo:0 0  //How many tunnel of love memories YOU got, Nick?
-}
-Rule iMT_C2M3SafeIntro011Coach
-{
-	criteria ConceptC2M3SafeIntro011 IsCoach IsNotInStartArea
-	Response iMT_C2M3SafeIntro011Coach
-}
-
-Response iMT_c2m5_intro023Coach
-{
-	scene "scenes/Coach/WorldC2M4B06.vcd" then Mechanic c2m5_intro024 foo:0 0  //Ellis, you ready to rock?
-}
-Rule iMT_c2m5_intro023Coach
-{
-	criteria Conceptc2m5_intro023 IsCoach IsNotInStartArea
-	Response iMT_c2m5_intro023Coach
+	criteria ConceptPlayerEmphaticGo IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
+	forceweight 100
+	Response SurvivorVocalizeEmphaticGoCoach
 }

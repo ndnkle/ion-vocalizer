@@ -2,473 +2,62 @@
 // ion's Vocalizer: NamVet Response Rule File
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_BigMouthNamVet
-{
-	scene "scenes/NamVet/ReviveFriendB13.vcd"  //Looks like yer big mouth still works.
-}
-Rule iMT_BigMouthNamVet
-{
-	criteria iMT_BigMouth IsNamVet
-	Response iMT_BigMouthNamVet
-}
-
-Response iMT_10MilesNamVet
-{
-	scene "scenes/NamVet/C6DLC3CommunityLines04.vcd"  //Back in my day, we walked 10 miles through a blizzard in bare feet to kill zombies.
-}
-Rule iMT_10MilesNamVet
-{
-	criteria iMT_10Miles IsNamVet
-	Response iMT_10MilesNamVet
-}
-
-Response iMT_ColdNamVet
-{
-	scene "scenes/NamVet/C6DLC3CommunityLines02.vcd"  //That's what you get for not wearing a hat.
-	scene "scenes/NamVet/C6DLC3CommunityLines05.vcd"  //Ehh... is it too cold for ya cry babies?
-}
-Rule iMT_ColdNamVet
-{
-	criteria iMT_Cold IsNamVet
-	Response iMT_ColdNamVet
-}
-
-Response iMT_WheelNamVet
-{
-	scene "scenes/NamVet/C6DLC3SecondSafeRoom04.vcd"  //No! They hadn't even invented the wheel when I was born.
-}
-Rule iMT_WheelNamVet
-{
-	criteria iMT_Wheel IsNamVet
-	Response iMT_WheelNamVet
-}
-
-Response iMT_BeautifulNamVet
-{
-	scene "scenes/NamVet/C6DLC3FrancisDies02.vcd"  //Francis, you beautiful son of a bitch you did it!
-}
-Rule iMT_BeautifulNamVet
-{
-	criteria iMT_Beautiful IsNamVet
-	Response iMT_BeautifulNamVet
-}
-
-Response iMT_PhoneNamVet
-{
-	scene "scenes/NamVet/C6DLC3CommunityLines06.vcd"  //No one's going to be answering that phone.
-}
-Rule iMT_PhoneNamVet
-{
-	criteria iMT_Phone IsNamVet
-	Response iMT_PhoneNamVet
-}
-
-Response iMT_WoodsNamVet
-{
-	scene "scenes/NamVet/WorldSmallTown0101.vcd"  //These woods look thicker 'n boomer shit. Nobody wander off.
-}
-Rule iMT_WoodsNamVet
-{
-	criteria iMT_Woods IsNamVet
-	Response iMT_WoodsNamVet
-}
-
-Response iMT_HomeNamVet
-{
-	scene "scenes/NamVet/WorldFarmHouse0102.vcd"  //Francis, this look like home to you?
-}
-Rule iMT_HomeNamVet
-{
-	criteria iMT_Home IsNamVet
-	Response iMT_HomeNamVet
-}
-
-Response iMT_StinkNamVet
-{
-	scene "scenes/NamVet/C6DLC3InTankTrainCar03.vcd"  //Stinks like shit in here.
-	scene "scenes/NamVet/WorldHospital0316.vcd" then Biker hospital03_path08a2 foo:0 0  //Francis, is that you or the sewer?
-}
-Rule iMT_StinkNamVet
-{
-	criteria iMT_Stink IsNamVet
-	Response iMT_StinkNamVet
-}
-
-Response iMT_LastFightNamVet
-{
-	scene "scenes/NamVet/C6DLC3MovieLine04.vcd"  //You monkeys ain't gonna spoil this.
-	scene "scenes/NamVet/C6DLC3MovieLine05.vcd"  //You shoulda brought more tanks with you.
-	scene "scenes/NamVet/C6DLC3MovieLine08.vcd"  //You're too late.
-	scene "scenes/NamVet/C6DLC3MovieLine19.vcd"  //That all you brought?
-}
-Rule iMT_LastFightNamVet
-{
-	criteria iMT_LastFight IsNamVet
-	Response iMT_LastFightNamVet
-}
-
-Response iMT_HallelujahNamVet
-{
-	scene "scenes/NamVet/SafeSpotAheadReaction04.vcd"  //Hallelujah!
-}
-Rule iMT_HallelujahNamVet
-{
-	criteria iMT_Hallelujah IsNamVet
-	Response iMT_HallelujahNamVet
-}
-
-Response iMT_IdiotNamVet
-{
-	scene "scenes/NamVet/C6DLC3Intro31.vcd"  //You ever get tired of being an idiot, Francis?
-}
-Rule iMT_IdiotNamVet
-{
-	criteria iMT_Idiot IsNamVet
-	Response iMT_IdiotNamVet
-}
-
-Response iMT_GoodRunNamVet
-{
-	scene "scenes/NamVet/C6DLC3MovieLine16.vcd"  //I had a good run. Knowing they're safe, I wouldn't have changed a thing.
-	scene "scenes/NamVet/C6DLC3MovieLine17.vcd"  //I had a good run. I wouldn't have changed a thing.
-}
-Rule iMT_GoodRunNamVet
-{
-	criteria iMT_GoodRun IsNamVet
-	Response iMT_GoodRunNamVet
-}
-
-Response iMT_KnowingLouisNamVet
-{
-	scene "scenes/NamVet/InsideSafeRoom03.vcd"  //How well do you really know Louis?
-}
-Rule iMT_KnowingLouisNamVet
-{
-	criteria iMT_KnowingLouis IsNamVet
-	Response iMT_KnowingLouisNamVet
-}
-
-Response iMT_LonelyNamVet
-{
-	scene "scenes/NamVet/ToTheRescueThanks03.vcd"  //Thanks, I was getting lonely.
-}
-Rule iMT_LonelyNamVet
-{
-	criteria iMT_Lonely IsNamVet
-	Response iMT_LonelyNamVet
-}
-
-Response iMT_GoodEnoughNamVet
-{
-	scene "scenes/NamVet/C6DLC3MovieLine15.vcd"  //I gotta admit... this ain't how I pictured it. Good enough.
-}
-Rule iMT_GoodEnoughNamVet
-{
-	criteria iMT_GoodEnough IsNamVet
-	Response iMT_GoodEnoughNamVet
-}
-
-Response iMT_FamilyNamVet
-{
-	scene "scenes/NamVet/C6DLC3JumpingOffBridge12.vcd"  //You guys are the only family I got! Take care of each other!
-}
-Rule iMT_FamilyNamVet
-{
-	criteria iMT_Family IsNamVet
-	Response iMT_FamilyNamVet
-}
-
-Response iMT_MaryJosefNamVet
-{
-	scene "scenes/NamVet/C6DLC3StartingGenerators05.vcd"  //Jesus Mary and Josef, start already.
-}
-Rule iMT_MaryJosefNamVet
-{
-	criteria iMT_MaryJosef IsNamVet
-	Response iMT_MaryJosefNamVet
-}
-
-Response iMT_BirdsNamVet
-{
-	scene "scenes/NamVet/C6DLC3GravelHill04.vcd"  //Horseshit goddamn birds...
-	scene "scenes/NamVet/C6DLC3GravelHill05.vcd"  //Shut-up you goddamn birds!
-}
-Rule iMT_BirdsNamVet
-{
-	criteria iMT_Birds IsNamVet
-	Response iMT_BirdsNamVet
-}
-
-Response iMT_JobDoneNamVet
-{
-	scene "scenes/NamVet/C6DLC3MovieLine01.vcd"  //My job's done. Have at me you bastards!
-	scene "scenes/NamVet/C6DLC3MovieLine02.vcd"  //My job's done. Let's see what you got, you big dumb sons of bitches.
-}
-Rule iMT_JobDoneNamVet
-{
-	criteria iMT_JobDone IsNamVet
-	Response iMT_JobDoneNamVet
-}
-
-Response iMT_FirstStepNamVet
-{
-	scene "scenes/NamVet/WorldHospital0423.vcd"  //That first step'll kill ya.
-	scene "scenes/NamVet/WorldHospital0424.vcd"  //Watch out that first step'll kill ya.
-}
-Rule iMT_FirstStepNamVet
-{
-	criteria iMT_FirstStep IsNamVet
-	Response iMT_FirstStepNamVet
-}
-
-Response iMT_NotPrettyNamVet
-{
-	scene "scenes/NamVet/C6DLC3InTankTrainCar01.vcd"  //This is not pretty.
-}
-Rule iMT_NotPrettyNamVet
-{
-	criteria iMT_NotPretty IsNamVet
-	Response iMT_NotPrettyNamVet
-}
-
-Response iMT_BareHandsNamVet
-{
-	scene "scenes/NamVet/C6DLC3MovieLine10.vcd"  //I'll see peace back on Earth… if I gotta murder every one of you bastards…. with my bare goddamn hands.
-}
-Rule iMT_BareHandsNamVet
-{
-	criteria iMT_BareHands IsNamVet
-	Response iMT_BareHandsNamVet
-}
-
-Response iMT_ShoeLeatherNamVet
-{
-	scene "scenes/NamVet/C6DLC3MovieLine20.vcd"  //If I'd known how many of you sonsabitches there were when we started out--guess I woulda saved the shoe leather and fought you there.
-}
-Rule iMT_ShoeLeatherNamVet
-{
-	criteria iMT_ShoeLeather IsNamVet
-	Response iMT_ShoeLeatherNamVet
-}
-
-Response iMT_PlanNamVet
-{
-	scene "scenes/NamVet/C6DLC3Intro20.vcd"  //Zoey, we all made it together.  That was my plan.
-	scene "scenes/NamVet/C6DLC3Intro21.vcd"  //Zoey, we all made this far together.  That was my plan.
-}
-Rule iMT_PlanNamVet
-{
-	criteria iMT_Plan IsNamVet
-	Response iMT_PlanNamVet
-}
-
-Response iMT_MadNamVet
-{
-	scene "scenes/NamVet/C6DLC3Intro26.vcd"  //Zoey. You still mad?
-}
-Rule iMT_MadNamVet
-{
-	criteria iMT_Mad IsNamVet
-	Response iMT_MadNamVet
-}
-
-Response iMT_ThatsItNamVet
-{
-	scene "scenes/NamVet/C6DLC3FirstEventOver01.vcd"  //Alright, I think that's it!
-}
-Rule iMT_ThatsItNamVet
-{
-	criteria iMT_ThatsIt IsNamVet
-	Response iMT_ThatsItNamVet
-}
-
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_PlayerHeardBoomerNamVet
+Rule iMT_PlayerAnswerReadyNamVet
 {
-	scene "scenes/NamVet/HeardBoomer01.vcd"  //I hear a boomer out there.
-	scene "scenes/NamVet/HeardBoomer02.vcd"  //There's a Boomer around here.
-	scene "scenes/NamVet/HeardBoomer03.vcd"  //Careful, Boomer.
-	scene "scenes/NamVet/HeardBoomer04.vcd"  //Watch it, Boomer in the vacinity.
-	scene "scenes/NamVet/HeardBoomer05.vcd"  //Boomer around here.
-	scene "scenes/NamVet/HeardBoomer06.vcd"  //Boomer nearby.
-	scene "scenes/NamVet/HeardBoomer07.vcd"  //There's a Boomer trackin' us.
-	scene "scenes/NamVet/HeardBoomer08.vcd"  //Boomer closeby.
-	scene "scenes/NamVet/HeardBoomer09.vcd"  //Boomer nearby.
-	scene "scenes/NamVet/HeardBoomer10.vcd"  //Christ, there's a Boomer around here.
-	scene "scenes/NamVet/HeardBoomer11.vcd"  //Dammit, Boomer nearby.
-}
-Rule iMT_PlayerHeardBoomerNamVet
-{
-	criteria iMT_PlayerHeardBoomer IsNamVet
-	Response iMT_PlayerHeardBoomerNamVet
+	criteria iMT_PlayerAnswerReady IsNamVet
+	Response L4D1SurvivorMovingToBattleStationNamVet
 }
 
-Response iMT_PlayerHeardHunterNamVet
+Rule iMT_PlayerBattleCryNamVet
 {
-	scene "scenes/NamVet/HeardHunter01.vcd"  //There's a Hunter around here.
-	scene "scenes/NamVet/HeardHunter02.vcd"  //Careful, people, there's a Hunter nearby.
-	scene "scenes/NamVet/HeardHunter03.vcd"  //There's a hunter spookin' around out there
-	scene "scenes/NamVet/HeardHunter04.vcd"  //There's a hunter out there
-	scene "scenes/NamVet/HeardHunter05.vcd"  //Careful, Hunter around here.
-	scene "scenes/NamVet/HeardHunter06.vcd"  //Hunter out there.
-	scene "scenes/NamVet/HeardHunter08.vcd"  //Watch your back - Hunter.
-	scene "scenes/NamVet/HeardHunter09.vcd"  //Watch your back, there's a hunter out there.
-	scene "scenes/NamVet/HeardHunter10.vcd"  //I think I saw a goddamn Hunter
-}
-Rule iMT_PlayerHeardHunterNamVet
-{
-	criteria iMT_PlayerHeardHunter IsNamVet
-	Response iMT_PlayerHeardHunterNamVet
+	criteria iMT_PlayerBattleCry IsNamVet
+	Response L4D1PlayerChainSawUsedNamVet
 }
 
-Response iMT_PlayerHeardSmokerNamVet
+Response iMT_PlayerBreathingNamVet
 {
-	scene "scenes/NamVet/HeardSmoker01.vcd"  //Smoker, right around here.
-	scene "scenes/NamVet/HeardSmoker02.vcd"  //There's a Smoker nearby.
-	scene "scenes/NamVet/HeardSmoker03.vcd"  //We got a Smoker around here.
-	scene "scenes/NamVet/HeardSmoker04.vcd"  //Heads up, Smoker somewhere around here.
-	scene "scenes/NamVet/HeardSmoker05.vcd"  //Smoker right around here someplace.
-	scene "scenes/NamVet/HeardSmoker06.vcd"  //Smoker. And it's close.
-	scene "scenes/NamVet/HeardSmoker07.vcd"  //There's a Smoker
+	scene "scenes/NamVet/ExertionCritical01.vcd"  //[frightened freaked out breathing]
+	scene "scenes/NamVet/ExertionCritical02.vcd"  //[frightened freaked out breathing]
+	scene "scenes/NamVet/ExertionCritical03.vcd"  //[frightened freaked out breathing]
+	scene "scenes/NamVet/ExertionCritical03.vcd"  //[frightened freaked out breathing]
+	scene "scenes/NamVet/ExertionMajor01.vcd"  //[heavy breathing - seriously winded]
+	scene "scenes/NamVet/ExertionMajor02.vcd"  //[heavy breathing - seriously winded]
+	scene "scenes/NamVet/ExertionMinor01.vcd"  //[breathing - panting out of breath]
+	scene "scenes/NamVet/ExertionMinor02.vcd"  //[breathing - panting out of breath]
 }
-Rule iMT_PlayerHeardSmokerNamVet
+Rule iMT_PlayerBreathingNamVet
 {
-	criteria iMT_PlayerHeardSmoker IsNamVet
-	Response iMT_PlayerHeardSmokerNamVet
-}
-
-Response iMT_PlayerAlsoWarnChargerNamVet
-{
-	scene "scenes/NamVet/C6DLC3Creatures01.vcd"  //Charger!
-	scene "scenes/NamVet/C6DLC3Creatures02.vcd"  //Charger!
-	scene "scenes/NamVet/C6DLC3Creatures03.vcd"  //Charger!
-}
-Rule iMT_PlayerAlsoWarnChargerNamVet
-{
-	criteria iMT_PlayerAlsoWarnCharger IsNamVet
-	Response iMT_PlayerAlsoWarnChargerNamVet
+	criteria iMT_PlayerBreathing IsNamVet
+	Response iMT_PlayerBreathingNamVet
 }
 
-Response iMT_PlayerAlsoWarnJockeyNamVet
-{
-	scene "scenes/NamVet/C6DLC3Creatures07.vcd"  //Jockey!
-	scene "scenes/NamVet/C6DLC3Creatures08.vcd"  //Jockey!
-	scene "scenes/NamVet/C6DLC3Creatures09.vcd"  //Jockey!
-}
-Rule iMT_PlayerAlsoWarnJockeyNamVet
-{
-	criteria iMT_PlayerAlsoWarnJockey IsNamVet
-	Response iMT_PlayerAlsoWarnJockeyNamVet
-}
-
-Response iMT_PlayerAlsoWarnSpitterNamVet
-{
-	scene "scenes/NamVet/C6DLC3Creatures04.vcd"  //Spitter!
-	scene "scenes/NamVet/C6DLC3Creatures05.vcd"  //Spitter!
-	scene "scenes/NamVet/C6DLC3Creatures06.vcd"  //Spitter!
-}
-Rule iMT_PlayerAlsoWarnSpitterNamVet
-{
-	criteria iMT_PlayerAlsoWarnSpitter IsNamVet
-	Response iMT_PlayerAlsoWarnSpitterNamVet
-}
-
-Response iMT_PlayerHeardWitchNamVet
-{
-	scene "scenes/NamVet/HeardWitch01.vcd"  //Hear that, that's a witch
-	scene "scenes/NamVet/HeardWitch02.vcd"  //Witch around here.
-	scene "scenes/NamVet/HeardWitch03.vcd"  //Shit, Witch
-	scene "scenes/NamVet/HeardWitch04.vcd"  //Quiet, there's a Witch around here.
-	scene "scenes/NamVet/HeardWitch05.vcd"  //Shhh, Witch near here.
-}
-Rule iMT_PlayerHeardWitchNamVet
-{
-	criteria iMT_PlayerHeardWitch IsNamVet
-	Response iMT_PlayerHeardWitchNamVet
-}
-
-Response iMT_PlayerCoughingNamVet
-{
-	scene "scenes/NamVet/Cough01.vcd"  //(Coughing from smoke)
-	scene "scenes/NamVet/Cough02.vcd"  //(Coughing from smoke)
-	scene "scenes/NamVet/Cough03.vcd"  //(Coughing from smoke)
-	scene "scenes/NamVet/Cough04.vcd"  //(Coughing from smoke)
-	scene "scenes/NamVet/Cough05.vcd"  //(Coughing from smoke)
-	scene "scenes/NamVet/Cough06.vcd"  //(Coughing from smoke)
-}
 Rule iMT_PlayerCoughingNamVet
 {
 	criteria iMT_PlayerCoughing IsNamVet
-	Response iMT_PlayerCoughingNamVet
+	Response L4D1SurvivorCoughingNamVet
 }
 
-Response iMT_PlayerSuggestHealthNamVet
+Response iMT_PlayerDeathScreamNamVet
 {
-	scene "scenes/NamVet/PlayerSuggestHealth01.vcd"  //You should heal up.
+	scene "scenes/NamVet/Fall01.vcd"  //[Death scream as you fall]
+	scene "scenes/NamVet/Fall02.vcd"  //[Death scream as you fall]
+	scene "scenes/NamVet/Fall03.vcd"  //[Death scream as you fall]
+	scene "scenes/NamVet/Fall04.vcd"  //[Death scream as you fall]
 }
-Rule iMT_PlayerSuggestHealthNamVet
+Rule iMT_PlayerDeathScreamNamVet
 {
-	criteria iMT_PlayerSuggestHealth IsNamVet
-	Response iMT_PlayerSuggestHealthNamVet
-}
-
-Response iMT_PlayerSuggestHealthManagerNamVet
-{
-	scene "scenes/NamVet/PlayerSuggestHealthLouis01.vcd"  //Louis, use your first aid kit
-	scene "scenes/NamVet/PlayerSuggestHealthLouis02.vcd"  //Heal up, Louis.
-}
-Rule iMT_PlayerSuggestHealthManagerNamVet
-{
-	criteria iMT_PlayerSuggestHealth IsNamVet IssuerClose SubjectIsManager
-	Response iMT_PlayerSuggestHealthManagerNamVet
+	criteria iMT_PlayerDeathScream IsNamVet
+	Response iMT_PlayerDeathScreamNamVet
 }
 
-Response iMT_PlayerSuggestHealthTeenGirlNamVet
+Rule iMT_PlayerEquippedItemNamVet
 {
-	scene "scenes/NamVet/PlayerSuggestHealthZoey01.vcd"  //Zoey, maybe you should heal.
-	scene "scenes/NamVet/PlayerSuggestHealthZoey02.vcd"  //Zoey, maybe heal up?
-	scene "scenes/NamVet/PlayerSuggestHealthZoey03.vcd"  //Might want to heal up, Zoey.
-}
-Rule iMT_PlayerSuggestHealthTeenGirlNamVet
-{
-	criteria iMT_PlayerSuggestHealth IsNamVet IssuerClose SubjectIsTeenGirl
-	Response iMT_PlayerSuggestHealthTeenGirlNamVet
-}
-
-Response iMT_PlayerSuggestHealthBikerNamVet
-{
-	scene "scenes/NamVet/PlayerSuggestHealthFrancis01.vcd"  //Francis, use your first aid kit.
-	scene "scenes/NamVet/PlayerSuggestHealthFrancis02.vcd"  //Francis, you should heal up.
-	scene "scenes/NamVet/PlayerSuggestHealthFrancis03.vcd"  //Heal up, Francis.
-	scene "scenes/NamVet/PlayerSuggestHealthFrancis04.vcd"  //Francis, heal up.
-}
-Rule iMT_PlayerSuggestHealthBikerNamVet
-{
-	criteria iMT_PlayerSuggestHealth IsNamVet IssuerClose SubjectIsBiker
-	Response iMT_PlayerSuggestHealthBikerNamVet
-}
-
-Response iMT_PlayerNiceShotNamVet
-{
-	scene "scenes/NamVet/NiceShot01.vcd"  //Nice shot!
-	scene "scenes/NamVet/NiceShot02.vcd"  //Damn, kid, that was a good shot.
-	scene "scenes/NamVet/NiceShot03.vcd"  //godDAMN that was a nice shot.
-	scene "scenes/NamVet/NiceShot04.vcd"  //Nice shot!
-	scene "scenes/NamVet/NiceShot05.vcd"  //Damn, kid, that was a good shot.
-	scene "scenes/NamVet/NiceShot06.vcd"  //godDAMN that was a nice shot.
-	scene "scenes/NamVet/NiceShot07.vcd"  //Good shot, kid.
-	scene "scenes/NamVet/NiceShot08.vcd"  //Good shot!
-	scene "scenes/NamVet/NiceShot09.vcd"  //Damn, now that was a shot!
-	scene "scenes/NamVet/NiceShot13.vcd"  //Nice shooting
-	scene "scenes/NamVet/NiceShot14.vcd"  //Nice
-}
-Rule iMT_PlayerNiceShotNamVet
-{
-	criteria iMT_PlayerNiceShot IsNamVet
-	Response iMT_PlayerNiceShotNamVet
+	criteria iMT_PlayerEquippedItem IsNamVet
+	Response GrabbingGasSCNamVet
 }
 
 Response iMT_PlayerGoingToDieNamVet
@@ -512,140 +101,21 @@ Rule iMT_PlayerGoingToDieNamVet
 	Response iMT_PlayerGoingToDieNamVet
 }
 
-Response iMT_OtherPlayerWasPouncedBikerNamVet
+Response iMT_PlayerHelloNamVet
 {
-	scene "scenes/NamVet/HunterFrancisPounced01.vcd"  //Hunter's got Francis!
-	scene "scenes/NamVet/HunterFrancisPounced02.vcd"  //Hunter pounced Francis!
-	scene "scenes/NamVet/HunterFrancisPounced03.vcd"  //A Hunter's on Francis!
+	scene "scenes/NamVet/ScenarioJoin02.vcd"  //Hello!
 }
-Rule iMT_OtherPlayerWasPouncedBikerNamVet
+Rule iMT_PlayerHelloNamVet
 {
-	criteria iMT_OtherPlayerWasPounced IsNamVet IssuerClose SubjectIsBiker
-	Response iMT_OtherPlayerWasPouncedBikerNamVet
-}
-
-Response iMT_OtherPlayerWasPouncedManagerNamVet
-{
-	scene "scenes/NamVet/HunterLouisPounced01.vcd"  //Hunter's got Louis!
-	scene "scenes/NamVet/HunterLouisPounced02.vcd"  //Hunter pounced Louis!
-	scene "scenes/NamVet/HunterLouisPounced03.vcd"  //A Hunter's on Louis!
-}
-Rule iMT_OtherPlayerWasPouncedManagerNamVet
-{
-	criteria iMT_OtherPlayerWasPounced IsNamVet IssuerClose SubjectIsManager
-	Response iMT_OtherPlayerWasPouncedManagerNamVet
-}
-
-Response iMT_OtherPlayerWasPouncedTeenGirlNamVet
-{
-	scene "scenes/NamVet/HunterZoeyPounced01.vcd"  //Hunter's got Zoey!
-	scene "scenes/NamVet/HunterZoeyPounced02.vcd"  //Hunter pounced Zoey!
-	scene "scenes/NamVet/HunterZoeyPounced03.vcd"  //A Hunter's on Zoey!
-}
-Rule iMT_OtherPlayerWasPouncedTeenGirlNamVet
-{
-	criteria iMT_OtherPlayerWasPounced IsNamVet IssuerClose SubjectIsTeenGirl
-	Response iMT_OtherPlayerWasPouncedTeenGirlNamVet
-}
-
-Response iMT_PlayerEquippedItemNamVet
-{
-	scene "scenes/NamVet/KillConfirmation02.vcd"  //Got it
-	scene "scenes/NamVet/KillConfirmation08.vcd"  //Got it
-}
-Rule iMT_PlayerEquippedItemNamVet
-{
-	criteria iMT_PlayerEquippedItem IsNamVet
-	Response iMT_PlayerEquippedItemNamVet
-}
-
-Response iMT_PlayerBreathingNamVet
-{
-	scene "scenes/NamVet/ExertionCritical01.vcd"  //[frightened freaked out breathing]
-	scene "scenes/NamVet/ExertionCritical02.vcd"  //[frightened freaked out breathing]
-	scene "scenes/NamVet/ExertionCritical03.vcd"  //[frightened freaked out breathing]
-	scene "scenes/NamVet/ExertionCritical03.vcd"  //[frightened freaked out breathing]
-	scene "scenes/NamVet/ExertionMajor01.vcd"  //[heavy breathing - seriously winded]
-	scene "scenes/NamVet/ExertionMajor02.vcd"  //[heavy breathing - seriously winded]
-	scene "scenes/NamVet/ExertionMinor01.vcd"  //[breathing - panting out of breath]
-	scene "scenes/NamVet/ExertionMinor02.vcd"  //[breathing - panting out of breath]
-}
-Rule iMT_PlayerBreathingNamVet
-{
-	criteria iMT_PlayerBreathing IsNamVet
-	Response iMT_PlayerBreathingNamVet
-}
-
-Response iMT_PlayerAnswerReadyNamVet
-{
-	scene "scenes/NamVet/AnswerReady01.vcd"  //Ready.
-	scene "scenes/NamVet/AnswerReady02.vcd"  //Good to go.
-	scene "scenes/NamVet/AnswerReady03.vcd"  //I'm ready.
-	scene "scenes/NamVet/AnswerReady04.vcd"  //I said I'm ready!
-}
-Rule iMT_PlayerAnswerReadyNamVet
-{
-	criteria iMT_PlayerAnswerReady IsNamVet
-	Response iMT_PlayerAnswerReadyNamVet
-}
-
-Response iMT_PlayerDeathScreamNamVet
-{
-	scene "scenes/NamVet/Fall01.vcd"  //[Death scream as you fall]
-	scene "scenes/NamVet/Fall02.vcd"  //[Death scream as you fall]
-	scene "scenes/NamVet/Fall03.vcd"  //[Death scream as you fall]
-}
-Rule iMT_PlayerDeathScreamNamVet
-{
-	criteria iMT_PlayerDeathScream IsNamVet
-	Response iMT_PlayerDeathScreamNamVet
-}
-
-Response iMT_PlayerTeamKillNamVet
-{
-	scene "scenes/NamVet/TeamKillAccident01.vcd"  //Be careful!
-	scene "scenes/NamVet/TeamKillAccident02.vcd"  //Have you lost your mind?
-	scene "scenes/NamVet/TeamKillAccident03.vcd"  //What did you just do?
-	scene "scenes/NamVet/TeamKillAccident04.vcd"  //Watch it, watch it!
-}
-Rule iMT_PlayerTeamKillNamVet
-{
-	criteria iMT_PlayerTeamKill IsNamVet
-	Response iMT_PlayerTeamKillNamVet
-}
-
-Response iMT_PlayerTransitionNamVet
-{
-	scene "scenes/NamVet/PlayerTransitionClose01.vcd"  //Jesus H Christ that was close.
-	scene "scenes/NamVet/PlayerTransitionClose02.vcd"  //This shit's gettin' old.
-	scene "scenes/NamVet/PlayerTransitionClose03.vcd"  //I've had about enough of this.
-	scene "scenes/NamVet/PlayerTransitionClose04.vcd"  //That was a little closer than I'd liked.
-	scene "scenes/NamVet/TransitionClose01.vcd"  //Well that didn't go so well
-	scene "scenes/NamVet/TransitionClose02.vcd"  //We've done better
-	scene "scenes/NamVet/TransitionClose03.vcd"  //Thank god that's over
-}
-Rule iMT_PlayerTransitionNamVet
-{
-	criteria iMT_PlayerTransition IsNamVet
-	Response iMT_PlayerTransitionNamVet
-}
-
-Response iMT_WitchGettingAngryNamVet
-{
-	scene "scenes/NamVet/WitchGettingAngry01.vcd"  //There's gonna be hell to pay, you keep aggravatin that witch.
-	scene "scenes/NamVet/WitchGettingAngry02.vcd"  //STOP! That witch is mad as hell.
-	scene "scenes/NamVet/WitchGettingAngry03.vcd"  //Hold up, that witch is getting ready to pounce!
-	scene "scenes/NamVet/WitchGettingAngry04.vcd"  //Hold on, that witch is about to blow.
-	scene "scenes/NamVet/WitchGettingAngry05.vcd"  //STOP! That witch is getting mad as hell.
-}
-Rule iMT_WitchGettingAngryNamVet
-{
-	criteria iMT_WitchGettingAngry IsNamVet
-	Response iMT_WitchGettingAngryNamVet
+	criteria iMT_PlayerHello IsNamVet
+	Response iMT_PlayerHelloNamVet
 }
 
 Response iMT_PlayerIncapacitatedHurtNamVet
 {
+	scene "scenes/NamVet/HurtCritical03.vcd"  //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical04.vcd"  //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical08.vcd"  //[pain noise - loud major pain]
 	scene "scenes/NamVet/IncapacitatedInjury01.vcd"  //[AHHHHH - terrified yell]
 	scene "scenes/NamVet/IncapacitatedInjury02.vcd"  //[AHHHHH - terrified yell]
 	scene "scenes/NamVet/IncapacitatedInjury03.vcd"  //[AHHHHH - terrified yell]
@@ -658,58 +128,37 @@ Rule iMT_PlayerIncapacitatedHurtNamVet
 	Response iMT_PlayerIncapacitatedHurtNamVet
 }
 
-Response iMT_PlayerMournManagerNamVet
-{
-	scene "scenes/NamVet/GriefManager01.vcd"  //Ah, Louis.
-	scene "scenes/NamVet/GriefManager02.vcd"  //Louis didn't make it. Ah, Christ.
-	scene "scenes/NamVet/GriefManager03.vcd"  //C'mon people, if we make it, he didn't die for nothin'.
-}
-Rule iMT_PlayerMournManagerAliveNamVet
-{
-	criteria iMT_PlayerMourn IsNamVet IssuerClose SubjectIsManager
-	Response iMT_PlayerMournManagerNamVet
-}
-Rule iMT_PlayerMournManagerDeadNamVet
-{
-	criteria iMT_PlayerMourn IsNamVet IsManagerNear200 IsManagerNotAlive
-	Response iMT_PlayerMournManagerNamVet
-}
-
-Response iMT_PlayerMournBikerNamVet
-{
-	scene "scenes/NamVet/GriefBiker01.vcd"  //Ah, not Francis
-	scene "scenes/NamVet/GriefBiker02.vcd"  //Christ, I'm gonna miss that son of a bitch.
-	scene "scenes/NamVet/GriefBiker03.vcd"  //I am going to miss that man and his gun
-}
 Rule iMT_PlayerMournBikerAliveNamVet
 {
-	criteria iMT_PlayerMourn IsNamVet IssuerClose SubjectIsBiker
-	Response iMT_PlayerMournBikerNamVet
+	criteria iMT_PlayerMourn IsNamVet IsBikerNear200 SubjectIsBiker
+	Response L4D1SurvivorMournFrancisNamVet
 }
 Rule iMT_PlayerMournBikerDeadNamVet
 {
 	criteria iMT_PlayerMourn IsNamVet IsBikerNear200 IsBikerNotAlive
-	Response iMT_PlayerMournBikerNamVet
+	Response L4D1SurvivorMournFrancisNamVet
 }
 
-Response iMT_PlayerMournTeenGirlNamVet
+Rule iMT_PlayerMournManagerAliveNamVet
 {
-	scene "scenes/NamVet/GriefFemaleGeneric01.vcd"  //She's dead!
-	scene "scenes/NamVet/GriefFemaleGeneric02.vcd"  //Ah Christ, she's dead!
-	scene "scenes/NamVet/GriefFemaleGeneric04.vcd"  //Goddamit, she didn't make it.
-	scene "scenes/NamVet/GriefTeenGirl01.vcd"  //Ah not Zoey
-	scene "scenes/NamVet/GriefTeenGirl02.vcd"  //Ah jesus. What a waste.
-	scene "scenes/NamVet/GriefTeenGirl03.vcd"  //One of those sick sons of bitches just sealed all a' their death warrants.
+	criteria iMT_PlayerMourn IsNamVet IsManagerNear200 SubjectIsManager
+	Response L4D1SurvivorMournLouisNamVet
 }
+Rule iMT_PlayerMournManagerDeadNamVet
+{
+	criteria iMT_PlayerMourn IsNamVet IsManagerNear200 IsManagerNotAlive
+	Response L4D1SurvivorMournLouisNamVet
+}
+
 Rule iMT_PlayerMournTeenGirlAliveNamVet
 {
-	criteria iMT_PlayerMourn IsNamVet IssuerClose SubjectIsTeenGirl
-	Response iMT_PlayerMournTeenGirlNamVet
+	criteria iMT_PlayerMourn IsNamVet IsTeenGirlNear200 SubjectIsTeenGirl
+	Response L4D1SurvivorMournZoeyNamVet
 }
 Rule iMT_PlayerMournTeenGirlDeadNamVet
 {
 	criteria iMT_PlayerMourn IsNamVet IsTeenGirlNear200 IsTeenGirlNotAlive
-	Response iMT_PlayerMournTeenGirlNamVet
+	Response L4D1SurvivorMournZoeyNamVet
 }
 
 Response iMT_PlayerNearExitNamVet
@@ -729,264 +178,323 @@ Rule iMT_PlayerNearExitNamVet
 	Response iMT_PlayerNearExitNamVet
 }
 
-Response iMT_PlayerNearExitResponseNamVet
-{
-	scene "scenes/NamVet/SafeSpotAheadReaction01.vcd" odds 2  //Finally!
-	scene "scenes/NamVet/SafeSpotAheadReaction02.vcd" odds 2  //Thank God.
-	scene "scenes/NamVet/SafeSpotAheadReaction03.vcd" odds 2  //'Bout time!
-	scene "scenes/NamVet/SafeSpotAheadReaction04.vcd" odds 2  //Hallelujah!
-	scene "scenes/NamVet/SafeSpotAheadReaction05.vcd" odds 2  //Well it's about damn time.
-	scene "scenes/NamVet/SafeSpotAheadReaction06.vcd" odds 2  //I could use a damn break.
-}
 Rule iMT_PlayerNearExitResponseNamVet
 {
-	criteria iMT_PlayerNearExitResponse IsNamVet
-	Response iMT_PlayerNearExitResponseNamVet
+	criteria iMT_PlayerNearExitResponse IsNamVet IssuerCloseEnough ChanceToFire10Percent
+	Response SafeSpotAheadResponseNamVet
+}
+
+Response iMT_PlayerNiceShotNamVet
+{
+	scene "scenes/NamVet/NiceShot01.vcd"  //Nice shot!
+	scene "scenes/NamVet/NiceShot02.vcd"  //Damn, kid, that was a good shot.
+	scene "scenes/NamVet/NiceShot03.vcd"  //godDAMN that was a nice shot.
+	scene "scenes/NamVet/NiceShot04.vcd"  //Nice shot!
+	scene "scenes/NamVet/NiceShot05.vcd"  //Damn, kid, that was a good shot.
+	scene "scenes/NamVet/NiceShot06.vcd"  //godDAMN that was a nice shot.
+	scene "scenes/NamVet/NiceShot07.vcd"  //Good shot, kid.
+	scene "scenes/NamVet/NiceShot08.vcd"  //Good shot!
+	scene "scenes/NamVet/NiceShot09.vcd"  //Damn, now that was a shot!
+	scene "scenes/NamVet/NiceShot13.vcd"  //Nice shooting
+	scene "scenes/NamVet/NiceShot14.vcd"  //Nice
+}
+Rule iMT_PlayerNiceShotNamVet
+{
+	criteria iMT_PlayerNiceShot IsNamVet
+	Response iMT_PlayerNiceShotNamVet
+}
+
+Response iMT_PlayerPainNoiseNamVet
+{
+	scene "scenes/NamVet/HurtCritical01.vcd"  //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical02.vcd"  //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical05.vcd"  //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical06.vcd"  //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical07.vcd"  //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtCritical09.vcd"  //[pain noise - loud major pain]
+	scene "scenes/NamVet/HurtMajor01.vcd"  //[pain noise - ahh]
+	scene "scenes/NamVet/HurtMajor02.vcd"  //[pain noise - huh]
+	scene "scenes/NamVet/HurtMajor03.vcd"  //[pain noise - oy]
+	scene "scenes/NamVet/HurtMajor04.vcd"  //[pain noise - ugh]
+	scene "scenes/NamVet/HurtMajor05.vcd"  //[pain noise - ugh]
+	scene "scenes/NamVet/HurtMajor06.vcd"  //[pain noise - ugh]
+	scene "scenes/NamVet/HurtMajor07.vcd"  //[pain noise - ugh]
+	scene "scenes/NamVet/HurtMajor08.vcd"  //[pain noise - oy]
+	scene "scenes/NamVet/HurtMajor09.vcd"  //[pain noise - ugh]
+}
+Rule iMT_PlayerPainNoiseNamVet
+{
+	criteria iMT_PlayerPainNoise IsNamVet
+	Response iMT_PlayerPainNoiseNamVet
+}
+
+Response iMT_PlayerPouncedBikerNamVet
+{
+	scene "scenes/NamVet/HunterFrancisPounced01.vcd"  //Hunter's got Francis!
+	scene "scenes/NamVet/HunterFrancisPounced02.vcd"  //Hunter pounced Francis!
+	scene "scenes/NamVet/HunterFrancisPounced03.vcd"  //A Hunter's on Francis!
+}
+Rule iMT_PlayerPouncedBikerNamVet
+{
+	criteria iMT_SurvivorWasPounced IsNamVet IsBikerNear800 SubjectIsBiker
+	Response iMT_PlayerPouncedBikerNamVet
+}
+
+Response iMT_PlayerPouncedManagerNamVet
+{
+	scene "scenes/NamVet/HunterLouisPounced01.vcd"  //Hunter's got Louis!
+	scene "scenes/NamVet/HunterLouisPounced02.vcd"  //Hunter pounced Louis!
+	scene "scenes/NamVet/HunterLouisPounced03.vcd"  //A Hunter's on Louis!
+}
+Rule iMT_PlayerPouncedManagerNamVet
+{
+	criteria iMT_SurvivorWasPounced IsNamVet IsManagerNear800 SubjectIsManager
+	Response iMT_PlayerPouncedManagerNamVet
+}
+
+Response iMT_PlayerPouncedTeenGirlNamVet
+{
+	scene "scenes/NamVet/HunterZoeyPounced01.vcd"  //Hunter's got Zoey!
+	scene "scenes/NamVet/HunterZoeyPounced02.vcd"  //Hunter pounced Zoey!
+	scene "scenes/NamVet/HunterZoeyPounced03.vcd"  //A Hunter's on Zoey!
+}
+Rule iMT_PlayerPouncedTeenGirlNamVet
+{
+	criteria iMT_SurvivorWasPounced IsNamVet IsTeenGirlNear800 SubjectIsTeenGirl
+	Response iMT_PlayerPouncedTeenGirlNamVet
+}
+
+Rule iMT_PlayerSuggestHealthNamVet
+{
+	criteria iMT_PlayerSuggestHealth IsNamVet
+	Response L4D1PlayerSuggestHealthNamVet
+}
+
+Rule iMT_PlayerSuggestHealthBikerNamVet
+{
+	criteria iMT_PlayerSuggestHealth IsNamVet IsBikerNear400 SubjectIsBiker
+	Response L4D1PlayerSuggestHealthFrancisNamVet
+}
+
+Rule iMT_PlayerSuggestHealthManagerNamVet
+{
+	criteria iMT_PlayerSuggestHealth IsNamVet IsManagerNear400 SubjectIsManager
+	Response L4D1PlayerSuggestHealthLouisNamVet
+}
+
+Rule iMT_PlayerSuggestHealthTeenGirlNamVet
+{
+	criteria iMT_PlayerSuggestHealth IsNamVet IsTeenGirlNear400 SubjectIsTeenGirl
+	Response L4D1PlayerSuggestHealthZoeyNamVet
+}
+
+Rule iMT_PlayerTeamKillNamVet
+{
+	criteria iMT_PlayerTeamKill IsNamVet
+	Response L4D1PlayerFriendlyFire2NamVet
+}
+
+Rule iMT_PlayerTransitionNamVet
+{
+	criteria iMT_PlayerTransition IsNamVet
+	Response L4D1PlayerTransitionCloseNamVet
+}
+
+Rule iMT_SurvivorCaughtVomitNamVet
+{
+	criteria iMT_PlayerVomitInFace IsNamVet
+	Response L4D1SurvivorCaughtVomitNamVet
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// NPC Triggers
+// Character-specific
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_VirgilNamVet
+Response iMT_10MilesNamVet
 {
-	print " " then orator iMT_Virgil foo:0 0
+	scene "scenes/NamVet/C6DLC3CommunityLines04.vcd"  //Back in my day, we walked 10 miles through a blizzard in bare feet to kill zombies.
 }
-Rule iMT_VirgilNamVet
+Rule iMT_10MilesNamVet
 {
-	criteria iMT_Virgil IsNamVet
-	Response iMT_VirgilNamVet
-}
-
-Response iMT_VirgilC8M5NamVet
-{
-	print " " then pilot iMT_Virgil foo:0 0
-}
-Rule iMT_VirgilC8M5NamVet
-{
-	criteria iMT_Virgil IsNamVet IsMap_C8M5
-	Response iMT_VirgilC8M5NamVet
+	criteria iMT_10Miles IsNamVet
+	Response iMT_10MilesNamVet
 }
 
-Response iMT_VirgilC10M3NamVet
+Rule iMT_BigMouthNamVet
 {
-	print " " then churchguy iMT_Virgil foo:0 0
-}
-Rule iMT_VirgilC10M3NamVet
-{
-	criteria iMT_Virgil IsNamVet IsMap_C10M3
-	Response iMT_VirgilC10M3NamVet
+	criteria iMT_BigMouth IsNamVet
+	Response L4D1PlayerReviveFriendDownFinalBikerNamVet
 }
 
-Response iMT_VirgilC10M5NamVet
+Response iMT_ColdNamVet
 {
-	print " " then orator_boat_radio iMT_Virgil foo:0 0
+	scene "scenes/NamVet/C6DLC3CommunityLines02.vcd"  //That's what you get for not wearing a hat.
+	scene "scenes/NamVet/C6DLC3CommunityLines05.vcd"  //Ehh... is it too cold for ya cry babies?
 }
-Rule iMT_VirgilC10M5NamVet
+Rule iMT_ColdNamVet
 {
-	criteria iMT_Virgil IsNamVet IsMap_C10M5
-	Response iMT_VirgilC10M5NamVet
-}
-
-Response iMT_VirgilC11M5NamVet
-{
-	print " " then orator_plane_radio iMT_Virgil foo:0 0
-}
-Rule iMT_VirgilC11M5NamVet
-{
-	criteria iMT_Virgil IsNamVet IsMap_C11M5
-	Response iMT_VirgilC11M5NamVet
+	criteria iMT_Cold IsNamVet
+	Response iMT_ColdNamVet
 }
 
-Response iMT_VirgilC12M5NamVet
+Response iMT_FamilyNamVet
 {
-	print " " then orator_farm_radio iMT_Virgil foo:0 0
+	scene "scenes/NamVet/C6DLC3JumpingOffBridge12.vcd"  //You guys are the only family I got! Take care of each other!
 }
-Rule iMT_VirgilC12M5NamVet
+Rule iMT_FamilyNamVet
 {
-	criteria iMT_Virgil IsNamVet IsMap_C12M5
-	Response iMT_VirgilC12M5NamVet
-}
-
-Response iMT_WhitakerNamVet
-{
-	print " " then orator iMT_Whitaker foo:0 0
-}
-Rule iMT_WhitakerNamVet
-{
-	criteria iMT_Whitaker IsNamVet
-	Response iMT_WhitakerNamVet
+	criteria iMT_Family IsNamVet
+	Response iMT_FamilyNamVet
 }
 
-Response iMT_WhitakerC8M5NamVet
+Rule iMT_FirstStepNamVet
 {
-	print " " then pilot iMT_Whitaker foo:0 0
-}
-Rule iMT_WhitakerC8M5NamVet
-{
-	criteria iMT_Whitaker IsNamVet IsMap_C8M5
-	Response iMT_WhitakerC8M5NamVet
+	criteria iMT_FirstStep IsNamVet
+	Response L4D1PlayerRemarkhospital04_path06NamVet
 }
 
-Response iMT_WhitakerC10M3NamVet
+Response iMT_GoodEnoughNamVet
 {
-	print " " then churchguy iMT_Whitaker foo:0 0
+	scene "scenes/NamVet/C6DLC3MovieLine15.vcd"  //I gotta admit... this ain't how I pictured it. Good enough.
 }
-Rule iMT_WhitakerC10M3NamVet
+Rule iMT_GoodEnoughNamVet
 {
-	criteria iMT_Whitaker IsNamVet IsMap_C10M3
-	Response iMT_WhitakerC10M3NamVet
-}
-
-Response iMT_WhitakerC10M5NamVet
-{
-	print " " then orator_boat_radio iMT_Whitaker foo:0 0
-}
-Rule iMT_WhitakerC10M5NamVet
-{
-	criteria iMT_Whitaker IsNamVet IsMap_C10M5
-	Response iMT_WhitakerC10M5NamVet
+	criteria iMT_GoodEnough IsNamVet
+	Response iMT_GoodEnoughNamVet
 }
 
-Response iMT_WhitakerC11M5NamVet
+Response iMT_GoodRunNamVet
 {
-	print " " then orator_plane_radio iMT_Whitaker foo:0 0
+	scene "scenes/NamVet/C6DLC3MovieLine16.vcd"  //I had a good run. Knowing they're safe, I wouldn't have changed a thing.
+	scene "scenes/NamVet/C6DLC3MovieLine17.vcd"  //I had a good run. I wouldn't have changed a thing.
 }
-Rule iMT_WhitakerC11M5NamVet
+Rule iMT_GoodRunNamVet
 {
-	criteria iMT_Whitaker IsNamVet IsMap_C11M5
-	Response iMT_WhitakerC11M5NamVet
-}
-
-Response iMT_WhitakerC12M5NamVet
-{
-	print " " then orator_farm_radio iMT_Whitaker foo:0 0
-}
-Rule iMT_WhitakerC12M5NamVet
-{
-	criteria iMT_Whitaker IsNamVet IsMap_C12M5
-	Response iMT_WhitakerC12M5NamVet
+	criteria iMT_GoodRun IsNamVet
+	Response iMT_GoodRunNamVet
 }
 
-Response iMT_MoustachioNamVet
+Response iMT_HallelujahNamVet
 {
-	print " " then orator iMT_Moustachio foo:0 0
+	scene "scenes/NamVet/SafeSpotAheadReaction04.vcd"  //Hallelujah!
 }
-Rule iMT_MoustachioNamVet
+Rule iMT_HallelujahNamVet
 {
-	criteria iMT_Moustachio IsNamVet
-	Response iMT_MoustachioNamVet
-}
-
-Response iMT_MoustachioC8M5NamVet
-{
-	print " " then pilot iMT_Moustachio foo:0 0
-}
-Rule iMT_MoustachioC8M5NamVet
-{
-	criteria iMT_Moustachio IsNamVet IsMap_C8M5
-	Response iMT_MoustachioC8M5NamVet
+	criteria iMT_Hallelujah IsNamVet
+	Response iMT_HallelujahNamVet
 }
 
-Response iMT_MoustachioC10M3NamVet
+Rule iMT_HomeNamVet
 {
-	print " " then churchguy iMT_Moustachio foo:0 0
-}
-Rule iMT_MoustachioC10M3NamVet
-{
-	criteria iMT_Moustachio IsNamVet IsMap_C10M3
-	Response iMT_MoustachioC10M3NamVet
+	criteria iMT_Home IsNamVet
+	Response L4D1PlayerRemarkFarm01_path03NamVet
 }
 
-Response iMT_MoustachioC10M5NamVet
+Response iMT_JobDoneNamVet
 {
-	print " " then orator_boat_radio iMT_Moustachio foo:0 0
+	scene "scenes/NamVet/C6DLC3MovieLine01.vcd"  //My job's done. Have at me you bastards!
+	scene "scenes/NamVet/C6DLC3MovieLine02.vcd"  //My job's done. Let's see what you got, you big dumb sons of bitches.
 }
-Rule iMT_MoustachioC10M5NamVet
+Rule iMT_JobDoneNamVet
 {
-	criteria iMT_Moustachio IsNamVet IsMap_C10M5
-	Response iMT_MoustachioC10M5NamVet
-}
-
-Response iMT_MoustachioC11M5NamVet
-{
-	print " " then orator_plane_radio iMT_Moustachio foo:0 0
-}
-Rule iMT_MoustachioC11M5NamVet
-{
-	criteria iMT_Moustachio IsNamVet IsMap_C11M5
-	Response iMT_MoustachioC11M5NamVet
+	criteria iMT_JobDone IsNamVet
+	Response iMT_JobDoneNamVet
 }
 
-Response iMT_MoustachioC12M5NamVet
+Response iMT_KnowingLouisNamVet
 {
-	print " " then orator_farm_radio iMT_Moustachio foo:0 0
+	scene "scenes/NamVet/InsideSafeRoom03.vcd"  //How well do you really know Louis?
 }
-Rule iMT_MoustachioC12M5NamVet
+Rule iMT_KnowingLouisNamVet
 {
-	criteria iMT_Moustachio IsNamVet IsMap_C12M5
-	Response iMT_MoustachioC12M5NamVet
-}
-
-Response iMT_ChurchGuyNamVet
-{
-	print " " then orator iMT_ChurchGuy foo:0 0
-}
-Rule iMT_ChurchGuyNamVet
-{
-	criteria iMT_ChurchGuy IsNamVet
-	Response iMT_ChurchGuyNamVet
+	criteria iMT_KnowingLouis IsNamVet
+	Response iMT_KnowingLouisNamVet
 }
 
-Response iMT_ChurchGuyC8M5NamVet
+Response iMT_LastFightNamVet
 {
-	print " " then pilot iMT_ChurchGuy foo:0 0
+	scene "scenes/NamVet/C6DLC3MovieLine04.vcd"  //You monkeys ain't gonna spoil this.
+	scene "scenes/NamVet/C6DLC3MovieLine05.vcd"  //You shoulda brought more tanks with you.
+	scene "scenes/NamVet/C6DLC3MovieLine08.vcd"  //You're too late.
+	scene "scenes/NamVet/C6DLC3MovieLine10.vcd" odds 10  //I'll see peace back on Earth... if I gotta murder every one of you bastards... with my bare goddamn hands.
+	scene "scenes/NamVet/C6DLC3MovieLine19.vcd"  //That all you brought?
 }
-Rule iMT_ChurchGuyC8M5NamVet
+Rule iMT_LastFightNamVet
 {
-	criteria iMT_ChurchGuy IsNamVet IsMap_C8M5
-	Response iMT_ChurchGuyC8M5NamVet
-}
-
-Response iMT_ChurchGuyC10M3NamVet
-{
-	print " " then churchguy iMT_ChurchGuy foo:0 0
-}
-Rule iMT_ChurchGuyC10M3NamVet
-{
-	criteria iMT_ChurchGuy IsNamVet IsMap_C10M3
-	Response iMT_ChurchGuyC10M3NamVet
+	criteria iMT_LastFight IsNamVet
+	Response iMT_LastFightNamVet
 }
 
-Response iMT_ChurchGuyC10M5NamVet
+Response iMT_LonelyNamVet
 {
-	print " " then orator_boat_radio iMT_ChurchGuy foo:0 0
+	scene "scenes/NamVet/ToTheRescueThanks03.vcd"  //Thanks, I was getting lonely.
 }
-Rule iMT_ChurchGuyC10M5NamVet
+Rule iMT_LonelyNamVet
 {
-	criteria iMT_ChurchGuy IsNamVet IsMap_C10M5
-	Response iMT_ChurchGuyC10M5NamVet
-}
-
-Response iMT_ChurchGuyC11M5NamVet
-{
-	print " " then orator_plane_radio iMT_ChurchGuy foo:0 0
-}
-Rule iMT_ChurchGuyC11M5NamVet
-{
-	criteria iMT_ChurchGuy IsNamVet IsMap_C11M5
-	Response iMT_ChurchGuyC11M5NamVet
+	criteria iMT_Lonely IsNamVet
+	Response iMT_LonelyNamVet
 }
 
-Response iMT_ChurchGuyC12M5NamVet
+Response iMT_MadNamVet
 {
-	print " " then orator_farm_radio iMT_ChurchGuy foo:0 0
+	scene "scenes/NamVet/C6DLC3Intro26.vcd"  //Zoey. You still mad?
 }
-Rule iMT_ChurchGuyC12M5NamVet
+Rule iMT_MadNamVet
 {
-	criteria iMT_ChurchGuy IsNamVet IsMap_C12M5
-	Response iMT_ChurchGuyC12M5NamVet
+	criteria iMT_Mad IsNamVet
+	Response iMT_MadNamVet
 }
+
+Response iMT_NervousHummingNamVet
+{
+	scene "scenes/NamVet/NervousHumming01.vcd"  //[Nervous Humming]
+}
+Rule iMT_NervousHummingNamVet
+{
+	criteria iMT_NervousHumming IsNamVet
+	Response iMT_NervousHummingNamVet
+}
+
+Response iMT_PhoneNamVet
+{
+	scene "scenes/NamVet/C6DLC3CommunityLines06.vcd"  //No one's going to be answering that phone.
+}
+Rule iMT_PhoneNamVet
+{
+	criteria iMT_Phone IsNamVet
+	Response iMT_PhoneNamVet
+}
+
+Response iMT_ShoeLeatherNamVet
+{
+	scene "scenes/NamVet/C6DLC3MovieLine20.vcd"  //If I'd known how many of you sonsabitches there were when we started out--guess I woulda saved the shoe leather and fought you there.
+}
+Rule iMT_ShoeLeatherNamVet
+{
+	criteria iMT_ShoeLeather IsNamVet
+	Response iMT_ShoeLeatherNamVet
+}
+
+Response iMT_StinkNamVet
+{
+	scene "scenes/NamVet/C6DLC3InTankTrainCar03.vcd"  //Stinks like shit in here.
+	scene "scenes/NamVet/WorldHospital0316.vcd" then Biker hospital03_path08a2 foo:0 0  //Francis, is that you or the sewer?
+}
+Rule iMT_StinkNamVet
+{
+	criteria iMT_Stink IsNamVet
+	Response iMT_StinkNamVet
+}
+
+Rule iMT_WoodsNamVet
+{
+	criteria iMT_Woods IsNamVet
+	Response L4D1PlayerRemarkFarm01_path01NamVet
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC triggers
+//--------------------------------------------------------------------------------------------------------------
 
 Response iMT_BoatmanNamVet
 {
@@ -1004,7 +512,7 @@ Response iMT_BoatmanC8M5NamVet
 }
 Rule iMT_BoatmanC8M5NamVet
 {
-	criteria iMT_Boatman IsNamVet IsMap_C8M5
+	criteria iMT_Boatman IsNamVet IsNoMercy5
 	Response iMT_BoatmanC8M5NamVet
 }
 
@@ -1014,7 +522,7 @@ Response iMT_BoatmanC10M3NamVet
 }
 Rule iMT_BoatmanC10M3NamVet
 {
-	criteria iMT_Boatman IsNamVet IsMap_C10M3
+	criteria iMT_Boatman IsNamVet IsDeathToll3
 	Response iMT_BoatmanC10M3NamVet
 }
 
@@ -1024,7 +532,7 @@ Response iMT_BoatmanC10M5NamVet
 }
 Rule iMT_BoatmanC10M5NamVet
 {
-	criteria iMT_Boatman IsNamVet IsMap_C10M5
+	criteria iMT_Boatman IsNamVet IsDeathToll5
 	Response iMT_BoatmanC10M5NamVet
 }
 
@@ -1034,7 +542,7 @@ Response iMT_BoatmanC11M5NamVet
 }
 Rule iMT_BoatmanC11M5NamVet
 {
-	criteria iMT_Boatman IsNamVet IsMap_C11M5
+	criteria iMT_Boatman IsNamVet IsDeadAir5
 	Response iMT_BoatmanC11M5NamVet
 }
 
@@ -1044,7 +552,7 @@ Response iMT_BoatmanC12M5NamVet
 }
 Rule iMT_BoatmanC12M5NamVet
 {
-	criteria iMT_Boatman IsNamVet IsMap_C12M5
+	criteria iMT_Boatman IsNamVet IsBloodHarvest5
 	Response iMT_BoatmanC12M5NamVet
 }
 
@@ -1064,7 +572,7 @@ Response iMT_ChopperPilotC8M5NamVet
 }
 Rule iMT_ChopperPilotC8M5NamVet
 {
-	criteria iMT_ChopperPilot IsNamVet IsMap_C8M5
+	criteria iMT_ChopperPilot IsNamVet IsNoMercy5
 	Response iMT_ChopperPilotC8M5NamVet
 }
 
@@ -1074,7 +582,7 @@ Response iMT_ChopperPilotC10M3NamVet
 }
 Rule iMT_ChopperPilotC10M3NamVet
 {
-	criteria iMT_ChopperPilot IsNamVet IsMap_C10M3
+	criteria iMT_ChopperPilot IsNamVet IsDeathToll3
 	Response iMT_ChopperPilotC10M3NamVet
 }
 
@@ -1084,7 +592,7 @@ Response iMT_ChopperPilotC10M5NamVet
 }
 Rule iMT_ChopperPilotC10M5NamVet
 {
-	criteria iMT_ChopperPilot IsNamVet IsMap_C10M5
+	criteria iMT_ChopperPilot IsNamVet IsDeathToll5
 	Response iMT_ChopperPilotC10M5NamVet
 }
 
@@ -1094,7 +602,7 @@ Response iMT_ChopperPilotC11M5NamVet
 }
 Rule iMT_ChopperPilotC11M5NamVet
 {
-	criteria iMT_ChopperPilot IsNamVet IsMap_C11M5
+	criteria iMT_ChopperPilot IsNamVet IsDeadAir5
 	Response iMT_ChopperPilotC11M5NamVet
 }
 
@@ -1104,8 +612,128 @@ Response iMT_ChopperPilotC12M5NamVet
 }
 Rule iMT_ChopperPilotC12M5NamVet
 {
-	criteria iMT_ChopperPilot IsNamVet IsMap_C12M5
+	criteria iMT_ChopperPilot IsNamVet IsBloodHarvest5
 	Response iMT_ChopperPilotC12M5NamVet
+}
+
+Response iMT_ChurchGuyNamVet
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyNamVet
+{
+	criteria iMT_ChurchGuy IsNamVet
+	Response iMT_ChurchGuyNamVet
+}
+
+Response iMT_ChurchGuyC8M5NamVet
+{
+	print " " then pilot iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC8M5NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsNoMercy5
+	Response iMT_ChurchGuyC8M5NamVet
+}
+
+Response iMT_ChurchGuyC10M3NamVet
+{
+	print " " then churchguy iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC10M3NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsDeathToll3
+	Response iMT_ChurchGuyC10M3NamVet
+}
+
+Response iMT_ChurchGuyC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC10M5NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsDeathToll5
+	Response iMT_ChurchGuyC10M5NamVet
+}
+
+Response iMT_ChurchGuyC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC11M5NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsDeadAir5
+	Response iMT_ChurchGuyC11M5NamVet
+}
+
+Response iMT_ChurchGuyC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyC12M5NamVet
+{
+	criteria iMT_ChurchGuy IsNamVet IsBloodHarvest5
+	Response iMT_ChurchGuyC12M5NamVet
+}
+
+Response iMT_MoustachioNamVet
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioNamVet
+{
+	criteria iMT_Moustachio IsNamVet
+	Response iMT_MoustachioNamVet
+}
+
+Response iMT_MoustachioC8M5NamVet
+{
+	print " " then pilot iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC8M5NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsNoMercy5
+	Response iMT_MoustachioC8M5NamVet
+}
+
+Response iMT_MoustachioC10M3NamVet
+{
+	print " " then churchguy iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC10M3NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsDeathToll3
+	Response iMT_MoustachioC10M3NamVet
+}
+
+Response iMT_MoustachioC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC10M5NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsDeathToll5
+	Response iMT_MoustachioC10M5NamVet
+}
+
+Response iMT_MoustachioC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC11M5NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsDeadAir5
+	Response iMT_MoustachioC11M5NamVet
+}
+
+Response iMT_MoustachioC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioC12M5NamVet
+{
+	criteria iMT_Moustachio IsNamVet IsBloodHarvest5
+	Response iMT_MoustachioC12M5NamVet
 }
 
 Response iMT_PlanePilotNamVet
@@ -1124,7 +752,7 @@ Response iMT_PlanePilotC8M5NamVet
 }
 Rule iMT_PlanePilotC8M5NamVet
 {
-	criteria iMT_PlanePilot IsNamVet IsMap_C8M5
+	criteria iMT_PlanePilot IsNamVet IsNoMercy5
 	Response iMT_PlanePilotC8M5NamVet
 }
 
@@ -1134,7 +762,7 @@ Response iMT_PlanePilotC10M3NamVet
 }
 Rule iMT_PlanePilotC10M3NamVet
 {
-	criteria iMT_PlanePilot IsNamVet IsMap_C10M3
+	criteria iMT_PlanePilot IsNamVet IsDeathToll3
 	Response iMT_PlanePilotC10M3NamVet
 }
 
@@ -1144,7 +772,7 @@ Response iMT_PlanePilotC10M5NamVet
 }
 Rule iMT_PlanePilotC10M5NamVet
 {
-	criteria iMT_PlanePilot IsNamVet IsMap_C10M5
+	criteria iMT_PlanePilot IsNamVet IsDeathToll5
 	Response iMT_PlanePilotC10M5NamVet
 }
 
@@ -1154,7 +782,7 @@ Response iMT_PlanePilotC11M5NamVet
 }
 Rule iMT_PlanePilotC11M5NamVet
 {
-	criteria iMT_PlanePilot IsNamVet IsMap_C11M5
+	criteria iMT_PlanePilot IsNamVet IsDeadAir5
 	Response iMT_PlanePilotC11M5NamVet
 }
 
@@ -1164,7 +792,7 @@ Response iMT_PlanePilotC12M5NamVet
 }
 Rule iMT_PlanePilotC12M5NamVet
 {
-	criteria iMT_PlanePilot IsNamVet IsMap_C12M5
+	criteria iMT_PlanePilot IsNamVet IsBloodHarvest5
 	Response iMT_PlanePilotC12M5NamVet
 }
 
@@ -1184,7 +812,7 @@ Response iMT_Rescue9C8M5NamVet
 }
 Rule iMT_Rescue9C8M5NamVet
 {
-	criteria iMT_Rescue9 IsNamVet IsMap_C8M5
+	criteria iMT_Rescue9 IsNamVet IsNoMercy5
 	Response iMT_Rescue9C8M5NamVet
 }
 
@@ -1194,7 +822,7 @@ Response iMT_Rescue9C10M3NamVet
 }
 Rule iMT_Rescue9C10M3NamVet
 {
-	criteria iMT_Rescue9 IsNamVet IsMap_C10M3
+	criteria iMT_Rescue9 IsNamVet IsDeathToll3
 	Response iMT_Rescue9C10M3NamVet
 }
 
@@ -1204,7 +832,7 @@ Response iMT_Rescue9C10M5NamVet
 }
 Rule iMT_Rescue9C10M5NamVet
 {
-	criteria iMT_Rescue9 IsNamVet IsMap_C10M5
+	criteria iMT_Rescue9 IsNamVet IsDeathToll5
 	Response iMT_Rescue9C10M5NamVet
 }
 
@@ -1214,7 +842,7 @@ Response iMT_Rescue9C11M5NamVet
 }
 Rule iMT_Rescue9C11M5NamVet
 {
-	criteria iMT_Rescue9 IsNamVet IsMap_C11M5
+	criteria iMT_Rescue9 IsNamVet IsDeadAir5
 	Response iMT_Rescue9C11M5NamVet
 }
 
@@ -1224,7 +852,7 @@ Response iMT_Rescue9C12M5NamVet
 }
 Rule iMT_Rescue9C12M5NamVet
 {
-	criteria iMT_Rescue9 IsNamVet IsMap_C12M5
+	criteria iMT_Rescue9 IsNamVet IsBloodHarvest5
 	Response iMT_Rescue9C12M5NamVet
 }
 
@@ -1244,7 +872,7 @@ Response iMT_SoldiersC8M5NamVet
 }
 Rule iMT_SoldiersC8M5NamVet
 {
-	criteria iMT_Soldiers IsNamVet IsMap_C8M5
+	criteria iMT_Soldiers IsNamVet IsNoMercy5
 	Response iMT_SoldiersC8M5NamVet
 }
 
@@ -1254,7 +882,7 @@ Response iMT_SoldiersC10M3NamVet
 }
 Rule iMT_SoldiersC10M3NamVet
 {
-	criteria iMT_Soldiers IsNamVet IsMap_C10M3
+	criteria iMT_Soldiers IsNamVet IsDeathToll3
 	Response iMT_SoldiersC10M3NamVet
 }
 
@@ -1264,7 +892,7 @@ Response iMT_SoldiersC10M5NamVet
 }
 Rule iMT_SoldiersC10M5NamVet
 {
-	criteria iMT_Soldiers IsNamVet IsMap_C10M5
+	criteria iMT_Soldiers IsNamVet IsDeathToll5
 	Response iMT_SoldiersC10M5NamVet
 }
 
@@ -1274,7 +902,7 @@ Response iMT_SoldiersC11M5NamVet
 }
 Rule iMT_SoldiersC11M5NamVet
 {
-	criteria iMT_Soldiers IsNamVet IsMap_C11M5
+	criteria iMT_Soldiers IsNamVet IsDeadAir5
 	Response iMT_SoldiersC11M5NamVet
 }
 
@@ -1284,33 +912,133 @@ Response iMT_SoldiersC12M5NamVet
 }
 Rule iMT_SoldiersC12M5NamVet
 {
-	criteria iMT_Soldiers IsNamVet IsMap_C12M5
+	criteria iMT_Soldiers IsNamVet IsBloodHarvest5
 	Response iMT_SoldiersC12M5NamVet
 }
 
-//--------------------------------------------------------------------------------------------------------------
-// General Fixes
-//--------------------------------------------------------------------------------------------------------------
+Response iMT_VirgilNamVet
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilNamVet
+{
+	criteria iMT_Virgil IsNamVet
+	Response iMT_VirgilNamVet
+}
 
-Response iMT_PlayerStayTogetherNamVet
+Response iMT_VirgilC8M5NamVet
 {
-	scene "scenes/NamVet/StayTogether01.vcd"  //Stay close!
-	scene "scenes/NamVet/StayTogether02.vcd"  //Come on - we got to stay together.
-	scene "scenes/NamVet/StayTogether03.vcd"  //Keep together, people.
-	scene "scenes/NamVet/StayTogether04.vcd"  //Stay together.
-	scene "scenes/NamVet/StayTogether05.vcd"  //Form up!
-	scene "scenes/NamVet/StayTogether07.vcd"  //Stay close.
-	scene "scenes/NamVet/StayTogether08.vcd"  //Don't get split up.
-	scene "scenes/NamVet/StayTogether09.vcd"  //Stay together.
-	scene "scenes/NamVet/StayTogether10.vcd"  //Stick together, people.
-	scene "scenes/NamVet/StayTogether11.vcd"  //We've got to stay together.
+	print " " then pilot iMT_Virgil foo:0 0
 }
-Rule iMT_PlayerStayTogetherNamVet
+Rule iMT_VirgilC8M5NamVet
 {
-	criteria ConceptPlayerStayTogether IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_PlayerStayTogetherNamVet
+	criteria iMT_Virgil IsNamVet IsNoMercy5
+	Response iMT_VirgilC8M5NamVet
 }
+
+Response iMT_VirgilC10M3NamVet
+{
+	print " " then churchguy iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC10M3NamVet
+{
+	criteria iMT_Virgil IsNamVet IsDeathToll3
+	Response iMT_VirgilC10M3NamVet
+}
+
+Response iMT_VirgilC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC10M5NamVet
+{
+	criteria iMT_Virgil IsNamVet IsDeathToll5
+	Response iMT_VirgilC10M5NamVet
+}
+
+Response iMT_VirgilC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC11M5NamVet
+{
+	criteria iMT_Virgil IsNamVet IsDeadAir5
+	Response iMT_VirgilC11M5NamVet
+}
+
+Response iMT_VirgilC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilC12M5NamVet
+{
+	criteria iMT_Virgil IsNamVet IsBloodHarvest5
+	Response iMT_VirgilC12M5NamVet
+}
+
+Response iMT_WhitakerNamVet
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerNamVet
+{
+	criteria iMT_Whitaker IsNamVet
+	Response iMT_WhitakerNamVet
+}
+
+Response iMT_WhitakerC8M5NamVet
+{
+	print " " then pilot iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC8M5NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsNoMercy5
+	Response iMT_WhitakerC8M5NamVet
+}
+
+Response iMT_WhitakerC10M3NamVet
+{
+	print " " then churchguy iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC10M3NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsDeathToll3
+	Response iMT_WhitakerC10M3NamVet
+}
+
+Response iMT_WhitakerC10M5NamVet
+{
+	print " " then orator_boat_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC10M5NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsDeathToll5
+	Response iMT_WhitakerC10M5NamVet
+}
+
+Response iMT_WhitakerC11M5NamVet
+{
+	print " " then orator_plane_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC11M5NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsDeadAir5
+	Response iMT_WhitakerC11M5NamVet
+}
+
+Response iMT_WhitakerC12M5NamVet
+{
+	print " " then orator_farm_radio iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerC12M5NamVet
+{
+	criteria iMT_Whitaker IsNamVet IsBloodHarvest5
+	Response iMT_WhitakerC12M5NamVet
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// Fixes
+//--------------------------------------------------------------------------------------------------------------
 
 Response iMT_PlayerAskReadyNamVet
 {
@@ -1324,13 +1052,145 @@ Response iMT_PlayerAskReadyNamVet
 Rule iMT_PlayerAskReadyNamVet
 {
 	criteria ConceptPlayerAskReady IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
+	forceweight 100
 	Response iMT_PlayerAskReadyNamVet
+}
+
+Response iMT_PlayerHurrahNamVet
+{
+	scene "scenes/NamVet/Hurrah02.vcd"  //We're doing pretty goddamn good. Don't let it go to your head.
+	scene "scenes/NamVet/Hurrah03.vcd"  //GREAT JOB, PEOPLE!
+	scene "scenes/NamVet/Hurrah05.vcd"  //We're going to be okay.
+	scene "scenes/NamVet/Hurrah20.vcd"  //You people are gettin' good.
+}
+Rule iMT_PlayerHurrahNamVet
+{
+	criteria ConceptPlayerHurrah IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	forceweight 100
+	Response iMT_PlayerHurrahNamVet
+}
+
+Response iMT_PlayerLaughNamVet
+{
+	scene "scenes/NamVet/Laughter04.vcd"  //<Hearty Laugh>
+	scene "scenes/NamVet/Laughter09.vcd"  //<Short laugh>
+	scene "scenes/NamVet/Laughter10.vcd"  //<Short laugh>
+	scene "scenes/NamVet/Laughter11.vcd"  //<Short laugh>
+	scene "scenes/NamVet/Laughter14.vcd"  //<Short laugh>
+	scene "scenes/NamVet/ReactionPositive05.vcd"  //[chuckles and giggles]
+	scene "scenes/NamVet/ReactionPositive07.vcd"  //[chuckles and giggles]
+	scene "scenes/NamVet/ReactionPositive08.vcd"  //[chuckles and giggles]
+}
+Rule iMT_PlayerLaughNamVet
+{
+	criteria ConceptPlayerLaugh IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	forceweight 100
+	Response iMT_PlayerLaughNamVet
+}
+
+Response iMT_PlayerNegativeNamVet
+{
+	scene "scenes/NamVet/C6DLC3MovieLine11.vcd"  //Awwww, horseshit.
+	scene "scenes/NamVet/ReactionNegative07.vcd"  //God dammit
+	scene "scenes/NamVet/ReactionNegative09.vcd"  //Son of a bitch
+	scene "scenes/NamVet/ReactionNegative10.vcd"  //Dammit
+	scene "scenes/NamVet/SwearCoupdeGrace02.vcd"  //Go to hell.
+	scene "scenes/NamVet/Swears03.vcd"  //Son of a bitch.
+	scene "scenes/NamVet/Swears04.vcd"  //Bull-frickin-horseshit.
+	scene "scenes/NamVet/Swears05.vcd"  //Mother. Humper.
+	scene "scenes/NamVet/Swears07.vcd"  //Ah hell.
+	scene "scenes/NamVet/Swears08.vcd"  //Dammit.
+	scene "scenes/NamVet/Swears09.vcd"  //God DAMMIT.
+	scene "scenes/NamVet/Swears12.vcd"  //Ah shit.
+	scene "scenes/NamVet/Swears16.vcd"  //Ah shit.
+	scene "scenes/NamVet/Swears19.vcd"  //What a crock a' shit...
+}
+Rule iMT_PlayerNegativeNamVet
+{
+	criteria ConceptPlayerNegative IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	forceweight 100
+	Response iMT_PlayerNegativeNamVet
+}
+
+Response iMT_ResponseSoftDispleasureSwearNamVet
+{
+	scene "scenes/NamVet/ReactionApprehensive01.vcd"  //I have a bad feeling about this
+	scene "scenes/NamVet/ReactionApprehensive04.vcd"  //I do not like this one bit.
+	scene "scenes/NamVet/ReactionNegative01.vcd"  //Uh oh
+	scene "scenes/NamVet/ReactionNegative02.vcd"  //Christ
+	scene "scenes/NamVet/ReactionNegative03.vcd"  //Gee-zus
+	scene "scenes/NamVet/ReactionNegative04.vcd"  //[Frustration sound]
+	scene "scenes/NamVet/ReactionNegative12.vcd"  //[Frustration sound]
+	scene "scenes/NamVet/Swears10.vcd"  //Mother of mercy.
+	scene "scenes/NamVet/ViolenceAwe01.vcd"  //Jee-zus...
+	scene "scenes/NamVet/ViolenceAwe02.vcd"  //Holy crap.
+	scene "scenes/NamVet/ViolenceAwe07.vcd"  //Holy Mother of God...
+}
+Rule iMT_ResponseSoftDispleasureSwearNamVet
+{
+	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IssuerMediumClose
+	forceweight 100
+	Response iMT_ResponseSoftDispleasureSwearNamVet
+}
+
+Response iMT_SurvivorAskForHealthNamVet
+{
+	scene "scenes/NamVet/GoingToDieAskForHeal01.vcd"  //Anyone have some first aid? I ain't feelin' right.
+	scene "scenes/NamVet/GoingToDieAskForHeal02.vcd"  //Someone gonna heal the old guy about to die?
+	scene "scenes/NamVet/GoingToDieAskForHeal03.vcd"  //Sure could use some patchin' up.
+	scene "scenes/NamVet/GoingToDieAskForHeal04.vcd"  //Anyone spare a med kit?
+}
+Rule iMT_SurvivorAskForHealthNamVet
+{
+	criteria ConceptAskForHealth2 IsNamVet
+	forceweight 90
+	Response iMT_SurvivorAskForHealthNamVet
+}
+
+Rule iMT_SurvivorAskFrancisForHealthNamVet
+{
+	criteria ConceptAskForHealth2 IsNamVet IsBikerNear400 SubjectIsBiker
+	forceweight 100
+	Response L4D1SurvivorAskFrancisForHealthNamVet
+}
+
+Rule iMT_SurvivorAskLouisForHealthNamVet
+{
+	criteria ConceptAskForHealth2 IsNamVet IsManagerNear400 SubjectIsManager
+	forceweight 100
+	Response L4D1SurvivorAskLouisForHealthNamVet
+}
+
+Rule iMT_SurvivorAskZoeyForHealthNamVet
+{
+	criteria ConceptAskForHealth2 IsNamVet IsTeenGirlNear400 SubjectIsTeenGirl
+	forceweight 100
+	Response L4D1SurvivorAskZoeyForHealthNamVet
+}
+
+Rule iMT_SurvivorDeathNamVet
+{
+	criteria ConceptPlayerDeath IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	forceweight 100
+	Response L4D1SurvivorDeathNamVet
+}
+
+Rule iMT_SurvivorSpottedAmmoNamVet
+{
+	criteria ConceptPlayerSpotAmmo IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	forceweight 100
+	Response SurvivorSpottedAmmoNamVet
+}
+
+Rule iMT_SurvivorSpottedOtherWeaponNamVet
+{
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	forceweight 100
+	Response SurvivorSpottedWeaponNamVet
 }
 
 Response iMT_SurvivorTauntResponseNamVet
 {
-	scene "scenes/NamVet/ReactionPositive02.vcd"  //Heh hehhh
 	scene "scenes/NamVet/ReactionPositive04.vcd"  //Trah-mendous
 	scene "scenes/NamVet/ReactionPositive05.vcd"  //[chuckles and giggles]
 	scene "scenes/NamVet/ReactionPositive07.vcd"  //[chuckles and giggles]
@@ -1345,372 +1205,20 @@ Response iMT_SurvivorTauntResponseNamVet
 Rule iMT_SurvivorTauntResponseNamVet
 {
 	criteria ConceptPlayerTaunt IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
+	forceweight 100
 	Response iMT_SurvivorTauntResponseNamVet
 }
 
-// Response iMT_PlayerNegativeNamVet
-// {
-//	scene "scenes/NamVet/HurtCritical01.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtCritical02.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtCritical03.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtCritical04.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtCritical05.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtCritical06.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtCritical07.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtCritical08.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtCritical09.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/NamVet/HurtMajor01.vcd"  //[pain noise - ahh]
-//	scene "scenes/NamVet/HurtMajor02.vcd"  //[pain noise - huh]
-//	scene "scenes/NamVet/HurtMajor03.vcd"  //[pain noise - oy]
-//	scene "scenes/NamVet/HurtMajor04.vcd"  //[pain noise - ugh]
-//	scene "scenes/NamVet/HurtMajor05.vcd"  //[pain noise - ugh]
-//	scene "scenes/NamVet/HurtMajor06.vcd"  //[pain noise - ugh]
-//	scene "scenes/NamVet/HurtMajor07.vcd"  //[pain noise - ugh]
-//	scene "scenes/NamVet/HurtMajor08.vcd"  //[pain noise - oy]
-//	scene "scenes/NamVet/HurtMajor09.vcd"  //[pain noise - ugh]
-// }
-// Rule iMT_PlayerNegativeNamVet
-// {
-//	criteria ConceptPlayerNegative IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-//	forceweight 1000
-//	Response iMT_PlayerNegativeNamVet
-// }
-
-Response iMT_PlayerSorryNamVet
-{
-	scene "scenes/NamVet/Sorry01.vcd"  //Sorry.
-	scene "scenes/NamVet/Sorry02.vcd"  //I am sorry.
-	scene "scenes/NamVet/Sorry03.vcd"  //Sorry about that.
-	scene "scenes/NamVet/Sorry04.vcd"  //My fault!
-	scene "scenes/NamVet/Sorry05.vcd" then subject PlayerNegative foo:0 0  //I shouldn't have done that.
-	scene "scenes/NamVet/Sorry07.vcd" then subject PlayerNegative foo:0 0  //Sorry about that.
-	scene "scenes/NamVet/Sorry08.vcd" then subject PlayerNegative foo:0 0  //My fault!
-	scene "scenes/NamVet/Sorry09.vcd"  //Won't happen again.
-	scene "scenes/NamVet/Sorry10.vcd"  //I regret that mistake.
-	scene "scenes/NamVet/Sorry11.vcd" then subject PlayerNegative foo:0 0  //Ah, hell, I'm gettin too old for this shit
-	scene "scenes/NamVet/Sorry12.vcd" then subject PlayerNegative foo:0 0  //That was careless of me.
-}
-Rule iMT_PlayerSorryNamVet
-{
-	criteria ConceptPlayerSorry IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	Response iMT_PlayerSorryNamVet
-}
-
-Response iMT_PlayerHurrahNamVet
-{
-	scene "scenes/NamVet/Hurrah02.vcd"  //We're doing pretty goddamn good. Don't let it go to your head.
-	scene "scenes/NamVet/Hurrah03.vcd" then any HurrahAlso foo:0 0  //GREAT JOB, PEOPLE!
-	scene "scenes/NamVet/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We're going to be okay.
-	scene "scenes/NamVet/Hurrah18.vcd"  //Those bastards are in for a big surprise.
-	scene "scenes/NamVet/Hurrah20.vcd" then any HurrahAlso foo:0 0  //You people are gettin' good.
-}
-Rule iMT_PlayerHurrahNamVet
-{
-	criteria ConceptPlayerHurrah IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_PlayerHurrahNamVet
-}
-
-// Response iMT_PlayerProfanityNamVet
-// {
-//	scene "scenes/NamVet/C6DLC3MovieLine11.vcd"  //Awwww, horseshit.
-//	scene "scenes/NamVet/ReactionDisgusted04.vcd"  //Oh shit.
-//	scene "scenes/NamVet/ReactionNegative07.vcd"  //God dammit
-//	scene "scenes/NamVet/ReactionNegative09.vcd"  //Son of a bitch
-//	scene "scenes/NamVet/ReactionNegative10.vcd"  //Dammit
-//	scene "scenes/NamVet/SwearCoupdeGrace02.vcd"  //Go to hell.
-//	scene "scenes/NamVet/Swears03.vcd"  //Son of a bitch.
-//	scene "scenes/NamVet/Swears04.vcd"  //Bull-frickin-horseshit.
-//	scene "scenes/NamVet/Swears05.vcd"  //Mother. Humper.
-//	scene "scenes/NamVet/Swears07.vcd"  //Ah hell.
-//	scene "scenes/NamVet/Swears08.vcd"  //Dammit.
-//	scene "scenes/NamVet/Swears09.vcd"  //God DAMMIT.
-//	scene "scenes/NamVet/Swears12.vcd"  //Ah shit.
-//	scene "scenes/NamVet/Swears16.vcd"  //Ah shit.
-//	scene "scenes/NamVet/Swears19.vcd"  //What a crock a' shit...
-//	scene "scenes/NamVet/WorldHospital0318.vcd"  //That's a crock of shit.
-// }
-// Rule iMT_PlayerProfanityNamVet
-// {
-//	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-//	forceweight 1000
-//	Response iMT_PlayerProfanityNamVet
-// }
-
-Response iMT_PlayerYouAreWelcomeNamVet
-{
-	scene "scenes/NamVet/YouAreWelcome01.vcd"  //Sure thing.
-	scene "scenes/NamVet/YouAreWelcome02.vcd"  //Well, you're welcome.
-	scene "scenes/NamVet/YouAreWelcome04.vcd"  //Hey, no problem
-	scene "scenes/NamVet/YouAreWelcome05.vcd"  //No problem.
-	scene "scenes/NamVet/YouAreWelcome08.vcd"  //Sure thing, kid.
-	scene "scenes/NamVet/YouAreWelcome10.vcd"  //Yeah, yeah, yeah.
-	scene "scenes/NamVet/YouAreWelcome11.vcd"  //Don't get too used to it.
-	scene "scenes/NamVet/YouAreWelcome12.vcd"  //Don't mention it.
-	scene "scenes/NamVet/YouAreWelcome14.vcd" odds 20  //Yeah, okay, it don't mean we're married now
-	scene "scenes/NamVet/YouAreWelcome15.vcd" odds 20  //Don't expect a hug
-}
-Rule iMT_PlayerYouAreWelcomeNamVet
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_PlayerYouAreWelcomeNamVet
-}
-
-Response iMT_PlayerToTheRescueRosNamVet
-{
-	scene "scenes/NamVet/ToTheRescue01.vcd"  //Hold on I'm on my way!
-	scene "scenes/NamVet/ToTheRescue02.vcd"  //I'm coming!
-	scene "scenes/NamVet/ToTheRescue03.vcd"  //Don't get your panties in a bunch, I'm comin'!
-}
-Rule iMT_PlayerToTheRescueRosNamVet
-{
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_PlayerToTheRescueRosNamVet
-}
-
-Response iMT_SurvivorVocalizeBackUpNamVet
-{
-	scene "scenes/NamVet/BackUp01.vcd"  //Back up!
-	scene "scenes/NamVet/BackUp02.vcd"  //Back up!
-	scene "scenes/NamVet/BackUp03.vcd"  //Back back back back back back!
-	scene "scenes/NamVet/BackUp04.vcd"  //Back back back!
-	scene "scenes/NamVet/BackUp05.vcd"  //Back up!
-	scene "scenes/NamVet/BackUp06.vcd"  //Move back!
-	scene "scenes/NamVet/BackUp07.vcd"  //Back it up!
-}
 Rule iMT_SurvivorVocalizeBackUpNamVet
 {
-	criteria ConceptPlayerBackUp IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_SurvivorVocalizeBackUpNamVet
+	criteria ConceptPlayerBackUp IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	forceweight 100
+	Response L4D1SurvivorVocalizeBackUpNamVet
 }
 
-Response iMT_SurvivorSpottedInfectedNamVet
-{
-	scene "scenes/NamVet/Incoming01.vcd"  //Here they come!
-	scene "scenes/NamVet/Incoming03.vcd"  //INCOMING!
-	scene "scenes/NamVet/Incoming04.vcd" odds 40  //Bookoo crazies inbound!
-	scene "scenes/NamVet/Incoming05.vcd"  //HERE THEY COME!
-	scene "scenes/NamVet/Incoming07.vcd"  //INCOMING!
-}
-Rule iMT_SurvivorSpottedInfectedNamVet
-{
-	criteria ConceptPlayerIncoming IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_SurvivorSpottedInfectedNamVet
-}
-
-Response iMT_PlayerChokeResponseNamVet
-{
-	scene "scenes/NamVet/Choke01.vcd"  //Choking
-	scene "scenes/NamVet/Choke02.vcd"  //Choking
-	scene "scenes/NamVet/Choke03.vcd"  //Choking
-	scene "scenes/NamVet/Choke04.vcd"  //Choking
-	scene "scenes/NamVet/Choke05.vcd"  //Choking
-	scene "scenes/NamVet/Choke06.vcd"  //Choking
-	scene "scenes/NamVet/Choke07.vcd"  //Choking
-	scene "scenes/NamVet/Choke08.vcd"  //Choking
-	scene "scenes/NamVet/Choke09.vcd"  //Choking
-	scene "scenes/NamVet/Choke10.vcd"  //Choking
-	scene "scenes/NamVet/Choke11.vcd"  //Choking
-	scene "scenes/NamVet/Choke12.vcd"  //Choking
-}
-Rule iMT_PlayerChokeResponseNamVet
-{
-	criteria ConceptPlayerChoke IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotHangingFromTongue
-	forceweight 1000
-	Response iMT_PlayerChokeResponseNamVet
-}
-
-Response iMT_SurvivorVocalizeEmphaticGoNamVet
-{
-	scene "scenes/NamVet/EmphaticGo01.vcd"  //go go go
-	scene "scenes/NamVet/EmphaticGo02.vcd"  //MOVE!
-	scene "scenes/NamVet/EmphaticGo03.vcd"  //MOVE!
-	scene "scenes/NamVet/EmphaticGo04.vcd"  //MOVE MOVE MOVE!
-	scene "scenes/NamVet/EmphaticGo05.vcd"  //MOVE OUT!
-	scene "scenes/NamVet/EmphaticGo06.vcd"  //go go go
-}
 Rule iMT_SurvivorVocalizeEmphaticGoNamVet
 {
-	criteria ConceptPlayerEmphaticGo IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	Response iMT_SurvivorVocalizeEmphaticGoNamVet
-}
-
-Response iMT_ResponseSoftDispleasureSwearNamVet
-{
-	scene "scenes/NamVet/ReactionApprehensive01.vcd"  //I have a bad feeling about this
-	scene "scenes/NamVet/ReactionApprehensive04.vcd"  //I do not like this one bit.
-	scene "scenes/NamVet/ReactionNegative01.vcd"  //Uh oh
-	scene "scenes/NamVet/ReactionNegative02.vcd"  //Christ
-	scene "scenes/NamVet/ReactionNegative03.vcd"  //Gee-zus
-	scene "scenes/NamVet/ReactionNegative04.vcd"  //[Frustration sound]
-	scene "scenes/NamVet/ReactionNegative12.vcd"  //[Frustration sound]
-	scene "scenes/NamVet/Swears10.vcd"  //Mother of mercy.
-}
-Rule iMT_ResponseSoftDispleasureSwearNamVet
-{
-	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_ResponseSoftDispleasureSwearNamVet
-}
-
-Response iMT_SurvivorAskForHealthNamVet
-{
-	scene "scenes/NamVet/GoingToDieAskForHeal01.vcd"  //Anyone have some first aid? I ain't feelin' right.
-	scene "scenes/NamVet/GoingToDieAskForHeal02.vcd"  //Someone gonna heal the old guy about to die?
-	scene "scenes/NamVet/GoingToDieAskForHeal03.vcd"  //Sure could use some patchin' up.
-	scene "scenes/NamVet/GoingToDieAskForHeal04.vcd"  //Anyone spare a med kit?
-}
-Rule iMT_SurvivorAskForHealthNamVet
-{
-	criteria ConceptAskForHealth2 IsNamVet
-	forceweight 900
-	Response iMT_SurvivorAskForHealthNamVet
-}
-
-Response iMT_SurvivorAskFrancisForHealthNamVet
-{
-	scene "scenes/NamVet/PlayerSuggestHealthSpecific01.vcd"  //Francis, buddy, you gonna use that health kit?
-}
-Rule iMT_SurvivorAskFrancisForHealthNamVet
-{
-	criteria ConceptAskForHealth2 IsNamVet SubjectIsBiker IsSubjectNear400
-	forceweight 1000
-	Response iMT_SurvivorAskFrancisForHealthNamVet
-}
-
-Response iMT_SurvivorAskLouisForHealthNamVet
-{
-	scene "scenes/NamVet/PlayerSuggestHealthSpecific03.vcd"  //Louis, mind givin' an old man your health kit?
-}
-Rule iMT_SurvivorAskLouisForHealthNamVet
-{
-	criteria ConceptAskForHealth2 IsNamVet SubjectIsManager IsSubjectNear400
-	forceweight 1000
-	Response iMT_SurvivorAskLouisForHealthNamVet
-}
-
-Response iMT_SurvivorAskZoeyForHealthNamVet
-{
-	scene "scenes/NamVet/PlayerSuggestHealthSpecific02.vcd"  //Zoey, can you spare me a health kit?
-}
-Rule iMT_SurvivorAskZoeyForHealthNamVet
-{
-	criteria ConceptAskForHealth2 IsNamVet SubjectIsTeenGirl IsSubjectNear400
-	forceweight 1000
-	Response iMT_SurvivorAskZoeyForHealthNamVet
-}
-
-Response iMT_SurvivorSpottedWeaponNamVet
-{
-	scene "scenes/NamVet/SpotWeapons01.vcd"  //Weapons here!
-	scene "scenes/NamVet/SpotWeapons02.vcd"  //Weapon over here!
-	scene "scenes/NamVet/SpotWeapons03.vcd"  //Got a Weapon here!
-}
-Rule iMT_SurvivorSpottedWeaponNamVet
-{
-	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotSmartLookAuto
-	ApplyContext "SaidSpotWeapons:1:5,SaidSpot:1:20"
-	applycontexttoworld
-	forceweight 1000
-	Response iMT_SurvivorSpottedWeaponNamVet
-}
-
-Response iMT_PlayerGettingRevivedNamVet
-{
-	scene "scenes/NamVet/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 0  //I'm okay.
-	scene "scenes/NamVet/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0  //I'm allright.
-	scene "scenes/NamVet/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 0  //[groan]
-	scene "scenes/NamVet/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 0  //Hell if I know.
-	scene "scenes/NamVet/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 0  //Most of this blood ain't mine.
-	scene "scenes/NamVet/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 0  //[groan2]
-	scene "scenes/NamVet/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 0  //I'll make it.
-	scene "scenes/NamVet/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 0  //I'll live.
-	scene "scenes/NamVet/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 0  //Hell, I'll live.
-	scene "scenes/NamVet/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 0  //I've had worse.
-	scene "scenes/NamVet/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 0  //[confused from hit on head] Who are you?
-	scene "scenes/NamVet/GettingRevived12.vcd" then From ReviveFriendDownFinal foo:0 0  //[confused from hit on head] Mother?
-	scene "scenes/NamVet/GettingRevived13.vcd" then From ReviveFriendDownFinal foo:0 0  //Well, I ain't *good*.
-}
-Rule iMT_PlayerGettingRevivedNamVet
-{
-	criteria ConceptReviveFriendDown IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_PlayerGettingRevivedNamVet
-}
-
-Response iMT_PlayerLostCallNamVet
-{
-	scene "scenes/NamVet/LostCall01.vcd" then any ReplyLostCall foo:0 0  //Hello?
-	scene "scenes/NamVet/LostCall02.vcd" then any ReplyLostCall foo:0 0  //Where are you?
-	scene "scenes/NamVet/LostCall03.vcd" then any ReplyLostCall foo:0 0  //Where is everyone?
-	scene "scenes/NamVet/LostCall04.vcd" then any ReplyLostCall foo:0 0  //Is anyone there?
-	scene "scenes/NamVet/LostCall05.vcd" then any ReplyLostCall foo:0 0  //Report in, people! Report!
-	scene "scenes/NamVet/LostCall06.vcd" then any ReplyLostCall foo:0 0  //Hello?
-	scene "scenes/NamVet/LostCall08.vcd" then any ReplyLostCall foo:0 0  //Anybody out there?
-	scene "scenes/NamVet/LostCall09.vcd" then any ReplyLostCall foo:0 0  //Is anyone out there?
-}
-Rule iMT_PlayerLostCallNamVet
-{
-	criteria ConceptPlayerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	forceweight 1000
-	Response iMT_PlayerLostCallNamVet
-}
-
-Response iMT_PlayerReviveFriendBNamVet
-{
-	scene "scenes/NamVet/ReviveFriendB04.vcd"  //You'll be okay.
-	scene "scenes/NamVet/ReviveFriendB07.vcd"  //Hell, you're fine.
-	scene "scenes/NamVet/ReviveFriendB08.vcd"  //It don't look bad.
-	scene "scenes/NamVet/ReviveFriendB11.vcd"  //You're fine.
-	scene "scenes/NamVet/ReviveFriendB15.vcd"  //You'll be fine.
-}
-Rule iMT_PlayerReviveFriendBNamVet
-{
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
-	ApplyContext "ReviveTalk:1:5,Talk:1:1"
-	forceweight 1000
-	Response iMT_PlayerReviveFriendBNamVet
-}
-
-Response iMT_PlayerCallForRescueNamVet
-{
-	scene "scenes/NamVet/CallForRescue01.vcd"  //Anybody out there?
-	scene "scenes/NamVet/CallForRescue02.vcd"  //Come on people, let me out!
-	scene "scenes/NamVet/CallForRescue05.vcd"  //Can anyone hear me?
-	scene "scenes/NamVet/CallForRescue06.vcd"  //Let me out!
-	scene "scenes/NamVet/CallForRescue07.vcd"  //Hey! Can anybody hear me?
-	scene "scenes/NamVet/CallForRescue08.vcd"  //Get over here and let me out!
-	scene "scenes/NamVet/CallForRescue09.vcd"  //God dammit, I'm trapped in here!
-	scene "scenes/NamVet/CallForRescue10.vcd"  //I can't see a damn thing in here.  Let me out!
-	scene "scenes/NamVet/CallForRescue11.vcd"  //This is such horseshit. Is anybody even out there?
-	scene "scenes/NamVet/CallForRescue12.vcd"  //I know you can hear me, goddammit. Let me the hell out!
-}
-Rule iMT_PlayerCallForRescueNamVet
-{
-	criteria ConceptCallForRescue IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNamVetAlive
-	forceweight 1000
-	Response iMT_PlayerCallForRescueNamVet
-}
-
-Response iMT_PlayerGrabbedByJockeyNamVet
-{
-	scene "scenes/NamVet/ScreamWhilePounced01.vcd"  //GET IT OFF!
-	scene "scenes/NamVet/ScreamWhilePounced03.vcd"  //GET IT OFF!
-	scene "scenes/NamVet/FallShort02.vcd" //Ohhhh NOOOO!
-	scene "scenes/NamVet/FallShort03.vcd" //Ahhh!
-	scene "scenes/NamVet/Swears05.vcd" //MOTHER HUMPER!
-	scene "scenes/NamVet/Swears09.vcd" //God damn it!
-}
-Rule iMT_PlayerGrabbedByJockeyNamVet
-{
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsNamVet IsTalk IsWorldTalkNamVet IsTalkNamVet
-	ApplyContext "_auto_NoSpotting:1:4"
-	applycontexttoworld
-	forceweight 1000
-	Response iMT_PlayerGrabbedByJockeyNamVet
+	criteria ConceptPlayerEmphaticGo IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	forceweight 100
+	Response L4D1SurvivorVocalizeEmphaticGoNamVet
 }

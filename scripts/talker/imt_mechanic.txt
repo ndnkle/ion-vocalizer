@@ -2,211 +2,6 @@
 // ion's Vocalizer: Mechanic Response Rule File
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_SingingMechanic
-{
-	scene "scenes/Mechanic/MeleeWeapons13.vcd" odds 20  //[humming] Gonna beat me a zombie to death... with a nightstick...
-	scene "scenes/Mechanic/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn...
-	scene "scenes/Mechanic/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around...
-}
-Rule iMT_SingingMechanic
-{
-	criteria iMT_Singing IsMechanic
-	Response iMT_SingingMechanic
-}
-
-Response iMT_TeamFortress2Mechanic
-{
-	scene "scenes/Mechanic/DLC1_CommunityE20.vcd"  //Dude, this is just like Team Fortress 2!
-}
-Rule iMT_TeamFortress2Mechanic
-{
-	criteria iMT_TeamFortress2 IsMechanic
-	Response iMT_TeamFortress2Mechanic
-}
-
-Response iMT_AllAboardMechanic
-{
-	scene "scenes/Mechanic/DLC1_CommunityE15.vcd"  //All aboard! Toot! Toot!
-	scene "scenes/Mechanic/DLC1_CommunityE16.vcd"  //All aboard! Toot! Toot!
-	scene "scenes/Mechanic/DLC1_CommunityE18.vcd"  //All aboard!
-	scene "scenes/Mechanic/WorldC2M325.vcd"  //Click-click-click-click
-}
-Rule iMT_AllAboardMechanic
-{
-	criteria iMT_AllAboard IsMechanic
-	Response iMT_AllAboardMechanic
-}
-
-Response iMT_SayingZoeyMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing06.vcd"  //Zoey!
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing07.vcd"  //Zoey! Zoey! Zoey! Man I just love sayin' it.
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing08.vcd"  //Zoey! Zoey! Zoey! I could say that all day long.
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing09.vcd"  //Zoey! Zoey! Zoey! I just love sayin' it, really.
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing10.vcd"  //Zoey! Zoey! Zoey! I just love sayin' it!
-}
-Rule iMT_SayingZoeyMechanic
-{
-	criteria iMT_SayingZoey IsMechanic
-	Response iMT_SayingZoeyMechanic
-}
-
-Response iMT_MarriageMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M1_WeddingPostWitch01.vcd" then Coach WorldC6M1_PostWedding01a foo:0 -2.761  //Hey Coach. Can coaches marry people?
-	scene "scenes/Mechanic/DLC1_C6M1_WeddingPostWitch02.vcd" then Gambler WorldC6M1_PostWedding02a foo:0 -3.481  //You know what? This got me thinking... I should totally marry that girl.
-	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchAttacking01.vcd"  //Oh man I changed my mind! I do not wanna get married!
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo29.vcd"  //Ro, it's the zombie apocalypse. First dating days are over. Nick, by the way, I'm gonna have to borrow your suit, because we're skippin' right to the marriage, brother. Then we're goin' cross country, just her, me and the Jimmy Gibbs Jr.
-}
-Rule iMT_MarriageMechanic
-{
-	criteria iMT_Marriage IsMechanic
-	Response iMT_MarriageMechanic
-}
-
-Response iMT_TattoosMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M2_Tattoo01.vcd" then Gambler iMT_Tattoos foo:0 -3.2  //Hey Nick, you and me ought to get tattoos that say "bros".
-	scene "scenes/Mechanic/DLC1_C6M2_Tattoo04.vcd"  //TATTOOS! TATTOOS!
-	scene "scenes/Mechanic/DLC1_C6M2_Tattoo06.vcd"  //I love tattoos. I only have one, but I was gonna get my truck tattooed on my other arm.
-	scene "scenes/Mechanic/DLC1_C6M2_Tattoo07.vcd"  //Man, I love tattoos. I only have one, I was gonna get my truck tattooed on the other arm, but maybe now I get Jimmy Gibbs Jr car. Damn zombies.
-}
-Rule iMT_TattoosMechanic
-{
-	criteria iMT_Tattoos IsMechanic
-	Response iMT_TattoosMechanic
-}
-
-Response iMT_CaCawMechanic
-{
-	scene "scenes/Mechanic/WorldMisc34.vcd"  //Ca Caw Ca Caw Ca Caw!
-	scene "scenes/Mechanic/WorldMisc35.vcd"  //Ca Caw Ca Caw Ca Caw Ca Caw!
-	scene "scenes/Mechanic/WorldMisc36.vcd"  //Ca Caw Ca Caw!
-}
-Rule iMT_CaCawMechanic
-{
-	criteria iMT_CaCaw IsMechanic
-	Response iMT_CaCawMechanic
-}
-
-Response iMT_CandyMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater02.vcd" //Oh man, I found a candy bar! [beat] Whup. False alarm.
-}
-Rule iMT_CandyMechanic
-{
-	criteria iMT_Candy IsMechanic
-	Response iMT_CandyMechanic
-}
-
-Response iMT_MadamMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat01.vcd"  //Yes, ma'am.
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat02.vcd"  //Yes, ma'am.
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat03.vcd"  //Yes, ma'am.
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat04.vcd"  //Oh, yes, ma'am.
-}
-Rule iMT_MadamMechanic
-{
-	criteria iMT_Madam IsMechanic
-	Response iMT_MadamMechanic
-}
-
-Response iMT_GotYouMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat08.vcd"  //Man, he got you Nick. It's like he's known you forever.
-}
-Rule iMT_GotYouMechanic
-{
-	criteria iMT_GotYou IsMechanic
-	Response iMT_GotYouMechanic
-}
-
-Response iMT_DogMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat18.vcd"  //Can we not talk about dogs?
-}
-Rule iMT_DogMechanic
-{
-	criteria iMT_Dog IsMechanic
-	Response iMT_DogMechanic
-}
-
-Response iMT_AttitudeMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_Loss01.vcd"  //You know what? I like your attitude. I hope you get through this okay.
-	scene "scenes/Mechanic/DLC1_C6M3_Loss02.vcd"  //You know what? I like your attitude. I hope you get through this okay.
-}
-Rule iMT_AttitudeMechanic
-{
-	criteria iMT_Attitude IsMechanic
-	Response iMT_AttitudeMechanic
-}
-
-Response iMT_InLoveMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing01.vcd"  //A girl who can shoot? I am in love.
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing05.vcd"  //Man. A girl who can shoot? I am in love.
-}
-Rule iMT_InLoveMechanic
-{
-	criteria iMT_InLove IsMechanic
-	Response iMT_InLoveMechanic
-}
-
-Response iMT_CannonballMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M2_Phase2JumpInWater06.vcd"  //CANNONBALL!
-}
-Rule iMT_CannonballMechanic
-{
-	criteria iMT_Cannonball IsMechanic
-	Response iMT_CannonballMechanic
-}
-
-Response iMT_InHonorMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_Elevator03.vcd"  //Man, I'm gonna kill so many zombies she's gonna have to love me.
-	scene "scenes/Mechanic/DLC1_C6M3_Elevator04.vcd"  //I'm gonna kill a tank in her honor and then I'm gonna name it after her.
-	scene "scenes/Mechanic/DLC1_C6M3_Elevator05.vcd"  //I'm gonna kill a tank in her honor. Ooh, and then I'm gonna name it after her.
-}
-Rule iMT_InHonorMechanic
-{
-	criteria iMT_InHonor IsMechanic
-	Response iMT_InHonorMechanic
-}
-
-Response iMT_BreakMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater03.vcd"  //Okay if anybody needs a bathroom break, now'd be a good time.
-}
-Rule iMT_BreakMechanic
-{
-	criteria iMT_Break IsMechanic
-	Response iMT_BreakMechanic
-}
-
-Response iMT_FeelHerMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M2_Saferoom02.vcd"  //Oh man, we're getting close, I can just feel her. I mean the car of course.
-	scene "scenes/Mechanic/DLC1_C6M2_Saferoom05.vcd"  //Oh We are getting close, man, I can feel her. I mean the car.
-}
-Rule iMT_FeelHerMechanic
-{
-	criteria iMT_FeelHer IsMechanic
-	Response iMT_FeelHerMechanic
-}
-
-Response iMT_CoachBreathingReacMechanic
-{
-	scene "scenes/Mechanic/WorldC2M123.vcd" odds 10  //Coach, you're breathin' a little hard, you alright?
-}
-Rule iMT_CoachBreathingReacMechanic
-{
-	criteria iMT_CoachBreathingReac IsMechanic
-	Response iMT_CoachBreathingReacMechanic
-}
-
 //--------------------------------------------------------------------------------------------------------------
 // Stories
 //--------------------------------------------------------------------------------------------------------------
@@ -236,6 +31,7 @@ Response iMT_EllisStoriesMechanic
 	scene "scenes/Mechanic/EllisStoriesK01.vcd" then any iMT_EllisStoryInterrupt foo:0 -19.75  //My buddy Keith tried camping out on top of a building once. He was shooting crows but the police were too busy tear gassing him to ask what he was doing up there. He screamed for an entire YEAR every single time he opened his eyes. Oh, man.  At first it was funny, then it just got sad, but then it got funny again. Oh, man.
 	scene "scenes/Mechanic/EllisStoriesL01.vcd" then any iMT_EllisStoryInterrupt foo:0 -15.53  //I ever tell you guys about the time my buddy Keith got rolled by a gator in a swamp? Man, he didn't agonize it or nothing, we were just trying to grab two so we could piss 'em off and get 'em into a fight. Anyway, the third time Keith went under, I realized something was wrong, so I--
 	scene "scenes/Mechanic/EllisStoriesM01.vcd" then any iMT_EllisStoryInterrupt foo:0 -15.02  //I ever tell you about the time my buddy Keith drowned in the Tunnel of Love? You wouldn't think it could happen cause the water's so shallow, but that's how it gets you, man: Over confidence. Keith was with his lady at the time and he was yelling for her to save him but she didn't wanna get wet--
+	scene "scenes/Mechanic/EllisStoriesN01.vcd" then any iMT_EllisStoryInterrupt foo:0 -12.07 //I ever tell you about the time me and Keith snuck into a Tunnel of Love? Man, if you get your spit thick enough, y'see, y'all can hang a loogie off the overhang, right, so when smoochin' sons of bitches behind you--
 	scene "scenes/Mechanic/EllisStoriesP01.vcd" then any iMT_EllisStoryInterrupt foo:0 -10.17  //I ever tell you about the time me and Keith snuck paintball guns on a roller coaster? I never heard of anybody else doing it, so I thought we might have invented a sport. So Keith called the patent office but--
 	scene "scenes/Mechanic/EllisStoriesQ01.vcd" then any iMT_EllisStoryInterrupt foo:0 -12.00  //I ever tell you about the time me and Keith made a homemade bumper car ride with riding mowers in his back yard? Mower blade wounds over ninety percent of his body. I didn't run him over, either.  He somehow managed to fall under his own.
 	scene "scenes/Mechanic/EllisStoriesR01.vcd" then any iMT_EllisStoryInterrupt foo:0 -3.46  //I ever tell you about the time me and Keith filled up water balloons with our own--
@@ -263,7 +59,7 @@ Rule iMT_DLC1_KeithStories02bMechanic
 
 Response iMT_DLC1_KeithStories03bMechanic
 {
-	scene "scenes/Mechanic/DLC1_KeithStories03b.vcd" then self iMT_DLC1_KeithStories03c foo:0 -24.62  ///Well, it turns out it's just some lady's fur coat that musta fell out out of her car, so... free coat, right? Now, owls won't normally attack a man, but in this case they were hungry, and that made them reckless. Keith reckons they must've been there for hours, watchin' what they thought was a bear carcass, cause as soon as he picked it up, those owls had claws in him an inch deep.
+	scene "scenes/Mechanic/DLC1_KeithStories03b.vcd" then self iMT_DLC1_KeithStories03c foo:0 -24.62  //Well, it turns out it's just some lady's fur coat that musta fell out out of her car, so... free coat, right? Now, owls won't normally attack a man, but in this case they were hungry, and that made them reckless. Keith reckons they must've been there for hours, watchin' what they thought was a bear carcass, cause as soon as he picked it up, those owls had claws in him an inch deep.
 }
 Rule iMT_DLC1_KeithStories03bMechanic
 {
@@ -281,335 +77,91 @@ Rule iMT_DLC1_KeithStories03cMechanic
 	Response iMT_DLC1_KeithStories03cMechanic
 }
 
-Response iMT_EllisStoryReac01Mechanic
+Rule iMT_EllisStoryReacGoatMechanic
 {
-	scene "scenes/Mechanic/EllisStoriesInterrupt05.vcd"  //Okay.
-	scene "scenes/Mechanic/EllisStoriesInterrupt14.vcd"  //Okay.
-}
-Rule iMT_EllisStoryReac01Mechanic
-{
-	criteria iMT_EllisStoryReac01 IsMechanic
-	Response iMT_EllisStoryReac01Mechanic
-}
-
-Response iMT_EllisStoryReac01GoatMechanic
-{
-	scene "scenes/Mechanic/EllisStoriesB02.vcd"  //Okay. But there was a goat.
-}
-Rule iMT_EllisStoryReac01GoatMechanic
-{
-	criteria iMT_EllisStoryReac01Goat IsMechanic
-	Response iMT_EllisStoryReac01GoatMechanic
+	criteria iMT_EllisStoryReacGoat IsMechanic
+	Response EllisStoryReac01GoatMechanic
 }
 
 //--------------------------------------------------------------------------------------------------------------
 // Shared
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_PlayerHeardBoomerMechanic
+Response iMT_PlayerAnswerReadyMechanic
 {
-	scene "scenes/Mechanic/HeardBoomer01.vcd"  //I hear a boomer.
-	scene "scenes/Mechanic/HeardBoomer02.vcd"  //Hey, think I heard a boomer.
-	scene "scenes/Mechanic/HeardBoomer03.vcd"  //Careful, boomer 'round.
-	scene "scenes/Mechanic/HeardBoomer04.vcd"  //Careful, boomer 'round.
-	scene "scenes/Mechanic/HeardBoomer05.vcd"  //Think I heard a boomer.
-	scene "scenes/Mechanic/HeardBoomer06.vcd"  //I hear a boomer.
+	scene "scenes/Mechanic/MeleeWeapons30.vcd"  //Man, I'm gonna beat these sons of bitches till I lose my watch.
+	scene "scenes/Mechanic/MeleeWeapons31.vcd"  //Time to beat on some sons of bitches.
+	scene "scenes/Mechanic/MeleeWeapons32.vcd"  //Gonna beat me a zombie till there ain't a chunk big enough to hit.
+	scene "scenes/Mechanic/TakeMelee07.vcd"  //I'm gonna mess some zombies up now.
+	scene "scenes/Mechanic/WorldC2M4B02.vcd"  //I was born ready. So... yes.
 }
-Rule iMT_PlayerHeardBoomerMechanic
+Rule iMT_PlayerAnswerReadyMechanic
 {
-	criteria iMT_PlayerHeardBoomer IsMechanic
-	Response iMT_PlayerHeardBoomerMechanic
-}
-
-Response iMT_PlayerHeardHunterMechanic
-{
-	scene "scenes/Mechanic/HeardHunter01.vcd"  //I hear a hunter around.
-	scene "scenes/Mechanic/HeardHunter02.vcd"  //Careful. Hunter.
-	scene "scenes/Mechanic/HeardHunter03.vcd"  //I hear a hunter.
-}
-Rule iMT_PlayerHeardHunterMechanic
-{
-	criteria iMT_PlayerHeardHunter IsMechanic
-	Response iMT_PlayerHeardHunterMechanic
+	criteria iMT_PlayerAnswerReady IsMechanic
+	Response iMT_PlayerAnswerReadyMechanic
 }
 
-Response iMT_PlayerHeardSmokerMechanic
+Rule iMT_PlayerBattleCryMechanic
 {
-	scene "scenes/Mechanic/HeardSmoker01.vcd"  //Smoker around these parts.
-	scene "scenes/Mechanic/HeardSmoker02.vcd"  //Careful, Smoker.
-	scene "scenes/Mechanic/HeardSmoker03.vcd"  //Hey, I hear a smoker.
-}
-Rule iMT_PlayerHeardSmokerMechanic
-{
-	criteria iMT_PlayerHeardSmoker IsMechanic
-	Response iMT_PlayerHeardSmokerMechanic
+	criteria iMT_PlayerBattleCry IsMechanic
+	Response PlayerChainSawUsedMechanic
 }
 
-Response iMT_PlayerHeardChargerMechanic
+Response iMT_PlayerBreathingMechanic
 {
-	scene "scenes/Mechanic/HeardCharger01.vcd"  //Charger around.
-	scene "scenes/Mechanic/HeardCharger02.vcd"  //I hear a charger.
-	scene "scenes/Mechanic/HeardCharger03.vcd"  //Hear that charger?
+	scene "scenes/Mechanic/Defibrillator13.vcd"  //[gasp for breath]
+	scene "scenes/Mechanic/Defibrillator14.vcd"  //[gasp for breath]
 }
-Rule iMT_PlayerHeardChargerMechanic
+Rule iMT_PlayerBreathingMechanic
 {
-	criteria iMT_PlayerHeardCharger IsMechanic
-	Response iMT_PlayerHeardChargerMechanic
-}
-
-Response iMT_PlayerAlsoWarnChargerMechanic
-{
-	scene "scenes/Mechanic/WarnCharger01.vcd"  //CHARGER!
-	scene "scenes/Mechanic/WarnCharger02.vcd"  //CHARGER!
-	scene "scenes/Mechanic/WarnCharger03.vcd"  //CHARGER!
-	scene "scenes/Mechanic/WarnCharger04.vcd"  //CHARGER!
-}
-Rule iMT_PlayerAlsoWarnChargerMechanic
-{
-	criteria iMT_PlayerAlsoWarnCharger IsMechanic
-	Response iMT_PlayerAlsoWarnChargerMechanic
+	criteria iMT_PlayerBreathing IsMechanic
+	Response iMT_PlayerBreathingMechanic
 }
 
-Response iMT_PlayerAlsoWarnChargerC1Mechanic
+Response iMT_PlayerBreathingReacMechanic
 {
-	scene "scenes/Mechanic/WarnChargerC101.vcd"  //Watch out, man, that thing charges!
-	scene "scenes/Mechanic/WarnChargerC102.vcd"  //ONE ARM!
-	scene "scenes/Mechanic/WarnChargerC103.vcd"  //BIG ARM!
+	scene "scenes/Mechanic/WorldC2M123.vcd" odds 10  //Coach, you're breathin' a little hard, you alright?
 }
-Rule iMT_PlayerAlsoWarnChargerC1Mechanic
+Rule iMT_PlayerBreathingReacMechanic
 {
-	criteria iMT_PlayerAlsoWarnCharger IsMechanic C1M1orC1M2
-	Response iMT_PlayerAlsoWarnChargerC1Mechanic
+	criteria iMT_PlayerBreathingReac IsMechanic IsCoachNear400 isNotmap_c1m1_hotel
+	Response iMT_PlayerBreathingReacMechanic
 }
-
-Response iMT_PlayerHeardJockeyMechanic
+Rule iMT_PlayerBreathingReacC1Mechanic
 {
-	scene "scenes/Mechanic/HeardJockey01.vcd"  //I hear one of those back humpers around here.
-	scene "scenes/Mechanic/HeardJockey02.vcd"  //A freaking jockey's around.
-	scene "scenes/Mechanic/HeardJockey03.vcd"  //Hey, watch your back, jockey's around here.
-	scene "scenes/Mechanic/HeardJockey04.vcd"  //I hate them things.
-	scene "scenes/Mechanic/HeardJockey05.vcd"  //I hate those jockeys.
-	scene "scenes/Mechanic/HeardJockey06.vcd"  //That is just offensive what they do.
-	scene "scenes/Mechanic/HeardJockey07.vcd"  //Dude,I hear one of those back humpers around.
-	scene "scenes/Mechanic/HeardJockey08.vcd"  //There's a freaking jockey's around here.
-	scene "scenes/Mechanic/HeardJockeyC101.vcd" odds 10  //I think that's one of them little things.
-}
-Rule iMT_PlayerHeardJockeyMechanic
-{
-	criteria iMT_PlayerHeardJockey IsMechanic
-	Response iMT_PlayerHeardJockeyMechanic
+	criteria iMT_PlayerBreathingReac IsMechanic IsCoachNear400 ismap_c1m1_hotel YesKnowNames
+	Response iMT_PlayerBreathingReacMechanic
 }
 
-Response iMT_PlayerAlsoWarnJockeyMechanic
-{
-	scene "scenes/Mechanic/WarnJockey01.vcd"  //JOCKEY!
-	scene "scenes/Mechanic/WarnJockey02.vcd"  //JOCKEY! JOCKEY!
-	scene "scenes/Mechanic/WarnJockey03.vcd"  //JOCKEY!
-	scene "scenes/Mechanic/WarnJockey04.vcd"  //JOCKEY!
-}
-Rule iMT_PlayerAlsoWarnJockeyMechanic
-{
-	criteria iMT_PlayerAlsoWarnJockey IsMechanic
-	Response iMT_PlayerAlsoWarnJockeyMechanic
-}
-
-Response iMT_PlayerAlsoWarnJockeyC1Mechanic
-{
-	scene "scenes/Mechanic/WarnJockeyC101.vcd"  //HUMPER!
-	scene "scenes/Mechanic/WarnJockeyC102.vcd"  //HUMPER!
-	scene "scenes/Mechanic/WarnJockeyC103.vcd"  //LITTLE GUY! LITTLE GUY!
-}
-Rule iMT_PlayerAlsoWarnJockeyC1Mechanic
-{
-	criteria iMT_PlayerAlsoWarnJockey IsMechanic C1M1orC1M2
-	Response iMT_PlayerAlsoWarnJockeyC1Mechanic
-}
-
-Response iMT_PlayerHeardSpitterMechanic
-{
-	scene "scenes/Mechanic/HeardSpitter01.vcd"  //I hear a spitter.
-	scene "scenes/Mechanic/HeardSpitter02.vcd"  //Spitting thing's around.
-	scene "scenes/Mechanic/HeardSpitter03.vcd"  //I hear one of them spitters.
-}
-Rule iMT_PlayerHeardSpitterMechanic
-{
-	criteria iMT_PlayerHeardSpitter IsMechanic
-	Response iMT_PlayerHeardSpitterMechanic
-}
-
-Response iMT_PlayerAlsoWarnSpitterMechanic
-{
-	scene "scenes/Mechanic/WarnSpitter01.vcd"  //YO, SPITTER!
-	scene "scenes/Mechanic/WarnSpitter02.vcd"  //IT'S A SPITTER DUDE!
-	scene "scenes/Mechanic/WarnSpitter03.vcd"  //HEY IT'S A SPITTER!
-	scene "scenes/Mechanic/WarnSpitter04.vcd"  //SPITTER!
-}
-Rule iMT_PlayerAlsoWarnSpitterMechanic
-{
-	criteria iMT_PlayerAlsoWarnSpitter IsMechanic
-	Response iMT_PlayerAlsoWarnSpitterMechanic
-}
-
-Response iMT_PlayerAlsoWarnSpitterC1Mechanic
-{
-	scene "scenes/Mechanic/WarnSpitterC101.vcd"  //SPITTING THING!
-	scene "scenes/Mechanic/WarnSpitterC102.vcd"  //SPITTING NASTY THING!
-	scene "scenes/Mechanic/WarnSpitterC103.vcd"  //THAT LOOGIE DUDE!
-	scene "scenes/Mechanic/WarnSpitterC104.vcd"  //IT'S THAT GOO GUY!
-	scene "scenes/Mechanic/WarnSpitterC105.vcd"  //HEY, THAT BIG NECK THING!
-}
-Rule iMT_PlayerAlsoWarnSpitterC1Mechanic
-{
-	criteria iMT_PlayerAlsoWarnSpitter IsMechanic C1M1orC1M2
-	Response iMT_PlayerAlsoWarnSpitterC1Mechanic
-}
-
-Response iMT_PlayerHeardWitchMechanic
-{
-	scene "scenes/Mechanic/HeardWitch01.vcd"  //That crying girl's around.
-	scene "scenes/Mechanic/HeardWitch02.vcd"  //Hey, I hear a witch.
-	scene "scenes/Mechanic/HeardWitch03.vcd"  //I hear a witch crying.
-}
-Rule iMT_PlayerHeardWitchMechanic
-{
-	criteria iMT_PlayerHeardWitch IsMechanic
-	Response iMT_PlayerHeardWitchMechanic
-}
-
-Response iMT_PlayerHeardWitchC1Mechanic
-{
-	scene "scenes/Mechanic/HeardWitchC101.vcd"  //Hey, do you hear that crying?
-	scene "scenes/Mechanic/HeardWitchC102.vcd"  //Dude, she don't sound happy.
-	scene "scenes/Mechanic/HeardWitchC103.vcd"  //Let's not go by the crying girl.
-	scene "scenes/Mechanic/HeardWitchC104.vcd"  //Seriously, I'm thinkin' we should just leave the crying girl alone.
-	scene "scenes/Mechanic/HeardWitchC105.vcd"  //I don't like the sound of that crying.
-	scene "scenes/Mechanic/HeardWitchC106.vcd"  //I'm not - I'm not going near the crying girl.
-}
-Rule iMT_PlayerHeardWitchC1Mechanic
-{
-	criteria iMT_PlayerHeardWitch IsMechanic C1M1orC1M2
-	Response iMT_PlayerHeardWitchC1Mechanic
-}
-
-Response iMT_PlayerCoughingMechanic
-{
-	scene "scenes/Mechanic/Cough01.vcd"  //[Coughing from smoke]
-	scene "scenes/Mechanic/Cough02.vcd"  //[Coughing from smoke]
-	scene "scenes/Mechanic/Cough03.vcd"  //[Coughing from smoke]
-	scene "scenes/Mechanic/Cough04.vcd"  //[Coughing from smoke]
-}
 Rule iMT_PlayerCoughingMechanic
 {
 	criteria iMT_PlayerCoughing IsMechanic
-	Response iMT_PlayerCoughingMechanic
+	Response SurvivorCoughingMechanic
 }
 
-Response iMT_PlayerSuggestHealthMechanic
+Response iMT_PlayerDeathScreamMechanic
 {
-	scene "scenes/Mechanic/SuggestHealth01.vcd"  //Heal up!
-	scene "scenes/Mechanic/SuggestHealth02.vcd"  //Hey, y'all should heal now.
-	scene "scenes/Mechanic/SuggestHealth03.vcd"  //It's a good time to heal up everybody.
-	scene "scenes/Mechanic/SuggestHealth04.vcd"  //Everybody take a minute and get yourself healed.
-	scene "scenes/Mechanic/SuggestHealthC101.vcd"  //Don't forget your health kits.
-	scene "scenes/Mechanic/SuggestHealthC102.vcd"  //Anybody want to heal now?
-	scene "scenes/Mechanic/SuggestHealthC103.vcd"  //Good time to heal.
+	scene "scenes/Mechanic/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
+	scene "scenes/Mechanic/LedgeHangFall02.vcd"  //NOOOOOOOOOOOOOOOO!!!!
+	scene "scenes/Mechanic/LedgeHangFall03.vcd"  //WOOOOOAAAAAHHHHHH!!!!
+	scene "scenes/Mechanic/LedgeHangFall04.vcd"  //GOOD-BYYYYYYYYYYYE!!
+	scene "scenes/Mechanic/LedgeHangFall05.vcd"  //SORRY Y'AAAAAAAAAALLL!!
 }
-Rule iMT_PlayerSuggestHealthMechanic
+Rule iMT_PlayerDeathScreamMechanic
 {
-	criteria iMT_PlayerSuggestHealth IsMechanic
-	Response iMT_PlayerSuggestHealthMechanic
+	criteria iMT_PlayerDeathScream IsMechanic
+	Response iMT_PlayerDeathScreamMechanic
 }
 
-Response iMT_PlayerSuggestHealthGamblerMechanic
+Response iMT_PlayerEquippedItemMechanic
 {
-	scene "scenes/Mechanic/SuggestHealthNick01.vcd"  //Excuse me Nick, but you might wanna heal.
-	scene "scenes/Mechanic/SuggestHealthNick02.vcd"  //Nick.  Um.. Nick!  Don't forget about that health pack.
-	scene "scenes/Mechanic/SuggestHealthNick03.vcd"  //Nick, don't forget none about that health pack.
+	scene "scenes/Mechanic/KillConfirmation03.vcd"  //I got it.
+	scene "scenes/Mechanic/WorldC1M4B43.vcd"  //I got this one!
 }
-Rule iMT_PlayerSuggestHealthGamblerMechanic
+Rule iMT_PlayerEquippedItemMechanic
 {
-	criteria iMT_PlayerSuggestHealth IsMechanic IssuerClose SubjectIsGambler
-	Response iMT_PlayerSuggestHealthGamblerMechanic
-}
-
-Response iMT_PlayerSuggestHealthCoachMechanic
-{
-	scene "scenes/Mechanic/SuggestHealthCoach01.vcd"  //Coach, don't forget about that health pack!
-	scene "scenes/Mechanic/SuggestHealthCoach02.vcd"  //Coach, don't forget about that heal pack, now!
-	scene "scenes/Mechanic/SuggestHealthCoach03.vcd"  //Coach, now don't forget none about healin'.
-	scene "scenes/Mechanic/SuggestHealthCoach04.vcd"  //Coach, don't mean to speak out of turn but you should probably heal.
-	scene "scenes/Mechanic/SuggestHealthCoach05.vcd"  //Coach, don't mean to speak out of turn but you should probably well heal when you get a minute. You know.
-	scene "scenes/Mechanic/SuggestHealthCoach06.vcd"  //Coach, now don't forget none about healin'.
-	scene "scenes/Mechanic/SuggestHealthCoach07.vcd"  //Coach, don't forget about that health pack.
-}
-Rule iMT_PlayerSuggestHealthCoachMechanic
-{
-	criteria iMT_PlayerSuggestHealth IsMechanic IssuerClose SubjectIsCoach
-	Response iMT_PlayerSuggestHealthCoachMechanic
-}
-
-Response iMT_PlayerSuggestHealthProducerMechanic
-{
-	scene "scenes/Mechanic/SuggestHealthRochelle01.vcd"  //Hey Ro girl, heal up now.
-	scene "scenes/Mechanic/SuggestHealthRochelle02.vcd"  //Ro, you think about healin?
-	scene "scenes/Mechanic/SuggestHealthRochelle03.vcd"  //Rochelle, you ought to heal now.
-	scene "scenes/Mechanic/SuggestHealthRochelle04.vcd"  //I'll help ya if you need me to.
-}
-Rule iMT_PlayerSuggestHealthProducerMechanic
-{
-	criteria iMT_PlayerSuggestHealth IsMechanic IssuerClose SubjectIsProducer
-	Response iMT_PlayerSuggestHealthProducerMechanic
-}
-
-Response iMT_PlayerNiceShotMechanic
-{
-	scene "scenes/Mechanic/NiceShot01.vcd"  //Well, Nice.
-	scene "scenes/Mechanic/NiceShot02.vcd"  //Nice shot.
-	scene "scenes/Mechanic/NiceShot03.vcd"  //Cool.
-	scene "scenes/Mechanic/NiceShot04.vcd"  //Yeah, nice!
-	scene "scenes/Mechanic/NiceShot05.vcd"  //Good shootin', Tex!
-	scene "scenes/Mechanic/NiceShot06.vcd"  //Nice.
-	scene "scenes/Mechanic/NiceShot07.vcd"  //Goddamn your good.
-	scene "scenes/Mechanic/NiceShot08.vcd"  //Goddamn your good.
-	scene "scenes/Mechanic/NiceShot09.vcd"  //Hey good shootin'!
-	scene "scenes/Mechanic/NiceShot10.vcd"  //Yeah, nice!
-	scene "scenes/Mechanic/NiceShot11.vcd"  //Nice shot.
-}
-Rule iMT_PlayerNiceShotMechanic
-{
-	criteria iMT_PlayerNiceShot IsMechanic
-	Response iMT_PlayerNiceShotMechanic
-}
-
-Response iMT_PlayerNiceShotCoachMechanic
-{
-	scene "scenes/Mechanic/NiceShotCoach01.vcd"  //You nailed it coach!
-	scene "scenes/Mechanic/NiceShotCoach02.vcd"  //Nice shot, coach! Nailed it.
-}
-Rule iMT_PlayerNiceShotCoachMechanic
-{
-	criteria iMT_PlayerNiceShot IsMechanic IssuerClose SubjectIsCoach
-	Response iMT_PlayerNiceShotCoachMechanic
-}
-
-Response iMT_PlayerNiceShotGamblerMechanic
-{
-	scene "scenes/Mechanic/NiceShotGambler01.vcd"  //Whoa, Nick! Well... why doesn't it surpise me you're good with a gun?
-}
-Rule iMT_PlayerNiceShotGamblerMechanic
-{
-	criteria iMT_PlayerNiceShot IsMechanic IssuerClose SubjectIsGambler
-	Response iMT_PlayerNiceShotGamblerMechanic
-}
-
-Response iMT_PlayerNiceShotProducerMechanic
-{
-	scene "scenes/Mechanic/NiceShotRochelle01.vcd"  //Well, goddamn Annie Oakley.
-}
-Rule iMT_PlayerNiceShotProducerMechanic
-{
-	criteria iMT_PlayerNiceShot IsMechanic IssuerClose SubjectIsProducer
-	Response iMT_PlayerNiceShotProducerMechanic
+	criteria iMT_PlayerEquippedItem IsMechanic
+	Response iMT_PlayerEquippedItemMechanic
 }
 
 Response iMT_PlayerGoingToDieMechanic
@@ -649,139 +201,290 @@ Rule iMT_PlayerGoingToDieMechanic
 	Response iMT_PlayerGoingToDieMechanic
 }
 
-Response iMT_OtherPlayerWasPouncedMechanic
+Response iMT_PlayerHelloMechanic
+{
+	scene "scenes/Mechanic/ScenarioJoin01.vcd"  //Hello!
+	scene "scenes/Mechanic/ScenarioJoin02.vcd"  //Hi!
+	scene "scenes/Mechanic/ScenarioJoin03.vcd"  //Hey hey!
+	scene "scenes/Mechanic/ScenarioJoin04.vcd"  //Howdy!
+}
+Rule iMT_PlayerHelloMechanic
+{
+	criteria iMT_PlayerHello IsMechanic
+	Response iMT_PlayerHelloMechanic
+}
+
+Rule iMT_PlayerIncapacitatedHurtMechanic
+{
+	criteria iMT_PlayerIncapacitatedHurt IsMechanic
+	Response SurvivorIncapacitatedHurtMechanic
+}
+
+Response iMT_PlayerMournCoachMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournCoach01.vcd"  //Ah man Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach02.vcd"  //Well, Coach, thanks for all you done, man.
+	scene "scenes/Mechanic/SurvivorMournCoach03.vcd"  //Goodbye Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach04.vcd"  //You were a hell of a man, Coach.
+	scene "scenes/Mechanic/SurvivorMournCoach05.vcd"  //Thanks Coach.
+	scene "scenes/Mechanic/SurvivorMournCoachC101.vcd"  //Man, I was hoping me and coach were gonna be friends.
+}
+Rule iMT_PlayerMournCoachAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsCoachNear200 SubjectIsCoach
+	Response iMT_PlayerMournCoachMechanic
+}
+Rule iMT_PlayerMournCoachDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsCoachNear200 IsCoachNotAlive
+	Response iMT_PlayerMournCoachMechanic
+}
+
+Rule iMT_PlayerMournCoachAliveC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsCoachNear200 SubjectIsCoach ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournCoachC1Mechanic
+}
+Rule iMT_PlayerMournCoachDeadC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsCoachNear200 IsCoachNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournCoachC1Mechanic
+}
+
+Response iMT_PlayerMournGamblerMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournGamblerC101.vcd"  //Bet he didn't think he'd die before me.
+	scene "scenes/Mechanic/SurvivorMournNick01.vcd"  //Ahh Nick.
+	scene "scenes/Mechanic/SurvivorMournNick02.vcd"  //Nick, you were cool.
+	scene "scenes/Mechanic/SurvivorMournNick03.vcd"  //Miss ya, brother.
+	scene "scenes/Mechanic/SurvivorMournNick04.vcd"  //Damn, Nick. We was just gettin' to be friends.
+}
+Rule iMT_PlayerMournGamblerAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsGamblerNear200 SubjectIsGambler
+	Response iMT_PlayerMournGamblerMechanic
+}
+Rule iMT_PlayerMournGamblerDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsGamblerNear200 IsGamblerNotAlive
+	Response iMT_PlayerMournGamblerMechanic
+}
+
+Rule iMT_PlayerMournGamblerAliveC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsGamblerNear200 SubjectIsGambler ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournGamblerC1Mechanic
+}
+Rule iMT_PlayerMournGamblerDeadC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsGamblerNear200 IsGamblerNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournGamblerC1Mechanic
+}
+
+Response iMT_PlayerMournProducerMechanic
+{
+	scene "scenes/Mechanic/SurvivorMournProducerC101.vcd"  //She was the last one I wanted to see go.
+	scene "scenes/Mechanic/SurvivorMournProducerC102.vcd"  //She was the last one I wanted to see go.
+	scene "scenes/Mechanic/SurvivorMournRochelle01.vcd"  //Be good Rochelle.
+	scene "scenes/Mechanic/SurvivorMournRochelle02.vcd"  //Ro, I'm gonna miss ya.
+	scene "scenes/Mechanic/SurvivorMournRochelle03.vcd"  //I'll remember you in my prayers Ro.
+	scene "scenes/Mechanic/SurvivorMournRochelle04.vcd"  //Hell of a girl, Ro.
+}
+Rule iMT_PlayerMournProducerAliveMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsProducerNear200 SubjectIsProducer
+	Response iMT_PlayerMournProducerMechanic
+}
+Rule iMT_PlayerMournProducerDeadMechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsProducerNear200 IsProducerNotAlive
+	Response iMT_PlayerMournProducerMechanic
+}
+
+Rule iMT_PlayerMournProducerAliveC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsProducerNear200 SubjectIsProducer ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournProducerC1Mechanic
+}
+Rule iMT_PlayerMournProducerDeadC1Mechanic
+{
+	criteria iMT_PlayerMourn IsMechanic IsProducerNear200 IsProducerNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	Response SurvivorMournProducerC1Mechanic
+}
+
+Rule iMT_PlayerNearExitMechanic
+{
+	criteria iMT_PlayerNearExit IsMechanic
+	Response SurvivorNearCheckpointMechanic
+}
+
+Rule iMT_PlayerNiceShotMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic
+	Response PlayerNiceShotMechanic
+}
+
+Rule iMT_PlayerNiceShotCoachMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IsCoachNear800 SubjectIsCoach isNotmap_c1m1_hotel
+	Response PlayerNiceShotCoachMechanic
+}
+Rule iMT_PlayerNiceShotCoachC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IsCoachNear800 SubjectIsCoach ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerNiceShotCoachMechanic
+}
+
+Rule iMT_PlayerNiceShotGamblerMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IsGamblerNear800 SubjectIsGambler isNotmap_c1m1_hotel
+	Response PlayerNiceShotGamblerMechanic
+}
+Rule iMT_PlayerNiceShotGamblerC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IsGamblerNear800 SubjectIsGambler ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerNiceShotGamblerMechanic
+}
+
+Rule iMT_PlayerNiceShotProducerMechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IsProducerNear800 SubjectIsProducer isNotmap_c1m1_hotel
+	Response PlayerNiceShotProducerMechanic
+}
+Rule iMT_PlayerNiceShotProducerC1Mechanic
+{
+	criteria iMT_PlayerNiceShot IsMechanic IsProducerNear800 SubjectIsProducer ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerNiceShotProducerMechanic
+}
+
+Response iMT_PlayerPainNoiseMechanic
+{
+	scene "scenes/Mechanic/HurtCritical01.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical02.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical03.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical04.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtCritical06.vcd"  //[pain noise - loud major pain]
+	scene "scenes/Mechanic/HurtMajor01.vcd"  //[pain noise - huh]
+	scene "scenes/Mechanic/HurtMajor02.vcd"  //[pain noise - ahh]
+	scene "scenes/Mechanic/HurtMajor03.vcd"  //[pain noise - oy]
+	scene "scenes/Mechanic/HurtMajor04.vcd"  //[pain noise - ugh]
+	scene "scenes/Mechanic/HurtMajor05.vcd"  //[pain noise - ugh]
+	scene "scenes/Mechanic/HurtMajor06.vcd"  //[pain noise - ugh]
+}
+Rule iMT_PlayerPainNoiseMechanic
+{
+	criteria iMT_PlayerPainNoise IsMechanic
+	Response iMT_PlayerPainNoiseMechanic
+}
+
+Response iMT_PlayerPouncedC1Mechanic
 {
 	scene "scenes/Mechanic/HunterPouncedC101.vcd"  //A zombie's got him!
 	scene "scenes/Mechanic/HunterPouncedC102.vcd"  //One of those things got him!
 }
-Rule iMT_OtherPlayerWasPouncedMechanic
+Rule iMT_PlayerPouncedCoachC1Mechanic
 {
-	criteria iMT_OtherPlayerWasPounced IsMechanic
-	Response iMT_OtherPlayerWasPouncedMechanic
+	criteria iMT_SurvivorWasPounced IsMechanic IsCoachNear800 SubjectIsCoach C1M1orC1M2 NoKnowHunter
+	Response iMT_PlayerPouncedC1Mechanic
+}
+Rule iMT_PlayerPouncedGamblerC1Mechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic IsGamblerNear800 SubjectIsGambler C1M1orC1M2 NoKnowHunter
+	Response iMT_PlayerPouncedC1Mechanic
 }
 
-Response iMT_OtherPlayerWasPouncedGamblerMechanic
+Response iMT_PlayerPouncedProducerC1Mechanic
 {
-	scene "scenes/Mechanic/HunterNickPounced01.vcd"  //Hunter's got Nick!
-	scene "scenes/Mechanic/HunterNickPounced02.vcd"  //Hey hunter's on Nick!
+	scene "scenes/Mechanic/HunterPouncedC1Producer01.vcd"  //Shit, a zombies got her!
+	scene "scenes/Mechanic/HunterPouncedC1Producer02.vcd"  //Hey, one of those things got her!
 }
-Rule iMT_OtherPlayerWasPouncedGamblerMechanic
+Rule iMT_PlayerPouncedProducerC1Mechanic
 {
-	criteria iMT_OtherPlayerWasPounced IsMechanic IssuerClose SubjectIsGambler
-	Response iMT_OtherPlayerWasPouncedGamblerMechanic
+	criteria iMT_SurvivorWasPounced IsMechanic IsProducerNear800 SubjectIsProducer C1M1orC1M2 NoKnowHunter
+	Response iMT_PlayerPouncedProducerC1Mechanic
 }
 
-Response iMT_OtherPlayerWasPouncedCoachMechanic
+Response iMT_PlayerPouncedCoachMechanic
 {
 	scene "scenes/Mechanic/HunterCoachPounced01.vcd"  //Hunter's got Coach!
 	scene "scenes/Mechanic/HunterCoachPounced02.vcd"  //Hey, hunter on Coach!
 }
-Rule iMT_OtherPlayerWasPouncedCoachMechanic
+Rule iMT_PlayerPouncedCoachMechanic
 {
-	criteria iMT_OtherPlayerWasPounced IsMechanic IssuerClose SubjectIsCoach
-	Response iMT_OtherPlayerWasPouncedCoachMechanic
+	criteria iMT_SurvivorWasPounced IsMechanic IsCoachNear800 SubjectIsCoach
+	Response iMT_PlayerPouncedCoachMechanic
 }
 
-Response iMT_OtherPlayerWasPouncedProducerMechanic
+Response iMT_PlayerPouncedGamblerMechanic
 {
-	scene "scenes/Mechanic/HunterPouncedC1Producer01.vcd"  //Shit, a zombies got her!
-	scene "scenes/Mechanic/HunterPouncedC1Producer02.vcd"  //Hey, one of those things got her!
+	scene "scenes/Mechanic/HunterNickPounced01.vcd"  //Hunter's got Nick!
+	scene "scenes/Mechanic/HunterNickPounced02.vcd"  //Hey hunter's on Nick!
+}
+Rule iMT_PlayerPouncedGamblerMechanic
+{
+	criteria iMT_SurvivorWasPounced IsMechanic IsGamblerNear800 SubjectIsGambler
+	Response iMT_PlayerPouncedGamblerMechanic
+}
+
+Response iMT_PlayerPouncedProducerMechanic
+{
 	scene "scenes/Mechanic/HunterRochellePounced01.vcd"  //Hunter's got Rochelle!
 	scene "scenes/Mechanic/HunterRochellePounced02.vcd"  //Hunter on Rochelle!
 }
-Rule iMT_OtherPlayerWasPouncedProducerMechanic
+Rule iMT_PlayerPouncedProducerMechanic
 {
-	criteria iMT_OtherPlayerWasPounced IsMechanic IssuerClose SubjectIsProducer
-	Response iMT_OtherPlayerWasPouncedProducerMechanic
+	criteria iMT_SurvivorWasPounced IsMechanic IsProducerNear800 SubjectIsProducer
+	Response iMT_PlayerPouncedProducerMechanic
 }
 
-Response iMT_BattleCryMechanic
+Response iMT_PlayerSuggestHealthMechanic
 {
-	scene "scenes/Mechanic/BattleCry01.vcd"  //YEAH!!
-	scene "scenes/Mechanic/BattleCry02.vcd"  //DIE!!
-	scene "scenes/Mechanic/BattleCry03.vcd"  //WOO! GET SOME, BABY GET SOME!
-	scene "scenes/Mechanic/BattleCry04.vcd"  //DIE, DIE MY DARLINS! DIE, DIE, DIE!!
+	scene "scenes/Mechanic/SuggestHealth01.vcd"  //Heal up!
+	scene "scenes/Mechanic/SuggestHealth02.vcd"  //Hey, y'all should heal now.
+	scene "scenes/Mechanic/SuggestHealth03.vcd"  //It's a good time to heal up everybody.
+	scene "scenes/Mechanic/SuggestHealth04.vcd"  //Everybody take a minute and get yourself healed.
+	scene "scenes/Mechanic/SuggestHealthC101.vcd"  //Don't forget your health kits.
+	scene "scenes/Mechanic/SuggestHealthC102.vcd"  //Anybody want to heal now?
+	scene "scenes/Mechanic/SuggestHealthC103.vcd"  //Good time to heal.
 }
-Rule iMT_BattleCryMechanic
+Rule iMT_PlayerSuggestHealthMechanic
 {
-	criteria iMT_BattleCry IsMechanic
-	Response iMT_BattleCryMechanic
-}
-
-Response iMT_PlayerEquippedItemMechanic
-{
-	scene "scenes/Mechanic/KillConfirmation03.vcd"  //I got it.
-	scene "scenes/Mechanic/WorldC1M4B43.vcd"  //I got this one!
-}
-Rule iMT_PlayerEquippedItemMechanic
-{
-	criteria iMT_PlayerEquippedItem IsMechanic
-	Response iMT_PlayerEquippedItemMechanic
+	criteria iMT_PlayerSuggestHealth IsMechanic
+	Response iMT_PlayerSuggestHealthMechanic
 }
 
-Response iMT_PlayerBreathingMechanic
+Rule iMT_PlayerSuggestHealthCoachMechanic
 {
-	scene "scenes/Mechanic/Defibrillator13.vcd"  //[gasp for breath]
-	scene "scenes/Mechanic/Defibrillator14.vcd"  //[gasp for breath]
+	criteria iMT_PlayerSuggestHealth IsMechanic IsCoachNear400 SubjectIsCoach isNotmap_c1m1_hotel
+	Response PlayerSuggestHealthCoachMechanic
 }
-Rule iMT_PlayerBreathingMechanic
+Rule iMT_PlayerSuggestHealthCoachC1Mechanic
 {
-	criteria iMT_PlayerBreathing IsMechanic
-	Response iMT_PlayerBreathingMechanic
-}
-
-Response iMT_PlayerAnswerReadyMechanic
-{
-	scene "scenes/Mechanic/MeleeWeapons30.vcd"  //Man, I'm gonna beat these sons of bitches till I lose my watch.
-	scene "scenes/Mechanic/MeleeWeapons31.vcd"  //Time to beat on some sons of bitches.
-	scene "scenes/Mechanic/MeleeWeapons32.vcd"  //Gonna beat me a zombie till there ain't a chunk big enough to hit.
-	scene "scenes/Mechanic/TakeMelee07.vcd"  //I'm gonna mess some zombies up now.
-	scene "scenes/Mechanic/WorldC2M4B02.vcd"  //I was born ready. So... yes.
-}
-Rule iMT_PlayerAnswerReadyMechanic
-{
-	criteria iMT_PlayerAnswerReady IsMechanic
-	Response iMT_PlayerAnswerReadyMechanic
+	criteria iMT_PlayerSuggestHealth IsMechanic IsCoachNear400 SubjectIsCoach ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerSuggestHealthCoachMechanic
 }
 
-Response iMT_PlayerDeathScreamMechanic
+Rule iMT_PlayerSuggestHealthGamblerMechanic
 {
-	scene "scenes/Mechanic/LedgeHangFall01.vcd"  //HEEEEEEEELLLLLPPPPP!!!!!
-	scene "scenes/Mechanic/LedgeHangFall02.vcd"  //NOOOOOOOOOOOOOOOO!!!!
-	scene "scenes/Mechanic/LedgeHangFall03.vcd"  //WOOOOOAAAAAHHHHHH!!!!
-	scene "scenes/Mechanic/LedgeHangFall04.vcd"  //GOOD-BYYYYYYYYYYYE!!
-	scene "scenes/Mechanic/LedgeHangFall05.vcd"  //SORRY Y'AAAAAAAAAALLL!!
+	criteria iMT_PlayerSuggestHealth IsMechanic IsGamblerNear400 SubjectIsGambler isNotmap_c1m1_hotel
+	Response PlayerSuggestHealthGamblerMechanic
 }
-Rule iMT_PlayerDeathScreamMechanic
+Rule iMT_PlayerSuggestHealthGamblerC1Mechanic
 {
-	criteria iMT_PlayerDeathScream IsMechanic
-	Response iMT_PlayerDeathScreamMechanic
+	criteria iMT_PlayerSuggestHealth IsMechanic IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerSuggestHealthGamblerMechanic
 }
 
-Response iMT_PlayerWitchChasingMechanic
+Rule iMT_PlayerSuggestHealthProducerMechanic
 {
-	scene "scenes/Mechanic/WitchChasing01.vcd"  //Out of my way, man, witch coming!!
-	scene "scenes/Mechanic/WitchChasing02.vcd"  //COMING THROUGH! WITCH ON MY ASS!!
-	scene "scenes/Mechanic/WitchChasing03.vcd"  //Run I pissed her off!
-	scene "scenes/Mechanic/WitchChasing04.vcd"  //SHOOT HER! SHOOT HER!
-	scene "scenes/Mechanic/WitchChasing05.vcd"  //WITCH WITCH WITCH!
+	criteria iMT_PlayerSuggestHealth IsMechanic IsProducerNear400 SubjectIsProducer isNotmap_c1m1_hotel
+	Response PlayerSuggestHealthProducerMechanic
 }
-Rule iMT_PlayerWitchChasingMechanic
+Rule iMT_PlayerSuggestHealthProducerC1Mechanic
 {
-	criteria iMT_PlayerWitchChasing IsMechanic
-	Response iMT_PlayerWitchChasingMechanic
-}
-
-Response iMT_PlayerWeddingWitchChasingMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchChasing01.vcd"  //Runaway bride, runaway bride!
-	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchChasing02.vcd"  //Help, here! Here comes the bride!
-	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchChasing03.vcd"  //Here comes the bride!
-}
-Rule iMT_PlayerWeddingWitchChasingMechanic
-{
-	criteria iMT_PlayerWitchChasing IsMechanic Isc6m1_riverbank
-	Response iMT_PlayerWeddingWitchChasingMechanic
+	criteria iMT_PlayerSuggestHealth IsMechanic IsProducerNear400 SubjectIsProducer ismap_c1m1_hotelC1 YesKnowNames
+	Response PlayerSuggestHealthProducerMechanic
 }
 
 Response iMT_PlayerTeamKillMechanic
@@ -824,150 +527,205 @@ Rule iMT_PlayerTransitionMechanic
 	Response iMT_PlayerTransitionMechanic
 }
 
-Response iMT_WitchGettingAngryMechanic
+Rule iMT_SurvivorCaughtVomitMechanic
 {
-	scene "scenes/Mechanic/WitchGettingAngry01.vcd"  //That witch is having a hissy fit.
-	scene "scenes/Mechanic/WitchGettingAngry02.vcd"  //Oh shit man, that witch is a spaz!
-	scene "scenes/Mechanic/WitchGettingAngry03.vcd"  //Tell ya man, y'all playin' with fire when you messin' with that damn witch.
-	scene "scenes/Mechanic/WitchGettingAngry04.vcd"  //Back away from that witch.
-	scene "scenes/Mechanic/WitchGettingAngry05.vcd"  //Don't mess with the damn witch.
-}
-Rule iMT_WitchGettingAngryMechanic
-{
-	criteria iMT_WitchGettingAngry IsMechanic
-	Response iMT_WitchGettingAngryMechanic
-}
-
-Response iMT_PlayerIncapacitatedHurtMechanic
-{
-	scene "scenes/Mechanic/IncapacitatedInjury01.vcd"  //AHHHHH [terrified yell]
-	scene "scenes/Mechanic/IncapacitatedInjury02.vcd"  //AHHHHH [terrified yell]
-	scene "scenes/Mechanic/IncapacitatedInjury03.vcd"  //AHHHHH [terrified yell]
-	scene "scenes/Mechanic/IncapacitatedInjury04.vcd"  //AHHHHH [terrified yell]
-	scene "scenes/Mechanic/IncapacitatedInjury05.vcd"  //AHHHHH [terrified yell]
-	scene "scenes/Mechanic/IncapacitatedInjury06.vcd"  //AHHHHH [terrified yell]
-}
-Rule iMT_PlayerIncapacitatedHurtMechanic
-{
-	criteria iMT_PlayerIncapacitatedHurt IsMechanic
-	Response iMT_PlayerIncapacitatedHurtMechanic
-}
-
-Response iMT_PlayerMournCoachMechanic
-{
-	scene "scenes/Mechanic/SurvivorMournCoach01.vcd"  //Ah man Coach.
-	scene "scenes/Mechanic/SurvivorMournCoach02.vcd"  //Well, Coach, thanks for all you done, man.
-	scene "scenes/Mechanic/SurvivorMournCoach03.vcd"  //Goodbye Coach.
-	scene "scenes/Mechanic/SurvivorMournCoach04.vcd"  //You were a hell of a man, Coach.
-	scene "scenes/Mechanic/SurvivorMournCoach05.vcd"  //Thanks Coach.
-	scene "scenes/Mechanic/SurvivorMournCoachC101.vcd"  //Man, I was hoping me and coach were gonna be friends.
-}
-Rule iMT_PlayerMournCoachAliveMechanic
-{
-	criteria iMT_PlayerMourn IsMechanic IssuerClose SubjectIsCoach
-	Response iMT_PlayerMournCoachMechanic
-}
-Rule iMT_PlayerMournCoachDeadMechanic
-{
-	criteria iMT_PlayerMourn IsMechanic IsCoachNear200 IsCoachNotAlive
-	Response iMT_PlayerMournCoachMechanic
-}
-
-Response iMT_PlayerMournGamblerMechanic
-{
-	scene "scenes/Mechanic/SurvivorMournGamblerC101.vcd"  //Bet he didn't think he'd die before me.
-	scene "scenes/Mechanic/SurvivorMournNick01.vcd"  //Ahh Nick.
-	scene "scenes/Mechanic/SurvivorMournNick02.vcd"  //Nick, you were cool.
-	scene "scenes/Mechanic/SurvivorMournNick03.vcd"  //Miss ya, brother.
-	scene "scenes/Mechanic/SurvivorMournNick04.vcd"  //Damn, Nick. We was just gettin' to be friends.
-}
-Rule iMT_PlayerMournGamblerAliveMechanic
-{
-	criteria iMT_PlayerMourn IsMechanic IssuerClose SubjectIsGambler
-	Response iMT_PlayerMournGamblerMechanic
-}
-Rule iMT_PlayerMournGamblerDeadMechanic
-{
-	criteria iMT_PlayerMourn IsMechanic IsGamblerNear200 IsGamblerNotAlive
-	Response iMT_PlayerMournGamblerMechanic
-}
-
-Response iMT_PlayerMournProducerMechanic
-{
-	scene "scenes/Mechanic/SurvivorMournProducerC101.vcd"  //She was the last one I wanted to see go.
-	scene "scenes/Mechanic/SurvivorMournProducerC102.vcd"  //She was the last one I wanted to see go.
-	scene "scenes/Mechanic/SurvivorMournRochelle01.vcd"  //Be good Rochelle.
-	scene "scenes/Mechanic/SurvivorMournRochelle02.vcd"  //Ro, I'm gonna miss ya.
-	scene "scenes/Mechanic/SurvivorMournRochelle03.vcd"  //I'll remember you in my prayers Ro.
-	scene "scenes/Mechanic/SurvivorMournRochelle04.vcd"  //Hell of a girl, Ro.
-}
-Rule iMT_PlayerMournProducerAliveMechanic
-{
-	criteria iMT_PlayerMourn IsMechanic IssuerClose SubjectIsProducer
-	Response iMT_PlayerMournProducerMechanic
-}
-Rule iMT_PlayerMournProducerDeadMechanic
-{
-	criteria iMT_PlayerMourn IsMechanic IsProducerNear200 IsProducerNotAlive
-	Response iMT_PlayerMournProducerMechanic
-}
-
-Response iMT_PlayerNearExitMechanic
-{
-	scene "scenes/Mechanic/SafeSpotAhead01.vcd"  //Safe house ahead!
-	scene "scenes/Mechanic/SafeSpotAhead02.vcd"  //Yeah, safehouse y'all!
-	scene "scenes/Mechanic/SafeSpotAhead03.vcd"  //Hey, we got a safe room ahead!
-	scene "scenes/Mechanic/SafeSpotAhead04.vcd"  //Hey, we got a safe room right ahead!
-}
-Rule iMT_PlayerNearExitMechanic
-{
-	criteria iMT_PlayerNearExit IsMechanic
-	Response iMT_PlayerNearExitMechanic
+	criteria iMT_PlayerVomitInFace IsMechanic
+	Response SurvivorCaughtVomitMechanic
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// NPC Triggers
+// Character-specific
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_VirgilMechanic
+Response iMT_AllAboardMechanic
 {
-	print " " then orator iMT_Virgil foo:0 0
+	scene "scenes/Mechanic/DLC1_CommunityE15.vcd"  //All aboard! Toot! Toot!
+	scene "scenes/Mechanic/DLC1_CommunityE16.vcd"  //All aboard! Toot! Toot!
+	scene "scenes/Mechanic/DLC1_CommunityE18.vcd"  //All aboard!
+	scene "scenes/Mechanic/WorldC2M325.vcd"  //Click-click-click-click
 }
-Rule iMT_VirgilMechanic
+Rule iMT_AllAboardMechanic
 {
-	criteria iMT_Virgil IsMechanic
-	Response iMT_VirgilMechanic
-}
-
-Response iMT_WhitakerMechanic
-{
-	print " " then orator iMT_Whitaker foo:0 0
-}
-Rule iMT_WhitakerMechanic
-{
-	criteria iMT_Whitaker IsMechanic
-	Response iMT_WhitakerMechanic
+	criteria iMT_AllAboard IsMechanic
+	Response iMT_AllAboardMechanic
 }
 
-Response iMT_MoustachioMechanic
+Response iMT_BiscuitMechanic
 {
-	print " " then orator iMT_Moustachio foo:0 0
+	scene "scenes/Mechanic/Generic01.vcd"  //Well, butter my butt and call me a biscuit.
+	scene "scenes/Mechanic/Generic03.vcd"  //Well, butter my butt and call me a biscuit.
 }
-Rule iMT_MoustachioMechanic
+Rule iMT_BiscuitMechanic
 {
-	criteria iMT_Moustachio IsMechanic
-	Response iMT_MoustachioMechanic
+	criteria iMT_Biscuit IsMechanic
+	Response iMT_BiscuitMechanic
 }
 
-Response iMT_ChurchGuyMechanic
+Response iMT_BreakMechanic
 {
-	print " " then orator iMT_ChurchGuy foo:0 0
+	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater03.vcd" then Gambler WorldC6M2_InSewerLadder101a foo:0 -2.8  //Okay if anybody needs a bathroom break, now'd be a good time.
 }
-Rule iMT_ChurchGuyMechanic
+Rule iMT_BreakMechanic
 {
-	criteria iMT_ChurchGuy IsMechanic
-	Response iMT_ChurchGuyMechanic
+	criteria iMT_Break IsMechanic
+	Response iMT_BreakMechanic
 }
+
+Response iMT_CaCawMechanic
+{
+	scene "scenes/Mechanic/WorldMisc34.vcd"  //Ca Caw Ca Caw Ca Caw!
+	scene "scenes/Mechanic/WorldMisc35.vcd"  //Ca Caw Ca Caw Ca Caw Ca Caw!
+	scene "scenes/Mechanic/WorldMisc36.vcd"  //Ca Caw Ca Caw!
+	scene "scenes/Mechanic/WorldMisc37.vcd" odds 10  //[Whistles]
+}
+Rule iMT_CaCawMechanic
+{
+	criteria iMT_CaCaw IsMechanic
+	Response iMT_CaCawMechanic
+}
+
+Response iMT_CandyMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Phase2InWater02.vcd" //Oh man, I found a candy bar! [beat] Whup. False alarm.
+}
+Rule iMT_CandyMechanic
+{
+	criteria iMT_Candy IsMechanic
+	Response iMT_CandyMechanic
+}
+
+Response iMT_DogMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat18.vcd"  //Can we not talk about dogs?
+}
+Rule iMT_DogMechanic
+{
+	criteria iMT_Dog IsMechanic
+	Response iMT_DogMechanic
+}
+
+Rule iMT_FeelHerMechanic
+{
+	criteria iMT_FeelHer IsMechanic
+	Response PlayerTransitionC6M2Mechanic
+}
+
+Response iMT_GotYouMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat08.vcd"  //Man, he got you Nick. It's like he's known you forever.
+}
+Rule iMT_GotYouMechanic
+{
+	criteria iMT_GotYou IsMechanic
+	Response iMT_GotYouMechanic
+}
+
+Response iMT_InHonorMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator03.vcd"  //Man, I'm gonna kill so many zombies she's gonna have to love me.
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator04.vcd"  //I'm gonna kill a tank in her honor and then I'm gonna name it after her.
+	scene "scenes/Mechanic/DLC1_C6M3_Elevator05.vcd"  //I'm gonna kill a tank in her honor. Ooh, and then I'm gonna name it after her.
+}
+Rule iMT_InHonorMechanic
+{
+	criteria iMT_InHonor IsMechanic
+	Response iMT_InHonorMechanic
+}
+
+Response iMT_InLoveMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing01.vcd"  //A girl who can shoot? I am in love.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing05.vcd"  //Man. A girl who can shoot? I am in love.
+}
+Rule iMT_InLoveMechanic
+{
+	criteria iMT_InLove IsMechanic
+	Response iMT_InLoveMechanic
+}
+
+Rule iMT_LoveYouMechanic
+{
+	criteria iMT_LoveYou IsMechanic
+	Response C2M1Intro008Mechanic
+}
+
+Response iMT_MadamMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat01.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat02.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat03.vcd"  //Yes, ma'am.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat04.vcd"  //Oh, yes, ma'am.
+}
+Rule iMT_MadamMechanic
+{
+	criteria iMT_Madam IsMechanic
+	Response iMT_MadamMechanic
+}
+
+Response iMT_MarriageMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingPostWitch01.vcd" then Coach WorldC6M1_PostWedding01a foo:0 -2.8  //Hey Coach. Can coaches marry people?
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingPostWitch02.vcd" then Gambler WorldC6M1_PostWedding02a foo:0 -3.5  //You know what? This got me thinking... I should totally marry that girl.
+	scene "scenes/Mechanic/DLC1_C6M1_WeddingWitchAttacking01.vcd"  //Oh man I changed my mind! I do not wanna get married!
+}
+Rule iMT_MarriageMechanic
+{
+	criteria iMT_Marriage IsMechanic
+	Response iMT_MarriageMechanic
+}
+
+Response iMT_SayingZoeyMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing06.vcd"  //Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing07.vcd"  //Zoey! Zoey! Zoey! Man I just love sayin' it.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing08.vcd"  //Zoey! Zoey! Zoey! I could say that all day long.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing09.vcd"  //Zoey! Zoey! Zoey! I just love sayin' it, really.
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing10.vcd"  //Zoey! Zoey! Zoey! I just love sayin' it!
+}
+Rule iMT_SayingZoeyMechanic
+{
+	criteria iMT_SayingZoey IsMechanic
+	Response iMT_SayingZoeyMechanic
+}
+
+Response iMT_SingingMechanic
+{
+	scene "scenes/Mechanic/MeleeWeapons13.vcd" odds 20  //[humming] Gonna beat me a zombie to death... with a nightstick...
+	scene "scenes/Mechanic/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn...
+	scene "scenes/Mechanic/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around...
+}
+Rule iMT_SingingMechanic
+{
+	criteria iMT_Singing IsMechanic
+	Response iMT_SingingMechanic
+}
+
+Response iMT_TattoosMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo01.vcd" then Gambler WorldC6M2_Tattoo03a foo:0 -3.2  //Hey Nick, you and me ought to get tattoos that say "bros".
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo04.vcd"  //TATTOOS! TATTOOS!
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo06.vcd"  //I love tattoos. I only have one, but I was gonna get my truck tattooed on my other arm.
+	scene "scenes/Mechanic/DLC1_C6M2_Tattoo07.vcd"  //Man, I love tattoos. I only have one, I was gonna get my truck tattooed on the other arm, but maybe now I get Jimmy Gibbs Jr car. Damn zombies.
+}
+Rule iMT_TattoosMechanic
+{
+	criteria iMT_Tattoos IsMechanic
+	Response iMT_TattoosMechanic
+}
+
+Response iMT_TeamFortress2Mechanic
+{
+	scene "scenes/Mechanic/DLC1_CommunityE20.vcd"  //Dude, this is just like Team Fortress 2!
+}
+Rule iMT_TeamFortress2Mechanic
+{
+	criteria iMT_TeamFortress2 IsMechanic
+	Response iMT_TeamFortress2Mechanic
+}
+
+//--------------------------------------------------------------------------------------------------------------
+// NPC triggers
+//--------------------------------------------------------------------------------------------------------------
 
 Response iMT_BoatmanMechanic
 {
@@ -987,6 +745,26 @@ Rule iMT_ChopperPilotMechanic
 {
 	criteria iMT_ChopperPilot IsMechanic
 	Response iMT_ChopperPilotMechanic
+}
+
+Response iMT_ChurchGuyMechanic
+{
+	print " " then orator iMT_ChurchGuy foo:0 0
+}
+Rule iMT_ChurchGuyMechanic
+{
+	criteria iMT_ChurchGuy IsMechanic
+	Response iMT_ChurchGuyMechanic
+}
+
+Response iMT_MoustachioMechanic
+{
+	print " " then orator iMT_Moustachio foo:0 0
+}
+Rule iMT_MoustachioMechanic
+{
+	criteria iMT_Moustachio IsMechanic
+	Response iMT_MoustachioMechanic
 }
 
 Response iMT_PlanePilotMechanic
@@ -1019,342 +797,58 @@ Rule iMT_SoldiersMechanic
 	Response iMT_SoldiersMechanic
 }
 
+Response iMT_VirgilMechanic
+{
+	print " " then orator iMT_Virgil foo:0 0
+}
+Rule iMT_VirgilMechanic
+{
+	criteria iMT_Virgil IsMechanic
+	Response iMT_VirgilMechanic
+}
+
+Response iMT_WhitakerMechanic
+{
+	print " " then orator iMT_Whitaker foo:0 0
+}
+Rule iMT_WhitakerMechanic
+{
+	criteria iMT_Whitaker IsMechanic
+	Response iMT_WhitakerMechanic
+}
+
 //--------------------------------------------------------------------------------------------------------------
-// General Fixes
+// Fixes
 //--------------------------------------------------------------------------------------------------------------
+
+Response iMT_PlayerAreaClearMechanic
+{
+	scene "scenes/Mechanic/Defibrillator07.vcd"  //Clear!
+}
+Rule iMT_PlayerAreaClearMechanic
+{
+	criteria ConceptPlayerAreaClear IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	Response iMT_PlayerAreaClearMechanic
+}
 
 Response iMT_PlayerLaughMechanic
 {
 	scene "scenes/Mechanic/Laughter04.vcd"  //<Hearty Laugh>
 	scene "scenes/Mechanic/Laughter05.vcd"  //<Hearty Laugh>
 	scene "scenes/Mechanic/Laughter06.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter10.vcd"  //[Laughter]
+	scene "scenes/Mechanic/Laughter11.vcd"  //[Laughter]
+	scene "scenes/Mechanic/Laughter12.vcd"  //[Laughter]
+	scene "scenes/Mechanic/Laughter13a.vcd"  //[Laughter]
 	scene "scenes/Mechanic/Laughter13b.vcd"  //<Hearty Laugh>
-	scene "scenes/Mechanic/Laughter13c.vcd"  //<Hearty Laugh>
 	scene "scenes/Mechanic/Laughter13d.vcd"  //<Hearty Laugh>
+	scene "scenes/Mechanic/Laughter13e.vcd"  //<Hearty Laugh>
 }
 Rule iMT_PlayerLaughMechanic
 {
 	criteria ConceptPlayerLaugh IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 100
 	Response iMT_PlayerLaughMechanic
-}
-
-Response iMT_SurvivorTauntResponseMechanic
-{
-	scene "scenes/Mechanic/Taunt01.vcd"  //Why don't you remember that for next time you son's of a bitches.
-	scene "scenes/Mechanic/Taunt02.vcd"  //They ain't takin' us alive!
-	scene "scenes/Mechanic/Taunt03.vcd"  //We knocked the piss out of them
-	scene "scenes/Mechanic/Taunt04.vcd"  //Haha! We whipped the dogshit out of them!
-	scene "scenes/Mechanic/Taunt05.vcd"  //That's right, you can't kill us!
-	scene "scenes/Mechanic/Taunt07.vcd"  //Yo! Whose your daddy!?!?
-	scene "scenes/Mechanic/Taunt08.vcd"  //Uh oh. My trigger finger got tired!
-}
-Rule iMT_SurvivorTauntResponseMechanic
-{
-	criteria ConceptPlayerTaunt IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	Response iMT_SurvivorTauntResponseMechanic
-}
-
-// Response iMT_PlayerNegativeMechanic
-// {
-//	scene "scenes/Mechanic/HurtCritical01.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/Mechanic/HurtCritical02.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/Mechanic/HurtCritical03.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/Mechanic/HurtCritical04.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/Mechanic/HurtCritical05.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/Mechanic/HurtCritical06.vcd"  //[pain noise - loud major pain]
-//	scene "scenes/Mechanic/HurtMajor01.vcd"  //[pain noise - huh]
-//	scene "scenes/Mechanic/HurtMajor02.vcd"  //[pain noise - ahh]
-//	scene "scenes/Mechanic/HurtMajor03.vcd"  //[pain noise - oy]
-//	scene "scenes/Mechanic/HurtMajor04.vcd"  //[pain noise - ugh]
-//	scene "scenes/Mechanic/HurtMajor05.vcd"  //[pain noise - ugh]
-//	scene "scenes/Mechanic/HurtMajor06.vcd"  //[pain noise - ugh]
-// }
-// Rule iMT_PlayerNegativeMechanic
-// {
-//	criteria ConceptPlayerNegative IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-//	forceweight 1000
-//	Response iMT_PlayerNegativeMechanic
-// }
-
-Response iMT_PlayerSorryMechanic
-{
-	scene "scenes/Mechanic/Sorry01.vcd"  //Sorry.
-	scene "scenes/Mechanic/Sorry02.vcd"  //Sorry 'bout that.
-	scene "scenes/Mechanic/Sorry03.vcd" then subject PlayerNegative foo:0 0  //You can lay that blame on me.
-	scene "scenes/Mechanic/Sorry04.vcd" then subject PlayerNegative foo:0 0  //That coulda happened to anybody.
-	scene "scenes/Mechanic/Sorry05.vcd"  //Yeah, I'm sorry about that one.
-	scene "scenes/Mechanic/Sorry06.vcd" then subject PlayerNegative foo:0 0  //Sorry, sun was in my eyes.
-	scene "scenes/Mechanic/Sorry07.vcd"  //Sorry 'bout that.
-	scene "scenes/Mechanic/Sorry08.vcd" then subject PlayerNegative foo:0 0  //My bad on that one.
-	scene "scenes/Mechanic/Sorry09.vcd"  //Sorry!
-	scene "scenes/Mechanic/Sorry10.vcd"  //Sorry over there.
-}
-Rule iMT_PlayerSorryMechanic
-{
-	criteria ConceptPlayerSorry IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	Response iMT_PlayerSorryMechanic
-}
-
-Response iMT_PlayerHurrahMechanic
-{
-	scene "scenes/Mechanic/Hurrah01.vcd" then any HurrahAlso foo:0 0  //We opened up a can of whup ass on them!
-	scene "scenes/Mechanic/Hurrah02.vcd" then any HurrahAlso foo:0 0  //I'm thinkin' we can take on anything!
-	scene "scenes/Mechanic/Hurrah03.vcd" then any HurrahAlso foo:0 0  //We are kings of the world!
-	scene "scenes/Mechanic/Hurrah04.vcd" then any HurrahAlso foo:0 0  //I am proud to be part of this team!
-	scene "scenes/Mechanic/Hurrah05.vcd" then any HurrahAlso foo:0 0  //We are a right damn good team!
-	scene "scenes/Mechanic/Hurrah06.vcd" then any HurrahAlso foo:0 0  //Hey, let me tell ya something. Y'all are the best!
-	scene "scenes/Mechanic/Hurrah07.vcd" then any HurrahAlso foo:0 0  //Well, slap my head and call me silly we are kickin' some ass!
-	scene "scenes/Mechanic/Hurrah08.vcd"  //Ahh HELL YEAH!
-	scene "scenes/Mechanic/Hurrah09.vcd"  //All right then!
-	scene "scenes/Mechanic/Hurrah10.vcd" then any HurrahAlso foo:0 0  //I ain't no god damn son of a bitch, yeah ya better think about that baby.
-	scene "scenes/Mechanic/Hurrah11.vcd"  //That's how it's done RIGHT!
-	scene "scenes/Mechanic/Hurrah12.vcd" then any HurrahAlso foo:0 0  //We're kickin' more ass than a boot in an ass factory!
-	scene "scenes/Mechanic/Hurrah13.vcd"  //DAMN, we are good.
-	scene "scenes/Mechanic/Hurrah14.vcd" then any HurrahAlso foo:0 0  //Load, lock, and cut the talk! That's how it's done!
-	scene "scenes/Mechanic/Hurrah15.vcd" then any HurrahAlso foo:0 0  //We in the ZOMBIE-killin' bidness!
-	scene "scenes/Mechanic/Hurrah18.vcd" then any HurrahAlso foo:0 0  //Hoohoo! Apocalypse, my ass! We're livin' in the best shooting range of ALL TIME!
-	scene "scenes/Mechanic/Hurrah20.vcd" then any HurrahAlso foo:0 0  //We gotta make this fair for the zombies! I'm-a tie an arm around my back.
-}
-Rule iMT_PlayerHurrahMechanic
-{
-	criteria ConceptPlayerHurrah IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	Response iMT_PlayerHurrahMechanic
-}
-
-Response iMT_PlayerThanksMechanic
-{
-	scene "scenes/Mechanic/Thanks02.vcd"  //Much obliged
-	scene "scenes/Mechanic/Thanks04.vcd"  //I owe you one.
-	scene "scenes/Mechanic/Thanks05.vcd"  //Hey, thanks a lot.
-}
-Rule iMT_PlayerThanksMechanic
-{
-	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	forceweight 900
-	Response iMT_PlayerThanksMechanic
-}
-
-Response iMT_PlayerThanksMaleMechanic
-{
-	scene "scenes/Mechanic/Thanks01.vcd"  //Hey thanks, man!
-	scene "scenes/Mechanic/Thanks06.vcd"  //Thanks man.
-	scene "scenes/Mechanic/WorldC5M1B03.vcd"  //Thanks, brother!
-}
-Rule iMT_PlayerThanksCoachMechanic
-{
-	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerThanksMaleMechanic
-}
-Rule iMT_PlayerThanksGamblerMechanic
-{
-	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerThanksMaleMechanic
-}
-
-Response iMT_PlayerThanksProducerMechanic
-{
-	scene "scenes/Mechanic/Thanks03.vcd"  //Thank you kindly, ma'm.
-}
-Rule iMT_PlayerThanksProducerMechanic
-{
-	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerThanksProducerMechanic
-}
-
-Response iMT_PlayerYouAreWelcomeMechanic
-{
-	scene "scenes/Mechanic/YouAreWelcome01.vcd"  //You're welcome.
-	scene "scenes/Mechanic/YouAreWelcome02.vcd"  //Yeah, you're welcome.
-	scene "scenes/Mechanic/YouAreWelcome03.vcd"  //We're cool.
-	scene "scenes/Mechanic/YouAreWelcome04.vcd"  //We're good.
-	scene "scenes/Mechanic/YouAreWelcome06.vcd"  //Hey, you bet!
-	scene "scenes/Mechanic/YouAreWelcome07.vcd"  //Hey, you bet!
-	scene "scenes/Mechanic/YouAreWelcome08.vcd"  //Always.
-}
-Rule iMT_PlayerYouAreWelcomeMechanic
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	forceweight 900
-	Response iMT_PlayerYouAreWelcomeMechanic
-}
-
-Response iMT_PlayerYouAreWelcomeCoachMechanic
-{
-	scene "scenes/Mechanic/YouAreWelcome05.vcd"  //Anytime, man.
-	scene "scenes/Mechanic/YouAreWelcomeCoach01.vcd"  //Yeah, no problem, Coach.
-	scene "scenes/Mechanic/YouAreWelcomeCoach02.vcd"  //No big thing, Coach.
-	scene "scenes/Mechanic/YouAreWelcomeCoach03.vcd"  //Ah it's all you, big guy.
-	scene "scenes/Mechanic/YouAreWelcomeCoach04.vcd"  //All good, Coach.
-}
-Rule iMT_PlayerYouAreWelcomeCoachMechanic
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerYouAreWelcomeCoachMechanic
-}
-
-Response iMT_PlayerYouAreWelcomeGamblerMechanic
-{
-	scene "scenes/Mechanic/YouAreWelcome09.vcd"  //You got it, man.
-	scene "scenes/Mechanic/YouAreWelcomeGambler01.vcd"  //That's what I do, Nick.
-	scene "scenes/Mechanic/YouAreWelcomeGambler02.vcd"  //No worries, Nick.
-	scene "scenes/Mechanic/YouAreWelcomeGambler03.vcd"  //No problem, Nick.
-}
-Rule iMT_PlayerYouAreWelcomeGamblerMechanic
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerYouAreWelcomeGamblerMechanic
-}
-
-Response iMT_PlayerYouAreWelcomeProducerMechanic
-{
-	scene "scenes/Mechanic/YouAreWelcome10.vcd"  //You got it, girl.
-	scene "scenes/Mechanic/YouAreWelcomeProducer01.vcd"  //Anything for you, Ro.
-	scene "scenes/Mechanic/YouAreWelcomeProducer02.vcd"  //Anything for you, Rochelle.
-	scene "scenes/Mechanic/YouAreWelcomeProducer03.vcd"  //You know I got your back, Rochelle.
-}
-Rule iMT_PlayerYouAreWelcomeProducerMechanic
-{
-	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100
-	forceweight 1000
-	Response iMT_PlayerYouAreWelcomeProducerMechanic
-}
-
-Response iMT_PlayerToTheRescueRosMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleBridgeRun01.vcd" odds 10  //I'm coming baby!
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleBridgeRun02.vcd" odds 10  //I'm coming baby!
-	scene "scenes/Mechanic/ToTheRescue01.vcd"  //Keep your britches on, I'm a comin'.
-	scene "scenes/Mechanic/ToTheRescue02.vcd"  //I'm a comin!
-	scene "scenes/Mechanic/ToTheRescue03.vcd"  //Hold on now, I'm coming!
-	scene "scenes/Mechanic/ToTheRescue04.vcd"  //Ellis on the way!
-	scene "scenes/Mechanic/ToTheRescue05.vcd"  //Hang on, I'm coming!
-	scene "scenes/Mechanic/ToTheRescue06.vcd"  //I'm comin', I'm comin'!
-	scene "scenes/Mechanic/ToTheRescue07.vcd"  //Makin' a beeline for ya!
-}
-Rule iMT_PlayerToTheRescueRosMechanic
-{
-	criteria ConceptPlayerToTheRescue IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	forceweight 1000
-	Response iMT_PlayerToTheRescueRosMechanic
-}
-
-Response iMT_PlayerHelpMechanic
-{
-	scene "scenes/Mechanic/Help01.vcd"  //Help! Help!
-	scene "scenes/Mechanic/Help02.vcd"  //Hey, I need some help over here!
-	scene "scenes/Mechanic/Help03.vcd"  //Help me out!
-	scene "scenes/Mechanic/Help04.vcd"  //Help!
-	scene "scenes/Mechanic/Help05.vcd"  //Oh shit! Help!
-	scene "scenes/Mechanic/Help06.vcd"  //I need some help!
-}
-Rule iMT_PlayerHelpMechanic
-{
-	criteria ConceptPlayerHelp IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	Response iMT_PlayerHelpMechanic
-}
-
-Response iMT_SurvivorSpottedTankC1Mechanic
-{
-	scene "scenes/Mechanic/WarnTankC101.vcd"  //HOLY SHIT TANK!
-	scene "scenes/Mechanic/WarnTankC102.vcd"  //GIANT THING!
-	scene "scenes/Mechanic/WarnTankC103.vcd"  //Oh lordy! Big ass thing!
-}
-Rule iMT_SurvivorSpottedTankC1Mechanic
-{
-	criteria ConceptPlayerAlsoWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
-	forceweight 1000
-	Response iMT_SurvivorSpottedTankC1Mechanic
-}
-
-Response iMT_SurvivorSpottedBoomerC1Mechanic
-{
-	scene "scenes/Mechanic/WarnBoomerC101.vcd"  //PUKER!
-	scene "scenes/Mechanic/WarnBoomerC102.vcd"  //IT'S EXPLODING GUY!
-	scene "scenes/Mechanic/WarnBoomerC103.vcd"  //BOOMER! YEAH - BOOMER!
-}
-Rule iMT_SurvivorSpottedBoomerC1Mechanic
-{
-	criteria ConceptPlayerAlsoWarnBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
-	forceweight 1000
-	Response iMT_SurvivorSpottedBoomerC1Mechanic
-}
-
-Response iMT_SurvivorSpottedHunterC1Mechanic
-{
-	scene "scenes/Mechanic/WarnHunterC101.vcd"  //LEAPER!
-	scene "scenes/Mechanic/WarnHunterC102.vcd"  //JUMPER!
-	scene "scenes/Mechanic/WarnHunterC103.vcd"  //HOODED DUDE!
-}
-Rule iMT_SurvivorSpottedHunterC1Mechanic
-{
-	criteria ConceptPlayerAlsoWarnHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
-	forceweight 1000
-	Response iMT_SurvivorSpottedHunterC1Mechanic
-}
-
-Response iMT_SurvivorSpottedSmokerC1Mechanic
-{
-	scene "scenes/Mechanic/WarnSmokerC101.vcd"  //It's that nasty tongue thing!
-	scene "scenes/Mechanic/WarnSmokerC102.vcd"  //YO, IT'S THAT SMOKING DUDE WITH THE TONGUE!
-	scene "scenes/Mechanic/WarnSmokerC103.vcd"  //THAT'S A TONGUE GUY!
-	scene "scenes/Mechanic/WarnSmokerC104.vcd"  //SMOKING DUDE!
-	scene "scenes/Mechanic/WarnSmokerC105.vcd"  //TONGUER!
-}
-Rule iMT_SurvivorSpottedSmokerC1Mechanic
-{
-	criteria ConceptPlayerAlsoWarnSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
-	forceweight 1000
-	Response iMT_SurvivorSpottedSmokerC1Mechanic
-}
-
-Response iMT_SurvivorVocalizeBackUpMechanic
-{
-	scene "scenes/Mechanic/BackUp01.vcd"  //Whoa, back it up!
-	scene "scenes/Mechanic/BackUp02.vcd"  //Come on, back up!
-	scene "scenes/Mechanic/BackUp03.vcd"  //Move back! Move back!
-	scene "scenes/Mechanic/BackUp04.vcd"  //Back it up!
-	scene "scenes/Mechanic/BackUp05.vcd"  //Back up!
-	scene "scenes/Mechanic/BackUp06.vcd"  //Come on, move back!
-	scene "scenes/Mechanic/BackUp07.vcd"  //Move back! Move back!
-	scene "scenes/Mechanic/BackUp08.vcd"  //Hey, back it up!
-}
-Rule iMT_SurvivorVocalizeBackUpMechanic
-{
-	criteria ConceptPlayerBackUp IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	Response iMT_SurvivorVocalizeBackUpMechanic
-}
-
-Response iMT_SurvivorTankPoundMechanic
-{
-	scene "scenes/Mechanic/TankPound01.vcd"  //JESUS CHRIST SHOOT THIS MOTHER!
-	scene "scenes/Mechanic/TankPound02.vcd"  //KILL THE BASTARD WILL YA!
-	scene "scenes/Mechanic/TankPound03.vcd"  //This thing's crushin' the shit outa me!
-	scene "scenes/Mechanic/TankPound04.vcd"  //KILL THIS THING!
-}
-Rule iMT_SurvivorTankPoundMechanic
-{
-	criteria ConceptPlayerGroundPoundedByTank IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	forceweight 1000
-	Response iMT_SurvivorTankPoundMechanic
-}
-
-Response iMT_SurvivorVocalizeEmphaticGoMechanic
-{
-	scene "scenes/Mechanic/EmphaticGo01.vcd"  //Let's  go!
-	scene "scenes/Mechanic/EmphaticGo02.vcd"  //Go!
-	scene "scenes/Mechanic/EmphaticGo03.vcd"  //Go go go!
-	scene "scenes/Mechanic/EmphaticGo04.vcd"  //Hey man, we gotta go!
-	scene "scenes/Mechanic/EmphaticGo05.vcd"  //Just run!
-}
-Rule iMT_SurvivorVocalizeEmphaticGoMechanic
-{
-	criteria ConceptPlayerEmphaticGo IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	Response iMT_SurvivorVocalizeEmphaticGoMechanic
 }
 
 Response iMT_ResponseSoftDispleasureSwearMechanic
@@ -1365,230 +859,47 @@ Response iMT_ResponseSoftDispleasureSwearMechanic
 Rule iMT_ResponseSoftDispleasureSwearMechanic
 {
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	forceweight 1000
 	Response iMT_ResponseSoftDispleasureSwearMechanic
 }
 
-Response iMT_PlayerAreaClearMechanic
+Rule iMT_SurvivorDeathMechanic
 {
-	scene "scenes/Mechanic/Defibrillator07.vcd"  //Clear!
-}
-Rule iMT_PlayerAreaClearMechanic
-{
-	criteria ConceptPlayerAreaClear IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	forceweight 1000
-	Response iMT_PlayerAreaClearMechanic
+	criteria ConceptPlayerDeath IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 100
+	Response SurvivorDeathMechanic
 }
 
-Response iMT_PlayerGettingRevivedMechanic
+Rule iMT_SurvivorSpottedAmmoMechanic
 {
-	scene "scenes/Mechanic/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 -0.608  //Bleedin'.
-	scene "scenes/Mechanic/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 -1.083  //Think I'm okay.
-	scene "scenes/Mechanic/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 -0.979  //I hurt aplenty
-	scene "scenes/Mechanic/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 -0.726  //I hurt.
-	scene "scenes/Mechanic/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 -0.950  //I'm pretty torn up.
-	scene "scenes/Mechanic/GettingRevived06.vcd" then From ReviveFriendDownFinal foo:0 -0.936  //Reckon I'm okay.
-	scene "scenes/Mechanic/GettingRevived07.vcd" then From ReviveFriendDownFinal foo:0 -1.348  //Reckon I been better.
-	scene "scenes/Mechanic/GettingRevived08.vcd" then From ReviveFriendDownFinal foo:0 -0.610  //I'm okay.
-	scene "scenes/Mechanic/GettingRevived09.vcd" then From ReviveFriendDownFinal foo:0 -0.546  //I'm alright.
-	scene "scenes/Mechanic/GettingRevived10.vcd" then From ReviveFriendDownFinal foo:0 -0.833  //Good... I think.
-	scene "scenes/Mechanic/GettingRevived11.vcd" then From ReviveFriendDownFinal foo:0 -0.916  //Good... I think.
-	scene "scenes/Mechanic/GettingRevived12.vcd" then From ReviveFriendDownFinal foo:0 -1.949  //I could be better.
-	scene "scenes/Mechanic/GettingRevived13.vcd" then From ReviveFriendDownFinal foo:0 -0.948  //Hell, I don't know.
-	scene "scenes/Mechanic/GettingRevived14.vcd" then From ReviveFriendDownFinal foo:0 -0.996  //Do I look all right?
-	scene "scenes/Mechanic/GettingRevived15.vcd" then From ReviveFriendDownFinal foo:0 -0.591  //Hurtin'.
-	scene "scenes/Mechanic/GettingRevived16.vcd" then From ReviveFriendDownFinal foo:0 -0.779  //Been better.
-	scene "scenes/Mechanic/GettingRevived17.vcd" then From ReviveFriendDownFinal foo:0 -0.927  //Cool.
-	scene "scenes/Mechanic/GettingRevived18.vcd" then From ReviveFriendDownFinal foo:0 -0.756  //Good, how're you?
-	scene "scenes/Mechanic/GettingRevived19.vcd" then From ReviveFriendDownFinal foo:0 -1.301  //I'm just great, thanks.
-	scene "scenes/Mechanic/GettingRevived20.vcd" then From ReviveFriendDownFinal foo:0 -2.070  //Sorry, don't mean to put you out none.
-	scene "scenes/Mechanic/GettingRevived21.vcd" then From ReviveFriendDownFinal foo:0 -1.447  //Hell no, I ain't cryin'.
-	scene "scenes/Mechanic/GettingRevived22.vcd" then From ReviveFriendDownFinal foo:0 -2.410  //I still got some fight in me.
-	scene "scenes/Mechanic/GettingRevived23.vcd" then From ReviveFriendDownFinal foo:0 -0.652  //I'll live.
-	scene "scenes/Mechanic/GettingRevived24.vcd" then From ReviveFriendDownFinal foo:0 -0.610  //Little sore.
-	scene "scenes/Mechanic/GettingRevived25.vcd" then From ReviveFriendDownFinal foo:0 -1.186  //Pissed at myself.
-}
-Rule iMT_PlayerGettingRevivedMechanic
-{
-	criteria ConceptReviveFriendDown IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	forceweight 1000
-	Response iMT_PlayerGettingRevivedMechanic
+	criteria ConceptPlayerSpotAmmo IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 100
+	Response SurvivorSpottedAmmoMechanic
 }
 
-Response iMT_PlayerReviveFriendBMechanic
+Rule iMT_SurvivorSpottedOtherWeaponMechanic
 {
-	scene "scenes/Mechanic/ReviveFriendB01.vcd"  //Alright, well let's go now.
-	scene "scenes/Mechanic/ReviveFriendB02.vcd"  //Okay, on your feet.
-	scene "scenes/Mechanic/ReviveFriendB03.vcd"  //Up we go!
-	scene "scenes/Mechanic/ReviveFriendB04.vcd"  //Alright, upsy daisy!
-	scene "scenes/Mechanic/ReviveFriendB05.vcd"  //See you're all good.
-	scene "scenes/Mechanic/ReviveFriendB06.vcd"  //I knew you'd be okay.
-	scene "scenes/Mechanic/ReviveFriendB07.vcd"  //There you go. Right back to normal.
-	scene "scenes/Mechanic/ReviveFriendB08.vcd"  //Good as new. Let's go kill some zombies.
-	scene "scenes/Mechanic/ReviveFriendB09.vcd"  //On your feet now
-	scene "scenes/Mechanic/ReviveFriendB10.vcd"  //Well let's get you up.
-	scene "scenes/Mechanic/ReviveFriendB11.vcd"  //Alright now, you gonna be all right.
-	scene "scenes/Mechanic/ReviveFriendB12.vcd"  //There ya go. Good as new.
-	scene "scenes/Mechanic/ReviveFriendB13.vcd"  //You'll be good.
-	scene "scenes/Mechanic/ReviveFriendB14.vcd"  //Ah come on now, you'll be all right.
-	scene "scenes/Mechanic/ReviveFriendB15.vcd"  //Shake it off and let's go.
-}
-Rule iMT_PlayerReviveFriendBMechanic
-{
-	criteria ConceptReviveFriendDownFinal IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	ApplyContext "ReviveTalk:1:5,Talk:1:1"
-	forceweight 1000
-	Response iMT_PlayerReviveFriendBMechanic
+	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 100
+	Response SurvivorSpottedWeaponMechanic
 }
 
-Response iMT_PlayerGrabbedByJockeyMechanic
+Rule iMT_SurvivorTauntResponseMechanic
 {
-	scene "scenes/Mechanic/GrabbedByJockey01.vcd"  //GET THIS OFF MY BACK!
-	scene "scenes/Mechanic/GrabbedByJockey02.vcd"  //I GOT A JOCKEY ON ME!
-	scene "scenes/Mechanic/GrabbedByJockey03.vcd"  //SUMBITCH IS ON MY BACK!
-	scene "scenes/Mechanic/GrabbedByJockey04.vcd"  //THIS AIN'T RIGHT HAVING THIS THING ON ME!
-	scene "scenes/Mechanic/GrabbedByJockey05.vcd"  //GET THIS THING OFF ME!
-	scene "scenes/Mechanic/GrabbedByJockey06.vcd"  //THIS THINGS RIDING ME!
-	scene "scenes/Mechanic/GrabbedByJockey07.vcd"  //IS THIS THING HUMPING ME!??!
-}
-Rule iMT_PlayerGrabbedByJockeyMechanic
-{
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
-	ApplyContext "_auto_NoSpotting:1:4"
-	applycontexttoworld
-	forceweight 900
-	Response iMT_PlayerGrabbedByJockeyMechanic
+	criteria ConceptPlayerTaunt IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 100
+	Response SurvivorTauntResponseMechanic
 }
 
-Response iMT_PlayerGrabbedByJockeyC1Mechanic
+Rule iMT_SurvivorVocalizeBackUpMechanic
 {
-	scene "scenes/Mechanic/GrabbedByJockey04.vcd"  //THIS AIN'T RIGHT HAVING THIS THING ON ME!
-	scene "scenes/Mechanic/GrabbedByJockey05.vcd"  //GET THIS THING OFF ME!
-	scene "scenes/Mechanic/GrabbedByJockey06.vcd"  //THIS THINGS RIDING ME!
-}
-Rule iMT_PlayerGrabbedByJockeyC1Mechanic
-{
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic C1M1orC1M2
-	ApplyContext "_auto_NoSpotting:1:4"
-	applycontexttoworld
-	forceweight 1000
-	Response iMT_PlayerGrabbedByJockeyC1Mechanic
+	criteria ConceptPlayerBackUp IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 100
+	Response SurvivorVocalizeBackUpMechanic
 }
 
-//--------------------------------------------------------------------------------------------------------------
-// Character-Specific Fixes
-//--------------------------------------------------------------------------------------------------------------
-
-Response iMT_DLC1_C6M3_SafeRoomConvo07cMechanic
+Rule iMT_SurvivorVocalizeEmphaticGoMechanic
 {
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo19.vcd"  //Yeah, it was like love at first sight. The other four seconds was gravy.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo07cMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo07c IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo07cMechanic
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo08cMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo23.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo08d foo:0 -0.936  //I will kill him.
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo24.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo08e foo:0 -1.581  //He is a dead man.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo08cMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo08c IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo08cMechanic
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo08dMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo26.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo08f foo:0 -1.479  //I will kill him.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo08dMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo08d IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo08dMechanic
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo08eMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo25.vcd" then Mechanic DLC1_C6M3_SafeRoomConvo08f foo:0 -2.608  //He is a dead man.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo08eMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo08e IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo08eMechanic
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo08fMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo28.vcd"  //Folks, we got a new goal. New Orleans is gonna have to wait. We are going to have to hunt that biker man down.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo08fMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo08f IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo08fMechanic
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo03cMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo10.vcd" then Gambler DLC1_C6M3_SafeRoomConvo03d foo:0 -1.799  //You got a turd on your shoulder, Nick.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo03cMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo03c IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo03cMechanic
-}
-
-Response iMT_C2M3SafeIntro006Mechanic
-{
-	scene "scenes/Mechanic/WorldC2M3B01.vcd"  //This ain't that kinda ride, Nick. [whisper] This is where you make out with your girlfriend.
-}
-Rule iMT_C2M3SafeIntro006Mechanic
-{
-	criteria ConceptC2M3SafeIntro006 IsMechanic IsNotInStartArea
-	Response iMT_C2M3SafeIntro006Mechanic
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo01aMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo01.vcd" then Producer DLC1_C6M3_SafeRoomConvo01b foo:0 -7.373  //Oh sure! Rochelle and biker dude sitting in a tree, K-I-S-S-I-N-G.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo01aMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo01a IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo01aMechanic
-}
-
-Response iMT_c2m5_intro024Mechanic
-{
-	scene "scenes/Mechanic/WorldC2M4B02.vcd"  //I was born ready. So... yes.
-	scene "scenes/Mechanic/WorldC2M5B03.vcd" odds 20  //I always wanted to run to a helicopter during a guitar solo. Just like in a music video.
-}
-Rule iMT_c2m5_intro024Mechanic
-{
-	criteria Conceptc2m5_intro024 IsMechanic IsNotInStartArea
-	Response iMT_c2m5_intro024Mechanic
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo02eMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo05.vcd"  //Nah, he don't live there.
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo06.vcd"  //No man, he don't live there.
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo07.vcd"  //I saw how he was lookin' at Rochelle. He ain't goin nowhere.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo02eMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo02e IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo02eMechanic
-}
-
-Response iMT_DLC1_C6M3_SafeRoomConvo06bMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_SafeRoomConvo17.vcd"  //Well, I don't doubt it. That is a cool guy.
-}
-Rule iMT_DLC1_C6M3_SafeRoomConvo06bMechanic
-{
-	criteria ConceptDLC1_C6M3_SafeRoomConvo06b IsMechanic IsNotInStartArea
-	Response iMT_DLC1_C6M3_SafeRoomConvo06bMechanic
+	criteria ConceptPlayerEmphaticGo IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
+	forceweight 100
+	Response SurvivorVocalizeEmphaticGoMechanic
 }
