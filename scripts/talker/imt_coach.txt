@@ -25,7 +25,7 @@ Response iMT_EllisStoryInterruptC1Coach
 }
 Rule iMT_EllisStoryInterruptC1Coach
 {
-	criteria iMT_EllisStoryInterrupt IsCoach IsMechanicNear800 ismap_c1m1_hotelC1 NoKnowNames
+	criteria iMT_EllisStoryInterrupt IsCoach IsMechanicNear800 ismap_c1m1_hotel NoKnowNames
 	Response iMT_EllisStoryInterruptC1Coach
 }
 
@@ -48,7 +48,7 @@ Response iMT_EllisStoryInterruptGoatC1Coach
 }
 Rule iMT_EllisStoryInterruptGoatC1Coach
 {
-	criteria iMT_EllisStoryInterruptGoat IsCoach IsMechanicNear800 ismap_c1m1_hotelC1 NoKnowNames
+	criteria iMT_EllisStoryInterruptGoat IsCoach IsMechanicNear800 ismap_c1m1_hotel NoKnowNames
 	Response iMT_EllisStoryInterruptGoatC1Coach
 }
 
@@ -200,12 +200,12 @@ Rule iMT_PlayerMournGamblerDeadCoach
 
 Rule iMT_PlayerMournGamblerAliveC1Coach
 {
-	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 SubjectIsGambler ismap_c1m1_hotelC1 NoKnowNames
+	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
 	Response SurvivorMournGamblerC1Coach
 }
 Rule iMT_PlayerMournGamblerDeadC1Coach
 {
-	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 IsGamblerNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	criteria iMT_PlayerMourn IsCoach IsGamblerNear200 IsGamblerNotAlive ismap_c1m1_hotel NoKnowNames
 	Response SurvivorMournGamblerC1Coach
 }
 
@@ -229,12 +229,12 @@ Rule iMT_PlayerMournMechanicDeadCoach
 
 Rule iMT_PlayerMournMechanicAliveC1Coach
 {
-	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 SubjectIsMechanic ismap_c1m1_hotelC1 NoKnowNames
+	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
 	Response SurvivorMournMechanicC1Coach
 }
 Rule iMT_PlayerMournMechanicDeadC1Coach
 {
-	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 IsMechanicNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	criteria iMT_PlayerMourn IsCoach IsMechanicNear200 IsMechanicNotAlive ismap_c1m1_hotel NoKnowNames
 	Response SurvivorMournMechanicC1Coach
 }
 
@@ -259,12 +259,12 @@ Rule iMT_PlayerMournProducerDeadCoach
 
 Rule iMT_PlayerMournProducerAliveC1Coach
 {
-	criteria iMT_PlayerMourn IsCoach IsProducerNear200 SubjectIsProducer ismap_c1m1_hotelC1 NoKnowNames
+	criteria iMT_PlayerMourn IsCoach IsProducerNear200 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
 	Response SurvivorMournProducerC1Coach
 }
 Rule iMT_PlayerMournProducerDeadC1Coach
 {
-	criteria iMT_PlayerMourn IsCoach IsProducerNear200 IsProducerNotAlive ismap_c1m1_hotelC1 NoKnowNames
+	criteria iMT_PlayerMourn IsCoach IsProducerNear200 IsProducerNotAlive ismap_c1m1_hotel NoKnowNames
 	Response SurvivorMournProducerC1Coach
 }
 
@@ -300,7 +300,7 @@ Rule iMT_PlayerNiceShotGamblerCoach
 }
 Rule iMT_PlayerNiceShotGamblerC1Coach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsGamblerNear800 SubjectIsGambler ismap_c1m1_hotelC1 YesKnowNames
+	criteria iMT_PlayerNiceShot IsCoach IsGamblerNear800 SubjectIsGambler ismap_c1m1_hotel YesKnowNames
 	Response PlayerNiceShotGamblerCoach
 }
 
@@ -311,7 +311,7 @@ Rule iMT_PlayerNiceShotMechanicCoach
 }
 Rule iMT_PlayerNiceShotMechanicC1Coach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotelC1 YesKnowNames
+	criteria iMT_PlayerNiceShot IsCoach IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotel YesKnowNames
 	Response PlayerNiceShotMechanicCoach
 }
 
@@ -329,7 +329,7 @@ Rule iMT_PlayerNiceShotProducerCoach
 }
 Rule iMT_PlayerNiceShotProducerC1Coach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsProducerNear800 SubjectIsProducer ismap_c1m1_hotelC1 YesKnowNames
+	criteria iMT_PlayerNiceShot IsCoach IsProducerNear800 SubjectIsProducer ismap_c1m1_hotel YesKnowNames
 	Response iMT_PlayerNiceShotProducerCoach
 }
 
@@ -443,7 +443,7 @@ Rule iMT_PlayerSuggestHealthGamblerCoach
 }
 Rule iMT_PlayerSuggestHealthGamblerC1Coach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotelC1 YesKnowNames
+	criteria iMT_PlayerSuggestHealth IsCoach IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel YesKnowNames
 	Response PlayerSuggestHealthGamblerCoach
 }
 
@@ -454,7 +454,7 @@ Rule iMT_PlayerSuggestHealthMechanicCoach
 }
 Rule iMT_PlayerSuggestHealthMechanicC1Coach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotelC1 YesKnowNames
+	criteria iMT_PlayerSuggestHealth IsCoach IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel YesKnowNames
 	Response PlayerSuggestHealthMechanicCoach
 }
 
@@ -465,7 +465,7 @@ Rule iMT_PlayerSuggestHealthProducerCoach
 }
 Rule iMT_PlayerSuggestHealthProducerC1Coach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsProducerNear400 SubjectIsProducer ismap_c1m1_hotelC1 YesKnowNames
+	criteria iMT_PlayerSuggestHealth IsCoach IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel YesKnowNames
 	Response PlayerSuggestHealthProducerCoach
 }
 
