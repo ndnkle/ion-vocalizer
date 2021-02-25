@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 16.1
+// ion's Vocalizer 17.0
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -545,6 +545,55 @@
 		{
 			"command"	"vocalize iMT_PlayerDeathScream"
 			"text"		"Fall scream"
+		}
+	}
+
+	"Misc6,Survivor,Alive"
+	{
+		"Center"
+		{
+			"command"	"vocalize iMT_PlayerMelee"
+			"text"		"Melee"
+		}
+		"North"
+		{
+			"command"	"vocalize iMT_PlayerReloading"
+			"text"		"Reloading"
+		}
+		"NorthEast"
+		{
+			"command"	"vocalize iMT_PlayerGetToVehicleChopper"
+			"text"		"Chopper"
+		}
+		"East"
+		{
+			"command"	"vocalize iMT_PlayerGetToVehicleBoat"
+			"text"		"Boat"
+		}
+		"SouthEast"
+		{
+			"command"	"vocalize iMT_PlayerGetToVehicleWheels"
+			"text"		"Wheels"
+		}
+		"South"
+		{
+			"command"	"vocalize iMT_PlayerFriendlyFire"
+			"text"		"Friendly fire"
+		}
+		"SouthWest"
+		{
+			"command"	"vocalize iMT_PlayerGooedBySpitter"
+			"text"		"Gooed"
+		}
+		"West"
+		{
+			"command"	"vocalize iMT_PlayerCloseTheDoor"
+			"text"		"Door"
+		}
+		"NorthWest"
+		{
+			"command"	"vocalize iMT_PlayerWitchChasing"
+			"text"		"Chasing"
 		}
 	}
 
@@ -1330,8 +1379,8 @@
 		}
 		"West"
 		{
-			"command"	"vocalize C1M1Crumbs"
-			"text"		"Crumbs"
+			"command"	"vocalize WeddingWitchDead04"
+			"text"		"Honey"
 		}
 		"NorthWest"
 		{
@@ -1442,8 +1491,8 @@
 	{
 		"Center"
 		{
-			"command"	"vocalize iMT_True"
-			"text"		"True"
+			"command"	"vocalize iMT_Game"
+			"text"		"Game"
 		}
 		"North"
 		{
@@ -1760,7 +1809,7 @@
 		}
 		"SouthEast"
 		{
-			"command"	"vocalize WeddingWitchDead04"
+			"command"	"vocalize WeddingWitchDead02"
 			"text"		"Uncomfortable"
 		}
 		"South"

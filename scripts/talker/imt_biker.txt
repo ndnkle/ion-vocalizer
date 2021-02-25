@@ -45,6 +45,12 @@ Rule iMT_PlayerBreathingBiker
 	Response iMT_PlayerBreathingBiker
 }
 
+Rule iMT_PlayerCloseTheDoorBiker
+{
+	criteria iMT_PlayerCloseTheDoor IsBiker
+	Response L4D1PlayerLockTheDoorCheckPointBiker
+}
+
 Rule iMT_PlayerCoughingBiker
 {
 	criteria iMT_PlayerCoughing IsBiker
@@ -67,6 +73,111 @@ Rule iMT_PlayerEquippedItemBiker
 {
 	criteria iMT_PlayerEquippedItem IsBiker
 	Response GrabbingGasSCBiker
+}
+
+Response iMT_PlayerFriendlyFireBiker
+{
+	scene "scenes/Biker/FriendlyFire01.vcd"  //That hurt.
+	scene "scenes/Biker/FriendlyFire02.vcd"  //Dammit! Will you knock it off!
+	scene "scenes/Biker/FriendlyFire03.vcd"  //Will you knock it off!
+	scene "scenes/Biker/FriendlyFire04.vcd"  //Do I look like a target?
+	scene "scenes/Biker/FriendlyFire05.vcd"  //You know I would appreciate it, IF YOU'D STOP SHOOTING ME.
+	scene "scenes/Biker/FriendlyFire06.vcd"  //Watch where the hell you're shooting.
+	scene "scenes/Biker/FriendlyFire07.vcd"  //Watch where you're shooting!
+	scene "scenes/Biker/FriendlyFire08.vcd"  //Stop. Shooting. Me.
+	scene "scenes/Biker/FriendlyFire09.vcd"  //Hey! Stop. Shooting. Me.
+	scene "scenes/Biker/FriendlyFire10.vcd"  //Watch where you're shooting!
+	scene "scenes/Biker/FriendlyFire11.vcd"  //Don't shoot me!
+	scene "scenes/Biker/FriendlyFire12.vcd"  //Watch where you point that thing
+	scene "scenes/Biker/FriendlyFire13.vcd"  //Dammit! Watch where you're shooting!
+	scene "scenes/Biker/FriendlyFire14.vcd"  //Don't shoot me!
+	scene "scenes/Biker/FriendlyFire15.vcd"  //Monsters all over the damn place, and you gotta shoot me.
+	scene "scenes/Biker/FriendlyFire16.vcd"  //Quit freaking shooting me!
+	scene "scenes/Biker/FriendlyFire18.vcd"  //Shoot me again, I'm gonna kick your ass.
+	scene "scenes/Biker/FriendlyFire19.vcd"  //Do that again, and you're gonna be firing that thing outta your ass.
+}
+Rule iMT_PlayerFriendlyFireBiker
+{
+	criteria iMT_PlayerFriendlyFire IsBiker
+	Response iMT_PlayerFriendlyFireBiker
+}
+
+Response iMT_PlayerFriendlyFireFromManagerBiker
+{
+	scene "scenes/Biker/Biker_FriendlyFireLouis03.vcd"  //OW! Louis!
+	scene "scenes/Biker/Biker_FriendlyFireLouis04.vcd"  //GODDAMN IT LOUIS! Stop shootin' me.
+	scene "scenes/Biker/Biker_FriendlyFireLouis06.vcd"  //LOU-IS STOP SHOOTING ME (Snarled)
+}
+Rule iMT_PlayerFriendlyFireFromManagerBiker
+{
+	criteria iMT_PlayerFriendlyFire IsBiker IsManagerNear400 SubjectIsManager
+	Response iMT_PlayerFriendlyFireFromManagerBiker
+}
+
+Response iMT_PlayerFriendlyFireFromNamVetBiker
+{
+	scene "scenes/Biker/Biker_FriendlyFireBill01.vcd"  //AH! You havin' some kinda flashback Old Man?
+	scene "scenes/Biker/Biker_FriendlyFireBill02.vcd"  //God DAMMIT, Bill.
+	scene "scenes/Biker/Biker_FriendlyFireBill03.vcd"  //Bill, quit shootin' me.
+	scene "scenes/Biker/Biker_FriendlyFireBill04.vcd"  //Watch yer fire, Old Man.
+	scene "scenes/Biker/Biker_FriendlyFireBill05.vcd"  //Nice shot, Bill. That was my ass.
+}
+Rule iMT_PlayerFriendlyFireFromNamVetBiker
+{
+	criteria iMT_PlayerFriendlyFire IsBiker IsNamVetNear400 SubjectIsNamVet
+	Response iMT_PlayerFriendlyFireFromNamVetBiker
+}
+
+Response iMT_PlayerFriendlyFireFromTeenGirlBiker
+{
+	scene "scenes/Biker/Biker_FriendlyFireZoey02.vcd"  //Knock it off, Zoey.
+	scene "scenes/Biker/Biker_FriendlyFireZoey05.vcd"  //Zoey! Stop shooting me.
+}
+Rule iMT_PlayerFriendlyFireFromTeenGirlBiker
+{
+	criteria iMT_PlayerFriendlyFire IsBiker IsTeenGirlNear400 SubjectIsTeenGirl
+	Response iMT_PlayerFriendlyFireFromTeenGirlBiker
+}
+
+Response iMT_PlayerGetToVehicleBoatBiker
+{
+	scene "scenes/Biker/ArriveBoat01.vcd"  //Get to the boat!
+	scene "scenes/Biker/ArriveBoat02.vcd"  //Everyone to the boat!
+	scene "scenes/Biker/ArriveBoat03.vcd"  //Get your asses on that boat!
+	scene "scenes/Biker/ArriveBoatInitial01.vcd"  //Our boat's here, all aboard!
+	scene "scenes/Biker/ArriveBoatInitial02.vcd"  //Our boat's here! Let's go!
+}
+Rule iMT_PlayerGetToVehicleBoatBiker
+{
+	criteria iMT_PlayerGetToVehicleBoat IsBiker
+	Response iMT_PlayerGetToVehicleBoatBiker
+}
+
+Response iMT_PlayerGetToVehicleChopperBiker
+{
+	scene "scenes/Biker/ArriveChopper01.vcd"  //Everybody to the chopper!
+	scene "scenes/Biker/ArriveChopper02.vcd"  //Get to the chopper!
+	scene "scenes/Biker/ArriveChopperInitial01.vcd"  //The chopper's here! Let's go!
+	scene "scenes/Biker/ArriveChopperInitial02.vcd"  //The chopper's here! About time, too...
+}
+Rule iMT_PlayerGetToVehicleChopperBiker
+{
+	criteria iMT_PlayerGetToVehicleChopper IsBiker
+	Response iMT_PlayerGetToVehicleChopperBiker
+}
+
+Response iMT_PlayerGetToVehicleWheelsBiker
+{
+	scene "scenes/Biker/ArriveTruck01.vcd"  //Run to the truck! Go go go!
+	scene "scenes/Biker/ArriveTruck02.vcd"  //To the truck!
+	scene "scenes/Biker/ArriveTruck03.vcd"  //Get to the truck!
+	scene "scenes/Biker/ArriveTruckInitial01.vcd"  //C'mon, that's the last truck outta this shithole. LET'S GO!
+	scene "scenes/Biker/ArriveTruckInitial02.vcd"  //The truck's here! Let's go!
+}
+Rule iMT_PlayerGetToVehicleWheelsBiker
+{
+	criteria iMT_PlayerGetToVehicleWheels IsBiker
+	Response iMT_PlayerGetToVehicleWheelsBiker
 }
 
 Response iMT_PlayerGoingToDieBiker
@@ -112,6 +223,12 @@ Rule iMT_PlayerGoingToDieBiker
 	Response iMT_PlayerGoingToDieBiker
 }
 
+Rule iMT_PlayerGooedBySpitterBiker
+{
+	criteria iMT_PlayerGooedBySpitter IsBiker
+	Response SurvivorGooedBySpitterBiker
+}
+
 Response iMT_PlayerHelloBiker
 {
 	scene "scenes/Biker/ScenarioJoin04.vcd"  //Hello!
@@ -126,6 +243,22 @@ Rule iMT_PlayerIncapacitatedHurtBiker
 {
 	criteria iMT_PlayerIncapacitatedHurt IsBiker
 	Response L4D1SurvivorIncapacitatedHurtBiker
+}
+
+Response iMT_PlayerMeleeBiker
+{
+	scene "scenes/Biker/Shoved01.vcd"  //[Melee grunt]
+	scene "scenes/Biker/Shoved02.vcd"  //[Melee grunt]
+	scene "scenes/Biker/Shoved03.vcd"  //[Melee grunt]
+	scene "scenes/Biker/Shoved04.vcd"  //[Melee grunt]
+	scene "scenes/Biker/Shoved05.vcd"  //[Melee grunt]
+	scene "scenes/Biker/Shoved06.vcd"  //[Melee grunt]
+	scene "scenes/Biker/Shoved07.vcd"  //[Melee grunt]
+}
+Rule iMT_PlayerMeleeBiker
+{
+	criteria iMT_PlayerMelee IsBiker
+	Response iMT_PlayerMeleeBiker
 }
 
 Rule iMT_PlayerMournManagerAliveBiker
@@ -255,6 +388,12 @@ Rule iMT_PlayerPouncedTeenGirlBiker
 	Response iMT_PlayerPouncedTeenGirlBiker
 }
 
+Rule iMT_PlayerReloadingBiker
+{
+	criteria iMT_PlayerReloading IsBiker
+	Response L4D1SurvivorReloadingBiker
+}
+
 Rule iMT_PlayerSuggestHealthBiker
 {
 	criteria iMT_PlayerSuggestHealth IsBiker
@@ -298,6 +437,12 @@ Rule iMT_PlayerTransitionBiker
 {
 	criteria iMT_PlayerTransition IsBiker
 	Response L4D1PlayerTransitionCloseBiker
+}
+
+Rule iMT_PlayerWitchChasingBiker
+{
+	criteria iMT_PlayerWitchChasing IsBiker
+	Response PlayerWitchChasingBiker
 }
 
 Rule iMT_SurvivorCaughtVomitBiker
@@ -1181,6 +1326,15 @@ Rule iMT_ResponseSoftDispleasureSwearBiker
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IssuerMediumClose
 	forceweight 100
 	Response iMT_ResponseSoftDispleasureSwearBiker
+}
+
+Rule iMT_SafeRoomStartBiker
+{
+	criteria ConceptTalkIdle IsBiker IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	forceweight 100
+	Response NoResponse
 }
 
 Response iMT_SurvivorAskForHealthBiker

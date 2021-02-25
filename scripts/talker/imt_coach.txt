@@ -93,6 +93,18 @@ Rule iMT_PlayerBreathingCoach
 	Response iMT_PlayerBreathingCoach
 }
 
+Rule iMT_PlayerCloseTheDoorCoach
+{
+	criteria iMT_PlayerCloseTheDoor IsCoach
+	Response PlayerLockTheDoorCheckPointCoach
+}
+
+Rule iMT_PlayerCloseTheDoorC1Coach
+{
+	criteria iMT_PlayerCloseTheDoor IsCoach ismap_c1m1_hotel
+	Response PlayerLockTheDoorCheckPointC1Coach
+}
+
 Rule iMT_PlayerCoughingCoach
 {
 	criteria iMT_PlayerCoughing IsCoach
@@ -122,6 +134,106 @@ Rule iMT_PlayerEquippedItemCoach
 {
 	criteria iMT_PlayerEquippedItem IsCoach
 	Response iMT_PlayerEquippedItemCoach
+}
+
+Rule iMT_PlayerFriendlyFireCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach
+	Response PlayerFriendlyFireCoach
+}
+
+Rule iMT_PlayerFriendlyFireC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Coach
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsGamblerNear400 SubjectIsGambler
+	Response PlayerFriendlyFireFromGamblerCoach
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Coach
+}
+
+Rule iMT_PlayerFriendlyFireFromMechanicCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsMechanicNear400 SubjectIsMechanic
+	Response PlayerFriendlyFireFromMechanicCoach
+}
+
+Rule iMT_PlayerFriendlyFireFromMechanicC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromMechanicC1Coach
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerCoach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsProducerNear400 SubjectIsProducer
+	Response PlayerFriendlyFireFromProducerCoach
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerC1Coach
+{
+	criteria iMT_PlayerFriendlyFire IsCoach IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromProducerC1Coach
+}
+
+Response iMT_PlayerGetToVehicleBoatCoach
+{
+	scene "scenes/Coach/WorldC3M421.vcd"  //Get on the boat!
+	scene "scenes/Coach/WorldC3M422.vcd"  //Run to the boat!
+	scene "scenes/Coach/WorldC3M423.vcd"  //Everyone onto the boat!
+	scene "scenes/Coach/WorldC3M424.vcd"  //Get your asses on the boat!
+	scene "scenes/Coach/WorldC4M4B20.vcd"  //GET TO THE BOAT!
+}
+Rule iMT_PlayerGetToVehicleBoatCoach
+{
+	criteria iMT_PlayerGetToVehicleBoat IsCoach
+	Response iMT_PlayerGetToVehicleBoatCoach
+}
+
+Response iMT_PlayerGetToVehicleChopperCoach
+{
+	scene "scenes/Coach/WorldC2M5B123.vcd"  //Get on the chopper!
+	scene "scenes/Coach/WorldC2M5B124.vcd" odds 10  //WOOO! Get on the chopper!
+	scene "scenes/Coach/WorldC2M5B125.vcd"  //Everyone to the chopper!
+	scene "scenes/Coach/WorldC2M5B126.vcd"  //Get on that chopper!
+	scene "scenes/Coach/WorldC5M5B24.vcd"  //THERE'S OUR CHOPPER! COME ON!
+	scene "scenes/Coach/WorldC5M5B25.vcd"  //GET TO THE CHOPPER!
+}
+Rule iMT_PlayerGetToVehicleChopperCoach
+{
+	criteria iMT_PlayerGetToVehicleChopper IsCoach
+	Response iMT_PlayerGetToVehicleChopperCoach
+}
+
+Response iMT_PlayerGetToVehicleChopperGamblerCoach
+{
+	scene "scenes/Coach/NickOCD03.vcd"  //Nick, get your OCD-smelling ass in the chopper!
+}
+Rule iMT_PlayerGetToVehicleChopperGamblerCoach
+{
+	criteria iMT_PlayerGetToVehicleChopper IsCoach IsGamblerNear800 SubjectIsGambler
+	Response iMT_PlayerGetToVehicleChopperGamblerCoach
+}
+
+Response iMT_PlayerGetToVehicleWheelsCoach
+{
+	scene "scenes/Coach/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Get to the car!
+	scene "scenes/Coach/DLC1_C6M3_FinaleBridgeRun02.vcd"  //Let's get to the car!
+	scene "scenes/Coach/WorldC1M4B34.vcd"  //GET TO THE CAR!
+	scene "scenes/Coach/WorldC1M4B35.vcd"  //GET TO THE CAR, PEOPLE!
+}
+Rule iMT_PlayerGetToVehicleWheelsCoach
+{
+	criteria iMT_PlayerGetToVehicleWheels IsCoach
+	Response iMT_PlayerGetToVehicleWheelsCoach
 }
 
 Response iMT_PlayerGoingToDieCoach
@@ -164,6 +276,18 @@ Rule iMT_PlayerGoingToDieCoach
 	Response iMT_PlayerGoingToDieCoach
 }
 
+Rule iMT_PlayerGooedBySpitterCoach
+{
+	criteria iMT_PlayerGooedBySpitter IsCoach
+	Response SurvivorGooedBySpitterCoach
+}
+
+Rule iMT_PlayerGooedBySpitterC1Coach
+{
+	criteria iMT_PlayerGooedBySpitter IsCoach C1M1orC1M2 NoKnowSpitter
+	Response SurvivorGooedBySpitterC1Coach
+}
+
 Response iMT_PlayerHelloCoach
 {
 	scene "scenes/Coach/ScenarioJoin02.vcd"  //Hello!
@@ -178,6 +302,44 @@ Rule iMT_PlayerIncapacitatedHurtCoach
 {
 	criteria iMT_PlayerIncapacitatedHurt IsCoach
 	Response SurvivorIncapacitatedHurtCoach
+}
+
+Response iMT_PlayerMeleeCoach
+{
+	scene "scenes/Coach/MeleeSwing01.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing02.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing03.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing04.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing05.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing06.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing07.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing08.vcd"  //[Melee grunt]
+	scene "scenes/Coach/MeleeSwing09.vcd"  //[Melee grunt]
+}
+Rule iMT_PlayerMeleeCoach
+{
+	criteria iMT_PlayerMelee IsCoach NotInIntenseCombat
+	Response iMT_PlayerMeleeCoach
+}
+
+Response iMT_PlayerMeleeIntenseCoach
+{
+	scene "scenes/Coach/MeleeSwing10.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing11.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing12.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing13.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing14.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing15.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing16.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing17.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing18.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing19.vcd"  //[Intense melee grunt]
+	scene "scenes/Coach/MeleeSwing20.vcd"  //[Intense melee grunt]
+}
+Rule iMT_PlayerMeleeIntenseCoach
+{
+	criteria iMT_PlayerMelee IsCoach InIntenseCombat
+	Response iMT_PlayerMeleeIntenseCoach
 }
 
 Response iMT_PlayerMournGamblerCoach
@@ -295,24 +457,24 @@ Rule iMT_PlayerNiceShotCoach
 
 Rule iMT_PlayerNiceShotGamblerCoach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsGamblerNear800 SubjectIsGambler isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsCoach IsGamblerNear800 SubjectIsGambler
 	Response PlayerNiceShotGamblerCoach
 }
 Rule iMT_PlayerNiceShotGamblerC1Coach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsGamblerNear800 SubjectIsGambler ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotGamblerCoach
+	criteria iMT_PlayerNiceShot IsCoach IsGamblerNear800 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
 }
 
 Rule iMT_PlayerNiceShotMechanicCoach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsMechanicNear800 SubjectIsMechanic isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsCoach IsMechanicNear800 SubjectIsMechanic
 	Response PlayerNiceShotMechanicCoach
 }
 Rule iMT_PlayerNiceShotMechanicC1Coach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotMechanicCoach
+	criteria iMT_PlayerNiceShot IsCoach IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
 }
 
 Response iMT_PlayerNiceShotProducerCoach
@@ -324,13 +486,13 @@ Response iMT_PlayerNiceShotProducerCoach
 }
 Rule iMT_PlayerNiceShotProducerCoach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsProducerNear800 SubjectIsProducer isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsCoach IsProducerNear800 SubjectIsProducer
 	Response iMT_PlayerNiceShotProducerCoach
 }
 Rule iMT_PlayerNiceShotProducerC1Coach
 {
-	criteria iMT_PlayerNiceShot IsCoach IsProducerNear800 SubjectIsProducer ismap_c1m1_hotel YesKnowNames
-	Response iMT_PlayerNiceShotProducerCoach
+	criteria iMT_PlayerNiceShot IsCoach IsProducerNear800 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerNiceShotCoach
 }
 
 Response iMT_PlayerPainNoiseCoach
@@ -421,6 +583,18 @@ Rule iMT_PlayerPouncedProducerCoach
 	Response iMT_PlayerPouncedProducerCoach
 }
 
+Rule iMT_PlayerReloadingCoach
+{
+	criteria iMT_PlayerReloading IsCoach NotInIntenseCombat
+	Response SurvivorReloadingCoach
+}
+
+Rule iMT_PlayerReloadingIntenseCoach
+{
+	criteria iMT_PlayerReloading IsCoach InIntenseCombat
+	Response SurvivorReloadingIntenseCoach
+}
+
 Response iMT_PlayerSuggestHealthCoach
 {
 	scene "scenes/Coach/SuggestHealth01.vcd"  //We oughta heal up while it's quiet.
@@ -438,35 +612,35 @@ Rule iMT_PlayerSuggestHealthCoach
 
 Rule iMT_PlayerSuggestHealthGamblerCoach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsGamblerNear400 SubjectIsGambler isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsCoach IsGamblerNear400 SubjectIsGambler
 	Response PlayerSuggestHealthGamblerCoach
 }
 Rule iMT_PlayerSuggestHealthGamblerC1Coach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthGamblerCoach
+	criteria iMT_PlayerSuggestHealth IsCoach IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthCoach
 }
 
 Rule iMT_PlayerSuggestHealthMechanicCoach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsMechanicNear400 SubjectIsMechanic isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsCoach IsMechanicNear400 SubjectIsMechanic
 	Response PlayerSuggestHealthMechanicCoach
 }
 Rule iMT_PlayerSuggestHealthMechanicC1Coach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthMechanicCoach
+	criteria iMT_PlayerSuggestHealth IsCoach IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthCoach
 }
 
 Rule iMT_PlayerSuggestHealthProducerCoach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsProducerNear400 SubjectIsProducer isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsCoach IsProducerNear400 SubjectIsProducer
 	Response PlayerSuggestHealthProducerCoach
 }
 Rule iMT_PlayerSuggestHealthProducerC1Coach
 {
-	criteria iMT_PlayerSuggestHealth IsCoach IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthProducerCoach
+	criteria iMT_PlayerSuggestHealth IsCoach IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthCoach
 }
 
 Response iMT_PlayerTeamKillCoach
@@ -511,6 +685,34 @@ Rule iMT_PlayerTransitionCoach
 {
 	criteria iMT_PlayerTransition IsCoach
 	Response iMT_PlayerTransitionCoach
+}
+
+Response iMT_PlayerWitchChasingCoach
+{
+	scene "scenes/Coach/WitchChasing01.vcd"  //The bitch is chasing me!
+	scene "scenes/Coach/WitchChasing02.vcd"  //Bitch on my ass!
+	scene "scenes/Coach/WitchChasing03.vcd"  //Run, run, witch coming through!
+	scene "scenes/Coach/WitchChasing04.vcd"  //Shoot the witch! Shoot the witch!
+	scene "scenes/Coach/WitchChasing05.vcd"  //Coming through! Witch on my ass!
+	scene "scenes/Coach/WitchChasing06.vcd"  //Get out of the way! Witch!!!!
+	scene "scenes/Coach/WitchChasing07.vcd"  //Aw shit. Witch! Witch! Witch!
+}
+Rule iMT_PlayerWitchChasingCoach
+{
+	criteria iMT_PlayerWitchChasing IsCoach
+	Response iMT_PlayerWitchChasingCoach
+}
+
+Response iMT_PlayerWitchChasingC6M1Coach
+{
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing01.vcd"  //Bride's chasing me!
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing02.vcd"  //Ugly brides chasing me! Brides chasing me!
+	scene "scenes/Coach/DLC1_C6M1_WeddingWitchChasing03.vcd"  //Kill the bride! Kill the bride!
+}
+Rule iMT_PlayerWitchChasingC6M1Coach
+{
+	criteria iMT_PlayerWitchChasing IsCoach Isc6m1_riverbank
+	Response iMT_PlayerWitchChasingC6M1Coach
 }
 
 Rule iMT_SurvivorCaughtVomitCoach
@@ -677,7 +879,7 @@ Rule iMT_PancakesCoach
 
 Response iMT_PrayCoach
 {
-	scene "scenes/Coach/WorldC1M3B02.vcd" then self C1M3SafeRoom2d foo:0 0.5  //Everybody, gather 'round. Let's pray. Dear Lord. See us safely through our time of trial in this mall. And please Lord... let the food court be okay.
+	scene "scenes/Coach/WorldC1M3B02.vcd" then self C1M4SafeRoom2b5 foo:0 0.5  //Everybody, gather 'round. Let's pray. Dear Lord. See us safely through our time of trial in this mall. And please Lord... let the food court be okay.
 }
 Rule iMT_PrayCoach
 {
@@ -874,6 +1076,15 @@ Rule iMT_ResponseSoftDispleasureSwearCoach
 {
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	Response iMT_ResponseSoftDispleasureSwearCoach
+}
+
+Rule iMT_SafeRoomStartCoach
+{
+	criteria ConceptTalkIdle IsCoach IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	forceweight 100
+	Response NoResponse
 }
 
 Rule iMT_SurvivorDeathCoach

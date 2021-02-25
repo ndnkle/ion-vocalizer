@@ -9,9 +9,12 @@
 Response iMT_EllisStoryInterruptGambler
 {
 	scene "scenes/Gambler/EllisInterrupt06.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //Ellis... Ellis. ELLIS!
+	scene "scenes/Gambler/EllisInterrupt07.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //Hey. ELLIS. Why don't you tell us all about the time you SHUT UP?
 	scene "scenes/Gambler/EllisInterrupt08.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //Ellis. Is now the best time?
+	scene "scenes/Gambler/EllisInterrupt09.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //Uhhh. I don't CARE. NOBODY cares.
 	scene "scenes/Gambler/EllisInterrupt12.vcd"  //Ohhh, not again...
 	scene "scenes/Gambler/EllisInterrupt19.vcd"  //You know what I like best about your stories, Ellis? The sound they make when they stop.
+	scene "scenes/Gambler/EllisInterrupt20.vcd"  //You know what I like best about your stories, Ellis? NOTHING.
 }
 Rule iMT_EllisStoryInterruptGambler
 {
@@ -21,6 +24,7 @@ Rule iMT_EllisStoryInterruptGambler
 
 Response iMT_EllisStoryInterruptC1Gambler
 {
+	scene "scenes/Gambler/EllisInterrupt09.vcd" then Mechanic EllisStoryReac01 foo:0 0.3  //Uhhh. I don't CARE. NOBODY cares.
 	scene "scenes/Gambler/EllisInterrupt12.vcd"  //Ohhh, not again...
 }
 Rule iMT_EllisStoryInterruptC1Gambler
@@ -63,6 +67,18 @@ Rule iMT_PlayerBreathingGambler
 	Response iMT_PlayerBreathingGambler
 }
 
+Rule iMT_PlayerCloseTheDoorGambler
+{
+	criteria iMT_PlayerCloseTheDoor IsGambler
+	Response PlayerLockTheDoorCheckPointGambler
+}
+
+Rule iMT_PlayerCloseTheDoorC1Gambler
+{
+	criteria iMT_PlayerCloseTheDoor IsGambler ismap_c1m1_hotel
+	Response PlayerLockTheDoorCheckPointC1Gambler
+}
+
 Rule iMT_PlayerCoughingGambler
 {
 	criteria iMT_PlayerCoughing IsGambler
@@ -92,6 +108,98 @@ Rule iMT_PlayerEquippedItemGambler
 {
 	criteria iMT_PlayerEquippedItem IsGambler
 	Response iMT_PlayerEquippedItemGambler
+}
+
+Rule iMT_PlayerFriendlyFireGambler
+{
+	criteria iMT_PlayerFriendlyFire IsGambler
+	Response PlayerFriendlyFireGambler
+}
+
+Rule iMT_PlayerFriendlyFireC1Gambler
+{
+	criteria iMT_PlayerFriendlyFire IsGambler ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Gambler
+}
+
+Rule iMT_PlayerFriendlyFireFromCoachGambler
+{
+	criteria iMT_PlayerFriendlyFire IsGambler IsCoachNear400 SubjectIsCoach
+	Response PlayerFriendlyFireFromCoachGambler
+}
+
+Rule iMT_PlayerFriendlyFireFromCoachC1Gambler
+{
+	criteria iMT_PlayerFriendlyFire IsGambler IsCoachNear400 SubjectIsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Gambler
+}
+
+Rule iMT_PlayerFriendlyFireFromMechanicGambler
+{
+	criteria iMT_PlayerFriendlyFire IsGambler IsMechanicNear400 SubjectIsMechanic
+	Response PlayerFriendlyFireFromMechanicGambler
+}
+
+Rule iMT_PlayerFriendlyFireFromMechanicC1Gambler
+{
+	criteria iMT_PlayerFriendlyFire IsGambler IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromMechanicC1Gambler
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerGambler
+{
+	criteria iMT_PlayerFriendlyFire IsGambler IsProducerNear400 SubjectIsProducer
+	Response PlayerFriendlyFireFromProducerGambler
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerC1Gambler
+{
+	criteria iMT_PlayerFriendlyFire IsGambler IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromProducerC1Gambler
+}
+
+Response iMT_PlayerGetToVehicleBoatGambler
+{
+	scene "scenes/Gambler/WorldC3M4B23.vcd"  //Everyone to the boat!
+	scene "scenes/Gambler/WorldC3M4B24.vcd"  //Get to the boat!
+	scene "scenes/Gambler/WorldC3M4B25.vcd"  //To the boat!
+	scene "scenes/Gambler/WorldC4M442.vcd"  //Everyone to the boat!
+	scene "scenes/Gambler/WorldC4M4B22.vcd"  //GET TO THE BOAT!
+	scene "scenes/Gambler/WorldC4M4B23.vcd"  //GET TO THE BOAT!
+}
+Rule iMT_PlayerGetToVehicleBoatGambler
+{
+	criteria iMT_PlayerGetToVehicleBoat IsGambler
+	Response iMT_PlayerGetToVehicleBoatGambler
+}
+
+Response iMT_PlayerGetToVehicleChopperGambler
+{
+	scene "scenes/Gambler/World425.vcd"  //Get to the chopper!
+	scene "scenes/Gambler/WorldC2M5B49.vcd"  //Get on the helicopter!
+	scene "scenes/Gambler/WorldC2M5B50.vcd"  //Everyone to the copter!
+	scene "scenes/Gambler/WorldC2M5B52.vcd"  //Copter's landed, let's go!
+	scene "scenes/Gambler/WorldC2M5B53.vcd"  //Let's go, let's go to the copter!
+	scene "scenes/Gambler/WorldC5M5B15.vcd"  //GET TO THE COPTER!
+}
+Rule iMT_PlayerGetToVehicleChopperGambler
+{
+	criteria iMT_PlayerGetToVehicleChopper IsGambler
+	Response iMT_PlayerGetToVehicleChopperGambler
+}
+
+Response iMT_PlayerGetToVehicleWheelsGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Everyone to the car!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleBridgeRun04.vcd"  //GET TO THE CAR, GET TO THE CAR!
+	scene "scenes/Gambler/WorldC1M4B36.vcd"  //Get to the car!
+	scene "scenes/Gambler/WorldC1M4B37.vcd"  //Would you get to the goddamn car?
+	scene "scenes/Gambler/WorldC1M4B39.vcd"  //Everyone to the car!
+}
+Rule iMT_PlayerGetToVehicleWheelsGambler
+{
+	criteria iMT_PlayerGetToVehicleWheels IsGambler
+	Response iMT_PlayerGetToVehicleWheelsGambler
 }
 
 Response iMT_PlayerGoingToDieGambler
@@ -130,6 +238,18 @@ Rule iMT_PlayerGoingToDieGambler
 	Response iMT_PlayerGoingToDieGambler
 }
 
+Rule iMT_PlayerGooedBySpitterGambler
+{
+	criteria iMT_PlayerGooedBySpitter IsGambler
+	Response SurvivorGooedBySpitterGambler
+}
+
+Rule iMT_PlayerGooedBySpitterC1Gambler
+{
+	criteria iMT_PlayerGooedBySpitter IsGambler C1M1orC1M2 NoKnowSpitter
+	Response SurvivorGooedBySpitterC1Gambler
+}
+
 Rule iMT_PlayerHelloGambler
 {
 	criteria iMT_PlayerHello IsGambler
@@ -155,6 +275,39 @@ Rule iMT_PlayerIncapacitatedHurtGambler
 {
 	criteria iMT_PlayerIncapacitatedHurt IsGambler
 	Response iMT_PlayerIncapacitatedHurtGambler
+}
+
+Response iMT_PlayerMeleeGambler
+{
+	scene "scenes/Gambler/MeleeSwing01.vcd"  //[Melee grunt]
+	scene "scenes/Gambler/MeleeSwing02.vcd"  //[Melee grunt]
+	scene "scenes/Gambler/MeleeSwing03.vcd"  //[Melee grunt]
+	scene "scenes/Gambler/MeleeSwing04.vcd"  //[Melee grunt]
+	scene "scenes/Gambler/MeleeSwing05.vcd"  //[Melee grunt]
+	scene "scenes/Gambler/MeleeSwing06.vcd"  //[Melee grunt]
+	scene "scenes/Gambler/MeleeSwing07.vcd"  //[Melee grunt]
+}
+Rule iMT_PlayerMeleeGambler
+{
+	criteria iMT_PlayerMelee IsGambler NotInIntenseCombat
+	Response iMT_PlayerMeleeGambler
+}
+
+Response iMT_PlayerMeleeIntenseGambler
+{
+	scene "scenes/Gambler/MeleeSwing08.vcd"  //[Intense melee grunt]
+	scene "scenes/Gambler/MeleeSwing09.vcd"  //[Intense melee grunt]
+	scene "scenes/Gambler/MeleeSwing10.vcd"  //[Intense melee grunt]
+	scene "scenes/Gambler/MeleeSwing11.vcd"  //[Intense melee grunt]
+	scene "scenes/Gambler/MeleeSwing12.vcd"  //[Intense melee grunt]
+	scene "scenes/Gambler/MeleeSwing13.vcd"  //[Intense melee grunt]
+	scene "scenes/Gambler/MeleeSwing14.vcd"  //[Intense melee grunt]
+	scene "scenes/Gambler/MeleeSwing15.vcd"  //[Intense melee grunt]
+}
+Rule iMT_PlayerMeleeIntenseGambler
+{
+	criteria iMT_PlayerMelee IsGambler InIntenseCombat
+	Response iMT_PlayerMeleeIntenseGambler
 }
 
 Response iMT_PlayerMournCoachGambler
@@ -264,35 +417,35 @@ Rule iMT_PlayerNiceShotGambler
 
 Rule iMT_PlayerNiceShotCoachGambler
 {
-	criteria iMT_PlayerNiceShot IsGambler IsCoachNear800 SubjectIsCoach isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsGambler IsCoachNear800 SubjectIsCoach
 	Response PlayerNiceShotCoachGambler
 }
 Rule iMT_PlayerNiceShotCoachC1Gambler
 {
-	criteria iMT_PlayerNiceShot IsGambler IsCoachNear800 SubjectIsCoach ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotCoachGambler
+	criteria iMT_PlayerNiceShot IsGambler IsCoachNear800 SubjectIsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotGambler
 }
 
 Rule iMT_PlayerNiceShotMechanicGambler
 {
-	criteria iMT_PlayerNiceShot IsGambler IsMechanicNear800 SubjectIsMechanic isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsGambler IsMechanicNear800 SubjectIsMechanic
 	Response PlayerNiceShotMechanicGambler
 }
 Rule iMT_PlayerNiceShotMechanicC1Gambler
 {
-	criteria iMT_PlayerNiceShot IsGambler IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotMechanicGambler
+	criteria iMT_PlayerNiceShot IsGambler IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotGambler
 }
 
 Rule iMT_PlayerNiceShotProducerGambler
 {
-	criteria iMT_PlayerNiceShot IsGambler IsProducerNear800 SubjectIsProducer isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsGambler IsProducerNear800 SubjectIsProducer
 	Response PlayerNiceShotProducerGambler
 }
 Rule iMT_PlayerNiceShotProducerC1Gambler
 {
-	criteria iMT_PlayerNiceShot IsGambler IsProducerNear800 SubjectIsProducer ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotProducerGambler
+	criteria iMT_PlayerNiceShot IsGambler IsProducerNear800 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotGambler
 }
 
 Rule iMT_PlayerPainNoiseGambler
@@ -364,6 +517,18 @@ Rule iMT_PlayerPouncedProducerGambler
 	Response iMT_PlayerPouncedProducerGambler
 }
 
+Rule iMT_PlayerReloadingGambler
+{
+	criteria iMT_PlayerReloading IsGambler NotInIntenseCombat
+	Response SurvivorReloadingGambler
+}
+
+Rule iMT_PlayerReloadingIntenseGambler
+{
+	criteria iMT_PlayerReloading IsGambler InIntenseCombat
+	Response SurvivorReloadingIntenseGambler
+}
+
 Response iMT_PlayerSuggestHealthGambler
 {
 	scene "scenes/Gambler/SuggestHealth01.vcd"  //Heal up!
@@ -386,35 +551,35 @@ Rule iMT_PlayerSuggestHealthGambler
 
 Rule iMT_PlayerSuggestHealthCoachGambler
 {
-	criteria iMT_PlayerSuggestHealth IsGambler IsCoachNear400 SubjectIsCoach isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsGambler IsCoachNear400 SubjectIsCoach
 	Response PlayerSuggestHealthCoachGambler
 }
 Rule iMT_PlayerSuggestHealthCoachC1Gambler
 {
-	criteria iMT_PlayerSuggestHealth IsGambler IsCoachNear400 SubjectIsCoach ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthCoachGambler
+	criteria iMT_PlayerSuggestHealth IsGambler IsCoachNear400 SubjectIsCoach ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthGambler
 }
 
 Rule iMT_PlayerSuggestHealthMechanicGambler
 {
-	criteria iMT_PlayerSuggestHealth IsGambler IsMechanicNear400 SubjectIsMechanic isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsGambler IsMechanicNear400 SubjectIsMechanic
 	Response PlayerSuggestHealthMechanicGambler
 }
 Rule iMT_PlayerSuggestHealthMechanicC1Gambler
 {
-	criteria iMT_PlayerSuggestHealth IsGambler IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthMechanicGambler
+	criteria iMT_PlayerSuggestHealth IsGambler IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthGambler
 }
 
 Rule iMT_PlayerSuggestHealthProducerGambler
 {
-	criteria iMT_PlayerSuggestHealth IsGambler IsProducerNear400 SubjectIsProducer isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsGambler IsProducerNear400 SubjectIsProducer
 	Response PlayerSuggestHealthProducerGambler
 }
 Rule iMT_PlayerSuggestHealthProducerC1Gambler
 {
-	criteria iMT_PlayerSuggestHealth IsGambler IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthProducerGambler
+	criteria iMT_PlayerSuggestHealth IsGambler IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthGambler
 }
 
 Response iMT_PlayerTeamKillGambler
@@ -448,6 +613,26 @@ Rule iMT_PlayerTransitionGambler
 {
 	criteria iMT_PlayerTransition IsGambler
 	Response iMT_PlayerTransitionGambler
+}
+
+Response iMT_PlayerWitchChasingGambler
+{
+	scene "scenes/Gambler/WitchChasing01.vcd"  //Ahhh I pissed the witch off!
+	scene "scenes/Gambler/WitchChasing02.vcd"  //This bitch is chasing me!
+	scene "scenes/Gambler/WitchChasing03.vcd"  //Witch coming! Witch coming!
+	scene "scenes/Gambler/WitchChasing04.vcd"  //Shoot the witch! Shoot the witch! Shoot the witch!
+	scene "scenes/Gambler/WitchChasing05.vcd"  //Shoot the witch! Shoot the witch! Shoot the witch! What are you doing? Shoot her!
+	scene "scenes/Gambler/WitchChasing06.vcd"  //Ahhh I pissed the witch off!
+}
+Rule iMT_PlayerWitchChasingGambler
+{
+	criteria iMT_PlayerWitchChasing IsGambler
+	Response iMT_PlayerWitchChasingGambler
+}
+Rule iMT_PlayerWitchChasingC6M1Gambler
+{
+	criteria iMT_PlayerWitchChasing IsGambler Isc6m1_riverbank
+	Response PlayerWitchChasingC6M1Gambler
 }
 
 Rule iMT_SurvivorCaughtVomitGambler
@@ -511,6 +696,17 @@ Rule iMT_FantasyGambler
 {
 	criteria iMT_Fantasy IsGambler
 	Response iMT_FantasyGambler
+}
+
+Response iMT_GameGambler
+{
+	scene "scenes/Gambler/World304.vcd"  //Okay, anyone up for a game?
+	scene "scenes/Gambler/WorldC2M206.vcd"  //These are not games of chance.
+}
+Rule iMT_GameGambler
+{
+	criteria iMT_Game IsGambler
+	Response iMT_GameGambler
 }
 
 Response iMT_GetRoomGambler
@@ -660,18 +856,6 @@ Rule iMT_TrickedGambler
 	Response iMT_TrickedGambler
 }
 
-Response iMT_TrueGambler
-{
-	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead08.vcd"  //Very true.
-	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead09.vcd"  //Well put.
-	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead10.vcd"  //Wow, true.
-}
-Rule iMT_TrueGambler
-{
-	criteria iMT_True IsGambler
-	Response iMT_TrueGambler
-}
-
 //--------------------------------------------------------------------------------------------------------------
 // NPC triggers
 //--------------------------------------------------------------------------------------------------------------
@@ -808,6 +992,15 @@ Rule iMT_ResponseSoftDispleasureSwearGambler
 {
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	Response iMT_ResponseSoftDispleasureSwearGambler
+}
+
+Rule iMT_SafeRoomStartGambler
+{
+	criteria ConceptTalkIdle IsGambler IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	forceweight 100
+	Response NoResponse
 }
 
 Rule iMT_SurvivorDeathGambler

@@ -133,6 +133,18 @@ Rule iMT_PlayerBreathingReacC1Mechanic
 	Response iMT_PlayerBreathingReacMechanic
 }
 
+Rule iMT_PlayerCloseTheDoorMechanic
+{
+	criteria iMT_PlayerCloseTheDoor IsMechanic
+	Response PlayerLockTheDoorCheckPointMechanic
+}
+
+Rule iMT_PlayerCloseTheDoorC1Mechanic
+{
+	criteria iMT_PlayerCloseTheDoor IsMechanic ismap_c1m1_hotel
+	Response PlayerLockTheDoorCheckPointC1Mechanic
+}
+
 Rule iMT_PlayerCoughingMechanic
 {
 	criteria iMT_PlayerCoughing IsMechanic
@@ -162,6 +174,98 @@ Rule iMT_PlayerEquippedItemMechanic
 {
 	criteria iMT_PlayerEquippedItem IsMechanic
 	Response iMT_PlayerEquippedItemMechanic
+}
+
+Rule iMT_PlayerFriendlyFireMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic
+	Response PlayerFriendlyFireMechanic
+}
+
+Rule iMT_PlayerFriendlyFireC1Mechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Mechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromCoachMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsCoachNear400 SubjectIsCoach
+	Response PlayerFriendlyFireFromCoachMechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromCoachC1Mechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsCoachNear400 SubjectIsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromCoachC1Mechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsGamblerNear400 SubjectIsGambler
+	Response PlayerFriendlyFireFromGamblerMechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerC1Mechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Mechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerMechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsProducerNear400 SubjectIsProducer
+	Response PlayerFriendlyFireFromProducerMechanic
+}
+
+Rule iMT_PlayerFriendlyFireFromProducerC1Mechanic
+{
+	criteria iMT_PlayerFriendlyFire IsMechanic IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromProducerC1Mechanic
+}
+
+Response iMT_PlayerGetToVehicleBoatMechanic
+{
+	scene "scenes/Mechanic/WorldC3M138.vcd" //Let's go! Everybody on the boat!
+	scene "scenes/Mechanic/WorldC3M139.vcd" //Here we go! Everybody on the boat!
+	scene "scenes/Mechanic/WorldC3M414.vcd"  //Hey, run to the boat! Run to the boat!
+	scene "scenes/Mechanic/WorldC3M416.vcd"  //Hey, quit fighting and get on the boat!
+	scene "scenes/Mechanic/WorldC4M4B26.vcd"  //GET TO THE BOAT!
+	scene "scenes/Mechanic/WorldC4M4B27.vcd"  //Y'ALL GET TO THE BOAT!
+}
+Rule iMT_PlayerGetToVehicleBoatMechanic
+{
+	criteria iMT_PlayerGetToVehicleBoat IsMechanic
+	Response iMT_PlayerGetToVehicleBoatMechanic
+}
+
+Response iMT_PlayerGetToVehicleChopperMechanic
+{
+	scene "scenes/Mechanic/World439.vcd"  //To the'copter!
+	scene "scenes/Mechanic/World440.vcd"  //Head to the helicopter!
+	scene "scenes/Mechanic/World443.vcd"  //Just get inside the helicopter, man!
+	scene "scenes/Mechanic/WorldC2M5B57.vcd"  //Let's go! Get to the chopper!
+	scene "scenes/Mechanic/WorldC2M5B58.vcd"  //Everybody get to the chopper!
+	scene "scenes/Mechanic/WorldC2M5B59.vcd"  //Let's go, guys! Get to the chopper!
+	scene "scenes/Mechanic/WorldC2M5B60.vcd"  //Chopper's leaving, let's go! Let's go!
+	scene "scenes/Mechanic/WorldC2M5B61.vcd"  //Let's go, let's go! Chopper's here!
+}
+Rule iMT_PlayerGetToVehicleChopperMechanic
+{
+	criteria iMT_PlayerGetToVehicleChopper IsMechanic
+	Response iMT_PlayerGetToVehicleChopperMechanic
+}
+
+Response iMT_PlayerGetToVehicleWheelsMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleBridgeRun03.vcd"  //Run to Jimmy Gibbs Jr!
+	scene "scenes/Mechanic/WorldC1M4B60.vcd"  //Everybody get in the damn car!
+	scene "scenes/Mechanic/WorldC1M4B61.vcd"  //Get in the car! We're ready!
+}
+Rule iMT_PlayerGetToVehicleWheelsMechanic
+{
+	criteria iMT_PlayerGetToVehicleWheels IsMechanic
+	Response iMT_PlayerGetToVehicleWheelsMechanic
 }
 
 Response iMT_PlayerGoingToDieMechanic
@@ -201,6 +305,18 @@ Rule iMT_PlayerGoingToDieMechanic
 	Response iMT_PlayerGoingToDieMechanic
 }
 
+Rule iMT_PlayerGooedBySpitterMechanic
+{
+	criteria iMT_PlayerGooedBySpitter IsMechanic
+	Response SurvivorGooedBySpitterMechanic
+}
+
+Rule iMT_PlayerGooedBySpitterC1Mechanic
+{
+	criteria iMT_PlayerGooedBySpitter IsMechanic C1M1orC1M2 NoKnowSpitter
+	Response SurvivorGooedBySpitterC1Mechanic
+}
+
 Response iMT_PlayerHelloMechanic
 {
 	scene "scenes/Mechanic/ScenarioJoin01.vcd"  //Hello!
@@ -218,6 +334,22 @@ Rule iMT_PlayerIncapacitatedHurtMechanic
 {
 	criteria iMT_PlayerIncapacitatedHurt IsMechanic
 	Response SurvivorIncapacitatedHurtMechanic
+}
+
+Response iMT_PlayerMeleeMechanic
+{
+	scene "scenes/Mechanic/MeleeSwing01.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing02.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing03.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing04.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing05.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing06.vcd"  //[Melee grunt]
+	scene "scenes/Mechanic/MeleeSwing07.vcd"  //[Melee grunt]
+}
+Rule iMT_PlayerMeleeMechanic
+{
+	criteria iMT_PlayerMelee IsMechanic
+	Response iMT_PlayerMeleeMechanic
 }
 
 Response iMT_PlayerMournCoachMechanic
@@ -326,35 +458,35 @@ Rule iMT_PlayerNiceShotMechanic
 
 Rule iMT_PlayerNiceShotCoachMechanic
 {
-	criteria iMT_PlayerNiceShot IsMechanic IsCoachNear800 SubjectIsCoach isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsMechanic IsCoachNear800 SubjectIsCoach
 	Response PlayerNiceShotCoachMechanic
 }
 Rule iMT_PlayerNiceShotCoachC1Mechanic
 {
-	criteria iMT_PlayerNiceShot IsMechanic IsCoachNear800 SubjectIsCoach ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotCoachMechanic
+	criteria iMT_PlayerNiceShot IsMechanic IsCoachNear800 SubjectIsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
 }
 
 Rule iMT_PlayerNiceShotGamblerMechanic
 {
-	criteria iMT_PlayerNiceShot IsMechanic IsGamblerNear800 SubjectIsGambler isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsMechanic IsGamblerNear800 SubjectIsGambler
 	Response PlayerNiceShotGamblerMechanic
 }
 Rule iMT_PlayerNiceShotGamblerC1Mechanic
 {
-	criteria iMT_PlayerNiceShot IsMechanic IsGamblerNear800 SubjectIsGambler ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotGamblerMechanic
+	criteria iMT_PlayerNiceShot IsMechanic IsGamblerNear800 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
 }
 
 Rule iMT_PlayerNiceShotProducerMechanic
 {
-	criteria iMT_PlayerNiceShot IsMechanic IsProducerNear800 SubjectIsProducer isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsMechanic IsProducerNear800 SubjectIsProducer
 	Response PlayerNiceShotProducerMechanic
 }
 Rule iMT_PlayerNiceShotProducerC1Mechanic
 {
-	criteria iMT_PlayerNiceShot IsMechanic IsProducerNear800 SubjectIsProducer ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotProducerMechanic
+	criteria iMT_PlayerNiceShot IsMechanic IsProducerNear800 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotMechanic
 }
 
 Response iMT_PlayerPainNoiseMechanic
@@ -438,6 +570,18 @@ Rule iMT_PlayerPouncedProducerMechanic
 	Response iMT_PlayerPouncedProducerMechanic
 }
 
+Rule iMT_PlayerReloadingMechanic
+{
+	criteria iMT_PlayerReloading IsMechanic NotInIntenseCombat
+	Response SurvivorReloadingMechanic
+}
+
+Rule iMT_PlayerReloadingIntenseMechanic
+{
+	criteria iMT_PlayerReloading IsMechanic InIntenseCombat
+	Response SurvivorReloadingIntenseMechanic
+}
+
 Response iMT_PlayerSuggestHealthMechanic
 {
 	scene "scenes/Mechanic/SuggestHealth01.vcd"  //Heal up!
@@ -456,35 +600,35 @@ Rule iMT_PlayerSuggestHealthMechanic
 
 Rule iMT_PlayerSuggestHealthCoachMechanic
 {
-	criteria iMT_PlayerSuggestHealth IsMechanic IsCoachNear400 SubjectIsCoach isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsMechanic IsCoachNear400 SubjectIsCoach
 	Response PlayerSuggestHealthCoachMechanic
 }
 Rule iMT_PlayerSuggestHealthCoachC1Mechanic
 {
-	criteria iMT_PlayerSuggestHealth IsMechanic IsCoachNear400 SubjectIsCoach ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthCoachMechanic
+	criteria iMT_PlayerSuggestHealth IsMechanic IsCoachNear400 SubjectIsCoach ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthMechanic
 }
 
 Rule iMT_PlayerSuggestHealthGamblerMechanic
 {
-	criteria iMT_PlayerSuggestHealth IsMechanic IsGamblerNear400 SubjectIsGambler isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsMechanic IsGamblerNear400 SubjectIsGambler
 	Response PlayerSuggestHealthGamblerMechanic
 }
 Rule iMT_PlayerSuggestHealthGamblerC1Mechanic
 {
-	criteria iMT_PlayerSuggestHealth IsMechanic IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthGamblerMechanic
+	criteria iMT_PlayerSuggestHealth IsMechanic IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthMechanic
 }
 
 Rule iMT_PlayerSuggestHealthProducerMechanic
 {
-	criteria iMT_PlayerSuggestHealth IsMechanic IsProducerNear400 SubjectIsProducer isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsMechanic IsProducerNear400 SubjectIsProducer
 	Response PlayerSuggestHealthProducerMechanic
 }
 Rule iMT_PlayerSuggestHealthProducerC1Mechanic
 {
-	criteria iMT_PlayerSuggestHealth IsMechanic IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthProducerMechanic
+	criteria iMT_PlayerSuggestHealth IsMechanic IsProducerNear400 SubjectIsProducer ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerSuggestHealthMechanic
 }
 
 Response iMT_PlayerTeamKillMechanic
@@ -525,6 +669,25 @@ Rule iMT_PlayerTransitionMechanic
 {
 	criteria iMT_PlayerTransition IsMechanic
 	Response iMT_PlayerTransitionMechanic
+}
+
+Response iMT_PlayerWitchChasingMechanic
+{
+	scene "scenes/Mechanic/WitchChasing01.vcd"  //Out of my way, man, witch coming!!
+	scene "scenes/Mechanic/WitchChasing02.vcd"  //COMING THROUGH! WITCH ON MY ASS!!
+	scene "scenes/Mechanic/WitchChasing03.vcd"  //Run I pissed her off!
+	scene "scenes/Mechanic/WitchChasing04.vcd"  //SHOOT HER! SHOOT HER!
+	scene "scenes/Mechanic/WitchChasing05.vcd"  //WITCH WITCH WITCH!
+}
+Rule iMT_PlayerWitchChasingMechanic
+{
+	criteria iMT_PlayerWitchChasing IsMechanic
+	Response iMT_PlayerWitchChasingMechanic
+}
+Rule iMT_PlayerWitchChasingC6M1Mechanic
+{
+	criteria iMT_PlayerWitchChasing IsMechanic Isc6m1_riverbank
+	Response PlayerWitchChasingC6M1Mechanic
 }
 
 Rule iMT_SurvivorCaughtVomitMechanic
@@ -860,6 +1023,15 @@ Rule iMT_ResponseSoftDispleasureSwearMechanic
 {
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	Response iMT_ResponseSoftDispleasureSwearMechanic
+}
+
+Rule iMT_SafeRoomStartMechanic
+{
+	criteria ConceptTalkIdle IsMechanic IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	forceweight 100
+	Response NoResponse
 }
 
 Rule iMT_SurvivorDeathMechanic

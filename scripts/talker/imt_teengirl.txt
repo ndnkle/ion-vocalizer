@@ -46,6 +46,40 @@ Rule iMT_PlayerBreathingTeenGirl
 	Response iMT_PlayerBreathingTeenGirl
 }
 
+Response iMT_PlayerCloseTheDoorTeenGirl
+{
+	scene "scenes/TeenGirl/CloseTheDoor01.vcd"  //Lock the door.
+	scene "scenes/TeenGirl/CloseTheDoor07.vcd"  //Close the door.
+	scene "scenes/TeenGirl/CloseTheDoor08.vcd"  //Please lock the door!
+	scene "scenes/TeenGirl/CloseTheDoor11.vcd"  //Someone wanna close the door?
+	scene "scenes/TeenGirl/CloseTheDoor16.vcd"  //Close the door, please! (angry)
+	scene "scenes/TeenGirl/CloseTheDoor17.vcd"  //Lock that door.
+	scene "scenes/TeenGirl/CloseTheDoor19.vcd"  //Come on, lock the door.
+	scene "scenes/TeenGirl/CloseTheDoor22.vcd"  //Can you lock that door?!
+}
+Rule iMT_PlayerCloseTheDoorTeenGirl
+{
+	criteria iMT_PlayerCloseTheDoor IsTeenGirl NotInIntenseCombat
+	Response iMT_PlayerCloseTheDoorTeenGirl
+}
+
+Response iMT_PlayerCloseTheDoorIntenseTeenGirl
+{
+	scene "scenes/TeenGirl/CloseTheDoor28.vcd"  //Close the door, please! (angry)
+	scene "scenes/TeenGirl/CloseTheDoor29.vcd"  //Lock that door.
+	scene "scenes/TeenGirl/CloseTheDoor32.vcd"  //Come on, lock the door.
+	scene "scenes/TeenGirl/CloseTheDoor33.vcd"  //Close the door!
+	scene "scenes/TeenGirl/CloseTheDoor41.vcd"  //Close the door already.
+	scene "scenes/TeenGirl/CloseTheDoor42.vcd"  //Lock the door.
+	scene "scenes/TeenGirl/CloseTheDoor45.vcd"  //Can you lock that door?!
+	scene "scenes/TeenGirl/CloseTheDoor50.vcd"  //Please lock the door!
+}
+Rule iMT_PlayerCloseTheDoorIntenseTeenGirl
+{
+	criteria iMT_PlayerCloseTheDoor IsTeenGirl InIntenseCombat
+	Response iMT_PlayerCloseTheDoorIntenseTeenGirl
+}
+
 Rule iMT_PlayerCoughingTeenGirl
 {
 	criteria iMT_PlayerCoughing IsTeenGirl
@@ -68,6 +102,96 @@ Rule iMT_PlayerEquippedItemTeenGirl
 {
 	criteria iMT_PlayerEquippedItem IsTeenGirl
 	Response GrabbingGasSCTeenGirl
+}
+
+Response iMT_PlayerFriendlyFireTeenGirl
+{
+	scene "scenes/TeenGirl/FriendlyFire02.vcd"  //Hey, that hurt!
+	scene "scenes/TeenGirl/FriendlyFire03.vcd"  //Watch it!
+	scene "scenes/TeenGirl/FriendlyFire05.vcd"  //Watch where you're shooting!
+	scene "scenes/TeenGirl/FriendlyFire06.vcd"  //Stop shooting me!
+	scene "scenes/TeenGirl/FriendlyFire07.vcd"  //Ow! HEY!
+	scene "scenes/TeenGirl/FriendlyFire08.vcd"  //Stop it already!
+	scene "scenes/TeenGirl/FriendlyFire10.vcd"  //Hey!
+	scene "scenes/TeenGirl/FriendlyFire11.vcd"  //That's not funny.
+	scene "scenes/TeenGirl/FriendlyFire12.vcd"  //STOP IT!
+	scene "scenes/TeenGirl/FriendlyFire13.vcd"  //Don't shoot me!
+	scene "scenes/TeenGirl/FriendlyFire14.vcd"  //Hey, come on! Stop!
+	scene "scenes/TeenGirl/FriendlyFire17.vcd"  //What the hell?
+	scene "scenes/TeenGirl/FriendlyFire18.vcd"  //What the!
+	scene "scenes/TeenGirl/FriendlyFire19.vcd"  //Why would you do that to me?
+	scene "scenes/TeenGirl/FriendlyFire22.vcd"  //Ow! that hurt!
+	scene "scenes/TeenGirl/FriendlyFire23.vcd"  //Ow!
+	scene "scenes/TeenGirl/FriendlyFire24.vcd"  //Why would you do that to me?
+}
+Rule iMT_PlayerFriendlyFireTeenGirl
+{
+	criteria iMT_PlayerFriendlyFire IsTeenGirl
+	Response iMT_PlayerFriendlyFireTeenGirl
+}
+
+Response iMT_PlayerFriendlyFireFromBikerTeenGirl
+{
+	scene "scenes/TeenGirl/TeenGirl_FriendlyFireFrancis02.vcd"  //Ow. Knock that shit off, Francis.
+}
+Rule iMT_PlayerFriendlyFireFromBikerTeenGirl
+{
+	criteria iMT_PlayerFriendlyFire IsTeenGirl IsBikerNear400 SubjectIsBiker
+	Response iMT_PlayerFriendlyFireFromBikerTeenGirl
+}
+
+Rule iMT_PlayerFriendlyFireFromManagerTeenGirl
+{
+	criteria iMT_PlayerFriendlyFire IsTeenGirl IsManagerNear400 SubjectIsManager
+	Response L4D1PlayerFriendlyFireFromLouisTeenGirl
+}
+
+Rule iMT_PlayerFriendlyFireFromNamVetTeenGirl
+{
+	criteria iMT_PlayerFriendlyFire IsTeenGirl IsNamVetNear400 SubjectIsNamVet
+	Response L4D1PlayerFriendlyFireFromBillTeenGirl
+}
+
+Response iMT_PlayerGetToVehicleBoatTeenGirl
+{
+	scene "scenes/TeenGirl/ArriveBoat01.vcd"  //Get to the boat!
+	scene "scenes/TeenGirl/ArriveBoat02.vcd"  //Come on! To the boat!
+	scene "scenes/TeenGirl/ArriveBoat03.vcd"  //Run to the boat!
+	scene "scenes/TeenGirl/ArriveBoat04.vcd"  //We have to make it to the boat!
+	scene "scenes/TeenGirl/ArriveBoat08.vcd"  //We have to make it to the boat!
+	scene "scenes/TeenGirl/ArriveBoatInitial01.vcd"  //Boat's here, let's go!
+	scene "scenes/TeenGirl/ArriveBoatInitial02.vcd"  //The boat's here! Come on, let's go!
+	scene "scenes/TeenGirl/ArriveBoatInitial05.vcd"  //The boat's here! Come on, let's go!
+}
+Rule iMT_PlayerGetToVehicleBoatTeenGirl
+{
+	criteria iMT_PlayerGetToVehicleBoat IsTeenGirl
+	Response iMT_PlayerGetToVehicleBoatTeenGirl
+}
+
+Response iMT_PlayerGetToVehicleChopperTeenGirl
+{
+	scene "scenes/TeenGirl/ArriveChopper01.vcd"  //Everyone in the helicopter!
+	scene "scenes/TeenGirl/ArriveChopper02.vcd"  //Come on, get to the helicopter!
+	scene "scenes/TeenGirl/ArriveChopperInitial01.vcd"  //Guys, the helicopter's here. Let's go!
+	scene "scenes/TeenGirl/ArriveChopperInitial02.vcd"  //The helicopter's here! Come on, let's go!
+}
+Rule iMT_PlayerGetToVehicleChopperTeenGirl
+{
+	criteria iMT_PlayerGetToVehicleChopper IsTeenGirl
+	Response iMT_PlayerGetToVehicleChopperTeenGirl
+}
+
+Response iMT_PlayerGetToVehicleWheelsTeenGirl
+{
+	scene "scenes/TeenGirl/ArriveTruck01.vcd"  //Everyone in the truck!
+	scene "scenes/TeenGirl/ArriveTruck02.vcd"  //Get to the truck!
+	scene "scenes/TeenGirl/ArriveTruckInitial01.vcd"  //The truck's here! Let's go!
+}
+Rule iMT_PlayerGetToVehicleWheelsTeenGirl
+{
+	criteria iMT_PlayerGetToVehicleWheels IsTeenGirl
+	Response iMT_PlayerGetToVehicleWheelsTeenGirl
 }
 
 Response iMT_PlayerGoingToDieTeenGirl
@@ -105,6 +229,12 @@ Rule iMT_PlayerGoingToDieTeenGirl
 	Response iMT_PlayerGoingToDieTeenGirl
 }
 
+Rule iMT_PlayerGooedBySpitterTeenGirl
+{
+	criteria iMT_PlayerGooedBySpitter IsTeenGirl
+	Response SurvivorGooedBySpitterTeenGirl
+}
+
 Response iMT_PlayerHelloTeenGirl
 {
 	scene "scenes/TeenGirl/ScenarioJoin02.vcd"  //Hello!
@@ -135,6 +265,22 @@ Rule iMT_PlayerIncapacitatedHurtTeenGirl
 {
 	criteria iMT_PlayerIncapacitatedHurt IsTeenGirl
 	Response iMT_PlayerIncapacitatedHurtTeenGirl
+}
+
+Response iMT_PlayerMeleeTeenGirl
+{
+	scene "scenes/TeenGirl/Shoved01.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved02.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved03.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved04.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved05.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved06.vcd"  //[Melee grunt]
+	scene "scenes/TeenGirl/Shoved14.vcd"  //[Melee grunt]
+}
+Rule iMT_PlayerMeleeTeenGirl
+{
+	criteria iMT_PlayerMelee IsTeenGirl
+	Response iMT_PlayerMeleeTeenGirl
 }
 
 Rule iMT_PlayerMournBikerAliveTeenGirl
@@ -236,6 +382,12 @@ Rule iMT_PlayerPouncedNamVetTeenGirl
 	Response iMT_PlayerPouncedNamVetTeenGirl
 }
 
+Rule iMT_PlayerReloadingTeenGirl
+{
+	criteria iMT_PlayerReloading IsTeenGirl
+	Response L4D1SurvivorReloadingTeenGirl
+}
+
 Rule iMT_PlayerSuggestHealthTeenGirl
 {
 	criteria iMT_PlayerSuggestHealth IsTeenGirl
@@ -297,6 +449,12 @@ Rule iMT_PlayerTransitionTeenGirl
 {
 	criteria iMT_PlayerTransition IsTeenGirl
 	Response iMT_PlayerTransitionTeenGirl
+}
+
+Rule iMT_PlayerWitchChasingTeenGirl
+{
+	criteria iMT_PlayerWitchChasing IsTeenGirl
+	Response L4D1PlayerWitchChasingTeenGirl
 }
 
 Rule iMT_SurvivorCaughtVomitTeenGirl
@@ -1185,6 +1343,15 @@ Rule iMT_ResponseSoftDispleasureSwearTeenGirl
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IssuerMediumClose
 	forceweight 100
 	Response iMT_ResponseSoftDispleasureSwearTeenGirl
+}
+
+Rule iMT_SafeRoomStartTeenGirl
+{
+	criteria ConceptTalkIdle IsTeenGirl IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	forceweight 100
+	Response NoResponse
 }
 
 Response iMT_SurvivorAskForHealthTeenGirl

@@ -84,6 +84,36 @@ Rule iMT_PlayerBreathingProducer
 	Response iMT_PlayerBreathingProducer
 }
 
+Response iMT_PlayerCloseTheDoorProducer
+{
+	scene "scenes/Producer/CloseTheDoor01.vcd"  //Close the door.
+	scene "scenes/Producer/CloseTheDoor02.vcd"  //Can we close that door?
+	scene "scenes/Producer/CloseTheDoor03.vcd" odds 5  //Close that door, were you born in a... Oh yeah, you were. Sorry, my bad.
+	scene "scenes/Producer/CloseTheDoor04.vcd"  //Let's close that door.
+	scene "scenes/Producer/CloseTheDoor05.vcd"  //Someone want to close that door?
+	scene "scenes/Producer/WorldGenericProducer43.vcd"  //Just close the door.
+	scene "scenes/Producer/WorldGenericProducer90.vcd"  //I think we should keep that door closed.
+	scene "scenes/Producer/WorldGenericProducer91.vcd"  //Hey I think we should close that door.
+}
+Rule iMT_PlayerCloseTheDoorProducer
+{
+	criteria iMT_PlayerCloseTheDoor IsProducer
+	Response iMT_PlayerCloseTheDoorProducer
+}
+
+Response iMT_PlayerCloseTheDoorC1Producer
+{
+	scene "scenes/Producer/CloseTheDoorC101.vcd"  //Okay, well close the door now!
+	scene "scenes/Producer/CloseTheDoorC102.vcd"  //Well close the door now.
+	scene "scenes/Producer/CloseTheDoorC103.vcd"  //We should close that door.
+	scene "scenes/Producer/CloseTheDoorC104.vcd"  //We oughta close that door.
+}
+Rule iMT_PlayerCloseTheDoorC1Producer
+{
+	criteria iMT_PlayerCloseTheDoor IsProducer ismap_c1m1_hotel
+	Response iMT_PlayerCloseTheDoorC1Producer
+}
+
 Rule iMT_PlayerCoughingProducer
 {
 	criteria iMT_PlayerCoughing IsProducer
@@ -111,6 +141,66 @@ Rule iMT_PlayerEquippedItemProducer
 {
 	criteria iMT_PlayerEquippedItem IsProducer
 	Response iMT_PlayerEquippedItemProducer
+}
+
+Rule iMT_PlayerFriendlyFireProducer
+{
+	criteria iMT_PlayerFriendlyFire IsProducer
+	Response PlayerFriendlyFireProducer
+}
+
+Rule iMT_PlayerFriendlyFireC1Producer
+{
+	criteria iMT_PlayerFriendlyFire IsProducer ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireC1Producer
+}
+
+Rule iMT_PlayerFriendlyFireFromGamblerC1Producer
+{
+	criteria iMT_PlayerFriendlyFire IsProducer IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
+	Response PlayerFriendlyFireFromGamblerC1Producer
+}
+
+Response iMT_PlayerGetToVehicleBoatProducer
+{
+	scene "scenes/Producer/WorldC3M423.vcd"  //Run to the boat!
+	scene "scenes/Producer/WorldC3M424.vcd"  //To the boat! To the boat!
+	scene "scenes/Producer/WorldC3M425.vcd"  //Get your asses on the boat!
+	scene "scenes/Producer/WorldC3M426.vcd"  //Get to the boat!
+	scene "scenes/Producer/WorldC4M4B22.vcd"  //LET'S GET TO THE BOAT!
+	scene "scenes/Producer/WorldC4M4B23.vcd"  //GET TO THE BOAT!
+}
+Rule iMT_PlayerGetToVehicleBoatProducer
+{
+	criteria iMT_PlayerGetToVehicleBoat IsProducer
+	Response iMT_PlayerGetToVehicleBoatProducer
+}
+
+Response iMT_PlayerGetToVehicleChopperProducer
+{
+	scene "scenes/Producer/WorldC2M5B48.vcd"  //Let's go! Get to the helicopter!
+	scene "scenes/Producer/WorldC2M5B49.vcd"  //Everybody get to the chopper!
+	scene "scenes/Producer/WorldC2M5B50.vcd"  //Let's go, guys, let's go! Get to the chopper!
+	scene "scenes/Producer/WorldC2M5B51.vcd"  //Chopper's leaving, let's go!
+	scene "scenes/Producer/WorldC2M5B52.vcd"  //Let's go, let's go! Chopper's here!
+	scene "scenes/Producer/WorldC5M5B19.vcd"  //Get to the chopper!
+	scene "scenes/Producer/WorldC5M5B22.vcd"  //Get to the chopper!
+}
+Rule iMT_PlayerGetToVehicleChopperProducer
+{
+	criteria iMT_PlayerGetToVehicleChopper IsProducer
+	Response iMT_PlayerGetToVehicleChopperProducer
+}
+
+Response iMT_PlayerGetToVehicleWheelsProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_FinaleBridgeRun01.vcd"  //Get to the car!
+	scene "scenes/Producer/DLC1_C6M3_FinaleBridgeRun02.vcd"  //Come on, let's get to the car!
+}
+Rule iMT_PlayerGetToVehicleWheelsProducer
+{
+	criteria iMT_PlayerGetToVehicleWheels IsProducer
+	Response iMT_PlayerGetToVehicleWheelsProducer
 }
 
 Response iMT_PlayerGoingToDieProducer
@@ -148,6 +238,18 @@ Rule iMT_PlayerGoingToDieProducer
 	Response iMT_PlayerGoingToDieProducer
 }
 
+Rule iMT_PlayerGooedBySpitterProducer
+{
+	criteria iMT_PlayerGooedBySpitter IsProducer
+	Response SurvivorGooedBySpitterProducer
+}
+
+Rule iMT_PlayerGooedBySpitterC1Producer
+{
+	criteria iMT_PlayerGooedBySpitter IsProducer C1M1orC1M2 NoKnowSpitter
+	Response SurvivorGooedBySpitterC1Producer
+}
+
 Rule iMT_PlayerHelloProducer
 {
 	criteria iMT_PlayerHello IsProducer
@@ -158,6 +260,24 @@ Rule iMT_PlayerIncapacitatedHurtProducer
 {
 	criteria iMT_PlayerIncapacitatedHurt IsProducer
 	Response SurvivorIncapacitatedHurtProducer
+}
+
+Response iMT_PlayerMeleeProducer
+{
+	scene "scenes/Producer/MeleeSwing01.vcd"  //[Melee grunt]
+	scene "scenes/Producer/MeleeSwing02.vcd"  //[Melee grunt]
+	scene "scenes/Producer/MeleeSwing03.vcd"  //[Melee grunt]
+	scene "scenes/Producer/MeleeSwing04.vcd"  //[Melee grunt]
+	scene "scenes/Producer/MeleeSwing05.vcd"  //[Melee grunt]
+	scene "scenes/Producer/MeleeSwing06.vcd"  //[Melee grunt]
+	scene "scenes/Producer/MeleeSwing07.vcd"  //[Melee grunt]
+	scene "scenes/Producer/MeleeSwing08.vcd"  //[Melee grunt]
+	scene "scenes/Producer/MeleeSwing09.vcd"  //[Melee grunt]
+}
+Rule iMT_PlayerMeleeProducer
+{
+	criteria iMT_PlayerMelee IsProducer
+	Response iMT_PlayerMeleeProducer
 }
 
 Rule iMT_PlayerMournCoachAliveProducer
@@ -257,24 +377,24 @@ Rule iMT_PlayerNiceShotProducer
 
 Rule iMT_PlayerNiceShotCoachProducer
 {
-	criteria iMT_PlayerNiceShot IsProducer IsCoachNear800 SubjectIsCoach isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsProducer IsCoachNear800 SubjectIsCoach
 	Response PlayerNiceShotCoachProducer
 }
 Rule iMT_PlayerNiceShotCoachC1Producer
 {
-	criteria iMT_PlayerNiceShot IsProducer IsCoachNear800 SubjectIsCoach ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotCoachProducer
+	criteria iMT_PlayerNiceShot IsProducer IsCoachNear800 SubjectIsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotProducer
 }
 
 Rule iMT_PlayerNiceShotMechanicProducer
 {
-	criteria iMT_PlayerNiceShot IsProducer IsMechanicNear800 SubjectIsMechanic isNotmap_c1m1_hotel
+	criteria iMT_PlayerNiceShot IsProducer IsMechanicNear800 SubjectIsMechanic
 	Response PlayerNiceShotMechanicProducer
 }
 Rule iMT_PlayerNiceShotMechanicC1Producer
 {
-	criteria iMT_PlayerNiceShot IsProducer IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotel YesKnowNames
-	Response PlayerNiceShotMechanicProducer
+	criteria iMT_PlayerNiceShot IsProducer IsMechanicNear800 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
+	Response PlayerNiceShotProducer
 }
 
 Response iMT_PlayerPainNoiseProducer
@@ -349,6 +469,18 @@ Rule iMT_PlayerPouncedMechanicProducer
 	Response iMT_PlayerPouncedMechanicProducer
 }
 
+Rule iMT_PlayerReloadingProducer
+{
+	criteria iMT_PlayerReloading IsProducer NotInIntenseCombat
+	Response SurvivorReloadingProducer
+}
+
+Rule iMT_PlayerReloadingIntenseProducer
+{
+	criteria iMT_PlayerReloading IsProducer InIntenseCombat
+	Response SurvivorReloadingIntenseProducer
+}
+
 Rule iMT_PlayerSuggestHealthProducer
 {
 	criteria iMT_PlayerSuggestHealth IsProducer
@@ -357,35 +489,35 @@ Rule iMT_PlayerSuggestHealthProducer
 
 Rule iMT_PlayerSuggestHealthCoachProducer
 {
-	criteria iMT_PlayerSuggestHealth IsProducer IsCoachNear400 SubjectIsCoach isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsProducer IsCoachNear400 SubjectIsCoach
 	Response PlayerSuggestHealthCoachProducer
 }
 Rule iMT_PlayerSuggestHealthCoachC1Producer
 {
-	criteria iMT_PlayerSuggestHealth IsProducer IsCoachNear400 SubjectIsCoach ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthCoachProducer
+	criteria iMT_PlayerSuggestHealth IsProducer IsCoachNear400 SubjectIsCoach ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthGenericProducer
 }
 
 Rule iMT_PlayerSuggestHealthGamblerProducer
 {
-	criteria iMT_PlayerSuggestHealth IsProducer IsGamblerNear400 SubjectIsGambler isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsProducer IsGamblerNear400 SubjectIsGambler
 	Response PlayerSuggestHealthGamblerProducer
 }
 Rule iMT_PlayerSuggestHealthGamblerC1Producer
 {
-	criteria iMT_PlayerSuggestHealth IsProducer IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthGamblerProducer
+	criteria iMT_PlayerSuggestHealth IsProducer IsGamblerNear400 SubjectIsGambler ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthGenericProducer
 }
 
 Rule iMT_PlayerSuggestHealthMechanicProducer
 {
-	criteria iMT_PlayerSuggestHealth IsProducer IsMechanicNear400 SubjectIsMechanic isNotmap_c1m1_hotel
+	criteria iMT_PlayerSuggestHealth IsProducer IsMechanicNear400 SubjectIsMechanic
 	Response PlayerSuggestHealthMechanicProducer
 }
 Rule iMT_PlayerSuggestHealthMechanicC1Producer
 {
-	criteria iMT_PlayerSuggestHealth IsProducer IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel YesKnowNames
-	Response PlayerSuggestHealthMechanicProducer
+	criteria iMT_PlayerSuggestHealth IsProducer IsMechanicNear400 SubjectIsMechanic ismap_c1m1_hotel NoKnowNames
+	Response PlayerSuggestHealthGenericProducer
 }
 
 Response iMT_PlayerTeamKillProducer
@@ -422,6 +554,29 @@ Rule iMT_PlayerTransitionProducer
 {
 	criteria iMT_PlayerTransition IsProducer
 	Response iMT_PlayerTransitionProducer
+}
+
+Response iMT_PlayerWitchChasingProducer
+{
+	scene "scenes/Producer/WitchChasing01.vcd"  //My bad, my bad, my bad!
+	scene "scenes/Producer/WitchChasing02.vcd"  //Out of my way!
+	scene "scenes/Producer/WitchChasing03.vcd"  //Out of my way!
+	scene "scenes/Producer/WitchChasing04.vcd"  //Kill the damn thing!
+	scene "scenes/Producer/WitchChasing05.vcd"  //Kill the damn thing!
+	scene "scenes/Producer/WitchChasing06.vcd"  //Shoot her! Shoot her!
+	scene "scenes/Producer/WitchChasing07.vcd"  //Oh shit! She's on my ass!
+	scene "scenes/Producer/WitchChasing08.vcd"  //My bad!
+	scene "scenes/Producer/WitchChasing09.vcd"  //My bad, my bad, my bad!
+}
+Rule iMT_PlayerWitchChasingProducer
+{
+	criteria iMT_PlayerWitchChasing IsProducer
+	Response iMT_PlayerWitchChasingProducer
+}
+Rule iMT_PlayerWitchChasingC6M1Producer
+{
+	criteria iMT_PlayerWitchChasing IsProducer Isc6m1_riverbank
+	Response PlayerWitchChasingC6M1Producer
 }
 
 Rule iMT_SurvivorCaughtVomitProducer
@@ -802,6 +957,15 @@ Rule iMT_ResponseSoftDispleasureSwearProducer
 {
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	Response iMT_ResponseSoftDispleasureSwearProducer
+}
+
+Rule iMT_SafeRoomStartProducer
+{
+	criteria ConceptTalkIdle IsProducer IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	forceweight 100
+	Response NoResponse
 }
 
 Rule iMT_SurvivorDeathProducer

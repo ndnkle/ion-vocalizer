@@ -43,6 +43,12 @@ Rule iMT_PlayerBreathingManager
 	Response iMT_PlayerBreathingManager
 }
 
+Rule iMT_PlayerCloseTheDoorManager
+{
+	criteria iMT_PlayerCloseTheDoor IsManager
+	Response L4D1PlayerLockTheDoorCheckPointManager
+}
+
 Rule iMT_PlayerCoughingManager
 {
 	criteria iMT_PlayerCoughing IsManager
@@ -65,6 +71,105 @@ Rule iMT_PlayerEquippedItemManager
 {
 	criteria iMT_PlayerEquippedItem IsManager
 	Response GrabbingGasSCManager
+}
+
+Response iMT_PlayerFriendlyFireManager
+{
+	scene "scenes/Manager/FriendlyFire01.vcd"  //Hey, man, that hurt.
+	scene "scenes/Manager/FriendlyFire02.vcd"  //AH! Will you knock it off?
+	scene "scenes/Manager/FriendlyFire03.vcd"  //Do I look like one of them?
+	scene "scenes/Manager/FriendlyFire04.vcd"  //You know I would appreciate it, IF YOU'D STOP SHOOTING ME.
+	scene "scenes/Manager/FriendlyFire05.vcd"  //Watch where you're shooting!
+	scene "scenes/Manager/FriendlyFire06.vcd"  //Hey, man, that's not cool.
+	scene "scenes/Manager/FriendlyFire07.vcd"  //Man, what the hell, quit shooting me
+	scene "scenes/Manager/FriendlyFire08.vcd"  //Whoa, whoa, don't shoot, it's me!
+	scene "scenes/Manager/FriendlyFire09.vcd"  //Ow man ow! Why you shooting me!
+	scene "scenes/Manager/FriendlyFire10.vcd"  //Look at my face, do I look like them?
+	scene "scenes/Manager/FriendlyFire11.vcd"  //Oh what the hell, why you shootin' me
+	scene "scenes/Manager/FriendlyFire12.vcd"  //I'm gonna shoot you back next time
+	scene "scenes/Manager/FriendlyFire13.vcd"  //Ahhh Mother
+	scene "scenes/Manager/FriendlyFire14.vcd"  //Whoa, whoa, don't shoot, it's me!
+}
+Rule iMT_PlayerFriendlyFireManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager
+	Response iMT_PlayerFriendlyFireManager
+}
+
+Response iMT_PlayerFriendlyFireFromBikerManager
+{
+	scene "scenes/Manager/Manager_FriendlyFireFrancis01.vcd"  //Francis, that's MY ass your shootin'.
+	scene "scenes/Manager/Manager_FriendlyFireFrancis02.vcd"  //Francis, What the HELL is wrong with you?
+	scene "scenes/Manager/Manager_FriendlyFireFrancis06.vcd"  //[angry] Francis!
+	scene "scenes/Manager/Manager_FriendlyFireFrancis07.vcd"  //Go on do it one more time, fat man.
+	scene "scenes/Manager/Manager_FriendlyFireFrancis08.vcd"  //[angry] Francis!
+}
+Rule iMT_PlayerFriendlyFireFromBikerManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager IsBikerNear400 SubjectIsBiker
+	Response iMT_PlayerFriendlyFireFromBikerManager
+}
+
+Response iMT_PlayerFriendlyFireFromNamVetManager
+{
+	scene "scenes/Manager/Manager_FriendlyFireBill01.vcd"  //Old man, stop shooting me!
+	scene "scenes/Manager/Manager_FriendlyFireBill02.vcd"  //Whoah, whoah whoah! Jesus, Bill, what are you doing?
+	scene "scenes/Manager/Manager_FriendlyFireBill03.vcd"  //William! Come on, man!
+	scene "scenes/Manager/Manager_FriendlyFireBill04.vcd"  //Watch it, Bill!
+	scene "scenes/Manager/Manager_FriendlyFireBill05.vcd"  //[angry] Bill!
+	scene "scenes/Manager/Manager_FriendlyFireBill06.vcd"  //I cannot BELIEVE you just shot me AGAIN.
+	scene "scenes/Manager/Manager_FriendlyFireBill08.vcd"  //[angry] Bill!
+	scene "scenes/Manager/Manager_FriendlyFireBill09.vcd"  //[angry] Bill!
+}
+Rule iMT_PlayerFriendlyFireFromNamVetManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager IsNamVetNear400 SubjectIsNamVet
+	Response iMT_PlayerFriendlyFireFromNamVetManager
+}
+
+Rule iMT_PlayerFriendlyFireFromTeenGirlManager
+{
+	criteria iMT_PlayerFriendlyFire IsManager IsTeenGirlNear400 SubjectIsTeenGirl
+	Response L4D1PlayerFriendlyFireFromZoeyManager
+}
+
+Response iMT_PlayerGetToVehicleBoatManager
+{
+	scene "scenes/Manager/ArriveBoat01.vcd"  //Get to the boat!
+	scene "scenes/Manager/ArriveBoat02.vcd"  //Get to the boat!
+	scene "scenes/Manager/ArriveBoat03.vcd"  //Run to the boat!
+	scene "scenes/Manager/ArriveBoatInitial01.vcd"  //The boat's here! Let's go!
+	scene "scenes/Manager/ArriveBoatInitial02.vcd"  //Our boat's here! Let's go!
+}
+Rule iMT_PlayerGetToVehicleBoatManager
+{
+	criteria iMT_PlayerGetToVehicleBoat IsManager
+	Response iMT_PlayerGetToVehicleBoatManager
+}
+
+Response iMT_PlayerGetToVehicleChopperManager
+{
+	scene "scenes/Manager/ArriveChopper01.vcd"  //Everyone in the helicopter! Go!
+	scene "scenes/Manager/ArriveChopper02.vcd"  //Get to the helicopter!
+	scene "scenes/Manager/ArriveChopperInitial01.vcd"  //The heli's here. Let's go!
+	scene "scenes/Manager/ArriveChopperInitial02.vcd"  //The helicopter's here! Let's go!
+}
+Rule iMT_PlayerGetToVehicleChopperManager
+{
+	criteria iMT_PlayerGetToVehicleChopper IsManager
+	Response iMT_PlayerGetToVehicleChopperManager
+}
+
+Response iMT_PlayerGetToVehicleWheelsManager
+{
+	scene "scenes/Manager/ArriveTruck01.vcd"  //Get to the truck! TO THE TRUCK!
+	scene "scenes/Manager/ArriveTruck02.vcd"  //GET TO THE TRUCK!
+	scene "scenes/Manager/ArriveTruckInitial01.vcd"  //The truck's here! Let's go!
+}
+Rule iMT_PlayerGetToVehicleWheelsManager
+{
+	criteria iMT_PlayerGetToVehicleWheels IsManager
+	Response iMT_PlayerGetToVehicleWheelsManager
 }
 
 Response iMT_PlayerGoingToDieManager
@@ -109,6 +214,12 @@ Rule iMT_PlayerGoingToDieManager
 	Response iMT_PlayerGoingToDieManager
 }
 
+Rule iMT_PlayerGooedBySpitterManager
+{
+	criteria iMT_PlayerGooedBySpitter IsManager
+	Response SurvivorGooedBySpitterManager
+}
+
 Response iMT_PlayerHelloManager
 {
 	scene "scenes/Manager/ScenarioJoin02.vcd"  //Hello!
@@ -123,6 +234,20 @@ Rule iMT_PlayerIncapacitatedHurtManager
 {
 	criteria iMT_PlayerIncapacitatedHurt IsManager
 	Response L4D1SurvivorIncapacitatedHurtManager
+}
+
+Response iMT_PlayerMeleeManager
+{
+	scene "scenes/Manager/Shoved01.vcd"  //[Melee grunt]
+	scene "scenes/Manager/Shoved02.vcd"  //[Melee grunt]
+	scene "scenes/Manager/Shoved03.vcd"  //[Melee grunt]
+	scene "scenes/Manager/Shoved04.vcd"  //[Melee grunt]
+	scene "scenes/Manager/Shoved05.vcd"  //[Melee grunt]
+}
+Rule iMT_PlayerMeleeManager
+{
+	criteria iMT_PlayerMelee IsManager
+	Response iMT_PlayerMeleeManager
 }
 
 Rule iMT_PlayerMournBikerAliveManager
@@ -254,6 +379,12 @@ Rule iMT_PlayerPouncedTeenGirlManager
 	Response iMT_PlayerPouncedTeenGirlManager
 }
 
+Rule iMT_PlayerReloadingManager
+{
+	criteria iMT_PlayerReloading IsManager
+	Response L4D1SurvivorReloadingManager
+}
+
 Rule iMT_PlayerSuggestHealthManager
 {
 	criteria iMT_PlayerSuggestHealth IsManager
@@ -295,6 +426,12 @@ Rule iMT_PlayerTransitionManager
 {
 	criteria iMT_PlayerTransition IsManager
 	Response iMT_PlayerTransitionManager
+}
+
+Rule iMT_PlayerWitchChasingManager
+{
+	criteria iMT_PlayerWitchChasing IsManager
+	Response L4D1PlayerWitchChasingManager
 }
 
 Rule iMT_SurvivorCaughtVomitManager
@@ -1116,6 +1253,15 @@ Rule iMT_ResponseSoftDispleasureSwearManager
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IssuerMediumClose
 	forceweight 100
 	Response iMT_ResponseSoftDispleasureSwearManager
+}
+
+Rule iMT_SafeRoomStartManager
+{
+	criteria ConceptTalkIdle IsManager IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	forceweight 100
+	Response NoResponse
 }
 
 Response iMT_SurvivorAskForHealthManager

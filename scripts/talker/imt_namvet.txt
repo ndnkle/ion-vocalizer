@@ -35,6 +35,12 @@ Rule iMT_PlayerBreathingNamVet
 	Response iMT_PlayerBreathingNamVet
 }
 
+Rule iMT_PlayerCloseTheDoorNamVet
+{
+	criteria iMT_PlayerCloseTheDoor IsNamVet
+	Response L4D1PlayerLockTheDoorCheckPointNamVet
+}
+
 Rule iMT_PlayerCoughingNamVet
 {
 	criteria iMT_PlayerCoughing IsNamVet
@@ -58,6 +64,110 @@ Rule iMT_PlayerEquippedItemNamVet
 {
 	criteria iMT_PlayerEquippedItem IsNamVet
 	Response GrabbingGasSCNamVet
+}
+
+Response iMT_PlayerFriendlyFireNamVet
+{
+	scene "scenes/NamVet/FriendlyFire01.vcd"  //Ahh! That hurt!
+	scene "scenes/NamVet/FriendlyFire02.vcd"  //Ah! Knock it off!
+	scene "scenes/NamVet/FriendlyFire03.vcd"  //Do I look like a target?
+	scene "scenes/NamVet/FriendlyFire04.vcd"  //You know, I would appreciate it IF YOU'D STOP SHOOTING ME!
+	scene "scenes/NamVet/FriendlyFire05.vcd"  //Watch where you're shooting!
+	scene "scenes/NamVet/FriendlyFire06.vcd"  //Goddamn it, watch your fire!
+	scene "scenes/NamVet/FriendlyFire07.vcd"  //Jesus H Christ, I'm on your side.
+	scene "scenes/NamVet/FriendlyFire08.vcd"  //Watch where you're shooting!
+	scene "scenes/NamVet/FriendlyFire10.vcd"  //Watch where you point that thing!
+	scene "scenes/NamVet/FriendlyFire11.vcd"  //Watch where you're shooting!
+	scene "scenes/NamVet/FriendlyFire12.vcd"  //Do not shoot me!
+	scene "scenes/NamVet/FriendlyFire13.vcd"  //Goddamit, watch where you're shooting!
+	scene "scenes/NamVet/FriendlyFire14.vcd"  //Check your fire!
+	scene "scenes/NamVet/FriendlyFire15.vcd"  //Secure that weapon!
+	scene "scenes/NamVet/FriendlyFire16.vcd"  //Hold your fire!
+	scene "scenes/NamVet/FriendlyFire17.vcd"  //Who's side are you on, kid?
+}
+Rule iMT_PlayerFriendlyFireNamVet
+{
+	criteria iMT_PlayerFriendlyFire IsNamVet
+	Response iMT_PlayerFriendlyFireNamVet
+}
+
+Response iMT_PlayerFriendlyFireFromBikerNamVet
+{
+	scene "scenes/NamVet/FriendlyFireFrancis01.vcd"  //Jesus H Christ, Francis!
+	scene "scenes/NamVet/FriendlyFireFrancis02.vcd"  //Goddamnit, Francis! Watch your fire!
+	scene "scenes/NamVet/FriendlyFireFrancis03.vcd"  //Francis! Watch where you're shooting!
+	scene "scenes/NamVet/Generic22.vcd" odds 5  //Close your mouth and open your eyes, Francis. You'll aim better.
+	scene "scenes/NamVet/NamVet_FriendlyFireFrancis01.vcd"  //Francis, check your fire!
+	scene "scenes/NamVet/NamVet_FriendlyFireFrancis02.vcd"  //What the hell are you doin' Francis?
+	scene "scenes/NamVet/NamVet_FriendlyFireFrancis03.vcd"  //Francis! [through gritted teeth]
+}
+Rule iMT_PlayerFriendlyFireFromBikerNamVet
+{
+	criteria iMT_PlayerFriendlyFire IsNamVet IsBikerNear400 SubjectIsBiker
+	Response iMT_PlayerFriendlyFireFromBikerNamVet
+}
+
+Response iMT_PlayerFriendlyFireFromManagerNamVet
+{
+	scene "scenes/NamVet/NamVet_FriendlyFireLouis01.vcd"  //Goddamnit Louis, stop shooting me!
+	scene "scenes/NamVet/NamVet_FriendlyFireLouis02.vcd"  //Knock it off, Louis!
+	scene "scenes/NamVet/NamVet_FriendlyFireLouis03.vcd"  //Louis! [through gritted teeth]
+}
+Rule iMT_PlayerFriendlyFireFromManagerNamVet
+{
+	criteria iMT_PlayerFriendlyFire IsNamVet IsManagerNear400 SubjectIsManager
+	Response iMT_PlayerFriendlyFireFromManagerNamVet
+}
+
+Rule iMT_PlayerFriendlyFireFromTeenGirlNamVet
+{
+	criteria iMT_PlayerFriendlyFire IsNamVet IsTeenGirlNear400 SubjectIsTeenGirl
+	Response L4D1PlayerFriendlyFireFromZoeyNamVet
+}
+
+Response iMT_PlayerGetToVehicleBoatNamVet
+{
+	scene "scenes/NamVet/ArriveBoat01.vcd"  //Run to the boat!
+	scene "scenes/NamVet/ArriveBoat02.vcd"  //Get to the boat!
+	scene "scenes/NamVet/ArriveBoat03.vcd"  //To the boat! MOVE!
+	scene "scenes/NamVet/ArriveBoat04.vcd"  //Haul ass to that boat! RUN!
+	scene "scenes/NamVet/ArriveBoatInitial01.vcd"  //That's the boat! Time to bug out!
+	scene "scenes/NamVet/ArriveBoatInitial02.vcd"  //Allright, the boat's here! Let's go!
+}
+Rule iMT_PlayerGetToVehicleBoatNamVet
+{
+	criteria iMT_PlayerGetToVehicleBoat IsNamVet
+	Response iMT_PlayerGetToVehicleBoatNamVet
+}
+
+Response iMT_PlayerGetToVehicleChopperNamVet
+{
+	scene "scenes/NamVet/ArriveChopper01.vcd"  //Get to the chopper! GO!
+	scene "scenes/NamVet/ArriveChopper02.vcd"  //Get to the chopper!
+	scene "scenes/NamVet/ArriveChopper03.vcd"  //To the chopper. Come on, MOVE IT, MOVE IT, MOVE IT!
+	scene "scenes/NamVet/ArriveChopper04.vcd"  //Get to the LZ!
+	scene "scenes/NamVet/ArriveChopperInitial01.vcd"  //Our chopper's here! Let's get the hell out of dodge.
+	scene "scenes/NamVet/ArriveChopperInitial02.vcd"  //The bird's here! Let's go!
+}
+Rule iMT_PlayerGetToVehicleChopperNamVet
+{
+	criteria iMT_PlayerGetToVehicleChopper IsNamVet
+	Response iMT_PlayerGetToVehicleChopperNamVet
+}
+
+Response iMT_PlayerGetToVehicleWheelsNamVet
+{
+	scene "scenes/NamVet/ArriveTruck01.vcd"  //Get to the truck! MOVE!
+	scene "scenes/NamVet/ArriveTruck02.vcd"  //Get to the truck!
+	scene "scenes/NamVet/ArriveTruck03.vcd"  //Get to that truck on the double!
+	scene "scenes/NamVet/ArriveTruck04.vcd"  //The truck's waitin'. RUN!
+	scene "scenes/NamVet/ArriveTruckInitial01.vcd"  //The truck's here! Let's go!
+	scene "scenes/NamVet/ArriveTruckInitial02.vcd"  //The truck has arrived! Let's move out, people!
+}
+Rule iMT_PlayerGetToVehicleWheelsNamVet
+{
+	criteria iMT_PlayerGetToVehicleWheels IsNamVet
+	Response iMT_PlayerGetToVehicleWheelsNamVet
 }
 
 Response iMT_PlayerGoingToDieNamVet
@@ -101,6 +211,12 @@ Rule iMT_PlayerGoingToDieNamVet
 	Response iMT_PlayerGoingToDieNamVet
 }
 
+Rule iMT_PlayerGooedBySpitterNamVet
+{
+	criteria iMT_PlayerGooedBySpitter IsNamVet
+	Response SurvivorGooedBySpitterNamVet
+}
+
 Response iMT_PlayerHelloNamVet
 {
 	scene "scenes/NamVet/ScenarioJoin02.vcd"  //Hello!
@@ -126,6 +242,20 @@ Rule iMT_PlayerIncapacitatedHurtNamVet
 {
 	criteria iMT_PlayerIncapacitatedHurt IsNamVet
 	Response iMT_PlayerIncapacitatedHurtNamVet
+}
+
+Response iMT_PlayerMeleeNamVet
+{
+	scene "scenes/NamVet/Shoved01.vcd"  //[Melee grunt]
+	scene "scenes/NamVet/Shoved02.vcd"  //[Melee grunt]
+	scene "scenes/NamVet/Shoved03.vcd"  //[Melee grunt]
+	scene "scenes/NamVet/Shoved04.vcd"  //[Melee grunt]
+	scene "scenes/NamVet/Shoved05.vcd"  //[Melee grunt]
+}
+Rule iMT_PlayerMeleeNamVet
+{
+	criteria iMT_PlayerMelee IsNamVet
+	Response iMT_PlayerMeleeNamVet
 }
 
 Rule iMT_PlayerMournBikerAliveNamVet
@@ -264,6 +394,12 @@ Rule iMT_PlayerPouncedTeenGirlNamVet
 	Response iMT_PlayerPouncedTeenGirlNamVet
 }
 
+Rule iMT_PlayerReloadingNamVet
+{
+	criteria iMT_PlayerReloading IsNamVet
+	Response L4D1SurvivorReloadingNamVet
+}
+
 Rule iMT_PlayerSuggestHealthNamVet
 {
 	criteria iMT_PlayerSuggestHealth IsNamVet
@@ -298,6 +434,12 @@ Rule iMT_PlayerTransitionNamVet
 {
 	criteria iMT_PlayerTransition IsNamVet
 	Response L4D1PlayerTransitionCloseNamVet
+}
+
+Rule iMT_PlayerWitchChasingNamVet
+{
+	criteria iMT_PlayerWitchChasing IsNamVet
+	Response L4D1PlayerWitchChasingNamVet
 }
 
 Rule iMT_SurvivorCaughtVomitNamVet
@@ -1131,6 +1273,15 @@ Rule iMT_ResponseSoftDispleasureSwearNamVet
 	criteria ConceptResponseSoftDispleasureSwear IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IssuerMediumClose
 	forceweight 100
 	Response iMT_ResponseSoftDispleasureSwearNamVet
+}
+
+Rule iMT_SafeRoomStartNamVet
+{
+	criteria ConceptTalkIdle IsNamVet IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart
+	ApplyContext "_auto_SafeRoomStart:1:0,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	forceweight 100
+	Response NoResponse
 }
 
 Response iMT_SurvivorAskForHealthNamVet

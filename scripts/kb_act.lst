@@ -69,4 +69,5 @@
 "+ch9; alias -ch9 -mouse_menu"	"Character-specific 9 (limited use)"
 "+mouse_menu Misc4"		"Miscellaneous 4 (limited use)"
 "+mouse_menu Misc5"		"Miscellaneous 5 (limited use)"
+"+mouse_menu Misc6"		"Miscellaneous 6 (limited use)"
 "+mouse_menu NPC"		"NPCs (limited use)"

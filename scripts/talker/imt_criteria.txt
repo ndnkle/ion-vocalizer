@@ -22,21 +22,30 @@ Criterion "iMT_PlayerAnswerReady" "Concept" "iMT_PlayerAnswerReady" required
 Criterion "iMT_PlayerBattleCry" "Concept" "iMT_PlayerBattleCry" required
 Criterion "iMT_PlayerBreathing" "Concept" "iMT_PlayerBreathing" required
 Criterion "iMT_PlayerBreathingReac" "Concept" "iMT_PlayerBreathingReac" required
+Criterion "iMT_PlayerCloseTheDoor" "Concept" "iMT_PlayerCloseTheDoor" required
 Criterion "iMT_PlayerCoughing" "Concept" "iMT_PlayerCoughing" required
 Criterion "iMT_PlayerDeathScream" "Concept" "iMT_PlayerDeathScream" required
 Criterion "iMT_PlayerEquippedItem" "Concept" "iMT_PlayerEquippedItem" required
+Criterion "iMT_PlayerFriendlyFire" "Concept" "iMT_PlayerFriendlyFire" required
+Criterion "iMT_PlayerGetToVehicleBoat" "Concept" "iMT_PlayerGetToVehicleBoat" required
+Criterion "iMT_PlayerGetToVehicleChopper" "Concept" "iMT_PlayerGetToVehicleChopper" required
+Criterion "iMT_PlayerGetToVehicleWheels" "Concept" "iMT_PlayerGetToVehicleWheels" required
 Criterion "iMT_PlayerGoingToDie" "Concept" "iMT_PlayerGoingToDie" required
+Criterion "iMT_PlayerGooedBySpitter" "Concept" "iMT_PlayerGooedBySpitter" required
 Criterion "iMT_PlayerHello" "Concept" "iMT_PlayerHello" required
 Criterion "iMT_PlayerIncapacitatedHurt" "Concept" "iMT_PlayerIncapacitatedHurt" required
+Criterion "iMT_PlayerMelee" "Concept" "iMT_PlayerMelee" required
 Criterion "iMT_PlayerMourn" "Concept" "iMT_PlayerMourn" required
 Criterion "iMT_PlayerNearExit" "Concept" "iMT_PlayerNearExit" required
 Criterion "iMT_PlayerNearExitResponse" "Concept" "iMT_PlayerNearExitResponse" required
 Criterion "iMT_PlayerNiceShot" "Concept" "iMT_PlayerNiceShot" required
 Criterion "iMT_PlayerPainNoise" "Concept" "iMT_PlayerPainNoise" required
+Criterion "iMT_PlayerReloading" "Concept" "iMT_PlayerReloading" required
 Criterion "iMT_PlayerSuggestHealth" "Concept" "iMT_PlayerSuggestHealth" required
 Criterion "iMT_PlayerTeamKill" "Concept" "iMT_PlayerTeamKill" required
 Criterion "iMT_PlayerTransition" "Concept" "iMT_PlayerTransition" required
 Criterion "iMT_PlayerVomitInFace" "Concept" "iMT_PlayerVomitInFace" required
+Criterion "iMT_PlayerWitchChasing" "Concept" "iMT_PlayerWitchChasing" required
 Criterion "iMT_SurvivorWasPounced" "Concept" "iMT_SurvivorWasPounced" required
 
 Criterion "iMT_AllAboard" "Concept" "iMT_AllAboard" required
@@ -83,6 +92,7 @@ Criterion "iMT_Teaching" "Concept" "iMT_Teaching" required
 Criterion "iMT_Attractive" "Concept" "iMT_Attractive" required
 Criterion "iMT_Depressing" "Concept" "iMT_Depressing" required
 Criterion "iMT_Fantasy" "Concept" "iMT_Fantasy" required
+Criterion "iMT_Game" "Concept" "iMT_Game" required
 Criterion "iMT_GetRoom" "Concept" "iMT_GetRoom" required
 Criterion "iMT_HavingFun" "Concept" "iMT_HavingFun" required
 Criterion "iMT_Hippie" "Concept" "iMT_Hippie" required
@@ -95,7 +105,6 @@ Criterion "iMT_ShitAir" "Concept" "iMT_ShitAir" required
 Criterion "iMT_Test" "Concept" "iMT_Test" required
 Criterion "iMT_TooWeird" "Concept" "iMT_TooWeird" required
 Criterion "iMT_Tricked" "Concept" "iMT_Tricked" required
-Criterion "iMT_True" "Concept" "iMT_True" required
 
 //--------------------------------------------------------------------------------------------------------------
 // Ellis
