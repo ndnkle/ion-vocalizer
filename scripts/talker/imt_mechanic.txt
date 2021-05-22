@@ -981,7 +981,7 @@ Rule iMT_WhitakerMechanic
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fixes
+// Overrides
 //--------------------------------------------------------------------------------------------------------------
 
 Response iMT_PlayerAreaClearMechanic
@@ -1048,7 +1048,62 @@ Rule iMT_SurvivorSpottedAmmoMechanic
 	Response SurvivorSpottedAmmoMechanic
 }
 
-Rule iMT_SurvivorSpottedOtherWeaponMechanic
+Response iMT_SurvivorSpottedBoomerMechanic
+{
+	scene "scenes/Mechanic/WarnBoomerC101.vcd"  //PUKER!
+	scene "scenes/Mechanic/WarnBoomerC102.vcd"  //IT'S EXPLODING GUY!
+	scene "scenes/Mechanic/WorldC1M1B150.vcd" odds 25  //It's the barfin' one!
+	scene "scenes/Mechanic/WorldC1M1B151.vcd" odds 25  //It's the barfin' fat ass zombie!
+}
+Rule iMT_SurvivorSpottedBoomerMechanic
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedBoomerMechanic
+}
+
+Response iMT_SurvivorSpottedChargerMechanic
+{
+	scene "scenes/Mechanic/WarnChargerC101.vcd" odds 25  //Watch out, man, that thing charges!
+	scene "scenes/Mechanic/WarnChargerC102.vcd"  //ONE ARM!
+	scene "scenes/Mechanic/WarnChargerC103.vcd"  //BIG ARM!
+}
+Rule iMT_SurvivorSpottedChargerMechanic
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedChargerMechanic
+}
+
+Rule iMT_SurvivorSpottedHunterMechanic
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedHunterC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedJockeyMechanic
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedJockeyC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedSmokerMechanic
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedSmokerC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedSpitterMechanic
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedSpitterC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedTankMechanic
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedTankC1Mechanic
+}
+
+Rule iMT_SurvivorSpottedWeaponMechanic
 {
 	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic
 	forceweight 100

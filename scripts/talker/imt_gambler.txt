@@ -951,7 +951,7 @@ Rule iMT_WhitakerGambler
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fixes
+// Overrides
 //--------------------------------------------------------------------------------------------------------------
 
 Response iMT_PlayerAreaClearGambler
@@ -1017,7 +1017,79 @@ Rule iMT_SurvivorSpottedAmmoGambler
 	Response SurvivorSpottedAmmoGambler
 }
 
-Rule iMT_SurvivorSpottedOtherWeaponGambler
+Response iMT_SurvivorSpottedBoomerGambler
+{
+	scene "scenes/Gambler/WarnBoomerC101.vcd"  //Fat guy!
+	scene "scenes/Gambler/WarnBoomerC102.vcd"  //Goiter man!
+	scene "scenes/Gambler/WarnBoomerC103.vcd"  //Aunt bee.
+	scene "scenes/Gambler/WarnBoomerC104.vcd"  //Fatty!
+	scene "scenes/Gambler/WarnBoomerC105.vcd"  //Fat guy!
+	scene "scenes/Gambler/WorldC1M1B71.vcd" odds 25  //Watch out for the... the big fat thing!
+	scene "scenes/Gambler/WorldC1M1B72.vcd" odds 25  //It's the fat barf-bag!
+}
+Rule iMT_SurvivorSpottedBoomerGambler
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedBoomerGambler
+}
+
+Response iMT_SurvivorSpottedChargerGambler
+{
+	scene "scenes/Gambler/WarnChargerC101.vcd"  //One Arm!
+	scene "scenes/Gambler/WarnChargerC102.vcd"  //Overalls!
+	scene "scenes/Gambler/WarnChargerC103.vcd"  //Hillbilly!
+	scene "scenes/Gambler/WorldC1M1B76.vcd" odds 25  //It's that thing that runs at ya!
+}
+Rule iMT_SurvivorSpottedChargerGambler
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedChargerGambler
+}
+
+Response iMT_SurvivorSpottedHunterGambler
+{
+	scene "scenes/Gambler/WarnHunterC101.vcd"  //Jumper!
+	scene "scenes/Gambler/WarnHunterC102.vcd"  //Leaper!
+	scene "scenes/Gambler/WarnHunterC103.vcd"  //Scrawny little bitch I'm gonna kill.
+	scene "scenes/Gambler/WorldC1M1B74.vcd" odds 25  //It's that fast bastard that jumps at ya!
+}
+Rule iMT_SurvivorSpottedHunterGambler
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedHunterGambler
+}
+
+Rule iMT_SurvivorSpottedJockeyGambler
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedJockeyC1M1Gambler
+}
+
+Rule iMT_SurvivorSpottedSmokerGambler
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedSmokerC1Gambler
+}
+
+Response iMT_SurvivorSpottedSpitterGambler
+{
+	scene "scenes/Gambler/WarnSpitterC101.vcd"  //Green thing!
+	scene "scenes/Gambler/WarnSpitterC102.vcd"  //Neck!
+	scene "scenes/Gambler/WorldC1M1B78.vcd" odds 25  //It's that bug-spitting bitch...
+}
+Rule iMT_SurvivorSpottedSpitterGambler
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedSpitterGambler
+}
+
+Rule iMT_SurvivorSpottedTankGambler
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedTankC1Gambler
+}
+
+Rule iMT_SurvivorSpottedWeaponGambler
 {
 	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
 	forceweight 100

@@ -1238,7 +1238,7 @@ Rule iMT_WhitakerC12M5Biker
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fixes
+// Overrides
 //--------------------------------------------------------------------------------------------------------------
 
 Response iMT_PlayerHurrahBiker
@@ -1399,7 +1399,7 @@ Rule iMT_SurvivorSpottedAmmoBiker
 	Response SurvivorSpottedAmmoBiker
 }
 
-Rule iMT_SurvivorSpottedOtherWeaponBiker
+Rule iMT_SurvivorSpottedWeaponBiker
 {
 	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
 	forceweight 100

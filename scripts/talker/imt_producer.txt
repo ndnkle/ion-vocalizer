@@ -901,7 +901,7 @@ Rule iMT_WhitakerProducer
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fixes
+// Overrides
 //--------------------------------------------------------------------------------------------------------------
 
 Response iMT_C4M5_BoatComing01Producer
@@ -982,7 +982,54 @@ Rule iMT_SurvivorSpottedAmmoProducer
 	Response SurvivorSpottedAmmoProducer
 }
 
-Rule iMT_SurvivorSpottedOtherWeaponProducer
+Rule iMT_SurvivorSpottedBoomerProducer
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedBoomerC1M1Producer
+}
+
+Rule iMT_SurvivorSpottedChargerProducer
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedChargerC1M1Producer
+}
+
+Rule iMT_SurvivorSpottedHunterProducer
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedHunterC1M1Producer
+}
+
+Response iMT_SurvivorSpottedJockeyProducer
+{
+	scene "scenes/Producer/WarnJockey02.vcd"  //RIDER!
+	scene "scenes/Producer/WarnJockey04.vcd"  //RIDER!
+}
+Rule iMT_SurvivorSpottedJockeyProducer
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedJockeyProducer
+}
+
+Rule iMT_SurvivorSpottedSmokerProducer
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedSmokerC1M1Producer
+}
+
+Rule iMT_SurvivorSpottedSpitterProducer
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedSpitterC1M1Producer
+}
+
+Rule iMT_SurvivorSpottedTankProducer
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedTankC1Producer
+}
+
+Rule iMT_SurvivorSpottedWeaponProducer
 {
 	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer
 	forceweight 100

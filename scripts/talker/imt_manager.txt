@@ -1194,7 +1194,7 @@ Rule iMT_WhitakerC12M5Manager
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fixes
+// Overrides
 //--------------------------------------------------------------------------------------------------------------
 
 Response iMT_PlayerHurrahManager
@@ -1313,7 +1313,7 @@ Rule iMT_SurvivorSpottedAmmoManager
 	Response SurvivorSpottedAmmoManager
 }
 
-Rule iMT_SurvivorSpottedOtherWeaponManager
+Rule iMT_SurvivorSpottedWeaponManager
 {
 	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
 	forceweight 100

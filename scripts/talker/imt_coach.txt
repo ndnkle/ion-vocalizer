@@ -860,10 +860,15 @@ Rule iMT_NightCoach
 	Response iMT_NightCoach
 }
 
+Response iMT_NotDieCoach
+{
+	scene "scenes/Coach/WorldC5M5B18.vcd"  //You want to TEST me? I been through HELL to get to here! You are NOT the one to take me down!
+	scene "scenes/Coach/WorldC5M5B19.vcd"  //I walked through a WORLD OF SHIT to get here! I am not gonna die now! I am NOT gonna DIE NOW!
+}
 Rule iMT_NotDieCoach
 {
 	criteria iMT_NotDie IsCoach
-	Response PlayercoachcoachesCoach
+	Response iMT_NotDieCoach
 }
 
 Response iMT_PancakesCoach
@@ -1035,7 +1040,7 @@ Rule iMT_WhitakerCoach
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fixes
+// Overrides
 //--------------------------------------------------------------------------------------------------------------
 
 Response iMT_PlayerAreaClearCoach
@@ -1101,7 +1106,75 @@ Rule iMT_SurvivorSpottedAmmoCoach
 	Response SurvivorSpottedAmmoCoach
 }
 
-Rule iMT_SurvivorSpottedOtherWeaponCoach
+Response iMT_SurvivorSpottedBoomerCoach
+{
+	scene "scenes/Coach/WarnBoomerC101.vcd"  //Fat guy!
+	scene "scenes/Coach/WarnBoomerC102.vcd"  //Roly poly!
+	scene "scenes/Coach/WarnBoomerC103.vcd"  //Fat thing!
+	scene "scenes/Coach/WorldC1M1B126.vcd" odds 25  //It's that big one that pukes on ya!
+}
+Rule iMT_SurvivorSpottedBoomerCoach
+{
+	criteria ConceptPlayerWarnBoomer IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedBoomerCoach
+}
+
+Response iMT_SurvivorSpottedChargerCoach
+{
+	scene "scenes/Coach/WarnChargerC101.vcd"  //Big arm!
+	scene "scenes/Coach/WarnChargerC102.vcd"  //One arm!
+	scene "scenes/Coach/WorldC1M1B130.vcd" odds 25  //It's that one that runs at you.
+}
+Rule iMT_SurvivorSpottedChargerCoach
+{
+	criteria ConceptPlayerWarnCharger IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedChargerCoach
+}
+
+Response iMT_SurvivorSpottedHunterCoach
+{
+	scene "scenes/Coach/WarnHunterC101.vcd"  //We got a Jumper!
+	scene "scenes/Coach/WarnHunterC102.vcd"  //Crazy legs!
+	scene "scenes/Coach/WorldC1M1B128.vcd" odds 25  //It's that mean one that pounces on ya.
+}
+Rule iMT_SurvivorSpottedHunterCoach
+{
+	criteria ConceptPlayerWarnHunter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedHunterCoach
+}
+
+Rule iMT_SurvivorSpottedJockeyCoach
+{
+	criteria ConceptPlayerWarnJockey IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedJockeyC1M1Coach
+}
+
+Rule iMT_SurvivorSpottedSmokerCoach
+{
+	criteria ConceptPlayerWarnSmoker IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedSmokerC1Coach
+}
+
+Response iMT_SurvivorSpottedSpitterCoach
+{
+	scene "scenes/Coach/WarnSpitterC101.vcd"  //Crazy woman!
+	scene "scenes/Coach/WarnSpitterC102.vcd"  //Neck!
+	scene "scenes/Coach/WarnSpitterC103.vcd"  //Spitting thing!
+	scene "scenes/Coach/WorldC1M1B132.vcd" odds 25  //It's that spittin' zombie.
+}
+Rule iMT_SurvivorSpottedSpitterCoach
+{
+	criteria ConceptPlayerWarnSpitter IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response iMT_SurvivorSpottedSpitterCoach
+}
+
+Rule iMT_SurvivorSpottedTankCoach
+{
+	criteria ConceptPlayerWarnTank IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsNotIncapacitated _auto_NotSpottedVehicle ChanceToFire20Percent
+	Response SurvivorSpottedTankC1Coach
+}
+
+Rule iMT_SurvivorSpottedWeaponCoach
 {
 	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach
 	forceweight 100

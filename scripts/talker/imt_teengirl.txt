@@ -1239,7 +1239,7 @@ Rule iMT_WhitakerC12M5TeenGirl
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fixes
+// Overrides
 //--------------------------------------------------------------------------------------------------------------
 
 Response iMT_PlayerHurrahTeenGirl
@@ -1404,7 +1404,7 @@ Rule iMT_SurvivorSpottedAmmoTeenGirl
 	Response SurvivorSpottedAmmoTeenGirl
 }
 
-Rule iMT_SurvivorSpottedOtherWeaponTeenGirl
+Rule iMT_SurvivorSpottedWeaponTeenGirl
 {
 	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
 	forceweight 100

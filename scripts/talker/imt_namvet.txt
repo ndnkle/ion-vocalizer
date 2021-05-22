@@ -1179,7 +1179,7 @@ Rule iMT_WhitakerC12M5NamVet
 }
 
 //--------------------------------------------------------------------------------------------------------------
-// Fixes
+// Overrides
 //--------------------------------------------------------------------------------------------------------------
 
 Response iMT_PlayerAskReadyNamVet
@@ -1333,7 +1333,7 @@ Rule iMT_SurvivorSpottedAmmoNamVet
 	Response SurvivorSpottedAmmoNamVet
 }
 
-Rule iMT_SurvivorSpottedOtherWeaponNamVet
+Rule iMT_SurvivorSpottedWeaponNamVet
 {
 	criteria ConceptPlayerSpotOtherWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
 	forceweight 100
