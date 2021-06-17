@@ -639,8 +639,8 @@ Rule iMT_TankFactoryManager
 
 Response iMT_TankFactory2Manager
 {
-	scene "scenes/Manager/C6DLC3InTankTrainCar03.vcd" odds 5  //You're welcome.
-	scene "scenes/Manager/C6DLC3InTankTrainCar04.vcd" odds 5  //You're welcome.
+	scene "scenes/Manager/C6DLC3InTankTrainCar03.vcd" odds 10  //You're welcome.
+	scene "scenes/Manager/C6DLC3InTankTrainCar04.vcd" odds 10  //You're welcome.
 	scene "scenes/Manager/C6DLC3InTankTrainCar05.vcd"  //Tanks on a train.
 }
 Rule iMT_TankFactory2Manager

@@ -698,6 +698,12 @@ Rule iMT_FantasyGambler
 	Response iMT_FantasyGambler
 }
 
+Rule iMT_FishGambler
+{
+	criteria iMT_Fish IsGambler
+	Response c6m3_outroZoeyOutroGambler
+}
+
 Response iMT_GameGambler
 {
 	scene "scenes/Gambler/World304.vcd"  //Okay, anyone up for a game?
@@ -834,16 +840,6 @@ Rule iMT_TestGambler
 {
 	criteria iMT_Test IsGambler
 	Response iMT_TestGambler
-}
-
-Response iMT_TooWeirdGambler
-{
-	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead04.vcd"  //Even for us, that was just too weird.
-}
-Rule iMT_TooWeirdGambler
-{
-	criteria iMT_TooWeird IsGambler
-	Response iMT_TooWeirdGambler
 }
 
 Response iMT_TrickedGambler

@@ -92,6 +92,7 @@ Criterion "iMT_Teaching" "Concept" "iMT_Teaching" required
 Criterion "iMT_Attractive" "Concept" "iMT_Attractive" required
 Criterion "iMT_Depressing" "Concept" "iMT_Depressing" required
 Criterion "iMT_Fantasy" "Concept" "iMT_Fantasy" required
+Criterion "iMT_Fish" "Concept" "iMT_Fish" required
 Criterion "iMT_Game" "Concept" "iMT_Game" required
 Criterion "iMT_GetRoom" "Concept" "iMT_GetRoom" required
 Criterion "iMT_HavingFun" "Concept" "iMT_HavingFun" required
@@ -103,7 +104,6 @@ Criterion "iMT_ScrewYou" "Concept" "iMT_ScrewYou" required
 Criterion "iMT_Sevensome" "Concept" "iMT_Sevensome" required
 Criterion "iMT_ShitAir" "Concept" "iMT_ShitAir" required
 Criterion "iMT_Test" "Concept" "iMT_Test" required
-Criterion "iMT_TooWeird" "Concept" "iMT_TooWeird" required
 Criterion "iMT_Tricked" "Concept" "iMT_Tricked" required
 
 //--------------------------------------------------------------------------------------------------------------

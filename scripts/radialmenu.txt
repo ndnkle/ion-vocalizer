@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------------------------------------------------
-// ion's Vocalizer 17.1
+// ion's Vocalizer 17.2
 //--------------------------------------------------------------------------------------------------------------
 
 "RadialMenu"
@@ -1212,8 +1212,8 @@
 		}
 		"East"
 		{
-			"command"	"vocalize c6m3_outroL4D1011a"
-			"text"		"Fish"
+			"command"	"vocalize C1M1Crumbs"
+			"text"		"Crumbs"
 		}
 		"SouthEast"
 		{
@@ -1506,8 +1506,8 @@
 		}
 		"East"
 		{
-			"command"	"vocalize iMT_ScrewYou"
-			"text"		"Screw"
+			"command"	"vocalize iMT_Fish"
+			"text"		"Fish"
 		}
 		"SouthEast"
 		{
@@ -1521,8 +1521,8 @@
 		}
 		"SouthWest"
 		{
-			"command"	"vocalize iMT_TooWeird"
-			"text"		"Too weird"
+			"command"	"vocalize iMT_ScrewYou"
+			"text"		"Screw you"
 		}
 		"West"
 		{
@@ -1559,7 +1559,7 @@
 		}
 		"East"
 		{
-			"command"	"vocalize C1M3SafeRoom2d"
+			"command"	"vocalize C1M3SafeRoom2e"
 			"text"		"Amen"
 		}
 		"SouthEast"
@@ -2004,7 +2004,7 @@
 		}
 		"East"
 		{
-			"command"	"vocalize C1M3SafeRoom2d"
+			"command"	"vocalize C1M3SafeRoom2e"
 			"text"		"Amen"
 		}
 		"SouthEast"
@@ -2014,7 +2014,7 @@
 		}
 		"South"
 		{
-			"command"	"vocalize _C4M5_FinaleStart01"
+			"command"	"vocalize _C4M5_BoatComing01"
 			"text"		"Virgil"
 		}
 		"SouthWest"
@@ -4409,7 +4409,6 @@
 			"text"		"Francis"
 		}
 	}
+}
 
 // "The devil is in the details"
-
-}

@@ -884,7 +884,7 @@ Rule iMT_PancakesCoach
 
 Response iMT_PrayCoach
 {
-	scene "scenes/Coach/WorldC1M3B02.vcd" then self C1M4SafeRoom2b5 foo:0 0.5  //Everybody, gather 'round. Let's pray. Dear Lord. See us safely through our time of trial in this mall. And please Lord... let the food court be okay.
+	scene "scenes/Coach/WorldC1M3B02.vcd" then self C1M3SafeRoom2d foo:0 0.5  //Everybody, gather 'round. Let's pray. Dear Lord. See us safely through our time of trial in this mall. And please Lord... let the food court be okay.
 }
 Rule iMT_PrayCoach
 {

@@ -904,20 +904,6 @@ Rule iMT_WhitakerProducer
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
-Response iMT_C4M5_BoatComing01Producer
-{
-	scene "scenes/Producer/WorldC4M4B19.vcd"  //VIRGIL'S BACK!
-	scene "scenes/Producer/WorldC4M4B20.vcd"  //VIRGIL'S HERE!
-	scene "scenes/Producer/WorldC4M4B21.vcd"  //HEY, VIRGIL'S HERE!
-	scene "scenes/Producer/WorldC4M4B22.vcd"  //LET'S GET TO THE BOAT!
-	scene "scenes/Producer/WorldC4M4B23.vcd"  //GET TO THE BOAT!
-}
-Rule iMT_C4M5_BoatComing01Producer
-{
-	criteria Concept_C4M5_BoatComing01 IsProducer AutoIsNotScavenge AutoIsNotSurvival
-	Response iMT_C4M5_BoatComing01Producer
-}
-
 Response iMT_PlayerAreaClearProducer
 {
 	scene "scenes/Producer/Defibrillator07.vcd"  //Clear!
