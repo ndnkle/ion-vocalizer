@@ -793,10 +793,16 @@ Rule iMT_NotDieGambler
 	Response iMT_NotDieGambler
 }
 
+Response iMT_QuietGambler
+{
+	scene "scenes/Gambler/EllisInterrupt21.vcd"  //Why don't we just try quiet time for a while?
+	scene "scenes/Gambler/EllisInterrupt22.vcd"  //Hey, Ellis. Shut-up contest, ready? One, two, three, go!
+	scene "scenes/Gambler/WorldC5M3B13.vcd" odds 40  //Shut up, Ellis.
+}
 Rule iMT_QuietGambler
 {
 	criteria iMT_Quiet IsGambler
-	Response EllisStoryInterruptC1M3Gambler
+	Response iMT_QuietGambler
 }
 
 Response iMT_ScrewYouGambler

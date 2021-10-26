@@ -914,6 +914,46 @@ Rule iMT_SingingCoach
 	Response iMT_SingingCoach
 }
 
+Response iMT_SingingLadyCoach
+{
+	scene "scenes/Coach/WorldC2M2B06.vcd" then Mechanic iMT_SingingLady foo:0 -0.1  //[singing] ...Every lady's crazy when her daddy's not around... dunh-nuh-NAH-nuh-NAH-nha!
+}
+Rule iMT_SingingLadyCoach
+{
+	criteria iMT_Singing IsCoach IsMechanicNear400 ChanceToFire15Percent
+	Response iMT_SingingLadyCoach
+}
+
+Response iMT_SingingLadyTooCoach
+{
+	scene "scenes/Coach/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around... dunh-nuh-NAH-nuh-NAH-nha!
+}
+Rule iMT_SingingLadyTooCoach
+{
+	criteria iMT_SingingLady IsCoach IsNotCoughing IsNotSpeaking
+	Response iMT_SingingLadyTooCoach
+}
+
+Response iMT_SingingMountainCoach
+{
+	scene "scenes/Coach/WorldC2M2B05.vcd" then Mechanic iMT_SingingMountain foo:0 -0.1  //[singing] ...Gotta reach for the top, stay on that mountainnnn... dunh-nuh-NAH-nuh-NAH-nha!
+}
+Rule iMT_SingingMountainCoach
+{
+	criteria iMT_Singing IsCoach IsMechanicNear400 ChanceToFire15Percent
+	Response iMT_SingingMountainCoach
+}
+
+Response iMT_SingingMountainTooCoach
+{
+	scene "scenes/Coach/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn... dunh-nuh-NAH-nuh-NAH-nha!
+}
+Rule iMT_SingingMountainTooCoach
+{
+	criteria iMT_SingingMountain IsCoach IsNotCoughing IsNotSpeaking
+	Response iMT_SingingMountainTooCoach
+}
+
 Response iMT_SwallowCoach
 {
 	scene "scenes/Coach/WorldC4M104.vcd"  //Shit. All these zombies should help you swallow.

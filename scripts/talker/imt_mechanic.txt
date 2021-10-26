@@ -757,6 +757,18 @@ Rule iMT_CandyMechanic
 	Response iMT_CandyMechanic
 }
 
+Response iMT_ComedianMechanic
+{
+	scene "scenes/Mechanic/WorldC2M2B22.vcd"  //You're a real comedian, Nick.
+	scene "scenes/Mechanic/WorldC2M2B23.vcd" odds 40  //Ha ha ha.
+	scene "scenes/Mechanic/WorldC2M2B24.vcd"  //Well, aren't you a real comedian.
+}
+Rule iMT_ComedianMechanic
+{
+	criteria iMT_Comedian IsMechanic
+	Response iMT_ComedianMechanic
+}
+
 Response iMT_DogMechanic
 {
 	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat18.vcd"  //Can we not talk about dogs?
@@ -771,16 +783,6 @@ Rule iMT_FeelHerMechanic
 {
 	criteria iMT_FeelHer IsMechanic
 	Response PlayerTransitionC6M2Mechanic
-}
-
-Response iMT_GotYouMechanic
-{
-	scene "scenes/Mechanic/DLC1_C6M3_FinaleChat08.vcd"  //Man, he got you Nick. It's like he's known you forever.
-}
-Rule iMT_GotYouMechanic
-{
-	criteria iMT_GotYou IsMechanic
-	Response iMT_GotYouMechanic
 }
 
 Response iMT_InHonorMechanic
@@ -861,6 +863,46 @@ Rule iMT_SingingMechanic
 {
 	criteria iMT_Singing IsMechanic
 	Response iMT_SingingMechanic
+}
+
+Response iMT_SingingLadyMechanic
+{
+	scene "scenes/Mechanic/WorldC2M2B06.vcd" predelay "0.11" then Coach iMT_SingingLady foo:0 -0.01  //[singing] ...Every lady's crazy when her daddy's not around...
+}
+Rule iMT_SingingLadyMechanic
+{
+	criteria iMT_Singing IsMechanic IsCoachNear400 ChanceToFire15Percent
+	Response iMT_SingingLadyMechanic
+}
+
+Response iMT_SingingLadyTooMechanic
+{
+	scene "scenes/Mechanic/WorldC2M2B06.vcd"  //[singing] ...Every lady's crazy when her daddy's not around...
+}
+Rule iMT_SingingLadyTooMechanic
+{
+	criteria iMT_SingingLady IsMechanic IsNotCoughing IsNotSpeaking
+	Response iMT_SingingLadyTooMechanic
+}
+
+Response iMT_SingingMountainMechanic
+{
+	scene "scenes/Mechanic/WorldC2M2B05.vcd" predelay "0.11" then Coach iMT_SingingMountain foo:0 -0.01  //[singing] ...Gotta reach for the top, stay on that mountainnnn...
+}
+Rule iMT_SingingMountainMechanic
+{
+	criteria iMT_Singing IsMechanic IsCoachNear400 ChanceToFire15Percent
+	Response iMT_SingingMountainMechanic
+}
+
+Response iMT_SingingMountainTooMechanic
+{
+	scene "scenes/Mechanic/WorldC2M2B05.vcd"  //[singing] ...Gotta reach for the top, stay on that mountainnnn...
+}
+Rule iMT_SingingMountainTooMechanic
+{
+	criteria iMT_SingingMountain IsMechanic IsNotCoughing IsNotSpeaking
+	Response iMT_SingingMountainTooMechanic
 }
 
 Response iMT_TattoosMechanic

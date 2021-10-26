@@ -257,7 +257,7 @@ Rule iMT_PlayerMournBikerAliveManager
 }
 Rule iMT_PlayerMournBikerDeadManager
 {
-	criteria iMT_PlayerMourn IsManager IsBikerNear200 IsBikerNotAlive
+	criteria iMT_PlayerMourn IsManager IsBikerNear200 NotBikerAlive
 	Response L4D1SurvivorMournFrancisManager
 }
 
@@ -268,7 +268,7 @@ Rule iMT_PlayerMournNamVetAliveManager
 }
 Rule iMT_PlayerMournNamVetDeadManager
 {
-	criteria iMT_PlayerMourn IsManager IsNamVetNear200 IsNamVetNotAlive
+	criteria iMT_PlayerMourn IsManager IsNamVetNear200 NotNamVetAlive
 	Response L4D1SurvivorMournBillManager
 }
 
@@ -279,7 +279,7 @@ Rule iMT_PlayerMournTeenGirlAliveManager
 }
 Rule iMT_PlayerMournTeenGirlDeadManager
 {
-	criteria iMT_PlayerMourn IsManager IsTeenGirlNear200 IsTeenGirlNotAlive
+	criteria iMT_PlayerMourn IsManager IsTeenGirlNear200 NotTeenGirlAlive
 	Response L4D1SurvivorMournZoeyManager
 }
 

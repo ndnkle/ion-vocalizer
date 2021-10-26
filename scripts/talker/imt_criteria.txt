@@ -61,6 +61,8 @@ Criterion "iMT_NotDie" "Concept" "iMT_NotDie" required
 Criterion "iMT_Recycle" "Concept" "iMT_Recycle" required
 Criterion "iMT_ShotHim" "Concept" "iMT_ShotHim" required
 Criterion "iMT_Singing" "Concept" "iMT_Singing" required
+Criterion "iMT_SingingLady" "Concept" "iMT_SingingLady" required
+Criterion "iMT_SingingMountain" "Concept" "iMT_SingingMountain" required
 Criterion "iMT_TankFactory" "Concept" "iMT_TankFactory" required
 
 //--------------------------------------------------------------------------------------------------------------
@@ -114,8 +116,8 @@ Criterion "iMT_Biscuit" "Concept" "iMT_Biscuit" required
 Criterion "iMT_Break" "Concept" "iMT_Break" required
 Criterion "iMT_CaCaw" "Concept" "iMT_CaCaw" required
 Criterion "iMT_Candy" "Concept" "iMT_Candy" required
+Criterion "iMT_Comedian" "Concept" "iMT_Comedian" required
 Criterion "iMT_FeelHer" "Concept" "iMT_FeelHer" required
-Criterion "iMT_GotYou" "Concept" "iMT_GotYou" required
 Criterion "iMT_InHonor" "Concept" "iMT_InHonor" required
 Criterion "iMT_InLove" "Concept" "iMT_InLove" required
 Criterion "iMT_LoveYou" "Concept" "iMT_LoveYou" required
@@ -261,12 +263,3 @@ Criterion "iMT_ZombieFakeWitch2" "Concept" "iMT_ZombieFakeWitch2" required
 Criterion "iMT_ZombiePain" "Concept" "iMT_ZombiePain" required
 Criterion "iMT_ZombieSpecial" "Concept" "iMT_ZombieSpecial" required
 Criterion "iMT_ZombieWarn" "Concept" "iMT_ZombieWarn" required
-
-//--------------------------------------------------------------------------------------------------------------
-// Other
-//--------------------------------------------------------------------------------------------------------------
-
-Criterion "IsBikerNotAlive" "IsBikerAlive" "!=1" required
-Criterion "IsManagerNotAlive" "IsManagerAlive" "!=1" required
-Criterion "IsNamVetNotAlive" "IsNamVetAlive" "!=1" required
-Criterion "IsTeenGirlNotAlive" "IsTeenGirlAlive" "!=1" required
