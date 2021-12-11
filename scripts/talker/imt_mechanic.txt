@@ -1056,6 +1056,125 @@ Rule iMT_PlayerLaughMechanic
 	Response iMT_PlayerLaughMechanic
 }
 
+Response iMT_PlayerThanksCoachMechanic
+{
+	scene "scenes/Mechanic/Thanks01.vcd"  //Hey, thanks, man.
+	scene "scenes/Mechanic/Thanks06.vcd"  //Thanks man.
+	scene "scenes/Mechanic/ThanksCoach01.vcd"  //Thanks, Coach.
+	scene "scenes/Mechanic/ThanksCoach02.vcd"  //Thanks, Coach.
+	scene "scenes/Mechanic/ThanksCoach04.vcd"  //Thanks, Coach.
+}
+Rule iMT_PlayerThanksCoachMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksCoachMechanic
+}
+
+Response iMT_PlayerThanksCoachC1Mechanic
+{
+	scene "scenes/Mechanic/ThanksCoach03.vcd"  //Appreciate it, big guy.
+}
+Rule iMT_PlayerThanksCoachC1Mechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerThanksCoachC1Mechanic
+}
+
+Response iMT_PlayerThanksGamblerMechanic
+{
+	scene "scenes/Mechanic/Thanks01.vcd"  //Hey, thanks, man.
+	scene "scenes/Mechanic/Thanks06.vcd"  //Thanks man.
+	scene "scenes/Mechanic/ThanksGambler01.vcd"  //Thanks, Nick.
+	scene "scenes/Mechanic/ThanksGambler02.vcd"  //Hey, thanks, Nick.
+	scene "scenes/Mechanic/ThanksGambler03.vcd"  //Appreciate it, Nick.
+}
+Rule iMT_PlayerThanksGamblerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent isNotmap_c1m1_hotel
+	Response iMT_PlayerThanksGamblerMechanic
+}
+Rule iMT_PlayerThanksGamblerC1Mechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel YesKnowNames
+	Response iMT_PlayerThanksGamblerMechanic
+}
+
+Response iMT_PlayerThanksProducerMechanic
+{
+	scene "scenes/Mechanic/Thanks03.vcd"  //Thank you kindly, ma'm.
+}
+Rule iMT_PlayerThanksProducerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksProducerMechanic
+}
+
+Response iMT_PlayerThanksBikerMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items05.vcd"  //Thanks Francis!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Killing14.vcd"  //Thanks Francis!
+}
+Rule iMT_PlayerThanksBikerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsBiker IsSubjectDistNear500 ChanceToFire30Percent
+	Response iMT_PlayerThanksBikerMechanic
+}
+
+Response iMT_PlayerThanksManagerMechanic
+{
+	scene "scenes/Mechanic/WorldC5M4B23.vcd"  //Thank you, sir.
+}
+Rule iMT_PlayerThanksManagerMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsManager IsSubjectDistNear500 ChanceToFire30Percent
+	Response iMT_PlayerThanksManagerMechanic
+}
+
+Response iMT_PlayerThanksTeenGirlMechanic
+{
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items01.vcd"  //Thanks Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items02.vcd"  //Thank you Zoey!
+	scene "scenes/Mechanic/DLC1_C6M3_FinaleL4D1Items03.vcd"  //Hey, thanks Zoey!
+}
+Rule iMT_PlayerThanksTeenGirlMechanic
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsTeenGirl IsSubjectDistNear500 ChanceToFire30Percent
+	Response iMT_PlayerThanksTeenGirlMechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeCoachMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeCoachMechanic
+}
+Rule iMT_PlayerYouAreWelcomeCoachC1Mechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel NoKnowNames
+	Response YouAreWelcomeCoachC1Mechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeGamblerMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeGamblerMechanic
+}
+Rule iMT_PlayerYouAreWelcomeGamblerC1Mechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel NoKnowNames
+	Response YouAreWelcomeGamblerC1Mechanic
+}
+
+Rule iMT_PlayerYouAreWelcomeProducerMechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeProducerMechanic
+}
+Rule iMT_PlayerYouAreWelcomeProducerC1Mechanic
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel NoKnowNames
+	Response YouAreWelcomeProducerC1Mechanic
+}
+
 Response iMT_ResponseSoftDispleasureSwearMechanic
 {
 	scene "scenes/Mechanic/WorldC2M3B14.vcd"  //Ohmigod!

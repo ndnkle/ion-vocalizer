@@ -1307,6 +1307,60 @@ Rule iMT_PlayerNegativeTeenGirl
 	Response iMT_PlayerNegativeTeenGirl
 }
 
+Response iMT_PlayerThanksBikerTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks41.vcd"  //Thanks, Francis.
+	scene "scenes/TeenGirl/Thanks44.vcd"  //Thanks, Francis.
+}
+Rule iMT_PlayerThanksBikerTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsBiker IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksBikerTeenGirl
+}
+
+Response iMT_PlayerThanksManagerTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks32.vcd"  //Thanks Louis.
+	scene "scenes/TeenGirl/Thanks35.vcd" odds 10  //Thanks, Louis. It's about time you were some help.
+	scene "scenes/TeenGirl/Thanks42.vcd"  //Thanks, Louis.
+	scene "scenes/TeenGirl/Thanks43.vcd"  //Thanks, Louis. I owe you one.
+	scene "scenes/TeenGirl/Thanks45.vcd"  //Thanks, Louis.
+	scene "scenes/TeenGirl/Thanks46.vcd"  //Thanks, Louis. I owe you one.
+}
+Rule iMT_PlayerThanksManagerTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsManager IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksManagerTeenGirl
+}
+
+Response iMT_PlayerThanksNamVetTeenGirl
+{
+	scene "scenes/TeenGirl/Thanks05.vcd"  //Thanks, Bill.
+	scene "scenes/TeenGirl/Thanks40.vcd"  //Thanks, Bill.
+}
+Rule iMT_PlayerThanksNamVetTeenGirl
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsNamVet IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksNamVetTeenGirl
+}
+
+Rule iMT_PlayerYouAreWelcomeManagerTeenGirl
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsManager IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response L4D1AutoYouAreWelcomeLouisTeenGirl
+}
+
+Rule iMT_PlayerYouAreWelcomeNamVetTeenGirl
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl SubjectIsNamVet IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response L4D1AutoYouAreWelcomeBillTeenGirl
+}
+
 Response iMT_ResponseSoftDispleasureSwearTeenGirl
 {
 	scene "scenes/TeenGirl/NegativeNoise13.vcd"  //[Improv non-verbal displeasure sounds]

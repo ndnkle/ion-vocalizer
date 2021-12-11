@@ -1236,6 +1236,39 @@ Rule iMT_PlayerLaughManager
 	Response iMT_PlayerLaughManager
 }
 
+Response iMT_PlayerThanksBikerManager
+{
+	scene "scenes/Manager/ToTheRescueThanks02.vcd"  //Thanks, man!
+}
+Rule iMT_PlayerThanksBikerManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsBiker IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksBikerManager
+}
+
+Response iMT_PlayerThanksNamVetManager
+{
+	scene "scenes/Manager/ToTheRescueThanks03.vcd"  //Yo, thanks, man.
+}
+Rule iMT_PlayerThanksNamVetManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsNamVet IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksNamVetManager
+}
+
+Response iMT_PlayerThanksTeenGirlManager
+{
+	scene "scenes/Manager/Thanks13.vcd"  //Girl, thanks.
+}
+Rule iMT_PlayerThanksTeenGirlManager
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager SubjectIsTeenGirl IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksTeenGirlManager
+}
+
 Response iMT_ResponseSoftDispleasureSwearManager
 {
 	scene "scenes/Manager/FallShort02.vcd"  //ohhh nooooo

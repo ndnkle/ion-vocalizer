@@ -933,6 +933,105 @@ Rule iMT_PlayerLaughProducer
 	Response iMT_PlayerLaughProducer
 }
 
+Response iMT_PlayerThanksCoachProducer
+{
+	scene "scenes/Producer/ThanksCoach01.vcd"  //Thanks, my brother.
+	scene "scenes/Producer/ThanksCoach02.vcd"  //Thanks, Coach!
+}
+Rule iMT_PlayerThanksCoachProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent
+	Response iMT_PlayerThanksCoachProducer
+}
+
+Response iMT_PlayerThanksCoachC1Producer
+{
+	scene "scenes/Producer/NameCoach201.vcd"  //You're a heart of gold fatman.
+}
+Rule iMT_PlayerThanksCoachC1Producer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel NoKnowNames
+	Response iMT_PlayerThanksCoachC1Producer
+}
+
+Response iMT_PlayerThanksGamblerProducer
+{
+	scene "scenes/Producer/ThanksNick01.vcd"  //Look at you Nick, you have a heart, A HEART OF GOLD!
+}
+Rule iMT_PlayerThanksGamblerProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsGambler IsSubjectDistNear100 ChanceToFire5Percent isNotmap_c1m1_hotel
+	Response iMT_PlayerThanksGamblerProducer
+}
+Rule iMT_PlayerThanksGamblerC1Producer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsGambler IsSubjectDistNear100 ChanceToFire5Percent ismap_c1m1_hotel YesKnowNames
+	Response iMT_PlayerThanksGamblerProducer
+}
+
+Response iMT_PlayerThanksMechanicProducer
+{
+	scene "scenes/Producer/ThanksEllis01.vcd"  //Thanks Ellis, I guess I will keep you.
+}
+Rule iMT_PlayerThanksMechanicProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsMechanic IsSubjectDistNear100 ChanceToFire30Percent isNotmap_c1m1_hotel
+	Response iMT_PlayerThanksMechanicProducer
+}
+Rule iMT_PlayerThanksMechanicC1Producer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsMechanic IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel YesKnowNames
+	Response iMT_PlayerThanksMechanicProducer
+}
+
+Response iMT_PlayerThanksBikerProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items06.vcd"  //Thanks Francis.
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items08.vcd" odds 10  //Thanks sexy guy in the vest.
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing06.vcd"  //Thanks Francis!
+}
+Rule iMT_PlayerThanksBikerProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsBiker IsSubjectDistNear500 ChanceToFire30Percent
+	Response iMT_PlayerThanksBikerProducer
+}
+
+Response iMT_PlayerThanksTeenGirlProducer
+{
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items01.vcd"  //Thanks Zoey!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items02.vcd"  //Thanks Zoey!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Items03.vcd"  //Thanks for the help Zoey!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing07.vcd"  //Thanks Zoey!
+}
+Rule iMT_PlayerThanksTeenGirlProducer
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsTeenGirl IsSubjectDistNear500 ChanceToFire30Percent
+	Response iMT_PlayerThanksTeenGirlProducer
+}
+
+Rule iMT_PlayerYouAreWelcomeCoachProducer
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent
+	Response YouAreWelcomeCoachProducer
+}
+Rule iMT_PlayerYouAreWelcomeCoachC1Producer
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel NoKnowNames
+	Response YouAreWelcomeCoachC1Producer
+}
+
+Rule iMT_PlayerYouAreWelcomeGamblerC1Producer
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsGambler IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel NoKnowNames
+	Response YouAreWelcomeGamblerC1Producer
+}
+
+Rule iMT_PlayerYouAreWelcomeMechanicC1Producer
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer SubjectIsMechanic IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel NoKnowNames
+	Response YouAreWelcomeMechanicC1Producer
+}
+
 Response iMT_ResponseSoftDispleasureSwearProducer
 {
 	scene "scenes/Producer/MeleeResponse03.vcd" odds 30  //Damn!

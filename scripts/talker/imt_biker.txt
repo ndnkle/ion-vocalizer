@@ -1311,6 +1311,42 @@ Rule iMT_PlayerNegativeBiker
 	Response iMT_PlayerNegativeBiker
 }
 
+Response iMT_PlayerThanksManagerBiker
+{
+	scene "scenes/Biker/Thanks13.vcd"  //Thanks bro.
+	scene "scenes/Biker/Thanks18.vcd"  //Thanks, Louis.
+	scene "scenes/Biker/Thanks19.vcd"  //Thanks, Louis. I owe you one.
+}
+Rule iMT_PlayerThanksManagerBiker
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsManager IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksManagerBiker
+}
+
+Response iMT_PlayerThanksNamVetBiker
+{
+	scene "scenes/Biker/Thanks14.vcd"  //Thanks brother.
+	scene "scenes/Biker/Thanks16.vcd"  //Thanks, Bill.
+}
+Rule iMT_PlayerThanksNamVetBiker
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsNamVet IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksNamVetBiker
+}
+
+Response iMT_PlayerThanksTeenGirlBiker
+{
+	scene "scenes/Biker/Thanks17.vcd"  //Thanks, Zoey.
+}
+Rule iMT_PlayerThanksTeenGirlBiker
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker SubjectIsTeenGirl IsSubjectDistNear100 ChanceToFire30Percent
+	forceweight 100
+	Response iMT_PlayerThanksTeenGirlBiker
+}
+
 Response iMT_ResponseSoftDispleasureSwearBiker
 {
 	scene "scenes/Biker/Laughter08.vcd"  //<Short laugh>

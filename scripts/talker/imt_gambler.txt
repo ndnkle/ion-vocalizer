@@ -984,6 +984,94 @@ Rule iMT_PlayerLaughGambler
 	Response iMT_PlayerLaughGambler
 }
 
+Response iMT_PlayerThanksCoachGambler
+{
+	scene "scenes/Gambler/Thanks04.vcd"  //Thanks, man, I owe you.
+	scene "scenes/Gambler/ThanksCoach01.vcd"  //Thanks bro.
+}
+Rule iMT_PlayerThanksCoachGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent isNotmap_c1m1_hotel
+	Response iMT_PlayerThanksCoachGambler
+}
+
+Response iMT_PlayerThanksMechanicGambler
+{
+	scene "scenes/Gambler/Thanks04.vcd"  //Thanks, man, I owe you.
+	scene "scenes/Gambler/ThanksEllis01.vcd"  //Thanks killer.
+}
+Rule iMT_PlayerThanksMechanicGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsMechanic IsSubjectDistNear100 ChanceToFire30Percent isNotmap_c1m1_hotel
+	Response iMT_PlayerThanksMechanicGambler
+}
+
+Response iMT_PlayerThanksProducerGambler
+{
+	scene "scenes/Gambler/ThanksRochelle01.vcd"  //Thanks Ro.
+}
+Rule iMT_PlayerThanksProducerGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent isNotmap_c1m1_hotel
+	Response iMT_PlayerThanksProducerGambler
+}
+Rule iMT_PlayerThanksProducerC1Gambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent ismap_c1m1_hotel YesKnowNames
+	Response iMT_PlayerThanksProducerGambler
+}
+
+Response iMT_PlayerThanksBikerGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd"  //Thanks, greaseball!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd"  //Thanks, pal!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing01.vcd"  //I owe you one, Francis!
+}
+Rule iMT_PlayerThanksBikerGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsBiker IsSubjectDistNear500 ChanceToFire30Percent
+	Response iMT_PlayerThanksBikerGambler
+}
+
+Response iMT_PlayerThanksManagerGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing02.vcd"  //Thanks, Louis!
+}
+Rule iMT_PlayerThanksManagerGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsManager IsSubjectDistNear500 ChanceToFire30Percent
+	Response iMT_PlayerThanksManagerGambler
+}
+
+Response iMT_PlayerThanksTeenGirlGambler
+{
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd"  //Hey thanks, babe!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing03.vcd"  //Thanks, Zoey!
+}
+Rule iMT_PlayerThanksTeenGirlGambler
+{
+	criteria ConceptPlayerThanks IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsTeenGirl IsSubjectDistNear500 ChanceToFire30Percent
+	Response iMT_PlayerThanksTeenGirlGambler
+}
+
+Rule iMT_PlayerYouAreWelcomeCoachGambler
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsCoach IsSubjectDistNear100 ChanceToFire30Percent isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response YouAreWelcomeCoachGambler
+}
+
+Rule iMT_PlayerYouAreWelcomeMechanicGambler
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsMechanic IsSubjectDistNear100 ChanceToFire30Percent isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response YouAreWelcomeMechanicGambler
+}
+
+Rule iMT_PlayerYouAreWelcomeProducerGambler
+{
+	criteria ConceptPlayerYouAreWelcome IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler SubjectIsProducer IsSubjectDistNear100 ChanceToFire30Percent isNotmap_c1m1_hotel isNotmap_c1m2_streets
+	Response YouAreWelcomeProducerGambler
+}
+
 Response iMT_ResponseSoftDispleasureSwearGambler
 {
 	scene "scenes/Gambler/DoubleDeathResponse03.vcd"  //Ahhh SHIT!
