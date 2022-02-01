@@ -1197,6 +1197,16 @@ Rule iMT_WhitakerC12M5Manager
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerAnswerLostCallManager
+{
+	scene "scenes/Manager/ScenarioJoinLast01.vcd"  //We're all here!
+}
+Rule iMT_PlayerAnswerLostCallManager
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsEveryoneAlive IsNotSomeoneDied ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallManager
+}
+
 Response iMT_PlayerHurrahManager
 {
 	scene "scenes/Manager/Hurrah05.vcd"  //We're going to be okay.

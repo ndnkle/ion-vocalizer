@@ -1026,6 +1026,16 @@ Rule iMT_WhitakerMechanic
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerAnswerLostCallMechanic
+{
+	scene "scenes/Mechanic/ScenarioJoinLast01.vcd"  //We're all here.
+}
+Rule iMT_PlayerAnswerLostCallMechanic
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic IsEveryoneAlive IsNotSomeoneDied ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallMechanic
+}
+
 Response iMT_PlayerAreaClearMechanic
 {
 	scene "scenes/Mechanic/Defibrillator07.vcd"  //Clear!

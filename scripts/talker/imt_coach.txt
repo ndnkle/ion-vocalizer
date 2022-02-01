@@ -1083,6 +1083,17 @@ Rule iMT_WhitakerCoach
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerAnswerLostCallCoach
+{
+	scene "scenes/Coach/ScenarioJoinLast01.vcd"  //All right. We're all here!
+	scene "scenes/Coach/ScenarioJoinLast02.vcd"  //We're all here!
+}
+Rule iMT_PlayerAnswerLostCallCoach
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsCoach IsTalk IsTalkCoach IsWorldTalkCoach IsEveryoneAlive IsNotSomeoneDied ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallCoach
+}
+
 Response iMT_PlayerAreaClearCoach
 {
 	scene "scenes/Coach/Defibrillator05.vcd"  //Clear!

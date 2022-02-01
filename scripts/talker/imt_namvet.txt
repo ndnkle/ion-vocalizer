@@ -1182,6 +1182,16 @@ Rule iMT_WhitakerC12M5NamVet
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerAnswerLostCallNamVet
+{
+	scene "scenes/NamVet/ScenarioJoinLast01.vcd"  //We're all here.
+}
+Rule iMT_PlayerAnswerLostCallNamVet
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsEveryoneAlive IsNotSomeoneDied ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallNamVet
+}
+
 Response iMT_PlayerAskReadyNamVet
 {
 	scene "scenes/NamVet/AskReady01.vcd"  //Ready?

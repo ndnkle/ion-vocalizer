@@ -1242,6 +1242,17 @@ Rule iMT_WhitakerC12M5TeenGirl
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerAnswerLostCallTeenGirl
+{
+	scene "scenes/TeenGirl/ScenarioJoinLast01.vcd"  //We're all here.
+	scene "scenes/TeenGirl/ScenarioJoinLast02.vcd"  //Well, we're all here.
+}
+Rule iMT_PlayerAnswerLostCallTeenGirl
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsEveryoneAlive IsNotSomeoneDied ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallTeenGirl
+}
+
 Response iMT_PlayerHurrahTeenGirl
 {
 	scene "scenes/TeenGirl/Hurrah07.vcd"  //I think we're gonna make it

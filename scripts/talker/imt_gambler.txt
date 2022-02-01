@@ -956,6 +956,16 @@ Rule iMT_WhitakerGambler
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerAnswerLostCallGambler
+{
+	scene "scenes/Gambler/ScenarioJoinLast01.vcd"  //We're all here.
+}
+Rule iMT_PlayerAnswerLostCallGambler
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler IsEveryoneAlive IsNotSomeoneDied ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallGambler
+}
+
 Response iMT_PlayerAreaClearGambler
 {
 	scene "scenes/Gambler/Defibrillator06.vcd"  //Clear!

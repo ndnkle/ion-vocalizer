@@ -1241,6 +1241,16 @@ Rule iMT_WhitakerC12M5Biker
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerAnswerLostCallBiker
+{
+	scene "scenes/Biker/ScenarioJoinLast01.vcd"  //We're all here!
+}
+Rule iMT_PlayerAnswerLostCallBiker
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsEveryoneAlive IsNotSomeoneDied ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallBiker
+}
+
 Response iMT_PlayerHurrahBiker
 {
 	scene "scenes/Biker/Hurrah05.vcd"  //We just might make it out of here after all.

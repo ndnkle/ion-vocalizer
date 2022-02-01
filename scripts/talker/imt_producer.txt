@@ -904,6 +904,17 @@ Rule iMT_WhitakerProducer
 // Overrides
 //--------------------------------------------------------------------------------------------------------------
 
+Response iMT_PlayerAnswerLostCallProducer
+{
+	scene "scenes/Producer/ScenarioJoinLast01.vcd"  //We're all here.
+	scene "scenes/Producer/ScenarioJoinLast02.vcd"  //We're all here.
+}
+Rule iMT_PlayerAnswerLostCallProducer
+{
+	criteria ConceptPlayerAnswerLostCall IsNotCoughing IsProducer IsTalk IsTalkProducer IsWorldTalkProducer IsEveryoneAlive IsNotSomeoneDied ChanceToFire10Percent
+	Response iMT_PlayerAnswerLostCallProducer
+}
+
 Response iMT_PlayerAreaClearProducer
 {
 	scene "scenes/Producer/Defibrillator07.vcd"  //Clear!
